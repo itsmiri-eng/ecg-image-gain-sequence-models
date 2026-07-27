@@ -6,7 +6,11 @@
 ![Machine Learning](https://img.shields.io/badge/Machine-Learning-orange)
 ![Research](https://img.shields.io/badge/Research-Ongoing-purple)
 
-An experimental biomedical engineering and machine-learning project focused on converting paper-style 12-lead ECG images into calibrated one-dimensional signals and testing how well the resulting classifier generalizes across image formats and datasets.
+An end-to-end biomedical AI pipeline that reconstructs digital ECG signals from paper-style ECG images and investigates how well deep-learning models generalize across different image formats, rendering conventions, and datasets.
+
+**Status:** Research manuscript in preparation  
+**Institutions:** Khalifa University and ETH Zurich  
+**Supervision:** Dr. Mohamed Elgendi, Khalifa University, and Prof. Dr. Carlo Menon, ETH Zurich
 
 ![ECG image-processing pipeline](figures/pipeline_extraction.png)
 
@@ -88,9 +92,9 @@ The experimental work is complete, and the manuscript is being finalized for sub
 
 The source code is currently withheld pending research and publication approval.
 
-## Supervision
+## Supervision and Collaboration
 
-Conducted at Khalifa University under the supervision of Dr. Mohamed Elgendi, Department of Biomedical Engineering and Biotechnology.
+Conducted at Khalifa University under the supervision of Dr. Mohamed Elgendi, Department of Biomedical Engineering and Biotechnology, in collaboration with Prof. Dr. Carlo Menon and ETH Zurich.
 
 ## Disclaimer
 
