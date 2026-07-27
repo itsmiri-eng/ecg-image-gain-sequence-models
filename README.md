@@ -12,8 +12,7 @@ An end-to-end biomedical AI pipeline that reconstructs digital ECG signals from 
 **Institutions:** Khalifa University and ETH Zurich  
 **Supervision:** Dr. Mohamed Elgendi, Khalifa University, and Prof. Dr. Carlo Menon, ETH Zurich
 
-![ECG image-processing pipeline](figures/pipeline_extraction.png)
-
+![ECG image-processing and classification pipeline](figures/architecture_overview.png)
 ## Project Overview
 
 Many ECG records still exist as printed sheets, scans, photographs, PDFs, or raster-image exports rather than native digital signals. This project developed an end-to-end pipeline that reconstructs ECG waveforms from images and classifies them into four categories:
@@ -42,6 +41,8 @@ The workflow included:
 11. Ablation testing
 12. Synthetic degradation testing
 13. Cross-dataset evaluation using PTB-XL-derived ECG images
+
+![Pipeline extraction stages](figures/pipeline_extraction.png)
 
 ## Within-Dataset Results
 
