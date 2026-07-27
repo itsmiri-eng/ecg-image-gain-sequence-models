@@ -1,5 +1,11 @@
 # Domain Shift and Format Sensitivity in ECG Image Classification Pipelines
 
+![Python](https://img.shields.io/badge/Python-3.x-blue?logo=python)
+![PyTorch](https://img.shields.io/badge/PyTorch-Deep%20Learning-red?logo=pytorch)
+![Biomedical Engineering](https://img.shields.io/badge/Biomedical-Engineering-green)
+![Machine Learning](https://img.shields.io/badge/Machine-Learning-orange)
+![Research](https://img.shields.io/badge/Research-Ongoing-purple)
+
 An experimental biomedical engineering and machine-learning project focused on converting paper-style 12-lead ECG images into calibrated one-dimensional signals and testing how well the resulting classifier generalizes across image formats and datasets.
 
 ![ECG image-processing pipeline](figures/pipeline_extraction.png)
