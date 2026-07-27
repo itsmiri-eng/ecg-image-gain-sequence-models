@@ -64,6 +64,16 @@ The trained system was tested under synthetic rotation, blur, and brightness cha
 
 ![Synthetic degradation results](figures/robustness_degradation.png)
 
+## Repository Structure
+
+```text
+.
+├── README.md                     # Project overview and results
+├── figures/                      # Figures used in this repository
+├── docs/                         # Supporting documentation
+└── src/                          # Source code (currently withheld)
+```
+
 ## Main Finding
 
 The strongest result was not the within-dataset accuracy.
