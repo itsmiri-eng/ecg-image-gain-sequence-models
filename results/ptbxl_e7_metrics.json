@@ -1,0 +1,30 @@
+{
+  "name": "Domain-adapted (train folds 1-8, val fold 9)",
+  "n_train": 502,
+  "n_val": 53,
+  "n_test": 45,
+  "epochs_run": 20,
+  "accuracy": 0.2,
+  "accuracy_ci95": [
+    0.08888888888888889,
+    0.3333333333333333
+  ],
+  "balanced_accuracy": 0.21085858585858586,
+  "balanced_accuracy_ci95": [
+    0.10067708333333333,
+    0.3416666666666667
+  ],
+  "macro_f1": 0.18608058608058609,
+  "macro_f1_ci95": [
+    0.08926371635610766,
+    0.29531038647342994
+  ],
+  "mcc": -0.050968072997440855,
+  "mcc_ci95": [
+    -0.1908190202462091,
+    0.12666145997535924
+  ],
+  "frozen_layers": "layer1, layer2, layer3",
+  "trained_layers": "layer4, fc",
+  "lr": 0.0001
+}

@@ -1,0 +1,20 @@
+{
+  "n_test": 186,
+  "accuracy": 0.946236559139785,
+  "accuracy_ci95": [
+    0.9139784946236559,
+    0.9731182795698925
+  ],
+  "balanced_accuracy": 0.9505412467338559,
+  "balanced_accuracy_ci95": [
+    0.9193552002953943,
+    0.975126208973231
+  ],
+  "macro_f1": 0.9475139324277255,
+  "macro_f1_ci95": [
+    0.9160761678554744,
+    0.9740836164640514
+  ],
+  "mcc": 0.9286660030091708,
+  "note": "The Mendeley dataset does not include patient identifiers; image-level independence is assumed but cannot be verified."
+}

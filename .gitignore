@@ -1,3 +1,37 @@
+# ── Project-specific exclusions ───────────────────────────────
+# Raw datasets (never committed)
+ptb-xl*/
+ptbxl_database.csv
+scp_statements.csv
+records500/
+
+# Generated ECG images (regenerate with ptbxl_generate.py)
+ptbxl_generated_images/
+*.ecg_images/
+
+# Mendeley ECG images
+ecg*files/
+ecg-files/
+
+# Manuscript and ZIP archives
+*.zip
+*.tex
+*.bib
+*.pdf
+manuscript*/
+ecg_manuscript*/
+
+# Temporary and cache files
+*.tmp
+*.bak
+*.swp
+.DS_Store
+
+# Python checkpoints and caches
+.ipynb_checkpoints/
+__pycache__/
+
+# ── Standard Python exclusions ─────────────────────────────────
 # Byte-compiled / optimized / DLL files
 __pycache__/
 *.py[codz]
@@ -74,9 +108,6 @@ docs/_build/
 # PyBuilder
 .pybuilder/
 target/
-
-# Jupyter Notebook
-.ipynb_checkpoints
 
 # IPython
 profile_default/
