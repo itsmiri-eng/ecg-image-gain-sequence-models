@@ -2,6 +2,8 @@
 
 An end-to-end research pipeline that reconstructs digital ECG signals from paper-style ECG images and evaluates how well a trained classifier generalises across different image sources, rendering conventions, and dataset formats.
 
+![ECG image digitization and classification pipeline](figures/architecture_overview.png)
+
 ## Project purpose and framing
 
 The central question is not whether a single ECG image classifier can achieve high accuracy on its training distribution — it can. The question is whether that accuracy transfers when the image source changes. This project quantifies the answer for one specific pipeline trained on the Mendeley ECG dataset and zero-shot evaluated on PTB-XL-derived images: performance collapses to approximately chance level, showing that strong within-dataset results do not imply robustness across image formats or datasets.
@@ -17,6 +19,7 @@ ecg-image-domain-shift/
 ├── ptbxl_manifest.csv                     # 600-row manifest (relative image paths)
 ├── mendeley_model_weights.pth             # Trained ResNet weights (Mendeley dataset)
 ├── figures/
+│   ├── architecture_overview.png          # End-to-end pipeline diagram
 │   ├── ablation_comparison.png            # Multi-component pipeline comparison
 │   ├── cm_final_enhanced_pipeline.png     # Mendeley test confusion matrix
 │   ├── cm_ptbxl_domain_adapted.png        # E7 fold-10 confusion matrix
