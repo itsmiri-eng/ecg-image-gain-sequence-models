@@ -251,6 +251,21 @@ Mean external macro AUROC, adaptive / fixed gain:
    - With fixed gain, the three sequence heads are equal externally (Georgia 0.737–0.738; China 0.817–0.824).
 4. **H3: the image representation still costs performance externally.** The signal model is best everywhere: about +0.05 over the best image model in Georgia and +0.03 in China.
 
+**Addendum, 10 November 2026: PTB-XL fixed vs adaptive with the hierarchical bootstrap.**
+- **Method.** The same method as external H2: seeds 42–46, then patients, 2,000 resamples, Holm over 8
+  comparisons (`results/fixed_gain/retrained_comparison/hierarchical_test.csv`, written by `src.make_paper_figures`).
+- **Result (macro / HYP AUROC).**
+
+| Model | Macro AUROC | HYP AUROC |
+|---|---|---|
+| CNN-only | +0.030 [0.021, 0.039] | +0.073 [0.050, 0.098] |
+| Temporal conv | +0.016 [0.011, 0.021] | +0.043 [0.029, 0.058] |
+| CNN-LSTM | +0.012 [0.004, 0.021], Holm p 0.028 | +0.014 [0.001, 0.027], Holm p 0.108 |
+| ViT | +0.006 [−0.003, 0.013] | +0.010 [−0.003, 0.023], both Holm p 0.26 |
+
+- **GPU-only seeds 43–46** give the same pattern.
+- **Best image model on PTB-XL test:** fixed-gain temporal conv, 0.895 ± 0.001.
+
 **Limitations specific to the external test.**
 - NORM is not evaluated externally, and MI is not evaluated in Georgia.
 - Labels come from a data-driven SNOMED → superclass mapping, not from cardiologist relabelling.

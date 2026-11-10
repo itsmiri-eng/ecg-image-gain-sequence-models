@@ -1,5 +1,39 @@
 # Project status — 1 November 2026 (evening update)
 
+## Update 10 November 2026: manuscript, figures and reproducibility package
+
+- **IEEE manuscript draft** (target IEEE JBHI), in `paper/ieee_manuscript/`:
+  - `main_source.tex`: the editable source.
+  - `overleaf.zip`: upload to Overleaf with New Project → Upload Project, then compile with pdfLaTeX + BibTeX.
+  - The draft was **not compiled on this PC**, because no LaTeX is installed. It passes static checks
+    (`build_overleaf.py`): environments, braces, references, citation keys, figure files and table column counts.
+  - Tables come from `src/make_paper_tables.py` and figures from `src/make_paper_figures.py`, so nothing is
+    typed by hand.
+  - `references.bib`: 37 entries built from Crossref/DataCite records; every DOI resolves.
+  - Affiliations are left as placeholders, at the user's request.
+  - The acknowledgment discloses AI assistance, as IEEE policy requires. The authors must review that wording.
+- **New analysis.** The PTB-XL fixed − adaptive comparison now uses the same hierarchical seed × patient bootstrap
+  as the external H2 (`results/fixed_gain/retrained_comparison/hierarchical_test.csv`). Seeds 42–46, Holm over 8:
+  - CNN-only +0.030 macro / +0.073 HYP;
+  - temporal conv +0.016 / +0.043;
+  - LSTM +0.012 (p=0.028) / +0.014 (p=0.11);
+  - ViT +0.006 / +0.010 (n.s.).
+- **Calibration and threshold tables** now cover every run, including seeds 45/46 and the wide head.
+  - Mean test ECE: CNN-only 0.026, LSTM 0.026, temporal conv 0.033, ViT 0.046.
+- **Corrections found while writing.**
+  - The CNN-LSTM is **unidirectional** (1 layer, 32 hidden units). Model cards and the handover file said
+    bidirectional; both are fixed.
+  - Seed 42 of **CNN-only** was also Mac-CPU-trained.
+- **Supervisor summary:** `docs/supervisor_summary_2026-11-10.md`, plus a shareable Claude Doc.
+- **Reproducibility package.**
+  - A local Git repository was created, with author Miriam Istanboli. It has **not been pushed**; she pushes it
+    herself.
+  - `.gitattributes` stores files byte-for-byte, so the hash-bound records stay valid on any computer.
+  - `.gitignore` excludes personal and third-party files, Teams drafts, CLAUDE.md, external data and checkpoints.
+  - About 470 MB is tracked; the largest file is 16 MB.
+  - `docs/REPRODUCIBILITY.md` now covers the external test.
+  - Code licence: still to be chosen by the authors.
+
 ## Update 7 November 2026: evidence complete
 
 - **Training.** All 21 amendment runs are complete: seeds 45/46 of every network on both gain settings, and
