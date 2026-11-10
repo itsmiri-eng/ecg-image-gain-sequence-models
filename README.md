@@ -7,7 +7,7 @@ Miriam Istanboli, supervised by Mohamed Yousry Elgendi. Manuscript in preparatio
 
 > **Earlier version.** Until September 2026 this repository held a different, earlier project (Mendeley ECG
 > images, domain shift to PTB-XL, a 1D-ResNet notebook). That version is kept unchanged under the Git tag
-> [`v1-mendeley-2026-09`](https://github.com/itsmiri-eng/ecg-image-domain-shift/tree/v1-mendeley-2026-09) and in the commit history.
+> [`v1-mendeley-2026-09`](https://github.com/itsmiri-eng/ecg-image-gain-sequence-models/tree/v1-mendeley-2026-09) and in the commit history.
 
 ![Same ECG drawn with adaptive and fixed gain](results/publication/figures_20261110/fig1_rendered_pages.png)
 

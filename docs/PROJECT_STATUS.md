@@ -18,11 +18,12 @@
 - Still open: affiliations, funding, corresponding e-mail, author contributions, competing interests.
 - The Scientific Reports abstract was shortened from 230 to 199 words (limit 200), with the same numbers and
   claims; the IEEE abstract (230 words, within IEEE's 250) is unchanged.
-- **GitHub.** The local repository now tracks https://github.com/itsmiri-eng/ecg-image-domain-shift (branch
+- **GitHub.** The local repository now tracks https://github.com/itsmiri-eng/ecg-image-gain-sequence-models
+  (renamed 11 Nov 2026 from `ecg-image-domain-shift`, which GitHub redirects; branch
   `main`). Its earlier content (the September Mendeley project) is kept in the history and under the tag
   `v1-mendeley-2026-09`. The new README describes the current study. Commits use the GitHub noreply e-mail.
   The Overleaf backup folder (supervisor's e-mail and project id) is kept out of Git. Miriam pushes with
-  GitHub Desktop from her clone in `OneDrive/Documents/GitHub/ecg-image-domain-shift`. The repository is
+  GitHub Desktop from her clone in `OneDrive/Documents/GitHub/ecg-image-domain-shift` (folder name unchanged). The repository is
   public, while the manuscript says code is released on publication; the authors decide whether it stays public.
 
 ## Update 10 November 2026: manuscript, figures and reproducibility package
