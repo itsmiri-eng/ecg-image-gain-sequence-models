@@ -188,8 +188,10 @@ def train_model(train_dataset, val_dataset, config, output_dir, normalization):
                      if cfg["scheduler"] == "cosine" else None)
         criterion = nn.BCEWithLogitsLoss()
         _atomic_json(out / "config.json", cfg)
+        pretrained = getattr(model, "pretrained_weights", False)
         (out / "architecture.txt").write_text(f"{model}\n\nParameters: {parameters:,}\n{SELECTION_RULE}\n"
-                                              "Unweighted BCE; no class weighting, augmentation or pretrained weights.\n")
+                                              "Unweighted BCE; no class weighting or augmentation; "
+                                              f"pretrained weights: {pretrained or 'none'}.\n")
         val_truth = np.asarray([[row[f"label_{n}"] for n in CLASS_NAMES] for row in val_dataset.rows], dtype=np.int8)
         history, best_key, best_epoch, stale = [], None, 0, 0
         for epoch in range(1, cfg["max_epochs"] + 1):
@@ -255,7 +257,7 @@ def train_model(train_dataset, val_dataset, config, output_dir, normalization):
         metadata = {
             "model": cfg["model"], "model_class": type(model).__name__, "config": cfg, "num_parameters": parameters,
             "normalization": normalization, "class_weighting": "none", "augmentation": "none",
-            "pretrained_weights": False, "loss": "Unweighted BCEWithLogitsLoss",
+            "pretrained_weights": pretrained, "loss": "Unweighted BCEWithLogitsLoss",
             "training_records": len(train_dataset), "validation_records": len(val_dataset), "test_data_accessed": False,
             "checkpoint_selection": SELECTION_RULE, "best_epoch": best_epoch, "best_selection_key": list(best_key),
             "epochs_run": len(history), "stopped_early": len(history) < cfg["max_epochs"],
