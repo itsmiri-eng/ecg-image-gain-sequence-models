@@ -1,0 +1,68 @@
+{
+  "protocol": "ptbxl_v2_lda",
+  "result_family": "ptbxl_v2",
+  "created_utc": "2026-11-01",
+  "purpose": "Matched statistical baseline on the PTB-XL image cohort: train-only PCA then five binary shrinkage LDAs.",
+  "dataset_id": "ptbxl_images_v1",
+  "split_version": "ptbxl_v103_official_folds_1to8_9_10_diagnostic_superclasses",
+  "cache_root": "data/processed/ptbxl_lead_images_v1",
+  "cache_sha256": {
+    "protocol.json": "0d07cb5e13cf27bae393c6c216f1acee9a2068d03be1acfc5fada73bd2dbdb90",
+    "metadata.json": "d84a192f2782d0ad062c3e5b6ce2cbe7210b204330222078d8837d950d47f913",
+    "cache_manifest.csv": "4e534b3b5afeda1b0347d36d18ad327aeb74776f5defbb377e0acc3eb1422ef9"
+  },
+  "class_names": [
+    "NORM",
+    "MI",
+    "STTC",
+    "CD",
+    "HYP"
+  ],
+  "input_shape": [
+    12,
+    120,
+    1120
+  ],
+  "preprocessing": {
+    "source_pixels": "12 complete rows, y=80:2960 and x=0:2240",
+    "intensity": "255 minus uint8 grayscale",
+    "pooling": "2x2 maximum ink; isotropic factor2, no interpolation",
+    "shape": [
+      12,
+      120,
+      1120
+    ],
+    "normalization": "one global mean/std from training pixels only",
+    "calibration": "per-lead calibration pulses retained in pixels; no numeric metadata feature",
+    "augmentation": "none",
+    "limitation": "downsampling thickens narrow strokes and merges fine detail; variable page gain retained; not lossless waveform reconstruction"
+  },
+  "loss": "unweighted binary cross entropy with logits; five independent binary targets",
+  "selection_rule": "Choose PCA component count by validation macro ROC-AUC, then macro AP, then -BCE, then fewer components",
+  "threshold": 0.5,
+  "threshold_policy": "fixed sigmoid probability >=0.5; no threshold search",
+  "test_policy": "One test inference per run after the selected checkpoint is frozen and reloaded. Fold 10 was already observed for earlier PTB-XL models, so comparisons are exploratory; no test-based tuning.",
+  "uncertainty": {
+    "method": "patient-cluster percentile bootstrap of final test predictions",
+    "resamples": 500,
+    "seed": 2024,
+    "confidence_level": 0.95,
+    "scope": "test-sampling uncertainty conditional on this fitted model; excludes seed/training/external-domain variation"
+  },
+  "lda_reduction": "8x8 nonoverlapping area mean of the cached 12x120x1120 ink image -> 12x15x140 = 25,200 features, float16 storage; no per-feature scaling",
+  "pca_components_grid": [
+    16,
+    32,
+    64,
+    128,
+    256
+  ],
+  "lda": {
+    "solver": "lsqr",
+    "shrinkage": "auto (Ledoit-Wolf)",
+    "priors": "empirical training prevalence per label",
+    "per_label": "independent binary classifier"
+  },
+  "seed": 42,
+  "run_id": "ptbxl_v2_lda_seed42"
+}

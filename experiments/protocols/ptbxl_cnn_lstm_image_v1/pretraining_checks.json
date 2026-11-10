@@ -1,0 +1,19 @@
+{
+  "checked_utc": "2026-09-24T11:04:12.379165+00:00",
+  "status": "passed_pending_cache_completion",
+  "unit_and_integration_tests_passed": 99,
+  "test_log_sha256": "7bb8d129f8c3b16b11a3a0d196c0da00745aca5975e0fbcc4e79e28797a615cf",
+  "representation_review_sha256": "5976cb7bf9ac7d7815bffa34f01bd057934cc61a76226007b39e1eb8e5df6a95",
+  "source_and_config_sha256": {
+    "src/run_ptbxl_cnn_lstm.py": "60730f78adab2a986ce8e3cb51ae36d2df820726a3860b0176c0905d2b94fcc3",
+    "src/models/ptbxl_cnn_lstm.py": "ecdcd8bce543bf5fb7f869667fa9d17ad2436eb0d9cbcb5d15cc64537a7686b1",
+    "src/ptbxl_learning_data.py": "0b8ce73d5d8e99accbd3c5132a3bc2ddc7ce2697fb25ffb864da1fe700ace082",
+    "src/evaluation/multilabel.py": "68e68fc5b4b00322b118d244d1efa15f164d16cd8a616fac02bb4b20207a3319",
+    "src/evaluation/ptbxl_uncertainty.py": "ce4ea41e99e2498a1dfc8cc40a3de6ba838d6b27db544802b064ecde5091dd5c",
+    "src/common.py": "0214c2ec6d8d49ac9536a6602397d83f111e5bd64ec63f5d99633dee8c9bd672",
+    "src/baseline_preservation.py": "76d5b4ff9f383c3a6a5a3ab8bdae81ca83c36ae8ab11cc64d08cc3cbb474f673",
+    "experiments/configs/ptbxl_cnn_lstm_image_v1.json": "02a9979bfdc33a82d440ebbb9aa98fb7d98cb44c710513123b562078c399c72b"
+  },
+  "test_predictions_accessed": false,
+  "model_choice": "higher-resolution depthwise separableCNN selected on syntheticcompute/capacity feasibility, without ECG performance comparison"
+}

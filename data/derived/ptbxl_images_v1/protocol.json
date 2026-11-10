@@ -1,0 +1,215 @@
+{
+  "created_utc": "2026-09-24T10:23:57.559740+00:00",
+  "dataset_id": "ptbxl_images_v1",
+  "binding": {
+    "configuration_sha256": "4c04eda83685a2e77f3d1e033f4b291161a4e94a5c99d1614be8b06d2d51a337",
+    "source_code_sha256": {
+      "src/generate_ptbxl_images.py": "72898b846ef6adc2af59e4934628935eaaf618c1cf4dae48f80082caebcfbd1f",
+      "src/ptbxl_rendering.py": "3d3301ffc71f333702c031b7214fd3c971806da152ab59027cb732b72fd71b94",
+      "src/ptbxl_image_manifest.py": "61bb49257048cc8929e545e10a4a97cd3af6a36d2e5adb670a114d7e76adc62d",
+      "src/common.py": "0214c2ec6d8d49ac9536a6602397d83f111e5bd64ec63f5d99633dee8c9bd672"
+    },
+    "source_rows_sha256": "4c616dde435eaa8e3d9a647718db595866c1402c8191a48c1cdeda17a75ed72a",
+    "runtime": {
+      "python": "3.12.4 | packaged by Anaconda, Inc. | (main, Jun 18 2024, 10:07:17) [Clang 14.0.6 ]",
+      "platform": "macOS-26.6.1-arm64-arm-64bit",
+      "wfdb": "4.3.1",
+      "numpy": "2.2.6",
+      "opencv": "4.12.0"
+    }
+  },
+  "configuration": {
+    "dataset_id": "ptbxl_images_v1",
+    "source_directory": "ptb-xl-a-large-publicly-available-electrocardiography-dataset-1.0.3",
+    "renderer": "custom_clean_ecg_page_v1",
+    "rendering_library": "OpenCV raster drawing and PNG encoding; WFDB waveform decoding",
+    "sampling_rate_hz": 500,
+    "samples_per_lead": 5000,
+    "lead_order": [
+      "I",
+      "II",
+      "III",
+      "AVR",
+      "AVL",
+      "AVF",
+      "V1",
+      "V2",
+      "V3",
+      "V4",
+      "V5",
+      "V6"
+    ],
+    "layout": "12 aligned rows; all 10 seconds of each lead; no rhythm-strip duplication",
+    "pixels_per_mm": 8,
+    "speed_mm_per_second": 25,
+    "nominal_gain_mm_per_mv": 10,
+    "row_pitch_mm": 30,
+    "row_signal_half_height_mm": 12,
+    "header_mm": 10,
+    "footer_mm": 8,
+    "left_margin_mm": 25,
+    "right_margin_mm": 5,
+    "gain_policy": "Reduce the page-wide gain from 10 by powers of two only when any absolute waveform value would exceed the 12-mm half-height. No gain increase, per-lead gain, baseline shift, filtering or sample removal. Plot and record the actual gain and a 1-mV calibration pulse.",
+    "mode": "8-bit grayscale PNG",
+    "background_gray": 255,
+    "minor_grid_gray": 247,
+    "major_grid_gray": 230,
+    "trace_gray": 20,
+    "line_width_pixels": 1,
+    "line_antialiasing": "OpenCV LINE_AA",
+    "png_compression": 6,
+    "augmentation": "none",
+    "printed_text": "Lead names and fixed technical calibration only; no patient ID, ECG ID, demographics, dates, SCP code or diagnostic label",
+    "class_names": [
+      "NORM",
+      "MI",
+      "STTC",
+      "CD",
+      "HYP"
+    ],
+    "label_policy": "All present SCP-code keys mapped through diagnostic==1; no likelihood threshold. Five overlapping binary targets. Records without mapped diagnostic superclasses retained as images but excluded from the classification manifest.",
+    "split_policy": "Official patient folds: 1-8 train, 9 validation, 10 test. Every source ECG rendered once; no split search or class balancing.",
+    "preview_policy": "Development only: first training record for each diagnostic superclass plus deterministic training amplitude extremes; freeze style after visual and numerical checks before full generation.",
+    "randomness": "None; deterministic clean rendering. No random augmentation or model training.",
+    "limitations": "Synthetic clean ECG pages, not real scans or photographs. Rasterization is not lossless signal storage: 500-Hz source points share pixels at 200 horizontal pixels/second. Native waveforms remain the authoritative numerical signal. Page-wide gain can vary and is explicitly calibrated; low-gain and flat-lead records are flagged, not silently discarded."
+  },
+  "source_manifest_summary": {
+    "dataset_release": "PTB-XL 1.0.3",
+    "render_protocol": "ptbxl_images_v1",
+    "all_source_records": 21799,
+    "all_source_patients": 18869,
+    "records_to_render": 21799,
+    "records_filtered_from_rendering": 0,
+    "classification_eligible_records": 21388,
+    "classification_eligible_patients": 18617,
+    "classification_ineligible_records": 411,
+    "exclusion_reason_counts": {
+      "no_mapped_diagnostic_superclass": 411
+    },
+    "class_names": [
+      "NORM",
+      "MI",
+      "STTC",
+      "CD",
+      "HYP"
+    ],
+    "label_columns": [
+      "label_NORM",
+      "label_MI",
+      "label_STTC",
+      "label_CD",
+      "label_HYP"
+    ],
+    "positive_label_counts": {
+      "NORM": 9514,
+      "MI": 5469,
+      "STTC": 5235,
+      "CD": 4898,
+      "HYP": 2649
+    },
+    "diagnostic_superclasses_per_record": {
+      "0": 411,
+      "1": 16244,
+      "2": 4068,
+      "3": 919,
+      "4": 157
+    },
+    "partitions": {
+      "train": {
+        "all_source_records": 17418,
+        "all_source_patients": 15023,
+        "classification_eligible_records": 17084,
+        "classification_eligible_patients": 14823,
+        "classification_ineligible_records": 334,
+        "positive_label_counts": {
+          "NORM": 7596,
+          "MI": 4379,
+          "STTC": 4186,
+          "CD": 3907,
+          "HYP": 2119
+        }
+      },
+      "validation": {
+        "all_source_records": 2183,
+        "all_source_patients": 1942,
+        "classification_eligible_records": 2146,
+        "classification_eligible_patients": 1917,
+        "classification_ineligible_records": 37,
+        "positive_label_counts": {
+          "NORM": 955,
+          "MI": 540,
+          "STTC": 528,
+          "CD": 495,
+          "HYP": 268
+        }
+      },
+      "test": {
+        "all_source_records": 2198,
+        "all_source_patients": 1904,
+        "classification_eligible_records": 2158,
+        "classification_eligible_patients": 1877,
+        "classification_ineligible_records": 40,
+        "positive_label_counts": {
+          "NORM": 963,
+          "MI": 550,
+          "STTC": 521,
+          "CD": 496,
+          "HYP": 262
+        }
+      }
+    },
+    "official_fold_counts": {
+      "1": 2175,
+      "2": 2181,
+      "3": 2192,
+      "4": 2174,
+      "5": 2174,
+      "6": 2173,
+      "7": 2176,
+      "8": 2173,
+      "9": 2183,
+      "10": 2198
+    },
+    "patients_spanning_official_folds": 0,
+    "duplicate_ecg_ids": 0,
+    "policy": "All present diagnostic SCP keys; no confidence threshold; diagnostic superclass union; multilabel; no class priority, balancing, or History_MI derivation",
+    "zero_confidence_codes_included": true,
+    "no_mapped_class_policy": "Render page; keep source record and original SCP dictionary; mark classification ineligible rather than treating as an all-negative labeled target",
+    "rendering_signal": "filename_hr: 500 Hz waveform; filename_lr retained as metadata",
+    "patient_id_policy": "Normalize integer-valued CSV IDs to decimal integer strings; preserve official fold; all record variants inherit patient fold",
+    "image_text_policy": "Patient IDs, ECG IDs, labels, SCP codes and other source metadata must not be printed on generated pages",
+    "metadata_sha256": {
+      "SHA256SUMS.txt": "b7224b92b341511ec3ceb13dc6652079b2c36a06504bcb49506f157f51dc695d",
+      "ptbxl_database.csv": "7600de9c1b27d181d850b3c6038a35d7c3ddb6bb33b702e3a20252a6859d216b",
+      "scp_statements.csv": "ad05b0b1fcae83bb1230755ad9cfc7c96f303feddc08a4a9ad5bdc9ca63bac8f",
+      "RECORDS": "56d37274b0b02339e9c30bff8c9a9f2a6fb3cb2bb7bcd5d7c55355451d53896a",
+      "ptbxl_v103_changelog.txt": "1874df343c4ceb706151fbb55bd60bd2954fba4372a445341343939524b2c34c"
+    },
+    "prior_audit_sha256": "6364d4b21a17d842b44cdd680c39a69e64e37fde4cbc9f1d5cd0f10b6e1767f9",
+    "canonical_rows_sha256": "d193462662746ee3e864d1b9074fb1325790e7fc543726ac9b6f2032c5971293",
+    "source_waveform_checks": "All referenced rate-specific .hea/.dat files exist and are listed in shipped checksums; actual waveform byte verification belongs to renderer",
+    "previous_same_rate_exact_duplicate_evidence": {
+      "100": {
+        "data_files": 21799,
+        "unique_data_sha256": 21799,
+        "redundant_exact_data_copies": 0,
+        "groups_crossing_official_folds": 0,
+        "duplicate_groups": []
+      },
+      "500": {
+        "data_files": 21799,
+        "unique_data_sha256": 21799,
+        "redundant_exact_data_copies": 0,
+        "groups_crossing_official_folds": 0,
+        "duplicate_groups": []
+      }
+    },
+    "same_rate_duplicate_evidence_scope": "Prior verified full audit, not a new waveform duplicate scan",
+    "model_outputs_used": false,
+    "source_files_changed": false
+  },
+  "preview_review_sha256": "15f0bb70185d84c60be81875b84b3ab1d116a39e63ffda09033cbe214902beef",
+  "test_style_selection": false,
+  "source_signals_modified": false,
+  "model_training_performed": false
+}

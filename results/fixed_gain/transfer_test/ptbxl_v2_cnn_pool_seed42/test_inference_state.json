@@ -1,0 +1,7 @@
+{
+  "status": "completed",
+  "completed_utc": "2026-11-02T14:56:20.880520+00:00",
+  "inference_calls": 1,
+  "model_result_dir": "ptbxl_v2/ptbxl_v2_cnn_pool_seed42",
+  "records": 2158
+}

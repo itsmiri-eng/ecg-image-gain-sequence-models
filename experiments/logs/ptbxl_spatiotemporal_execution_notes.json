@@ -1,0 +1,13 @@
+{
+  "recorded_utc": "2026-09-25T20:33:58.781905+00:00",
+  "run_id": "ptbxl_spatiotemporal_image_v1_seed42",
+  "observation": "macOS power log confirmed repeated Maintenance Sleep and short DarkWake periods during training; process continued with no restart.",
+  "example": "Epoch 2 began around 2026-09-25T19:13:16Z and completed 2026-09-25T19:29:18Z; recorded epoch timer was 504.43004491699685 seconds.",
+  "timing_interpretation": "Saved perf_counter elapsed times do not capture all host sleep intervals on this runtime. UTC start/completion spans include wall-clock sleep. Neither is pure CPU time. Do not infer architecture speed superiority from these runs.",
+  "temporary_idle_sleep_hold": "caffeinate -i -w 64013 tied to training process; does not prevent lid-triggered sleep.",
+  "user_action_requested": "Leave Mac plugged in, lid open and awake if continuous computation is desired. Training remains intact.",
+  "completed_utc": "2026-09-25T23:17:59.306508+00:00",
+  "completed_status": "completed",
+  "temporary_idle_sleep_hold_released": true,
+  "hold_process_exit_code": 0
+}

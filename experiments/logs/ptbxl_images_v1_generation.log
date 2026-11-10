@@ -1,0 +1,50 @@
+Rendered/checked 500/21799; errors=0; elapsed=14.0s
+Rendered/checked 1000/21799; errors=0; elapsed=22.9s
+Rendered/checked 1500/21799; errors=0; elapsed=32.5s
+Rendered/checked 2000/21799; errors=0; elapsed=42.6s
+Rendered/checked 2500/21799; errors=0; elapsed=57.1s
+Rendered/checked 3000/21799; errors=0; elapsed=68.0s
+Rendered/checked 3500/21799; errors=0; elapsed=78.5s
+Rendered/checked 4000/21799; errors=0; elapsed=88.9s
+Rendered/checked 4500/21799; errors=0; elapsed=98.3s
+Rendered/checked 5000/21799; errors=0; elapsed=108.0s
+Rendered/checked 5500/21799; errors=0; elapsed=118.0s
+Rendered/checked 6000/21799; errors=0; elapsed=128.8s
+Rendered/checked 6500/21799; errors=0; elapsed=139.7s
+Rendered/checked 7000/21799; errors=0; elapsed=153.4s
+Rendered/checked 7500/21799; errors=0; elapsed=165.0s
+Rendered/checked 8000/21799; errors=0; elapsed=176.9s
+Rendered/checked 8500/21799; errors=0; elapsed=189.5s
+Rendered/checked 9000/21799; errors=0; elapsed=203.3s
+Rendered/checked 9500/21799; errors=0; elapsed=216.0s
+Rendered/checked 10000/21799; errors=0; elapsed=227.6s
+Rendered/checked 10500/21799; errors=0; elapsed=238.4s
+Rendered/checked 11000/21799; errors=0; elapsed=250.0s
+Rendered/checked 11500/21799; errors=0; elapsed=261.2s
+Rendered/checked 12000/21799; errors=0; elapsed=272.7s
+Rendered/checked 12500/21799; errors=0; elapsed=285.5s
+Rendered/checked 13000/21799; errors=0; elapsed=297.3s
+Rendered/checked 13500/21799; errors=0; elapsed=308.6s
+Rendered/checked 14000/21799; errors=0; elapsed=320.1s
+Rendered/checked 14500/21799; errors=0; elapsed=332.1s
+Rendered/checked 15000/21799; errors=0; elapsed=344.5s
+Rendered/checked 15500/21799; errors=0; elapsed=356.0s
+Rendered/checked 16000/21799; errors=0; elapsed=367.1s
+Rendered/checked 16500/21799; errors=0; elapsed=377.6s
+Rendered/checked 17000/21799; errors=0; elapsed=388.3s
+Rendered/checked 17500/21799; errors=0; elapsed=398.6s
+Rendered/checked 18000/21799; errors=0; elapsed=408.8s
+Rendered/checked 18500/21799; errors=0; elapsed=418.8s
+Rendered/checked 19000/21799; errors=0; elapsed=429.4s
+Rendered/checked 19500/21799; errors=0; elapsed=439.5s
+Rendered/checked 20000/21799; errors=0; elapsed=449.3s
+Rendered/checked 20500/21799; errors=0; elapsed=459.5s
+Rendered/checked 21000/21799; errors=0; elapsed=469.1s
+Rendered/checked 21500/21799; errors=0; elapsed=479.4s
+Rendered/checked 21799/21799; errors=0; elapsed=485.1s
+{
+  "images": 21799,
+  "classification_eligible": 21388,
+  "total_image_bytes": 3370806113,
+  "render_runtime_seconds": 488.0156639170018
+}

@@ -1,0 +1,3 @@
+model,accuracy,balanced_accuracy,macro_f1,weighted_f1,notes,runtime_seconds,experiment_id
+LDA,0.6224489795918368,0.6031758448060075,0.5637426900584795,0.6423499224251104,"Train-only PCA(32), uniform-prior shrinkage LDA",1.2148089170004823,lda_v1_seed42
+CNN,0.7551020408163265,0.5685753024614102,0.5621212121212121,0.7310420531849102,"40,212 parameters; weighted CE; validation-only early stopping",46.471703916999104,cnn_v1_seed42

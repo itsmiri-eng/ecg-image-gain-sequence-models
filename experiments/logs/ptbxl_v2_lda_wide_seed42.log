@@ -1,0 +1,9 @@
+2026-11-01T15:10:08.868252+00:00 PCA 256: validation macro AUROC 0.80098
+2026-11-01T15:10:10.436691+00:00 PCA 512: validation macro AUROC 0.80562
+2026-11-01T15:10:17.706413+00:00 PCA 1024: validation macro AUROC 0.80182
+{
+  "run_id": "ptbxl_v2_lda_wide_seed42",
+  "pca_components": 512,
+  "test_macro_auc": 0.7938699946783697,
+  "test_macro_f1": 0.42688433912408763
+}

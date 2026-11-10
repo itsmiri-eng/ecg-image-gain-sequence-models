@@ -1,0 +1,22 @@
+{
+  "reviewed_utc": "2026-09-24T14:16:16.430888+00:00",
+  "status": "passed",
+  "review_method": "Visual inspection of all six PNG figures; displayed results checked against verified metrics and bootstrap intervals. Figures use saved predictions only.",
+  "checks": [
+    "legible axes and legends",
+    "no clipped text or overlapping confidence-interval labels",
+    "correct selected epoch15",
+    "five binary confusions match saved counts",
+    "ROC/AP/precision/recall/F1 scores and supports match saved metrics",
+    "partition summary and test intervals match verified results"
+  ],
+  "figure_sha256": {
+    "models/ptbxl_cnn_lstm/ptbxl_cnn_lstm_image_v1_seed42/training_curve.png": "4b40510ccf27da1d242b911333bd59596bd958aef1f527a1d210ec75e840daa2",
+    "results/ptbxl_cnn_lstm/ptbxl_cnn_lstm_image_v1_seed42/test_confusion_matrices.png": "e94b1a618d2c3d1cfbd693a22b6c11f8c678cd3495a1da49da2cc4dac2e42eac",
+    "results/ptbxl_cnn_lstm/ptbxl_cnn_lstm_image_v1_seed42/figures/partition_summary.png": "18f0f7936430afac7ba338ae6e05b9aa8024e8f7d42327f36ad8d5ae2fb8754f",
+    "results/ptbxl_cnn_lstm/ptbxl_cnn_lstm_image_v1_seed42/figures/per_label_metrics.png": "2f6c77a1352e3b2cf4486a44d096eeee038fb42cb4eacca0ac8bde5eb072f5b0",
+    "results/ptbxl_cnn_lstm/ptbxl_cnn_lstm_image_v1_seed42/figures/precision_recall_curves.png": "65fb9a20982b0b605ae6904f5d9133869472485d6849f29de87c23fd3e950f67",
+    "results/ptbxl_cnn_lstm/ptbxl_cnn_lstm_image_v1_seed42/figures/roc_curves.png": "ec4dcdb30bf68102c19e291948737b5c97440be1a666efb7f7e4b3c9c465249a"
+  },
+  "model_inference_performed": false
+}

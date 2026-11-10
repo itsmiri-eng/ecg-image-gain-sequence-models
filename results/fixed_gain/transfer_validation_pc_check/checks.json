@@ -1,0 +1,52 @@
+{
+  "split": "validation",
+  "created_utc": "2026-11-02T14:54:00.308707+00:00",
+  "models": {
+    "PCA + LDA": {
+      "max_abs_probability_change_on_unchanged_gain_pages": 1.2934207916259766e-05,
+      "macro_auroc_fixed_minus_original": [
+        -0.0494415295612165,
+        -0.059566459355175516,
+        -0.039066927237255335
+      ],
+      "in_frozen_protocol": true
+    },
+    "CNN-LSTM": {
+      "max_abs_probability_change_on_unchanged_gain_pages": 4.172325134277344e-07,
+      "macro_auroc_fixed_minus_original": [
+        -0.009902734657597834,
+        -0.014659953568989696,
+        -0.005266864316297898
+      ],
+      "in_frozen_protocol": true
+    },
+    "CNN + temporal conv": {
+      "max_abs_probability_change_on_unchanged_gain_pages": 4.470348358154297e-07,
+      "macro_auroc_fixed_minus_original": [
+        -0.003722941779388811,
+        -0.008194366862587543,
+        0.0007766922577738138
+      ],
+      "in_frozen_protocol": true
+    },
+    "CNN + small ViT": {
+      "max_abs_probability_change_on_unchanged_gain_pages": 9.5367431640625e-07,
+      "macro_auroc_fixed_minus_original": [
+        -0.004795434746555194,
+        -0.008769189679535373,
+        -0.0006285975145561966
+      ],
+      "in_frozen_protocol": true
+    },
+    "CNN (pooled)": {
+      "max_abs_probability_change_on_unchanged_gain_pages": 4.76837158203125e-07,
+      "macro_auroc_fixed_minus_original": [
+        -0.008848199084201092,
+        -0.014302815449503051,
+        -0.0032291686566601582
+      ],
+      "in_frozen_protocol": false,
+      "note": "not in the frozen protocol (model trained after the freeze); disclosed addition"
+    }
+  }
+}

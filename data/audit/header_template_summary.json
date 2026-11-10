@@ -1,0 +1,32 @@
+{
+  "created_utc": "2026-09-23T09:26:32.193212+00:00",
+  "unique_source_files": 491,
+  "status_counts": {
+    "exact_template_match": 491
+  },
+  "unique_recognized_ids": 311,
+  "roi_xyxy_pixels": [
+    125,
+    65,
+    245,
+    100
+  ],
+  "grayscale_threshold_below": 130,
+  "segmentation": "8-connected components with height>=12 and area>=15; exactly six components required",
+  "glyph_normalization": "32px tall, aspect-preserving bilinear resize; centered in 36x28 zero canvas",
+  "acceptance": "Every digit has exactly zero MSE to a visually labeled template, and next digit margin>=0.05",
+  "reference_pages": 5,
+  "reference_glyphs": 30,
+  "maximum_digit_mse": 0.0,
+  "minimum_competing_digit_margin": 0.09194337576627731,
+  "manual_validation_rows": 100,
+  "manual_validation_agreements": 100,
+  "nonreference_manual_validation_rows": 99,
+  "validation_policy": "Root agent independently visually transcribed headers before template predictions were available; reference overlaps are explicitly marked",
+  "confidence_policy": "No calibrated OCR probability is claimed; exact distance and separation are reported directly",
+  "identity_limitation": "Transcribed printed report IDs do not establish unique patient identity. Group equal IDs conservatively across classes.",
+  "header_ids_sha256": "4e4e0d4bba994b2998aa0b2537b509b53030d1b4ae7225d57cbc8267883a3dd9",
+  "templates_sha256": "a6c2231d59054e8fdeda175602504d3e4b068f6c52786ebad4c2a9e647cd8ec0",
+  "manual_validation_sha256": "ac7e18458541d31b0b23b4207f9db37ca411b00660e75f15467e1a1c6ce20c5f",
+  "script_sha256": "8c5b79bbc07b66e792d774ea62dc99cd979fc80372b9e1ca1d120ae6de2a2e12"
+}

@@ -1,0 +1,197 @@
+{
+  "status": "generated_pending_full_verification",
+  "dataset_id": "ptbxl_images_v1",
+  "completed_utc": "2026-09-24T10:32:02.537910+00:00",
+  "images": 21799,
+  "classification_eligible": 21388,
+  "classification_ineligible": 411,
+  "eligible_partition_counts": {
+    "train": 17084,
+    "validation": 2146,
+    "test": 2158
+  },
+  "all_partition_counts": {
+    "train": 17418,
+    "validation": 2183,
+    "test": 2198
+  },
+  "source_manifest_summary": {
+    "dataset_release": "PTB-XL 1.0.3",
+    "render_protocol": "ptbxl_images_v1",
+    "all_source_records": 21799,
+    "all_source_patients": 18869,
+    "records_to_render": 21799,
+    "records_filtered_from_rendering": 0,
+    "classification_eligible_records": 21388,
+    "classification_eligible_patients": 18617,
+    "classification_ineligible_records": 411,
+    "exclusion_reason_counts": {
+      "no_mapped_diagnostic_superclass": 411
+    },
+    "class_names": [
+      "NORM",
+      "MI",
+      "STTC",
+      "CD",
+      "HYP"
+    ],
+    "label_columns": [
+      "label_NORM",
+      "label_MI",
+      "label_STTC",
+      "label_CD",
+      "label_HYP"
+    ],
+    "positive_label_counts": {
+      "NORM": 9514,
+      "MI": 5469,
+      "STTC": 5235,
+      "CD": 4898,
+      "HYP": 2649
+    },
+    "diagnostic_superclasses_per_record": {
+      "0": 411,
+      "1": 16244,
+      "2": 4068,
+      "3": 919,
+      "4": 157
+    },
+    "partitions": {
+      "train": {
+        "all_source_records": 17418,
+        "all_source_patients": 15023,
+        "classification_eligible_records": 17084,
+        "classification_eligible_patients": 14823,
+        "classification_ineligible_records": 334,
+        "positive_label_counts": {
+          "NORM": 7596,
+          "MI": 4379,
+          "STTC": 4186,
+          "CD": 3907,
+          "HYP": 2119
+        }
+      },
+      "validation": {
+        "all_source_records": 2183,
+        "all_source_patients": 1942,
+        "classification_eligible_records": 2146,
+        "classification_eligible_patients": 1917,
+        "classification_ineligible_records": 37,
+        "positive_label_counts": {
+          "NORM": 955,
+          "MI": 540,
+          "STTC": 528,
+          "CD": 495,
+          "HYP": 268
+        }
+      },
+      "test": {
+        "all_source_records": 2198,
+        "all_source_patients": 1904,
+        "classification_eligible_records": 2158,
+        "classification_eligible_patients": 1877,
+        "classification_ineligible_records": 40,
+        "positive_label_counts": {
+          "NORM": 963,
+          "MI": 550,
+          "STTC": 521,
+          "CD": 496,
+          "HYP": 262
+        }
+      }
+    },
+    "official_fold_counts": {
+      "1": 2175,
+      "2": 2181,
+      "3": 2192,
+      "4": 2174,
+      "5": 2174,
+      "6": 2173,
+      "7": 2176,
+      "8": 2173,
+      "9": 2183,
+      "10": 2198
+    },
+    "patients_spanning_official_folds": 0,
+    "duplicate_ecg_ids": 0,
+    "policy": "All present diagnostic SCP keys; no confidence threshold; diagnostic superclass union; multilabel; no class priority, balancing, or History_MI derivation",
+    "zero_confidence_codes_included": true,
+    "no_mapped_class_policy": "Render page; keep source record and original SCP dictionary; mark classification ineligible rather than treating as an all-negative labeled target",
+    "rendering_signal": "filename_hr: 500 Hz waveform; filename_lr retained as metadata",
+    "patient_id_policy": "Normalize integer-valued CSV IDs to decimal integer strings; preserve official fold; all record variants inherit patient fold",
+    "image_text_policy": "Patient IDs, ECG IDs, labels, SCP codes and other source metadata must not be printed on generated pages",
+    "metadata_sha256": {
+      "SHA256SUMS.txt": "b7224b92b341511ec3ceb13dc6652079b2c36a06504bcb49506f157f51dc695d",
+      "ptbxl_database.csv": "7600de9c1b27d181d850b3c6038a35d7c3ddb6bb33b702e3a20252a6859d216b",
+      "scp_statements.csv": "ad05b0b1fcae83bb1230755ad9cfc7c96f303feddc08a4a9ad5bdc9ca63bac8f",
+      "RECORDS": "56d37274b0b02339e9c30bff8c9a9f2a6fb3cb2bb7bcd5d7c55355451d53896a",
+      "ptbxl_v103_changelog.txt": "1874df343c4ceb706151fbb55bd60bd2954fba4372a445341343939524b2c34c"
+    },
+    "prior_audit_sha256": "6364d4b21a17d842b44cdd680c39a69e64e37fde4cbc9f1d5cd0f10b6e1767f9",
+    "canonical_rows_sha256": "d193462662746ee3e864d1b9074fb1325790e7fc543726ac9b6f2032c5971293",
+    "source_waveform_checks": "All referenced rate-specific .hea/.dat files exist and are listed in shipped checksums; actual waveform byte verification belongs to renderer",
+    "previous_same_rate_exact_duplicate_evidence": {
+      "100": {
+        "data_files": 21799,
+        "unique_data_sha256": 21799,
+        "redundant_exact_data_copies": 0,
+        "groups_crossing_official_folds": 0,
+        "duplicate_groups": []
+      },
+      "500": {
+        "data_files": 21799,
+        "unique_data_sha256": 21799,
+        "redundant_exact_data_copies": 0,
+        "groups_crossing_official_folds": 0,
+        "duplicate_groups": []
+      }
+    },
+    "same_rate_duplicate_evidence_scope": "Prior verified full audit, not a new waveform duplicate scan",
+    "model_outputs_used": false,
+    "source_files_changed": false
+  },
+  "gain_counts": {
+    "5.0": 14597,
+    "2.5": 5324,
+    "10.0": 1458,
+    "1.25": 369,
+    "0.625": 37,
+    "0.3125": 14
+  },
+  "quality_flag_counts": {
+    "gain_below_2.5_mm_per_mv": 420,
+    "flat_lead": 1
+  },
+  "all_waveform_points_within_rows": true,
+  "total_image_bytes": 3370806113,
+  "render_runtime_seconds": 488.0156639170018,
+  "reused_pages": 0,
+  "workers": 4,
+  "binding": {
+    "configuration_sha256": "4c04eda83685a2e77f3d1e033f4b291161a4e94a5c99d1614be8b06d2d51a337",
+    "source_code_sha256": {
+      "src/generate_ptbxl_images.py": "72898b846ef6adc2af59e4934628935eaaf618c1cf4dae48f80082caebcfbd1f",
+      "src/ptbxl_rendering.py": "3d3301ffc71f333702c031b7214fd3c971806da152ab59027cb732b72fd71b94",
+      "src/ptbxl_image_manifest.py": "61bb49257048cc8929e545e10a4a97cd3af6a36d2e5adb670a114d7e76adc62d",
+      "src/common.py": "0214c2ec6d8d49ac9536a6602397d83f111e5bd64ec63f5d99633dee8c9bd672"
+    },
+    "source_rows_sha256": "4c616dde435eaa8e3d9a647718db595866c1402c8191a48c1cdeda17a75ed72a",
+    "runtime": {
+      "python": "3.12.4 | packaged by Anaconda, Inc. | (main, Jun 18 2024, 10:07:17) [Clang 14.0.6 ]",
+      "platform": "macOS-26.6.1-arm64-arm-64bit",
+      "wfdb": "4.3.1",
+      "numpy": "2.2.6",
+      "opencv": "4.12.0"
+    }
+  },
+  "manifest_sha256": {
+    "all_images.csv": "ad85b1c011ba5b7da7c536efdac060b7f777f459f44b71e61c3c9ffc17273174",
+    "classification_manifest.csv": "8c39382f57235220da081488a8387f44f800e9eacb70fadff18aa23faa8c504b",
+    "classification_exclusions.csv": "5050255a7611c65e2a3267e6cd327192954fcb3f0d4375c5e262f4e81944c94b",
+    "splits/train.csv": "252a28dacb4740d3de10ab3aeba1ebbc1be78350fd5c9f44e86be949be5a8ac4",
+    "splits/validation.csv": "3b113be27b6589a81a84ece5e0898ddb803f46fa7d8ca8009def0fe7a3cc5097",
+    "splits/test.csv": "55f2414e9b4fd56bfa235e4ec5070640db1aa5733386db2e2fb557c13b12e2a8"
+  },
+  "model_training_performed": false,
+  "test_images_used_for_rendering_choices": false
+}

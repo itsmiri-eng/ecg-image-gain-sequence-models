@@ -1,0 +1,13 @@
+{
+  "status": "completed",
+  "completed_utc": "2026-11-07T00:02:34.853276+00:00",
+  "dataset": "china",
+  "inference_calls": 1,
+  "records": 9004,
+  "family": "ptbxl_v2",
+  "kind": "network",
+  "page": "adaptive",
+  "head": "cnn_pool",
+  "seed": 45,
+  "predictions_sha256": "882cc6077b99851567091250fb9492c15c00a0ef2327745f0958effe5562a7cb"
+}

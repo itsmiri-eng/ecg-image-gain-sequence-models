@@ -1,0 +1,41 @@
+{
+  "started_utc": "2026-11-01T18:02:17.987977+00:00",
+  "computer": "Miriams-Macbook-Air.local",
+  "platform": "macOS-26.6.1-arm64-arm-64bit",
+  "python": "3.12.4 | packaged by Anaconda, Inc. | (main, Jun 18 2024, 10:07:17) [Clang 14.0.6 ]",
+  "project_root": "/Users/miriamistanboli/Downloads/ecg swiss",
+  "problems": [
+    "No NVIDIA GPU visible to PyTorch; training would run on the CPU"
+  ],
+  "packages": {
+    "numpy": "2.2.6",
+    "scipy": "1.17.1",
+    "scikit-learn": "1.9.0",
+    "torch": "2.9.1",
+    "Pillow": "10.3.0",
+    "matplotlib": "3.10.0",
+    "joblib": "1.5.3",
+    "threadpoolctl": "3.6.0",
+    "opencv-python": "4.12.0.88",
+    "pytest": "9.0.3"
+  },
+  "device": "cpu",
+  "v1_cache_binding_check": {
+    "mode": "strict",
+    "differences": {
+      "source_root": [
+        "/Users/miriamistanboli/Downloads/ecg swiss/data/derived/ptbxl_images_v1",
+        "/Users/miriamistanboli/Downloads/ecg swiss/data/derived/ptbxl_images_v1"
+      ],
+      "python": [
+        "3.12.4 | packaged by Anaconda, Inc. | (main, Jun 18 2024, 10:07:17) [Clang 14.0.6 ]",
+        "3.12.4 | packaged by Anaconda, Inc. | (main, Jun 18 2024, 10:07:17) [Clang 14.0.6 ]"
+      ]
+    }
+  },
+  "max_abs_probability_difference_vs_mac": 0.0,
+  "validation_inference_seconds": 69.29672887502238,
+  "training_repeat_max_parameter_difference": 0.0,
+  "completed_utc": "2026-11-01T18:03:34.597522+00:00",
+  "ready": true
+}

@@ -1,0 +1,125 @@
+{
+  "status": "passed",
+  "run_id": "ptbxl_spatiotemporal_image_v1_seed42",
+  "verified_utc": "2026-09-25T23:53:42.005148+00:00",
+  "verifier_sha256": "592b896cca4c8851006ce1d9b4aacb3e28a738b34b9596ebf1d57bbf1e7ea583",
+  "verification_helper_sha256": "524d2c7d375fe046974ab7ed28db40ccb78ae22eedf2b936c1299eb3f023dde2",
+  "model_inference_performed": false,
+  "bootstrap_resampling_performed": false,
+  "metric_absolute_tolerance": 1e-12,
+  "failures": [],
+  "class_names": [
+    "NORM",
+    "MI",
+    "STTC",
+    "CD",
+    "HYP"
+  ],
+  "checkpoint_sha256": "d5f390a876024eca15f353c3ebe78756302ee4b1c8522d81cc44ecb00c095141",
+  "configuration_sha256": "ee601962031a9f54665d7b9284380979f29cbf68f038d9f2bb891b607c376762",
+  "source_files_verified": 8,
+  "source_snapshots_verified": 8,
+  "cache": {
+    "encoded_images_hashed": 21388,
+    "encoded_image_bytes_hashed": 1291819667,
+    "decoded_pixels_recomputed": false,
+    "metadata_hashes_verified": 3,
+    "partition_records": {
+      "train": 17084,
+      "validation": 2146,
+      "test": 2158
+    },
+    "unique_patients": 18617
+  },
+  "prediction_records_verified": {
+    "train": 17084,
+    "validation": 2146,
+    "test": 2158
+  },
+  "metrics_recomputed": true,
+  "confusions_and_per_label_metrics_verified": true,
+  "fixed_threshold_decisions_verified": true,
+  "patient_fold_disjointness_verified": true,
+  "selection": {
+    "best_epoch": 16,
+    "epochs_run": 20,
+    "selection_key": [
+      0.8888883368928573,
+      0.7348449608014518,
+      -0.3261912835542455
+    ],
+    "earliest_exact_tie_rule_verified": true
+  },
+  "checkpoint_replay": {
+    "split": "train",
+    "records": 32,
+    "maximum_absolute_probability_difference": 0.0,
+    "passed": true,
+    "test_replay_performed": false,
+    "checkpoint_sha256": "d5f390a876024eca15f353c3ebe78756302ee4b1c8522d81cc44ecb00c095141"
+  },
+  "test_inference_bookkeeping_verified": {
+    "status": "completed",
+    "inference_calls": 1
+  },
+  "uncertainty": {
+    "point_estimates_verified": true,
+    "parameters_and_bounds_verified": true,
+    "intervals_recomputed": false,
+    "resamples": 500,
+    "seed": 2024,
+    "n_unique_patients": 1877
+  },
+  "preservation": {
+    "previous_model_artifacts_hashed": 164,
+    "source_dataset_artifacts_hashed": 10,
+    "original_baseline_artifacts_hashed": 66,
+    "changed_artifacts": []
+  },
+  "experiment_log": {
+    "prior_log_rows": 4,
+    "appended_log_rows": 1,
+    "current_run_occurrences": 1,
+    "prior_byte_prefix_preserved": true,
+    "single_label_accuracy_fields_blank": true,
+    "current_log_sha256": "9ca9838d9968a884e49ef5be6efaee6f9c73bcfe679b42cb0acbdace6a179cae",
+    "completed_run_log_sha256": "9ca9838d9968a884e49ef5be6efaee6f9c73bcfe679b42cb0acbdace6a179cae"
+  },
+  "run_artifact_sha256": {
+    "checkpoint_replay.json": "19084ec2927e93de4c1c8acd684d4e149ccfeb4cbacc278f02ffe021cc679497",
+    "config.json": "ee601962031a9f54665d7b9284380979f29cbf68f038d9f2bb891b607c376762",
+    "development_split_used.csv": "51c74cff184111a2b82e0ceb9d5a493c2d981283228bd4a04b37e30039b8afbe",
+    "evaluation_progress.json": "c94d9e6d9cea0676afe8a8f7803a7fe60a380ce91cbee6b037a7a38cd920e8ed",
+    "preservation.json": "58eb3396e773b492667840a454ebba261f32eed9a8ba53e109e886d5d8067a16",
+    "prior_experiment_log.csv": "93be4d113ddff271df5f794793e1ffd2266d17df250f95cb315b5c272f05cf49",
+    "protected_artifacts.json": "85dbd17b6b9528a32ab9222f0b81bd656f4d2f2670fd696b20f2c63d66e38ec2",
+    "provenance.json": "16a5570af365b67af4dc05ceebc17dbcd8a19e67210e1af89e2251d975f4ba85",
+    "run.json": "2f0023820db4efe57e5569b29211dd116292772d54deb6177c85e74b17aeda9d",
+    "run_summary.csv": "fc0a6c3dce360f0e4da5124521e6c0a2a36dfb92af01afc8402b6f9f5f6a7dcc",
+    "selection_frozen.json": "bfdbcb5eddadbda4cecb0276f0c2f2a8940246f112b3ae1e8d41469d40b219d8",
+    "source_snapshot/src/baseline_preservation.py": "76d5b4ff9f383c3a6a5a3ab8bdae81ca83c36ae8ab11cc64d08cc3cbb474f673",
+    "source_snapshot/src/common.py": "0214c2ec6d8d49ac9536a6602397d83f111e5bd64ec63f5d99633dee8c9bd672",
+    "source_snapshot/src/evaluation/multilabel.py": "68e68fc5b4b00322b118d244d1efa15f164d16cd8a616fac02bb4b20207a3319",
+    "source_snapshot/src/evaluation/ptbxl_uncertainty.py": "ce4ea41e99e2498a1dfc8cc40a3de6ba838d6b27db544802b064ecde5091dd5c",
+    "source_snapshot/src/models/ptbxl_cnn_lstm.py": "ecdcd8bce543bf5fb7f869667fa9d17ad2436eb0d9cbcb5d15cc64537a7686b1",
+    "source_snapshot/src/models/ptbxl_spatiotemporal.py": "5c8d8bf1df2d8b096f37a921fdb1c9da2c6892e559af1b3545e0592bd2c96ca8",
+    "source_snapshot/src/ptbxl_learning_data.py": "0b8ce73d5d8e99accbd3c5132a3bc2ddc7ce2697fb25ffb864da1fe700ace082",
+    "source_snapshot/src/run_ptbxl_spatiotemporal.py": "3024ff975792339d7ca96ece9c1eb740d0209e3aedd1607c2783e69543aeefc2",
+    "test_confusion_matrices.png": "a542250cddb2e05b3979808c89eb34f46264d93b69621b4f6a20c19a94644493",
+    "test_inference_state.json": "9211ee44c5b85ead85777fe87d929fd781c4a61b01a942fe051c166cbfaed4d0",
+    "test_metrics.json": "1acb1174e00cf412cf3c2ab35336d57d5c13428aa913d4f5f914af30a79735ce",
+    "test_patient_bootstrap.json": "fc1664d4c33b1d8572caf27b8a25ac34cd4b11ed6139c48c7a60dbd8998dd172",
+    "test_per_label.csv": "7bddea019a867cda325fcb98e02fed595225678c3c90d4a2d03edf1de41e12d5",
+    "test_predictions.csv": "a31fb929ba82baead38ec12ecb5ecc7a3f440bea5de08322bce6f4766da006af",
+    "train_confusion_matrices.png": "8ed62b2861b4189b41f1ca9e1b4b30f1884b8f0bfc31527a3cb4511be42cd232",
+    "train_metrics.json": "27e24b3e3576c5fafdb69747e22e5a9161cca8f8929a0da8ca96ecab16297ff7",
+    "train_per_label.csv": "97a62d0a8dc0483270173dcb07add075f8a93d4316bef6cf8315e7942eb929cd",
+    "train_predictions.csv": "6379f57252de05ae8cbbb03ed6f4343682bc0b47bab3f9409695e882050d89ee",
+    "training_metadata.json": "7a6cbbbed7d71263942194e677a4b4bfbeddd2e56a15580fd2ffe21fb782dc4c",
+    "validation_confusion_matrices.png": "a48e241fb6d23724f275422932a36be1c80e70815dd82cc720489f0ffb135060",
+    "validation_metrics.json": "9d73c14172e1845de68e3e0b622e8128a09c9581f86ce0414c67dfb8379693ab",
+    "validation_per_label.csv": "a736234502a2cacb458d8bfb655ac6c32cc40f5ef2113efda1bd01da0893244c",
+    "validation_predictions.csv": "3b35f9c4737c527f7690c97315dde2733528a033beb0cf517907cebf58f6180b"
+  },
+  "scope": "Saved-artifact consistency and current file integrity. No model inference or new clinical validation. Inference counts are checked against saved bookkeeping; unrecorded activity cannot be ruled out. Bootstrap intervals have structural/point-estimate checks and are not numerically recomputed. Cached PNG encoded hashes are rechecked; their pixel arrays are not decoded again."
+}

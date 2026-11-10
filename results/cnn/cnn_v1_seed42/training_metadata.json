@@ -1,0 +1,86 @@
+{
+  "model": "SmallECGCNN",
+  "config": {
+    "seed": 42,
+    "max_epochs": 30,
+    "patience": 7,
+    "batch_size": 16,
+    "learning_rate": 0.001,
+    "weight_decay": 0.0001,
+    "dropout": 0.25,
+    "device": "auto",
+    "num_threads": 4,
+    "min_delta": 0.0,
+    "num_classes": 4
+  },
+  "input_shape": [
+    1,
+    128,
+    256
+  ],
+  "num_parameters": 40212,
+  "normalization": {
+    "method": "global training-pixel standardization",
+    "fit_partition": "train",
+    "mean": 0.06047950372331967,
+    "std": 0.08952904696916278,
+    "raw_std": 0.08952904696916278,
+    "std_floor": 1e-06
+  },
+  "augmentation": "none",
+  "class_counts_train": [
+    85,
+    18,
+    140,
+    52
+  ],
+  "class_weights": [
+    0.8676470518112183,
+    4.097222328186035,
+    0.5267857313156128,
+    1.4182692766189575
+  ],
+  "class_weight_formula": "n_train / (4 * training_class_count)",
+  "loss": "class-weighted cross-entropy; aggregate divided by sum of target weights",
+  "checkpoint_selection": "strict minimum validation weighted cross-entropy",
+  "early_stopping": "validation loss; min_delta affects patience only",
+  "best_epoch": 25,
+  "epochs_run": 30,
+  "stopped_early": false,
+  "training_seconds": 43.7021351670046,
+  "best_train_metrics": {
+    "accuracy": 0.7220338983050848,
+    "balanced_accuracy": 0.4883636788048552,
+    "macro_f1": 0.4360309159866682,
+    "weighted_f1": 0.661236600507637,
+    "loss": 0.9540184335731411
+  },
+  "best_validation_metrics": {
+    "accuracy": 0.7142857142857143,
+    "balanced_accuracy": 0.5090579710144928,
+    "macro_f1": 0.46072463768115945,
+    "weighted_f1": 0.649251700680272,
+    "loss": 1.039684346476449
+  },
+  "epoch_metric_definition": "Full-split evaluation after each epoch, with dropout disabled",
+  "device": "cpu",
+  "device_probe": {
+    "requested": "auto",
+    "mps_available": false,
+    "fallback_reason": "MPS is unavailable in this Python/PyTorch runtime."
+  },
+  "environment": {
+    "python": "3.12.4 | packaged by Anaconda, Inc. | (main, Jun 18 2024, 10:07:17) [Clang 14.0.6 ]",
+    "platform": "macOS-26.6.1-arm64-arm-64bit",
+    "machine": "arm64",
+    "torch": "2.9.1",
+    "numpy": "2.2.6",
+    "scikit_learn": "1.9.0",
+    "num_threads": 4,
+    "deterministic_algorithms": true
+  },
+  "reproducibility_limit": "Deterministic on this runtime; cross-device/version equality is not guaranteed.",
+  "checkpoint_path": "/Users/miriamistanboli/Downloads/ecg swiss/models/cnn/cnn_v1_seed42/best.pt",
+  "history_path": "/Users/miriamistanboli/Downloads/ecg swiss/models/cnn/cnn_v1_seed42/history.csv",
+  "runtime_seconds": 43.98137745800341
+}

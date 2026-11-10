@@ -1,0 +1,14 @@
+2026-11-01T14:57:53.196100+00:00 extracted train features (17084, 25200) in 61.4s
+2026-11-01T14:58:08.569753+00:00 extracted validation features (2146, 25200) in 14.5s
+2026-11-01T14:58:34.329209+00:00 PCA 16: validation macro AUROC 0.69547
+2026-11-01T14:58:34.439593+00:00 PCA 32: validation macro AUROC 0.70100
+2026-11-01T14:58:34.590338+00:00 PCA 64: validation macro AUROC 0.71698
+2026-11-01T14:58:34.877009+00:00 PCA 128: validation macro AUROC 0.78841
+2026-11-01T14:58:35.372473+00:00 PCA 256: validation macro AUROC 0.80063
+2026-11-01T14:58:51.172294+00:00 extracted test features (2158, 25200) in 12.1s
+{
+  "run_id": "ptbxl_v2_lda_seed42",
+  "pca_components": 256,
+  "test_macro_auc": 0.7882693491701767,
+  "test_macro_f1": 0.40343761879390544
+}

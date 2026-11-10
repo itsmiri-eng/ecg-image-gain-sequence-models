@@ -1,0 +1,15 @@
+test_configuration_targets_and_normalization_guards (test_ptbxl_hybrid_vit.ArchitectureTests.test_configuration_targets_and_normalization_guards) ... ok
+test_global_attention_reads_future_tokens_and_positions_break_permutation_symmetry (test_ptbxl_hybrid_vit.ArchitectureTests.test_global_attention_reads_future_tokens_and_positions_break_permutation_symmetry) ... ok
+test_identical_seeded_encoder_shapes_and_finite_gradients (test_ptbxl_hybrid_vit.ArchitectureTests.test_identical_seeded_encoder_shapes_and_finite_gradients) ... ok
+test_layers_have_independent_initial_parameters_and_no_cls (test_ptbxl_hybrid_vit.ArchitectureTests.test_layers_have_independent_initial_parameters_and_no_cls) ... ok
+test_selection_order_and_exact_ties (test_ptbxl_hybrid_vit.ArchitectureTests.test_selection_order_and_exact_ties) ... ok
+test_auto_records_unavailable_and_failed_candidates_without_silent_explicit_fallback (test_ptbxl_hybrid_vit.DeviceTests.test_auto_records_unavailable_and_failed_candidates_without_silent_explicit_fallback) ... ok
+test_cpu_probe_runs_actual_forward_backward (test_ptbxl_hybrid_vit.DeviceTests.test_cpu_probe_runs_actual_forward_backward) ... ok
+test_deterministic_training_checkpoint_replay_progress_and_no_overwrite (test_ptbxl_hybrid_vit.TrainingTests.test_deterministic_training_checkpoint_replay_progress_and_no_overwrite) ... ok
+test_test_split_and_wrong_counts_rejected_without_completion (test_ptbxl_hybrid_vit.TrainingTests.test_test_split_and_wrong_counts_rejected_without_completion) ... ok
+test_validation_only_selection_earliest_tie_and_early_stopping (test_ptbxl_hybrid_vit.TrainingTests.test_validation_only_selection_earliest_tie_and_early_stopping) ... ok
+
+----------------------------------------------------------------------
+Ran 10 tests in 5.813s
+
+OK

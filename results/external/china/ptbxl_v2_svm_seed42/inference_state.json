@@ -1,0 +1,13 @@
+{
+  "status": "completed",
+  "completed_utc": "2026-11-07T00:02:35.467210+00:00",
+  "dataset": "china",
+  "inference_calls": 1,
+  "records": 9004,
+  "family": "ptbxl_v2",
+  "kind": "svm",
+  "page": "adaptive",
+  "head": "pca_svm",
+  "seed": 42,
+  "predictions_sha256": "08a98b115845eb1adfee091c7e66cb0049d2c6a988052791b91be837895f788a"
+}

@@ -1,0 +1,6 @@
+﻿2026-11-02T15:57:03.360692+00:00 train: (17084, 12, 1000)
+2026-11-02T15:57:24.352397+00:00 validation: (2146, 12, 1000)
+2026-11-02T15:57:44.320693+00:00 test: (2158, 12, 1000)
+{"split": "train", "records": 17084, "first_ecg": 1}
+{"split": "validation", "records": 2146, "first_ecg": 8}
+{"split": "test", "records": 2158, "first_ecg": 9}

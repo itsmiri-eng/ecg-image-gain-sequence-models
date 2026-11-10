@@ -1,0 +1,71 @@
+{
+  "protocol": "ptbxl_v2_signal_resnet1d",
+  "result_family": "ptbxl_signal",
+  "log_model_name": "PTBXL_Signal_ResNet1D_Wang",
+  "created_utc": "2026-11-02",
+  "purpose": "Signal-domain reference for the image comparison (docs/ROADMAP_Q1.md, item 2): how much discrimination the paper-image representation costs. Same 21,388 ECGs, labels, official patient folds, row order, training loop, hyperparameters, selection rule, threshold, test policy and bootstrap as the image networks; only the input differs (raw 100 Hz waveforms instead of rendered pages). Frozen before any signal model was trained. It is a reference, not a member of the controlled image-head comparison; the model is a standard Wang-style 1D ResNet and much larger than the image heads.",
+  "dataset_id": "ptbxl_signals100_v1",
+  "split_version": "ptbxl_v103_official_folds_1to8_9_10_diagnostic_superclasses",
+  "cohort_and_order": "rows of the v1 image cache (data/processed/ptbxl_lead_images_v1) for each split, in that order; labels and patient IDs taken from those rows",
+  "signal_cache_root": "data/processed/ptbxl_signals100_v1",
+  "source": "PTB-XL v1.0.3 records100 (filename_lr), read with wfdb; every .dat/.hea file checked against the dataset's SHA256SUMS.txt",
+  "class_names": [
+    "NORM",
+    "MI",
+    "STTC",
+    "CD",
+    "HYP"
+  ],
+  "input_shape": [
+    12,
+    1000
+  ],
+  "preprocessing": {
+    "sampling_rate_hz": 100,
+    "duration_seconds": 10,
+    "leads": "I, II, III, aVR, aVL, aVF, V1-V6 (PTB-XL order)",
+    "units": "mV as stored; no filtering, resampling or cropping",
+    "normalization": "per-lead mean and standard deviation from training signals only",
+    "augmentation": "none"
+  },
+  "model": {
+    "name": "resnet1d_wang",
+    "definition": "Wang et al. 2017 time-series ResNet: three residual blocks (64, 128, 128 channels), each conv k=8, k=5, k=3 with BatchNorm and ReLU, 1x1 projection shortcut when channels change; global average pooling, dropout, linear 5-logit readout",
+    "reference": "Wang, Yan and Oates, IJCNN 2017; used as resnet1d_wang in Strodthoff et al., IEEE JBHI 2021 (PTB-XL benchmark)"
+  },
+  "training": {
+    "model": "resnet1d_wang",
+    "seed": 43,
+    "num_threads": 4,
+    "batch_size": 16,
+    "max_epochs": 20,
+    "patience": 4,
+    "learning_rate": 0.001,
+    "weight_decay": 0.0001,
+    "dropout": 0.2,
+    "gradient_clip_norm": 1.0,
+    "device": "cuda",
+    "scheduler": "cosine",
+    "eta_min": 1e-05
+  },
+  "training_loop": "src/training/ptbxl_trainer.py train_model, unchanged; the runner registers the model and points the loop's input-shape check at 12 x 1000 at run time (src/run_ptbxl_signal.py)",
+  "seeds": [
+    42,
+    43,
+    44
+  ],
+  "loss": "unweighted binary cross entropy with logits; five independent binary targets",
+  "selection_rule": "Strict lexicographic maximum of validation (macro_roc_auc, macro_average_precision, -probability_binary_cross_entropy); earliest epoch on exact tie",
+  "threshold": 0.5,
+  "threshold_policy": "fixed sigmoid probability >=0.5; no threshold search",
+  "test_policy": "One test inference per run after the selected checkpoint is frozen and reloaded. Fold 10 was already observed for earlier PTB-XL models, so the comparison is exploratory; no test-based tuning.",
+  "uncertainty": {
+    "method": "patient-cluster percentile bootstrap of final test predictions",
+    "resamples": 500,
+    "seed": 2024,
+    "confidence_level": 0.95,
+    "scope": "test-sampling uncertainty conditional on this fitted model; excludes seed/training/external-domain variation"
+  },
+  "concurrency_note": "Seeds run on the same GPU as the fixed-gain seed 43/44 queue; runtimes are not controlled speed measurements",
+  "run_id": "ptbxl_v2_signal_resnet1d_seed43"
+}

@@ -1,0 +1,156 @@
+{
+  "status": "complete",
+  "completed_utc": "2026-09-24T11:10:38.192510+00:00",
+  "input_shape": [
+    12,
+    120,
+    1120
+  ],
+  "counts": {
+    "train": 17084,
+    "validation": 2146,
+    "test": 2158
+  },
+  "images": 21388,
+  "class_names": [
+    "NORM",
+    "MI",
+    "STTC",
+    "CD",
+    "HYP"
+  ],
+  "binding": {
+    "source_root": "/Users/miriamistanboli/Downloads/ecg swiss/data/derived/ptbxl_images_v1",
+    "source_files_sha256": {
+      "classification_manifest.csv": "8c39382f57235220da081488a8387f44f800e9eacb70fadff18aa23faa8c504b",
+      "protocol.json": "64a4e1fac8e4e06fc7674e6a8d8c087b7039f11b83f3813c0e3c6bcab58cab9e",
+      "generation_summary.json": "eb47cd2a72334158fe6538959cec4a0edbfd03395c5c51a2642ea5f46fee351b",
+      "verification.json": "fea2bda51a29e735184d8d2a630b2f157953e78c7bfc3cbf9585c8e166c60ca0",
+      "generation_state.json": "765fced9f3f8c26ae819422e2cdc160c77ca3b2612a0660f6ad2776a82ad1aa5"
+    },
+    "preprocessing": {
+      "version": "ptbxl_full_lead_ink_maxpool2_v1",
+      "source_page_shape": [
+        3024,
+        2240
+      ],
+      "row_crop_y": [
+        80,
+        2960
+      ],
+      "row_crop_x": [
+        0,
+        2240
+      ],
+      "source_lead_shape": [
+        12,
+        240,
+        2240
+      ],
+      "input_shape": [
+        12,
+        120,
+        1120
+      ],
+      "ink_transform": "255 - uint8 grayscale",
+      "reduction": "Nonoverlapping 2x2 maximum ink pooling; no threshold or filter",
+      "cache_storage_shape": [
+        1440,
+        1120
+      ],
+      "png_compression": 6,
+      "lead_order": [
+        "I",
+        "II",
+        "III",
+        "AVR",
+        "AVL",
+        "AVF",
+        "V1",
+        "V2",
+        "V3",
+        "V4",
+        "V5",
+        "V6"
+      ],
+      "calibration": "Every complete lead row, including its 1-mV calibration pulse, is retained; page header/footer omitted",
+      "limitations": "Raster image representation; not native waveforms. Pooling thickens strokes and loses subpixel morphology. Original page-wide gain varies and low-gain detail may disappear. No numeric source metadata is fed to the model."
+    },
+    "class_names": [
+      "NORM",
+      "MI",
+      "STTC",
+      "CD",
+      "HYP"
+    ],
+    "code_sha256": "0b8ce73d5d8e99accbd3c5132a3bc2ddc7ce2697fb25ffb864da1fe700ace082",
+    "runtime": {
+      "python": "3.12.4 | packaged by Anaconda, Inc. | (main, Jun 18 2024, 10:07:17) [Clang 14.0.6 ]",
+      "numpy": "2.2.6",
+      "opencv": "4.12.0"
+    }
+  },
+  "normalization": {
+    "method": "global training-only ink mean/std after division by 255",
+    "fit_partition": "train",
+    "mean": 0.032673040408934095,
+    "std": 0.09723822329212023,
+    "raw_std": 0.09723822329212023,
+    "std_floor": 1e-06,
+    "training_images": 17084,
+    "training_pixels": 27553075200
+  },
+  "source_manifest_sha256": "8c39382f57235220da081488a8387f44f800e9eacb70fadff18aa23faa8c504b",
+  "cache_manifest_sha256": "4e534b3b5afeda1b0347d36d18ad327aeb74776f5defbb377e0acc3eb1422ef9",
+  "source_png_hashes_checked_before_decoding": 21388,
+  "cache_integrity_policy": "Encoded and decoded pixel hashes checked on every Dataset access",
+  "model_input_metadata": "None; only cached PNG pixels are model inputs",
+  "preprocessing": {
+    "version": "ptbxl_full_lead_ink_maxpool2_v1",
+    "source_page_shape": [
+      3024,
+      2240
+    ],
+    "row_crop_y": [
+      80,
+      2960
+    ],
+    "row_crop_x": [
+      0,
+      2240
+    ],
+    "source_lead_shape": [
+      12,
+      240,
+      2240
+    ],
+    "input_shape": [
+      12,
+      120,
+      1120
+    ],
+    "ink_transform": "255 - uint8 grayscale",
+    "reduction": "Nonoverlapping 2x2 maximum ink pooling; no threshold or filter",
+    "cache_storage_shape": [
+      1440,
+      1120
+    ],
+    "png_compression": 6,
+    "lead_order": [
+      "I",
+      "II",
+      "III",
+      "AVR",
+      "AVL",
+      "AVF",
+      "V1",
+      "V2",
+      "V3",
+      "V4",
+      "V5",
+      "V6"
+    ],
+    "calibration": "Every complete lead row, including its 1-mV calibration pulse, is retained; page header/footer omitted",
+    "limitations": "Raster image representation; not native waveforms. Pooling thickens strokes and loses subpixel morphology. Original page-wide gain varies and low-gain detail may disappear. No numeric source metadata is fed to the model."
+  }
+}

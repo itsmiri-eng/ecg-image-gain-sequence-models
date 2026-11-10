@@ -1,0 +1,23 @@
+{
+  "purpose": "v1 model-specific trainers versus v2 shared trainer, seed 42, CPU",
+  "training_records": 64,
+  "validation_records": 32,
+  "epochs": 1,
+  "results": [
+    {
+      "model": "hybrid_vit",
+      "max_absolute_weight_difference": 0.0,
+      "identical": true
+    },
+    {
+      "model": "cnn_lstm",
+      "max_absolute_weight_difference": 0.0,
+      "identical": true
+    },
+    {
+      "model": "temporal_conv",
+      "max_absolute_weight_difference": 0.0,
+      "identical": true
+    }
+  ]
+}

@@ -1,0 +1,7 @@
+{
+  "run_id": "ptbxl_spatiotemporal_image_v1_seed42",
+  "report": "/Users/miriamistanboli/Downloads/ecg swiss/docs/ptbxl_spatiotemporal_report.md",
+  "figure_directory": "/Users/miriamistanboli/Downloads/ecg swiss/results/ptbxl_spatiotemporal/ptbxl_spatiotemporal_image_v1_seed42/figures",
+  "figures": 8,
+  "new_model_inference_performed": false
+}

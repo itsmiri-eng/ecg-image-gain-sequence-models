@@ -1,0 +1,13 @@
+{
+  "status": "completed",
+  "completed_utc": "2026-11-07T00:02:36.520336+00:00",
+  "dataset": "china",
+  "inference_calls": 1,
+  "records": 9004,
+  "family": "ptbxl_v2_fixedgain",
+  "kind": "network",
+  "page": "fixed",
+  "head": "temporal_conv",
+  "seed": 43,
+  "predictions_sha256": "606b01b8bd677ee40834cf08ba285b3e3cac4b3078044d8e2d00091e8780e411"
+}

@@ -1,0 +1,264 @@
+{
+  "status": "completed",
+  "experiment_id": "lda_v1_seed42",
+  "model": "lda",
+  "started_utc": "2026-09-23T09:28:34.165330+00:00",
+  "completed_utc": "2026-09-23T09:28:35.380096+00:00",
+  "total_runtime_seconds": 1.2148089170004823,
+  "dataset_version": "image_dedup_8e04bd56af2f",
+  "split_version": "grouped_cf5a867a99c3",
+  "training": {
+    "fit_seconds": 0.2327555419979035,
+    "device": "cpu",
+    "seed": 42,
+    "input_features": 32768,
+    "pca_components": 32,
+    "pca_explained_variance_ratio_sum": 0.3254390358924866,
+    "preprocessing": "Fixed cropped grayscale ink [0,1]; flatten; train-only centered PCA; shrinkage LDA",
+    "feature_scaling": "No per-pixel variance scaling: all pixel intensities share the same units",
+    "class_imbalance": "Uniform class priors, prespecified to emphasize all four classes equally",
+    "checkpoint": "/Users/miriamistanboli/Downloads/ecg swiss/models/lda/lda_v1_seed42/pipeline.joblib",
+    "config": {
+      "pca_components": 32,
+      "pca_solver": "randomized",
+      "shrinkage": "auto",
+      "solver": "lsqr",
+      "priors": "uniform"
+    }
+  },
+  "metrics": {
+    "train": {
+      "n_samples": 295,
+      "accuracy": 0.7220338983050848,
+      "balanced_accuracy": 0.7441706169647346,
+      "macro_f1": 0.6740188525333092,
+      "weighted_f1": 0.7355253192656237,
+      "log_loss": 0.7033167368467113,
+      "per_class": {
+        "Normal": {
+          "precision": 0.7176470588235294,
+          "recall": 0.7176470588235294,
+          "f1-score": 0.7176470588235294,
+          "support": 85.0
+        },
+        "MI": {
+          "precision": 0.38235294117647056,
+          "recall": 0.7222222222222222,
+          "f1-score": 0.5,
+          "support": 18.0
+        },
+        "Abnormal": {
+          "precision": 0.9791666666666666,
+          "recall": 0.6714285714285714,
+          "f1-score": 0.7966101694915254,
+          "support": 140.0
+        },
+        "History_MI": {
+          "precision": 0.5625,
+          "recall": 0.8653846153846154,
+          "f1-score": 0.6818181818181818,
+          "support": 52.0
+        }
+      },
+      "confusion_matrix": [
+        [
+          61,
+          10,
+          0,
+          14
+        ],
+        [
+          5,
+          13,
+          0,
+          0
+        ],
+        [
+          15,
+          10,
+          94,
+          21
+        ],
+        [
+          4,
+          1,
+          2,
+          45
+        ]
+      ],
+      "confusion_matrix_axes": "rows=true, columns=predicted; class_names order",
+      "class_names": [
+        "Normal",
+        "MI",
+        "Abnormal",
+        "History_MI"
+      ],
+      "zero_division_policy": "undefined precision/recall/F1 reported as zero",
+      "roc_auc_ovr_macro": 0.9370952044925831,
+      "roc_auc_ovr_weighted": 0.9405593860511939,
+      "roc_auc_per_class": {
+        "Normal": 0.9165826330532213,
+        "MI": 0.9466506217408746,
+        "Abnormal": 0.9600921658986175,
+        "History_MI": 0.9250553972776194
+      },
+      "roc_auc_note": "One-vs-rest probability ranking, not diagnostic validation"
+    },
+    "validation": {
+      "n_samples": 98,
+      "accuracy": 0.6224489795918368,
+      "balanced_accuracy": 0.5447717317811682,
+      "macro_f1": 0.5295842711505362,
+      "weighted_f1": 0.6370440722297127,
+      "log_loss": 0.8466451502374435,
+      "per_class": {
+        "Normal": {
+          "precision": 0.5806451612903226,
+          "recall": 0.6206896551724138,
+          "f1-score": 0.6,
+          "support": 29.0
+        },
+        "MI": {
+          "precision": 0.25,
+          "recall": 0.3333333333333333,
+          "f1-score": 0.2857142857142857,
+          "support": 6.0
+        },
+        "Abnormal": {
+          "precision": 0.8648648648648649,
+          "recall": 0.6956521739130435,
+          "f1-score": 0.7710843373493976,
+          "support": 46.0
+        },
+        "History_MI": {
+          "precision": 0.4090909090909091,
+          "recall": 0.5294117647058824,
+          "f1-score": 0.46153846153846156,
+          "support": 17.0
+        }
+      },
+      "confusion_matrix": [
+        [
+          18,
+          2,
+          1,
+          8
+        ],
+        [
+          4,
+          2,
+          0,
+          0
+        ],
+        [
+          5,
+          4,
+          32,
+          5
+        ],
+        [
+          4,
+          0,
+          4,
+          9
+        ]
+      ],
+      "confusion_matrix_axes": "rows=true, columns=predicted; class_names order",
+      "class_names": [
+        "Normal",
+        "MI",
+        "Abnormal",
+        "History_MI"
+      ],
+      "zero_division_policy": "undefined precision/recall/F1 reported as zero",
+      "roc_auc_ovr_macro": 0.8542105397988119,
+      "roc_auc_ovr_weighted": 0.8884375439758462,
+      "roc_auc_per_class": {
+        "Normal": 0.8915542228885558,
+        "MI": 0.7572463768115942,
+        "Abnormal": 0.9176421404682273,
+        "History_MI": 0.85039941902687
+      },
+      "roc_auc_note": "One-vs-rest probability ranking, not diagnostic validation"
+    },
+    "test": {
+      "n_samples": 98,
+      "accuracy": 0.6224489795918368,
+      "balanced_accuracy": 0.6031758448060075,
+      "macro_f1": 0.5637426900584795,
+      "weighted_f1": 0.6423499224251104,
+      "log_loss": 0.9064004284091609,
+      "per_class": {
+        "Normal": {
+          "precision": 0.65625,
+          "recall": 0.75,
+          "f1-score": 0.7,
+          "support": 28.0
+        },
+        "MI": {
+          "precision": 0.3333333333333333,
+          "recall": 0.5,
+          "f1-score": 0.4,
+          "support": 6.0
+        },
+        "Abnormal": {
+          "precision": 0.9310344827586207,
+          "recall": 0.574468085106383,
+          "f1-score": 0.7105263157894737,
+          "support": 47.0
+        },
+        "History_MI": {
+          "precision": 0.35714285714285715,
+          "recall": 0.5882352941176471,
+          "f1-score": 0.4444444444444444,
+          "support": 17.0
+        }
+      },
+      "confusion_matrix": [
+        [
+          21,
+          1,
+          0,
+          6
+        ],
+        [
+          0,
+          3,
+          1,
+          2
+        ],
+        [
+          5,
+          5,
+          27,
+          10
+        ],
+        [
+          6,
+          0,
+          1,
+          10
+        ]
+      ],
+      "confusion_matrix_axes": "rows=true, columns=predicted; class_names order",
+      "class_names": [
+        "Normal",
+        "MI",
+        "Abnormal",
+        "History_MI"
+      ],
+      "zero_division_policy": "undefined precision/recall/F1 reported as zero",
+      "roc_auc_ovr_macro": 0.8770849089798665,
+      "roc_auc_ovr_weighted": 0.8856175987763406,
+      "roc_auc_per_class": {
+        "Normal": 0.8887755102040816,
+        "MI": 0.8931159420289856,
+        "Abnormal": 0.9065498539841469,
+        "History_MI": 0.8198983297022513
+      },
+      "roc_auc_note": "One-vs-rest probability ranking, not diagnostic validation"
+    }
+  },
+  "test_evaluation_policy": "One final test evaluation after all model settings/weights were frozen",
+  "model_directory": "models/lda/lda_v1_seed42"
+}

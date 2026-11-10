@@ -1,0 +1,54 @@
+.DS_Store
+__pycache__/
+*.py[cod]
+.ipynb_checkpoints/
+.venv/
+.pytest_cache/
+.matplotlib/
+ecg files/
+ptb-xl-a-large-publicly-available-electrocardiography-dataset-*/
+*.zip
+data/raw/*
+!data/raw/README.md
+data/processed/*.npy
+data/processed/*.npz
+data/derived/ptbxl_images_*/images/
+data/derived/ptbxl_images_*/provenance/
+models/**/*.pt
+models/**/*.pkl
+models/**/*.joblib
+results/**/*.pt
+results/**/*.joblib
+data/audit/header_ids.csv
+data/audit/manual_id_validation.csv
+data/audit/id_review*
+
+# Large derived lead-image cache; keep manifests and metadata versionable.
+data/processed/ptbxl_lead_images_*/cachedimages/
+
+# Added 1 November 2026
+data/processed/ptbxl_lda_features_*/
+models/**/*.npz
+experiments/.experiment_log.lock
+# Personal documents must never be versioned or shared with the project
+*passport*
+data/processed/ptbxl_lead_images_fixedgain2p5_v1/cachedimages/
+# Added 3 November 2026: large signal arrays and future external downloads (re-creatable, checksummed)
+data/processed/ptbxl_signals100_v1/train.npy
+data/processed/ptbxl_signals100_v1/validation.npy
+data/processed/ptbxl_signals100_v1/test.npy
+data/external/
+# Added 10 November 2026 (reproducibility package): personal, third-party or transfer-only files stay out of the repository
+/*.pdf
+/*.docx
+/*.pptx
+/*.xlsx
+/TRANSFER_MANIFEST.json
+/CLAUDE.md
+/check_status.sh
+.claude/
+docs/handover/
+data/external/
+data/processed/ptbxl_signals100_v1/*.npy
+experiments/logs/_*.ps1
+docs/teams_update_*.txt

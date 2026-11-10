@@ -1,0 +1,23 @@
+{
+  "audit_date": "2026-11-01",
+  "status": "passed",
+  "scope": "Read-only saved fitted-transform inspection and source archive hash; no model prediction, scoring, fitting, or old artifact writes. The trusted existing LDA joblib was loaded only to inspect its saved PCA/prior values.",
+  "lda": {
+    "checkpoint_sha256": "72820cd3989cca0b24fbf1abf020ab3cb2a523ab50da2ed518eb48ec9aa10ecf",
+    "pca_n_samples": 295,
+    "pca_components": 32,
+    "saved_pca_mean_exactly_equals_frozen_training_pixels": true,
+    "saved_uniform_priors": [
+      0.25,
+      0.25,
+      0.25,
+      0.25
+    ],
+    "checkpoint_unchanged": true
+  },
+  "archive": {
+    "name": "mendely images.zip",
+    "sha256": "016ab954e9b1392dcea1e2b5638752593ec30feda07281a00b5b8f2e13618c50",
+    "matches_saved_provenance": true
+  }
+}

@@ -1,0 +1,28 @@
+{
+  "reviewed_utc": "2026-09-24T10:21:21.061787+00:00",
+  "passed": true,
+  "scope": "Technical rendering review only, not clinical validation or diagnostic adjudication",
+  "config_sha256": "4c04eda83685a2e77f3d1e033f4b291161a4e94a5c99d1614be8b06d2d51a337",
+  "renderer_sha256": "3d3301ffc71f333702c031b7214fd3c971806da152ab59027cb732b72fd71b94",
+  "preview_manifest_sha256": "b609b24bf231728dec2aceda40148af3bea7a39646633cc6c54cb523f2ae7243",
+  "training_ecg_ids_visually_reviewed": [
+    1,
+    22,
+    32,
+    45,
+    50,
+    10565,
+    12722,
+    20002,
+    20187
+  ],
+  "test_images_visually_inspected": false,
+  "findings": [
+    "All twelve lead rows and full horizontal intervals present in the nine inspected pages",
+    "Lead labels, scales and calibration fit inside page; no identifiers or diagnoses printed",
+    "No coordinate clipping; numerical checks cover all60000points per page",
+    "Known flat V5 and high-amplitude source artifact preserved, with qualityflags",
+    "Very low gain compresses small waveform detail; no claim of clinically lossless rasterization"
+  ],
+  "style_changes_after_test_inspection": false
+}

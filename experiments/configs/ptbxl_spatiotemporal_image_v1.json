@@ -1,0 +1,98 @@
+{
+  "protocol": "ptbxl_spatiotemporal_image_v1",
+  "model": "ptbxl_image_spatiotemporal",
+  "dataset_id": "ptbxl_images_v1",
+  "source_dataset_root": "data/derived/ptbxl_images_v1",
+  "cache_root": "data/processed/ptbxl_lead_images_v1",
+  "split_version": "ptbxl_v103_official_folds_1to8_9_10_diagnostic_superclasses",
+  "class_names": [
+    "NORM",
+    "MI",
+    "STTC",
+    "CD",
+    "HYP"
+  ],
+  "input_shape": [
+    12,
+    120,
+    1120
+  ],
+  "source_manifest_sha256": "8c39382f57235220da081488a8387f44f800e9eacb70fadff18aa23faa8c504b",
+  "source_verification_sha256": "fea2bda51a29e735184d8d2a630b2f157953e78c7bfc3cbf9585c8e166c60ca0",
+  "source_protocol_sha256": "64a4e1fac8e4e06fc7674e6a8d8c087b7039f11b83f3813c0e3c6bcab58cab9e",
+  "seed": 42,
+  "preprocessing": {
+    "source_pixels": "12 complete rows, y=80:2960 and x=0:2240",
+    "intensity": "255 minus uint8 grayscale",
+    "pooling": "2x2 maximum ink; isotropic factor2, no interpolation",
+    "shape": [
+      12,
+      120,
+      1120
+    ],
+    "normalization": "one global mean/std from training pixels only",
+    "calibration": "per-lead calibration pulses retained in pixels; no numeric metadata feature",
+    "augmentation": "none",
+    "limitation": "downsampling thickens narrow strokes and merges fine detail; variable page gain retained; not lossless waveform reconstruction"
+  },
+  "training": {
+    "seed": 42,
+    "num_threads": 4,
+    "batch_size": 16,
+    "num_workers": 0,
+    "max_epochs": 20,
+    "patience": 4,
+    "learning_rate": 0.001,
+    "weight_decay": 0.0001,
+    "dropout": 0.2,
+    "gradient_clip_norm": 1.0,
+    "device": "cpu",
+    "scheduler": "cosine",
+    "eta_min": 1e-05,
+    "hidden_channels": 32,
+    "dilations": [
+      1,
+      2
+    ],
+    "kernel_size": 3
+  },
+  "loss": "unweighted binary cross entropy with logits; five independent binary targets",
+  "selection_rule": "Strict lexicographic maximum of validation (macro_roc_auc, macro_average_precision, -probability_binary_cross_entropy); earliest epoch on exact tie",
+  "threshold": 0.5,
+  "threshold_policy": "fixed sigmoid probability >=0.5; no threshold search",
+  "search_budget": "one prespecified small CNN+temporal-convolution configuration,seed42,max20epochs,patience4; synthetic-only resource checks; no architecture search on ECG outcomes",
+  "test_policy": "one final model inference after freezing and train-only replay; fold10 has already been observed for CNNLSTM, so comparative results are exploratory; no test tuning",
+  "sequence_interpretation": "70 left-to-right image-feature positions over aligned lead rows; includes calibration/margin region; not recovered500Hz waveform samples",
+  "comparison_limit": "Exploratory same-cohort comparison to saved CNNLSTM; same inputs/folds/threshold/optimizer/budget, one configuration/seed each. Architecture/head capacity and dropout topology differ; no external or seed robustness established. No Mendeley accuracy ranking.",
+  "uncertainty": {
+    "method": "patient-cluster percentile bootstrap of final test predictions",
+    "resamples": 500,
+    "seed": 2024,
+    "confidence_level": 0.95,
+    "scope": "test-sampling uncertainty conditional on this fitted model; excludes seed/training/external-domain variation"
+  },
+  "created_utc": "2026-09-25T18:56:58.938072+00:00",
+  "architecture": {
+    "spatial_encoder": "same depthwise/pointwise 2D CNN as PTBXL CNNLSTM, independently trained from scratch",
+    "temporal_head": "96-to-32 projection; two residual blocks with two causal kernel3 convolutions at dilations1 and2; per-position channel LayerNorm/ReLU/dropout",
+    "feature_sequence": [
+      70,
+      96
+    ],
+    "head_receptive_field_columns": 13,
+    "aggregation": "mean across all70 positions, dropout,5logits",
+    "streaming_causality": false,
+    "causality_limit": "Head blocks left-pad; upstream2D CNN, GroupNorm and finalpooling use whole-image context. Offline classifier only."
+  },
+  "comparison_reference": "ptbxl_cnn_lstm_image_v1_seed42",
+  "paired_comparison": {
+    "primary": "macro_roc_auc",
+    "differences": "new minus CNNLSTM on identical saved test records",
+    "resamples": 500,
+    "seed": 2024,
+    "confidence_level": 0.95,
+    "cluster": "patient, same draw for both models",
+    "limitation": "conditional exploratory sampling intervals, exclude training seed/model-selection/external-domain uncertainty"
+  },
+  "prior_artifacts_sha256": "8496c4a4713cf51031b812572b0d1f0bb1536873905aa61d599bd286b0460142"
+}

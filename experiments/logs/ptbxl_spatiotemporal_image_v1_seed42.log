@@ -1,0 +1,562 @@
+{"status": "running", "phase": "loading_development_data", "updated_utc": "2026-09-25T19:04:16.961518+00:00", "elapsed_seconds": 0.00017154100351035595}
+{"status": "running", "phase": "training", "updated_utc": "2026-09-25T19:04:18.838245+00:00", "elapsed_seconds": 1.8769755829998758}
+2026-09-25T19:04:20+00:00 PTB-XL CNN+TCN epoch 01/20 batch 1/1068 train_online_bce=0.77511 seconds=0.7
+2026-09-25T19:05:04+00:00 PTB-XL CNN+TCN epoch 01/20 batch 100/1068 train_online_bce=0.55973 seconds=45.2
+2026-09-25T19:05:47+00:00 PTB-XL CNN+TCN epoch 01/20 batch 200/1068 train_online_bce=0.54643 seconds=88.3
+2026-09-25T19:06:31+00:00 PTB-XL CNN+TCN epoch 01/20 batch 300/1068 train_online_bce=0.52817 seconds=131.5
+2026-09-25T19:07:16+00:00 PTB-XL CNN+TCN epoch 01/20 batch 400/1068 train_online_bce=0.51676 seconds=176.6
+2026-09-25T19:08:01+00:00 PTB-XL CNN+TCN epoch 01/20 batch 500/1068 train_online_bce=0.50815 seconds=221.6
+2026-09-25T19:08:46+00:00 PTB-XL CNN+TCN epoch 01/20 batch 600/1068 train_online_bce=0.50302 seconds=266.7
+2026-09-25T19:09:34+00:00 PTB-XL CNN+TCN epoch 01/20 batch 700/1068 train_online_bce=0.49695 seconds=314.7
+2026-09-25T19:10:17+00:00 PTB-XL CNN+TCN epoch 01/20 batch 800/1068 train_online_bce=0.49357 seconds=358.1
+2026-09-25T19:11:05+00:00 PTB-XL CNN+TCN epoch 01/20 batch 900/1068 train_online_bce=0.48965 seconds=405.8
+2026-09-25T19:11:53+00:00 PTB-XL CNN+TCN epoch 01/20 batch 1000/1068 train_online_bce=0.48512 seconds=454.0
+2026-09-25T19:12:27+00:00 PTB-XL CNN+TCN epoch 01/20 batch 1068/1068 train_online_bce=0.48190 seconds=487.7
+2026-09-25T19:12:27+00:00 PTB-XL CNN+TCN validation batch 0/135 records=0/2146 seconds=0.0
+2026-09-25T19:12:27+00:00 PTB-XL CNN+TCN validation batch 1/135 records=16/2146 seconds=0.3
+2026-09-25T19:13:04+00:00 PTB-XL CNN+TCN validation batch 100/135 records=1600/2146 seconds=37.3
+2026-09-25T19:13:16+00:00 PTB-XL CNN+TCN validation batch 135/135 records=2146/2146 seconds=49.2
+2026-09-25T19:13:16+00:00 PTB-XL CNN+TCN epoch 01/20 train_online_bce=0.48190 val_bce=0.43787 val_macro_auc=0.79121 val_macro_ap=0.53532 selected=True seconds=537.1
+2026-09-25T19:13:17+00:00 PTB-XL CNN+TCN epoch 02/20 batch 1/1068 train_online_bce=0.41061 seconds=0.5
+2026-09-25T19:14:02+00:00 PTB-XL CNN+TCN epoch 02/20 batch 100/1068 train_online_bce=0.44547 seconds=45.9
+2026-09-25T19:14:45+00:00 PTB-XL CNN+TCN epoch 02/20 batch 200/1068 train_online_bce=0.43919 seconds=88.4
+2026-09-25T19:15:27+00:00 PTB-XL CNN+TCN epoch 02/20 batch 300/1068 train_online_bce=0.43871 seconds=131.4
+2026-09-25T19:16:10+00:00 PTB-XL CNN+TCN epoch 02/20 batch 400/1068 train_online_bce=0.43483 seconds=173.8
+2026-09-25T19:16:53+00:00 PTB-XL CNN+TCN epoch 02/20 batch 500/1068 train_online_bce=0.43161 seconds=216.5
+2026-09-25T19:17:35+00:00 PTB-XL CNN+TCN epoch 02/20 batch 600/1068 train_online_bce=0.42832 seconds=258.8
+2026-09-25T19:18:18+00:00 PTB-XL CNN+TCN epoch 02/20 batch 700/1068 train_online_bce=0.42654 seconds=302.0
+2026-09-25T19:19:03+00:00 PTB-XL CNN+TCN epoch 02/20 batch 800/1068 train_online_bce=0.42593 seconds=346.8
+2026-09-25T19:19:44+00:00 PTB-XL CNN+TCN epoch 02/20 batch 900/1068 train_online_bce=0.42528 seconds=387.8
+2026-09-25T19:21:02+00:00 PTB-XL CNN+TCN epoch 02/20 batch 1000/1068 train_online_bce=0.42415 seconds=432.9
+2026-09-25T19:24:54+00:00 PTB-XL CNN+TCN epoch 02/20 batch 1068/1068 train_online_bce=0.42295 seconds=461.7
+2026-09-25T19:24:54+00:00 PTB-XL CNN+TCN validation batch 0/135 records=0/2146 seconds=0.0
+2026-09-25T19:24:55+00:00 PTB-XL CNN+TCN validation batch 1/135 records=16/2146 seconds=0.3
+2026-09-25T19:29:08+00:00 PTB-XL CNN+TCN validation batch 100/135 records=1600/2146 seconds=32.5
+2026-09-25T19:29:18+00:00 PTB-XL CNN+TCN validation batch 135/135 records=2146/2146 seconds=42.7
+2026-09-25T19:29:18+00:00 PTB-XL CNN+TCN epoch 02/20 train_online_bce=0.42295 val_bce=0.40377 val_macro_auc=0.82554 val_macro_ap=0.61296 selected=True seconds=504.4
+2026-09-25T19:29:19+00:00 PTB-XL CNN+TCN epoch 03/20 batch 1/1068 train_online_bce=0.46836 seconds=0.5
+2026-09-25T19:45:27+00:00 PTB-XL CNN+TCN epoch 03/20 batch 100/1068 train_online_bce=0.40568 seconds=43.1
+2026-09-25T20:00:14+00:00 PTB-XL CNN+TCN epoch 03/20 batch 200/1068 train_online_bce=0.39657 seconds=86.8
+2026-09-25T20:16:37+00:00 PTB-XL CNN+TCN epoch 03/20 batch 300/1068 train_online_bce=0.39612 seconds=130.6
+2026-09-25T20:17:25+00:00 PTB-XL CNN+TCN epoch 03/20 batch 400/1068 train_online_bce=0.39570 seconds=172.3
+2026-09-25T20:18:08+00:00 PTB-XL CNN+TCN epoch 03/20 batch 500/1068 train_online_bce=0.39576 seconds=215.2
+2026-09-25T20:34:17+00:00 PTB-XL CNN+TCN epoch 03/20 batch 600/1068 train_online_bce=0.39414 seconds=258.2
+2026-09-25T20:38:12+00:00 PTB-XL CNN+TCN epoch 03/20 batch 700/1068 train_online_bce=0.39261 seconds=326.9
+2026-09-25T20:39:12+00:00 PTB-XL CNN+TCN epoch 03/20 batch 800/1068 train_online_bce=0.39231 seconds=386.4
+2026-09-25T20:40:03+00:00 PTB-XL CNN+TCN epoch 03/20 batch 900/1068 train_online_bce=0.39281 seconds=437.8
+2026-09-25T20:40:57+00:00 PTB-XL CNN+TCN epoch 03/20 batch 1000/1068 train_online_bce=0.39343 seconds=492.0
+2026-09-25T20:41:31+00:00 PTB-XL CNN+TCN epoch 03/20 batch 1068/1068 train_online_bce=0.39304 seconds=525.8
+2026-09-25T20:41:31+00:00 PTB-XL CNN+TCN validation batch 0/135 records=0/2146 seconds=0.0
+2026-09-25T20:41:31+00:00 PTB-XL CNN+TCN validation batch 1/135 records=16/2146 seconds=0.4
+2026-09-25T20:42:18+00:00 PTB-XL CNN+TCN validation batch 100/135 records=1600/2146 seconds=47.0
+2026-09-25T20:42:32+00:00 PTB-XL CNN+TCN validation batch 135/135 records=2146/2146 seconds=61.1
+2026-09-25T20:42:32+00:00 PTB-XL CNN+TCN epoch 03/20 train_online_bce=0.39304 val_bce=0.38113 val_macro_auc=0.84210 val_macro_ap=0.64301 selected=True seconds=587.1
+2026-09-25T20:42:33+00:00 PTB-XL CNN+TCN epoch 04/20 batch 1/1068 train_online_bce=0.41188 seconds=0.5
+2026-09-25T20:43:29+00:00 PTB-XL CNN+TCN epoch 04/20 batch 100/1068 train_online_bce=0.38519 seconds=56.9
+2026-09-25T20:44:32+00:00 PTB-XL CNN+TCN epoch 04/20 batch 200/1068 train_online_bce=0.39123 seconds=120.1
+2026-09-25T20:45:31+00:00 PTB-XL CNN+TCN epoch 04/20 batch 300/1068 train_online_bce=0.38567 seconds=179.1
+2026-09-25T20:46:21+00:00 PTB-XL CNN+TCN epoch 04/20 batch 400/1068 train_online_bce=0.38588 seconds=228.6
+2026-09-25T20:47:07+00:00 PTB-XL CNN+TCN epoch 04/20 batch 500/1068 train_online_bce=0.38596 seconds=274.6
+2026-09-25T20:48:02+00:00 PTB-XL CNN+TCN epoch 04/20 batch 600/1068 train_online_bce=0.38399 seconds=330.0
+2026-09-25T20:48:51+00:00 PTB-XL CNN+TCN epoch 04/20 batch 700/1068 train_online_bce=0.38381 seconds=378.6
+2026-09-25T20:49:42+00:00 PTB-XL CNN+TCN epoch 04/20 batch 800/1068 train_online_bce=0.38263 seconds=430.1
+2026-09-25T20:50:28+00:00 PTB-XL CNN+TCN epoch 04/20 batch 900/1068 train_online_bce=0.38218 seconds=475.4
+2026-09-25T20:51:12+00:00 PTB-XL CNN+TCN epoch 04/20 batch 1000/1068 train_online_bce=0.38232 seconds=519.3
+2026-09-25T20:51:41+00:00 PTB-XL CNN+TCN epoch 04/20 batch 1068/1068 train_online_bce=0.38115 seconds=549.1
+2026-09-25T20:51:41+00:00 PTB-XL CNN+TCN validation batch 0/135 records=0/2146 seconds=0.0
+2026-09-25T20:51:42+00:00 PTB-XL CNN+TCN validation batch 1/135 records=16/2146 seconds=0.4
+2026-09-25T20:52:14+00:00 PTB-XL CNN+TCN validation batch 100/135 records=1600/2146 seconds=32.5
+2026-09-25T20:52:25+00:00 PTB-XL CNN+TCN validation batch 135/135 records=2146/2146 seconds=44.0
+2026-09-25T20:52:25+00:00 PTB-XL CNN+TCN epoch 04/20 train_online_bce=0.38115 val_bce=0.36967 val_macro_auc=0.84917 val_macro_ap=0.65585 selected=True seconds=593.1
+2026-09-25T20:52:26+00:00 PTB-XL CNN+TCN epoch 05/20 batch 1/1068 train_online_bce=0.32407 seconds=0.5
+2026-09-25T20:53:10+00:00 PTB-XL CNN+TCN epoch 05/20 batch 100/1068 train_online_bce=0.37138 seconds=44.1
+2026-09-25T20:53:53+00:00 PTB-XL CNN+TCN epoch 05/20 batch 200/1068 train_online_bce=0.37771 seconds=87.9
+2026-09-25T20:54:38+00:00 PTB-XL CNN+TCN epoch 05/20 batch 300/1068 train_online_bce=0.37687 seconds=133.0
+2026-09-25T20:55:23+00:00 PTB-XL CNN+TCN epoch 05/20 batch 400/1068 train_online_bce=0.37653 seconds=177.3
+2026-09-25T20:56:06+00:00 PTB-XL CNN+TCN epoch 05/20 batch 500/1068 train_online_bce=0.37795 seconds=221.0
+2026-09-25T20:56:50+00:00 PTB-XL CNN+TCN epoch 05/20 batch 600/1068 train_online_bce=0.37487 seconds=264.5
+2026-09-25T20:57:34+00:00 PTB-XL CNN+TCN epoch 05/20 batch 700/1068 train_online_bce=0.37400 seconds=308.2
+2026-09-25T20:58:18+00:00 PTB-XL CNN+TCN epoch 05/20 batch 800/1068 train_online_bce=0.37274 seconds=352.5
+2026-09-25T20:59:02+00:00 PTB-XL CNN+TCN epoch 05/20 batch 900/1068 train_online_bce=0.37210 seconds=396.1
+2026-09-25T20:59:48+00:00 PTB-XL CNN+TCN epoch 05/20 batch 1000/1068 train_online_bce=0.37165 seconds=442.4
+2026-09-25T21:00:18+00:00 PTB-XL CNN+TCN epoch 05/20 batch 1068/1068 train_online_bce=0.37189 seconds=472.8
+2026-09-25T21:00:18+00:00 PTB-XL CNN+TCN validation batch 0/135 records=0/2146 seconds=0.0
+2026-09-25T21:00:19+00:00 PTB-XL CNN+TCN validation batch 1/135 records=16/2146 seconds=0.3
+2026-09-25T21:00:50+00:00 PTB-XL CNN+TCN validation batch 100/135 records=1600/2146 seconds=32.2
+2026-09-25T21:01:01+00:00 PTB-XL CNN+TCN validation batch 135/135 records=2146/2146 seconds=43.0
+2026-09-25T21:01:01+00:00 PTB-XL CNN+TCN epoch 05/20 train_online_bce=0.37189 val_bce=0.37701 val_macro_auc=0.85171 val_macro_ap=0.66190 selected=True seconds=515.9
+2026-09-25T21:01:02+00:00 PTB-XL CNN+TCN epoch 06/20 batch 1/1068 train_online_bce=0.39461 seconds=0.4
+2026-09-25T21:01:45+00:00 PTB-XL CNN+TCN epoch 06/20 batch 100/1068 train_online_bce=0.36586 seconds=43.9
+2026-09-25T21:02:29+00:00 PTB-XL CNN+TCN epoch 06/20 batch 200/1068 train_online_bce=0.36661 seconds=87.5
+2026-09-25T21:03:13+00:00 PTB-XL CNN+TCN epoch 06/20 batch 300/1068 train_online_bce=0.36991 seconds=131.3
+2026-09-25T21:03:57+00:00 PTB-XL CNN+TCN epoch 06/20 batch 400/1068 train_online_bce=0.36524 seconds=175.2
+2026-09-25T21:04:40+00:00 PTB-XL CNN+TCN epoch 06/20 batch 500/1068 train_online_bce=0.36372 seconds=219.1
+2026-09-25T21:05:24+00:00 PTB-XL CNN+TCN epoch 06/20 batch 600/1068 train_online_bce=0.36566 seconds=262.7
+2026-09-25T21:06:07+00:00 PTB-XL CNN+TCN epoch 06/20 batch 700/1068 train_online_bce=0.36521 seconds=305.9
+2026-09-25T21:06:51+00:00 PTB-XL CNN+TCN epoch 06/20 batch 800/1068 train_online_bce=0.36579 seconds=349.8
+2026-09-25T21:07:35+00:00 PTB-XL CNN+TCN epoch 06/20 batch 900/1068 train_online_bce=0.36574 seconds=394.0
+2026-09-25T21:08:21+00:00 PTB-XL CNN+TCN epoch 06/20 batch 1000/1068 train_online_bce=0.36565 seconds=440.0
+2026-09-25T21:08:53+00:00 PTB-XL CNN+TCN epoch 06/20 batch 1068/1068 train_online_bce=0.36619 seconds=471.6
+2026-09-25T21:08:53+00:00 PTB-XL CNN+TCN validation batch 0/135 records=0/2146 seconds=0.0
+2026-09-25T21:08:53+00:00 PTB-XL CNN+TCN validation batch 1/135 records=16/2146 seconds=0.4
+2026-09-25T21:09:27+00:00 PTB-XL CNN+TCN validation batch 100/135 records=1600/2146 seconds=34.2
+2026-09-25T21:09:38+00:00 PTB-XL CNN+TCN validation batch 135/135 records=2146/2146 seconds=45.4
+2026-09-25T21:09:38+00:00 PTB-XL CNN+TCN epoch 06/20 train_online_bce=0.36619 val_bce=0.36435 val_macro_auc=0.86101 val_macro_ap=0.67632 selected=True seconds=517.0
+2026-09-25T21:09:39+00:00 PTB-XL CNN+TCN epoch 07/20 batch 1/1068 train_online_bce=0.37694 seconds=0.5
+2026-09-25T21:10:23+00:00 PTB-XL CNN+TCN epoch 07/20 batch 100/1068 train_online_bce=0.35033 seconds=44.8
+2026-09-25T21:11:07+00:00 PTB-XL CNN+TCN epoch 07/20 batch 200/1068 train_online_bce=0.35600 seconds=88.9
+2026-09-25T21:11:52+00:00 PTB-XL CNN+TCN epoch 07/20 batch 300/1068 train_online_bce=0.35662 seconds=133.9
+2026-09-25T21:12:37+00:00 PTB-XL CNN+TCN epoch 07/20 batch 400/1068 train_online_bce=0.35835 seconds=178.1
+2026-09-25T21:13:21+00:00 PTB-XL CNN+TCN epoch 07/20 batch 500/1068 train_online_bce=0.35514 seconds=222.4
+2026-09-25T21:14:05+00:00 PTB-XL CNN+TCN epoch 07/20 batch 600/1068 train_online_bce=0.35489 seconds=266.6
+2026-09-25T21:14:49+00:00 PTB-XL CNN+TCN epoch 07/20 batch 700/1068 train_online_bce=0.35518 seconds=310.6
+2026-09-25T21:15:34+00:00 PTB-XL CNN+TCN epoch 07/20 batch 800/1068 train_online_bce=0.35641 seconds=355.7
+2026-09-25T21:16:27+00:00 PTB-XL CNN+TCN epoch 07/20 batch 900/1068 train_online_bce=0.35673 seconds=408.9
+2026-09-25T21:17:22+00:00 PTB-XL CNN+TCN epoch 07/20 batch 1000/1068 train_online_bce=0.35629 seconds=463.9
+2026-09-25T21:18:01+00:00 PTB-XL CNN+TCN epoch 07/20 batch 1068/1068 train_online_bce=0.35626 seconds=502.5
+2026-09-25T21:18:01+00:00 PTB-XL CNN+TCN validation batch 0/135 records=0/2146 seconds=0.0
+2026-09-25T21:18:01+00:00 PTB-XL CNN+TCN validation batch 1/135 records=16/2146 seconds=0.4
+2026-09-25T21:18:44+00:00 PTB-XL CNN+TCN validation batch 100/135 records=1600/2146 seconds=43.4
+2026-09-25T21:18:59+00:00 PTB-XL CNN+TCN validation batch 135/135 records=2146/2146 seconds=58.3
+2026-09-25T21:18:59+00:00 PTB-XL CNN+TCN epoch 07/20 train_online_bce=0.35626 val_bce=0.37115 val_macro_auc=0.86622 val_macro_ap=0.68644 selected=True seconds=560.9
+2026-09-25T21:19:00+00:00 PTB-XL CNN+TCN epoch 08/20 batch 1/1068 train_online_bce=0.40812 seconds=0.6
+2026-09-25T21:19:50+00:00 PTB-XL CNN+TCN epoch 08/20 batch 100/1068 train_online_bce=0.34436 seconds=51.0
+2026-09-25T21:20:37+00:00 PTB-XL CNN+TCN epoch 08/20 batch 200/1068 train_online_bce=0.33947 seconds=97.4
+2026-09-25T21:21:22+00:00 PTB-XL CNN+TCN epoch 08/20 batch 300/1068 train_online_bce=0.34381 seconds=142.7
+2026-09-25T21:22:07+00:00 PTB-XL CNN+TCN epoch 08/20 batch 400/1068 train_online_bce=0.34393 seconds=188.2
+2026-09-25T21:22:53+00:00 PTB-XL CNN+TCN epoch 08/20 batch 500/1068 train_online_bce=0.34708 seconds=233.8
+2026-09-25T21:23:39+00:00 PTB-XL CNN+TCN epoch 08/20 batch 600/1068 train_online_bce=0.34709 seconds=279.9
+2026-09-25T21:24:25+00:00 PTB-XL CNN+TCN epoch 08/20 batch 700/1068 train_online_bce=0.34915 seconds=325.3
+2026-09-25T21:25:10+00:00 PTB-XL CNN+TCN epoch 08/20 batch 800/1068 train_online_bce=0.34964 seconds=370.6
+2026-09-25T21:25:54+00:00 PTB-XL CNN+TCN epoch 08/20 batch 900/1068 train_online_bce=0.34859 seconds=414.8
+2026-09-25T21:26:38+00:00 PTB-XL CNN+TCN epoch 08/20 batch 1000/1068 train_online_bce=0.34851 seconds=458.3
+2026-09-25T21:27:07+00:00 PTB-XL CNN+TCN epoch 08/20 batch 1068/1068 train_online_bce=0.34747 seconds=487.7
+2026-09-25T21:27:07+00:00 PTB-XL CNN+TCN validation batch 0/135 records=0/2146 seconds=0.0
+2026-09-25T21:27:07+00:00 PTB-XL CNN+TCN validation batch 1/135 records=16/2146 seconds=0.3
+2026-09-25T21:27:40+00:00 PTB-XL CNN+TCN validation batch 100/135 records=1600/2146 seconds=32.7
+2026-09-25T21:27:51+00:00 PTB-XL CNN+TCN validation batch 135/135 records=2146/2146 seconds=43.7
+2026-09-25T21:27:51+00:00 PTB-XL CNN+TCN epoch 08/20 train_online_bce=0.34747 val_bce=0.34685 val_macro_auc=0.87350 val_macro_ap=0.69969 selected=True seconds=531.4
+2026-09-25T21:27:51+00:00 PTB-XL CNN+TCN epoch 09/20 batch 1/1068 train_online_bce=0.39733 seconds=0.4
+2026-09-25T21:28:34+00:00 PTB-XL CNN+TCN epoch 09/20 batch 100/1068 train_online_bce=0.33215 seconds=43.6
+2026-09-25T21:29:18+00:00 PTB-XL CNN+TCN epoch 09/20 batch 200/1068 train_online_bce=0.33588 seconds=87.6
+2026-09-25T21:30:03+00:00 PTB-XL CNN+TCN epoch 09/20 batch 300/1068 train_online_bce=0.33517 seconds=132.3
+2026-09-25T21:30:47+00:00 PTB-XL CNN+TCN epoch 09/20 batch 400/1068 train_online_bce=0.33995 seconds=176.0
+2026-09-25T21:31:30+00:00 PTB-XL CNN+TCN epoch 09/20 batch 500/1068 train_online_bce=0.33885 seconds=219.7
+2026-09-25T21:32:14+00:00 PTB-XL CNN+TCN epoch 09/20 batch 600/1068 train_online_bce=0.33997 seconds=263.5
+2026-09-25T21:32:58+00:00 PTB-XL CNN+TCN epoch 09/20 batch 700/1068 train_online_bce=0.34094 seconds=307.8
+2026-09-25T21:33:42+00:00 PTB-XL CNN+TCN epoch 09/20 batch 800/1068 train_online_bce=0.33919 seconds=351.5
+2026-09-25T21:34:26+00:00 PTB-XL CNN+TCN epoch 09/20 batch 900/1068 train_online_bce=0.34014 seconds=395.5
+2026-09-25T21:35:10+00:00 PTB-XL CNN+TCN epoch 09/20 batch 1000/1068 train_online_bce=0.34026 seconds=439.1
+2026-09-25T21:35:39+00:00 PTB-XL CNN+TCN epoch 09/20 batch 1068/1068 train_online_bce=0.34105 seconds=468.5
+2026-09-25T21:35:39+00:00 PTB-XL CNN+TCN validation batch 0/135 records=0/2146 seconds=0.0
+2026-09-25T21:35:40+00:00 PTB-XL CNN+TCN validation batch 1/135 records=16/2146 seconds=0.4
+2026-09-25T21:36:12+00:00 PTB-XL CNN+TCN validation batch 100/135 records=1600/2146 seconds=32.4
+2026-09-25T21:36:22+00:00 PTB-XL CNN+TCN validation batch 135/135 records=2146/2146 seconds=43.2
+2026-09-25T21:36:22+00:00 PTB-XL CNN+TCN epoch 09/20 train_online_bce=0.34105 val_bce=0.33708 val_macro_auc=0.87847 val_macro_ap=0.71143 selected=True seconds=511.8
+2026-09-25T21:36:23+00:00 PTB-XL CNN+TCN epoch 10/20 batch 1/1068 train_online_bce=0.24670 seconds=0.5
+2026-09-25T21:37:08+00:00 PTB-XL CNN+TCN epoch 10/20 batch 100/1068 train_online_bce=0.33188 seconds=45.0
+2026-09-25T21:37:52+00:00 PTB-XL CNN+TCN epoch 10/20 batch 200/1068 train_online_bce=0.33290 seconds=89.7
+2026-09-25T21:38:36+00:00 PTB-XL CNN+TCN epoch 10/20 batch 300/1068 train_online_bce=0.33211 seconds=133.6
+2026-09-25T21:39:27+00:00 PTB-XL CNN+TCN epoch 10/20 batch 400/1068 train_online_bce=0.33192 seconds=184.1
+2026-09-25T21:40:19+00:00 PTB-XL CNN+TCN epoch 10/20 batch 500/1068 train_online_bce=0.33433 seconds=236.2
+2026-09-25T21:41:11+00:00 PTB-XL CNN+TCN epoch 10/20 batch 600/1068 train_online_bce=0.33543 seconds=288.3
+2026-09-25T21:41:58+00:00 PTB-XL CNN+TCN epoch 10/20 batch 700/1068 train_online_bce=0.33402 seconds=335.9
+2026-09-25T21:42:42+00:00 PTB-XL CNN+TCN epoch 10/20 batch 800/1068 train_online_bce=0.33526 seconds=379.5
+2026-09-25T21:43:26+00:00 PTB-XL CNN+TCN epoch 10/20 batch 900/1068 train_online_bce=0.33507 seconds=423.3
+2026-09-25T21:44:09+00:00 PTB-XL CNN+TCN epoch 10/20 batch 1000/1068 train_online_bce=0.33495 seconds=466.7
+2026-09-25T21:44:39+00:00 PTB-XL CNN+TCN epoch 10/20 batch 1068/1068 train_online_bce=0.33563 seconds=496.0
+2026-09-25T21:44:39+00:00 PTB-XL CNN+TCN validation batch 0/135 records=0/2146 seconds=0.0
+2026-09-25T21:44:39+00:00 PTB-XL CNN+TCN validation batch 1/135 records=16/2146 seconds=0.3
+2026-09-25T21:45:11+00:00 PTB-XL CNN+TCN validation batch 100/135 records=1600/2146 seconds=32.1
+2026-09-25T21:45:22+00:00 PTB-XL CNN+TCN validation batch 135/135 records=2146/2146 seconds=43.1
+2026-09-25T21:45:22+00:00 PTB-XL CNN+TCN epoch 10/20 train_online_bce=0.33563 val_bce=0.33881 val_macro_auc=0.87982 val_macro_ap=0.71897 selected=True seconds=539.1
+2026-09-25T21:45:22+00:00 PTB-XL CNN+TCN epoch 11/20 batch 1/1068 train_online_bce=0.43390 seconds=0.5
+2026-09-25T21:46:06+00:00 PTB-XL CNN+TCN epoch 11/20 batch 100/1068 train_online_bce=0.33400 seconds=43.9
+2026-09-25T21:46:50+00:00 PTB-XL CNN+TCN epoch 11/20 batch 200/1068 train_online_bce=0.32913 seconds=88.3
+2026-09-25T21:47:37+00:00 PTB-XL CNN+TCN epoch 11/20 batch 300/1068 train_online_bce=0.33038 seconds=135.0
+2026-09-25T21:48:27+00:00 PTB-XL CNN+TCN epoch 11/20 batch 400/1068 train_online_bce=0.33456 seconds=185.4
+2026-09-25T21:49:18+00:00 PTB-XL CNN+TCN epoch 11/20 batch 500/1068 train_online_bce=0.33329 seconds=235.9
+2026-09-25T21:50:08+00:00 PTB-XL CNN+TCN epoch 11/20 batch 600/1068 train_online_bce=0.33057 seconds=286.4
+2026-09-25T21:50:58+00:00 PTB-XL CNN+TCN epoch 11/20 batch 700/1068 train_online_bce=0.32920 seconds=336.9
+2026-09-25T21:51:48+00:00 PTB-XL CNN+TCN epoch 11/20 batch 800/1068 train_online_bce=0.32880 seconds=386.8
+2026-09-25T21:52:33+00:00 PTB-XL CNN+TCN epoch 11/20 batch 900/1068 train_online_bce=0.33012 seconds=431.2
+2026-09-25T21:53:17+00:00 PTB-XL CNN+TCN epoch 11/20 batch 1000/1068 train_online_bce=0.33027 seconds=475.5
+2026-09-25T21:53:48+00:00 PTB-XL CNN+TCN epoch 11/20 batch 1068/1068 train_online_bce=0.32966 seconds=506.1
+2026-09-25T21:53:48+00:00 PTB-XL CNN+TCN validation batch 0/135 records=0/2146 seconds=0.0
+2026-09-25T21:53:48+00:00 PTB-XL CNN+TCN validation batch 1/135 records=16/2146 seconds=0.3
+2026-09-25T21:54:20+00:00 PTB-XL CNN+TCN validation batch 100/135 records=1600/2146 seconds=32.2
+2026-09-25T21:54:31+00:00 PTB-XL CNN+TCN validation batch 135/135 records=2146/2146 seconds=43.0
+2026-09-25T21:54:31+00:00 PTB-XL CNN+TCN epoch 11/20 train_online_bce=0.32966 val_bce=0.33504 val_macro_auc=0.88374 val_macro_ap=0.72190 selected=True seconds=549.1
+2026-09-25T21:54:31+00:00 PTB-XL CNN+TCN epoch 12/20 batch 1/1068 train_online_bce=0.42709 seconds=0.4
+2026-09-25T21:55:15+00:00 PTB-XL CNN+TCN epoch 12/20 batch 100/1068 train_online_bce=0.31612 seconds=43.8
+2026-09-25T21:55:58+00:00 PTB-XL CNN+TCN epoch 12/20 batch 200/1068 train_online_bce=0.32597 seconds=87.2
+2026-09-25T21:56:47+00:00 PTB-XL CNN+TCN epoch 12/20 batch 300/1068 train_online_bce=0.32877 seconds=135.8
+2026-09-25T21:57:40+00:00 PTB-XL CNN+TCN epoch 12/20 batch 400/1068 train_online_bce=0.33085 seconds=189.4
+2026-09-25T21:58:35+00:00 PTB-XL CNN+TCN epoch 12/20 batch 500/1068 train_online_bce=0.32780 seconds=244.7
+2026-09-25T21:59:25+00:00 PTB-XL CNN+TCN epoch 12/20 batch 600/1068 train_online_bce=0.32808 seconds=294.3
+2026-09-25T22:00:19+00:00 PTB-XL CNN+TCN epoch 12/20 batch 700/1068 train_online_bce=0.32848 seconds=348.0
+2026-09-25T22:01:07+00:00 PTB-XL CNN+TCN epoch 12/20 batch 800/1068 train_online_bce=0.32715 seconds=396.7
+2026-09-25T22:01:53+00:00 PTB-XL CNN+TCN epoch 12/20 batch 900/1068 train_online_bce=0.32597 seconds=442.8
+2026-09-25T22:02:43+00:00 PTB-XL CNN+TCN epoch 12/20 batch 1000/1068 train_online_bce=0.32542 seconds=492.7
+2026-09-25T22:03:12+00:00 PTB-XL CNN+TCN epoch 12/20 batch 1068/1068 train_online_bce=0.32527 seconds=521.8
+2026-09-25T22:03:13+00:00 PTB-XL CNN+TCN validation batch 0/135 records=0/2146 seconds=0.0
+2026-09-25T22:03:13+00:00 PTB-XL CNN+TCN validation batch 1/135 records=16/2146 seconds=0.3
+2026-09-25T22:03:44+00:00 PTB-XL CNN+TCN validation batch 100/135 records=1600/2146 seconds=31.5
+2026-09-25T22:03:54+00:00 PTB-XL CNN+TCN validation batch 135/135 records=2146/2146 seconds=42.0
+2026-09-25T22:03:55+00:00 PTB-XL CNN+TCN epoch 12/20 train_online_bce=0.32527 val_bce=0.33980 val_macro_auc=0.88317 val_macro_ap=0.72287 selected=False seconds=563.8
+2026-09-25T22:03:55+00:00 PTB-XL CNN+TCN epoch 13/20 batch 1/1068 train_online_bce=0.34486 seconds=0.4
+2026-09-25T22:04:38+00:00 PTB-XL CNN+TCN epoch 13/20 batch 100/1068 train_online_bce=0.33118 seconds=43.2
+2026-09-25T22:05:20+00:00 PTB-XL CNN+TCN epoch 13/20 batch 200/1068 train_online_bce=0.32943 seconds=85.5
+2026-09-25T22:06:02+00:00 PTB-XL CNN+TCN epoch 13/20 batch 300/1068 train_online_bce=0.33100 seconds=127.8
+2026-09-25T22:06:44+00:00 PTB-XL CNN+TCN epoch 13/20 batch 400/1068 train_online_bce=0.32904 seconds=169.9
+2026-09-25T22:07:27+00:00 PTB-XL CNN+TCN epoch 13/20 batch 500/1068 train_online_bce=0.32594 seconds=212.4
+2026-09-25T22:08:10+00:00 PTB-XL CNN+TCN epoch 13/20 batch 600/1068 train_online_bce=0.32316 seconds=255.9
+2026-09-25T22:08:53+00:00 PTB-XL CNN+TCN epoch 13/20 batch 700/1068 train_online_bce=0.32378 seconds=298.5
+2026-09-25T22:09:35+00:00 PTB-XL CNN+TCN epoch 13/20 batch 800/1068 train_online_bce=0.32306 seconds=340.5
+2026-09-25T22:10:18+00:00 PTB-XL CNN+TCN epoch 13/20 batch 900/1068 train_online_bce=0.32270 seconds=383.7
+2026-09-25T22:11:00+00:00 PTB-XL CNN+TCN epoch 13/20 batch 1000/1068 train_online_bce=0.32361 seconds=425.6
+2026-09-25T22:11:29+00:00 PTB-XL CNN+TCN epoch 13/20 batch 1068/1068 train_online_bce=0.32295 seconds=454.0
+2026-09-25T22:11:29+00:00 PTB-XL CNN+TCN validation batch 0/135 records=0/2146 seconds=0.0
+2026-09-25T22:11:29+00:00 PTB-XL CNN+TCN validation batch 1/135 records=16/2146 seconds=0.3
+2026-09-25T22:11:59+00:00 PTB-XL CNN+TCN validation batch 100/135 records=1600/2146 seconds=30.9
+2026-09-25T22:12:10+00:00 PTB-XL CNN+TCN validation batch 135/135 records=2146/2146 seconds=41.3
+2026-09-25T22:12:10+00:00 PTB-XL CNN+TCN epoch 13/20 train_online_bce=0.32295 val_bce=0.34349 val_macro_auc=0.88592 val_macro_ap=0.72884 selected=True seconds=495.4
+2026-09-25T22:12:10+00:00 PTB-XL CNN+TCN epoch 14/20 batch 1/1068 train_online_bce=0.38725 seconds=0.4
+2026-09-25T22:12:55+00:00 PTB-XL CNN+TCN epoch 14/20 batch 100/1068 train_online_bce=0.32877 seconds=44.9
+2026-09-25T22:13:36+00:00 PTB-XL CNN+TCN epoch 14/20 batch 200/1068 train_online_bce=0.32664 seconds=86.5
+2026-09-25T22:14:18+00:00 PTB-XL CNN+TCN epoch 14/20 batch 300/1068 train_online_bce=0.31942 seconds=128.3
+2026-09-25T22:15:00+00:00 PTB-XL CNN+TCN epoch 14/20 batch 400/1068 train_online_bce=0.31855 seconds=169.6
+2026-09-25T22:15:41+00:00 PTB-XL CNN+TCN epoch 14/20 batch 500/1068 train_online_bce=0.31751 seconds=211.3
+2026-09-25T22:16:23+00:00 PTB-XL CNN+TCN epoch 14/20 batch 600/1068 train_online_bce=0.31775 seconds=252.8
+2026-09-25T22:17:04+00:00 PTB-XL CNN+TCN epoch 14/20 batch 700/1068 train_online_bce=0.31701 seconds=294.4
+2026-09-25T22:17:46+00:00 PTB-XL CNN+TCN epoch 14/20 batch 800/1068 train_online_bce=0.31598 seconds=336.3
+2026-09-25T22:18:28+00:00 PTB-XL CNN+TCN epoch 14/20 batch 900/1068 train_online_bce=0.31577 seconds=378.5
+2026-09-25T22:19:11+00:00 PTB-XL CNN+TCN epoch 14/20 batch 1000/1068 train_online_bce=0.31715 seconds=420.7
+2026-09-25T22:19:39+00:00 PTB-XL CNN+TCN epoch 14/20 batch 1068/1068 train_online_bce=0.31811 seconds=449.1
+2026-09-25T22:19:39+00:00 PTB-XL CNN+TCN validation batch 0/135 records=0/2146 seconds=0.0
+2026-09-25T22:19:39+00:00 PTB-XL CNN+TCN validation batch 1/135 records=16/2146 seconds=0.3
+2026-09-25T22:20:10+00:00 PTB-XL CNN+TCN validation batch 100/135 records=1600/2146 seconds=31.0
+2026-09-25T22:20:20+00:00 PTB-XL CNN+TCN validation batch 135/135 records=2146/2146 seconds=41.4
+2026-09-25T22:20:20+00:00 PTB-XL CNN+TCN epoch 14/20 train_online_bce=0.31811 val_bce=0.33108 val_macro_auc=0.88628 val_macro_ap=0.72910 selected=True seconds=490.6
+2026-09-25T22:20:21+00:00 PTB-XL CNN+TCN epoch 15/20 batch 1/1068 train_online_bce=0.35336 seconds=0.4
+2026-09-25T22:21:03+00:00 PTB-XL CNN+TCN epoch 15/20 batch 100/1068 train_online_bce=0.32297 seconds=42.1
+2026-09-25T22:21:45+00:00 PTB-XL CNN+TCN epoch 15/20 batch 200/1068 train_online_bce=0.32008 seconds=84.3
+2026-09-25T22:22:27+00:00 PTB-XL CNN+TCN epoch 15/20 batch 300/1068 train_online_bce=0.31766 seconds=126.4
+2026-09-25T22:23:10+00:00 PTB-XL CNN+TCN epoch 15/20 batch 400/1068 train_online_bce=0.31457 seconds=169.1
+2026-09-25T22:23:52+00:00 PTB-XL CNN+TCN epoch 15/20 batch 500/1068 train_online_bce=0.31426 seconds=211.1
+2026-09-25T22:24:33+00:00 PTB-XL CNN+TCN epoch 15/20 batch 600/1068 train_online_bce=0.31524 seconds=253.0
+2026-09-25T22:25:16+00:00 PTB-XL CNN+TCN epoch 15/20 batch 700/1068 train_online_bce=0.31595 seconds=295.1
+2026-09-25T22:25:58+00:00 PTB-XL CNN+TCN epoch 15/20 batch 800/1068 train_online_bce=0.31368 seconds=337.5
+2026-09-25T22:26:41+00:00 PTB-XL CNN+TCN epoch 15/20 batch 900/1068 train_online_bce=0.31277 seconds=380.3
+2026-09-25T22:27:24+00:00 PTB-XL CNN+TCN epoch 15/20 batch 1000/1068 train_online_bce=0.31349 seconds=423.3
+2026-09-25T22:27:53+00:00 PTB-XL CNN+TCN epoch 15/20 batch 1068/1068 train_online_bce=0.31372 seconds=452.7
+2026-09-25T22:27:53+00:00 PTB-XL CNN+TCN validation batch 0/135 records=0/2146 seconds=0.0
+2026-09-25T22:27:54+00:00 PTB-XL CNN+TCN validation batch 1/135 records=16/2146 seconds=0.3
+2026-09-25T22:28:25+00:00 PTB-XL CNN+TCN validation batch 100/135 records=1600/2146 seconds=31.9
+2026-09-25T22:28:36+00:00 PTB-XL CNN+TCN validation batch 135/135 records=2146/2146 seconds=42.8
+2026-09-25T22:28:36+00:00 PTB-XL CNN+TCN epoch 15/20 train_online_bce=0.31372 val_bce=0.32998 val_macro_auc=0.88755 val_macro_ap=0.73194 selected=True seconds=495.5
+2026-09-25T22:28:36+00:00 PTB-XL CNN+TCN epoch 16/20 batch 1/1068 train_online_bce=0.29496 seconds=0.4
+2026-09-25T22:29:20+00:00 PTB-XL CNN+TCN epoch 16/20 batch 100/1068 train_online_bce=0.30312 seconds=44.3
+2026-09-25T22:30:04+00:00 PTB-XL CNN+TCN epoch 16/20 batch 200/1068 train_online_bce=0.31063 seconds=87.7
+2026-09-25T22:30:47+00:00 PTB-XL CNN+TCN epoch 16/20 batch 300/1068 train_online_bce=0.31270 seconds=131.3
+2026-09-25T22:31:31+00:00 PTB-XL CNN+TCN epoch 16/20 batch 400/1068 train_online_bce=0.31243 seconds=175.1
+2026-09-25T22:32:15+00:00 PTB-XL CNN+TCN epoch 16/20 batch 500/1068 train_online_bce=0.31430 seconds=218.6
+2026-09-25T22:32:59+00:00 PTB-XL CNN+TCN epoch 16/20 batch 600/1068 train_online_bce=0.31260 seconds=262.6
+2026-09-25T22:33:42+00:00 PTB-XL CNN+TCN epoch 16/20 batch 700/1068 train_online_bce=0.31309 seconds=306.4
+2026-09-25T22:34:26+00:00 PTB-XL CNN+TCN epoch 16/20 batch 800/1068 train_online_bce=0.31241 seconds=350.0
+2026-09-25T22:35:09+00:00 PTB-XL CNN+TCN epoch 16/20 batch 900/1068 train_online_bce=0.31171 seconds=393.2
+2026-09-25T22:35:52+00:00 PTB-XL CNN+TCN epoch 16/20 batch 1000/1068 train_online_bce=0.31275 seconds=436.1
+2026-09-25T22:36:22+00:00 PTB-XL CNN+TCN epoch 16/20 batch 1068/1068 train_online_bce=0.31305 seconds=466.1
+2026-09-25T22:36:22+00:00 PTB-XL CNN+TCN validation batch 0/135 records=0/2146 seconds=0.0
+2026-09-25T22:36:23+00:00 PTB-XL CNN+TCN validation batch 1/135 records=16/2146 seconds=0.3
+2026-09-25T22:36:54+00:00 PTB-XL CNN+TCN validation batch 100/135 records=1600/2146 seconds=31.4
+2026-09-25T22:37:05+00:00 PTB-XL CNN+TCN validation batch 135/135 records=2146/2146 seconds=42.4
+2026-09-25T22:37:05+00:00 PTB-XL CNN+TCN epoch 16/20 train_online_bce=0.31305 val_bce=0.32619 val_macro_auc=0.88889 val_macro_ap=0.73484 selected=True seconds=508.6
+2026-09-25T22:37:05+00:00 PTB-XL CNN+TCN epoch 17/20 batch 1/1068 train_online_bce=0.29163 seconds=0.4
+2026-09-25T22:37:50+00:00 PTB-XL CNN+TCN epoch 17/20 batch 100/1068 train_online_bce=0.31239 seconds=45.4
+2026-09-25T22:38:36+00:00 PTB-XL CNN+TCN epoch 17/20 batch 200/1068 train_online_bce=0.30957 seconds=91.2
+2026-09-25T22:39:20+00:00 PTB-XL CNN+TCN epoch 17/20 batch 300/1068 train_online_bce=0.30971 seconds=135.3
+2026-09-25T22:40:03+00:00 PTB-XL CNN+TCN epoch 17/20 batch 400/1068 train_online_bce=0.31188 seconds=178.4
+2026-09-25T22:40:46+00:00 PTB-XL CNN+TCN epoch 17/20 batch 500/1068 train_online_bce=0.31251 seconds=221.8
+2026-09-25T22:41:29+00:00 PTB-XL CNN+TCN epoch 17/20 batch 600/1068 train_online_bce=0.31107 seconds=264.2
+2026-09-25T22:42:11+00:00 PTB-XL CNN+TCN epoch 17/20 batch 700/1068 train_online_bce=0.31097 seconds=306.7
+2026-09-25T22:42:55+00:00 PTB-XL CNN+TCN epoch 17/20 batch 800/1068 train_online_bce=0.30936 seconds=349.9
+2026-09-25T22:43:38+00:00 PTB-XL CNN+TCN epoch 17/20 batch 900/1068 train_online_bce=0.30937 seconds=393.1
+2026-09-25T22:44:21+00:00 PTB-XL CNN+TCN epoch 17/20 batch 1000/1068 train_online_bce=0.31099 seconds=436.0
+2026-09-25T22:44:50+00:00 PTB-XL CNN+TCN epoch 17/20 batch 1068/1068 train_online_bce=0.31083 seconds=465.0
+2026-09-25T22:44:50+00:00 PTB-XL CNN+TCN validation batch 0/135 records=0/2146 seconds=0.0
+2026-09-25T22:44:50+00:00 PTB-XL CNN+TCN validation batch 1/135 records=16/2146 seconds=0.3
+2026-09-25T22:45:21+00:00 PTB-XL CNN+TCN validation batch 100/135 records=1600/2146 seconds=31.1
+2026-09-25T22:45:32+00:00 PTB-XL CNN+TCN validation batch 135/135 records=2146/2146 seconds=41.9
+2026-09-25T22:45:32+00:00 PTB-XL CNN+TCN epoch 17/20 train_online_bce=0.31083 val_bce=0.33274 val_macro_auc=0.88775 val_macro_ap=0.73350 selected=False seconds=506.9
+2026-09-25T22:45:32+00:00 PTB-XL CNN+TCN epoch 18/20 batch 1/1068 train_online_bce=0.29487 seconds=0.4
+2026-09-25T22:46:15+00:00 PTB-XL CNN+TCN epoch 18/20 batch 100/1068 train_online_bce=0.31496 seconds=43.1
+2026-09-25T22:46:58+00:00 PTB-XL CNN+TCN epoch 18/20 batch 200/1068 train_online_bce=0.31858 seconds=86.1
+2026-09-25T22:47:41+00:00 PTB-XL CNN+TCN epoch 18/20 batch 300/1068 train_online_bce=0.31238 seconds=129.2
+2026-09-25T22:48:24+00:00 PTB-XL CNN+TCN epoch 18/20 batch 400/1068 train_online_bce=0.31185 seconds=172.5
+2026-09-25T22:49:07+00:00 PTB-XL CNN+TCN epoch 18/20 batch 500/1068 train_online_bce=0.30939 seconds=215.4
+2026-09-25T22:49:50+00:00 PTB-XL CNN+TCN epoch 18/20 batch 600/1068 train_online_bce=0.31021 seconds=258.5
+2026-09-25T22:50:33+00:00 PTB-XL CNN+TCN epoch 18/20 batch 700/1068 train_online_bce=0.30742 seconds=301.5
+2026-09-25T22:51:17+00:00 PTB-XL CNN+TCN epoch 18/20 batch 800/1068 train_online_bce=0.30753 seconds=345.4
+2026-09-25T22:52:01+00:00 PTB-XL CNN+TCN epoch 18/20 batch 900/1068 train_online_bce=0.30810 seconds=389.8
+2026-09-25T22:52:46+00:00 PTB-XL CNN+TCN epoch 18/20 batch 1000/1068 train_online_bce=0.30776 seconds=434.0
+2026-09-25T22:53:16+00:00 PTB-XL CNN+TCN epoch 18/20 batch 1068/1068 train_online_bce=0.30850 seconds=464.1
+2026-09-25T22:53:16+00:00 PTB-XL CNN+TCN validation batch 0/135 records=0/2146 seconds=0.0
+2026-09-25T22:53:16+00:00 PTB-XL CNN+TCN validation batch 1/135 records=16/2146 seconds=0.3
+2026-09-25T22:53:48+00:00 PTB-XL CNN+TCN validation batch 100/135 records=1600/2146 seconds=31.8
+2026-09-25T22:53:58+00:00 PTB-XL CNN+TCN validation batch 135/135 records=2146/2146 seconds=42.7
+2026-09-25T22:53:58+00:00 PTB-XL CNN+TCN epoch 18/20 train_online_bce=0.30850 val_bce=0.33080 val_macro_auc=0.88841 val_macro_ap=0.73448 selected=False seconds=506.8
+2026-09-25T22:53:59+00:00 PTB-XL CNN+TCN epoch 19/20 batch 1/1068 train_online_bce=0.43424 seconds=0.4
+2026-09-25T22:54:43+00:00 PTB-XL CNN+TCN epoch 19/20 batch 100/1068 train_online_bce=0.31003 seconds=44.1
+2026-09-25T22:55:26+00:00 PTB-XL CNN+TCN epoch 19/20 batch 200/1068 train_online_bce=0.30312 seconds=87.9
+2026-09-25T22:56:10+00:00 PTB-XL CNN+TCN epoch 19/20 batch 300/1068 train_online_bce=0.30058 seconds=131.4
+2026-09-25T22:56:54+00:00 PTB-XL CNN+TCN epoch 19/20 batch 400/1068 train_online_bce=0.30571 seconds=175.2
+2026-09-25T22:57:38+00:00 PTB-XL CNN+TCN epoch 19/20 batch 500/1068 train_online_bce=0.30382 seconds=219.1
+2026-09-25T22:58:22+00:00 PTB-XL CNN+TCN epoch 19/20 batch 600/1068 train_online_bce=0.30469 seconds=263.3
+2026-09-25T22:59:06+00:00 PTB-XL CNN+TCN epoch 19/20 batch 700/1068 train_online_bce=0.30503 seconds=307.3
+2026-09-25T22:59:51+00:00 PTB-XL CNN+TCN epoch 19/20 batch 800/1068 train_online_bce=0.30592 seconds=352.3
+2026-09-25T23:00:35+00:00 PTB-XL CNN+TCN epoch 19/20 batch 900/1068 train_online_bce=0.30643 seconds=396.8
+2026-09-25T23:01:20+00:00 PTB-XL CNN+TCN epoch 19/20 batch 1000/1068 train_online_bce=0.30644 seconds=441.9
+2026-09-25T23:01:50+00:00 PTB-XL CNN+TCN epoch 19/20 batch 1068/1068 train_online_bce=0.30674 seconds=471.2
+2026-09-25T23:01:50+00:00 PTB-XL CNN+TCN validation batch 0/135 records=0/2146 seconds=0.0
+2026-09-25T23:01:50+00:00 PTB-XL CNN+TCN validation batch 1/135 records=16/2146 seconds=0.3
+2026-09-25T23:02:23+00:00 PTB-XL CNN+TCN validation batch 100/135 records=1600/2146 seconds=33.3
+2026-09-25T23:02:34+00:00 PTB-XL CNN+TCN validation batch 135/135 records=2146/2146 seconds=44.7
+2026-09-25T23:02:34+00:00 PTB-XL CNN+TCN epoch 19/20 train_online_bce=0.30674 val_bce=0.33134 val_macro_auc=0.88885 val_macro_ap=0.73575 selected=False seconds=515.9
+2026-09-25T23:02:35+00:00 PTB-XL CNN+TCN epoch 20/20 batch 1/1068 train_online_bce=0.27139 seconds=0.4
+2026-09-25T23:03:20+00:00 PTB-XL CNN+TCN epoch 20/20 batch 100/1068 train_online_bce=0.30782 seconds=45.6
+2026-09-25T23:04:04+00:00 PTB-XL CNN+TCN epoch 20/20 batch 200/1068 train_online_bce=0.30605 seconds=89.2
+2026-09-25T23:04:47+00:00 PTB-XL CNN+TCN epoch 20/20 batch 300/1068 train_online_bce=0.30850 seconds=132.8
+2026-09-25T23:05:31+00:00 PTB-XL CNN+TCN epoch 20/20 batch 400/1068 train_online_bce=0.30893 seconds=176.3
+2026-09-25T23:06:14+00:00 PTB-XL CNN+TCN epoch 20/20 batch 500/1068 train_online_bce=0.30719 seconds=219.7
+2026-09-25T23:06:57+00:00 PTB-XL CNN+TCN epoch 20/20 batch 600/1068 train_online_bce=0.30542 seconds=262.5
+2026-09-25T23:07:40+00:00 PTB-XL CNN+TCN epoch 20/20 batch 700/1068 train_online_bce=0.30639 seconds=305.7
+2026-09-25T23:08:23+00:00 PTB-XL CNN+TCN epoch 20/20 batch 800/1068 train_online_bce=0.30589 seconds=348.7
+2026-09-25T23:09:06+00:00 PTB-XL CNN+TCN epoch 20/20 batch 900/1068 train_online_bce=0.30697 seconds=391.4
+2026-09-25T23:09:48+00:00 PTB-XL CNN+TCN epoch 20/20 batch 1000/1068 train_online_bce=0.30700 seconds=433.9
+2026-09-25T23:10:17+00:00 PTB-XL CNN+TCN epoch 20/20 batch 1068/1068 train_online_bce=0.30672 seconds=462.6
+2026-09-25T23:10:17+00:00 PTB-XL CNN+TCN validation batch 0/135 records=0/2146 seconds=0.0
+2026-09-25T23:10:17+00:00 PTB-XL CNN+TCN validation batch 1/135 records=16/2146 seconds=0.3
+2026-09-25T23:10:48+00:00 PTB-XL CNN+TCN validation batch 100/135 records=1600/2146 seconds=31.0
+2026-09-25T23:10:59+00:00 PTB-XL CNN+TCN validation batch 135/135 records=2146/2146 seconds=41.5
+2026-09-25T23:10:59+00:00 PTB-XL CNN+TCN epoch 20/20 train_online_bce=0.30672 val_bce=0.33115 val_macro_auc=0.88856 val_macro_ap=0.73519 selected=False seconds=504.1
+{"status": "running", "phase": "selected_checkpoint_prediction", "updated_utc": "2026-09-25T23:11:00.577443+00:00", "elapsed_seconds": 10538.556134375001, "split": "train", "records": 17084}
+2026-09-25T23:11:00+00:00 PTB-XL CNN+TCN prediction:train batch 0/1068 records=0/17084 seconds=0.0
+2026-09-25T23:11:00+00:00 PTB-XL CNN+TCN prediction:train batch 1/1068 records=16/17084 seconds=0.3
+2026-09-25T23:11:31+00:00 PTB-XL CNN+TCN prediction:train batch 100/1068 records=1600/17084 seconds=30.5
+2026-09-25T23:12:01+00:00 PTB-XL CNN+TCN prediction:train batch 200/1068 records=3200/17084 seconds=61.4
+2026-09-25T23:12:32+00:00 PTB-XL CNN+TCN prediction:train batch 300/1068 records=4800/17084 seconds=91.8
+2026-09-25T23:13:02+00:00 PTB-XL CNN+TCN prediction:train batch 400/1068 records=6400/17084 seconds=122.4
+2026-09-25T23:13:34+00:00 PTB-XL CNN+TCN prediction:train batch 500/1068 records=8000/17084 seconds=154.1
+2026-09-25T23:14:05+00:00 PTB-XL CNN+TCN prediction:train batch 600/1068 records=9600/17084 seconds=184.8
+2026-09-25T23:14:35+00:00 PTB-XL CNN+TCN prediction:train batch 700/1068 records=11200/17084 seconds=215.4
+2026-09-25T23:15:06+00:00 PTB-XL CNN+TCN prediction:train batch 800/1068 records=12800/17084 seconds=245.7
+2026-09-25T23:15:36+00:00 PTB-XL CNN+TCN prediction:train batch 900/1068 records=14400/17084 seconds=276.1
+2026-09-25T23:16:06+00:00 PTB-XL CNN+TCN prediction:train batch 1000/1068 records=16000/17084 seconds=306.3
+2026-09-25T23:16:27+00:00 PTB-XL CNN+TCN prediction:train batch 1068/1068 records=17084/17084 seconds=326.9
+{"status": "running", "phase": "selected_checkpoint_prediction", "updated_utc": "2026-09-25T23:16:28.088249+00:00", "elapsed_seconds": 10866.052291540997, "split": "validation", "records": 2146}
+2026-09-25T23:16:28+00:00 PTB-XL CNN+TCN prediction:validation batch 0/135 records=0/2146 seconds=0.0
+2026-09-25T23:16:28+00:00 PTB-XL CNN+TCN prediction:validation batch 1/135 records=16/2146 seconds=0.3
+2026-09-25T23:16:58+00:00 PTB-XL CNN+TCN prediction:validation batch 100/135 records=1600/2146 seconds=30.4
+2026-09-25T23:17:09+00:00 PTB-XL CNN+TCN prediction:validation batch 135/135 records=2146/2146 seconds=40.9
+{"status": "running", "phase": "checkpoint_replay", "updated_utc": "2026-09-25T23:17:09.276046+00:00", "elapsed_seconds": 10907.238731833, "records": 32}
+2026-09-25T23:17:09+00:00 PTB-XL CNN+TCN prediction:dataset batch 0/2 records=0/32 seconds=0.0
+2026-09-25T23:17:09+00:00 PTB-XL CNN+TCN prediction:dataset batch 1/2 records=16/32 seconds=0.3
+2026-09-25T23:17:09+00:00 PTB-XL CNN+TCN prediction:dataset batch 2/2 records=32/32 seconds=0.6
+{"status": "running", "phase": "final_test_prediction", "updated_utc": "2026-09-25T23:17:10.986096+00:00", "elapsed_seconds": 10908.948726333008, "records": 2158}
+2026-09-25T23:17:10+00:00 PTB-XL CNN+TCN prediction:test batch 0/135 records=0/2158 seconds=0.0
+2026-09-25T23:17:11+00:00 PTB-XL CNN+TCN prediction:test batch 1/135 records=16/2158 seconds=0.4
+2026-09-25T23:17:42+00:00 PTB-XL CNN+TCN prediction:test batch 100/135 records=1600/2158 seconds=31.0
+2026-09-25T23:17:53+00:00 PTB-XL CNN+TCN prediction:test batch 135/135 records=2158/2158 seconds=42.3
+{"status": "running", "phase": "patient_bootstrap", "updated_utc": "2026-09-25T23:17:53.534491+00:00", "elapsed_seconds": 10951.495838250004, "resamples": 500}
+{
+  "run_id": "ptbxl_spatiotemporal_image_v1_seed42",
+  "status": "completed",
+  "test": {
+    "n_samples": 2158,
+    "n_labels": 5,
+    "class_names": [
+      "NORM",
+      "MI",
+      "STTC",
+      "CD",
+      "HYP"
+    ],
+    "threshold": 0.5,
+    "decision_rule": "Independent probability >= 0.5 for each label; no row-sum normalization",
+    "subset_accuracy": 0.561631139944393,
+    "label_accuracy": 0.8607970342910102,
+    "hamming_loss": 0.1392029657089898,
+    "macro_f1": 0.6408543781896833,
+    "micro_f1": 0.7084627329192547,
+    "weighted_f1": 0.6938825614537087,
+    "macro_precision": 0.7544995420324034,
+    "macro_recall": 0.5787171391371813,
+    "macro_roc_auc": 0.8802576278599373,
+    "micro_roc_auc": 0.9000500483287011,
+    "macro_average_precision": 0.7324563320593636,
+    "micro_average_precision": 0.7908134125030291,
+    "macro_roc_auc_defined_labels": 0.8802576278599373,
+    "macro_average_precision_defined_labels": 0.7324563320593636,
+    "roc_auc_defined_labels": [
+      "NORM",
+      "MI",
+      "STTC",
+      "CD",
+      "HYP"
+    ],
+    "average_precision_defined_labels": [
+      "NORM",
+      "MI",
+      "STTC",
+      "CD",
+      "HYP"
+    ],
+    "binary_cross_entropy": 0.33525871658124445,
+    "bce_probability_clip_epsilon": 2.220446049250313e-16,
+    "per_label": {
+      "NORM": {
+        "precision": 0.7945334590009425,
+        "recall": 0.8753894080996885,
+        "f1": 0.8330039525691699,
+        "specificity": 0.8175732217573222,
+        "balanced_accuracy": 0.8464813149285053,
+        "tp": 843,
+        "fp": 218,
+        "tn": 977,
+        "fn": 120,
+        "support": 963,
+        "negative_support": 1195,
+        "predicted_positive": 1061,
+        "roc_auc": 0.9197756314168155,
+        "average_precision": 0.8893895896241277
+      },
+      "MI": {
+        "precision": 0.7392344497607656,
+        "recall": 0.5618181818181818,
+        "f1": 0.6384297520661157,
+        "specificity": 0.9322139303482587,
+        "balanced_accuracy": 0.7470160560832202,
+        "tp": 309,
+        "fp": 109,
+        "tn": 1499,
+        "fn": 241,
+        "support": 550,
+        "negative_support": 1608,
+        "predicted_positive": 418,
+        "roc_auc": 0.8670160560832204,
+        "average_precision": 0.712535575621889
+      },
+      "STTC": {
+        "precision": 0.7674418604651163,
+        "recall": 0.6333973128598849,
+        "f1": 0.694006309148265,
+        "specificity": 0.938912645082468,
+        "balanced_accuracy": 0.7861549789711764,
+        "tp": 330,
+        "fp": 100,
+        "tn": 1537,
+        "fn": 191,
+        "support": 521,
+        "negative_support": 1637,
+        "predicted_positive": 430,
+        "roc_auc": 0.9122393967711641,
+        "average_precision": 0.7816119695937878
+      },
+      "CD": {
+        "precision": 0.782608695652174,
+        "recall": 0.5443548387096774,
+        "f1": 0.6420927467300832,
+        "specificity": 0.9548736462093863,
+        "balanced_accuracy": 0.7496142424595318,
+        "tp": 270,
+        "fp": 75,
+        "tn": 1587,
+        "fn": 226,
+        "support": 496,
+        "negative_support": 1662,
+        "predicted_positive": 345,
+        "roc_auc": 0.8563138076938006,
+        "average_precision": 0.7423025704868771
+      },
+      "HYP": {
+        "precision": 0.6886792452830188,
+        "recall": 0.2786259541984733,
+        "f1": 0.3967391304347826,
+        "specificity": 0.9825949367088608,
+        "balanced_accuracy": 0.6306104454536671,
+        "tp": 73,
+        "fp": 33,
+        "tn": 1863,
+        "fn": 189,
+        "support": 262,
+        "negative_support": 1896,
+        "predicted_positive": 106,
+        "roc_auc": 0.8459432473346861,
+        "average_precision": 0.5364419549701362
+      }
+    },
+    "confusion_matrices": {
+      "NORM": [
+        [
+          977,
+          218
+        ],
+        [
+          120,
+          843
+        ]
+      ],
+      "MI": [
+        [
+          1499,
+          109
+        ],
+        [
+          241,
+          309
+        ]
+      ],
+      "STTC": [
+        [
+          1537,
+          100
+        ],
+        [
+          191,
+          330
+        ]
+      ],
+      "CD": [
+        [
+          1587,
+          75
+        ],
+        [
+          226,
+          270
+        ]
+      ],
+      "HYP": [
+        [
+          1863,
+          33
+        ],
+        [
+          189,
+          73
+        ]
+      ]
+    },
+    "confusion_matrix_axes": "rows=true [negative, positive]; columns=predicted [negative, positive]",
+    "accuracy_definitions": {
+      "subset_accuracy": "Fraction of records with all five label decisions exactly correct",
+      "label_accuracy": "Fraction of individual record-label decisions correct",
+      "hamming_loss": "Fraction of individual record-label decisions incorrect"
+    },
+    "zero_division_policy": "Precision, recall and F1 use zero_division=0; weighted F1 is zero when total positive support is zero",
+    "undefined_metric_policy": "ROC-AUC needs positive and negative truth; AP needs positive truth. Full-five-label macro ranking scores are null if any label is undefined. Defined-label-only means are named separately. Specificity is null without negatives; balanced accuracy is null without both outcomes."
+  },
+  "total_runtime_seconds": 10957.267697165997
+}
+{"status": "completed", "phase": "completed", "updated_utc": "2026-09-25T23:17:59.386047+00:00", "elapsed_seconds": 10957.347228540995}

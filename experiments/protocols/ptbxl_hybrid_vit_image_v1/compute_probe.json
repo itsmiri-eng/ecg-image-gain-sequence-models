@@ -1,0 +1,85 @@
+{
+  "recorded_utc": "2026-11-01T11:21:42.276782+00:00",
+  "scope": "Synthetic tensors only; feasibility probe, no ECG input or outcome access and no architecture/hyperparameter tuning.",
+  "device": "cpu",
+  "device_probe": {
+    "requested": "auto",
+    "available": {
+      "cuda": false,
+      "mps": false,
+      "cpu": true
+    },
+    "attempts": [
+      {
+        "device": "cuda",
+        "status": "unavailable",
+        "reason": "cuda is unavailable in this PyTorch runtime"
+      },
+      {
+        "device": "mps",
+        "status": "unavailable",
+        "reason": "mps is unavailable in this PyTorch runtime"
+      },
+      {
+        "device": "cpu",
+        "status": "passed",
+        "output_shape": [
+          1,
+          5
+        ],
+        "finite_forward_backward": true,
+        "synthetic_records": 1
+      }
+    ],
+    "synthetic_only": true,
+    "ecg_data_accessed": false,
+    "fallback_reasons": [
+      "cuda is unavailable in this PyTorch runtime",
+      "mps is unavailable in this PyTorch runtime"
+    ],
+    "resolved": "cpu"
+  },
+  "num_threads": 4,
+  "batch_size": 16,
+  "warmup_steps": 2,
+  "timed_steps": 10,
+  "model": "LeadImageHybridViT",
+  "num_parameters": 23881,
+  "step_seconds": {
+    "mean": 0.4809083374799229,
+    "median": 0.5116326459683478,
+    "minimum": 0.3251584579702467,
+    "maximum": 0.6099353330209851,
+    "all": [
+      0.5785406249342486,
+      0.5508871249621734,
+      0.6099353330209851,
+      0.5311857919441536,
+      0.46697629103437066,
+      0.5570847089402378,
+      0.49207949999254197,
+      0.3251584579702467,
+      0.37186933401972055,
+      0.3253662079805508
+    ]
+  },
+  "examples_per_second": 33.27037348498449,
+  "process_peak_rss_bytes": 373932032,
+  "process_peak_rss_platform_units": "bytes on macOS",
+  "loss_finite": true,
+  "pure_training_estimated_minutes_per_epoch": 8.560168407142628,
+  "pure_training_estimated_minutes_20epochs": 171.20336814285255,
+  "environment": {
+    "python": "3.12.4",
+    "platform": "macOS-26.6.1-arm64-arm-64bit",
+    "torch": "2.9.1"
+  },
+  "source_sha256": {
+    "src/models/ptbxl_hybrid_vit.py": "5b3aa95eaa1932da3e0c4b41d8c8ce0f34c2e7d6548eeefd286926f496d70628",
+    "src/training/__init__.py": "3aa7c9d6952246e6e5a088cf49281610e806074e7d9720a1114cb77cce2352a4",
+    "src/training/ptbxl_hybrid_vit.py": "b86100be193601afb45dd5b56c8a79b20d4a0b5d50ab1dcf2c06b6d5544c5da0"
+  },
+  "limitations": "Synthetic same-batch estimate excludes PNG decoding, integrity checks, validation, final inference, bootstrap, host sleep and thermal/load changes; not a speed superiority comparison. Accelerator execution unavailable if recorded so in device_probe.",
+  "repeat_reason": "Probe refreshed after adding explicit same-backend checkpoint loading; architecture and all training hyperparameters unchanged. No ECG data or outcomes used.",
+  "concurrent_load_note": "The refreshed timing pass overlapped completion of synthetic unit tests in a separate process; interpret only as a rough feasibility estimate under observed load."
+}

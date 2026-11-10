@@ -1,0 +1,15 @@
+{
+  "reviewed_utc": "2026-11-01T11:33:38.163993+00:00",
+  "reviewer": "Codex visual inspection",
+  "status": "passed",
+  "checks": [
+    "All labels readable with no overlap or clipping",
+    "Three model branches and shared feature sequence visible",
+    "Actual frozen parameter counts and tensor shapes match",
+    "Independent fitted weights and image-feature interpretation explicit"
+  ],
+  "files_sha256": {
+    "ptbxl_architectures.png": "e556e5d4cbc847f754c9ba19931afeddfd8fdf11b9a97d15107897ed855b71cb",
+    "ptbxl_architectures.svg": "7cbef0d921edf6547503ea1a622de106f58b77580553fd770874db56f0d072b6"
+  }
+}

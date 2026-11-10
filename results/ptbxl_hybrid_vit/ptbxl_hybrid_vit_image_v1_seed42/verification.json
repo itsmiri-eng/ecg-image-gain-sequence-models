@@ -1,0 +1,131 @@
+{
+  "status": "passed",
+  "run_id": "ptbxl_hybrid_vit_image_v1_seed42",
+  "verified_utc": "2026-11-01T15:03:35.776286+00:00",
+  "verifier_sha256": "80def270ab9de08f806040fd7ca1a1b6d9b8f5678ae1e71cc344d05b0d6e1fe1",
+  "verification_helper_sha256": "524d2c7d375fe046974ab7ed28db40ccb78ae22eedf2b936c1299eb3f023dde2",
+  "model_inference_performed": false,
+  "bootstrap_resampling_performed": false,
+  "metric_absolute_tolerance": 1e-12,
+  "failures": [],
+  "class_names": [
+    "NORM",
+    "MI",
+    "STTC",
+    "CD",
+    "HYP"
+  ],
+  "checkpoint_sha256": "cfc590331ed3dd344bc4dfc0ca2c9e78609d99f51d526434d29788c793c2cfea",
+  "configuration_sha256": "ffad856c5fe9fba2877c75b135bdf26e58f8fdc0b7c83369ec866ba5acd9860e",
+  "pretraining_freeze_sha256": "8e7d9da2a983b417437483998db6cd2504df63c884b4928147d3f5989edaf35f",
+  "git_commit": null,
+  "pretraining_evidence_files_verified": 9,
+  "source_files_verified": 9,
+  "source_snapshots_verified": 9,
+  "cache": {
+    "encoded_images_hashed": 21388,
+    "full_cache": true,
+    "encoded_image_bytes_hashed": 1291819667,
+    "decoded_pixels_recomputed": false,
+    "metadata_hashes_verified": 3,
+    "partition_records": {
+      "train": 17084,
+      "validation": 2146,
+      "test": 2158
+    },
+    "unique_patients": 18617
+  },
+  "prediction_records_verified": {
+    "train": 17084,
+    "validation": 2146,
+    "test": 2158
+  },
+  "metrics_recomputed": true,
+  "confusions_and_per_label_metrics_verified": true,
+  "fixed_threshold_decisions_verified": true,
+  "patient_fold_disjointness_verified": true,
+  "selection": {
+    "best_epoch": 19,
+    "epochs_run": 20,
+    "selection_key": [
+      0.9015662289937213,
+      0.7592463750698754,
+      -0.32933416069072097
+    ],
+    "earliest_exact_tie_rule_verified": true
+  },
+  "checkpoint_replay": {
+    "split": "train",
+    "records": 32,
+    "maximum_absolute_probability_difference": 0.0,
+    "passed": true,
+    "test_replay_performed": false,
+    "checkpoint_sha256": "cfc590331ed3dd344bc4dfc0ca2c9e78609d99f51d526434d29788c793c2cfea",
+    "device": "cpu"
+  },
+  "test_inference_bookkeeping_verified": {
+    "status": "completed",
+    "inference_calls": 1
+  },
+  "uncertainty": {
+    "point_estimates_verified": true,
+    "parameters_and_bounds_verified": true,
+    "intervals_recomputed": false,
+    "resamples": 500,
+    "seed": 2024,
+    "n_unique_patients": 1877
+  },
+  "preservation": {
+    "protected_artifacts_hashed": 247,
+    "baseline_five_run_artifacts": 247,
+    "original_baseline_artifacts_hashed": 66,
+    "changed_artifacts": []
+  },
+  "experiment_log": {
+    "prior_log_rows": 5,
+    "appended_log_rows": 2,
+    "current_run_occurrences": 1,
+    "prior_byte_prefix_preserved": true,
+    "single_label_accuracy_fields_blank": true,
+    "current_log_sha256": "0d098f36c3e9441a64c43842f63878588a04f9180c40553f63989b7dfa26870d",
+    "completed_run_log_sha256": "78704bb0c9c011e441b9cc4ff918a24eb74fd9136599d97bc78c74316009e9df"
+  },
+  "run_artifact_sha256": {
+    "checkpoint_replay.json": "4c4e693b5e11f04292f69c247d47f8e447344921640fdbbbb5f91ad52765dca7",
+    "config.json": "ffad856c5fe9fba2877c75b135bdf26e58f8fdc0b7c83369ec866ba5acd9860e",
+    "development_split_used.csv": "51c74cff184111a2b82e0ceb9d5a493c2d981283228bd4a04b37e30039b8afbe",
+    "evaluation_progress.json": "8de94c473db00d1d531cce9d7dc801a34758ee274fca68d508e591161c36db13",
+    "preservation.json": "87db1ca2587c4afab5e4b0db801acc1a06736acc7eebf3c45d5739c7dabeef40",
+    "prior_experiment_log.csv": "9ca9838d9968a884e49ef5be6efaee6f9c73bcfe679b42cb0acbdace6a179cae",
+    "protected_artifacts.json": "5467aba2ba6d358b114e0ef88cb83925d59d98e53d567c8b93655b40f6293ddb",
+    "provenance.json": "4587b2d8d935e00280299284373d1fa2cf162d0a3a6546ddb27a1fa3407189dc",
+    "run.json": "feafeff8c2aaaebbd05ea4fa04931c1e49f5ff0f4aef54c166d3e92d924d5293",
+    "run_summary.csv": "3e515dc4d6e92e2474f1a4887b9d854d3cc002b2cd50490c8275fd78574cf223",
+    "selection_frozen.json": "b5e78f5addc2cd3f3b48e97827a1886c642be078a603be6e89e6d9422d5f9120",
+    "source_snapshot/src/baseline_preservation.py": "76d5b4ff9f383c3a6a5a3ab8bdae81ca83c36ae8ab11cc64d08cc3cbb474f673",
+    "source_snapshot/src/common.py": "0214c2ec6d8d49ac9536a6602397d83f111e5bd64ec63f5d99633dee8c9bd672",
+    "source_snapshot/src/evaluation/multilabel.py": "68e68fc5b4b00322b118d244d1efa15f164d16cd8a616fac02bb4b20207a3319",
+    "source_snapshot/src/evaluation/ptbxl_uncertainty.py": "ce4ea41e99e2498a1dfc8cc40a3de6ba838d6b27db544802b064ecde5091dd5c",
+    "source_snapshot/src/models/ptbxl_hybrid_vit.py": "5b3aa95eaa1932da3e0c4b41d8c8ce0f34c2e7d6548eeefd286926f496d70628",
+    "source_snapshot/src/ptbxl_learning_data.py": "0b8ce73d5d8e99accbd3c5132a3bc2ddc7ce2697fb25ffb864da1fe700ace082",
+    "source_snapshot/src/run_ptbxl_hybrid_vit.py": "d072c472d2eff431011cbdd96ddbdb08b2231c34eedb66e428ab7666993004d0",
+    "source_snapshot/src/training/__init__.py": "3aa7c9d6952246e6e5a088cf49281610e806074e7d9720a1114cb77cce2352a4",
+    "source_snapshot/src/training/ptbxl_hybrid_vit.py": "b86100be193601afb45dd5b56c8a79b20d4a0b5d50ab1dcf2c06b6d5544c5da0",
+    "test_confusion_matrices.png": "2e8cafe4d09146ce11f0aa5fee61436d3a2b61e1430f01bf30445e3994861713",
+    "test_inference_state.json": "7567432f248aa3584c182504b83b3221a04af4eb9d42172d19be63c6bee1e95f",
+    "test_metrics.json": "2da13b68d0f7292e82a17ede49965c241a33a77f7626374ea49ee8117a240b26",
+    "test_patient_bootstrap.json": "c5e3dcdf5b4bbcda161f5d8924eb209c9070074d750b0fda3311ed7866f1c7d8",
+    "test_per_label.csv": "bbf2d19b077b3e27a67d157ae648fd618e151974112125a324cd60436f9a5758",
+    "test_predictions.csv": "b9a886186536dc9aea86630f81998e10c57851aa00c2a25369b23e2ed3a94fa5",
+    "train_confusion_matrices.png": "808e2a5eeead14ce710e82ff08f0eaf2e9e311d4f7f6da2f9bba5306f14a0585",
+    "train_metrics.json": "e67c46e2e4472408f1445739e1cb3227e4a6fba07a82c767b456614b42b0e772",
+    "train_per_label.csv": "7548f3dc3b1979e1d8112c4bb0a912874d24829c2db853a84571d68c88c5c780",
+    "train_predictions.csv": "742b9e5878a3ad1454800f76e9e96d44983382e8d11d15dbfb0bd030cef8450d",
+    "training_metadata.json": "d25fad8fbf7381414ee263cf0c404ce222f8be1f60e9019a598d4cdf4294ff1e",
+    "validation_confusion_matrices.png": "cf34c2ec08cdaa3ca6746793ad810ab8b5c202d6b717e1b019bf3102166c2ef8",
+    "validation_metrics.json": "9d035b11571fe029d45b649b64f474800902616a962f38d8868d8e248bf38723",
+    "validation_per_label.csv": "0edd5dc0245f353823b94203c6942228b2e858e3245fef84cdac6a934d72cb87",
+    "validation_predictions.csv": "e2e96ba6d2cb4424dd65120a08285d5e6b122041a17ef7a2ab68076e5d3e123c"
+  },
+  "scope": "Saved-artifact consistency and current file integrity. No model inference or new clinical validation. Inference counts are checked against saved bookkeeping; unrecorded activity cannot be ruled out. Bootstrap intervals have structural/point-estimate checks and are not numerically recomputed. Cache manifest integrity is always checked; encoded PNG bytes are hashed only when full_cache is true. Pixels are not decoded again."
+}

@@ -1,0 +1,28 @@
+{
+  "reviewed_utc": "2026-11-01T11:34:54.117558+00:00",
+  "reviewer": "resume_historical_notes independent agent",
+  "pretraining_freeze_sha256": "8e7d9da2a983b417437483998db6cd2504df63c884b4928147d3f5989edaf35f",
+  "status": "no_material_issue_found",
+  "scope": [
+    "Model and complete trainer/runner",
+    "Configuration and frozen protocol",
+    "Shared cache loader and multilabel evaluator",
+    "Model and runner synthetic test coverage",
+    "All 19 source/configuration/evidence hashes unchanged"
+  ],
+  "confirmed": [
+    "Training-only normalization and fold/patient checks",
+    "Selected validation parity and same-device training replay precede one test pass",
+    "Independent sigmoid labels and deterministic selection ties",
+    "Synthetic probe reseeding and independent Transformer layer initialization",
+    "23881 parameters and image-feature interpretation"
+  ],
+  "limits": [
+    "Single seed",
+    "Previously observed test cohort; exploratory comparison",
+    "Head capacity and dropout differences",
+    "Clean rendered images; no independent scan validation"
+  ],
+  "files_modified": false,
+  "model_inference_performed": false
+}

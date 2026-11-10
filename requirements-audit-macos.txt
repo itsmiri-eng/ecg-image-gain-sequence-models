@@ -1,0 +1,4 @@
+# Optional only for regenerating local printed-ID OCR. Training uses the saved split.
+-r requirements.txt
+pyobjc-core==10.1; sys_platform == 'darwin'
+pyobjc-framework-Cocoa==10.1; sys_platform == 'darwin'

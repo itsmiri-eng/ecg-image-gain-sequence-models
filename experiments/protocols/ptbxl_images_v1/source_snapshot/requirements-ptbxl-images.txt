@@ -1,0 +1,6 @@
+# Additional direct dependencies for deterministic PTB-XL page generation.
+# Use the existing verified Python 3.12 baseline environment.
+-r requirements.txt
+wfdb==4.3.1
+opencv-python==4.12.0.88
+pandas==2.2.3

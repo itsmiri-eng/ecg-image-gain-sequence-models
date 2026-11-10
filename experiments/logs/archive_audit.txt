@@ -1,0 +1,1 @@
+{'archive': 'mendely images.zip', 'archive_sha256': '016ab954e9b1392dcea1e2b5638752593ec30feda07281a00b5b8f2e13618c50', 'archive_image_entries': 928, 'local_source_images': 928, 'exact_byte_matches': 928, 'archive_images_missing_locally': [], 'byte_mismatches': [], 'local_images_not_in_archive': [], 'notebook_checkpoints_included': False, 'raw_files_changed': False}

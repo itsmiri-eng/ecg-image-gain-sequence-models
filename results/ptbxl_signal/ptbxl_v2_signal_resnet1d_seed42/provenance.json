@@ -1,0 +1,72 @@
+{
+  "started_utc": "2026-11-02T15:59:24.217444+00:00",
+  "environment": {
+    "python": "3.12.10 (tags/v3.12.10:0cc8128, Apr  8 2025, 12:21:36) [MSC v.1943 64 bit (AMD64)]",
+    "executable": "C:\\Users\\miria\\ecg swiss\\.venv\\Scripts\\python.exe",
+    "platform": "Windows-11-10.0.26300-SP0",
+    "machine": "AMD64",
+    "packages": {
+      "numpy": "2.2.6",
+      "scipy": "1.17.1",
+      "scikit-learn": "1.9.0",
+      "torch": "2.9.1+cu128",
+      "Pillow": "10.3.0",
+      "matplotlib": "3.10.0",
+      "joblib": "1.5.3"
+    }
+  },
+  "configuration_sha256": "11b1f0f10b089a842dc1feb30c7c186c8110d58ac1180fad144d9370c0ff8386",
+  "source_sha256": {
+    "src/run_ptbxl_signal.py": "49dec3f8b26b43ec03a9f339d78e170a8166928d1b802f587b4310e6f0be0cb5",
+    "src/ptbxl_signals.py": "5c3a708911f26bb6bc60bd36f8aabfb09216ce0297c0ebed6081c4683c097718",
+    "src/models/ptbxl_resnet1d.py": "9b3126e4c9aa62b7be04e40b4e84ee7dc499a1e1fac5768acf2f6123ebbb5da5",
+    "src/training/ptbxl_trainer.py": "8b0c0ffd9f6a50e98c7839383941a12fce8fb0c54f8c89d601a760fb725a7779",
+    "src/run_ptbxl_experiment.py": "3b9ba808387d3cd0c44d0cdd43920f3037525339c7c5364060723b4871fd2d1a",
+    "src/evaluation/multilabel.py": "68e68fc5b4b00322b118d244d1efa15f164d16cd8a616fac02bb4b20207a3319",
+    "src/evaluation/ptbxl_uncertainty.py": "ce4ea41e99e2498a1dfc8cc40a3de6ba838d6b27db544802b064ecde5091dd5c",
+    "src/common.py": "0214c2ec6d8d49ac9536a6602397d83f111e5bd64ec63f5d99633dee8c9bd672",
+    "src/baseline_preservation.py": "73b3779df26355ec31ca51d96bfb1f5666ce4aadc4e65cbd60b0515c644f041a"
+  },
+  "signal_cache_metadata_sha256": "6a4d2ef19b8d24d4cec774b24e9c43f530b5f0e51b3f612ed04bd52fc063e4c6",
+  "normalization": {
+    "fit_partition": "train",
+    "training_records": 17084,
+    "mean": [
+      -0.001746811862099866,
+      -0.0015212931156082631,
+      0.0002254560492237521,
+      0.0016165512066289825,
+      -0.0009319163827935465,
+      -0.0006254733210469944,
+      0.00017762921782479306,
+      -0.0009517785193273021,
+      -0.001565068984118013,
+      -0.0013563100951855679,
+      -0.0007997736356735578,
+      -0.002424251412760938
+    ],
+    "std": [
+      0.16001027119441324,
+      0.15922999399821658,
+      0.15997245099221843,
+      0.13814794770134003,
+      0.13876729609263308,
+      0.13797789042126438,
+      0.23434960580622388,
+      0.33421613955574975,
+      0.32846893083924394,
+      0.29276387719275043,
+      0.2720694535913828,
+      0.2809676254721226
+    ]
+  },
+  "protected_prior_files": 836,
+  "test_policy": "One test inference per run after the selected checkpoint is frozen and reloaded. Fold 10 was already observed for earlier PTB-XL models, so the comparison is exploratory; no test-based tuning.",
+  "runtime_registration": {
+    "trainer.MODELS['resnet1d_wang']": "src.models.ptbxl_resnet1d.ResNet1dWang",
+    "trainer.INPUT_SHAPE": [
+      12,
+      1000
+    ]
+  }
+}

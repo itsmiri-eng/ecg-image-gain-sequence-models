@@ -1,0 +1,2496 @@
+{
+  "created_utc": "2026-11-01T11:12:35.739730+00:00",
+  "scope": "Saved artifacts only; no historical model inference, training, or bootstrap resampling",
+  "audit_script_sha256": "9d4e22cfc78c0381925166ec8a1e93cc16886753f06dd3c8ed701b54633db7db",
+  "failures": [],
+  "runs": {
+    "lda_v1_seed42": {
+      "status": "completed",
+      "output_directory": "results/lda/lda_v1_seed42",
+      "run_sha256": "5fab70855bcab6793b3854f51a3a3b7310b255a3a09a1905d4ba607487720af9",
+      "model_directory": "models/lda/lda_v1_seed42",
+      "test_metrics": {
+        "n_samples": 98,
+        "accuracy": 0.6224489795918368,
+        "balanced_accuracy": 0.6031758448060075,
+        "macro_f1": 0.5637426900584795,
+        "weighted_f1": 0.6423499224251104,
+        "log_loss": 0.9064004284091609,
+        "per_class": {
+          "Normal": {
+            "precision": 0.65625,
+            "recall": 0.75,
+            "f1-score": 0.7,
+            "support": 28.0
+          },
+          "MI": {
+            "precision": 0.3333333333333333,
+            "recall": 0.5,
+            "f1-score": 0.4,
+            "support": 6.0
+          },
+          "Abnormal": {
+            "precision": 0.9310344827586207,
+            "recall": 0.574468085106383,
+            "f1-score": 0.7105263157894737,
+            "support": 47.0
+          },
+          "History_MI": {
+            "precision": 0.35714285714285715,
+            "recall": 0.5882352941176471,
+            "f1-score": 0.4444444444444444,
+            "support": 17.0
+          }
+        },
+        "confusion_matrix": [
+          [
+            21,
+            1,
+            0,
+            6
+          ],
+          [
+            0,
+            3,
+            1,
+            2
+          ],
+          [
+            5,
+            5,
+            27,
+            10
+          ],
+          [
+            6,
+            0,
+            1,
+            10
+          ]
+        ],
+        "confusion_matrix_axes": "rows=true, columns=predicted; class_names order",
+        "class_names": [
+          "Normal",
+          "MI",
+          "Abnormal",
+          "History_MI"
+        ],
+        "zero_division_policy": "undefined precision/recall/F1 reported as zero",
+        "roc_auc_ovr_macro": 0.8770849089798665,
+        "roc_auc_ovr_weighted": 0.8856175987763406,
+        "roc_auc_per_class": {
+          "Normal": 0.8887755102040816,
+          "MI": 0.8931159420289856,
+          "Abnormal": 0.9065498539841469,
+          "History_MI": 0.8198983297022513
+        },
+        "roc_auc_note": "One-vs-rest probability ranking, not diagnostic validation"
+      },
+      "validation_metrics": {
+        "n_samples": 98,
+        "accuracy": 0.6224489795918368,
+        "balanced_accuracy": 0.5447717317811682,
+        "macro_f1": 0.5295842711505362,
+        "weighted_f1": 0.6370440722297127,
+        "log_loss": 0.8466451502374435,
+        "per_class": {
+          "Normal": {
+            "precision": 0.5806451612903226,
+            "recall": 0.6206896551724138,
+            "f1-score": 0.6,
+            "support": 29.0
+          },
+          "MI": {
+            "precision": 0.25,
+            "recall": 0.3333333333333333,
+            "f1-score": 0.2857142857142857,
+            "support": 6.0
+          },
+          "Abnormal": {
+            "precision": 0.8648648648648649,
+            "recall": 0.6956521739130435,
+            "f1-score": 0.7710843373493976,
+            "support": 46.0
+          },
+          "History_MI": {
+            "precision": 0.4090909090909091,
+            "recall": 0.5294117647058824,
+            "f1-score": 0.46153846153846156,
+            "support": 17.0
+          }
+        },
+        "confusion_matrix": [
+          [
+            18,
+            2,
+            1,
+            8
+          ],
+          [
+            4,
+            2,
+            0,
+            0
+          ],
+          [
+            5,
+            4,
+            32,
+            5
+          ],
+          [
+            4,
+            0,
+            4,
+            9
+          ]
+        ],
+        "confusion_matrix_axes": "rows=true, columns=predicted; class_names order",
+        "class_names": [
+          "Normal",
+          "MI",
+          "Abnormal",
+          "History_MI"
+        ],
+        "zero_division_policy": "undefined precision/recall/F1 reported as zero",
+        "roc_auc_ovr_macro": 0.8542105397988119,
+        "roc_auc_ovr_weighted": 0.8884375439758462,
+        "roc_auc_per_class": {
+          "Normal": 0.8915542228885558,
+          "MI": 0.7572463768115942,
+          "Abnormal": 0.9176421404682273,
+          "History_MI": 0.85039941902687
+        },
+        "roc_auc_note": "One-vs-rest probability ranking, not diagnostic validation"
+      },
+      "train_metrics": {
+        "n_samples": 295,
+        "accuracy": 0.7220338983050848,
+        "balanced_accuracy": 0.7441706169647346,
+        "macro_f1": 0.6740188525333092,
+        "weighted_f1": 0.7355253192656237,
+        "log_loss": 0.7033167368467113,
+        "per_class": {
+          "Normal": {
+            "precision": 0.7176470588235294,
+            "recall": 0.7176470588235294,
+            "f1-score": 0.7176470588235294,
+            "support": 85.0
+          },
+          "MI": {
+            "precision": 0.38235294117647056,
+            "recall": 0.7222222222222222,
+            "f1-score": 0.5,
+            "support": 18.0
+          },
+          "Abnormal": {
+            "precision": 0.9791666666666666,
+            "recall": 0.6714285714285714,
+            "f1-score": 0.7966101694915254,
+            "support": 140.0
+          },
+          "History_MI": {
+            "precision": 0.5625,
+            "recall": 0.8653846153846154,
+            "f1-score": 0.6818181818181818,
+            "support": 52.0
+          }
+        },
+        "confusion_matrix": [
+          [
+            61,
+            10,
+            0,
+            14
+          ],
+          [
+            5,
+            13,
+            0,
+            0
+          ],
+          [
+            15,
+            10,
+            94,
+            21
+          ],
+          [
+            4,
+            1,
+            2,
+            45
+          ]
+        ],
+        "confusion_matrix_axes": "rows=true, columns=predicted; class_names order",
+        "class_names": [
+          "Normal",
+          "MI",
+          "Abnormal",
+          "History_MI"
+        ],
+        "zero_division_policy": "undefined precision/recall/F1 reported as zero",
+        "roc_auc_ovr_macro": 0.9370952044925831,
+        "roc_auc_ovr_weighted": 0.9405593860511939,
+        "roc_auc_per_class": {
+          "Normal": 0.9165826330532213,
+          "MI": 0.9466506217408746,
+          "Abnormal": 0.9600921658986175,
+          "History_MI": 0.9250553972776194
+        },
+        "roc_auc_note": "One-vs-rest probability ranking, not diagnostic validation"
+      },
+      "parameters": null,
+      "epochs_run": null,
+      "best_epoch": null,
+      "selection_rule": null,
+      "training_seconds": 0.2327555419979035,
+      "training_module_seconds": null,
+      "runner_elapsed_seconds": 1.2148089170004823,
+      "utc_wall_span_seconds": 1.214766,
+      "test_inference_calls_recorded": null,
+      "test_policy": "One final test evaluation after all model settings/weights were frozen",
+      "checkpoint_path": "models/lda/lda_v1_seed42/pipeline.joblib",
+      "failure_or_unfinished_artifacts": [],
+      "model_artifact_inventory": {
+        "pipeline.joblib": {
+          "bytes": 4337317,
+          "sha256": "72820cd3989cca0b24fbf1abf020ab3cb2a523ab50da2ed518eb48ec9aa10ecf"
+        }
+      },
+      "fresh_verification": {
+        "partitions": {
+          "train": {
+            "rows": 295,
+            "all_saved_metrics_recomputed": true,
+            "identities_and_labels_match": true
+          },
+          "validation": {
+            "rows": 98,
+            "all_saved_metrics_recomputed": true,
+            "identities_and_labels_match": true
+          },
+          "test": {
+            "rows": 98,
+            "all_saved_metrics_recomputed": true,
+            "identities_and_labels_match": true
+          }
+        },
+        "provenance_hashes": {
+          "source_files": 18,
+          "split_and_cache": true
+        }
+      }
+    },
+    "cnn_v1_seed42": {
+      "status": "completed",
+      "output_directory": "results/cnn/cnn_v1_seed42",
+      "run_sha256": "6259be756184df70d34152be8ed2ae9a5cf02ab0a53cb87990710943e2866e80",
+      "model_directory": "models/cnn/cnn_v1_seed42",
+      "test_metrics": {
+        "n_samples": 98,
+        "accuracy": 0.7551020408163265,
+        "balanced_accuracy": 0.5685753024614102,
+        "macro_f1": 0.5621212121212121,
+        "weighted_f1": 0.7310420531849102,
+        "log_loss": 0.8304919999143422,
+        "per_class": {
+          "Normal": {
+            "precision": 0.5957446808510638,
+            "recall": 1.0,
+            "f1-score": 0.7466666666666667,
+            "support": 28.0
+          },
+          "MI": {
+            "precision": 0.5,
+            "recall": 0.16666666666666666,
+            "f1-score": 0.25,
+            "support": 6.0
+          },
+          "Abnormal": {
+            "precision": 1.0,
+            "recall": 0.8723404255319149,
+            "f1-score": 0.9318181818181818,
+            "support": 47.0
+          },
+          "History_MI": {
+            "precision": 0.5,
+            "recall": 0.23529411764705882,
+            "f1-score": 0.32,
+            "support": 17.0
+          }
+        },
+        "confusion_matrix": [
+          [
+            28,
+            0,
+            0,
+            0
+          ],
+          [
+            4,
+            1,
+            0,
+            1
+          ],
+          [
+            2,
+            1,
+            41,
+            3
+          ],
+          [
+            13,
+            0,
+            0,
+            4
+          ]
+        ],
+        "confusion_matrix_axes": "rows=true, columns=predicted; class_names order",
+        "class_names": [
+          "Normal",
+          "MI",
+          "Abnormal",
+          "History_MI"
+        ],
+        "zero_division_policy": "undefined precision/recall/F1 reported as zero",
+        "roc_auc_ovr_macro": 0.9007739939433477,
+        "roc_auc_ovr_weighted": 0.9348897875230149,
+        "roc_auc_per_class": {
+          "Normal": 0.9316326530612244,
+          "MI": 0.855072463768116,
+          "Abnormal": 0.9841468502294535,
+          "History_MI": 0.832244008714597
+        },
+        "roc_auc_note": "One-vs-rest probability ranking, not diagnostic validation"
+      },
+      "validation_metrics": {
+        "n_samples": 98,
+        "accuracy": 0.7142857142857143,
+        "balanced_accuracy": 0.5090579710144928,
+        "macro_f1": 0.46072463768115945,
+        "weighted_f1": 0.649251700680272,
+        "log_loss": 0.8268809717326059,
+        "per_class": {
+          "Normal": {
+            "precision": 0.6304347826086957,
+            "recall": 1.0,
+            "f1-score": 0.7733333333333333,
+            "support": 29.0
+          },
+          "MI": {
+            "precision": 0.25,
+            "recall": 0.16666666666666666,
+            "f1-score": 0.2,
+            "support": 6.0
+          },
+          "Abnormal": {
+            "precision": 0.8695652173913043,
+            "recall": 0.8695652173913043,
+            "f1-score": 0.8695652173913043,
+            "support": 46.0
+          },
+          "History_MI": {
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1-score": 0.0,
+            "support": 17.0
+          }
+        },
+        "confusion_matrix": [
+          [
+            29,
+            0,
+            0,
+            0
+          ],
+          [
+            3,
+            1,
+            2,
+            0
+          ],
+          [
+            2,
+            2,
+            40,
+            2
+          ],
+          [
+            12,
+            1,
+            4,
+            0
+          ]
+        ],
+        "confusion_matrix_axes": "rows=true, columns=predicted; class_names order",
+        "class_names": [
+          "Normal",
+          "MI",
+          "Abnormal",
+          "History_MI"
+        ],
+        "zero_division_policy": "undefined precision/recall/F1 reported as zero",
+        "roc_auc_ovr_macro": 0.8175913902232728,
+        "roc_auc_ovr_weighted": 0.8961686557442252,
+        "roc_auc_per_class": {
+          "Normal": 0.9475262368815591,
+          "MI": 0.6376811594202898,
+          "Abnormal": 0.9611204013377926,
+          "History_MI": 0.7240377632534496
+        },
+        "roc_auc_note": "One-vs-rest probability ranking, not diagnostic validation"
+      },
+      "train_metrics": {
+        "n_samples": 295,
+        "accuracy": 0.7220338983050848,
+        "balanced_accuracy": 0.4883636788048552,
+        "macro_f1": 0.4360309159866682,
+        "weighted_f1": 0.661236600507637,
+        "log_loss": 0.7315347956788651,
+        "per_class": {
+          "Normal": {
+            "precision": 0.5886524822695035,
+            "recall": 0.9764705882352941,
+            "f1-score": 0.7345132743362832,
+            "support": 85.0
+          },
+          "MI": {
+            "precision": 0.1,
+            "recall": 0.05555555555555555,
+            "f1-score": 0.07142857142857142,
+            "support": 18.0
+          },
+          "Abnormal": {
+            "precision": 0.9555555555555556,
+            "recall": 0.9214285714285714,
+            "f1-score": 0.9381818181818182,
+            "support": 140.0
+          },
+          "History_MI": {
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1-score": 0.0,
+            "support": 52.0
+          }
+        },
+        "confusion_matrix": [
+          [
+            83,
+            0,
+            0,
+            2
+          ],
+          [
+            11,
+            1,
+            1,
+            5
+          ],
+          [
+            2,
+            7,
+            129,
+            2
+          ],
+          [
+            45,
+            2,
+            5,
+            0
+          ]
+        ],
+        "confusion_matrix_axes": "rows=true, columns=predicted; class_names order",
+        "class_names": [
+          "Normal",
+          "MI",
+          "Abnormal",
+          "History_MI"
+        ],
+        "zero_division_policy": "undefined precision/recall/F1 reported as zero",
+        "roc_auc_ovr_macro": 0.9010127926666112,
+        "roc_auc_ovr_weighted": 0.9426297450775217,
+        "roc_auc_per_class": {
+          "Normal": 0.9568627450980391,
+          "MI": 0.8090653830726032,
+          "Abnormal": 0.9840552995391706,
+          "History_MI": 0.8540677429566318
+        },
+        "roc_auc_note": "One-vs-rest probability ranking, not diagnostic validation"
+      },
+      "parameters": 40212,
+      "epochs_run": 30,
+      "best_epoch": 25,
+      "selection_rule": "strict minimum validation weighted cross-entropy",
+      "training_seconds": 43.7021351670046,
+      "training_module_seconds": 43.98137745800341,
+      "runner_elapsed_seconds": 46.471703916999104,
+      "utc_wall_span_seconds": 46.470017,
+      "test_inference_calls_recorded": null,
+      "test_policy": "One final test evaluation after all model settings/weights were frozen",
+      "checkpoint_path": "models/cnn/cnn_v1_seed42/best.pt",
+      "failure_or_unfinished_artifacts": [],
+      "model_artifact_inventory": {
+        "architecture.txt": {
+          "bytes": 1373,
+          "sha256": "8a2c83e581c701c689ccb9058c6c9ee11c951ec63889d64449fe640a655ef1fe"
+        },
+        "best.pt": {
+          "bytes": 166351,
+          "sha256": "9944e25ed927c1e763cd9448d6d4a51388ef6d3cd4125f7de694e4540e012a48"
+        },
+        "history.csv": {
+          "bytes": 6467,
+          "sha256": "97f2ace4084bd5ac4328e640222c4a2676edd288bd72d55800e7c52872007462"
+        },
+        "metadata.json": {
+          "bytes": 2604,
+          "sha256": "19df15de8a7a79c04461c82f98cdf1c51325787df45c451ddddacb1eee989c03"
+        },
+        "training_curve.png": {
+          "bytes": 107735,
+          "sha256": "5a8de199621e269133a42c847d6c68eba1476dfa1a85fa9b7aded9cd000d2571"
+        }
+      },
+      "fresh_verification": {
+        "partitions": {
+          "train": {
+            "rows": 295,
+            "all_saved_metrics_recomputed": true,
+            "identities_and_labels_match": true
+          },
+          "validation": {
+            "rows": 98,
+            "all_saved_metrics_recomputed": true,
+            "identities_and_labels_match": true
+          },
+          "test": {
+            "rows": 98,
+            "all_saved_metrics_recomputed": true,
+            "identities_and_labels_match": true
+          }
+        },
+        "provenance_hashes": {
+          "source_files": 18,
+          "split_and_cache": true
+        }
+      }
+    },
+    "cnn_lstm_image_v1_seed42": {
+      "status": "completed",
+      "output_directory": "results/cnn_lstm/cnn_lstm_image_v1_seed42",
+      "run_sha256": "6d0125a5068233c3c2f22892c20a3c3f3ee8c09459e518036f822740b87809e9",
+      "model_directory": "models/cnn_lstm/cnn_lstm_image_v1_seed42",
+      "test_metrics": {
+        "n_samples": 98,
+        "accuracy": 0.7142857142857143,
+        "balanced_accuracy": 0.6315483640264616,
+        "macro_f1": 0.6020198440822112,
+        "weighted_f1": 0.7168399890076513,
+        "log_loss": 0.8079954168271148,
+        "per_class": {
+          "Normal": {
+            "precision": 0.65,
+            "recall": 0.9285714285714286,
+            "f1-score": 0.7647058823529411,
+            "support": 28.0
+          },
+          "MI": {
+            "precision": 0.3333333333333333,
+            "recall": 0.5,
+            "f1-score": 0.4,
+            "support": 6.0
+          },
+          "Abnormal": {
+            "precision": 0.9722222222222222,
+            "recall": 0.7446808510638298,
+            "f1-score": 0.8433734939759037,
+            "support": 47.0
+          },
+          "History_MI": {
+            "precision": 0.46153846153846156,
+            "recall": 0.35294117647058826,
+            "f1-score": 0.4,
+            "support": 17.0
+          }
+        },
+        "confusion_matrix": [
+          [
+            26,
+            0,
+            0,
+            2
+          ],
+          [
+            0,
+            3,
+            1,
+            2
+          ],
+          [
+            4,
+            5,
+            35,
+            3
+          ],
+          [
+            10,
+            1,
+            0,
+            6
+          ]
+        ],
+        "confusion_matrix_axes": "rows=true, columns=predicted; class_names order",
+        "class_names": [
+          "Normal",
+          "MI",
+          "Abnormal",
+          "History_MI"
+        ],
+        "zero_division_policy": "undefined precision/recall/F1 reported as zero",
+        "roc_auc_ovr_macro": 0.8943665785600223,
+        "roc_auc_ovr_weighted": 0.922873626101004,
+        "roc_auc_per_class": {
+          "Normal": 0.925,
+          "MI": 0.8442028985507246,
+          "Abnormal": 0.9578639966624948,
+          "History_MI": 0.85039941902687
+        },
+        "roc_auc_note": "One-vs-rest probability ranking, not diagnostic validation"
+      },
+      "validation_metrics": {
+        "n_samples": 98,
+        "accuracy": 0.7346938775510204,
+        "balanced_accuracy": 0.6114993973601434,
+        "macro_f1": 0.6001004753959426,
+        "weighted_f1": 0.7355167535789144,
+        "log_loss": 0.797350572160874,
+        "per_class": {
+          "Normal": {
+            "precision": 0.7428571428571429,
+            "recall": 0.896551724137931,
+            "f1-score": 0.8125,
+            "support": 29.0
+          },
+          "MI": {
+            "precision": 0.25,
+            "recall": 0.3333333333333333,
+            "f1-score": 0.2857142857142857,
+            "support": 6.0
+          },
+          "Abnormal": {
+            "precision": 0.9024390243902439,
+            "recall": 0.8043478260869565,
+            "f1-score": 0.8505747126436781,
+            "support": 46.0
+          },
+          "History_MI": {
+            "precision": 0.5,
+            "recall": 0.4117647058823529,
+            "f1-score": 0.45161290322580644,
+            "support": 17.0
+          }
+        },
+        "confusion_matrix": [
+          [
+            26,
+            0,
+            1,
+            2
+          ],
+          [
+            2,
+            2,
+            1,
+            1
+          ],
+          [
+            3,
+            2,
+            37,
+            4
+          ],
+          [
+            4,
+            4,
+            2,
+            7
+          ]
+        ],
+        "confusion_matrix_axes": "rows=true, columns=predicted; class_names order",
+        "class_names": [
+          "Normal",
+          "MI",
+          "Abnormal",
+          "History_MI"
+        ],
+        "zero_division_policy": "undefined precision/recall/F1 reported as zero",
+        "roc_auc_ovr_macro": 0.8302908547611564,
+        "roc_auc_ovr_weighted": 0.9087197309246998,
+        "roc_auc_per_class": {
+          "Normal": 0.9560219890054973,
+          "MI": 0.5706521739130435,
+          "Abnormal": 0.9448160535117057,
+          "History_MI": 0.8496732026143792
+        },
+        "roc_auc_note": "One-vs-rest probability ranking, not diagnostic validation"
+      },
+      "train_metrics": {
+        "n_samples": 295,
+        "accuracy": 0.7627118644067796,
+        "balanced_accuracy": 0.6223470157293687,
+        "macro_f1": 0.6177062682191754,
+        "weighted_f1": 0.7596612360027669,
+        "log_loss": 0.712577046743623,
+        "per_class": {
+          "Normal": {
+            "precision": 0.675,
+            "recall": 0.9529411764705882,
+            "f1-score": 0.7902439024390244,
+            "support": 85.0
+          },
+          "MI": {
+            "precision": 0.2,
+            "recall": 0.16666666666666666,
+            "f1-score": 0.18181818181818182,
+            "support": 18.0
+          },
+          "Abnormal": {
+            "precision": 0.940677966101695,
+            "recall": 0.7928571428571428,
+            "f1-score": 0.8604651162790697,
+            "support": 140.0
+          },
+          "History_MI": {
+            "precision": 0.7142857142857143,
+            "recall": 0.5769230769230769,
+            "f1-score": 0.6382978723404256,
+            "support": 52.0
+          }
+        },
+        "confusion_matrix": [
+          [
+            81,
+            0,
+            0,
+            4
+          ],
+          [
+            6,
+            3,
+            5,
+            4
+          ],
+          [
+            13,
+            12,
+            111,
+            4
+          ],
+          [
+            20,
+            0,
+            2,
+            30
+          ]
+        ],
+        "confusion_matrix_axes": "rows=true, columns=predicted; class_names order",
+        "class_names": [
+          "Normal",
+          "MI",
+          "Abnormal",
+          "History_MI"
+        ],
+        "zero_division_policy": "undefined precision/recall/F1 reported as zero",
+        "roc_auc_ovr_macro": 0.8827383324723029,
+        "roc_auc_ovr_weighted": 0.9373458860424858,
+        "roc_auc_per_class": {
+          "Normal": 0.9517086834733892,
+          "MI": 0.698154833533895,
+          "Abnormal": 0.9686175115207373,
+          "History_MI": 0.9124723013611903
+        },
+        "roc_auc_note": "One-vs-rest probability ranking, not diagnostic validation"
+      },
+      "parameters": 44532,
+      "epochs_run": 30,
+      "best_epoch": 27,
+      "selection_rule": "Maximize validation macro F1, then balanced accuracy, then minimize weighted loss; earliest exact tie",
+      "training_seconds": 48.18890991700755,
+      "training_module_seconds": 48.49856804200681,
+      "runner_elapsed_seconds": 51.05123441699834,
+      "utc_wall_span_seconds": 51.049584,
+      "test_inference_calls_recorded": 1,
+      "test_policy": "Previously observed test set. One final inference after weights, configuration and selection are frozen. Exploratory comparison; no test tuning or new confirmatory claim.",
+      "checkpoint_path": "models/cnn_lstm/cnn_lstm_image_v1_seed42/best.pt",
+      "failure_or_unfinished_artifacts": [],
+      "model_artifact_inventory": {
+        "architecture.txt": {
+          "bytes": 1447,
+          "sha256": "7b4ceb97cb0f88e57a01af7cbc04aa46a97b0479d6c16742da4b90a530f375ef"
+        },
+        "best.pt": {
+          "bytes": 184651,
+          "sha256": "38e5c3ba28b5d1447fd5814f2c3e9db1e349d6098c0c5bfd1cd4932aad7b4452"
+        },
+        "config.json": {
+          "bytes": 297,
+          "sha256": "eae6431dae39fe6364017b90f780561483c2e6ac4bd916f391ebf1d4ede02c36"
+        },
+        "history.csv": {
+          "bytes": 7364,
+          "sha256": "c27e796eaa9b994bd38c4b2b0eb85c09ea8f7307fe9c2dbd3156813c175eb8d1"
+        },
+        "metadata.json": {
+          "bytes": 3123,
+          "sha256": "bf039da4c214f04b0cc23970770df08761fb1380b5bd5b296ea6fc14c8e83889"
+        },
+        "training_curve.png": {
+          "bytes": 135659,
+          "sha256": "a08a43b75fc5f4d0cede0269de8c245604be043b89d3080b95697af519dc5c1b"
+        }
+      },
+      "fresh_verification": {
+        "partitions": {
+          "train": {
+            "rows": 295,
+            "all_saved_metrics_recomputed": true,
+            "identities_and_labels_match": true
+          },
+          "validation": {
+            "rows": 98,
+            "all_saved_metrics_recomputed": true,
+            "identities_and_labels_match": true
+          },
+          "test": {
+            "rows": 98,
+            "all_saved_metrics_recomputed": true,
+            "identities_and_labels_match": true
+          }
+        },
+        "provenance_hashes": {
+          "source_files": 26,
+          "split_and_cache": true
+        }
+      }
+    },
+    "ptbxl_cnn_lstm_image_v1_seed42": {
+      "status": "completed",
+      "output_directory": "results/ptbxl_cnn_lstm/ptbxl_cnn_lstm_image_v1_seed42",
+      "run_sha256": "c68695b9c7a732762795dfd42b40b4612cd6082a4ae9387c3c89acf798c2a5ac",
+      "model_directory": "models/ptbxl_cnn_lstm/ptbxl_cnn_lstm_image_v1_seed42",
+      "test_metrics": {
+        "n_samples": 2158,
+        "n_labels": 5,
+        "class_names": [
+          "NORM",
+          "MI",
+          "STTC",
+          "CD",
+          "HYP"
+        ],
+        "threshold": 0.5,
+        "decision_rule": "Independent probability >= 0.5 for each label; no row-sum normalization",
+        "subset_accuracy": 0.525949953660797,
+        "label_accuracy": 0.8494902687673772,
+        "hamming_loss": 0.1505097312326228,
+        "macro_f1": 0.613099638947784,
+        "micro_f1": 0.6779055930186434,
+        "weighted_f1": 0.6603144754630053,
+        "macro_precision": 0.7500648489584038,
+        "macro_recall": 0.5394796582695714,
+        "macro_roc_auc": 0.8698012215798719,
+        "micro_roc_auc": 0.8903161051724249,
+        "macro_average_precision": 0.7035031685056687,
+        "micro_average_precision": 0.7630963089464835,
+        "macro_roc_auc_defined_labels": 0.8698012215798719,
+        "macro_average_precision_defined_labels": 0.7035031685056687,
+        "roc_auc_defined_labels": [
+          "NORM",
+          "MI",
+          "STTC",
+          "CD",
+          "HYP"
+        ],
+        "average_precision_defined_labels": [
+          "NORM",
+          "MI",
+          "STTC",
+          "CD",
+          "HYP"
+        ],
+        "binary_cross_entropy": 0.35277482570051827,
+        "bce_probability_clip_epsilon": 2.220446049250313e-16,
+        "per_label": {
+          "NORM": {
+            "precision": 0.7651858567543064,
+            "recall": 0.8764278296988577,
+            "f1": 0.8170377541142304,
+            "specificity": 0.7832635983263598,
+            "balanced_accuracy": 0.8298457140126088,
+            "tp": 844,
+            "fp": 259,
+            "tn": 936,
+            "fn": 119,
+            "support": 963,
+            "negative_support": 1195,
+            "predicted_positive": 1103,
+            "roc_auc": 0.9127404337039497,
+            "average_precision": 0.8769194001911962
+          },
+          "MI": {
+            "precision": 0.7,
+            "recall": 0.43272727272727274,
+            "f1": 0.5348314606741573,
+            "specificity": 0.9365671641791045,
+            "balanced_accuracy": 0.6846472184531887,
+            "tp": 238,
+            "fp": 102,
+            "tn": 1506,
+            "fn": 312,
+            "support": 550,
+            "negative_support": 1608,
+            "predicted_positive": 340,
+            "roc_auc": 0.8289258254183628,
+            "average_precision": 0.6409844880486946
+          },
+          "STTC": {
+            "precision": 0.7806788511749347,
+            "recall": 0.5738963531669866,
+            "f1": 0.661504424778761,
+            "specificity": 0.9486866218692731,
+            "balanced_accuracy": 0.7612914875181298,
+            "tp": 299,
+            "fp": 84,
+            "tn": 1553,
+            "fn": 222,
+            "support": 521,
+            "negative_support": 1637,
+            "predicted_positive": 383,
+            "roc_auc": 0.9034456316678724,
+            "average_precision": 0.7487441860399414
+          },
+          "CD": {
+            "precision": 0.801980198019802,
+            "recall": 0.4899193548387097,
+            "f1": 0.6082603254067585,
+            "specificity": 0.9638989169675091,
+            "balanced_accuracy": 0.7269091359031093,
+            "tp": 243,
+            "fp": 60,
+            "tn": 1602,
+            "fn": 253,
+            "support": 496,
+            "negative_support": 1662,
+            "predicted_positive": 303,
+            "roc_auc": 0.8461603780909125,
+            "average_precision": 0.7176990904419095
+          },
+          "HYP": {
+            "precision": 0.7024793388429752,
+            "recall": 0.3244274809160305,
+            "f1": 0.44386422976501305,
+            "specificity": 0.9810126582278481,
+            "balanced_accuracy": 0.6527200695719393,
+            "tp": 85,
+            "fp": 36,
+            "tn": 1860,
+            "fn": 177,
+            "support": 262,
+            "negative_support": 1896,
+            "predicted_positive": 121,
+            "roc_auc": 0.8577338390182625,
+            "average_precision": 0.5331686778066018
+          }
+        },
+        "confusion_matrices": {
+          "NORM": [
+            [
+              936,
+              259
+            ],
+            [
+              119,
+              844
+            ]
+          ],
+          "MI": [
+            [
+              1506,
+              102
+            ],
+            [
+              312,
+              238
+            ]
+          ],
+          "STTC": [
+            [
+              1553,
+              84
+            ],
+            [
+              222,
+              299
+            ]
+          ],
+          "CD": [
+            [
+              1602,
+              60
+            ],
+            [
+              253,
+              243
+            ]
+          ],
+          "HYP": [
+            [
+              1860,
+              36
+            ],
+            [
+              177,
+              85
+            ]
+          ]
+        },
+        "confusion_matrix_axes": "rows=true [negative, positive]; columns=predicted [negative, positive]",
+        "accuracy_definitions": {
+          "subset_accuracy": "Fraction of records with all five label decisions exactly correct",
+          "label_accuracy": "Fraction of individual record-label decisions correct",
+          "hamming_loss": "Fraction of individual record-label decisions incorrect"
+        },
+        "zero_division_policy": "Precision, recall and F1 use zero_division=0; weighted F1 is zero when total positive support is zero",
+        "undefined_metric_policy": "ROC-AUC needs positive and negative truth; AP needs positive truth. Full-five-label macro ranking scores are null if any label is undefined. Defined-label-only means are named separately. Specificity is null without negatives; balanced accuracy is null without both outcomes."
+      },
+      "validation_metrics": {
+        "n_samples": 2146,
+        "n_labels": 5,
+        "class_names": [
+          "NORM",
+          "MI",
+          "STTC",
+          "CD",
+          "HYP"
+        ],
+        "threshold": 0.5,
+        "decision_rule": "Independent probability >= 0.5 for each label; no row-sum normalization",
+        "subset_accuracy": 0.5200372786579683,
+        "label_accuracy": 0.8506989748369058,
+        "hamming_loss": 0.14930102516309413,
+        "macro_f1": 0.6171015439508167,
+        "micro_f1": 0.6838989739542226,
+        "weighted_f1": 0.6671777129288862,
+        "macro_precision": 0.7337473328664026,
+        "macro_recall": 0.5502513642849268,
+        "macro_roc_auc": 0.8816467413965399,
+        "micro_roc_auc": 0.8991435200748383,
+        "macro_average_precision": 0.7133665997754394,
+        "micro_average_precision": 0.7789725174125064,
+        "macro_roc_auc_defined_labels": 0.8816467413965399,
+        "macro_average_precision_defined_labels": 0.7133665997754394,
+        "roc_auc_defined_labels": [
+          "NORM",
+          "MI",
+          "STTC",
+          "CD",
+          "HYP"
+        ],
+        "average_precision_defined_labels": [
+          "NORM",
+          "MI",
+          "STTC",
+          "CD",
+          "HYP"
+        ],
+        "binary_cross_entropy": 0.34040844654021485,
+        "bce_probability_clip_epsilon": 2.220446049250313e-16,
+        "per_label": {
+          "NORM": {
+            "precision": 0.7904135338345865,
+            "recall": 0.8806282722513089,
+            "f1": 0.83308568598316,
+            "specificity": 0.8127623845507976,
+            "balanced_accuracy": 0.8466953284010532,
+            "tp": 841,
+            "fp": 223,
+            "tn": 968,
+            "fn": 114,
+            "support": 955,
+            "negative_support": 1191,
+            "predicted_positive": 1064,
+            "roc_auc": 0.9229641156843869,
+            "average_precision": 0.8964811862354561
+          },
+          "MI": {
+            "precision": 0.667621776504298,
+            "recall": 0.43148148148148147,
+            "f1": 0.5241844769403825,
+            "specificity": 0.9277708592777086,
+            "balanced_accuracy": 0.679626170379595,
+            "tp": 233,
+            "fp": 116,
+            "tn": 1490,
+            "fn": 307,
+            "support": 540,
+            "negative_support": 1606,
+            "predicted_positive": 349,
+            "roc_auc": 0.8419883769198837,
+            "average_precision": 0.6328446858597766
+          },
+          "STTC": {
+            "precision": 0.7558139534883721,
+            "recall": 0.615530303030303,
+            "f1": 0.6784968684759917,
+            "specificity": 0.9351050679851669,
+            "balanced_accuracy": 0.7753176855077349,
+            "tp": 325,
+            "fp": 105,
+            "tn": 1513,
+            "fn": 203,
+            "support": 528,
+            "negative_support": 1618,
+            "predicted_positive": 430,
+            "roc_auc": 0.91228532232086,
+            "average_precision": 0.7597699911459355
+          },
+          "CD": {
+            "precision": 0.8151815181518152,
+            "recall": 0.498989898989899,
+            "f1": 0.6190476190476191,
+            "specificity": 0.9660811629315567,
+            "balanced_accuracy": 0.7325355309607278,
+            "tp": 247,
+            "fp": 56,
+            "tn": 1595,
+            "fn": 248,
+            "support": 495,
+            "negative_support": 1651,
+            "predicted_positive": 303,
+            "roc_auc": 0.8708000660756566,
+            "average_precision": 0.7471737624899849
+          },
+          "HYP": {
+            "precision": 0.6397058823529411,
+            "recall": 0.3246268656716418,
+            "f1": 0.4306930693069307,
+            "specificity": 0.9739084132055378,
+            "balanced_accuracy": 0.6492676394385898,
+            "tp": 87,
+            "fp": 49,
+            "tn": 1829,
+            "fn": 181,
+            "support": 268,
+            "negative_support": 1878,
+            "predicted_positive": 136,
+            "roc_auc": 0.8601958259819116,
+            "average_precision": 0.5305633731460436
+          }
+        },
+        "confusion_matrices": {
+          "NORM": [
+            [
+              968,
+              223
+            ],
+            [
+              114,
+              841
+            ]
+          ],
+          "MI": [
+            [
+              1490,
+              116
+            ],
+            [
+              307,
+              233
+            ]
+          ],
+          "STTC": [
+            [
+              1513,
+              105
+            ],
+            [
+              203,
+              325
+            ]
+          ],
+          "CD": [
+            [
+              1595,
+              56
+            ],
+            [
+              248,
+              247
+            ]
+          ],
+          "HYP": [
+            [
+              1829,
+              49
+            ],
+            [
+              181,
+              87
+            ]
+          ]
+        },
+        "confusion_matrix_axes": "rows=true [negative, positive]; columns=predicted [negative, positive]",
+        "accuracy_definitions": {
+          "subset_accuracy": "Fraction of records with all five label decisions exactly correct",
+          "label_accuracy": "Fraction of individual record-label decisions correct",
+          "hamming_loss": "Fraction of individual record-label decisions incorrect"
+        },
+        "zero_division_policy": "Precision, recall and F1 use zero_division=0; weighted F1 is zero when total positive support is zero",
+        "undefined_metric_policy": "ROC-AUC needs positive and negative truth; AP needs positive truth. Full-five-label macro ranking scores are null if any label is undefined. Defined-label-only means are named separately. Specificity is null without negatives; balanced accuracy is null without both outcomes."
+      },
+      "train_metrics": {
+        "n_samples": 17084,
+        "n_labels": 5,
+        "class_names": [
+          "NORM",
+          "MI",
+          "STTC",
+          "CD",
+          "HYP"
+        ],
+        "threshold": 0.5,
+        "decision_rule": "Independent probability >= 0.5 for each label; no row-sum normalization",
+        "subset_accuracy": 0.5707679700304379,
+        "label_accuracy": 0.8673378599859518,
+        "hamming_loss": 0.13266214001404822,
+        "macro_f1": 0.6630761271941928,
+        "micro_f1": 0.7189902296285275,
+        "weighted_f1": 0.7079090962484348,
+        "macro_precision": 0.7798725145271618,
+        "macro_recall": 0.5900547429942741,
+        "macro_roc_auc": 0.9002589876137381,
+        "micro_roc_auc": 0.9153165628527334,
+        "macro_average_precision": 0.7613711500706047,
+        "micro_average_precision": 0.8175162911356899,
+        "macro_roc_auc_defined_labels": 0.9002589876137381,
+        "macro_average_precision_defined_labels": 0.7613711500706047,
+        "roc_auc_defined_labels": [
+          "NORM",
+          "MI",
+          "STTC",
+          "CD",
+          "HYP"
+        ],
+        "average_precision_defined_labels": [
+          "NORM",
+          "MI",
+          "STTC",
+          "CD",
+          "HYP"
+        ],
+        "binary_cross_entropy": 0.3121277161112414,
+        "bce_probability_clip_epsilon": 2.220446049250313e-16,
+        "per_label": {
+          "NORM": {
+            "precision": 0.8417713488136024,
+            "recall": 0.8733543970510795,
+            "f1": 0.8572720811526782,
+            "specificity": 0.868570826306914,
+            "balanced_accuracy": 0.8709626116789968,
+            "tp": 6634,
+            "fp": 1247,
+            "tn": 8241,
+            "fn": 962,
+            "support": 7596,
+            "negative_support": 9488,
+            "predicted_positive": 7881,
+            "roc_auc": 0.9444363135563494,
+            "average_precision": 0.9246334293595369
+          },
+          "MI": {
+            "precision": 0.7138108189785434,
+            "recall": 0.5393925553779402,
+            "f1": 0.6144640998959418,
+            "specificity": 0.9254624163715073,
+            "balanced_accuracy": 0.7324274858747237,
+            "tp": 2362,
+            "fp": 947,
+            "tn": 11758,
+            "fn": 2017,
+            "support": 4379,
+            "negative_support": 12705,
+            "predicted_positive": 3309,
+            "roc_auc": 0.8642978154385906,
+            "average_precision": 0.7038993880955513
+          },
+          "STTC": {
+            "precision": 0.7771851851851852,
+            "recall": 0.6266125179168658,
+            "f1": 0.69382356831107,
+            "specificity": 0.9416963870367498,
+            "balanced_accuracy": 0.7841544524768078,
+            "tp": 2623,
+            "fp": 752,
+            "tn": 12146,
+            "fn": 1563,
+            "support": 4186,
+            "negative_support": 12898,
+            "predicted_positive": 3375,
+            "roc_auc": 0.9175494676634051,
+            "average_precision": 0.7819864901405322
+          },
+          "CD": {
+            "precision": 0.8415278342137342,
+            "recall": 0.5300742257486563,
+            "f1": 0.6504396984924623,
+            "specificity": 0.9704029748804736,
+            "balanced_accuracy": 0.7502386003145649,
+            "tp": 2071,
+            "fp": 390,
+            "tn": 12787,
+            "fn": 1836,
+            "support": 3907,
+            "negative_support": 13177,
+            "predicted_positive": 2461,
+            "roc_auc": 0.8847804786784117,
+            "average_precision": 0.77454947497857
+          },
+          "HYP": {
+            "precision": 0.7250673854447439,
+            "recall": 0.38084001887682867,
+            "f1": 0.4993811881188119,
+            "specificity": 0.9795522886735717,
+            "balanced_accuracy": 0.6801961537752002,
+            "tp": 807,
+            "fp": 306,
+            "tn": 14659,
+            "fn": 1312,
+            "support": 2119,
+            "negative_support": 14965,
+            "predicted_positive": 1113,
+            "roc_auc": 0.8902308627319339,
+            "average_precision": 0.6217869677788332
+          }
+        },
+        "confusion_matrices": {
+          "NORM": [
+            [
+              8241,
+              1247
+            ],
+            [
+              962,
+              6634
+            ]
+          ],
+          "MI": [
+            [
+              11758,
+              947
+            ],
+            [
+              2017,
+              2362
+            ]
+          ],
+          "STTC": [
+            [
+              12146,
+              752
+            ],
+            [
+              1563,
+              2623
+            ]
+          ],
+          "CD": [
+            [
+              12787,
+              390
+            ],
+            [
+              1836,
+              2071
+            ]
+          ],
+          "HYP": [
+            [
+              14659,
+              306
+            ],
+            [
+              1312,
+              807
+            ]
+          ]
+        },
+        "confusion_matrix_axes": "rows=true [negative, positive]; columns=predicted [negative, positive]",
+        "accuracy_definitions": {
+          "subset_accuracy": "Fraction of records with all five label decisions exactly correct",
+          "label_accuracy": "Fraction of individual record-label decisions correct",
+          "hamming_loss": "Fraction of individual record-label decisions incorrect"
+        },
+        "zero_division_policy": "Precision, recall and F1 use zero_division=0; weighted F1 is zero when total positive support is zero",
+        "undefined_metric_policy": "ROC-AUC needs positive and negative truth; AP needs positive truth. Full-five-label macro ranking scores are null if any label is undefined. Defined-label-only means are named separately. Specificity is null without negatives; balanced accuracy is null without both outcomes."
+      },
+      "parameters": 18025,
+      "epochs_run": 19,
+      "best_epoch": 15,
+      "selection_rule": "Maximize validation macro ROC-AUC, then macro average precision, then minimize probability BCE; earliest exact tie",
+      "training_seconds": 10405.803538833003,
+      "training_module_seconds": 10407.186844540993,
+      "runner_elapsed_seconds": 10909.669199958997,
+      "utc_wall_span_seconds": 10910.104428,
+      "test_inference_calls_recorded": 1,
+      "test_policy": "one final model inference on official fold10 after checkpoint, threshold, preprocessing, and code are frozen; no test tuning",
+      "checkpoint_path": "models/ptbxl_cnn_lstm/ptbxl_cnn_lstm_image_v1_seed42/best.pt",
+      "failure_or_unfinished_artifacts": [],
+      "model_artifact_inventory": {
+        "architecture.txt": {
+          "bytes": 1680,
+          "sha256": "c4df9b91d109d5f72e66b32f67b7e5140397563c54e26ec81707fe82208b79bf"
+        },
+        "best.pt": {
+          "bytes": 81989,
+          "sha256": "34c1b784b0658185c885531b94a1743801c9d0f8182e7db7aa29a7ac6d872a7d"
+        },
+        "config.json": {
+          "bytes": 298,
+          "sha256": "f571667e487159a50289e318341f1ed8b92b544e697acfafc9fa299702983d05"
+        },
+        "history.csv": {
+          "bytes": 8253,
+          "sha256": "8532475ecb3fc73a19e126c5bf8c95533fd65681879200196982c26e27f67d75"
+        },
+        "metadata.json": {
+          "bytes": 8620,
+          "sha256": "fcfd82e582e9823e5730cf9f131cc8842a4bc40626d860bc7918293118dd96ec"
+        },
+        "progress.json": {
+          "bytes": 5775,
+          "sha256": "ce156bc127251aff58234e9938cac06ee01b45c385be8cf0d43fca914861d4a8"
+        },
+        "training_curve.png": {
+          "bytes": 107988,
+          "sha256": "4b40510ccf27da1d242b911333bd59596bd958aef1f527a1d210ec75e840daa2"
+        }
+      },
+      "fresh_verification": {
+        "status": "passed",
+        "run_id": "ptbxl_cnn_lstm_image_v1_seed42",
+        "verified_utc": "2026-11-01T11:12:49.018746+00:00",
+        "verifier_sha256": "524d2c7d375fe046974ab7ed28db40ccb78ae22eedf2b936c1299eb3f023dde2",
+        "model_inference_performed": false,
+        "bootstrap_resampling_performed": false,
+        "metric_absolute_tolerance": 1e-12,
+        "failures": [],
+        "class_names": [
+          "NORM",
+          "MI",
+          "STTC",
+          "CD",
+          "HYP"
+        ],
+        "checkpoint_sha256": "34c1b784b0658185c885531b94a1743801c9d0f8182e7db7aa29a7ac6d872a7d",
+        "configuration_sha256": "02a9979bfdc33a82d440ebbb9aa98fb7d98cb44c710513123b562078c399c72b",
+        "source_files_verified": 7,
+        "source_snapshots_verified": 7,
+        "cache": {
+          "encoded_images_hashed": 21388,
+          "encoded_image_bytes_hashed": 1291819667,
+          "decoded_pixels_recomputed": false,
+          "metadata_hashes_verified": 3,
+          "partition_records": {
+            "train": 17084,
+            "validation": 2146,
+            "test": 2158
+          },
+          "unique_patients": 18617
+        },
+        "prediction_records_verified": {
+          "train": 17084,
+          "validation": 2146,
+          "test": 2158
+        },
+        "metrics_recomputed": true,
+        "confusions_and_per_label_metrics_verified": true,
+        "fixed_threshold_decisions_verified": true,
+        "patient_fold_disjointness_verified": true,
+        "selection": {
+          "best_epoch": 15,
+          "epochs_run": 19,
+          "selection_key": [
+            0.8816467413965399,
+            0.7133665997754394,
+            -0.34040844654021485
+          ],
+          "earliest_exact_tie_rule_verified": true
+        },
+        "checkpoint_replay": {
+          "split": "train",
+          "records": 32,
+          "maximum_absolute_probability_difference": 0.0,
+          "passed": true,
+          "test_replay_performed": false,
+          "checkpoint_sha256": "34c1b784b0658185c885531b94a1743801c9d0f8182e7db7aa29a7ac6d872a7d"
+        },
+        "test_inference_bookkeeping_verified": {
+          "status": "completed",
+          "inference_calls": 1
+        },
+        "uncertainty": {
+          "point_estimates_verified": true,
+          "parameters_and_bounds_verified": true,
+          "intervals_recomputed": false,
+          "resamples": 500,
+          "seed": 2024,
+          "n_unique_patients": 1877
+        },
+        "preservation": {
+          "previous_model_artifacts_hashed": 79,
+          "source_dataset_artifacts_hashed": 10,
+          "original_baseline_artifacts_hashed": 66,
+          "changed_artifacts": []
+        },
+        "experiment_log": {
+          "prior_log_rows": 3,
+          "appended_log_rows": 2,
+          "current_run_occurrences": 1,
+          "prior_byte_prefix_preserved": true,
+          "single_label_accuracy_fields_blank": true,
+          "current_log_sha256": "9ca9838d9968a884e49ef5be6efaee6f9c73bcfe679b42cb0acbdace6a179cae",
+          "completed_run_log_sha256": "93be4d113ddff271df5f794793e1ffd2266d17df250f95cb315b5c272f05cf49"
+        },
+        "run_artifact_sha256": {
+          "checkpoint_replay.json": "7ae582eeabf3265b69a84feb5fee28a5d190699880b5d620876b31cbcffa1643",
+          "config.json": "02a9979bfdc33a82d440ebbb9aa98fb7d98cb44c710513123b562078c399c72b",
+          "development_split_used.csv": "51c74cff184111a2b82e0ceb9d5a493c2d981283228bd4a04b37e30039b8afbe",
+          "figure_review.json": "d62d5916db8ef6f81715a8a41e1d91c3900dfa8e1a8d19426c8731fe978eb0ff",
+          "figures/partition_summary.png": "18f0f7936430afac7ba338ae6e05b9aa8024e8f7d42327f36ad8d5ae2fb8754f",
+          "figures/partition_summary.svg": "cfb90161dd7a79b457bd61c2325432a4654d8c2005bf61c49e2ae31b95f96169",
+          "figures/per_label_metrics.png": "2f6c77a1352e3b2cf4486a44d096eeee038fb42cb4eacca0ac8bde5eb072f5b0",
+          "figures/per_label_metrics.svg": "2b2c88eb4894f37af962dd4ffba8d6e477b23372d4f2bd3be6a0f7ef59525a29",
+          "figures/precision_recall_curves.png": "65fb9a20982b0b605ae6904f5d9133869472485d6849f29de87c23fd3e950f67",
+          "figures/precision_recall_curves.svg": "96938e2e65f811f275d9252c91223fc3ea86bb257917ed0f47303ab09adf3a20",
+          "figures/report_manifest.json": "e2a074e092a41a28316eb323078ad33f336dba21b7aef8f3d956aa2ff1d4372e",
+          "figures/roc_curves.png": "ec4dcdb30bf68102c19e291948737b5c97440be1a666efb7f7e4b3c9c465249a",
+          "figures/roc_curves.svg": "f2d86a18bcac26a57cedb70c4029273dfd5b321b6491cccad680039cf4975242",
+          "preservation.json": "4c4acbcc86917dabed2e5d825955fbb258f024037f30baf548c498ad44f035e1",
+          "prior_experiment_log.csv": "0b014c1b9affe39347308f6de50127941b629c2223bcdb2221169c836a17d395",
+          "protected_artifacts.json": "4c05dcd8032b4c565ffac8240e72939527de308700e63c82f95ede98b60016d7",
+          "provenance.json": "1b57e4e49347bf1113ab8e65f712bdc0e8256bf6c1a213b002ea23324ea0c62d",
+          "run.json": "c68695b9c7a732762795dfd42b40b4612cd6082a4ae9387c3c89acf798c2a5ac",
+          "run_summary.csv": "0e161dea7457219b800936f12088322f2df8820ecf7d84e3a746f0338318968d",
+          "selection_frozen.json": "bfb686edc826aac7f50df4f5020806d76155588f741bc8f1377b48873b016e49",
+          "source_snapshot/src/baseline_preservation.py": "76d5b4ff9f383c3a6a5a3ab8bdae81ca83c36ae8ab11cc64d08cc3cbb474f673",
+          "source_snapshot/src/common.py": "0214c2ec6d8d49ac9536a6602397d83f111e5bd64ec63f5d99633dee8c9bd672",
+          "source_snapshot/src/evaluation/multilabel.py": "68e68fc5b4b00322b118d244d1efa15f164d16cd8a616fac02bb4b20207a3319",
+          "source_snapshot/src/evaluation/ptbxl_uncertainty.py": "ce4ea41e99e2498a1dfc8cc40a3de6ba838d6b27db544802b064ecde5091dd5c",
+          "source_snapshot/src/models/ptbxl_cnn_lstm.py": "ecdcd8bce543bf5fb7f869667fa9d17ad2436eb0d9cbcb5d15cc64537a7686b1",
+          "source_snapshot/src/ptbxl_learning_data.py": "0b8ce73d5d8e99accbd3c5132a3bc2ddc7ce2697fb25ffb864da1fe700ace082",
+          "source_snapshot/src/run_ptbxl_cnn_lstm.py": "60730f78adab2a986ce8e3cb51ae36d2df820726a3860b0176c0905d2b94fcc3",
+          "test_confusion_matrices.png": "e94b1a618d2c3d1cfbd693a22b6c11f8c678cd3495a1da49da2cc4dac2e42eac",
+          "test_inference_state.json": "2f83b33cd196deb913e1b502220aff13c1ef77192ff657ab04a5a2d789286449",
+          "test_metrics.json": "6e8d69b92750eb683dc963f7e492081ede95878cf2a93f221060aac17a649e18",
+          "test_patient_bootstrap.json": "baab0743284b82866a63156ffd88d5d6d583b7d1d402439e1bbcf5ca171cc65a",
+          "test_per_label.csv": "1c105392b444351582cd27762e5d0aecee8b10e47fa1b4beb82bf00e30ab5768",
+          "test_predictions.csv": "9ecdff6c37a1cdef7fd3633f91f110443b9a9673a8c2e918a8241ab5e32a20a5",
+          "train_confusion_matrices.png": "181a19062cc055e28bb74632ca0484f57c33745a3a5b86bf78c708b29a54046c",
+          "train_metrics.json": "e5d67879f14b3b8ec950d766dd47f730c198da625a8b1c1c8908b1f3a35b066a",
+          "train_per_label.csv": "0920650c4097bd3f95767729e34115a53dde8a7a27472301a823a3bc9108e48f",
+          "train_predictions.csv": "c23f35c4e8256d5b6c0faf32d130cdc204890cf4d075d8aebfd2d7d5c977eea5",
+          "training_metadata.json": "fcfd82e582e9823e5730cf9f131cc8842a4bc40626d860bc7918293118dd96ec",
+          "validation_confusion_matrices.png": "e3716ed74403a0453c1573e2705c2be3799747509799275bc3dcb6e8a22662a3",
+          "validation_metrics.json": "df5ac4b3e3d3aef97ce2cf3629119ceb2be6eb12723bbfb57e998a090d84528d",
+          "validation_per_label.csv": "4d0286fe725cc1e27c912b3f009cf197e4be433cb9caec3c7fca643de0fe0942",
+          "validation_predictions.csv": "384cbe3dbd333cd25b8f435e6f88368ab62aaa55e300785e0850b07771a68630"
+        },
+        "scope": "Saved-artifact consistency and current file integrity. No model inference or new clinical validation. Inference counts are checked against saved bookkeeping; unrecorded activity cannot be ruled out. Bootstrap intervals have structural/point-estimate checks and are not numerically recomputed. Cached PNG encoded hashes are rechecked; their pixel arrays are not decoded again."
+      }
+    },
+    "ptbxl_spatiotemporal_image_v1_seed42": {
+      "status": "completed",
+      "output_directory": "results/ptbxl_spatiotemporal/ptbxl_spatiotemporal_image_v1_seed42",
+      "run_sha256": "2f0023820db4efe57e5569b29211dd116292772d54deb6177c85e74b17aeda9d",
+      "model_directory": "models/ptbxl_spatiotemporal/ptbxl_spatiotemporal_image_v1_seed42",
+      "test_metrics": {
+        "n_samples": 2158,
+        "n_labels": 5,
+        "class_names": [
+          "NORM",
+          "MI",
+          "STTC",
+          "CD",
+          "HYP"
+        ],
+        "threshold": 0.5,
+        "decision_rule": "Independent probability >= 0.5 for each label; no row-sum normalization",
+        "subset_accuracy": 0.561631139944393,
+        "label_accuracy": 0.8607970342910102,
+        "hamming_loss": 0.1392029657089898,
+        "macro_f1": 0.6408543781896833,
+        "micro_f1": 0.7084627329192547,
+        "weighted_f1": 0.6938825614537087,
+        "macro_precision": 0.7544995420324034,
+        "macro_recall": 0.5787171391371813,
+        "macro_roc_auc": 0.8802576278599373,
+        "micro_roc_auc": 0.9000500483287011,
+        "macro_average_precision": 0.7324563320593636,
+        "micro_average_precision": 0.7908134125030291,
+        "macro_roc_auc_defined_labels": 0.8802576278599373,
+        "macro_average_precision_defined_labels": 0.7324563320593636,
+        "roc_auc_defined_labels": [
+          "NORM",
+          "MI",
+          "STTC",
+          "CD",
+          "HYP"
+        ],
+        "average_precision_defined_labels": [
+          "NORM",
+          "MI",
+          "STTC",
+          "CD",
+          "HYP"
+        ],
+        "binary_cross_entropy": 0.33525871658124445,
+        "bce_probability_clip_epsilon": 2.220446049250313e-16,
+        "per_label": {
+          "NORM": {
+            "precision": 0.7945334590009425,
+            "recall": 0.8753894080996885,
+            "f1": 0.8330039525691699,
+            "specificity": 0.8175732217573222,
+            "balanced_accuracy": 0.8464813149285053,
+            "tp": 843,
+            "fp": 218,
+            "tn": 977,
+            "fn": 120,
+            "support": 963,
+            "negative_support": 1195,
+            "predicted_positive": 1061,
+            "roc_auc": 0.9197756314168155,
+            "average_precision": 0.8893895896241277
+          },
+          "MI": {
+            "precision": 0.7392344497607656,
+            "recall": 0.5618181818181818,
+            "f1": 0.6384297520661157,
+            "specificity": 0.9322139303482587,
+            "balanced_accuracy": 0.7470160560832202,
+            "tp": 309,
+            "fp": 109,
+            "tn": 1499,
+            "fn": 241,
+            "support": 550,
+            "negative_support": 1608,
+            "predicted_positive": 418,
+            "roc_auc": 0.8670160560832204,
+            "average_precision": 0.712535575621889
+          },
+          "STTC": {
+            "precision": 0.7674418604651163,
+            "recall": 0.6333973128598849,
+            "f1": 0.694006309148265,
+            "specificity": 0.938912645082468,
+            "balanced_accuracy": 0.7861549789711764,
+            "tp": 330,
+            "fp": 100,
+            "tn": 1537,
+            "fn": 191,
+            "support": 521,
+            "negative_support": 1637,
+            "predicted_positive": 430,
+            "roc_auc": 0.9122393967711641,
+            "average_precision": 0.7816119695937878
+          },
+          "CD": {
+            "precision": 0.782608695652174,
+            "recall": 0.5443548387096774,
+            "f1": 0.6420927467300832,
+            "specificity": 0.9548736462093863,
+            "balanced_accuracy": 0.7496142424595318,
+            "tp": 270,
+            "fp": 75,
+            "tn": 1587,
+            "fn": 226,
+            "support": 496,
+            "negative_support": 1662,
+            "predicted_positive": 345,
+            "roc_auc": 0.8563138076938006,
+            "average_precision": 0.7423025704868771
+          },
+          "HYP": {
+            "precision": 0.6886792452830188,
+            "recall": 0.2786259541984733,
+            "f1": 0.3967391304347826,
+            "specificity": 0.9825949367088608,
+            "balanced_accuracy": 0.6306104454536671,
+            "tp": 73,
+            "fp": 33,
+            "tn": 1863,
+            "fn": 189,
+            "support": 262,
+            "negative_support": 1896,
+            "predicted_positive": 106,
+            "roc_auc": 0.8459432473346861,
+            "average_precision": 0.5364419549701362
+          }
+        },
+        "confusion_matrices": {
+          "NORM": [
+            [
+              977,
+              218
+            ],
+            [
+              120,
+              843
+            ]
+          ],
+          "MI": [
+            [
+              1499,
+              109
+            ],
+            [
+              241,
+              309
+            ]
+          ],
+          "STTC": [
+            [
+              1537,
+              100
+            ],
+            [
+              191,
+              330
+            ]
+          ],
+          "CD": [
+            [
+              1587,
+              75
+            ],
+            [
+              226,
+              270
+            ]
+          ],
+          "HYP": [
+            [
+              1863,
+              33
+            ],
+            [
+              189,
+              73
+            ]
+          ]
+        },
+        "confusion_matrix_axes": "rows=true [negative, positive]; columns=predicted [negative, positive]",
+        "accuracy_definitions": {
+          "subset_accuracy": "Fraction of records with all five label decisions exactly correct",
+          "label_accuracy": "Fraction of individual record-label decisions correct",
+          "hamming_loss": "Fraction of individual record-label decisions incorrect"
+        },
+        "zero_division_policy": "Precision, recall and F1 use zero_division=0; weighted F1 is zero when total positive support is zero",
+        "undefined_metric_policy": "ROC-AUC needs positive and negative truth; AP needs positive truth. Full-five-label macro ranking scores are null if any label is undefined. Defined-label-only means are named separately. Specificity is null without negatives; balanced accuracy is null without both outcomes."
+      },
+      "validation_metrics": {
+        "n_samples": 2146,
+        "n_labels": 5,
+        "class_names": [
+          "NORM",
+          "MI",
+          "STTC",
+          "CD",
+          "HYP"
+        ],
+        "threshold": 0.5,
+        "decision_rule": "Independent probability >= 0.5 for each label; no row-sum normalization",
+        "subset_accuracy": 0.5629077353215284,
+        "label_accuracy": 0.8630009319664492,
+        "hamming_loss": 0.1369990680335508,
+        "macro_f1": 0.6520850181253791,
+        "micro_f1": 0.7164351851851852,
+        "weighted_f1": 0.7030697784464643,
+        "macro_precision": 0.7566826812812885,
+        "macro_recall": 0.5943886153872869,
+        "macro_roc_auc": 0.8888883368928573,
+        "micro_roc_auc": 0.9078373633380541,
+        "macro_average_precision": 0.7348449608014518,
+        "micro_average_precision": 0.7986647052185083,
+        "macro_roc_auc_defined_labels": 0.8888883368928573,
+        "macro_average_precision_defined_labels": 0.7348449608014518,
+        "roc_auc_defined_labels": [
+          "NORM",
+          "MI",
+          "STTC",
+          "CD",
+          "HYP"
+        ],
+        "average_precision_defined_labels": [
+          "NORM",
+          "MI",
+          "STTC",
+          "CD",
+          "HYP"
+        ],
+        "binary_cross_entropy": 0.3261912835542455,
+        "bce_probability_clip_epsilon": 2.220446049250313e-16,
+        "per_label": {
+          "NORM": {
+            "precision": 0.809021113243762,
+            "recall": 0.8827225130890053,
+            "f1": 0.8442663995993991,
+            "specificity": 0.832913518052057,
+            "balanced_accuracy": 0.8578180155705312,
+            "tp": 843,
+            "fp": 199,
+            "tn": 992,
+            "fn": 112,
+            "support": 955,
+            "negative_support": 1191,
+            "predicted_positive": 1042,
+            "roc_auc": 0.9268167451347585,
+            "average_precision": 0.9012434651454037
+          },
+          "MI": {
+            "precision": 0.6886363636363636,
+            "recall": 0.5611111111111111,
+            "f1": 0.6183673469387755,
+            "specificity": 0.9146948941469489,
+            "balanced_accuracy": 0.7379030026290301,
+            "tp": 303,
+            "fp": 137,
+            "tn": 1469,
+            "fn": 237,
+            "support": 540,
+            "negative_support": 1606,
+            "predicted_positive": 440,
+            "roc_auc": 0.8716606706332733,
+            "average_precision": 0.7024105338801113
+          },
+          "STTC": {
+            "precision": 0.7695749440715883,
+            "recall": 0.6515151515151515,
+            "f1": 0.7056410256410256,
+            "specificity": 0.9363411619283065,
+            "balanced_accuracy": 0.793928156721729,
+            "tp": 344,
+            "fp": 103,
+            "tn": 1515,
+            "fn": 184,
+            "support": 528,
+            "negative_support": 1618,
+            "predicted_positive": 447,
+            "roc_auc": 0.9233059894370154,
+            "average_precision": 0.7747008785117816
+          },
+          "CD": {
+            "precision": 0.8044692737430168,
+            "recall": 0.5818181818181818,
+            "f1": 0.675263774912075,
+            "specificity": 0.9576014536644458,
+            "balanced_accuracy": 0.7697098177413138,
+            "tp": 288,
+            "fp": 70,
+            "tn": 1581,
+            "fn": 207,
+            "support": 495,
+            "negative_support": 1651,
+            "predicted_positive": 358,
+            "roc_auc": 0.8794939094151691,
+            "average_precision": 0.7694103630426494
+          },
+          "HYP": {
+            "precision": 0.7117117117117117,
+            "recall": 0.2947761194029851,
+            "f1": 0.41688654353562005,
+            "specificity": 0.9829605963791267,
+            "balanced_accuracy": 0.6388683578910559,
+            "tp": 79,
+            "fp": 32,
+            "tn": 1846,
+            "fn": 189,
+            "support": 268,
+            "negative_support": 1878,
+            "predicted_positive": 111,
+            "roc_auc": 0.8431643698440704,
+            "average_precision": 0.5264595634273127
+          }
+        },
+        "confusion_matrices": {
+          "NORM": [
+            [
+              992,
+              199
+            ],
+            [
+              112,
+              843
+            ]
+          ],
+          "MI": [
+            [
+              1469,
+              137
+            ],
+            [
+              237,
+              303
+            ]
+          ],
+          "STTC": [
+            [
+              1515,
+              103
+            ],
+            [
+              184,
+              344
+            ]
+          ],
+          "CD": [
+            [
+              1581,
+              70
+            ],
+            [
+              207,
+              288
+            ]
+          ],
+          "HYP": [
+            [
+              1846,
+              32
+            ],
+            [
+              189,
+              79
+            ]
+          ]
+        },
+        "confusion_matrix_axes": "rows=true [negative, positive]; columns=predicted [negative, positive]",
+        "accuracy_definitions": {
+          "subset_accuracy": "Fraction of records with all five label decisions exactly correct",
+          "label_accuracy": "Fraction of individual record-label decisions correct",
+          "hamming_loss": "Fraction of individual record-label decisions incorrect"
+        },
+        "zero_division_policy": "Precision, recall and F1 use zero_division=0; weighted F1 is zero when total positive support is zero",
+        "undefined_metric_policy": "ROC-AUC needs positive and negative truth; AP needs positive truth. Full-five-label macro ranking scores are null if any label is undefined. Defined-label-only means are named separately. Specificity is null without negatives; balanced accuracy is null without both outcomes."
+      },
+      "train_metrics": {
+        "n_samples": 17084,
+        "n_labels": 5,
+        "class_names": [
+          "NORM",
+          "MI",
+          "STTC",
+          "CD",
+          "HYP"
+        ],
+        "threshold": 0.5,
+        "decision_rule": "Independent probability >= 0.5 for each label; no row-sum normalization",
+        "subset_accuracy": 0.5957035822992274,
+        "label_accuracy": 0.877768672442051,
+        "hamming_loss": 0.12223132755794895,
+        "macro_f1": 0.6865073026058169,
+        "micro_f1": 0.7456950093772073,
+        "weighted_f1": 0.7347662314851396,
+        "macro_precision": 0.7995452063174202,
+        "macro_recall": 0.6228900796217752,
+        "macro_roc_auc": 0.9092645394396118,
+        "micro_roc_auc": 0.925201986321441,
+        "macro_average_precision": 0.7865886419041324,
+        "micro_average_precision": 0.8411453179312532,
+        "macro_roc_auc_defined_labels": 0.9092645394396118,
+        "macro_average_precision_defined_labels": 0.7865886419041324,
+        "roc_auc_defined_labels": [
+          "NORM",
+          "MI",
+          "STTC",
+          "CD",
+          "HYP"
+        ],
+        "average_precision_defined_labels": [
+          "NORM",
+          "MI",
+          "STTC",
+          "CD",
+          "HYP"
+        ],
+        "binary_cross_entropy": 0.2930227295015876,
+        "bce_probability_clip_epsilon": 2.220446049250313e-16,
+        "per_label": {
+          "NORM": {
+            "precision": 0.850832266325224,
+            "recall": 0.8748025276461295,
+            "f1": 0.8626509152278333,
+            "specificity": 0.8772133220910624,
+            "balanced_accuracy": 0.8760079248685959,
+            "tp": 6645,
+            "fp": 1165,
+            "tn": 8323,
+            "fn": 951,
+            "support": 7596,
+            "negative_support": 9488,
+            "predicted_positive": 7810,
+            "roc_auc": 0.9501813618177491,
+            "average_precision": 0.9319611971924258
+          },
+          "MI": {
+            "precision": 0.7427652733118971,
+            "recall": 0.6330212377255081,
+            "f1": 0.6835162125508568,
+            "specificity": 0.9244391971664699,
+            "balanced_accuracy": 0.778730217445989,
+            "tp": 2772,
+            "fp": 960,
+            "tn": 11745,
+            "fn": 1607,
+            "support": 4379,
+            "negative_support": 12705,
+            "predicted_positive": 3732,
+            "roc_auc": 0.9003648679581334,
+            "average_precision": 0.7799898091741884
+          },
+          "STTC": {
+            "precision": 0.7866593164277839,
+            "recall": 0.6817964644051601,
+            "f1": 0.7304837471205529,
+            "specificity": 0.939990696231974,
+            "balanced_accuracy": 0.8108935803185671,
+            "tp": 2854,
+            "fp": 774,
+            "tn": 12124,
+            "fn": 1332,
+            "support": 4186,
+            "negative_support": 12898,
+            "predicted_positive": 3628,
+            "roc_auc": 0.9279460191052484,
+            "average_precision": 0.8119735181111415
+          },
+          "CD": {
+            "precision": 0.8315083009537266,
+            "recall": 0.6025083184028667,
+            "f1": 0.6987236568714752,
+            "specificity": 0.9638005615845792,
+            "balanced_accuracy": 0.7831544399937229,
+            "tp": 2354,
+            "fp": 477,
+            "tn": 12700,
+            "fn": 1553,
+            "support": 3907,
+            "negative_support": 13177,
+            "predicted_positive": 2831,
+            "roc_auc": 0.8907048853981347,
+            "average_precision": 0.7996521403280898
+          },
+          "HYP": {
+            "precision": 0.7859608745684695,
+            "recall": 0.32232184992921187,
+            "f1": 0.4571619812583668,
+            "specificity": 0.9875709989976612,
+            "balanced_accuracy": 0.6549464244634365,
+            "tp": 683,
+            "fp": 186,
+            "tn": 14779,
+            "fn": 1436,
+            "support": 2119,
+            "negative_support": 14965,
+            "predicted_positive": 869,
+            "roc_auc": 0.8771255629187941,
+            "average_precision": 0.6093665447148163
+          }
+        },
+        "confusion_matrices": {
+          "NORM": [
+            [
+              8323,
+              1165
+            ],
+            [
+              951,
+              6645
+            ]
+          ],
+          "MI": [
+            [
+              11745,
+              960
+            ],
+            [
+              1607,
+              2772
+            ]
+          ],
+          "STTC": [
+            [
+              12124,
+              774
+            ],
+            [
+              1332,
+              2854
+            ]
+          ],
+          "CD": [
+            [
+              12700,
+              477
+            ],
+            [
+              1553,
+              2354
+            ]
+          ],
+          "HYP": [
+            [
+              14779,
+              186
+            ],
+            [
+              1436,
+              683
+            ]
+          ]
+        },
+        "confusion_matrix_axes": "rows=true [negative, positive]; columns=predicted [negative, positive]",
+        "accuracy_definitions": {
+          "subset_accuracy": "Fraction of records with all five label decisions exactly correct",
+          "label_accuracy": "Fraction of individual record-label decisions correct",
+          "hamming_loss": "Fraction of individual record-label decisions incorrect"
+        },
+        "zero_division_policy": "Precision, recall and F1 use zero_division=0; weighted F1 is zero when total positive support is zero",
+        "undefined_metric_policy": "ROC-AUC needs positive and negative truth; AP needs positive truth. Full-five-label macro ranking scores are null if any label is undefined. Defined-label-only means are named separately. Specificity is null without negatives; balanced accuracy is null without both outcomes."
+      },
+      "parameters": 17161,
+      "epochs_run": 20,
+      "best_epoch": 16,
+      "selection_rule": "Maximize validation macro ROC-AUC, then macro average precision, then minimize probability BCE; earliest exact tie",
+      "training_seconds": 10535.258610374993,
+      "training_module_seconds": 10536.645536749988,
+      "runner_elapsed_seconds": 10957.267697165997,
+      "utc_wall_span_seconds": 15222.345169,
+      "test_inference_calls_recorded": 1,
+      "test_policy": "one final model inference after freezing and train-only replay; fold10 has already been observed for CNNLSTM, so comparative results are exploratory; no test tuning",
+      "checkpoint_path": "models/ptbxl_spatiotemporal/ptbxl_spatiotemporal_image_v1_seed42/best.pt",
+      "failure_or_unfinished_artifacts": [],
+      "model_artifact_inventory": {
+        "architecture.txt": {
+          "bytes": 2942,
+          "sha256": "43adb8f50c8dba06cb9ec31aa3f0e5db4d418600d86eb3d38d30f2bbd72c73e2"
+        },
+        "best.pt": {
+          "bytes": 83241,
+          "sha256": "d5f390a876024eca15f353c3ebe78756302ee4b1c8522d81cc44ecb00c095141"
+        },
+        "config.json": {
+          "bytes": 357,
+          "sha256": "a24a07deacc96adb7bcdd29520f27f395250cde033bbba1bc9f694a9bf86abde"
+        },
+        "history.csv": {
+          "bytes": 8648,
+          "sha256": "2d4437fc2ce4b1a18342f921bd365ff8f5362a746f4ea4049fecce8208d51d97"
+        },
+        "metadata.json": {
+          "bytes": 9291,
+          "sha256": "7a6cbbbed7d71263942194e677a4b4bfbeddd2e56a15580fd2ffe21fb782dc4c"
+        },
+        "progress.json": {
+          "bytes": 5986,
+          "sha256": "a2cde0b318052e14437f2804e584fda9dcfc775a4f2e9a3564f5d96837bc10a4"
+        },
+        "training_curve.png": {
+          "bytes": 103888,
+          "sha256": "e5342c5f113d1103c1425a66fd5ef51dd266e99fca5f6e3d7953a9243b1eda9c"
+        }
+      },
+      "fresh_verification": {
+        "status": "passed",
+        "run_id": "ptbxl_spatiotemporal_image_v1_seed42",
+        "verified_utc": "2026-11-01T11:13:00.051407+00:00",
+        "verifier_sha256": "592b896cca4c8851006ce1d9b4aacb3e28a738b34b9596ebf1d57bbf1e7ea583",
+        "verification_helper_sha256": "524d2c7d375fe046974ab7ed28db40ccb78ae22eedf2b936c1299eb3f023dde2",
+        "model_inference_performed": false,
+        "bootstrap_resampling_performed": false,
+        "metric_absolute_tolerance": 1e-12,
+        "failures": [],
+        "class_names": [
+          "NORM",
+          "MI",
+          "STTC",
+          "CD",
+          "HYP"
+        ],
+        "checkpoint_sha256": "d5f390a876024eca15f353c3ebe78756302ee4b1c8522d81cc44ecb00c095141",
+        "configuration_sha256": "ee601962031a9f54665d7b9284380979f29cbf68f038d9f2bb891b607c376762",
+        "source_files_verified": 8,
+        "source_snapshots_verified": 8,
+        "cache": {
+          "encoded_images_hashed": 21388,
+          "encoded_image_bytes_hashed": 1291819667,
+          "decoded_pixels_recomputed": false,
+          "metadata_hashes_verified": 3,
+          "partition_records": {
+            "train": 17084,
+            "validation": 2146,
+            "test": 2158
+          },
+          "unique_patients": 18617
+        },
+        "prediction_records_verified": {
+          "train": 17084,
+          "validation": 2146,
+          "test": 2158
+        },
+        "metrics_recomputed": true,
+        "confusions_and_per_label_metrics_verified": true,
+        "fixed_threshold_decisions_verified": true,
+        "patient_fold_disjointness_verified": true,
+        "selection": {
+          "best_epoch": 16,
+          "epochs_run": 20,
+          "selection_key": [
+            0.8888883368928573,
+            0.7348449608014518,
+            -0.3261912835542455
+          ],
+          "earliest_exact_tie_rule_verified": true
+        },
+        "checkpoint_replay": {
+          "split": "train",
+          "records": 32,
+          "maximum_absolute_probability_difference": 0.0,
+          "passed": true,
+          "test_replay_performed": false,
+          "checkpoint_sha256": "d5f390a876024eca15f353c3ebe78756302ee4b1c8522d81cc44ecb00c095141"
+        },
+        "test_inference_bookkeeping_verified": {
+          "status": "completed",
+          "inference_calls": 1
+        },
+        "uncertainty": {
+          "point_estimates_verified": true,
+          "parameters_and_bounds_verified": true,
+          "intervals_recomputed": false,
+          "resamples": 500,
+          "seed": 2024,
+          "n_unique_patients": 1877
+        },
+        "preservation": {
+          "previous_model_artifacts_hashed": 164,
+          "source_dataset_artifacts_hashed": 10,
+          "original_baseline_artifacts_hashed": 66,
+          "changed_artifacts": []
+        },
+        "experiment_log": {
+          "prior_log_rows": 4,
+          "appended_log_rows": 1,
+          "current_run_occurrences": 1,
+          "prior_byte_prefix_preserved": true,
+          "single_label_accuracy_fields_blank": true,
+          "current_log_sha256": "9ca9838d9968a884e49ef5be6efaee6f9c73bcfe679b42cb0acbdace6a179cae",
+          "completed_run_log_sha256": "9ca9838d9968a884e49ef5be6efaee6f9c73bcfe679b42cb0acbdace6a179cae"
+        },
+        "run_artifact_sha256": {
+          "checkpoint_replay.json": "19084ec2927e93de4c1c8acd684d4e149ccfeb4cbacc278f02ffe021cc679497",
+          "config.json": "ee601962031a9f54665d7b9284380979f29cbf68f038d9f2bb891b607c376762",
+          "development_split_used.csv": "51c74cff184111a2b82e0ceb9d5a493c2d981283228bd4a04b37e30039b8afbe",
+          "evaluation_progress.json": "c94d9e6d9cea0676afe8a8f7803a7fe60a380ce91cbee6b037a7a38cd920e8ed",
+          "figure_review.json": "49bbea64a436fa9f2673862e3a2d2671ac4d6c902c657271805cbc5eebc2c000",
+          "figures/partition_summary.png": "1abf423545ef666ae70080d36ccfcb1a7c73fe5fc388789b18f04fa663009347",
+          "figures/partition_summary.svg": "653c866f80947fc548925c6920ac99bb13d39ef42d6b5bb9851b0546f48cc50e",
+          "figures/per_label_metrics.png": "2d052875ef8b600cd18ff09cdcb484aa780be66ccd013ae0f04b530e0e40d598",
+          "figures/per_label_metrics.svg": "bfeab1f48570ceaf4455bd9f313bf422355e8dec9a2c882e76b6a745fb3ee2b2",
+          "figures/precision_recall_curves.png": "499f77402b66a0110ba3716a6f1e1be223cf9f2bbcc981f9d4f4895b5dcf66b2",
+          "figures/precision_recall_curves.svg": "5f7f1b1d276364466811a1b83fb2acd7c249ea97276ee661c5b653ca2edfda2d",
+          "figures/report_manifest.json": "8cf4996673a705ff390c4c3a135ba542b6677acef9a5c47783557aa7a92efbb1",
+          "figures/roc_curves.png": "3e0aa8a6bccd02aad17d002e37eafbb6af1337f91627dbbde305f9d91f776924",
+          "figures/roc_curves.svg": "eec54549b84ea16b19a33bdca6551e1e53e7f29dcb4ca356d7db0ea6a6bff434",
+          "interpretation_review.json": "d30669f10896fe72542b76f1181e8f6fddd7cbb40f276066312b83e7b83ff9d6",
+          "preservation.json": "58eb3396e773b492667840a454ebba261f32eed9a8ba53e109e886d5d8067a16",
+          "prior_experiment_log.csv": "93be4d113ddff271df5f794793e1ffd2266d17df250f95cb315b5c272f05cf49",
+          "protected_artifacts.json": "85dbd17b6b9528a32ab9222f0b81bd656f4d2f2670fd696b20f2c63d66e38ec2",
+          "provenance.json": "16a5570af365b67af4dc05ceebc17dbcd8a19e67210e1af89e2251d975f4ba85",
+          "run.json": "2f0023820db4efe57e5569b29211dd116292772d54deb6177c85e74b17aeda9d",
+          "run_summary.csv": "fc0a6c3dce360f0e4da5124521e6c0a2a36dfb92af01afc8402b6f9f5f6a7dcc",
+          "selection_frozen.json": "bfdbcb5eddadbda4cecb0276f0c2f2a8940246f112b3ae1e8d41469d40b219d8",
+          "source_snapshot/src/baseline_preservation.py": "76d5b4ff9f383c3a6a5a3ab8bdae81ca83c36ae8ab11cc64d08cc3cbb474f673",
+          "source_snapshot/src/common.py": "0214c2ec6d8d49ac9536a6602397d83f111e5bd64ec63f5d99633dee8c9bd672",
+          "source_snapshot/src/evaluation/multilabel.py": "68e68fc5b4b00322b118d244d1efa15f164d16cd8a616fac02bb4b20207a3319",
+          "source_snapshot/src/evaluation/ptbxl_uncertainty.py": "ce4ea41e99e2498a1dfc8cc40a3de6ba838d6b27db544802b064ecde5091dd5c",
+          "source_snapshot/src/models/ptbxl_cnn_lstm.py": "ecdcd8bce543bf5fb7f869667fa9d17ad2436eb0d9cbcb5d15cc64537a7686b1",
+          "source_snapshot/src/models/ptbxl_spatiotemporal.py": "5c8d8bf1df2d8b096f37a921fdb1c9da2c6892e559af1b3545e0592bd2c96ca8",
+          "source_snapshot/src/ptbxl_learning_data.py": "0b8ce73d5d8e99accbd3c5132a3bc2ddc7ce2697fb25ffb864da1fe700ace082",
+          "source_snapshot/src/run_ptbxl_spatiotemporal.py": "3024ff975792339d7ca96ece9c1eb740d0209e3aedd1607c2783e69543aeefc2",
+          "test_confusion_matrices.png": "a542250cddb2e05b3979808c89eb34f46264d93b69621b4f6a20c19a94644493",
+          "test_inference_state.json": "9211ee44c5b85ead85777fe87d929fd781c4a61b01a942fe051c166cbfaed4d0",
+          "test_metrics.json": "1acb1174e00cf412cf3c2ab35336d57d5c13428aa913d4f5f914af30a79735ce",
+          "test_patient_bootstrap.json": "fc1664d4c33b1d8572caf27b8a25ac34cd4b11ed6139c48c7a60dbd8998dd172",
+          "test_per_label.csv": "7bddea019a867cda325fcb98e02fed595225678c3c90d4a2d03edf1de41e12d5",
+          "test_predictions.csv": "a31fb929ba82baead38ec12ecb5ecc7a3f440bea5de08322bce6f4766da006af",
+          "train_confusion_matrices.png": "8ed62b2861b4189b41f1ca9e1b4b30f1884b8f0bfc31527a3cb4511be42cd232",
+          "train_metrics.json": "27e24b3e3576c5fafdb69747e22e5a9161cca8f8929a0da8ca96ecab16297ff7",
+          "train_per_label.csv": "97a62d0a8dc0483270173dcb07add075f8a93d4316bef6cf8315e7942eb929cd",
+          "train_predictions.csv": "6379f57252de05ae8cbbb03ed6f4343682bc0b47bab3f9409695e882050d89ee",
+          "training_metadata.json": "7a6cbbbed7d71263942194e677a4b4bfbeddd2e56a15580fd2ffe21fb782dc4c",
+          "validation_confusion_matrices.png": "a48e241fb6d23724f275422932a36be1c80e70815dd82cc720489f0ffb135060",
+          "validation_metrics.json": "9d73c14172e1845de68e3e0b622e8128a09c9581f86ce0414c67dfb8379693ab",
+          "validation_per_label.csv": "a736234502a2cacb458d8bfb655ac6c32cc40f5ef2113efda1bd01da0893244c",
+          "validation_predictions.csv": "3b35f9c4737c527f7690c97315dde2733528a033beb0cf517907cebf58f6180b"
+        },
+        "scope": "Saved-artifact consistency and current file integrity. No model inference or new clinical validation. Inference counts are checked against saved bookkeeping; unrecorded activity cannot be ruled out. Bootstrap intervals have structural/point-estimate checks and are not numerically recomputed. Cached PNG encoded hashes are rechecked; their pixel arrays are not decoded again."
+      }
+    }
+  },
+  "hash_manifests": {
+    "experiments/logs/delivery_manifest.json": {
+      "files": {
+        "matches": 106,
+        "mismatches": [
+          ".gitignore",
+          "README.md",
+          "docs/model_progression.md",
+          "docs/project_status.md",
+          "docs/ptbxl_secondary_audit.md",
+          "docs/supervisor_report.md",
+          "experiments/experiment_log.csv"
+        ],
+        "missing": []
+      }
+    },
+    "experiments/logs/ptbxl_cnn_lstm_image_v1_delivery_manifest.json": {
+      "artifact_sha256": {
+        "matches": 93,
+        "mismatches": [
+          "README.md",
+          "docs/model_progression.md",
+          "docs/project_status.md",
+          "docs/ptbxl_image_dataset.md",
+          "experiments/experiment_log.csv"
+        ],
+        "missing": []
+      }
+    },
+    "experiments/logs/ptbxl_images_v1_delivery_manifest.json": {
+      "artifact_sha256": {
+        "matches": 52,
+        "mismatches": [
+          "README.md",
+          "docs/model_progression.md",
+          "docs/project_status.md",
+          "docs/ptbxl_image_dataset.md",
+          "docs/ptbxl_migration_assessment.md"
+        ],
+        "missing": []
+      }
+    },
+    "experiments/logs/cnn_lstm_delivery_manifest.json": {
+      "artifacts_sha256": {
+        "matches": 51,
+        "mismatches": [
+          "README.md",
+          "docs/model_progression.md",
+          "docs/project_status.md",
+          "docs/ptbxl_migration_assessment.md"
+        ],
+        "missing": []
+      }
+    },
+    "results/ptbxl_spatiotemporal/ptbxl_spatiotemporal_image_v1_seed42/figures/report_manifest.json": {
+      "input_sha256": {
+        "matches": 19,
+        "mismatches": [
+          "/Users/miriamistanboli/Downloads/ecg swiss/docs/ptbxl_image_dataset.md"
+        ],
+        "missing": []
+      },
+      "output_sha256": {
+        "matches": 9,
+        "mismatches": [],
+        "missing": []
+      }
+    },
+    "results/ptbxl_cnn_lstm/ptbxl_cnn_lstm_image_v1_seed42/figures/report_manifest.json": {
+      "input_sha256": {
+        "matches": 19,
+        "mismatches": [
+          "/Users/miriamistanboli/Downloads/ecg swiss/docs/ptbxl_image_dataset.md"
+        ],
+        "missing": []
+      },
+      "output_sha256": {
+        "matches": 9,
+        "mismatches": [],
+        "missing": []
+      }
+    },
+    "results/comparisons/ptbxl_spatiotemporal_image_v1_seed42/comparison.json": {
+      "source_artifact_sha256": {
+        "matches": 75,
+        "mismatches": [],
+        "missing": []
+      },
+      "implementation_sha256": {
+        "matches": 3,
+        "mismatches": [],
+        "missing": []
+      },
+      "output_artifact_sha256": {
+        "matches": 6,
+        "mismatches": [],
+        "missing": []
+      }
+    },
+    "results/ptbxl_spatiotemporal/ptbxl_spatiotemporal_image_v1_seed42/figure_review.json": {
+      "figures": {
+        "matches": 7,
+        "mismatches": [],
+        "missing": []
+      }
+    },
+    "results/ptbxl_cnn_lstm/ptbxl_cnn_lstm_image_v1_seed42/figure_review.json": {
+      "figure_sha256": {
+        "matches": 6,
+        "mismatches": [],
+        "missing": []
+      }
+    }
+  },
+  "baseline_preservation": {
+    "immutable_baseline_artifacts_checked": 66,
+    "changed_baseline_artifacts": [],
+    "original_log_sha256": "283360ec5f812d0b577c41805cbbb9563e494e7508f3e5867fb679ca85df4999",
+    "original_log_byte_prefix_preserved": true,
+    "original_log_rows_preserved": 2,
+    "appended_log_rows": 3,
+    "current_log_sha256": "9ca9838d9968a884e49ef5be6efaee6f9c73bcfe679b42cb0acbdace6a179cae"
+  },
+  "experiment_log": {
+    "sha256": "9ca9838d9968a884e49ef5be6efaee6f9c73bcfe679b42cb0acbdace6a179cae",
+    "rows": 5,
+    "run_ids": [
+      "lda_v1_seed42",
+      "cnn_v1_seed42",
+      "cnn_lstm_image_v1_seed42",
+      "ptbxl_cnn_lstm_image_v1_seed42",
+      "ptbxl_spatiotemporal_image_v1_seed42"
+    ]
+  },
+  "spatiotemporal_delivery_manifest_exists": false,
+  "limitations": [
+    "Original baselines have test-evaluation policy records but no explicit inference-call counter; later three runs record one final test inference each.",
+    "Saved bookkeeping cannot prove absence of unrecorded work outside these experiments.",
+    "Fresh verifiers hash encoded cached images and inspect checkpoints without model inference; raw rendering and pixel normalization are not recomputed.",
+    "Bootstrap point estimates and structure are checked, but resampling is not repeated.",
+    "Historical delivery manifests can refer to superseded overview documentation and historical append-only experiment-log states; list differences without treating all as corrupt models.",
+    "PTB-XL single-label accuracy and balanced-accuracy experiment-log fields are intentionally blank; per-label binary balanced accuracies are available.",
+    "Wall-clock and elapsed timers differ during sleep and cannot support controlled architecture speed comparisons."
+  ]
+}

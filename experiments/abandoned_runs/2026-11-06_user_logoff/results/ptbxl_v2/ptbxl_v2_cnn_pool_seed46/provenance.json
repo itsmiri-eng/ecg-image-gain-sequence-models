@@ -1,0 +1,63 @@
+{
+  "started_utc": "2026-11-06T17:03:15.035244+00:00",
+  "environment": {
+    "python": "3.12.10 (tags/v3.12.10:0cc8128, Apr  8 2025, 12:21:36) [MSC v.1943 64 bit (AMD64)]",
+    "executable": "C:\\Users\\miria\\ecg swiss\\.venv\\Scripts\\python.exe",
+    "platform": "Windows-11-10.0.26300-SP0",
+    "machine": "AMD64",
+    "packages": {
+      "numpy": "2.2.6",
+      "scipy": "1.17.1",
+      "scikit-learn": "1.9.0",
+      "torch": "2.9.1+cu128",
+      "Pillow": "10.3.0",
+      "matplotlib": "3.10.0",
+      "joblib": "1.5.3"
+    }
+  },
+  "configuration_sha256": "3c9f7df49466a93000715f4c9a444c1efd2c7c176a6e15694252c9e842154cf7",
+  "source_sha256": {
+    "src/run_ptbxl_experiment.py": "3b9ba808387d3cd0c44d0cdd43920f3037525339c7c5364060723b4871fd2d1a",
+    "src/ptbxl_fixed_gain.py": "b4e4c90bfe7d5d116948ef8a6e7432b89bbfbd1bc15990a8fe87c09628d81aad",
+    "src/training/ptbxl_trainer.py": "8b0c0ffd9f6a50e98c7839383941a12fce8fb0c54f8c89d601a760fb725a7779",
+    "src/models/ptbxl_cnn_pool.py": "6b638350a11082465985549a548a5409fd5ad520dde19083adc98d89397a09f6",
+    "src/models/ptbxl_cnn_lstm.py": "ecdcd8bce543bf5fb7f869667fa9d17ad2436eb0d9cbcb5d15cc64537a7686b1",
+    "src/models/ptbxl_spatiotemporal.py": "5c8d8bf1df2d8b096f37a921fdb1c9da2c6892e559af1b3545e0592bd2c96ca8",
+    "src/models/ptbxl_hybrid_vit.py": "5b3aa95eaa1932da3e0c4b41d8c8ce0f34c2e7d6548eeefd286926f496d70628",
+    "src/ptbxl_learning_data.py": "0b8ce73d5d8e99accbd3c5132a3bc2ddc7ce2697fb25ffb864da1fe700ace082",
+    "src/evaluation/multilabel.py": "68e68fc5b4b00322b118d244d1efa15f164d16cd8a616fac02bb4b20207a3319",
+    "src/evaluation/ptbxl_uncertainty.py": "ce4ea41e99e2498a1dfc8cc40a3de6ba838d6b27db544802b064ecde5091dd5c",
+    "src/common.py": "0214c2ec6d8d49ac9536a6602397d83f111e5bd64ec63f5d99633dee8c9bd672",
+    "src/baseline_preservation.py": "73b3779df26355ec31ca51d96bfb1f5666ce4aadc4e65cbd60b0515c644f041a"
+  },
+  "cache_sha256": {
+    "protocol.json": "0d07cb5e13cf27bae393c6c216f1acee9a2068d03be1acfc5fada73bd2dbdb90",
+    "metadata.json": "d84a192f2782d0ad062c3e5b6ce2cbe7210b204330222078d8837d950d47f913",
+    "cache_manifest.csv": "4e534b3b5afeda1b0347d36d18ad327aeb74776f5defbb377e0acc3eb1422ef9"
+  },
+  "normalization": {
+    "method": "global training-only ink mean/std after division by 255",
+    "fit_partition": "train",
+    "mean": 0.032673040408934095,
+    "std": 0.09723822329212023,
+    "raw_std": 0.09723822329212023,
+    "std_floor": 1e-06,
+    "training_images": 17084,
+    "training_pixels": 27553075200
+  },
+  "protected_prior_files": 1749,
+  "test_policy": "One test inference per run after the selected checkpoint is frozen and reloaded. Fold 10 was already observed for earlier PTB-XL models, so comparisons are exploratory; no test-based tuning.",
+  "cache_binding_check": {
+    "mode": "relocated",
+    "differences": {
+      "source_root": [
+        "/Users/miriamistanboli/Downloads/ecg swiss/data/derived/ptbxl_images_v1",
+        "C:\\Users\\miria\\ecg swiss\\data\\derived\\ptbxl_images_v1"
+      ],
+      "python": [
+        "3.12.4 | packaged by Anaconda, Inc. | (main, Jun 18 2024, 10:07:17) [Clang 14.0.6 ]",
+        "3.12.10 (tags/v3.12.10:0cc8128, Apr  8 2025, 12:21:36) [MSC v.1943 64 bit (AMD64)]"
+      ]
+    }
+  }
+}

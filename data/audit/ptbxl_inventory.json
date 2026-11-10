@@ -1,0 +1,220 @@
+{
+  "created_utc": "2026-09-23T09:20:34.253497+00:00",
+  "dataset_directory": "ptb-xl-a-large-publicly-available-electrocardiography-dataset-1.0.3",
+  "status": "SECONDARY UNUSED DATASET; excluded from all current image LDA/CNN experiments",
+  "record_count": 21799,
+  "unique_ecg_ids": 21799,
+  "unique_patients": 18869,
+  "missing_patient_ids": 0,
+  "patients_in_multiple_official_folds": 0,
+  "official_fold_counts": {
+    "1": 2175,
+    "2": 2181,
+    "3": 2192,
+    "4": 2174,
+    "5": 2174,
+    "6": 2173,
+    "7": 2176,
+    "8": 2173,
+    "9": 2183,
+    "10": 2198
+  },
+  "official_partitions": {
+    "train_folds_1_to_8": {
+      "records": 17418,
+      "patients": 15023
+    },
+    "validation_fold_9": {
+      "records": 2183,
+      "patients": 1942
+    },
+    "test_fold_10": {
+      "records": 2198,
+      "patients": 1904
+    }
+  },
+  "patient_overlap_between_partitions": {
+    "train_folds_1_to_8 vs validation_fold_9": 0,
+    "train_folds_1_to_8 vs test_fold_10": 0,
+    "validation_fold_9 vs test_fold_10": 0
+  },
+  "manifest": {
+    "entries": 87203,
+    "matched_files": 87203,
+    "duplicate_path_entries": 0,
+    "verified_bytes": 3173239818,
+    "missing_files": [],
+    "checksum_mismatches": [],
+    "read_errors": [],
+    "file_extension_counts": {
+      ".txt": 3,
+      "no_extension": 1,
+      ".py": 1,
+      ".csv": 2,
+      ".dat": 43598,
+      ".hea": 43598
+    }
+  },
+  "header_dimensions": {
+    "12 leads x 1000 samples at 100 Hz": 21799,
+    "12 leads x 5000 samples at 500 Hz": 21799
+  },
+  "signal_format_counts": {
+    "16": 523176
+  },
+  "lead_order_counts": {
+    "I,II,III,AVR,AVL,AVF,V1,V2,V3,V4,V5,V6": 43598
+  },
+  "data_byte_size_counts": {
+    "100 Hz: 24000 bytes": 21799,
+    "500 Hz: 120000 bytes": 21799
+  },
+  "header_parse_errors": [],
+  "data_byte_size_errors": [],
+  "header_signal_integrity_errors": [],
+  "integrity_checks": "All observed WFDB format-16 files decoded as little-endian int16; shape/byte size, first samples, and per-channel sums modulo 65536 compared to header fields.",
+  "flat_channel_records": [
+    {
+      "path": "records100/12000/12722_lr.dat",
+      "zero_based_channel_indices": [
+        10
+      ]
+    },
+    {
+      "path": "records500/12000/12722_hr.dat",
+      "zero_based_channel_indices": [
+        10
+      ]
+    }
+  ],
+  "int16_min_value_count": 0,
+  "metadata_referenced_files_missing_from_manifest": [],
+  "manifest_waveforms_not_referenced_by_database": [],
+  "same_rate_exact_waveform_duplicates": {
+    "100": {
+      "data_files": 21799,
+      "unique_data_sha256": 21799,
+      "redundant_exact_data_copies": 0,
+      "groups_crossing_official_folds": 0,
+      "duplicate_groups": []
+    },
+    "500": {
+      "data_files": 21799,
+      "unique_data_sha256": 21799,
+      "redundant_exact_data_copies": 0,
+      "groups_crossing_official_folds": 0,
+      "duplicate_groups": []
+    }
+  },
+  "duplicate_scope": "SHA256 equality of same-rate .dat bytes; 100-Hz and 500-Hz files are alternative representations of the same ECG, not independent samples. Near-duplicate signal similarity was not assessed.",
+  "scp_label_parse_errors": [],
+  "unmapped_scp_codes": [],
+  "scp_code_counts": {
+    "SR": 16748,
+    "NORM": 9514,
+    "ABQRS": 3327,
+    "IMI": 2676,
+    "ASMI": 2357,
+    "LVH": 2132,
+    "NDT": 1825,
+    "LAFB": 1623,
+    "AFIB": 1514,
+    "ISC_": 1272,
+    "PVC": 1143,
+    "IRBBB": 1118,
+    "STD_": 1009,
+    "VCLVH": 875,
+    "STACH": 826,
+    "1AVB": 793,
+    "IVCD": 787,
+    "SARRH": 772,
+    "NST_": 767,
+    "ISCAL": 659,
+    "SBRAD": 637,
+    "QWAVE": 548,
+    "CRBBB": 541,
+    "CLBBB": 536,
+    "ILMI": 478,
+    "LOWT": 438,
+    "LAO/LAE": 426,
+    "NT_": 423,
+    "PAC": 398,
+    "AMI": 353,
+    "LPR": 340,
+    "PACE": 294,
+    "INVT": 294,
+    "ALMI": 288,
+    "ISCIN": 218,
+    "INJAS": 214,
+    "LMI": 201,
+    "LVOLT": 182,
+    "DIG": 181,
+    "ISCIL": 179,
+    "LPFB": 177,
+    "ISCAS": 169,
+    "SVARR": 157,
+    "INJAL": 145,
+    "ISCLA": 140,
+    "RVH": 126,
+    "LNGQT": 117,
+    "ANEUR": 104,
+    "RAO/RAE": 99,
+    "EL": 96,
+    "BIGU": 82,
+    "WPW": 79,
+    "ILBBB": 77,
+    "AFLT": 73,
+    "HVOLT": 62,
+    "IPLMI": 51,
+    "ISCAN": 44,
+    "TAB_": 35,
+    "IPMI": 33,
+    "SEHYP": 29,
+    "STE_": 28,
+    "SVTAC": 27,
+    "PSVT": 24,
+    "TRIGU": 20,
+    "INJIN": 18,
+    "INJLA": 17,
+    "PMI": 17,
+    "3AVB": 16,
+    "INJIL": 15,
+    "2AVB": 14,
+    "PRC(S)": 10
+  },
+  "scp_codes_per_record": {
+    "1": 709,
+    "2": 11225,
+    "3": 5101,
+    "4": 2594,
+    "5": 1251,
+    "6": 596,
+    "7": 253,
+    "8": 63,
+    "9": 7
+  },
+  "diagnostic_superclass_counts": {
+    "NORM": 9514,
+    "MI": 5469,
+    "STTC": 5235,
+    "CD": 4898,
+    "HYP": 2649
+  },
+  "diagnostic_superclasses_per_record": {
+    "0": 411,
+    "1": 16244,
+    "2": 4068,
+    "3": 919,
+    "4": 157
+  },
+  "diagnostic_label_policy": "Count each diagnostic superclass at most once per ECG from all present scp_codes keys where local scp_statements.diagnostic==1; no likelihood threshold. Labels are multilabel and counts overlap.",
+  "source_hashes": {
+    "SHA256SUMS.txt": "b7224b92b341511ec3ceb13dc6652079b2c36a06504bcb49506f157f51dc695d",
+    "ptbxl_database.csv": "7600de9c1b27d181d850b3c6038a35d7c3ddb6bb33b702e3a20252a6859d216b",
+    "scp_statements.csv": "ad05b0b1fcae83bb1230755ad9cfc7c96f303feddc08a4a9ad5bdc9ca63bac8f",
+    "RECORDS": "56d37274b0b02339e9c30bff8c9a9f2a6fb3cb2bb7bcd5d7c55355451d53896a",
+    "ptbxl_v103_changelog.txt": "1874df343c4ceb706151fbb55bd60bd2954fba4372a445341343939524b2c34c"
+  },
+  "script_sha256": "bce824e4491e5ba04f0bf011a75c3b8438644b39d179df05cf0aa40bdb23b8dc",
+  "runtime_seconds": 24.56070045800152
+}

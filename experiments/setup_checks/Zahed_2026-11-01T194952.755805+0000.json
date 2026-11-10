@@ -1,0 +1,42 @@
+{
+  "started_utc": "2026-11-01T19:33:59.799955+00:00",
+  "computer": "Zahed",
+  "platform": "Windows-11-10.0.26300-SP0",
+  "python": "3.12.10 (tags/v3.12.10:0cc8128, Apr  8 2025, 12:21:36) [MSC v.1943 64 bit (AMD64)]",
+  "project_root": "C:\\Users\\miria\\ecg swiss",
+  "problems": [],
+  "files_checked": 175328,
+  "packages": {
+    "numpy": "2.2.6",
+    "scipy": "1.17.1",
+    "scikit-learn": "1.9.0",
+    "torch": "2.9.1+cu128",
+    "Pillow": "10.3.0",
+    "matplotlib": "3.10.0",
+    "joblib": "1.5.3",
+    "threadpoolctl": "3.6.0",
+    "opencv-python": "4.12.0.88",
+    "pytest": "9.0.3"
+  },
+  "device": "cuda",
+  "gpu": "NVIDIA GeForce RTX 5070 Ti",
+  "cuda_runtime": "12.8",
+  "v1_cache_binding_check": {
+    "mode": "relocated",
+    "differences": {
+      "source_root": [
+        "/Users/miriamistanboli/Downloads/ecg swiss/data/derived/ptbxl_images_v1",
+        "C:\\Users\\miria\\ecg swiss\\data\\derived\\ptbxl_images_v1"
+      ],
+      "python": [
+        "3.12.4 | packaged by Anaconda, Inc. | (main, Jun 18 2024, 10:07:17) [Clang 14.0.6 ]",
+        "3.12.10 (tags/v3.12.10:0cc8128, Apr  8 2025, 12:21:36) [MSC v.1943 64 bit (AMD64)]"
+      ]
+    }
+  },
+  "max_abs_probability_difference_vs_mac": 0.0004329383373260498,
+  "validation_inference_seconds": 18.23200680001173,
+  "training_repeat_max_parameter_difference": 0.0,
+  "completed_utc": "2026-11-01T19:49:52.755805+00:00",
+  "ready": true
+}

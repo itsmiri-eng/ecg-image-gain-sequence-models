@@ -1,0 +1,9 @@
+{
+  "status": "completed",
+  "started_utc": "2026-11-01T14:54:14.027354+00:00",
+  "completed_utc": "2026-11-01T14:55:00.382468+00:00",
+  "checkpoint_sha256": "cfc590331ed3dd344bc4dfc0ca2c9e78609d99f51d526434d29788c793c2cfea",
+  "threshold": 0.5,
+  "inference_calls": 1,
+  "records": 2158
+}

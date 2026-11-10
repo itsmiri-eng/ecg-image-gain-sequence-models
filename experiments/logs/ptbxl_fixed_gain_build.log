@@ -1,0 +1,32 @@
+2026-11-01T15:31:24.108024+00:00 rendered 2000/21388
+2026-11-01T15:32:24.535043+00:00 rendered 4000/21388
+2026-11-01T15:33:30.836265+00:00 rendered 6000/21388
+2026-11-01T15:34:33.056204+00:00 rendered 8000/21388
+2026-11-01T15:35:31.678720+00:00 rendered 10000/21388
+2026-11-01T15:36:32.184588+00:00 rendered 12000/21388
+2026-11-01T15:37:32.482175+00:00 rendered 14000/21388
+2026-11-01T15:38:32.394250+00:00 rendered 16000/21388
+2026-11-01T15:39:29.559530+00:00 rendered 18000/21388
+2026-11-01T15:40:28.324894+00:00 rendered 20000/21388
+{
+  "images": 21388,
+  "counts": {
+    "train": 17084,
+    "validation": 2146,
+    "test": 2158
+  },
+  "normalization": {
+    "method": "global training-only ink mean/std after division by 255",
+    "fit_partition": "train",
+    "mean": 0.030250565026144274,
+    "std": 0.08822601670720594,
+    "training_images": 17084,
+    "training_pixels": 27553075200
+  },
+  "pages_with_clipping": {
+    "train": 121,
+    "validation": 17,
+    "test": 16
+  },
+  "build_seconds": 650.0779276669491
+}

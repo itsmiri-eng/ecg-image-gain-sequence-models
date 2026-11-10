@@ -1,0 +1,7 @@
+{
+  "status": "failed",
+  "experiment_id": "ptbxl_v2_temporal_conv_seed43",
+  "error": "ValueError(\"Protected baseline artifacts changed: ['experiments/experiment_log.csv']\")",
+  "traceback": "Traceback (most recent call last):\n  File \"C:\\Users\\miria\\ecg swiss\\src\\run_ptbxl_experiment.py\", line 188, in run\n    append_log_locked(record, original_log)\n  File \"C:\\Users\\miria\\ecg swiss\\src\\run_ptbxl_experiment.py\", line 107, in append_log_locked\n    append_experiment_log(record)\n  File \"C:\\Users\\miria\\ecg swiss\\src\\baseline_preservation.py\", line 39, in append_experiment_log\n    verify_baseline_preservation()\n  File \"C:\\Users\\miria\\ecg swiss\\src\\baseline_preservation.py\", line 18, in verify_baseline_preservation\n    raise ValueError(f\"Protected baseline artifacts changed: {changed}\")\nValueError: Protected baseline artifacts changed: ['experiments/experiment_log.csv']\n",
+  "runtime_seconds": 3412.922997799935
+}

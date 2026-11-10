@@ -1,0 +1,31 @@
+{
+  "checked_utc": "2026-09-25T19:04:09.249645+00:00",
+  "status": "passed",
+  "unit_and_integration_tests_passed": 146,
+  "test_log_sha256": "24e0c7e339d0622f4b068aa17dd21aef19f8f8a388814d91ff8fa00f0fef36ef",
+  "source_and_config_sha256": {
+    "src/run_ptbxl_spatiotemporal.py": "3024ff975792339d7ca96ece9c1eb740d0209e3aedd1607c2783e69543aeefc2",
+    "src/models/ptbxl_spatiotemporal.py": "5c8d8bf1df2d8b096f37a921fdb1c9da2c6892e559af1b3545e0592bd2c96ca8",
+    "src/models/ptbxl_cnn_lstm.py": "ecdcd8bce543bf5fb7f869667fa9d17ad2436eb0d9cbcb5d15cc64537a7686b1",
+    "src/ptbxl_learning_data.py": "0b8ce73d5d8e99accbd3c5132a3bc2ddc7ce2697fb25ffb864da1fe700ace082",
+    "src/evaluation/multilabel.py": "68e68fc5b4b00322b118d244d1efa15f164d16cd8a616fac02bb4b20207a3319",
+    "src/evaluation/ptbxl_uncertainty.py": "ce4ea41e99e2498a1dfc8cc40a3de6ba838d6b27db544802b064ecde5091dd5c",
+    "src/common.py": "0214c2ec6d8d49ac9536a6602397d83f111e5bd64ec63f5d99633dee8c9bd672",
+    "src/baseline_preservation.py": "76d5b4ff9f383c3a6a5a3ab8bdae81ca83c36ae8ab11cc64d08cc3cbb474f673",
+    "experiments/configs/ptbxl_spatiotemporal_image_v1.json": "ee601962031a9f54665d7b9284380979f29cbf68f038d9f2bb891b607c376762"
+  },
+  "prior_artifacts_sha256": "8496c4a4713cf51031b812572b0d1f0bb1536873905aa61d599bd286b0460142",
+  "prior_artifacts_preserved": 164,
+  "test_predictions_accessed": false,
+  "test_access_scope": "New spatiotemporal model has not been fitted or evaluated. Reference CNN-LSTM test results were already observed before protocol specification.",
+  "prior_reference_test_results_already_observed": true,
+  "model_choice": "One prespecified compact CNN with temporal-convolution head; synthetic-only feasibility checks, no ECG outcome search.",
+  "num_parameters": 17161,
+  "compute_probe_sha256": "996d23a77aa51d8f1b142274fef0a84627784829fa520ffc4839e8ef72f94530",
+  "paired_primary_metric": "macro_roc_auc",
+  "cache_metadata_sha256": {
+    "protocol.json": "0d07cb5e13cf27bae393c6c216f1acee9a2068d03be1acfc5fada73bd2dbdb90",
+    "metadata.json": "d84a192f2782d0ad062c3e5b6ce2cbe7210b204330222078d8837d950d47f913",
+    "cache_manifest.csv": "4e534b3b5afeda1b0347d36d18ad327aeb74776f5defbb377e0acc3eb1422ef9"
+  }
+}

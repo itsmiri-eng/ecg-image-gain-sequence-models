@@ -1,0 +1,12 @@
+{
+  "saved_predictions_match_metrics": true,
+  "identical_test_records": true,
+  "dataset_version": "image_dedup_8e04bd56af2f",
+  "split_version": "grouped_cf5a867a99c3",
+  "paired_correctness": {
+    "both_correct": 51,
+    "lda_only_correct": 10,
+    "cnn_only_correct": 23,
+    "both_wrong": 14
+  }
+}

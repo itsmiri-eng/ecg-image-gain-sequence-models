@@ -1,0 +1,31 @@
+SmallCNNLSTM(
+  (features): Sequential(
+    (0): Conv2d(1, 16, kernel_size=(5, 5), stride=(2, 2), padding=(2, 2), bias=False)
+    (1): GroupNorm(4, 16, eps=1e-05, affine=True)
+    (2): ReLU()
+    (3): MaxPool2d(kernel_size=2, stride=2, padding=0, dilation=1, ceil_mode=False)
+    (4): Conv2d(16, 32, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+    (5): GroupNorm(8, 32, eps=1e-05, affine=True)
+    (6): ReLU()
+    (7): MaxPool2d(kernel_size=2, stride=2, padding=0, dilation=1, ceil_mode=False)
+    (8): Conv2d(32, 64, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+    (9): GroupNorm(8, 64, eps=1e-05, affine=True)
+    (10): ReLU()
+    (11): MaxPool2d(kernel_size=2, stride=2, padding=0, dilation=1, ceil_mode=False)
+  )
+  (spatial_pool): AdaptiveAvgPool2d(output_size=(2, 16))
+  (lstm): LSTM(128, 32, batch_first=True)
+  (dropout): Dropout(p=0.25, inplace=False)
+  (classifier): Linear(in_features=32, out_features=4, bias=True)
+)
+
+Trainable parameters: 44,532
+Input: N x 1 x 128 x 256
+Convolution output: N x 64 x 8 x 16
+Pooled map: N x 64 x 2 x 16
+Sequence: N x 16 x 128
+Single-layer unidirectional LSTM hidden size: 32
+Mean across spatial sequence -> dropout -> four logits
+Left-to-right spatial feature columns; not calibrated time or digitized waveforms
+Maximize validation macro F1, then balanced accuracy, then minimize weighted loss; earliest exact tie
+No augmentation; no pretrained weights. CPU only.

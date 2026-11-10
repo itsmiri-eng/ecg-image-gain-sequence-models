@@ -1,0 +1,33 @@
+{
+  "recorded_utc": "2026-09-25T19:03:54.928959+00:00",
+  "scope": "Synthetic tensors only; no ECG outcomes used for architecture choice. Agent-reported feasibility benchmark, not an isolated performance comparison.",
+  "device": "cpu",
+  "num_threads": 4,
+  "batch_size": 16,
+  "warmup_steps": 2,
+  "timed_steps": 10,
+  "model": "LeadImageSpatiotemporal",
+  "num_parameters": 17161,
+  "step_seconds": {
+    "mean": 0.43146,
+    "median": 0.3574,
+    "minimum": 0.28377,
+    "maximum": 1.11035
+  },
+  "examples_per_second": 37.08,
+  "sampled_process_rss_mb": 399.9,
+  "available_ram_gb": 1.414,
+  "mps_available": false,
+  "loss_finite": true,
+  "pure_training_estimated_minutes_per_epoch": 7.68,
+  "pure_training_estimated_minutes_20epochs": 153.6,
+  "timing_limitations": "Includes a timing outlier; excludes PNG loading, pixel-integrity verification, validation, and final evaluation. Resource measurements are approximate.",
+  "same_process_reference": {
+    "model": "LeadImageCNNLSTM",
+    "num_parameters": 18025,
+    "mean_step_seconds": 0.287,
+    "median_step_seconds": 0.28115,
+    "sampled_process_rss_mb": 464.6,
+    "interpretation": "Synthetic feasibility reference only; not a controlled speed benchmark."
+  }
+}

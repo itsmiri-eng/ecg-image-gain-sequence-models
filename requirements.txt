@@ -1,0 +1,15 @@
+# Verified baseline environment: Python 3.12, macOS arm64. No CUDA required.
+numpy==2.2.6
+scipy==1.17.1
+scikit-learn==1.9.0
+torch==2.9.1
+Pillow==10.3.0
+matplotlib==3.10.0
+joblib==1.5.3
+threadpoolctl==3.6.0
+# PTB-XL image experiments (protocol v2) additionally need:
+opencv-python==4.12.0.88
+pytest==9.0.3
+# Added 2026-11-01 on the PC at the user's request (not part of the verified baseline above):
+wfdb==4.3.1
+pandas==2.2.3

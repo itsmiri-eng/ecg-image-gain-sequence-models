@@ -1,0 +1,34 @@
+{
+  "created_utc": "2026-11-01T11:28:34.609110+00:00",
+  "configuration_sha256": "ffad856c5fe9fba2877c75b135bdf26e58f8fdc0b7c83369ec866ba5acd9860e",
+  "source_sha256": {
+    "src/run_ptbxl_hybrid_vit.py": "d072c472d2eff431011cbdd96ddbdb08b2231c34eedb66e428ab7666993004d0",
+    "src/models/ptbxl_hybrid_vit.py": "5b3aa95eaa1932da3e0c4b41d8c8ce0f34c2e7d6548eeefd286926f496d70628",
+    "src/training/__init__.py": "3aa7c9d6952246e6e5a088cf49281610e806074e7d9720a1114cb77cce2352a4",
+    "src/training/ptbxl_hybrid_vit.py": "b86100be193601afb45dd5b56c8a79b20d4a0b5d50ab1dcf2c06b6d5544c5da0",
+    "src/ptbxl_learning_data.py": "0b8ce73d5d8e99accbd3c5132a3bc2ddc7ce2697fb25ffb864da1fe700ace082",
+    "src/evaluation/multilabel.py": "68e68fc5b4b00322b118d244d1efa15f164d16cd8a616fac02bb4b20207a3319",
+    "src/evaluation/ptbxl_uncertainty.py": "ce4ea41e99e2498a1dfc8cc40a3de6ba838d6b27db544802b064ecde5091dd5c",
+    "src/common.py": "0214c2ec6d8d49ac9536a6602397d83f111e5bd64ec63f5d99633dee8c9bd672",
+    "src/baseline_preservation.py": "76d5b4ff9f383c3a6a5a3ab8bdae81ca83c36ae8ab11cc64d08cc3cbb474f673"
+  },
+  "evidence_sha256": {
+    "experiments/protocols/ptbxl_hybrid_vit_image_v1/prior_artifacts.json": "5ede22a44894d0920e43aa6a0ebd66db4bd9f1bbfc5a0e900cfd7be4833ee6ed",
+    "experiments/protocols/ptbxl_hybrid_vit_image_v1/baseline_experiment_log.csv": "9ca9838d9968a884e49ef5be6efaee6f9c73bcfe679b42cb0acbdace6a179cae",
+    "experiments/protocols/ptbxl_hybrid_vit_image_v1/compute_probe.json": "9a9de8d4c0dfbbfd419b70900e23f54b72829c6bb0b7c4662ea1a831dd37be87",
+    "experiments/reviews/2026-11-01/dataset_audit_resume.json": "c0b251aa9f35f1cb19d6b30c3b180f3f647ba18ed4c12b22005a505d0fbedb17",
+    "experiments/reviews/2026-11-01/dataset_transform_and_archive_checks.json": "ccc109c10a248c2f35c198eaa4e0774f807687b9a72291a18976dab5754274f2",
+    "experiments/reviews/2026-11-01/results_audit.json": "806903dc457e6d81467661de60a384f1d998e867e01e0932f61f38ddc72ad577",
+    "experiments/reviews/2026-11-01/pretraining_all_tests.log": "6013b5343b031521180a11a0f3b67cf678ad17c44c835d59cee348b62d1cd489",
+    "experiments/reviews/2026-11-01/pretraining_audit_tests.log": "59d7714cefba8492e07a27cc2338f2b9b9d551686c5061175e5211073171cd76",
+    "docs/ptbxl_hybrid_vit_protocol.md": "aeb4251b1258d6315a1de1a0180ba76ec1210b445245b9bcc24f02e70309622b"
+  },
+  "tests": {
+    "unittest_passed": 172,
+    "audit_pytest_passed": 7
+  },
+  "prior_artifacts_checked": 247,
+  "ecg_training_started": false,
+  "test_outcome_used_for_design": false,
+  "interpretation": "One prespecified hybrid CNN-feature transformer, exploratory comparison on previously observed test fold; no actual ECG fit before this freeze."
+}

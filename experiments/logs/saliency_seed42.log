@@ -1,0 +1,48 @@
+﻿CNN-only adaptive gain: 100/536
+CNN-only adaptive gain: 200/536
+CNN-only adaptive gain: 300/536
+CNN-only adaptive gain: 400/536
+CNN-only adaptive gain: 500/536
+CNN-only adaptive gain: HYP pulse share (HYP+) 0.0533
+CNN-only fixed gain: 100/536
+CNN-only fixed gain: 200/536
+CNN-only fixed gain: 300/536
+CNN-only fixed gain: 400/536
+CNN-only fixed gain: 500/536
+CNN-only fixed gain: HYP pulse share (HYP+) 0.0315
+CNN-LSTM adaptive gain: 100/536
+CNN-LSTM adaptive gain: 200/536
+CNN-LSTM adaptive gain: 300/536
+CNN-LSTM adaptive gain: 400/536
+CNN-LSTM adaptive gain: 500/536
+CNN-LSTM adaptive gain: HYP pulse share (HYP+) 0.1138
+CNN-LSTM fixed gain: 100/536
+CNN-LSTM fixed gain: 200/536
+CNN-LSTM fixed gain: 300/536
+CNN-LSTM fixed gain: 400/536
+CNN-LSTM fixed gain: 500/536
+CNN-LSTM fixed gain: HYP pulse share (HYP+) 0.0323
+Temporal conv adaptive gain: 100/536
+Temporal conv adaptive gain: 200/536
+Temporal conv adaptive gain: 300/536
+Temporal conv adaptive gain: 400/536
+Temporal conv adaptive gain: 500/536
+Temporal conv adaptive gain: HYP pulse share (HYP+) 0.0759
+Temporal conv fixed gain: 100/536
+Temporal conv fixed gain: 200/536
+Temporal conv fixed gain: 300/536
+Temporal conv fixed gain: 400/536
+Temporal conv fixed gain: 500/536
+Temporal conv fixed gain: HYP pulse share (HYP+) 0.0273
+Hybrid ViT adaptive gain: 100/536
+Hybrid ViT adaptive gain: 200/536
+Hybrid ViT adaptive gain: 300/536
+Hybrid ViT adaptive gain: 400/536
+Hybrid ViT adaptive gain: 500/536
+Hybrid ViT adaptive gain: HYP pulse share (HYP+) 0.2469
+Hybrid ViT fixed gain: 100/536
+Hybrid ViT fixed gain: 200/536
+Hybrid ViT fixed gain: 300/536
+Hybrid ViT fixed gain: 400/536
+Hybrid ViT fixed gain: 500/536
+Hybrid ViT fixed gain: HYP pulse share (HYP+) 0.0143

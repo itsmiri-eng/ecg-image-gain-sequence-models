@@ -1,0 +1,9 @@
+partition,label,positives,missed_by_every_model,missed_by_at_least_one,missed_PCA + LDA,missed_CNN (pooled),missed_CNN-LSTM,missed_CNN + temporal conv,missed_CNN + small ViT
+validation,MI,540,143,455,387,319,307,237,247
+validation,HYP,268,119,263,218,253,181,189,130
+validation,CD,495,140,370,333,264,248,207,208
+validation,STTC,528,81,473,423,253,203,184,148
+test,MI,550,160,476,408,348,312,241,276
+test,HYP,262,110,256,211,250,177,189,123
+test,CD,496,161,366,334,263,253,226,212
+test,STTC,521,95,463,422,276,222,191,156

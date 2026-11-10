@@ -1,0 +1,12 @@
+{
+  "created_utc": "2026-09-23T09:27:13.120725+00:00",
+  "pilot_random_seed": 92,
+  "pilot_selection": "Five JPEG file-hash representatives sampled from each class, excluding numbered files1..5",
+  "pilot_visual_checks": 20,
+  "pilot_agreements": 20,
+  "root_visual_checks": 100,
+  "combined_visual_check_rows": 120,
+  "combined_unique_source_hashes": 115,
+  "header_ids_sha256": "4e4e0d4bba994b2998aa0b2537b509b53030d1b4ae7225d57cbc8267883a3dd9",
+  "note": "Pilot used independently read original crops; no inferred patient identities or diagnosis labels."
+}

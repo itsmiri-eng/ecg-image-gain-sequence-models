@@ -1,0 +1,21 @@
+{
+  "seed": 42,
+  "num_threads": 4,
+  "batch_size": 16,
+  "num_workers": 0,
+  "max_epochs": 20,
+  "patience": 4,
+  "learning_rate": 0.001,
+  "weight_decay": 0.0001,
+  "dropout": 0.2,
+  "hidden_channels": 32,
+  "gradient_clip_norm": 1.0,
+  "device": "cpu",
+  "scheduler": "cosine",
+  "eta_min": 1e-05,
+  "kernel_size": 3,
+  "dilations": [
+    1,
+    2
+  ]
+}

@@ -1,0 +1,13 @@
+{
+  "status": "completed",
+  "completed_utc": "2026-11-06T23:26:21.106962+00:00",
+  "dataset": "georgia",
+  "inference_calls": 1,
+  "records": 6047,
+  "family": "ptbxl_v2_fixedgain",
+  "kind": "network",
+  "page": "fixed",
+  "head": "temporal_conv",
+  "seed": 46,
+  "predictions_sha256": "d0ae7685f39a9877cd273a98cb12633269e7ae53149adb015c52b6d0ed52b03b"
+}

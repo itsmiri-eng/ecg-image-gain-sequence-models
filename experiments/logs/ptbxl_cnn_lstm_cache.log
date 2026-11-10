@@ -1,0 +1,40 @@
+Cached 1000/21388 PTB-XL image inputs
+Cached 2000/21388 PTB-XL image inputs
+Cached 3000/21388 PTB-XL image inputs
+Cached 4000/21388 PTB-XL image inputs
+Cached 5000/21388 PTB-XL image inputs
+Cached 6000/21388 PTB-XL image inputs
+Cached 7000/21388 PTB-XL image inputs
+Cached 8000/21388 PTB-XL image inputs
+Cached 9000/21388 PTB-XL image inputs
+Cached 10000/21388 PTB-XL image inputs
+Cached 11000/21388 PTB-XL image inputs
+Cached 12000/21388 PTB-XL image inputs
+Cached 13000/21388 PTB-XL image inputs
+Cached 14000/21388 PTB-XL image inputs
+Cached 15000/21388 PTB-XL image inputs
+Cached 16000/21388 PTB-XL image inputs
+Cached 17000/21388 PTB-XL image inputs
+Cached 18000/21388 PTB-XL image inputs
+Cached 19000/21388 PTB-XL image inputs
+Cached 20000/21388 PTB-XL image inputs
+Cached 21000/21388 PTB-XL image inputs
+{
+  "status": "complete",
+  "images": 21388,
+  "counts": {
+    "train": 17084,
+    "validation": 2146,
+    "test": 2158
+  },
+  "normalization": {
+    "method": "global training-only ink mean/std after division by 255",
+    "fit_partition": "train",
+    "mean": 0.032673040408934095,
+    "std": 0.09723822329212023,
+    "raw_std": 0.09723822329212023,
+    "std_floor": 1e-06,
+    "training_images": 17084,
+    "training_pixels": 27553075200
+  }
+}

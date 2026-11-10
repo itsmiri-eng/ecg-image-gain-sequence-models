@@ -1,0 +1,361 @@
+{
+  "status": "completed",
+  "experiment_id": "cnn_lstm_image_v1_seed42",
+  "model": "cnn_lstm",
+  "started_utc": "2026-09-24T08:04:46.586832+00:00",
+  "completed_utc": "2026-09-24T08:05:37.636416+00:00",
+  "total_runtime_seconds": 51.05123441699834,
+  "dataset_version": "image_dedup_8e04bd56af2f",
+  "split_version": "grouped_cf5a867a99c3",
+  "training": {
+    "model": "SmallCNNLSTM",
+    "config": {
+      "seed": 42,
+      "max_epochs": 30,
+      "patience": 7,
+      "batch_size": 16,
+      "learning_rate": 0.001,
+      "weight_decay": 0.0001,
+      "dropout": 0.25,
+      "device": "cpu",
+      "num_threads": 4,
+      "num_classes": 4,
+      "hidden_size": 32,
+      "pool_rows": 2,
+      "sequence_length": 16,
+      "gradient_clip_norm": 1.0
+    },
+    "input_shape": [
+      1,
+      128,
+      256
+    ],
+    "num_parameters": 44532,
+    "normalization": {
+      "method": "global training-pixel standardization",
+      "fit_partition": "train",
+      "mean": 0.06047950372331967,
+      "std": 0.08952904696916278,
+      "raw_std": 0.08952904696916278,
+      "std_floor": 1e-06
+    },
+    "class_counts_train": [
+      85,
+      18,
+      140,
+      52
+    ],
+    "class_weights": [
+      0.8676470518112183,
+      4.097222328186035,
+      0.5267857313156128,
+      1.4182692766189575
+    ],
+    "class_weight_formula": "n_train / (4 * training_class_count)",
+    "sequence_interpretation": "Left-to-right spatial feature columns; not calibrated time or digitized waveforms",
+    "spatial_sequence_shape": [
+      16,
+      128
+    ],
+    "sequence_order": "width left-to-right; each step flattens channels then vertical bands",
+    "lstm_layers": 1,
+    "bidirectional": false,
+    "sequence_aggregation": "mean of LSTM output steps",
+    "augmentation": "none",
+    "pretrained_weights": false,
+    "loss": "Class-weighted cross-entropy; aggregate divided by sum of target weights",
+    "checkpoint_selection": "Maximize validation macro F1, then balanced accuracy, then minimize weighted loss; earliest exact tie",
+    "best_selection_key": [
+      0.6001004753959426,
+      0.6114993973601434,
+      -0.9929922363921129
+    ],
+    "best_epoch": 27,
+    "epochs_run": 30,
+    "stopped_early": false,
+    "early_stopping": "Patience counts epochs without strict lexicographic validation improvement",
+    "best_train_metrics": {
+      "accuracy": 0.7627118644067796,
+      "balanced_accuracy": 0.6223470157293687,
+      "macro_f1": 0.6177062682191754,
+      "weighted_f1": 0.7596612360027669,
+      "loss": 0.8890940473022954
+    },
+    "best_validation_metrics": {
+      "accuracy": 0.7346938775510204,
+      "balanced_accuracy": 0.6114993973601434,
+      "macro_f1": 0.6001004753959426,
+      "weighted_f1": 0.7355167535789144,
+      "loss": 0.9929922363921129
+    },
+    "epoch_metric_definition": "Full-partition evaluation after epoch with dropout disabled",
+    "training_seconds": 48.18890991700755,
+    "device": "cpu",
+    "environment": {
+      "python": "3.12.4 | packaged by Anaconda, Inc. | (main, Jun 18 2024, 10:07:17) [Clang 14.0.6 ]",
+      "platform": "macOS-26.6.1-arm64-arm-64bit",
+      "machine": "arm64",
+      "torch": "2.9.1",
+      "numpy": "2.2.6",
+      "num_threads": 4,
+      "deterministic_algorithms": true
+    },
+    "reproducibility_limit": "CPU determinism configured; identical results across software/hardware versions are not guaranteed",
+    "checkpoint_path": "/Users/miriamistanboli/Downloads/ecg swiss/models/cnn_lstm/cnn_lstm_image_v1_seed42/best.pt",
+    "history_path": "/Users/miriamistanboli/Downloads/ecg swiss/models/cnn_lstm/cnn_lstm_image_v1_seed42/history.csv",
+    "runtime_seconds": 48.49856804200681
+  },
+  "metrics": {
+    "train": {
+      "n_samples": 295,
+      "accuracy": 0.7627118644067796,
+      "balanced_accuracy": 0.6223470157293687,
+      "macro_f1": 0.6177062682191754,
+      "weighted_f1": 0.7596612360027669,
+      "log_loss": 0.712577046743623,
+      "per_class": {
+        "Normal": {
+          "precision": 0.675,
+          "recall": 0.9529411764705882,
+          "f1-score": 0.7902439024390244,
+          "support": 85.0
+        },
+        "MI": {
+          "precision": 0.2,
+          "recall": 0.16666666666666666,
+          "f1-score": 0.18181818181818182,
+          "support": 18.0
+        },
+        "Abnormal": {
+          "precision": 0.940677966101695,
+          "recall": 0.7928571428571428,
+          "f1-score": 0.8604651162790697,
+          "support": 140.0
+        },
+        "History_MI": {
+          "precision": 0.7142857142857143,
+          "recall": 0.5769230769230769,
+          "f1-score": 0.6382978723404256,
+          "support": 52.0
+        }
+      },
+      "confusion_matrix": [
+        [
+          81,
+          0,
+          0,
+          4
+        ],
+        [
+          6,
+          3,
+          5,
+          4
+        ],
+        [
+          13,
+          12,
+          111,
+          4
+        ],
+        [
+          20,
+          0,
+          2,
+          30
+        ]
+      ],
+      "confusion_matrix_axes": "rows=true, columns=predicted; class_names order",
+      "class_names": [
+        "Normal",
+        "MI",
+        "Abnormal",
+        "History_MI"
+      ],
+      "zero_division_policy": "undefined precision/recall/F1 reported as zero",
+      "roc_auc_ovr_macro": 0.8827383324723029,
+      "roc_auc_ovr_weighted": 0.9373458860424858,
+      "roc_auc_per_class": {
+        "Normal": 0.9517086834733892,
+        "MI": 0.698154833533895,
+        "Abnormal": 0.9686175115207373,
+        "History_MI": 0.9124723013611903
+      },
+      "roc_auc_note": "One-vs-rest probability ranking, not diagnostic validation"
+    },
+    "validation": {
+      "n_samples": 98,
+      "accuracy": 0.7346938775510204,
+      "balanced_accuracy": 0.6114993973601434,
+      "macro_f1": 0.6001004753959426,
+      "weighted_f1": 0.7355167535789144,
+      "log_loss": 0.797350572160874,
+      "per_class": {
+        "Normal": {
+          "precision": 0.7428571428571429,
+          "recall": 0.896551724137931,
+          "f1-score": 0.8125,
+          "support": 29.0
+        },
+        "MI": {
+          "precision": 0.25,
+          "recall": 0.3333333333333333,
+          "f1-score": 0.2857142857142857,
+          "support": 6.0
+        },
+        "Abnormal": {
+          "precision": 0.9024390243902439,
+          "recall": 0.8043478260869565,
+          "f1-score": 0.8505747126436781,
+          "support": 46.0
+        },
+        "History_MI": {
+          "precision": 0.5,
+          "recall": 0.4117647058823529,
+          "f1-score": 0.45161290322580644,
+          "support": 17.0
+        }
+      },
+      "confusion_matrix": [
+        [
+          26,
+          0,
+          1,
+          2
+        ],
+        [
+          2,
+          2,
+          1,
+          1
+        ],
+        [
+          3,
+          2,
+          37,
+          4
+        ],
+        [
+          4,
+          4,
+          2,
+          7
+        ]
+      ],
+      "confusion_matrix_axes": "rows=true, columns=predicted; class_names order",
+      "class_names": [
+        "Normal",
+        "MI",
+        "Abnormal",
+        "History_MI"
+      ],
+      "zero_division_policy": "undefined precision/recall/F1 reported as zero",
+      "roc_auc_ovr_macro": 0.8302908547611564,
+      "roc_auc_ovr_weighted": 0.9087197309246998,
+      "roc_auc_per_class": {
+        "Normal": 0.9560219890054973,
+        "MI": 0.5706521739130435,
+        "Abnormal": 0.9448160535117057,
+        "History_MI": 0.8496732026143792
+      },
+      "roc_auc_note": "One-vs-rest probability ranking, not diagnostic validation"
+    },
+    "test": {
+      "n_samples": 98,
+      "accuracy": 0.7142857142857143,
+      "balanced_accuracy": 0.6315483640264616,
+      "macro_f1": 0.6020198440822112,
+      "weighted_f1": 0.7168399890076513,
+      "log_loss": 0.8079954168271148,
+      "per_class": {
+        "Normal": {
+          "precision": 0.65,
+          "recall": 0.9285714285714286,
+          "f1-score": 0.7647058823529411,
+          "support": 28.0
+        },
+        "MI": {
+          "precision": 0.3333333333333333,
+          "recall": 0.5,
+          "f1-score": 0.4,
+          "support": 6.0
+        },
+        "Abnormal": {
+          "precision": 0.9722222222222222,
+          "recall": 0.7446808510638298,
+          "f1-score": 0.8433734939759037,
+          "support": 47.0
+        },
+        "History_MI": {
+          "precision": 0.46153846153846156,
+          "recall": 0.35294117647058826,
+          "f1-score": 0.4,
+          "support": 17.0
+        }
+      },
+      "confusion_matrix": [
+        [
+          26,
+          0,
+          0,
+          2
+        ],
+        [
+          0,
+          3,
+          1,
+          2
+        ],
+        [
+          4,
+          5,
+          35,
+          3
+        ],
+        [
+          10,
+          1,
+          0,
+          6
+        ]
+      ],
+      "confusion_matrix_axes": "rows=true, columns=predicted; class_names order",
+      "class_names": [
+        "Normal",
+        "MI",
+        "Abnormal",
+        "History_MI"
+      ],
+      "zero_division_policy": "undefined precision/recall/F1 reported as zero",
+      "roc_auc_ovr_macro": 0.8943665785600223,
+      "roc_auc_ovr_weighted": 0.922873626101004,
+      "roc_auc_per_class": {
+        "Normal": 0.925,
+        "MI": 0.8442028985507246,
+        "Abnormal": 0.9578639966624948,
+        "History_MI": 0.85039941902687
+      },
+      "roc_auc_note": "One-vs-rest probability ranking, not diagnostic validation"
+    }
+  },
+  "test_evaluation_policy": "Previously observed test set. One final inference after weights, configuration and selection are frozen. Exploratory comparison; no test tuning or new confirmatory claim.",
+  "test_inference_calls": 1,
+  "checkpoint_sha256": "38e5c3ba28b5d1447fd5814f2c3e9db1e349d6098c0c5bfd1cd4932aad7b4452",
+  "probability_checks": {
+    "train": {
+      "maximum_float32_sum_error": 1.1455267667770386e-07,
+      "normalization": "float64 row sum normalization of softmax roundoff only"
+    },
+    "validation": {
+      "maximum_float32_sum_error": 1.0803341865539551e-07,
+      "normalization": "float64 row sum normalization of softmax roundoff only"
+    },
+    "test": {
+      "maximum_float32_sum_error": 1.043081283569336e-07,
+      "normalization": "float64 row sum normalization of softmax roundoff only"
+    }
+  },
+  "representation": "Frozen cropped grayscale ECG page image. CNN output pooled to 64x2x16; each of 16 left-to-right spatial positions supplies 128 features to one LSTM. This is not calibrated physiological time or waveform digitization.",
+  "comparison_limit": "Both architecture and checkpoint-selection criterion differ from original CNN (minimum validation loss). This is a pipeline comparison, not an isolated LSTM architecture ablation.",
+  "model_directory": "models/cnn_lstm/cnn_lstm_image_v1_seed42"
+}

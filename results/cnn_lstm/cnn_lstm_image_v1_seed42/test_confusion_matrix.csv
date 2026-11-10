@@ -1,0 +1,5 @@
+true_class,Normal,MI,Abnormal,History_MI
+Normal,26,0,0,2
+MI,0,3,1,2
+Abnormal,4,5,35,3
+History_MI,10,1,0,6

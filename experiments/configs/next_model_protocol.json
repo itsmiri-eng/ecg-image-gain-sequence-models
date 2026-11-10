@@ -1,0 +1,36 @@
+{
+  "protocol_id": "next_model_preparation_2026_09_24",
+  "status": "awaiting_confirmed_method",
+  "model_definition": {
+    "confirmed_name": null,
+    "definition_or_reference": null,
+    "definition_status": "unconfirmed",
+    "note": "Do not expand LSM or interpret the remembered convolution term without confirmation."
+  },
+  "dataset_version": "image_dedup_8e04bd56af2f",
+  "split_version": "grouped_cf5a867a99c3",
+  "split_sha256": "d000c06a280c59bf60b883abbc0711a575b46e69843bb01c8593befde37d9616",
+  "baseline_lock": "experiments/reviews/2026-09-24/baseline_lock.json",
+  "class_order": ["Normal", "MI", "Abnormal", "History_MI"],
+  "seed": 42,
+  "comparison_input": "Existing 1x128x256 cropped grayscale image cache. A different representation must be explicitly documented as an additional experimental change.",
+  "representation_review": "Baseline crop has confirmed clipping in one of eight inspected training examples and changes aspect ratio. A one-case, development-only aspect-preserving crop preview is separate and unvalidated for cohort-wide header removal. It is not adopted by this protocol.",
+  "fitting_data": "train only; all learned feature extraction, normalization and class weights fit only on train",
+  "development_data": "validation; train for fitting and technical debugging",
+  "development_primary_metric": "macro_f1",
+  "development_secondary_metrics": ["balanced_accuracy", "per_class_recall", "per_class_precision", "weighted_f1", "accuracy"],
+  "selection_rule": "Before fitting the confirmed model, freeze its exact hyperparameters, resource budget, selection criterion and deterministic tie-break. For candidate configurations compare validation macro F1, then validation balanced accuracy, then simpler model. Do not retroactively change baseline checkpoints.",
+  "training_specification": null,
+  "test_policy": {
+    "already_inspected": true,
+    "status": "previously observed comparison set; future results exploratory",
+    "no_test_tuning": true,
+    "evaluation": "One final inference after the candidate configuration/checkpoint is frozen; no threshold or calibration fitting on test.",
+    "no_split_search": true,
+    "fresh_confirmation": "A separate untouched cohort or properly nested group-aware evaluation is needed for a new confirmatory generalization claim. No new holdout has been created."
+  },
+  "label_policy": "Keep supplied labels unchanged. Model errors and mixed-label printed-ID groups are review flags, not proof of incorrect diagnosis. Evidence-backed corrections require a versioned dataset and renewed group-leakage audit.",
+  "hardware": "CPU or supported MPS; small local baseline; no paid cloud required",
+  "required_artifacts": ["configuration", "source_and_input_hashes", "fitted_preprocessing", "checkpoint", "runtime", "train_validation_metrics", "training_history_if_iterative", "final_test_predictions_and_metrics", "per_class_metrics", "confusion_matrix", "experiment_log_entry"],
+  "scientific_limits": ["printed IDs are not verified patients", "folder labels are not independently adjudicated", "only 30 unique MI images", "pixel columns are not a validated time axis"]
+}

@@ -1,0 +1,40 @@
+LeadImageHybridViT(
+  (features): Sequential(
+    (0): Conv2d(12, 12, kernel_size=(5, 5), stride=(2, 4), padding=(2, 2), groups=12, bias=False)
+    (1): Conv2d(12, 8, kernel_size=(1, 1), stride=(1, 1), bias=False)
+    (2): GroupNorm(4, 8, eps=1e-05, affine=True)
+    (3): ReLU()
+    (4): Conv2d(8, 8, kernel_size=(3, 3), stride=(2, 2), padding=(1, 1), groups=8, bias=False)
+    (5): Conv2d(8, 16, kernel_size=(1, 1), stride=(1, 1), bias=False)
+    (6): GroupNorm(4, 16, eps=1e-05, affine=True)
+    (7): ReLU()
+    (8): Conv2d(16, 16, kernel_size=(3, 3), stride=(2, 2), padding=(1, 1), groups=16, bias=False)
+    (9): Conv2d(16, 24, kernel_size=(1, 1), stride=(1, 1), bias=False)
+    (10): GroupNorm(4, 24, eps=1e-05, affine=True)
+    (11): ReLU()
+  )
+  (spatial_pool): AdaptiveAvgPool2d(output_size=(4, 70))
+  (projection): Linear(in_features=96, out_features=32, bias=True)
+  (token_dropout): Dropout(p=0.2, inplace=False)
+  (transformer_layers): ModuleList(
+    (0-1): 2 x TransformerEncoderLayer(
+      (self_attn): MultiheadAttention(
+        (out_proj): NonDynamicallyQuantizableLinear(in_features=32, out_features=32, bias=True)
+      )
+      (linear1): Linear(in_features=32, out_features=64, bias=True)
+      (dropout): Dropout(p=0.2, inplace=False)
+      (linear2): Linear(in_features=64, out_features=32, bias=True)
+      (norm1): LayerNorm((32,), eps=1e-05, elementwise_affine=True)
+      (norm2): LayerNorm((32,), eps=1e-05, elementwise_affine=True)
+      (dropout1): Dropout(p=0.2, inplace=False)
+      (dropout2): Dropout(p=0.2, inplace=False)
+    )
+  )
+  (final_norm): LayerNorm((32,), eps=1e-05, elementwise_affine=True)
+  (dropout): Dropout(p=0.2, inplace=False)
+  (classifier): Linear(in_features=32, out_features=5, bias=True)
+)
+
+Parameters: 23,881
+Maximize validation macro ROC-AUC, then macro average precision, then minimize probability BCE; earliest exact tie
+Unweighted BCE; no class weighting, augmentation or pretrained weights.

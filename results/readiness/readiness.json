@@ -1,0 +1,42 @@
+{
+  "checked_utc": "2026-09-24T06:30:21.027867+00:00",
+  "baseline_artifacts_preserved": 67,
+  "changed_baseline_artifacts": [],
+  "data_integrity_checks_passed": true,
+  "partition_counts": {
+    "train": 295,
+    "validation": 98,
+    "test": 98
+  },
+  "technical_reviews_complete": true,
+  "development_review_queue_checks": {
+    "label_queue": {
+      "records": 393,
+      "test_records": 0,
+      "source_identity_matches": true
+    },
+    "error_queue": {
+      "records": 393,
+      "test_records": 0,
+      "source_identity_matches": true
+    }
+  },
+  "model_definition_confirmed": false,
+  "ready_for_model_implementation": false,
+  "ready_for_model_execution": false,
+  "outstanding_items": [
+    "Exact next-model name and sufficient definition/reference remain unconfirmed",
+    "Method-specific training configuration and selection rule are not yet frozen"
+  ],
+  "clinical_labels_adjudicated": false,
+  "verified_patient_identifiers_available": false,
+  "new_model_runs_performed_by_this_check": 0,
+  "new_test_inference_performed_by_this_check": false,
+  "review_artifact_sha256": {
+    "label_consistency": "0b0f8a10684b2f001e0127e209184e54a82747982308d597ecfaf7d6aa4da0f8",
+    "minority_errors": "b0054452717e66df0a00e6ba82022eb141e9ea5579b4642d8cae7398e8d15789",
+    "input_representation": "3fe6f8638138589a3498445bdc7c195ee9640fe176ad1c0924de996735ea629a"
+  },
+  "protocol_sha256": "1b703506e4cec3da17a3c1e5fe6310f902381cda8f1b88db9c2a6d0d2f81971b",
+  "baseline_lock_sha256": "74caa3cb89ed608d6665a6db884f224ac8413acecc435838fa8002b5bbc636a6"
+}

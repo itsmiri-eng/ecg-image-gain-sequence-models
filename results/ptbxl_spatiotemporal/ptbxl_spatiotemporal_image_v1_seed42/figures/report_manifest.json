@@ -1,0 +1,51 @@
+{
+  "created_utc": "2026-09-25T23:54:02.713290+00:00",
+  "run_id": "ptbxl_spatiotemporal_image_v1_seed42",
+  "source": "completed verified run; saved predictions only",
+  "new_model_inference_performed": false,
+  "model_training_performed": false,
+  "threshold_tuning_performed": false,
+  "bootstrap_resampling_performed": false,
+  "input_sha256": {
+    "/Users/miriamistanboli/Downloads/ecg swiss/results/ptbxl_spatiotemporal/ptbxl_spatiotemporal_image_v1_seed42/run.json": "2f0023820db4efe57e5569b29211dd116292772d54deb6177c85e74b17aeda9d",
+    "/Users/miriamistanboli/Downloads/ecg swiss/results/ptbxl_spatiotemporal/ptbxl_spatiotemporal_image_v1_seed42/verification.json": "4d2ac0e0e1eb9d48c4181129363825208e15ec994633d32b809cf464510f11c1",
+    "/Users/miriamistanboli/Downloads/ecg swiss/results/ptbxl_spatiotemporal/ptbxl_spatiotemporal_image_v1_seed42/config.json": "ee601962031a9f54665d7b9284380979f29cbf68f038d9f2bb891b607c376762",
+    "/Users/miriamistanboli/Downloads/ecg swiss/results/ptbxl_spatiotemporal/ptbxl_spatiotemporal_image_v1_seed42/training_metadata.json": "7a6cbbbed7d71263942194e677a4b4bfbeddd2e56a15580fd2ffe21fb782dc4c",
+    "/Users/miriamistanboli/Downloads/ecg swiss/results/ptbxl_spatiotemporal/ptbxl_spatiotemporal_image_v1_seed42/provenance.json": "16a5570af365b67af4dc05ceebc17dbcd8a19e67210e1af89e2251d975f4ba85",
+    "/Users/miriamistanboli/Downloads/ecg swiss/results/ptbxl_spatiotemporal/ptbxl_spatiotemporal_image_v1_seed42/test_patient_bootstrap.json": "fc1664d4c33b1d8572caf27b8a25ac34cd4b11ed6139c48c7a60dbd8998dd172",
+    "/Users/miriamistanboli/Downloads/ecg swiss/results/ptbxl_spatiotemporal/ptbxl_spatiotemporal_image_v1_seed42/selection_frozen.json": "bfdbcb5eddadbda4cecb0276f0c2f2a8940246f112b3ae1e8d41469d40b219d8",
+    "/Users/miriamistanboli/Downloads/ecg swiss/results/ptbxl_spatiotemporal/ptbxl_spatiotemporal_image_v1_seed42/checkpoint_replay.json": "19084ec2927e93de4c1c8acd684d4e149ccfeb4cbacc278f02ffe021cc679497",
+    "/Users/miriamistanboli/Downloads/ecg swiss/results/ptbxl_spatiotemporal/ptbxl_spatiotemporal_image_v1_seed42/test_inference_state.json": "9211ee44c5b85ead85777fe87d929fd781c4a61b01a942fe051c166cbfaed4d0",
+    "/Users/miriamistanboli/Downloads/ecg swiss/results/ptbxl_spatiotemporal/ptbxl_spatiotemporal_image_v1_seed42/preservation.json": "58eb3396e773b492667840a454ebba261f32eed9a8ba53e109e886d5d8067a16",
+    "/Users/miriamistanboli/Downloads/ecg swiss/models/ptbxl_spatiotemporal/ptbxl_spatiotemporal_image_v1_seed42/history.csv": "2d4437fc2ce4b1a18342f921bd365ff8f5362a746f4ea4049fecce8208d51d97",
+    "/Users/miriamistanboli/Downloads/ecg swiss/models/ptbxl_spatiotemporal/ptbxl_spatiotemporal_image_v1_seed42/architecture.txt": "43adb8f50c8dba06cb9ec31aa3f0e5db4d418600d86eb3d38d30f2bbd72c73e2",
+    "/Users/miriamistanboli/Downloads/ecg swiss/models/ptbxl_spatiotemporal/ptbxl_spatiotemporal_image_v1_seed42/config.json": "a24a07deacc96adb7bcdd29520f27f395250cde033bbba1bc9f694a9bf86abde",
+    "/Users/miriamistanboli/Downloads/ecg swiss/results/ptbxl_spatiotemporal/ptbxl_spatiotemporal_image_v1_seed42/train_predictions.csv": "6379f57252de05ae8cbbb03ed6f4343682bc0b47bab3f9409695e882050d89ee",
+    "/Users/miriamistanboli/Downloads/ecg swiss/results/ptbxl_spatiotemporal/ptbxl_spatiotemporal_image_v1_seed42/train_metrics.json": "27e24b3e3576c5fafdb69747e22e5a9161cca8f8929a0da8ca96ecab16297ff7",
+    "/Users/miriamistanboli/Downloads/ecg swiss/results/ptbxl_spatiotemporal/ptbxl_spatiotemporal_image_v1_seed42/validation_predictions.csv": "3b35f9c4737c527f7690c97315dde2733528a033beb0cf517907cebf58f6180b",
+    "/Users/miriamistanboli/Downloads/ecg swiss/results/ptbxl_spatiotemporal/ptbxl_spatiotemporal_image_v1_seed42/validation_metrics.json": "9d73c14172e1845de68e3e0b622e8128a09c9581f86ce0414c67dfb8379693ab",
+    "/Users/miriamistanboli/Downloads/ecg swiss/results/ptbxl_spatiotemporal/ptbxl_spatiotemporal_image_v1_seed42/test_predictions.csv": "a31fb929ba82baead38ec12ecb5ecc7a3f440bea5de08322bce6f4766da006af",
+    "/Users/miriamistanboli/Downloads/ecg swiss/results/ptbxl_spatiotemporal/ptbxl_spatiotemporal_image_v1_seed42/test_metrics.json": "1acb1174e00cf412cf3c2ab35336d57d5c13428aa913d4f5f914af30a79735ce",
+    "/Users/miriamistanboli/Downloads/ecg swiss/docs/ptbxl_image_dataset.md": "4235d9ff12f4ad0f1b8de49582a96bcdcf189cd7d6adf3e613d01d15aa26fd28"
+  },
+  "runtime_summary": {
+    "runner_elapsed_timer_seconds": 10957.267697165997,
+    "training_elapsed_timer_seconds": 10536.645536749988,
+    "utc_wall_elapsed_seconds": 15222.345169,
+    "wall_time_basis": "completed_utc minus started_utc when both are available",
+    "timer_basis": "Recorded perf_counter elapsed durations; not pure CPU execution time",
+    "suspend_caveat": "Elapsed timers may exclude system-suspend time on this host; UTC wall span includes it and is subject to clock corrections. The difference alone cannot quantify time asleep."
+  },
+  "output_sha256": {
+    "/Users/miriamistanboli/Downloads/ecg swiss/docs/ptbxl_spatiotemporal_report.md": "f2fd6e56cf48b69ebf977795d15b0cdfaba03af4ba1143fd519d199e5cdb9dd7",
+    "/Users/miriamistanboli/Downloads/ecg swiss/results/ptbxl_spatiotemporal/ptbxl_spatiotemporal_image_v1_seed42/figures/roc_curves.png": "3e0aa8a6bccd02aad17d002e37eafbb6af1337f91627dbbde305f9d91f776924",
+    "/Users/miriamistanboli/Downloads/ecg swiss/results/ptbxl_spatiotemporal/ptbxl_spatiotemporal_image_v1_seed42/figures/roc_curves.svg": "eec54549b84ea16b19a33bdca6551e1e53e7f29dcb4ca356d7db0ea6a6bff434",
+    "/Users/miriamistanboli/Downloads/ecg swiss/results/ptbxl_spatiotemporal/ptbxl_spatiotemporal_image_v1_seed42/figures/precision_recall_curves.png": "499f77402b66a0110ba3716a6f1e1be223cf9f2bbcc981f9d4f4895b5dcf66b2",
+    "/Users/miriamistanboli/Downloads/ecg swiss/results/ptbxl_spatiotemporal/ptbxl_spatiotemporal_image_v1_seed42/figures/partition_summary.png": "1abf423545ef666ae70080d36ccfcb1a7c73fe5fc388789b18f04fa663009347",
+    "/Users/miriamistanboli/Downloads/ecg swiss/results/ptbxl_spatiotemporal/ptbxl_spatiotemporal_image_v1_seed42/figures/per_label_metrics.png": "2d052875ef8b600cd18ff09cdcb484aa780be66ccd013ae0f04b530e0e40d598",
+    "/Users/miriamistanboli/Downloads/ecg swiss/results/ptbxl_spatiotemporal/ptbxl_spatiotemporal_image_v1_seed42/figures/per_label_metrics.svg": "bfeab1f48570ceaf4455bd9f313bf422355e8dec9a2c882e76b6a745fb3ee2b2",
+    "/Users/miriamistanboli/Downloads/ecg swiss/results/ptbxl_spatiotemporal/ptbxl_spatiotemporal_image_v1_seed42/figures/partition_summary.svg": "653c866f80947fc548925c6920ac99bb13d39ef42d6b5bb9851b0546f48cc50e",
+    "/Users/miriamistanboli/Downloads/ecg swiss/results/ptbxl_spatiotemporal/ptbxl_spatiotemporal_image_v1_seed42/figures/precision_recall_curves.svg": "5f7f1b1d276364466811a1b83fb2acd7c249ea97276ee661c5b653ca2edfda2d"
+  },
+  "test_case_gallery_generated": false
+}

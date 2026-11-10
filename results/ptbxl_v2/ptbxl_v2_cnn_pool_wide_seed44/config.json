@@ -1,0 +1,71 @@
+{
+  "protocol": "ptbxl_v2_cnn_pool_wide",
+  "result_family": "ptbxl_v2",
+  "log_model_name": "PTBXL_Image_CNN_Pool_Wide",
+  "created_utc": "2026-11-03",
+  "purpose": "Capacity-matched CNN-only head (protocol amendment docs/protocol_amendment_2026-11-03.md): shared lead-image CNN, a per-column two-layer MLP (96->96->64) applied to each of the 70 feature columns separately, column mean, linear readout. 17,065 parameters (temporal conv 17,161; CNN-LSTM 18,025). No layer mixes columns, so it separates head capacity from sequence modelling.",
+  "dataset_id": "ptbxl_images_v1",
+  "split_version": "ptbxl_v103_official_folds_1to8_9_10_diagnostic_superclasses",
+  "cache_root": "data/processed/ptbxl_lead_images_v1",
+  "cache_sha256": {
+    "protocol.json": "0d07cb5e13cf27bae393c6c216f1acee9a2068d03be1acfc5fada73bd2dbdb90",
+    "metadata.json": "d84a192f2782d0ad062c3e5b6ce2cbe7210b204330222078d8837d950d47f913",
+    "cache_manifest.csv": "4e534b3b5afeda1b0347d36d18ad327aeb74776f5defbb377e0acc3eb1422ef9"
+  },
+  "class_names": [
+    "NORM",
+    "MI",
+    "STTC",
+    "CD",
+    "HYP"
+  ],
+  "input_shape": [
+    12,
+    120,
+    1120
+  ],
+  "preprocessing": {
+    "source_pixels": "12 complete rows, y=80:2960 and x=0:2240",
+    "intensity": "255 minus uint8 grayscale",
+    "pooling": "2x2 maximum ink; isotropic factor2, no interpolation",
+    "shape": [
+      12,
+      120,
+      1120
+    ],
+    "normalization": "one global mean/std from training pixels only",
+    "calibration": "per-lead calibration pulses retained in pixels; no numeric metadata feature",
+    "augmentation": "none",
+    "limitation": "downsampling thickens narrow strokes and merges fine detail; variable page gain retained; not lossless waveform reconstruction"
+  },
+  "training": {
+    "model": "cnn_pool_wide",
+    "seed": 44,
+    "num_threads": 4,
+    "batch_size": 16,
+    "max_epochs": 20,
+    "patience": 4,
+    "learning_rate": 0.001,
+    "weight_decay": 0.0001,
+    "dropout": 0.2,
+    "gradient_clip_norm": 1.0,
+    "device": "cuda",
+    "scheduler": "cosine",
+    "eta_min": 1e-05
+  },
+  "loss": "unweighted binary cross entropy with logits; five independent binary targets",
+  "selection_rule": "Strict lexicographic maximum of validation (macro_roc_auc, macro_average_precision, -probability_binary_cross_entropy); earliest epoch on exact tie",
+  "threshold": 0.5,
+  "threshold_policy": "fixed sigmoid probability >=0.5; no threshold search",
+  "test_policy": "One test inference per run after the selected checkpoint is frozen and reloaded. Fold 10 was already observed for earlier PTB-XL models, so comparisons are exploratory; no test-based tuning.",
+  "uncertainty": {
+    "method": "patient-cluster percentile bootstrap of final test predictions",
+    "resamples": 500,
+    "seed": 2024,
+    "confidence_level": 0.95,
+    "scope": "test-sampling uncertainty conditional on this fitted model; excludes seed/training/external-domain variation"
+  },
+  "seed_policy": "Prespecified seeds 42, 43, 44, 45, 46 (amendment of 3 Nov 2026, frozen before any run of this head). All seeds are reported; no best-seed selection.",
+  "runner": "python -X utf8 -m src.run_ptbxl_wide_head --device cuda --seeds 42 43 44 45 46",
+  "run_id": "ptbxl_v2_cnn_pool_wide_seed44"
+}

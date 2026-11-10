@@ -1,0 +1,7 @@
+{
+  "status": "completed",
+  "completed_utc": "2026-11-02T14:55:49.893397+00:00",
+  "inference_calls": 1,
+  "model_result_dir": "ptbxl_hybrid_vit/ptbxl_hybrid_vit_image_v1_seed42",
+  "records": 2158
+}

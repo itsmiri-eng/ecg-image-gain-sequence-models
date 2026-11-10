@@ -1,0 +1,13 @@
+{
+  "status": "completed",
+  "completed_utc": "2026-11-06T23:26:19.939683+00:00",
+  "dataset": "georgia",
+  "inference_calls": 1,
+  "records": 6047,
+  "family": "ptbxl_v2",
+  "kind": "network",
+  "page": "adaptive",
+  "head": "cnn_pool_wide",
+  "seed": 43,
+  "predictions_sha256": "43d6d0a9a6cf60c5040a0fda2f76ecec4f64615fe94da64e4c365410fcd365b7"
+}

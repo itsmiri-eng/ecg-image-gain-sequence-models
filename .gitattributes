@@ -1,0 +1,2 @@
+# Store every file byte-for-byte: run records and caches are bound by SHA-256 hashes.
+* -text

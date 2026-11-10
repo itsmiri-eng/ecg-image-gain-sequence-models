@@ -1,0 +1,136 @@
+{
+  "created_utc": "2026-09-23T09:33:19.957357+00:00",
+  "scope": "Read-only artifact verification; checkpoint inference on TRAIN ONLY; saved probabilities used for metric checks; no retraining or new test inference",
+  "dataset_version": "image_dedup_8e04bd56af2f",
+  "split_version": "grouped_cf5a867a99c3",
+  "split_sha256": "d000c06a280c59bf60b883abbc0711a575b46e69843bb01c8593befde37d9616",
+  "cache_sha256": "ae7a5b80d1d8da2d371568a21f1547dd64f26e5d95b7657ec3b738a85f19f60e",
+  "source_integrity_verifier": "load_verified_data() passed full source/cache/audit/config/partition checks",
+  "models": {
+    "lda": {
+      "completed_run": true,
+      "saved_split_sha256_matches": true,
+      "saved_config_matches_frozen_protocol": true,
+      "protocol_created_before_run": true,
+      "all_recorded_source_hashes_match": true,
+      "saved_metrics_checks": {
+        "train": {
+          "samples": 295,
+          "max_numeric_difference": 0.0,
+          "max_probability_row_sum_error": 3.3306690738754696e-16,
+          "sample_and_class_order_match": true
+        },
+        "validation": {
+          "samples": 98,
+          "max_numeric_difference": 0.0,
+          "max_probability_row_sum_error": 2.220446049250313e-16,
+          "sample_and_class_order_match": true
+        },
+        "test": {
+          "samples": 98,
+          "max_numeric_difference": 0.0,
+          "max_probability_row_sum_error": 2.220446049250313e-16,
+          "sample_and_class_order_match": true
+        }
+      },
+      "checkpoint_sha256": "72820cd3989cca0b24fbf1abf020ab3cb2a523ab50da2ed518eb48ec9aa10ecf",
+      "pca_training_mean_max_absolute_error": 0.0,
+      "pca_fit_samples": 295,
+      "pca_components": 32,
+      "lda_class_priors": [
+        0.25,
+        0.25,
+        0.25,
+        0.25
+      ],
+      "train_checkpoint_prediction_parity": {
+        "samples": 295,
+        "max_absolute_probability_difference": 6.170182715869998e-07,
+        "absolute_tolerance": 1e-05,
+        "argmax_disagreements": 0
+      }
+    },
+    "cnn": {
+      "completed_run": true,
+      "saved_split_sha256_matches": true,
+      "saved_config_matches_frozen_protocol": true,
+      "protocol_created_before_run": true,
+      "all_recorded_source_hashes_match": true,
+      "saved_metrics_checks": {
+        "train": {
+          "samples": 295,
+          "max_numeric_difference": 0.0,
+          "max_probability_row_sum_error": 1.341104507446289e-07,
+          "sample_and_class_order_match": true
+        },
+        "validation": {
+          "samples": 98,
+          "max_numeric_difference": 0.0,
+          "max_probability_row_sum_error": 1.1362135410308838e-07,
+          "sample_and_class_order_match": true
+        },
+        "test": {
+          "samples": 98,
+          "max_numeric_difference": 0.0,
+          "max_probability_row_sum_error": 1.341104507446289e-07,
+          "sample_and_class_order_match": true
+        }
+      },
+      "checkpoint_sha256": "9944e25ed927c1e763cd9448d6d4a51388ef6d3cd4125f7de694e4540e012a48",
+      "selected_epoch": 25,
+      "epochs_executed": 30,
+      "minimum_weighted_validation_loss": 1.039684346476449,
+      "checkpoint_is_global_history_validation_minimum": true,
+      "normalization_exactly_matches_train_only": true,
+      "normalization_mean": 0.06047950372331967,
+      "normalization_std": 0.08952904696916278,
+      "training_class_counts": [
+        85,
+        18,
+        140,
+        52
+      ],
+      "training_class_weights": [
+        0.8676470518112183,
+        4.097222328186035,
+        0.5267857313156128,
+        1.4182692766189575
+      ],
+      "checkpoint_config_matches_frozen_protocol": true,
+      "train_checkpoint_prediction_parity": {
+        "samples": 295,
+        "max_absolute_probability_difference": 0.0,
+        "absolute_tolerance": 1e-05,
+        "argmax_disagreements": 0
+      }
+    }
+  },
+  "printed_id_partition_counts": {
+    "train": 187,
+    "validation": 63,
+    "test": 61
+  },
+  "printed_id_cross_partition_overlap": {
+    "train/validation": 0,
+    "train/test": 0,
+    "validation/test": 0
+  },
+  "fitting_dataflow_review": {
+    "lda_fit_arguments": "x[train], y[train] only; PCA pipeline fit inside train_lda",
+    "cnn_fit_arguments": "x[train], y[train], x[validation], y[validation]; global normalization and class weights from training only",
+    "test_inference_order": "run.py calls predict_proba(x[test]) only after training returns selected checkpoint; the review performed no new test inference",
+    "loader_caveat": "The full cached arrays are loaded and integrity-checked before fitting. Those checks do not fit transforms or calculate model-selection metrics.",
+    "configuration_freeze_evidence": "Both saved full configs equal frozen protocol, created before either run; both source-hash dictionaries still match all files. This is recorded-artifact and source-code evidence, not an independent execution trace."
+  },
+  "numeric_warning": {
+    "source": "scikit-learn log_loss probability-sum check after float32 CNN softmax probabilities are cast to float64 by evaluate()",
+    "cnn_max_absolute_row_sum_error": 1.341104507446289e-07,
+    "cnn_validation_max_absolute_row_sum_error": 1.1362135410308838e-07,
+    "float32_machine_epsilon": 1.1920928955078125e-07,
+    "float64_check_relative_tolerance_sqrt_epsilon": 1.4901161193847656e-08,
+    "all_saved_cnn_probabilities_exactly_representable_as_float32": true,
+    "float32_roundtrip_max_difference_all_partitions": 0.0,
+    "assessment": "Benign precision warning consistent with float32 softmax rounding; no invalid signs/nonfinite entries or materially unnormalized probabilities. All metrics reproduce from the untouched saved probabilities.",
+    "changes_to_scores_or_probabilities": "none"
+  }
+}

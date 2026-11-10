@@ -1,0 +1,12 @@
+{
+  "crop_fraction_xyxy": [
+    0.03,
+    0.19,
+    0.98,
+    0.96
+  ],
+  "height": 128,
+  "width": 256,
+  "mode": "grayscale_inverted_unit_interval",
+  "resize": "bilinear"
+}

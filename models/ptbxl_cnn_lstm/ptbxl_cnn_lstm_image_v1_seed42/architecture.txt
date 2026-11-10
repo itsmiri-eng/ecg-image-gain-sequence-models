@@ -1,0 +1,30 @@
+LeadImageCNNLSTM(
+  (features): Sequential(
+    (0): Conv2d(12, 12, kernel_size=(5, 5), stride=(2, 4), padding=(2, 2), groups=12, bias=False)
+    (1): Conv2d(12, 8, kernel_size=(1, 1), stride=(1, 1), bias=False)
+    (2): GroupNorm(4, 8, eps=1e-05, affine=True)
+    (3): ReLU()
+    (4): Conv2d(8, 8, kernel_size=(3, 3), stride=(2, 2), padding=(1, 1), groups=8, bias=False)
+    (5): Conv2d(8, 16, kernel_size=(1, 1), stride=(1, 1), bias=False)
+    (6): GroupNorm(4, 16, eps=1e-05, affine=True)
+    (7): ReLU()
+    (8): Conv2d(16, 16, kernel_size=(3, 3), stride=(2, 2), padding=(1, 1), groups=16, bias=False)
+    (9): Conv2d(16, 24, kernel_size=(1, 1), stride=(1, 1), bias=False)
+    (10): GroupNorm(4, 24, eps=1e-05, affine=True)
+    (11): ReLU()
+  )
+  (spatial_pool): AdaptiveAvgPool2d(output_size=(4, 70))
+  (lstm): LSTM(96, 32, batch_first=True)
+  (dropout): Dropout(p=0.2, inplace=False)
+  (classifier): Linear(in_features=32, out_features=5, bias=True)
+)
+
+Parameters: 18,025
+Input: N x 12 x 120 x 1120, already train-standardized.
+Features: N x 24 x 15 x 70; pooled: N x 24 x 4 x 70; sequence: N x 70 x 96.
+First convolution filters each lead separately; pointwise convolutions combine aligned leads.
+Each sequence step flattens channels then vertical bands; mean LSTM outputs -> dropout -> five logits.
+Left-to-right spatial image-feature columns across aligned leads, including calibration; not recovered calibrated waveform samples
+Independent sigmoid probabilities, never row-normalized.
+Maximize validation macro ROC-AUC, then macro average precision, then minimize probability BCE; earliest exact tie
+No class weighting, augmentation, pretrained weights, or test access.

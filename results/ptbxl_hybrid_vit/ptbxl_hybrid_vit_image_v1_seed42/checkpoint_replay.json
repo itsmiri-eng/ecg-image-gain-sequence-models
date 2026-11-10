@@ -1,0 +1,9 @@
+{
+  "split": "train",
+  "records": 32,
+  "maximum_absolute_probability_difference": 0.0,
+  "passed": true,
+  "test_replay_performed": false,
+  "checkpoint_sha256": "cfc590331ed3dd344bc4dfc0ca2c9e78609d99f51d526434d29788c793c2cfea",
+  "device": "cpu"
+}

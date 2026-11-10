@@ -1,0 +1,9 @@
+# LDA baseline interpretation
+
+This completed experiment tested whether the supplied four image-folder labels can be discriminated by linear boundaries after training-only PCA. Both PCA and shrinkage LDA were fitted on 295 training images. The 32 principal components summarize 32,768 cropped pixel features and explain 32.54% of training pixel variance. Class priors were fixed uniformly before fitting.
+
+On 98 held-out images, LDA classified 61 correctly: accuracy 62.24%, balanced accuracy 60.32%, macro F1 0.5637, weighted F1 0.6423, and macro one-vs-rest ROC-AUC 0.8771. It correctly classified 21/28 Normal, 3/6 MI, 27/47 Abnormal, and 10/17 History_MI images. Normal and Abnormal have the strongest F1 scores (0.7000 and 0.7105). Abnormal precision is 0.9310 but recall is only 0.5745; many abnormal pages are missed. MI precision is 0.3333, and the six-example MI test denominator is too small for a stable sensitivity estimate.
+
+Training accuracy/macro F1 are 72.20%/0.6740, versus validation 62.24%/0.5296 and test 62.24%/0.5637. The gap is consistent with limited generalization in this small dataset. There is useful linear discriminative information in the chosen image representation, but these results do not establish that the classes or underlying physiological signals are linearly separable. PCA discards substantial image variance, and grid, lead layout, resolution loss, overlapping label semantics, and source artifacts may influence performance.
+
+Fit time was 0.233 seconds; total recorded run time was 1.215 seconds on CPU, excluding Python process startup and the earlier dataset audit/preparation. Seed: 42. No settings were selected using the test set. See `test_metrics.json`, `test_predictions.csv`, `training_metadata.json`, and `provenance.json` for the exact numerical evidence.

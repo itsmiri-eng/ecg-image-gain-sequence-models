@@ -1,0 +1,98 @@
+{
+  "model": "SmallCNNLSTM",
+  "config": {
+    "seed": 42,
+    "max_epochs": 30,
+    "patience": 7,
+    "batch_size": 16,
+    "learning_rate": 0.001,
+    "weight_decay": 0.0001,
+    "dropout": 0.25,
+    "device": "cpu",
+    "num_threads": 4,
+    "num_classes": 4,
+    "hidden_size": 32,
+    "pool_rows": 2,
+    "sequence_length": 16,
+    "gradient_clip_norm": 1.0
+  },
+  "input_shape": [
+    1,
+    128,
+    256
+  ],
+  "num_parameters": 44532,
+  "normalization": {
+    "method": "global training-pixel standardization",
+    "fit_partition": "train",
+    "mean": 0.06047950372331967,
+    "std": 0.08952904696916278,
+    "raw_std": 0.08952904696916278,
+    "std_floor": 1e-06
+  },
+  "class_counts_train": [
+    85,
+    18,
+    140,
+    52
+  ],
+  "class_weights": [
+    0.8676470518112183,
+    4.097222328186035,
+    0.5267857313156128,
+    1.4182692766189575
+  ],
+  "class_weight_formula": "n_train / (4 * training_class_count)",
+  "sequence_interpretation": "Left-to-right spatial feature columns; not calibrated time or digitized waveforms",
+  "spatial_sequence_shape": [
+    16,
+    128
+  ],
+  "sequence_order": "width left-to-right; each step flattens channels then vertical bands",
+  "lstm_layers": 1,
+  "bidirectional": false,
+  "sequence_aggregation": "mean of LSTM output steps",
+  "augmentation": "none",
+  "pretrained_weights": false,
+  "loss": "Class-weighted cross-entropy; aggregate divided by sum of target weights",
+  "checkpoint_selection": "Maximize validation macro F1, then balanced accuracy, then minimize weighted loss; earliest exact tie",
+  "best_selection_key": [
+    0.6001004753959426,
+    0.6114993973601434,
+    -0.9929922363921129
+  ],
+  "best_epoch": 27,
+  "epochs_run": 30,
+  "stopped_early": false,
+  "early_stopping": "Patience counts epochs without strict lexicographic validation improvement",
+  "best_train_metrics": {
+    "accuracy": 0.7627118644067796,
+    "balanced_accuracy": 0.6223470157293687,
+    "macro_f1": 0.6177062682191754,
+    "weighted_f1": 0.7596612360027669,
+    "loss": 0.8890940473022954
+  },
+  "best_validation_metrics": {
+    "accuracy": 0.7346938775510204,
+    "balanced_accuracy": 0.6114993973601434,
+    "macro_f1": 0.6001004753959426,
+    "weighted_f1": 0.7355167535789144,
+    "loss": 0.9929922363921129
+  },
+  "epoch_metric_definition": "Full-partition evaluation after epoch with dropout disabled",
+  "training_seconds": 48.18890991700755,
+  "device": "cpu",
+  "environment": {
+    "python": "3.12.4 | packaged by Anaconda, Inc. | (main, Jun 18 2024, 10:07:17) [Clang 14.0.6 ]",
+    "platform": "macOS-26.6.1-arm64-arm-64bit",
+    "machine": "arm64",
+    "torch": "2.9.1",
+    "numpy": "2.2.6",
+    "num_threads": 4,
+    "deterministic_algorithms": true
+  },
+  "reproducibility_limit": "CPU determinism configured; identical results across software/hardware versions are not guaranteed",
+  "checkpoint_path": "/Users/miriamistanboli/Downloads/ecg swiss/models/cnn_lstm/cnn_lstm_image_v1_seed42/best.pt",
+  "history_path": "/Users/miriamistanboli/Downloads/ecg swiss/models/cnn_lstm/cnn_lstm_image_v1_seed42/history.csv",
+  "runtime_seconds": 48.49856804200681
+}

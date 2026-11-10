@@ -1,0 +1,62 @@
+{
+  "sample_id": "01e055478056e70588b3",
+  "source_path": "ecg files/Abnormal/HB(59).jpg",
+  "existing_crop_top": 298,
+  "detection_roi_xyxy": [
+    200,
+    180,
+    650,
+    298
+  ],
+  "grayscale_threshold_below": 128,
+  "component_rule": "8-bit grayscale threshold, scipy.ndimage.label default connectivity; height>=30 and width<=15 within the displayed first-panel upper region",
+  "components_above_existing_crop": [
+    {
+      "bbox_xyxy": [
+        375,
+        222,
+        382,
+        298
+      ],
+      "dark_pixels": 422,
+      "height_above_crop": 76
+    },
+    {
+      "bbox_xyxy": [
+        252,
+        226,
+        260,
+        298
+      ],
+      "dark_pixels": 410,
+      "height_above_crop": 72
+    },
+    {
+      "bbox_xyxy": [
+        620,
+        229,
+        628,
+        298
+      ],
+      "dark_pixels": 401,
+      "height_above_crop": 69
+    },
+    {
+      "bbox_xyxy": [
+        496,
+        232,
+        504,
+        298
+      ],
+      "dark_pixels": 374,
+      "height_above_crop": 66
+    }
+  ],
+  "candidate_this_case_xyxy": [
+    66,
+    200,
+    2168,
+    1509
+  ],
+  "candidate_status": "Proposal for development-only inspection of this one illustrated source, not validated cohort-wide. May retain clinician-header text on right; header/privacy vs trace preservation unresolved."
+}

@@ -1,0 +1,18 @@
+{
+  "checked_utc": "2026-09-24T11:10:57.183075+00:00",
+  "status": "passed",
+  "metadata_sha256": "d84a192f2782d0ad062c3e5b6ce2cbe7210b204330222078d8837d950d47f913",
+  "manifest_sha256": "4e534b3b5afeda1b0347d36d18ad327aeb74776f5defbb377e0acc3eb1422ef9",
+  "images": 21388,
+  "normalization": {
+    "method": "global training-only ink mean/std after division by 255",
+    "fit_partition": "train",
+    "mean": 0.032673040408934095,
+    "std": 0.09723822329212023,
+    "raw_std": 0.09723822329212023,
+    "std_floor": 1e-06,
+    "training_images": 17084,
+    "training_pixels": 27553075200
+  },
+  "code_and_config_still_match_pretraining_checks": true
+}

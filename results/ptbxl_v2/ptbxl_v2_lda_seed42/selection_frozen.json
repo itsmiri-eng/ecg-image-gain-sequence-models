@@ -1,0 +1,6 @@
+{
+  "frozen_utc": "2026-11-01T14:58:35.817444+00:00",
+  "pca_components": 256,
+  "checkpoint_sha256": "23b54f178b4b5e7cfe76ffa61317d532ece8a2f4619def2b7d66882c23a34a26",
+  "test_inference_started": false
+}

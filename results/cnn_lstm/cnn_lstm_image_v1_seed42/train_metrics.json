@@ -1,0 +1,77 @@
+{
+  "n_samples": 295,
+  "accuracy": 0.7627118644067796,
+  "balanced_accuracy": 0.6223470157293687,
+  "macro_f1": 0.6177062682191754,
+  "weighted_f1": 0.7596612360027669,
+  "log_loss": 0.712577046743623,
+  "per_class": {
+    "Normal": {
+      "precision": 0.675,
+      "recall": 0.9529411764705882,
+      "f1-score": 0.7902439024390244,
+      "support": 85.0
+    },
+    "MI": {
+      "precision": 0.2,
+      "recall": 0.16666666666666666,
+      "f1-score": 0.18181818181818182,
+      "support": 18.0
+    },
+    "Abnormal": {
+      "precision": 0.940677966101695,
+      "recall": 0.7928571428571428,
+      "f1-score": 0.8604651162790697,
+      "support": 140.0
+    },
+    "History_MI": {
+      "precision": 0.7142857142857143,
+      "recall": 0.5769230769230769,
+      "f1-score": 0.6382978723404256,
+      "support": 52.0
+    }
+  },
+  "confusion_matrix": [
+    [
+      81,
+      0,
+      0,
+      4
+    ],
+    [
+      6,
+      3,
+      5,
+      4
+    ],
+    [
+      13,
+      12,
+      111,
+      4
+    ],
+    [
+      20,
+      0,
+      2,
+      30
+    ]
+  ],
+  "confusion_matrix_axes": "rows=true, columns=predicted; class_names order",
+  "class_names": [
+    "Normal",
+    "MI",
+    "Abnormal",
+    "History_MI"
+  ],
+  "zero_division_policy": "undefined precision/recall/F1 reported as zero",
+  "roc_auc_ovr_macro": 0.8827383324723029,
+  "roc_auc_ovr_weighted": 0.9373458860424858,
+  "roc_auc_per_class": {
+    "Normal": 0.9517086834733892,
+    "MI": 0.698154833533895,
+    "Abnormal": 0.9686175115207373,
+    "History_MI": 0.9124723013611903
+  },
+  "roc_auc_note": "One-vs-rest probability ranking, not diagnostic validation"
+}

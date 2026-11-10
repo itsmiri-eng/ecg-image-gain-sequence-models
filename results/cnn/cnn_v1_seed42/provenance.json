@@ -1,0 +1,42 @@
+{
+  "started_utc": "2026-09-23T09:29:07.493798+00:00",
+  "environment": {
+    "python": "3.12.4 | packaged by Anaconda, Inc. | (main, Jun 18 2024, 10:07:17) [Clang 14.0.6 ]",
+    "executable": "/opt/anaconda3/bin/python",
+    "platform": "macOS-26.6.1-arm64-arm-64bit",
+    "machine": "arm64",
+    "packages": {
+      "numpy": "2.2.6",
+      "scipy": "1.17.1",
+      "scikit-learn": "1.9.0",
+      "torch": "2.9.1",
+      "Pillow": "10.3.0",
+      "matplotlib": "3.10.0",
+      "joblib": "1.5.3"
+    }
+  },
+  "source_sha256": {
+    "src/__init__.py": "9dba87a6139d7e81cf9205c00dc10477d5a23180502a3dd8d1caf81110e0dc1b",
+    "src/audit_archive.py": "198f6b241fcb34e67f052fdba1d92302e8059648f5faae61d701dd697644989c",
+    "src/audit_near_duplicates.py": "bf2aaebd1b2dd47e56068a7bbd35de27af62f62626e4e198cc5179ab99067ba7",
+    "src/audit_ptbxl.py": "bce824e4491e5ba04f0bf011a75c3b8438644b39d179df05cf0aa40bdb23b8dc",
+    "src/common.py": "0214c2ec6d8d49ac9536a6602397d83f111e5bd64ec63f5d99633dee8c9bd672",
+    "src/compare.py": "4046d437b9d7b639f7b65ff4ea0c403266af5f8f781d66d28e25a21b5c5ce0ce",
+    "src/evaluation/__init__.py": "cffcf43dbf34a2d7a4c177220842db0f0fe5ee6540fcf9eaccc4f963ae36581a",
+    "src/evaluation/metrics.py": "3746c6e96d2d6ae10f807e9bf5572fc554fb3e5b6c90f404ccc1286beddb9546",
+    "src/models/__init__.py": "527bf4496887effc345874498f95364f383dc06d9ddd7d3321a9d2fb660638ea",
+    "src/models/cnn.py": "7ea7e26ba137f8c11acea5d6208e9383b85e1860387bf1568e6bbe36f366d6d3",
+    "src/models/lda.py": "d32533f50ede13abf9073628f13f43694e63711501daa860c92f825fd93cdf41",
+    "src/prepare.py": "b6ca7e0f0e849aba60deb5f34c72253b1489325c1235865355c3e2adc7e19cb1",
+    "src/preprocessing/__init__.py": "833273b96aa19010bb5c9f8fcc8498fd8ccbe4e3509f096c390fd02bc1c8bba9",
+    "src/preprocessing/images.py": "21d92afd7573b7bef0d99041acaa31770ae7b5ab8dab252eb1be5291f3ff2913",
+    "src/preprocessing/ocr_header_ids.py": "46a373f71ee4b26acbc30aa6fe73b37f5070c1a3649672281da1fae38e3a092f",
+    "src/preprocessing/template_header_ids.py": "8c5b79bbc07b66e792d774ea62dc99cd979fc80372b9e1ca1d120ae6de2a2e12",
+    "src/run.py": "a08ec6b36b4d9b63ced550bf2d64c0762cac9358bf88df6f71dbea5691e0b141",
+    "src/verify.py": "d0746bd9c105687f90871041fdce78958e202ed15fcf09607cc96991b12d6217"
+  },
+  "dataset_version": "image_dedup_8e04bd56af2f",
+  "split_version": "grouped_cf5a867a99c3",
+  "split_sha256": "d000c06a280c59bf60b883abbc0711a575b46e69843bb01c8593befde37d9616",
+  "cache_sha256": "ae7a5b80d1d8da2d371568a21f1547dd64f26e5d95b7657ec3b738a85f19f60e"
+}

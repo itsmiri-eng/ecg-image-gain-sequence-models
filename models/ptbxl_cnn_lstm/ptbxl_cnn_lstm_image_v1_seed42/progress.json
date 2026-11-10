@@ -1,0 +1,209 @@
+{
+  "status": "complete",
+  "phase": "complete",
+  "epoch": 19,
+  "max_epochs": 20,
+  "training_records": 17084,
+  "validation_records": 2146,
+  "test_data_accessed": false,
+  "batch": 1068,
+  "batches_in_epoch": 1068,
+  "records_seen_this_epoch": 17084,
+  "train_online_bce": 0.3154407829374207,
+  "learning_rate": 3.422702443389901e-05,
+  "elapsed_seconds": 10407.187633875,
+  "epoch_seconds": 487.59980104200076,
+  "best_epoch": 15,
+  "best_selection_key": [
+    0.8816467413965399,
+    0.7133665997754394,
+    -0.34040844654021485
+  ],
+  "epochs_without_selection_improvement": 4,
+  "validation_metrics": {
+    "n_samples": 2146,
+    "n_labels": 5,
+    "class_names": [
+      "NORM",
+      "MI",
+      "STTC",
+      "CD",
+      "HYP"
+    ],
+    "threshold": 0.5,
+    "decision_rule": "Independent probability >= 0.5 for each label; no row-sum normalization",
+    "subset_accuracy": 0.5377446411929171,
+    "label_accuracy": 0.8525629077353215,
+    "hamming_loss": 0.14743709226467847,
+    "macro_f1": 0.6237251014373303,
+    "micro_f1": 0.6918582002337359,
+    "weighted_f1": 0.6752875073636491,
+    "macro_precision": 0.7308094592614571,
+    "macro_recall": 0.5647433156550529,
+    "macro_roc_auc": 0.8807823331878559,
+    "micro_roc_auc": 0.8989776063456398,
+    "macro_average_precision": 0.7138619197655403,
+    "micro_average_precision": 0.7792481262541928,
+    "macro_roc_auc_defined_labels": 0.8807823331878559,
+    "macro_average_precision_defined_labels": 0.7138619197655403,
+    "roc_auc_defined_labels": [
+      "NORM",
+      "MI",
+      "STTC",
+      "CD",
+      "HYP"
+    ],
+    "average_precision_defined_labels": [
+      "NORM",
+      "MI",
+      "STTC",
+      "CD",
+      "HYP"
+    ],
+    "binary_cross_entropy": 0.34214611589894733,
+    "bce_probability_clip_epsilon": 2.220446049250313e-16,
+    "per_label": {
+      "NORM": {
+        "precision": 0.7922568460812087,
+        "recall": 0.8785340314136125,
+        "f1": 0.8331678252234359,
+        "specificity": 0.815281276238455,
+        "balanced_accuracy": 0.8469076538260338,
+        "tp": 839,
+        "fp": 220,
+        "tn": 971,
+        "fn": 116,
+        "support": 955,
+        "negative_support": 1191,
+        "predicted_positive": 1059,
+        "roc_auc": 0.9227689345483799,
+        "average_precision": 0.8958709380041971
+      },
+      "MI": {
+        "precision": 0.6965317919075145,
+        "recall": 0.4462962962962963,
+        "f1": 0.5440180586907449,
+        "specificity": 0.9346201743462017,
+        "balanced_accuracy": 0.690458235321249,
+        "tp": 241,
+        "fp": 105,
+        "tn": 1501,
+        "fn": 299,
+        "support": 540,
+        "negative_support": 1606,
+        "predicted_positive": 346,
+        "roc_auc": 0.8455421797887552,
+        "average_precision": 0.6431847997844311
+      },
+      "STTC": {
+        "precision": 0.722567287784679,
+        "recall": 0.6609848484848485,
+        "f1": 0.6904055390702275,
+        "specificity": 0.9171817058096415,
+        "balanced_accuracy": 0.789083277147245,
+        "tp": 349,
+        "fp": 134,
+        "tn": 1484,
+        "fn": 179,
+        "support": 528,
+        "negative_support": 1618,
+        "predicted_positive": 483,
+        "roc_auc": 0.9114600891485936,
+        "average_precision": 0.7577562913087572
+      },
+      "CD": {
+        "precision": 0.7922848664688428,
+        "recall": 0.5393939393939394,
+        "f1": 0.6418269230769231,
+        "specificity": 0.9576014536644458,
+        "balanced_accuracy": 0.7484976965291926,
+        "tp": 267,
+        "fp": 70,
+        "tn": 1581,
+        "fn": 228,
+        "support": 495,
+        "negative_support": 1651,
+        "predicted_positive": 337,
+        "roc_auc": 0.8718523820886025,
+        "average_precision": 0.7478891139104767
+      },
+      "HYP": {
+        "precision": 0.6504065040650406,
+        "recall": 0.29850746268656714,
+        "f1": 0.4092071611253197,
+        "specificity": 0.9771033013844516,
+        "balanced_accuracy": 0.6378053820355094,
+        "tp": 80,
+        "fp": 43,
+        "tn": 1835,
+        "fn": 188,
+        "support": 268,
+        "negative_support": 1878,
+        "predicted_positive": 123,
+        "roc_auc": 0.8522880803649485,
+        "average_precision": 0.5246084558198391
+      }
+    },
+    "confusion_matrices": {
+      "NORM": [
+        [
+          971,
+          220
+        ],
+        [
+          116,
+          839
+        ]
+      ],
+      "MI": [
+        [
+          1501,
+          105
+        ],
+        [
+          299,
+          241
+        ]
+      ],
+      "STTC": [
+        [
+          1484,
+          134
+        ],
+        [
+          179,
+          349
+        ]
+      ],
+      "CD": [
+        [
+          1581,
+          70
+        ],
+        [
+          228,
+          267
+        ]
+      ],
+      "HYP": [
+        [
+          1835,
+          43
+        ],
+        [
+          188,
+          80
+        ]
+      ]
+    },
+    "confusion_matrix_axes": "rows=true [negative, positive]; columns=predicted [negative, positive]",
+    "accuracy_definitions": {
+      "subset_accuracy": "Fraction of records with all five label decisions exactly correct",
+      "label_accuracy": "Fraction of individual record-label decisions correct",
+      "hamming_loss": "Fraction of individual record-label decisions incorrect"
+    },
+    "zero_division_policy": "Precision, recall and F1 use zero_division=0; weighted F1 is zero when total positive support is zero",
+    "undefined_metric_policy": "ROC-AUC needs positive and negative truth; AP needs positive truth. Full-five-label macro ranking scores are null if any label is undefined. Defined-label-only means are named separately. Specificity is null without negatives; balanced accuracy is null without both outcomes."
+  },
+  "epochs_run": 19
+}

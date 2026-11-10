@@ -1,0 +1,13 @@
+{
+  "status": "completed",
+  "completed_utc": "2026-11-07T00:02:35.279098+00:00",
+  "dataset": "china",
+  "inference_calls": 1,
+  "records": 9004,
+  "family": "ptbxl_v2",
+  "kind": "network",
+  "page": "adaptive",
+  "head": "hybrid_vit",
+  "seed": 45,
+  "predictions_sha256": "9035fec2ac51e4196be8ad2589b9a92bf83123df83aef37e20f4dc7694cb90e2"
+}

@@ -1,0 +1,13 @@
+{
+  "status": "completed",
+  "completed_utc": "2026-11-07T00:02:36.907843+00:00",
+  "dataset": "china",
+  "inference_calls": 1,
+  "records": 9004,
+  "family": "ptbxl_spatiotemporal",
+  "kind": "network",
+  "page": "adaptive",
+  "head": "temporal_conv",
+  "seed": 42,
+  "predictions_sha256": "69e1ea0c0eac58274ecd750548a44e3bdf01ad754e93cfd7ae498df42c0aa848"
+}

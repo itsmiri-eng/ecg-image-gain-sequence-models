@@ -1,0 +1,16 @@
+{
+  "status": "passed",
+  "checked_utc": "2026-09-24T10:34:26.653016+00:00",
+  "pages_decoded_and_hashed": 21799,
+  "failures": [],
+  "decoded_image_duplicates": [],
+  "duplicates_crossing_partitions": [],
+  "all_output_files_accounted_for": true,
+  "all_source_records_accounted_for": true,
+  "manifest_hashes_verified": true,
+  "official_patient_grouping_verified": true,
+  "classification_target_mapping_verified": true,
+  "model_training_performed": false,
+  "test_images_visually_inspected": false,
+  "runtime_seconds": 135.06390483299037
+}

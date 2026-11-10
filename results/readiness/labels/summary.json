@@ -1,0 +1,524 @@
+{
+  "review_scope": "metadata and grouping consistency; no clinical adjudication or label changes",
+  "dataset_version": "image_dedup_8e04bd56af2f",
+  "split_version": "grouped_cf5a867a99c3",
+  "source_image_hashes_reverified": 928,
+  "source_images": 928,
+  "retained_canonical_images": 491,
+  "excluded_exact_copies": 437,
+  "exact_file_groups_with_label_conflicts": 0,
+  "exact_pixel_groups_with_label_conflicts": 0,
+  "identical_model_input_groups_with_label_conflicts": 0,
+  "printed_ID_proxies": 311,
+  "frozen_groups": 311,
+  "groups_with_multiple_printed_ID_proxies": 0,
+  "groups_crossing_partitions": 0,
+  "printed_IDs_crossing_partitions": 0,
+  "partition_counts": [
+    {
+      "partition": "train",
+      "records": 295,
+      "distinct_frozen_groups": 187,
+      "distinct_printed_id_proxies": 187,
+      "mixed_folder_groups": 38,
+      "records_in_mixed_folder_groups": 133,
+      "repeated_record_groups": 49
+    },
+    {
+      "partition": "validation",
+      "records": 98,
+      "distinct_frozen_groups": 63,
+      "distinct_printed_id_proxies": 63,
+      "mixed_folder_groups": 12,
+      "records_in_mixed_folder_groups": 41,
+      "repeated_record_groups": 18
+    },
+    {
+      "partition": "test",
+      "records": 98,
+      "distinct_frozen_groups": 61,
+      "distinct_printed_id_proxies": 61,
+      "mixed_folder_groups": 12,
+      "records_in_mixed_folder_groups": 46,
+      "repeated_record_groups": 15
+    },
+    {
+      "partition": "all",
+      "records": 491,
+      "distinct_frozen_groups": 311,
+      "distinct_printed_id_proxies": 311,
+      "mixed_folder_groups": 62,
+      "records_in_mixed_folder_groups": 220,
+      "repeated_record_groups": 82
+    }
+  ],
+  "class_group_counts": [
+    {
+      "partition": "train",
+      "class_name": "Normal",
+      "records": 85,
+      "distinct_printed_id_proxies": 70,
+      "distinct_frozen_groups": 70,
+      "single_label_groups": 43,
+      "mixed_folder_groups": 27
+    },
+    {
+      "partition": "train",
+      "class_name": "MI",
+      "records": 18,
+      "distinct_printed_id_proxies": 18,
+      "distinct_frozen_groups": 18,
+      "single_label_groups": 8,
+      "mixed_folder_groups": 10
+    },
+    {
+      "partition": "train",
+      "class_name": "Abnormal",
+      "records": 140,
+      "distinct_printed_id_proxies": 104,
+      "distinct_frozen_groups": 104,
+      "single_label_groups": 73,
+      "mixed_folder_groups": 31
+    },
+    {
+      "partition": "train",
+      "class_name": "History_MI",
+      "records": 52,
+      "distinct_printed_id_proxies": 45,
+      "distinct_frozen_groups": 45,
+      "single_label_groups": 25,
+      "mixed_folder_groups": 20
+    },
+    {
+      "partition": "validation",
+      "class_name": "Normal",
+      "records": 29,
+      "distinct_printed_id_proxies": 25,
+      "distinct_frozen_groups": 25,
+      "single_label_groups": 15,
+      "mixed_folder_groups": 10
+    },
+    {
+      "partition": "validation",
+      "class_name": "MI",
+      "records": 6,
+      "distinct_printed_id_proxies": 5,
+      "distinct_frozen_groups": 5,
+      "single_label_groups": 4,
+      "mixed_folder_groups": 1
+    },
+    {
+      "partition": "validation",
+      "class_name": "Abnormal",
+      "records": 46,
+      "distinct_printed_id_proxies": 33,
+      "distinct_frozen_groups": 33,
+      "single_label_groups": 23,
+      "mixed_folder_groups": 10
+    },
+    {
+      "partition": "validation",
+      "class_name": "History_MI",
+      "records": 17,
+      "distinct_printed_id_proxies": 14,
+      "distinct_frozen_groups": 14,
+      "single_label_groups": 9,
+      "mixed_folder_groups": 5
+    },
+    {
+      "partition": "test",
+      "class_name": "Normal",
+      "records": 28,
+      "distinct_printed_id_proxies": 22,
+      "distinct_frozen_groups": 22,
+      "single_label_groups": 13,
+      "mixed_folder_groups": 9
+    },
+    {
+      "partition": "test",
+      "class_name": "MI",
+      "records": 6,
+      "distinct_printed_id_proxies": 6,
+      "distinct_frozen_groups": 6,
+      "single_label_groups": 3,
+      "mixed_folder_groups": 3
+    },
+    {
+      "partition": "test",
+      "class_name": "Abnormal",
+      "records": 47,
+      "distinct_printed_id_proxies": 36,
+      "distinct_frozen_groups": 36,
+      "single_label_groups": 25,
+      "mixed_folder_groups": 11
+    },
+    {
+      "partition": "test",
+      "class_name": "History_MI",
+      "records": 17,
+      "distinct_printed_id_proxies": 14,
+      "distinct_frozen_groups": 14,
+      "single_label_groups": 8,
+      "mixed_folder_groups": 6
+    },
+    {
+      "partition": "all",
+      "class_name": "Normal",
+      "records": 142,
+      "distinct_printed_id_proxies": 117,
+      "distinct_frozen_groups": 117,
+      "single_label_groups": 71,
+      "mixed_folder_groups": 46
+    },
+    {
+      "partition": "all",
+      "class_name": "MI",
+      "records": 30,
+      "distinct_printed_id_proxies": 29,
+      "distinct_frozen_groups": 29,
+      "single_label_groups": 15,
+      "mixed_folder_groups": 14
+    },
+    {
+      "partition": "all",
+      "class_name": "Abnormal",
+      "records": 233,
+      "distinct_printed_id_proxies": 173,
+      "distinct_frozen_groups": 173,
+      "single_label_groups": 121,
+      "mixed_folder_groups": 52
+    },
+    {
+      "partition": "all",
+      "class_name": "History_MI",
+      "records": 86,
+      "distinct_printed_id_proxies": 73,
+      "distinct_frozen_groups": 73,
+      "single_label_groups": 42,
+      "mixed_folder_groups": 31
+    }
+  ],
+  "group_compositions": [
+    {
+      "partition": "train",
+      "class_composition": "Abnormal",
+      "n_groups": 73,
+      "n_records": 81
+    },
+    {
+      "partition": "train",
+      "class_composition": "Abnormal+History_MI",
+      "n_groups": 7,
+      "n_records": 25
+    },
+    {
+      "partition": "train",
+      "class_composition": "History_MI",
+      "n_groups": 25,
+      "n_records": 26
+    },
+    {
+      "partition": "train",
+      "class_composition": "MI",
+      "n_groups": 8,
+      "n_records": 8
+    },
+    {
+      "partition": "train",
+      "class_composition": "MI+Abnormal",
+      "n_groups": 3,
+      "n_records": 6
+    },
+    {
+      "partition": "train",
+      "class_composition": "MI+History_MI",
+      "n_groups": 1,
+      "n_records": 2
+    },
+    {
+      "partition": "train",
+      "class_composition": "Normal",
+      "n_groups": 43,
+      "n_records": 47
+    },
+    {
+      "partition": "train",
+      "class_composition": "Normal+Abnormal",
+      "n_groups": 13,
+      "n_records": 38
+    },
+    {
+      "partition": "train",
+      "class_composition": "Normal+Abnormal+History_MI",
+      "n_groups": 4,
+      "n_records": 26
+    },
+    {
+      "partition": "train",
+      "class_composition": "Normal+History_MI",
+      "n_groups": 4,
+      "n_records": 8
+    },
+    {
+      "partition": "train",
+      "class_composition": "Normal+MI+Abnormal",
+      "n_groups": 2,
+      "n_records": 8
+    },
+    {
+      "partition": "train",
+      "class_composition": "Normal+MI+Abnormal+History_MI",
+      "n_groups": 2,
+      "n_records": 13
+    },
+    {
+      "partition": "train",
+      "class_composition": "Normal+MI+History_MI",
+      "n_groups": 2,
+      "n_records": 7
+    },
+    {
+      "partition": "validation",
+      "class_composition": "Abnormal",
+      "n_groups": 23,
+      "n_records": 25
+    },
+    {
+      "partition": "validation",
+      "class_composition": "Abnormal+History_MI",
+      "n_groups": 1,
+      "n_records": 2
+    },
+    {
+      "partition": "validation",
+      "class_composition": "History_MI",
+      "n_groups": 9,
+      "n_records": 10
+    },
+    {
+      "partition": "validation",
+      "class_composition": "MI",
+      "n_groups": 4,
+      "n_records": 5
+    },
+    {
+      "partition": "validation",
+      "class_composition": "MI+Abnormal",
+      "n_groups": 1,
+      "n_records": 2
+    },
+    {
+      "partition": "validation",
+      "class_composition": "Normal",
+      "n_groups": 15,
+      "n_records": 17
+    },
+    {
+      "partition": "validation",
+      "class_composition": "Normal+Abnormal",
+      "n_groups": 6,
+      "n_records": 21
+    },
+    {
+      "partition": "validation",
+      "class_composition": "Normal+Abnormal+History_MI",
+      "n_groups": 2,
+      "n_records": 12
+    },
+    {
+      "partition": "validation",
+      "class_composition": "Normal+History_MI",
+      "n_groups": 2,
+      "n_records": 4
+    },
+    {
+      "partition": "test",
+      "class_composition": "Abnormal",
+      "n_groups": 25,
+      "n_records": 27
+    },
+    {
+      "partition": "test",
+      "class_composition": "Abnormal+History_MI",
+      "n_groups": 2,
+      "n_records": 4
+    },
+    {
+      "partition": "test",
+      "class_composition": "History_MI",
+      "n_groups": 8,
+      "n_records": 9
+    },
+    {
+      "partition": "test",
+      "class_composition": "MI",
+      "n_groups": 3,
+      "n_records": 3
+    },
+    {
+      "partition": "test",
+      "class_composition": "MI+Abnormal",
+      "n_groups": 1,
+      "n_records": 2
+    },
+    {
+      "partition": "test",
+      "class_composition": "Normal",
+      "n_groups": 13,
+      "n_records": 13
+    },
+    {
+      "partition": "test",
+      "class_composition": "Normal+Abnormal",
+      "n_groups": 3,
+      "n_records": 7
+    },
+    {
+      "partition": "test",
+      "class_composition": "Normal+Abnormal+History_MI",
+      "n_groups": 3,
+      "n_records": 20
+    },
+    {
+      "partition": "test",
+      "class_composition": "Normal+History_MI",
+      "n_groups": 1,
+      "n_records": 2
+    },
+    {
+      "partition": "test",
+      "class_composition": "Normal+MI+Abnormal",
+      "n_groups": 2,
+      "n_records": 11
+    },
+    {
+      "partition": "all",
+      "class_composition": "Abnormal",
+      "n_groups": 121,
+      "n_records": 133
+    },
+    {
+      "partition": "all",
+      "class_composition": "Abnormal+History_MI",
+      "n_groups": 10,
+      "n_records": 31
+    },
+    {
+      "partition": "all",
+      "class_composition": "History_MI",
+      "n_groups": 42,
+      "n_records": 45
+    },
+    {
+      "partition": "all",
+      "class_composition": "MI",
+      "n_groups": 15,
+      "n_records": 16
+    },
+    {
+      "partition": "all",
+      "class_composition": "MI+Abnormal",
+      "n_groups": 5,
+      "n_records": 10
+    },
+    {
+      "partition": "all",
+      "class_composition": "MI+History_MI",
+      "n_groups": 1,
+      "n_records": 2
+    },
+    {
+      "partition": "all",
+      "class_composition": "Normal",
+      "n_groups": 71,
+      "n_records": 77
+    },
+    {
+      "partition": "all",
+      "class_composition": "Normal+Abnormal",
+      "n_groups": 22,
+      "n_records": 66
+    },
+    {
+      "partition": "all",
+      "class_composition": "Normal+Abnormal+History_MI",
+      "n_groups": 9,
+      "n_records": 58
+    },
+    {
+      "partition": "all",
+      "class_composition": "Normal+History_MI",
+      "n_groups": 7,
+      "n_records": 14
+    },
+    {
+      "partition": "all",
+      "class_composition": "Normal+MI+Abnormal",
+      "n_groups": 4,
+      "n_records": 19
+    },
+    {
+      "partition": "all",
+      "class_composition": "Normal+MI+Abnormal+History_MI",
+      "n_groups": 2,
+      "n_records": 13
+    },
+    {
+      "partition": "all",
+      "class_composition": "Normal+MI+History_MI",
+      "n_groups": 2,
+      "n_records": 7
+    }
+  ],
+  "development_adjudication_queue_records": 393,
+  "development_adjudication_queue_groups": 250,
+  "test_records_in_adjudication_queue": 0,
+  "verified_clinical_labels": 0,
+  "adjudication_fields": [
+    "verified_label",
+    "reviewer",
+    "evidence",
+    "status"
+  ],
+  "labels_changed": false,
+  "split_changed": false,
+  "queue_scope": "train_and_validation_only; all canonical development samples; no test rows or model predictions",
+  "model_predictions_read": false,
+  "near_copy_evidence": {
+    "source": "data/audit/near_duplicate_summary.json",
+    "candidate_pairs": 1508,
+    "accepted_links": 0,
+    "limitation": "Similarity screen can miss shifted/rescaled/redrawn ECGs; no assertion of exhaustive near-duplicate removal or patient independence"
+  },
+  "archive_evidence": {
+    "source": "data/audit/archive_provenance.json",
+    "exact_byte_matches": 928,
+    "scope": "Existing archive/source verification; all current enumerated raw hashes also reverified in this review"
+  },
+  "limitations": [
+    "Distinct printed IDs or frozen groups are independence proxies, not verified independent patients.",
+    "Repeated IDs with different folder labels do not establish that either label is wrong.",
+    "Supplied folder categories are not independently adjudicated diagnoses.",
+    "The local source metadata cannot settle whether IDs denote patients, examinations, or reused counters.",
+    "The similarity screen is not exhaustive near-copy detection.",
+    "Per-class group counts overlap where the same frozen group contains multiple labels.",
+    "Header transcription verification supports ID reading, not diagnosis or patient identity."
+  ],
+  "frozen_input_sha256": {
+    "data/splits/fixed_split.csv": "d000c06a280c59bf60b883abbc0711a575b46e69843bb01c8593befde37d9616",
+    "data/splits/protocol.json": "c93d3a24bd4f084335ddf1e8ca78e4e9369a615bc1c73f0ea21c47d71b42ec4f",
+    "data/audit/dataset_audit.json": "9ac84527d7a49556af56c4993b31de9ccfd6b8b50204e633924951c15e68d637",
+    "data/audit/source_manifest.csv": "f1288be7d1646b13acea0575759f752fdf445ece4b6211c92ece4bf7721ccff4",
+    "data/audit/exclusions.csv": "2c9e048b06e9649b7004408509b93f926d05fdedb9c654e2e5585527f24047c9",
+    "data/audit/header_ids.csv": "4e4e0d4bba994b2998aa0b2537b509b53030d1b4ae7225d57cbc8267883a3dd9",
+    "data/audit/header_template_summary.json": "cc48456968081dbf35480b643851c6245b4642ae044b9c1e49830a207dbe4378",
+    "data/audit/archive_provenance.json": "aad8698d578a4feb62fd997a0e8f24f5ae9a522806863df55f19ab0ad72747e8",
+    "data/audit/near_duplicate_summary.json": "babbbd9a8743b0f65fb9ee25d2154759b8889c85bfedd7ec278935a2f22927ea",
+    "data/audit/near_duplicate_links.csv": "75cfd946e8952d5290844409408df8cccfc06d3fe17850b4c82984ac1e78d390",
+    "experiments/configs/baseline_v1.json": "e1922e88ddba6a5df29e8fa52a4af3d14894a91d4c3702f49602a52916a4695a",
+    "data/processed/inputs_v1.npz": "ae7a5b80d1d8da2d371568a21f1547dd64f26e5d95b7657ec3b738a85f19f60e"
+  },
+  "frozen_inputs_unchanged": true,
+  "script_sha256": "70bb4fdcffb418a6e5e5dd706d41c7d8cf9bff9b0e3a0ebc11f3f182b7cffc49",
+  "reproduce": "python3 -m src.review_labels"
+}

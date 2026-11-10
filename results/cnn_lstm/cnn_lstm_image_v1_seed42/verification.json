@@ -1,0 +1,23 @@
+{
+  "checked_utc": "2026-09-24T08:06:04.882562+00:00",
+  "baseline_preservation": {
+    "immutable_baseline_artifacts_checked": 66,
+    "changed_baseline_artifacts": [],
+    "original_log_sha256": "283360ec5f812d0b577c41805cbbb9563e494e7508f3e5867fb679ca85df4999",
+    "original_log_byte_prefix_preserved": true,
+    "original_log_rows_preserved": 2,
+    "appended_log_rows": 1,
+    "current_log_sha256": "0b014c1b9affe39347308f6de50127941b629c2223bcdb2221169c836a17d395"
+  },
+  "configuration_and_sources_frozen_before_training": true,
+  "checkpoint_selection_matches_history": true,
+  "selected_epoch": 27,
+  "train_only_normalization_and_weights_verified": true,
+  "checkpoint_replay_partition": "train",
+  "checkpoint_replay_records": 295,
+  "checkpoint_replay_maximum_probability_difference": 0.0,
+  "checkpoint_replay_prediction_disagreements": 0,
+  "new_test_inference_performed_by_verification": false,
+  "run_test_inference_calls": 1,
+  "frozen_checkpoint_precedes_test_inference": true
+}

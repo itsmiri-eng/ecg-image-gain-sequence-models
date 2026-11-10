@@ -1,0 +1,37 @@
+test_fitting_is_reproducible_and_checkpoint_is_self_contained (test_cnn.CNNContractTest.test_fitting_is_reproducible_and_checkpoint_is_self_contained) ... CNN epoch 01/2 train_loss=1.3945 val_loss=1.4370 train_macro_f1=0.1429 val_macro_f1=0.1000 seconds=0.22
+CNN epoch 02/2 train_loss=1.4019 val_loss=1.5041 train_macro_f1=0.1429 val_macro_f1=0.1000 seconds=0.06
+CNN epoch 01/2 train_loss=1.3945 val_loss=1.4370 train_macro_f1=0.1429 val_macro_f1=0.1000 seconds=0.06
+CNN epoch 02/2 train_loss=1.4019 val_loss=1.5041 train_macro_f1=0.1429 val_macro_f1=0.1000 seconds=0.05
+ok
+test_missing_training_class_fails_before_artifacts_are_written (test_cnn.CNNContractTest.test_missing_training_class_fails_before_artifacts_are_written) ... ok
+test_lexicographic_selection_priority (test_cnn_lstm.SpatialSequenceTest.test_lexicographic_selection_priority) ... ok
+test_width_order_and_vertical_bands_are_preserved (test_cnn_lstm.SpatialSequenceTest.test_width_order_and_vertical_bands_are_preserved) ... ok
+test_checkpoint_prefers_f1_over_loss_and_retains_earliest_exact_tie (test_cnn_lstm.TrainingContractTest.test_checkpoint_prefers_f1_over_loss_and_retains_earliest_exact_tie) ... Spatial CNN+LSTM epoch 01/5 train_loss=1.0000 val_loss=0.9000 val_macro_f1=0.2000 val_bal_acc=0.3000 selected=True seconds=0.13
+Spatial CNN+LSTM epoch 02/5 train_loss=1.0000 val_loss=1.3000 val_macro_f1=0.4000 val_bal_acc=0.4000 selected=True seconds=0.06
+Spatial CNN+LSTM epoch 03/5 train_loss=1.0000 val_loss=1.3000 val_macro_f1=0.4000 val_bal_acc=0.4000 selected=False seconds=0.04
+ok
+test_determinism_train_only_normalization_checkpoint_and_no_overwrite (test_cnn_lstm.TrainingContractTest.test_determinism_train_only_normalization_checkpoint_and_no_overwrite) ... Spatial CNN+LSTM epoch 01/2 train_loss=1.3940 val_loss=1.4066 val_macro_f1=0.1000 val_bal_acc=0.2500 selected=True seconds=0.07
+Spatial CNN+LSTM epoch 02/2 train_loss=1.3889 val_loss=1.4058 val_macro_f1=0.1000 val_bal_acc=0.2500 selected=True seconds=0.08
+Spatial CNN+LSTM epoch 01/2 train_loss=1.3940 val_loss=1.4066 val_macro_f1=0.1000 val_bal_acc=0.2500 selected=True seconds=0.06
+Spatial CNN+LSTM epoch 02/2 train_loss=1.3889 val_loss=1.4058 val_macro_f1=0.1000 val_bal_acc=0.2500 selected=True seconds=0.06
+ok
+test_append_preserves_exact_original_bytes_and_rows (test_cnn_lstm_runner.PreservationTest.test_append_preserves_exact_original_bytes_and_rows) ... ok
+test_duplicate_id_and_wrong_schema_rejected_before_write (test_cnn_lstm_runner.PreservationTest.test_duplicate_id_and_wrong_schema_rejected_before_write) ... ok
+test_malformed_or_duplicate_appended_rows_are_rejected (test_cnn_lstm_runner.PreservationTest.test_malformed_or_duplicate_appended_rows_are_rejected) ... ok
+test_modified_model_snapshot_or_original_prefix_is_rejected (test_cnn_lstm_runner.PreservationTest.test_modified_model_snapshot_or_original_prefix_is_rejected) ... ok
+test_failed_completion_append_does_not_leave_completed_run_claim (test_cnn_lstm_runner.RunnerTest.test_failed_completion_append_does_not_leave_completed_run_claim) ... ok
+test_frozen_split_mismatch_fails_before_training_and_test (test_cnn_lstm_runner.RunnerTest.test_frozen_split_mismatch_fails_before_training_and_test) ... ok
+test_invalid_development_probabilities_fail_before_test (test_cnn_lstm_runner.RunnerTest.test_invalid_development_probabilities_fail_before_test) ... ok
+test_logging_error_does_not_mask_original_training_failure (test_cnn_lstm_runner.RunnerTest.test_logging_error_does_not_mask_original_training_failure) ... ok
+test_source_mutation_refuses_all_inference (test_cnn_lstm_runner.RunnerTest.test_source_mutation_refuses_all_inference) ... ok
+test_training_excludes_test_and_success_is_appended_once (test_cnn_lstm_runner.RunnerTest.test_training_excludes_test_and_success_is_appended_once) ... ok
+test_training_failure_logged_without_any_inference (test_cnn_lstm_runner.RunnerTest.test_training_failure_logged_without_any_inference) ... ok
+test_invalid_probabilities_fail_and_absent_class_auc_is_not_invented (test_pipeline.EvaluationTest.test_invalid_probabilities_fail_and_absent_class_auc_is_not_invented) ... ok
+test_metrics_match_hand_calculated_imbalanced_confusion_matrix (test_pipeline.EvaluationTest.test_metrics_match_hand_calculated_imbalanced_confusion_matrix) ... ok
+test_duplicates_report_ids_and_audited_links_cannot_cross_splits (test_pipeline.FrozenSplitTest.test_duplicates_report_ids_and_audited_links_cannot_cross_splits) ... ok
+test_pca_centers_on_training_only_and_checkpoint_round_trip (test_pipeline.LDATrainOnlyTest.test_pca_centers_on_training_only_and_checkpoint_round_trip) ... ok
+
+----------------------------------------------------------------------
+Ran 21 tests in 4.025s
+
+OK

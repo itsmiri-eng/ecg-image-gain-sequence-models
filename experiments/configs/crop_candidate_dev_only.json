@@ -1,0 +1,13 @@
+{
+  "status": "development_preview_only_not_adopted",
+  "sample_id": "01e055478056e70588b3",
+  "required_partition": "train",
+  "crop_xyxy_pixels": [66, 200, 2168, 1509],
+  "target_width": 512,
+  "target_height": 320,
+  "resize": "aspect_preserving_bilinear_with_white_padding",
+  "purpose": "Demonstrate retaining the four known top-row peaks in HB(59) without the baseline aspect distortion.",
+  "limitations": ["one training case only", "right header text can remain", "not a validated cohort-wide header-removal method", "no model performance measured", "changes crop, resolution and resize geometry together; future ablations must account for these changes"],
+  "input_cache_replaced": false,
+  "test_images_used": false
+}

@@ -1,0 +1,3230 @@
+{
+  "created_utc": "2026-11-01T11:14:33.960864+00:00",
+  "git_status": "not a git repository; no git history/commits configured",
+  "scope": "All top-level entries and recursive file inventory; data record integrity separately audited. Source AST inventory includes every active src/test module and historical notebook-checkpoint script.",
+  "top_level_inventory": {
+    ".DS_Store": {
+      "file_count": 1,
+      "total_bytes": 12292,
+      "extensions": {
+        "(none)": 1
+      }
+    },
+    ".gitignore": {
+      "file_count": 1,
+      "total_bytes": 489,
+      "extensions": {
+        "(none)": 1
+      }
+    },
+    ".ipynb_checkpoints": {
+      "file_count": 1,
+      "total_bytes": 8885,
+      "extensions": {
+        ".py": 1
+      }
+    },
+    ".matplotlib": {
+      "file_count": 1,
+      "total_bytes": 279616,
+      "extensions": {
+        ".json": 1
+      }
+    },
+    "AI_Transforms_Paper_ECGs___Methodology_paper.pdf": {
+      "file_count": 1,
+      "total_bytes": 1164132,
+      "extensions": {
+        ".pdf": 1
+      }
+    },
+    "ECG_Paper___Miriam.pdf": {
+      "file_count": 1,
+      "total_bytes": 2379383,
+      "extensions": {
+        ".pdf": 1
+      }
+    },
+    "ECG_Project_Logbook.docx": {
+      "file_count": 1,
+      "total_bytes": 38144,
+      "extensions": {
+        ".docx": 1
+      }
+    },
+    "ECG_Project_Presentation.pptx": {
+      "file_count": 1,
+      "total_bytes": 273056,
+      "extensions": {
+        ".pptx": 1
+      }
+    },
+    "ECG_Simple_To_Do.xlsx": {
+      "file_count": 1,
+      "total_bytes": 5687,
+      "extensions": {
+        ".xlsx": 1
+      }
+    },
+    "ECG_from_paper_to_diagnosis.pdf": {
+      "file_count": 1,
+      "total_bytes": 1830380,
+      "extensions": {
+        ".pdf": 1
+      }
+    },
+    "README.md": {
+      "file_count": 1,
+      "total_bytes": 21237,
+      "extensions": {
+        ".md": 1
+      }
+    },
+    "architecture.png": {
+      "file_count": 1,
+      "total_bytes": 1606028,
+      "extensions": {
+        ".png": 1
+      }
+    },
+    "architecture_overview.png": {
+      "file_count": 1,
+      "total_bytes": 1564320,
+      "extensions": {
+        ".png": 1
+      }
+    },
+    "data": {
+      "file_count": 65022,
+      "total_bytes": 4871134827,
+      "extensions": {
+        ".npz": 2,
+        ".json": 21813,
+        ".csv": 17,
+        ".png": 43188,
+        ".md": 2
+      }
+    },
+    "docs": {
+      "file_count": 24,
+      "total_bytes": 180183,
+      "extensions": {
+        ".md": 22,
+        ".txt": 2
+      }
+    },
+    "ecg files": {
+      "file_count": 931,
+      "total_bytes": 615966276,
+      "extensions": {
+        "(none)": 2,
+        ".jpg": 929
+      }
+    },
+    "ecg_manuscript_corrected_v2.zip": {
+      "file_count": 1,
+      "total_bytes": 1899242,
+      "extensions": {
+        ".zip": 1
+      }
+    },
+    "ecg_manuscript_corrected_v3.zip": {
+      "file_count": 1,
+      "total_bytes": 1900940,
+      "extensions": {
+        ".zip": 1
+      }
+    },
+    "ecp google doc.pdf": {
+      "file_count": 1,
+      "total_bytes": 1145154,
+      "extensions": {
+        ".pdf": 1
+      }
+    },
+    "experiments": {
+      "file_count": 80,
+      "total_bytes": 4174156,
+      "extensions": {
+        ".csv": 6,
+        ".log": 24,
+        ".txt": 11,
+        ".json": 31,
+        ".py": 8
+      }
+    },
+    "mendely images.zip": {
+      "file_count": 1,
+      "total_bytes": 203349349,
+      "extensions": {
+        ".zip": 1
+      }
+    },
+    "models": {
+      "file_count": 26,
+      "total_bytes": 5383344,
+      "extensions": {
+        ".json": 9,
+        ".csv": 4,
+        ".pt": 4,
+        ".png": 4,
+        ".txt": 4,
+        ".joblib": 1
+      }
+    },
+    "notebooks": {
+      "file_count": 1,
+      "total_bytes": 268,
+      "extensions": {
+        ".md": 1
+      }
+    },
+    "physionet paper.pdf": {
+      "file_count": 1,
+      "total_bytes": 6079409,
+      "extensions": {
+        ".pdf": 1
+      }
+    },
+    "proj desc.pdf": {
+      "file_count": 1,
+      "total_bytes": 264594,
+      "extensions": {
+        ".pdf": 1
+      }
+    },
+    "ptb-xl-a-large-publicly-available-electrocardiography-dataset-1.0.3": {
+      "file_count": 87207,
+      "total_bytes": 3181550658,
+      "extensions": {
+        ".txt": 4,
+        "(none)": 4,
+        ".csv": 2,
+        ".py": 1,
+        ".dat": 43598,
+        ".hea": 43598
+      }
+    },
+    "report april 9 .pdf": {
+      "file_count": 1,
+      "total_bytes": 784830,
+      "extensions": {
+        ".pdf": 1
+      }
+    },
+    "requirements-audit-macos.txt": {
+      "file_count": 1,
+      "total_bytes": 205,
+      "extensions": {
+        ".txt": 1
+      }
+    },
+    "requirements-ptbxl-images.txt": {
+      "file_count": 1,
+      "total_bytes": 208,
+      "extensions": {
+        ".txt": 1
+      }
+    },
+    "requirements.txt": {
+      "file_count": 1,
+      "total_bytes": 206,
+      "extensions": {
+        ".txt": 1
+      }
+    },
+    "results": {
+      "file_count": 237,
+      "total_bytes": 54473089,
+      "extensions": {
+        ".csv": 61,
+        ".md": 6,
+        ".png": 62,
+        ".json": 74,
+        ".svg": 10,
+        ".py": 15,
+        ".jpg": 9
+      }
+    },
+    "src": {
+      "file_count": 81,
+      "total_bytes": 1251647,
+      "extensions": {
+        ".py": 41,
+        ".pyc": 40
+      }
+    },
+    "tests": {
+      "file_count": 36,
+      "total_bytes": 576599,
+      "extensions": {
+        ".py": 18,
+        ".pyc": 18
+      }
+    }
+  },
+  "non_dataset_file_inventory": [
+    {
+      "path": ".DS_Store",
+      "bytes": 12292,
+      "modified_utc": "2026-09-23T10:28:06.861573+00:00"
+    },
+    {
+      "path": ".gitignore",
+      "bytes": 489,
+      "modified_utc": "2026-09-24T10:21:21.228670+00:00"
+    },
+    {
+      "path": ".ipynb_checkpoints/weirdwithseed-checkpoint.py",
+      "bytes": 8885,
+      "modified_utc": "2026-04-08T11:16:31.749694+00:00"
+    },
+    {
+      "path": ".matplotlib/fontlist-v390.json",
+      "bytes": 279616,
+      "modified_utc": "2026-09-23T09:19:06.582608+00:00"
+    },
+    {
+      "path": "AI_Transforms_Paper_ECGs___Methodology_paper.pdf",
+      "bytes": 1164132,
+      "modified_utc": "2026-04-08T07:05:36.042851+00:00"
+    },
+    {
+      "path": "ECG_Paper___Miriam.pdf",
+      "bytes": 2379383,
+      "modified_utc": "2026-09-02T18:03:51.531989+00:00"
+    },
+    {
+      "path": "ECG_Project_Logbook.docx",
+      "bytes": 38144,
+      "modified_utc": "2026-09-21T10:09:51.606535+00:00"
+    },
+    {
+      "path": "ECG_Project_Presentation.pptx",
+      "bytes": 273056,
+      "modified_utc": "2026-04-15T06:30:33.265604+00:00"
+    },
+    {
+      "path": "ECG_Simple_To_Do.xlsx",
+      "bytes": 5687,
+      "modified_utc": "2026-09-02T18:31:10.781920+00:00"
+    },
+    {
+      "path": "ECG_from_paper_to_diagnosis.pdf",
+      "bytes": 1830380,
+      "modified_utc": "2026-04-08T07:06:41.803495+00:00"
+    },
+    {
+      "path": "README.md",
+      "bytes": 21237,
+      "modified_utc": "2026-09-25T23:57:31.322943+00:00"
+    },
+    {
+      "path": "architecture.png",
+      "bytes": 1606028,
+      "modified_utc": "2026-09-02T16:50:40.840177+00:00"
+    },
+    {
+      "path": "architecture_overview.png",
+      "bytes": 1564320,
+      "modified_utc": "2026-07-27T13:08:42.211282+00:00"
+    },
+    {
+      "path": "docs/label_consistency_review.md",
+      "bytes": 7468,
+      "modified_utc": "2026-09-24T06:23:12.411877+00:00"
+    },
+    {
+      "path": "docs/input_representation_review.md",
+      "bytes": 9860,
+      "modified_utc": "2026-09-24T06:25:29.700915+00:00"
+    },
+    {
+      "path": "docs/research_direction.md",
+      "bytes": 4307,
+      "modified_utc": "2026-09-25T23:58:32.072578+00:00"
+    },
+    {
+      "path": "docs/source_references.md",
+      "bytes": 7366,
+      "modified_utc": "2026-09-23T09:25:10.311220+00:00"
+    },
+    {
+      "path": "docs/project_status.md",
+      "bytes": 8842,
+      "modified_utc": "2026-09-25T23:58:31.941341+00:00"
+    },
+    {
+      "path": "docs/dataset_inventory_initial.md",
+      "bytes": 8087,
+      "modified_utc": "2026-09-23T09:24:53.345473+00:00"
+    },
+    {
+      "path": "docs/existing_project_audit.md",
+      "bytes": 10326,
+      "modified_utc": "2026-09-23T09:23:07.800618+00:00"
+    },
+    {
+      "path": "docs/model_progression.md",
+      "bytes": 4888,
+      "modified_utc": "2026-09-25T23:58:32.006744+00:00"
+    },
+    {
+      "path": "docs/ptbxl_spatiotemporal_report.md",
+      "bytes": 14369,
+      "modified_utc": "2026-09-25T23:54:02.714550+00:00"
+    },
+    {
+      "path": "docs/ptbxl_cnn_lstm_report.md",
+      "bytes": 12005,
+      "modified_utc": "2026-09-24T14:15:14.587535+00:00"
+    },
+    {
+      "path": "docs/minority_error_review.md",
+      "bytes": 5524,
+      "modified_utc": "2026-09-24T06:24:33.415001+00:00"
+    },
+    {
+      "path": "docs/ptbxl_image_dataset.md",
+      "bytes": 16867,
+      "modified_utc": "2026-09-25T23:56:26.467022+00:00"
+    },
+    {
+      "path": "docs/supervisor_report.md",
+      "bytes": 6177,
+      "modified_utc": "2026-09-24T08:15:12.340778+00:00"
+    },
+    {
+      "path": "docs/dataset_audit.md",
+      "bytes": 10180,
+      "modified_utc": "2026-09-23T09:30:12.898131+00:00"
+    },
+    {
+      "path": "docs/teams_update_ptbxl_spatiotemporal.txt",
+      "bytes": 1161,
+      "modified_utc": "2026-09-25T23:55:44.289637+00:00"
+    },
+    {
+      "path": "docs/ptbxl_migration_assessment.md",
+      "bytes": 11225,
+      "modified_utc": "2026-09-24T14:15:46.886793+00:00"
+    },
+    {
+      "path": "docs/ptbxl_secondary_audit.md",
+      "bytes": 2934,
+      "modified_utc": "2026-09-24T14:15:46.822135+00:00"
+    },
+    {
+      "path": "docs/cnn_lstm_report.md",
+      "bytes": 7763,
+      "modified_utc": "2026-09-24T08:14:17.433882+00:00"
+    },
+    {
+      "path": "docs/ptbxl_spatiotemporal_protocol.md",
+      "bytes": 7616,
+      "modified_utc": "2026-09-25T23:56:26.466350+00:00"
+    },
+    {
+      "path": "docs/next_model_handoff.md",
+      "bytes": 6867,
+      "modified_utc": "2026-09-24T08:14:17.809792+00:00"
+    },
+    {
+      "path": "docs/ptbxl_cnn_lstm_protocol.md",
+      "bytes": 7405,
+      "modified_utc": "2026-09-24T11:06:12.641544+00:00"
+    },
+    {
+      "path": "docs/final_verification.md",
+      "bytes": 3633,
+      "modified_utc": "2026-09-23T09:34:14.335054+00:00"
+    },
+    {
+      "path": "docs/ptbxl_render_geometry.md",
+      "bytes": 4323,
+      "modified_utc": "2026-09-24T10:19:13.664038+00:00"
+    },
+    {
+      "path": "docs/teams_update_ptbxl_cnn_lstm.txt",
+      "bytes": 990,
+      "modified_utc": "2026-09-24T14:17:15.160615+00:00"
+    },
+    {
+      "path": "ecg_manuscript_corrected_v2.zip",
+      "bytes": 1899242,
+      "modified_utc": "2026-08-31T12:17:46.842887+00:00"
+    },
+    {
+      "path": "ecg_manuscript_corrected_v3.zip",
+      "bytes": 1900940,
+      "modified_utc": "2026-09-02T15:57:20.928663+00:00"
+    },
+    {
+      "path": "ecp google doc.pdf",
+      "bytes": 1145154,
+      "modified_utc": "2026-06-01T15:46:14.584590+00:00"
+    },
+    {
+      "path": "experiments/experiment_log.csv",
+      "bytes": 5228,
+      "modified_utc": "2026-09-25T23:17:59.317634+00:00"
+    },
+    {
+      "path": "experiments/dataset_log.csv",
+      "bytes": 543,
+      "modified_utc": "2026-09-24T10:35:13.004759+00:00"
+    },
+    {
+      "path": "experiments/logs/post_cnn_lstm_review_readiness.log",
+      "bytes": 261,
+      "modified_utc": "2026-09-24T08:15:13.546558+00:00"
+    },
+    {
+      "path": "experiments/logs/cnn_lstm_image_v1_seed42.log",
+      "bytes": 4146,
+      "modified_utc": "2026-09-24T08:05:37.682245+00:00"
+    },
+    {
+      "path": "experiments/logs/split_verification.txt",
+      "bytes": 140,
+      "modified_utc": "2026-09-23T09:28:32.019705+00:00"
+    },
+    {
+      "path": "experiments/logs/dataset_preparation.txt",
+      "bytes": 2662,
+      "modified_utc": "2026-09-23T09:28:13.266799+00:00"
+    },
+    {
+      "path": "experiments/logs/delivery_manifest.json",
+      "bytes": 17800,
+      "modified_utc": "2026-09-23T09:34:38.052098+00:00"
+    },
+    {
+      "path": "experiments/logs/ptbxl_image_tests.log",
+      "bytes": 3751,
+      "modified_utc": "2026-09-24T10:18:52.211691+00:00"
+    },
+    {
+      "path": "experiments/logs/ptbxl_spatiotemporal_report.log",
+      "bytes": 349,
+      "modified_utc": "2026-09-25T23:54:02.721465+00:00"
+    },
+    {
+      "path": "experiments/logs/checkpoint_verification.json",
+      "bytes": 5765,
+      "modified_utc": "2026-09-23T09:34:14.334806+00:00"
+    },
+    {
+      "path": "experiments/logs/ptbxl_spatiotemporal_comparison.log",
+      "bytes": 549,
+      "modified_utc": "2026-09-25T23:54:14.532133+00:00"
+    },
+    {
+      "path": "experiments/logs/cnn_lstm_tests.log",
+      "bytes": 4726,
+      "modified_utc": "2026-09-24T08:04:28.058568+00:00"
+    },
+    {
+      "path": "experiments/logs/cnn_v1_seed42.txt",
+      "bytes": 5502,
+      "modified_utc": "2026-09-23T09:29:53.995902+00:00"
+    },
+    {
+      "path": "experiments/logs/ptbxl_cnn_lstm_image_v1_delivery_manifest.json",
+      "bytes": 14272,
+      "modified_utc": "2026-09-24T14:17:48.099860+00:00"
+    },
+    {
+      "path": "experiments/logs/test_pipeline_final.txt",
+      "bytes": 767,
+      "modified_utc": "2026-09-23T09:33:43.563416+00:00"
+    },
+    {
+      "path": "experiments/logs/ptbxl_cnn_lstm_image_v1_seed42.log",
+      "bytes": 26549,
+      "modified_utc": "2026-09-24T14:12:50.567162+00:00"
+    },
+    {
+      "path": "experiments/logs/ptbxl_images_v1_verification.log",
+      "bytes": 998,
+      "modified_utc": "2026-09-24T10:34:26.654053+00:00"
+    },
+    {
+      "path": "experiments/logs/post_cnn_lstm_review_readiness.json",
+      "bytes": 2057,
+      "modified_utc": "2026-09-24T08:15:13.546346+00:00"
+    },
+    {
+      "path": "experiments/logs/ptbxl_cnn_lstm_final_tests.log",
+      "bytes": 21955,
+      "modified_utc": "2026-09-24T14:13:28.131954+00:00"
+    },
+    {
+      "path": "experiments/logs/ptbxl_spatiotemporal_image_v1_seed42.log",
+      "bytes": 45484,
+      "modified_utc": "2026-09-25T23:17:59.386369+00:00"
+    },
+    {
+      "path": "experiments/logs/comparison_verification.txt",
+      "bytes": 278,
+      "modified_utc": "2026-09-23T09:30:11.194992+00:00"
+    },
+    {
+      "path": "experiments/logs/ptbxl_spatiotemporal_final_tests.log",
+      "bytes": 29191,
+      "modified_utc": "2026-09-25T23:54:04.387474+00:00"
+    },
+    {
+      "path": "experiments/logs/lda_v1_seed42.txt",
+      "bytes": 1819,
+      "modified_utc": "2026-09-23T09:28:35.381439+00:00"
+    },
+    {
+      "path": "experiments/logs/ptbxl_images_v1_delivery_manifest.json",
+      "bytes": 7474,
+      "modified_utc": "2026-09-24T10:35:40.439272+00:00"
+    },
+    {
+      "path": "experiments/logs/cnn_lstm_comparison.log",
+      "bytes": 673,
+      "modified_utc": "2026-09-24T08:06:03.900687+00:00"
+    },
+    {
+      "path": "experiments/logs/test_validation.txt",
+      "bytes": 1564,
+      "modified_utc": "2026-09-23T09:19:09.096493+00:00"
+    },
+    {
+      "path": "experiments/logs/ptbxl_spatiotemporal_execution_notes.json",
+      "bytes": 1090,
+      "modified_utc": "2026-09-25T23:55:44.293490+00:00"
+    },
+    {
+      "path": "experiments/logs/ptbxl_cnn_lstm_all_tests.log",
+      "bytes": 19822,
+      "modified_utc": "2026-09-24T11:03:11.878978+00:00"
+    },
+    {
+      "path": "experiments/logs/ptbxl_images_v1_all_tests.log",
+      "bytes": 11021,
+      "modified_utc": "2026-09-24T10:24:35.756942+00:00"
+    },
+    {
+      "path": "experiments/logs/archive_audit.txt",
+      "bytes": 369,
+      "modified_utc": "2026-09-23T09:22:20.974943+00:00"
+    },
+    {
+      "path": "experiments/logs/ptbxl_spatiotemporal_pretraining_tests.log",
+      "bytes": 28106,
+      "modified_utc": "2026-09-25T19:03:52.379405+00:00"
+    },
+    {
+      "path": "experiments/logs/ptbxl_images_v1_generation.log",
+      "bytes": 2531,
+      "modified_utc": "2026-09-24T10:32:02.572477+00:00"
+    },
+    {
+      "path": "experiments/logs/ptbxl_spatiotemporal_verification.log",
+      "bytes": 326,
+      "modified_utc": "2026-09-25T23:53:42.188449+00:00"
+    },
+    {
+      "path": "experiments/logs/near_duplicate_audit.txt",
+      "bytes": 556,
+      "modified_utc": "2026-09-23T09:21:18.459020+00:00"
+    },
+    {
+      "path": "experiments/logs/cnn_lstm_delivery_manifest.json",
+      "bytes": 8791,
+      "modified_utc": "2026-09-24T08:15:12.817463+00:00"
+    },
+    {
+      "path": "experiments/logs/ptbxl_cnn_lstm_cache.log",
+      "bytes": 1256,
+      "modified_utc": "2026-09-24T11:10:38.258622+00:00"
+    },
+    {
+      "path": "experiments/configs/crop_candidate_dev_only.json",
+      "bytes": 728,
+      "modified_utc": "2026-09-24T06:26:42.835885+00:00"
+    },
+    {
+      "path": "experiments/configs/cnn_lstm_image_v1.json",
+      "bytes": 2084,
+      "modified_utc": "2026-09-24T08:00:56.956584+00:00"
+    },
+    {
+      "path": "experiments/configs/ptbxl_cnn_lstm_image_v1.json",
+      "bytes": 2998,
+      "modified_utc": "2026-09-24T10:58:15.141031+00:00"
+    },
+    {
+      "path": "experiments/configs/ptbxl_spatiotemporal_image_v1.json",
+      "bytes": 4481,
+      "modified_utc": "2026-09-25T18:57:23.957415+00:00"
+    },
+    {
+      "path": "experiments/configs/ptbxl_images_v1.json",
+      "bytes": 2533,
+      "modified_utc": "2026-09-24T10:14:30.608623+00:00"
+    },
+    {
+      "path": "experiments/configs/baseline_v1.json",
+      "bytes": 1056,
+      "modified_utc": "2026-09-23T09:25:10.163960+00:00"
+    },
+    {
+      "path": "experiments/configs/next_model_protocol.json",
+      "bytes": 3161,
+      "modified_utc": "2026-09-24T06:27:26.831155+00:00"
+    },
+    {
+      "path": "experiments/protocols/cnn_lstm_image_v1/baseline_log_before.csv",
+      "bytes": 1438,
+      "modified_utc": "2026-09-24T07:59:57.099303+00:00"
+    },
+    {
+      "path": "experiments/protocols/cnn_lstm_image_v1/authorization_and_scope.json",
+      "bytes": 1119,
+      "modified_utc": "2026-09-24T07:59:57.099578+00:00"
+    },
+    {
+      "path": "experiments/protocols/cnn_lstm_image_v1/protocol_frozen.json",
+      "bytes": 5136,
+      "modified_utc": "2026-09-24T08:04:34.542051+00:00"
+    },
+    {
+      "path": "experiments/protocols/ptbxl_cnn_lstm_image_v1/cache_ready.json",
+      "bytes": 653,
+      "modified_utc": "2026-09-24T11:10:57.193394+00:00"
+    },
+    {
+      "path": "experiments/protocols/ptbxl_cnn_lstm_image_v1/compute_probe.py",
+      "bytes": 7802,
+      "modified_utc": "2026-09-24T10:56:05.550711+00:00"
+    },
+    {
+      "path": "experiments/protocols/ptbxl_cnn_lstm_image_v1/compute_probe.json",
+      "bytes": 7140,
+      "modified_utc": "2026-09-24T10:56:05.597762+00:00"
+    },
+    {
+      "path": "experiments/protocols/ptbxl_cnn_lstm_image_v1/pretraining_checks.json",
+      "bytes": 1398,
+      "modified_utc": "2026-09-24T11:04:12.381292+00:00"
+    },
+    {
+      "path": "experiments/protocols/ptbxl_spatiotemporal_image_v1/prior_artifacts.json",
+      "bytes": 22198,
+      "modified_utc": "2026-09-25T18:56:58.999111+00:00"
+    },
+    {
+      "path": "experiments/protocols/ptbxl_spatiotemporal_image_v1/compute_probe.json",
+      "bytes": 1228,
+      "modified_utc": "2026-09-25T19:03:54.929260+00:00"
+    },
+    {
+      "path": "experiments/protocols/ptbxl_spatiotemporal_image_v1/pretraining_checks.json",
+      "bytes": 2215,
+      "modified_utc": "2026-09-25T19:04:09.250606+00:00"
+    },
+    {
+      "path": "experiments/protocols/ptbxl_images_v1/plot_dataset_overview.py",
+      "bytes": 6128,
+      "modified_utc": "2026-09-24T10:27:13.391852+00:00"
+    },
+    {
+      "path": "experiments/protocols/ptbxl_images_v1/source_records.csv",
+      "bytes": 3570965,
+      "modified_utc": "2026-09-24T10:28:21.723879+00:00"
+    },
+    {
+      "path": "experiments/protocols/ptbxl_images_v1/label_counts.json",
+      "bytes": 4474,
+      "modified_utc": "2026-09-24T10:13:01.830330+00:00"
+    },
+    {
+      "path": "experiments/protocols/ptbxl_images_v1/prior_model_artifacts.json",
+      "bytes": 10588,
+      "modified_utc": "2026-09-24T10:21:21.106229+00:00"
+    },
+    {
+      "path": "experiments/protocols/ptbxl_images_v1/train_render_geometry_audit.json",
+      "bytes": 20742,
+      "modified_utc": "2026-09-24T10:19:13.659930+00:00"
+    },
+    {
+      "path": "experiments/protocols/ptbxl_images_v1/source_snapshot/sha256.json",
+      "bytes": 696,
+      "modified_utc": "2026-09-24T10:25:58.634511+00:00"
+    },
+    {
+      "path": "experiments/protocols/ptbxl_images_v1/source_snapshot/requirements.txt",
+      "bytes": 206,
+      "modified_utc": "2026-09-24T10:25:58.634185+00:00"
+    },
+    {
+      "path": "experiments/protocols/ptbxl_images_v1/source_snapshot/requirements-ptbxl-images.txt",
+      "bytes": 208,
+      "modified_utc": "2026-09-24T10:25:58.634358+00:00"
+    },
+    {
+      "path": "experiments/protocols/ptbxl_images_v1/source_snapshot/src/ptbxl_image_manifest.py",
+      "bytes": 12936,
+      "modified_utc": "2026-09-24T10:25:58.633221+00:00"
+    },
+    {
+      "path": "experiments/protocols/ptbxl_images_v1/source_snapshot/src/generate_ptbxl_images.py",
+      "bytes": 20019,
+      "modified_utc": "2026-09-24T10:25:58.632482+00:00"
+    },
+    {
+      "path": "experiments/protocols/ptbxl_images_v1/source_snapshot/src/common.py",
+      "bytes": 1692,
+      "modified_utc": "2026-09-24T10:25:58.633500+00:00"
+    },
+    {
+      "path": "experiments/protocols/ptbxl_images_v1/source_snapshot/src/ptbxl_rendering.py",
+      "bytes": 9166,
+      "modified_utc": "2026-09-24T10:25:58.632845+00:00"
+    },
+    {
+      "path": "experiments/protocols/ptbxl_images_v1/source_snapshot/experiments/configs/ptbxl_images_v1.json",
+      "bytes": 2533,
+      "modified_utc": "2026-09-24T10:25:58.633874+00:00"
+    },
+    {
+      "path": "experiments/reviews/2026-09-24/review_log.json",
+      "bytes": 8901,
+      "modified_utc": "2026-09-24T06:30:21.059977+00:00"
+    },
+    {
+      "path": "experiments/reviews/2026-09-24/baseline_lock.json",
+      "bytes": 7675,
+      "modified_utc": "2026-09-24T06:21:33.143781+00:00"
+    },
+    {
+      "path": "experiments/reviews/2026-09-24/readiness_check.log",
+      "bytes": 288,
+      "modified_utc": "2026-09-24T06:30:20.447468+00:00"
+    },
+    {
+      "path": "experiments/reviews/2026-09-24/candidate_preview.log",
+      "bytes": 78,
+      "modified_utc": "2026-09-24T06:26:44.225902+00:00"
+    },
+    {
+      "path": "experiments/reviews/2026-09-24/require_model_guard.log",
+      "bytes": 288,
+      "modified_utc": "2026-09-24T06:30:21.039481+00:00"
+    },
+    {
+      "path": "experiments/reviews/2026-11-01/results_supplement.py",
+      "bytes": 7140,
+      "modified_utc": "2026-11-01T11:14:23.968696+00:00"
+    },
+    {
+      "path": "experiments/reviews/2026-11-01/results_supplement.json",
+      "bytes": 2117,
+      "modified_utc": "2026-11-01T11:14:28.850062+00:00"
+    },
+    {
+      "path": "experiments/reviews/2026-11-01/results_audit.log",
+      "bytes": 1013,
+      "modified_utc": "2026-11-01T11:13:00.194996+00:00"
+    },
+    {
+      "path": "experiments/reviews/2026-11-01/all_run_per_label_metrics.csv",
+      "bytes": 9356,
+      "modified_utc": "2026-11-01T11:14:28.849395+00:00"
+    },
+    {
+      "path": "experiments/reviews/2026-11-01/full_unittest_2026-11-01.log",
+      "bytes": 29254,
+      "modified_utc": "2026-11-01T11:12:33.830449+00:00"
+    },
+    {
+      "path": "experiments/reviews/2026-11-01/results_supplement.log",
+      "bytes": 2117,
+      "modified_utc": "2026-11-01T11:14:28.850225+00:00"
+    },
+    {
+      "path": "experiments/reviews/2026-11-01/results_audit.json",
+      "bytes": 87194,
+      "modified_utc": "2026-11-01T11:13:46.038902+00:00"
+    },
+    {
+      "path": "experiments/reviews/2026-11-01/all_run_metrics.csv",
+      "bytes": 3408,
+      "modified_utc": "2026-11-01T11:14:28.848922+00:00"
+    },
+    {
+      "path": "experiments/reviews/2026-11-01/results_audit.py",
+      "bytes": 9235,
+      "modified_utc": "2026-11-01T11:13:41.204426+00:00"
+    },
+    {
+      "path": "mendely images.zip",
+      "bytes": 203349349,
+      "modified_utc": "2025-12-21T18:03:28.856313+00:00"
+    },
+    {
+      "path": "models/cnn_lstm/cnn_lstm_image_v1_seed42/config.json",
+      "bytes": 297,
+      "modified_utc": "2026-09-24T08:04:48.752044+00:00"
+    },
+    {
+      "path": "models/cnn_lstm/cnn_lstm_image_v1_seed42/history.csv",
+      "bytes": 7364,
+      "modified_utc": "2026-09-24T08:05:36.347724+00:00"
+    },
+    {
+      "path": "models/cnn_lstm/cnn_lstm_image_v1_seed42/best.pt",
+      "bytes": 184651,
+      "modified_utc": "2026-09-24T08:05:30.634949+00:00"
+    },
+    {
+      "path": "models/cnn_lstm/cnn_lstm_image_v1_seed42/metadata.json",
+      "bytes": 3123,
+      "modified_utc": "2026-09-24T08:05:36.657807+00:00"
+    },
+    {
+      "path": "models/cnn_lstm/cnn_lstm_image_v1_seed42/training_curve.png",
+      "bytes": 135659,
+      "modified_utc": "2026-09-24T08:05:36.656295+00:00"
+    },
+    {
+      "path": "models/cnn_lstm/cnn_lstm_image_v1_seed42/architecture.txt",
+      "bytes": 1447,
+      "modified_utc": "2026-09-24T08:04:48.752252+00:00"
+    },
+    {
+      "path": "models/lda/lda_v1_seed42/pipeline.joblib",
+      "bytes": 4337317,
+      "modified_utc": "2026-09-23T09:28:35.174260+00:00"
+    },
+    {
+      "path": "models/ptbxl_spatiotemporal/ptbxl_spatiotemporal_image_v1_seed42/config.json",
+      "bytes": 357,
+      "modified_utc": "2026-09-25T19:04:19.546466+00:00"
+    },
+    {
+      "path": "models/ptbxl_spatiotemporal/ptbxl_spatiotemporal_image_v1_seed42/history.csv",
+      "bytes": 8648,
+      "modified_utc": "2026-09-25T23:10:59.128009+00:00"
+    },
+    {
+      "path": "models/ptbxl_spatiotemporal/ptbxl_spatiotemporal_image_v1_seed42/best.pt",
+      "bytes": 83241,
+      "modified_utc": "2026-09-25T22:37:05.166240+00:00"
+    },
+    {
+      "path": "models/ptbxl_spatiotemporal/ptbxl_spatiotemporal_image_v1_seed42/metadata.json",
+      "bytes": 9291,
+      "modified_utc": "2026-09-25T23:11:00.557819+00:00"
+    },
+    {
+      "path": "models/ptbxl_spatiotemporal/ptbxl_spatiotemporal_image_v1_seed42/training_curve.png",
+      "bytes": 103888,
+      "modified_utc": "2026-09-25T23:11:00.556237+00:00"
+    },
+    {
+      "path": "models/ptbxl_spatiotemporal/ptbxl_spatiotemporal_image_v1_seed42/architecture.txt",
+      "bytes": 2942,
+      "modified_utc": "2026-09-25T19:04:19.546826+00:00"
+    },
+    {
+      "path": "models/ptbxl_spatiotemporal/ptbxl_spatiotemporal_image_v1_seed42/progress.json",
+      "bytes": 5986,
+      "modified_utc": "2026-09-25T23:11:00.558228+00:00"
+    },
+    {
+      "path": "models/cnn/cnn_v1_seed42/history.csv",
+      "bytes": 6467,
+      "modified_utc": "2026-09-23T09:29:52.906823+00:00"
+    },
+    {
+      "path": "models/cnn/cnn_v1_seed42/best.pt",
+      "bytes": 166351,
+      "modified_utc": "2026-09-23T09:29:45.757121+00:00"
+    },
+    {
+      "path": "models/cnn/cnn_v1_seed42/metadata.json",
+      "bytes": 2604,
+      "modified_utc": "2026-09-23T09:29:53.186617+00:00"
+    },
+    {
+      "path": "models/cnn/cnn_v1_seed42/training_curve.png",
+      "bytes": 107735,
+      "modified_utc": "2026-09-23T09:29:53.185551+00:00"
+    },
+    {
+      "path": "models/cnn/cnn_v1_seed42/architecture.txt",
+      "bytes": 1373,
+      "modified_utc": "2026-09-23T09:29:09.360869+00:00"
+    },
+    {
+      "path": "models/ptbxl_cnn_lstm/ptbxl_cnn_lstm_image_v1_seed42/config.json",
+      "bytes": 298,
+      "modified_utc": "2026-09-24T11:11:02.731400+00:00"
+    },
+    {
+      "path": "models/ptbxl_cnn_lstm/ptbxl_cnn_lstm_image_v1_seed42/history.csv",
+      "bytes": 8253,
+      "modified_utc": "2026-09-24T14:04:28.171604+00:00"
+    },
+    {
+      "path": "models/ptbxl_cnn_lstm/ptbxl_cnn_lstm_image_v1_seed42/best.pt",
+      "bytes": 81989,
+      "modified_utc": "2026-09-24T13:25:25.275166+00:00"
+    },
+    {
+      "path": "models/ptbxl_cnn_lstm/ptbxl_cnn_lstm_image_v1_seed42/metadata.json",
+      "bytes": 8620,
+      "modified_utc": "2026-09-24T14:04:29.598004+00:00"
+    },
+    {
+      "path": "models/ptbxl_cnn_lstm/ptbxl_cnn_lstm_image_v1_seed42/training_curve.png",
+      "bytes": 107988,
+      "modified_utc": "2026-09-24T14:04:29.596404+00:00"
+    },
+    {
+      "path": "models/ptbxl_cnn_lstm/ptbxl_cnn_lstm_image_v1_seed42/architecture.txt",
+      "bytes": 1680,
+      "modified_utc": "2026-09-24T11:11:02.731711+00:00"
+    },
+    {
+      "path": "models/ptbxl_cnn_lstm/ptbxl_cnn_lstm_image_v1_seed42/progress.json",
+      "bytes": 5775,
+      "modified_utc": "2026-09-24T14:04:29.598400+00:00"
+    },
+    {
+      "path": "notebooks/README.md",
+      "bytes": 268,
+      "modified_utc": "2026-09-23T09:15:16.260561+00:00"
+    },
+    {
+      "path": "physionet paper.pdf",
+      "bytes": 6079409,
+      "modified_utc": "2025-12-15T08:16:29.257977+00:00"
+    },
+    {
+      "path": "proj desc.pdf",
+      "bytes": 264594,
+      "modified_utc": "2025-11-17T17:39:34.425710+00:00"
+    },
+    {
+      "path": "report april 9 .pdf",
+      "bytes": 784830,
+      "modified_utc": "2026-04-08T20:00:29.918061+00:00"
+    },
+    {
+      "path": "requirements-audit-macos.txt",
+      "bytes": 205,
+      "modified_utc": "2026-09-23T09:15:16.129054+00:00"
+    },
+    {
+      "path": "requirements-ptbxl-images.txt",
+      "bytes": 208,
+      "modified_utc": "2026-09-24T10:25:58.431815+00:00"
+    },
+    {
+      "path": "requirements.txt",
+      "bytes": 206,
+      "modified_utc": "2026-09-23T09:15:16.057892+00:00"
+    },
+    {
+      "path": "results/comparisons/per_class_comparison.csv",
+      "bytes": 536,
+      "modified_utc": "2026-09-23T09:30:10.993337+00:00"
+    },
+    {
+      "path": "results/comparisons/comparison.md",
+      "bytes": 2381,
+      "modified_utc": "2026-09-23T09:30:10.993854+00:00"
+    },
+    {
+      "path": "results/comparisons/comparison.png",
+      "bytes": 44698,
+      "modified_utc": "2026-09-23T09:30:11.194453+00:00"
+    },
+    {
+      "path": "results/comparisons/dataset_counts.png",
+      "bytes": 100220,
+      "modified_utc": "2026-09-23T09:30:39.036281+00:00"
+    },
+    {
+      "path": "results/comparisons/comparison.csv",
+      "bytes": 434,
+      "modified_utc": "2026-09-23T09:30:10.993185+00:00"
+    },
+    {
+      "path": "results/comparisons/comparison_verification.json",
+      "bytes": 304,
+      "modified_utc": "2026-09-23T09:30:10.993636+00:00"
+    },
+    {
+      "path": "results/readiness/readiness.json",
+      "bytes": 1568,
+      "modified_utc": "2026-09-24T06:30:21.028577+00:00"
+    },
+    {
+      "path": "results/ptbxl_images_v1/dataset_overview.svg",
+      "bytes": 17891,
+      "modified_utc": "2026-09-24T10:27:37.224651+00:00"
+    },
+    {
+      "path": "results/ptbxl_images_v1/dataset_overview.png",
+      "bytes": 260189,
+      "modified_utc": "2026-09-24T10:27:37.197474+00:00"
+    },
+    {
+      "path": "results/ptbxl_images_v1/preservation_verification.json",
+      "bytes": 951,
+      "modified_utc": "2026-09-24T10:32:51.179424+00:00"
+    },
+    {
+      "path": "results/cnn_lstm/cnn_lstm_image_v1_seed42/interpretation.md",
+      "bytes": 1712,
+      "modified_utc": "2026-09-24T08:14:53.591352+00:00"
+    },
+    {
+      "path": "results/cnn_lstm/cnn_lstm_image_v1_seed42/provenance.json",
+      "bytes": 3863,
+      "modified_utc": "2026-09-24T08:04:47.285537+00:00"
+    },
+    {
+      "path": "results/cnn_lstm/cnn_lstm_image_v1_seed42/train_metrics.json",
+      "bytes": 1630,
+      "modified_utc": "2026-09-24T08:05:37.168830+00:00"
+    },
+    {
+      "path": "results/cnn_lstm/cnn_lstm_image_v1_seed42/split_used.csv",
+      "bytes": 142957,
+      "modified_utc": "2026-09-24T08:04:47.287721+00:00"
+    },
+    {
+      "path": "results/cnn_lstm/cnn_lstm_image_v1_seed42/validation_metrics.json",
+      "bytes": 1609,
+      "modified_utc": "2026-09-24T08:05:37.335103+00:00"
+    },
+    {
+      "path": "results/cnn_lstm/cnn_lstm_image_v1_seed42/validation_predictions.csv",
+      "bytes": 14775,
+      "modified_utc": "2026-09-24T08:05:37.335865+00:00"
+    },
+    {
+      "path": "results/cnn_lstm/cnn_lstm_image_v1_seed42/config.json",
+      "bytes": 2120,
+      "modified_utc": "2026-09-24T08:04:47.255502+00:00"
+    },
+    {
+      "path": "results/cnn_lstm/cnn_lstm_image_v1_seed42/train_per_class.csv",
+      "bytes": 384,
+      "modified_utc": "2026-09-24T08:05:37.171867+00:00"
+    },
+    {
+      "path": "results/cnn_lstm/cnn_lstm_image_v1_seed42/test_confusion_matrix.csv",
+      "bytes": 111,
+      "modified_utc": "2026-09-24T08:05:37.505904+00:00"
+    },
+    {
+      "path": "results/cnn_lstm/cnn_lstm_image_v1_seed42/test_per_class.csv",
+      "bytes": 338,
+      "modified_utc": "2026-09-24T08:05:37.505792+00:00"
+    },
+    {
+      "path": "results/cnn_lstm/cnn_lstm_image_v1_seed42/train_predictions.csv",
+      "bytes": 44268,
+      "modified_utc": "2026-09-24T08:05:37.171069+00:00"
+    },
+    {
+      "path": "results/cnn_lstm/cnn_lstm_image_v1_seed42/selection_frozen.json",
+      "bytes": 749,
+      "modified_utc": "2026-09-24T08:05:36.673010+00:00"
+    },
+    {
+      "path": "results/cnn_lstm/cnn_lstm_image_v1_seed42/test_confusion_matrix.png",
+      "bytes": 43865,
+      "modified_utc": "2026-09-24T08:05:37.604555+00:00"
+    },
+    {
+      "path": "results/cnn_lstm/cnn_lstm_image_v1_seed42/test_predictions.csv",
+      "bytes": 14731,
+      "modified_utc": "2026-09-24T08:05:37.505595+00:00"
+    },
+    {
+      "path": "results/cnn_lstm/cnn_lstm_image_v1_seed42/training_metadata.json",
+      "bytes": 3123,
+      "modified_utc": "2026-09-24T08:05:36.663018+00:00"
+    },
+    {
+      "path": "results/cnn_lstm/cnn_lstm_image_v1_seed42/test_metrics.json",
+      "bytes": 1579,
+      "modified_utc": "2026-09-24T08:05:37.504812+00:00"
+    },
+    {
+      "path": "results/cnn_lstm/cnn_lstm_image_v1_seed42/baseline_preservation.json",
+      "bytes": 378,
+      "modified_utc": "2026-09-24T08:05:37.681292+00:00"
+    },
+    {
+      "path": "results/cnn_lstm/cnn_lstm_image_v1_seed42/verification.json",
+      "bytes": 998,
+      "modified_utc": "2026-09-24T08:06:04.903044+00:00"
+    },
+    {
+      "path": "results/cnn_lstm/cnn_lstm_image_v1_seed42/test_inference_state.json",
+      "bytes": 362,
+      "modified_utc": "2026-09-24T08:05:37.607895+00:00"
+    },
+    {
+      "path": "results/cnn_lstm/cnn_lstm_image_v1_seed42/run.json",
+      "bytes": 10819,
+      "modified_utc": "2026-09-24T08:05:37.682143+00:00"
+    },
+    {
+      "path": "results/cnn_lstm/cnn_lstm_image_v1_seed42/preprocessing.json",
+      "bytes": 176,
+      "modified_utc": "2026-09-24T08:04:47.255635+00:00"
+    },
+    {
+      "path": "results/cnn_lstm/cnn_lstm_image_v1_seed42/validation_per_class.csv",
+      "bytes": 369,
+      "modified_utc": "2026-09-24T08:05:37.336005+00:00"
+    },
+    {
+      "path": "results/comparisons/cnn_lstm_image_v1_seed42/per_class_comparison.csv",
+      "bytes": 2701,
+      "modified_utc": "2026-09-24T08:06:03.727758+00:00"
+    },
+    {
+      "path": "results/comparisons/cnn_lstm_image_v1_seed42/metrics_comparison.csv",
+      "bytes": 1280,
+      "modified_utc": "2026-09-24T08:06:03.727513+00:00"
+    },
+    {
+      "path": "results/comparisons/cnn_lstm_image_v1_seed42/comparison.md",
+      "bytes": 2673,
+      "modified_utc": "2026-09-24T08:06:03.727885+00:00"
+    },
+    {
+      "path": "results/comparisons/cnn_lstm_image_v1_seed42/comparison.png",
+      "bytes": 62085,
+      "modified_utc": "2026-09-24T08:06:03.899745+00:00"
+    },
+    {
+      "path": "results/comparisons/cnn_lstm_image_v1_seed42/verification.json",
+      "bytes": 1868,
+      "modified_utc": "2026-09-24T08:06:03.900404+00:00"
+    },
+    {
+      "path": "results/comparisons/ptbxl_spatiotemporal_image_v1_seed42/comparison.svg",
+      "bytes": 27158,
+      "modified_utc": "2026-09-25T23:54:14.472095+00:00"
+    },
+    {
+      "path": "results/comparisons/ptbxl_spatiotemporal_image_v1_seed42/partition_metrics.csv",
+      "bytes": 1685,
+      "modified_utc": "2026-09-25T23:54:13.928366+00:00"
+    },
+    {
+      "path": "results/comparisons/ptbxl_spatiotemporal_image_v1_seed42/comparison.md",
+      "bytes": 5414,
+      "modified_utc": "2026-09-25T23:54:13.929053+00:00"
+    },
+    {
+      "path": "results/comparisons/ptbxl_spatiotemporal_image_v1_seed42/comparison.png",
+      "bytes": 134824,
+      "modified_utc": "2026-09-25T23:54:14.411198+00:00"
+    },
+    {
+      "path": "results/comparisons/ptbxl_spatiotemporal_image_v1_seed42/per_label_metrics.csv",
+      "bytes": 3386,
+      "modified_utc": "2026-09-25T23:54:13.928600+00:00"
+    },
+    {
+      "path": "results/comparisons/ptbxl_spatiotemporal_image_v1_seed42/comparison.json",
+      "bytes": 62806,
+      "modified_utc": "2026-09-25T23:54:14.522938+00:00"
+    },
+    {
+      "path": "results/comparisons/ptbxl_spatiotemporal_image_v1_seed42/metric_differences.csv",
+      "bytes": 2123,
+      "modified_utc": "2026-09-25T23:54:13.928773+00:00"
+    },
+    {
+      "path": "results/lda/lda_v1_seed42/interpretation.md",
+      "bytes": 1811,
+      "modified_utc": "2026-09-23T09:32:18.900090+00:00"
+    },
+    {
+      "path": "results/lda/lda_v1_seed42/provenance.json",
+      "bytes": 2548,
+      "modified_utc": "2026-09-23T09:28:34.729301+00:00"
+    },
+    {
+      "path": "results/lda/lda_v1_seed42/train_metrics.json",
+      "bytes": 1635,
+      "modified_utc": "2026-09-23T09:28:35.204415+00:00"
+    },
+    {
+      "path": "results/lda/lda_v1_seed42/split_used.csv",
+      "bytes": 142957,
+      "modified_utc": "2026-09-23T09:28:34.731739+00:00"
+    },
+    {
+      "path": "results/lda/lda_v1_seed42/validation_metrics.json",
+      "bytes": 1621,
+      "modified_utc": "2026-09-23T09:28:35.222222+00:00"
+    },
+    {
+      "path": "results/lda/lda_v1_seed42/validation_predictions.csv",
+      "bytes": 14776,
+      "modified_utc": "2026-09-23T09:28:35.222938+00:00"
+    },
+    {
+      "path": "results/lda/lda_v1_seed42/config.json",
+      "bytes": 1150,
+      "modified_utc": "2026-09-23T09:28:34.698678+00:00"
+    },
+    {
+      "path": "results/lda/lda_v1_seed42/train_per_class.csv",
+      "bytes": 386,
+      "modified_utc": "2026-09-23T09:28:35.206750+00:00"
+    },
+    {
+      "path": "results/lda/lda_v1_seed42/test_confusion_matrix.csv",
+      "bytes": 112,
+      "modified_utc": "2026-09-23T09:28:35.239380+00:00"
+    },
+    {
+      "path": "results/lda/lda_v1_seed42/test_per_class.csv",
+      "bytes": 340,
+      "modified_utc": "2026-09-23T09:28:35.239268+00:00"
+    },
+    {
+      "path": "results/lda/lda_v1_seed42/train_predictions.csv",
+      "bytes": 44465,
+      "modified_utc": "2026-09-23T09:28:35.206311+00:00"
+    },
+    {
+      "path": "results/lda/lda_v1_seed42/test_confusion_matrix.png",
+      "bytes": 43407,
+      "modified_utc": "2026-09-23T09:28:35.379535+00:00"
+    },
+    {
+      "path": "results/lda/lda_v1_seed42/test_predictions.csv",
+      "bytes": 14788,
+      "modified_utc": "2026-09-23T09:28:35.239109+00:00"
+    },
+    {
+      "path": "results/lda/lda_v1_seed42/training_metadata.json",
+      "bytes": 733,
+      "modified_utc": "2026-09-23T09:28:35.176296+00:00"
+    },
+    {
+      "path": "results/lda/lda_v1_seed42/test_metrics.json",
+      "bytes": 1583,
+      "modified_utc": "2026-09-23T09:28:35.238369+00:00"
+    },
+    {
+      "path": "results/lda/lda_v1_seed42/run.json",
+      "bytes": 7080,
+      "modified_utc": "2026-09-23T09:28:35.380622+00:00"
+    },
+    {
+      "path": "results/lda/lda_v1_seed42/validation_per_class.csv",
+      "bytes": 380,
+      "modified_utc": "2026-09-23T09:28:35.223094+00:00"
+    },
+    {
+      "path": "results/ptbxl_spatiotemporal/ptbxl_spatiotemporal_image_v1_seed42/prior_experiment_log.csv",
+      "bytes": 3682,
+      "modified_utc": "2026-09-25T19:04:18.453969+00:00"
+    },
+    {
+      "path": "results/ptbxl_spatiotemporal/ptbxl_spatiotemporal_image_v1_seed42/train_per_label.csv",
+      "bytes": 1003,
+      "modified_utc": "2026-09-25T23:16:27.865179+00:00"
+    },
+    {
+      "path": "results/ptbxl_spatiotemporal/ptbxl_spatiotemporal_image_v1_seed42/provenance.json",
+      "bytes": 2631,
+      "modified_utc": "2026-09-25T19:04:18.530076+00:00"
+    },
+    {
+      "path": "results/ptbxl_spatiotemporal/ptbxl_spatiotemporal_image_v1_seed42/figure_review.json",
+      "bytes": 1657,
+      "modified_utc": "2026-09-25T23:55:44.293084+00:00"
+    },
+    {
+      "path": "results/ptbxl_spatiotemporal/ptbxl_spatiotemporal_image_v1_seed42/train_metrics.json",
+      "bytes": 4821,
+      "modified_utc": "2026-09-25T23:16:27.761161+00:00"
+    },
+    {
+      "path": "results/ptbxl_spatiotemporal/ptbxl_spatiotemporal_image_v1_seed42/validation_confusion_matrices.png",
+      "bytes": 84578,
+      "modified_utc": "2026-09-25T23:17:09.274422+00:00"
+    },
+    {
+      "path": "results/ptbxl_spatiotemporal/ptbxl_spatiotemporal_image_v1_seed42/interpretation_review.json",
+      "bytes": 1453,
+      "modified_utc": "2026-09-25T23:56:48.765712+00:00"
+    },
+    {
+      "path": "results/ptbxl_spatiotemporal/ptbxl_spatiotemporal_image_v1_seed42/run_summary.csv",
+      "bytes": 286,
+      "modified_utc": "2026-09-25T23:17:59.385854+00:00"
+    },
+    {
+      "path": "results/ptbxl_spatiotemporal/ptbxl_spatiotemporal_image_v1_seed42/test_per_label.csv",
+      "bytes": 972,
+      "modified_utc": "2026-09-25T23:17:53.322515+00:00"
+    },
+    {
+      "path": "results/ptbxl_spatiotemporal/ptbxl_spatiotemporal_image_v1_seed42/validation_metrics.json",
+      "bytes": 4774,
+      "modified_utc": "2026-09-25T23:17:09.086895+00:00"
+    },
+    {
+      "path": "results/ptbxl_spatiotemporal/ptbxl_spatiotemporal_image_v1_seed42/validation_predictions.csv",
+      "bytes": 351015,
+      "modified_utc": "2026-09-25T23:17:09.099492+00:00"
+    },
+    {
+      "path": "results/ptbxl_spatiotemporal/ptbxl_spatiotemporal_image_v1_seed42/config.json",
+      "bytes": 4481,
+      "modified_utc": "2026-09-25T19:04:18.453378+00:00"
+    },
+    {
+      "path": "results/ptbxl_spatiotemporal/ptbxl_spatiotemporal_image_v1_seed42/development_split_used.csv",
+      "bytes": 14498141,
+      "modified_utc": "2026-09-25T19:04:18.745562+00:00"
+    },
+    {
+      "path": "results/ptbxl_spatiotemporal/ptbxl_spatiotemporal_image_v1_seed42/preservation.json",
+      "bytes": 644,
+      "modified_utc": "2026-09-25T23:17:59.384871+00:00"
+    },
+    {
+      "path": "results/ptbxl_spatiotemporal/ptbxl_spatiotemporal_image_v1_seed42/train_predictions.csv",
+      "bytes": 2708176,
+      "modified_utc": "2026-09-25T23:16:27.863655+00:00"
+    },
+    {
+      "path": "results/ptbxl_spatiotemporal/ptbxl_spatiotemporal_image_v1_seed42/selection_frozen.json",
+      "bytes": 10366,
+      "modified_utc": "2026-09-25T23:11:00.577412+00:00"
+    },
+    {
+      "path": "results/ptbxl_spatiotemporal/ptbxl_spatiotemporal_image_v1_seed42/test_predictions.csv",
+      "bytes": 339984,
+      "modified_utc": "2026-09-25T23:17:53.321956+00:00"
+    },
+    {
+      "path": "results/ptbxl_spatiotemporal/ptbxl_spatiotemporal_image_v1_seed42/training_metadata.json",
+      "bytes": 9291,
+      "modified_utc": "2026-09-25T23:11:00.562575+00:00"
+    },
+    {
+      "path": "results/ptbxl_spatiotemporal/ptbxl_spatiotemporal_image_v1_seed42/checkpoint_replay.json",
+      "bytes": 233,
+      "modified_utc": "2026-09-25T23:17:09.931050+00:00"
+    },
+    {
+      "path": "results/ptbxl_spatiotemporal/ptbxl_spatiotemporal_image_v1_seed42/validation_per_label.csv",
+      "bytes": 973,
+      "modified_utc": "2026-09-25T23:17:09.099718+00:00"
+    },
+    {
+      "path": "results/ptbxl_spatiotemporal/ptbxl_spatiotemporal_image_v1_seed42/test_metrics.json",
+      "bytes": 4773,
+      "modified_utc": "2026-09-25T23:17:53.308708+00:00"
+    },
+    {
+      "path": "results/ptbxl_spatiotemporal/ptbxl_spatiotemporal_image_v1_seed42/protected_artifacts.json",
+      "bytes": 21537,
+      "modified_utc": "2026-09-25T19:04:18.454184+00:00"
+    },
+    {
+      "path": "results/ptbxl_spatiotemporal/ptbxl_spatiotemporal_image_v1_seed42/verification.json",
+      "bytes": 6659,
+      "modified_utc": "2026-09-25T23:53:42.148957+00:00"
+    },
+    {
+      "path": "results/ptbxl_spatiotemporal/ptbxl_spatiotemporal_image_v1_seed42/test_confusion_matrices.png",
+      "bytes": 84633,
+      "modified_utc": "2026-09-25T23:17:53.531891+00:00"
+    },
+    {
+      "path": "results/ptbxl_spatiotemporal/ptbxl_spatiotemporal_image_v1_seed42/evaluation_progress.json",
+      "bytes": 146,
+      "modified_utc": "2026-09-25T23:17:59.386187+00:00"
+    },
+    {
+      "path": "results/ptbxl_spatiotemporal/ptbxl_spatiotemporal_image_v1_seed42/test_inference_state.json",
+      "bytes": 290,
+      "modified_utc": "2026-09-25T23:17:53.534456+00:00"
+    },
+    {
+      "path": "results/ptbxl_spatiotemporal/ptbxl_spatiotemporal_image_v1_seed42/run.json",
+      "bytes": 27911,
+      "modified_utc": "2026-09-25T23:17:59.385722+00:00"
+    },
+    {
+      "path": "results/ptbxl_spatiotemporal/ptbxl_spatiotemporal_image_v1_seed42/train_confusion_matrices.png",
+      "bytes": 89487,
+      "modified_utc": "2026-09-25T23:16:28.081836+00:00"
+    },
+    {
+      "path": "results/ptbxl_spatiotemporal/ptbxl_spatiotemporal_image_v1_seed42/test_patient_bootstrap.json",
+      "bytes": 3564,
+      "modified_utc": "2026-09-25T23:17:59.197512+00:00"
+    },
+    {
+      "path": "results/ptbxl_spatiotemporal/ptbxl_spatiotemporal_image_v1_seed42/figures/roc_curves.png",
+      "bytes": 118751,
+      "modified_utc": "2026-09-25T23:54:02.714838+00:00"
+    },
+    {
+      "path": "results/ptbxl_spatiotemporal/ptbxl_spatiotemporal_image_v1_seed42/figures/roc_curves.svg",
+      "bytes": 119930,
+      "modified_utc": "2026-09-25T23:54:02.715033+00:00"
+    },
+    {
+      "path": "results/ptbxl_spatiotemporal/ptbxl_spatiotemporal_image_v1_seed42/figures/report_manifest.json",
+      "bytes": 6849,
+      "modified_utc": "2026-09-25T23:54:02.717087+00:00"
+    },
+    {
+      "path": "results/ptbxl_spatiotemporal/ptbxl_spatiotemporal_image_v1_seed42/figures/precision_recall_curves.png",
+      "bytes": 133594,
+      "modified_utc": "2026-09-25T23:54:02.715210+00:00"
+    },
+    {
+      "path": "results/ptbxl_spatiotemporal/ptbxl_spatiotemporal_image_v1_seed42/figures/partition_summary.png",
+      "bytes": 83652,
+      "modified_utc": "2026-09-25T23:54:02.715509+00:00"
+    },
+    {
+      "path": "results/ptbxl_spatiotemporal/ptbxl_spatiotemporal_image_v1_seed42/figures/per_label_metrics.png",
+      "bytes": 50783,
+      "modified_utc": "2026-09-25T23:54:02.715768+00:00"
+    },
+    {
+      "path": "results/ptbxl_spatiotemporal/ptbxl_spatiotemporal_image_v1_seed42/figures/per_label_metrics.svg",
+      "bytes": 37685,
+      "modified_utc": "2026-09-25T23:54:02.716199+00:00"
+    },
+    {
+      "path": "results/ptbxl_spatiotemporal/ptbxl_spatiotemporal_image_v1_seed42/figures/partition_summary.svg",
+      "bytes": 31210,
+      "modified_utc": "2026-09-25T23:54:02.716562+00:00"
+    },
+    {
+      "path": "results/ptbxl_spatiotemporal/ptbxl_spatiotemporal_image_v1_seed42/figures/precision_recall_curves.svg",
+      "bytes": 178620,
+      "modified_utc": "2026-09-25T23:54:02.716828+00:00"
+    },
+    {
+      "path": "results/ptbxl_spatiotemporal/ptbxl_spatiotemporal_image_v1_seed42/source_snapshot/src/ptbxl_learning_data.py",
+      "bytes": 19533,
+      "modified_utc": "2026-09-25T19:04:18.455016+00:00"
+    },
+    {
+      "path": "results/ptbxl_spatiotemporal/ptbxl_spatiotemporal_image_v1_seed42/source_snapshot/src/common.py",
+      "bytes": 1692,
+      "modified_utc": "2026-09-25T19:04:18.455694+00:00"
+    },
+    {
+      "path": "results/ptbxl_spatiotemporal/ptbxl_spatiotemporal_image_v1_seed42/source_snapshot/src/baseline_preservation.py",
+      "bytes": 2761,
+      "modified_utc": "2026-09-25T19:04:18.455874+00:00"
+    },
+    {
+      "path": "results/ptbxl_spatiotemporal/ptbxl_spatiotemporal_image_v1_seed42/source_snapshot/src/run_ptbxl_spatiotemporal.py",
+      "bytes": 15106,
+      "modified_utc": "2026-09-25T19:04:18.454508+00:00"
+    },
+    {
+      "path": "results/ptbxl_spatiotemporal/ptbxl_spatiotemporal_image_v1_seed42/source_snapshot/src/models/ptbxl_cnn_lstm.py",
+      "bytes": 24718,
+      "modified_utc": "2026-09-25T19:04:18.454868+00:00"
+    },
+    {
+      "path": "results/ptbxl_spatiotemporal/ptbxl_spatiotemporal_image_v1_seed42/source_snapshot/src/models/ptbxl_spatiotemporal.py",
+      "bytes": 31305,
+      "modified_utc": "2026-09-25T19:04:18.454717+00:00"
+    },
+    {
+      "path": "results/ptbxl_spatiotemporal/ptbxl_spatiotemporal_image_v1_seed42/source_snapshot/src/evaluation/ptbxl_uncertainty.py",
+      "bytes": 6643,
+      "modified_utc": "2026-09-25T19:04:18.455508+00:00"
+    },
+    {
+      "path": "results/ptbxl_spatiotemporal/ptbxl_spatiotemporal_image_v1_seed42/source_snapshot/src/evaluation/multilabel.py",
+      "bytes": 11722,
+      "modified_utc": "2026-09-25T19:04:18.455267+00:00"
+    },
+    {
+      "path": "results/cnn/cnn_v1_seed42/interpretation.md",
+      "bytes": 2199,
+      "modified_utc": "2026-09-23T09:32:18.971357+00:00"
+    },
+    {
+      "path": "results/cnn/cnn_v1_seed42/provenance.json",
+      "bytes": 2548,
+      "modified_utc": "2026-09-23T09:29:08.061728+00:00"
+    },
+    {
+      "path": "results/cnn/cnn_v1_seed42/train_metrics.json",
+      "bytes": 1598,
+      "modified_utc": "2026-09-23T09:29:53.592900+00:00"
+    },
+    {
+      "path": "results/cnn/cnn_v1_seed42/split_used.csv",
+      "bytes": 142957,
+      "modified_utc": "2026-09-23T09:29:08.064041+00:00"
+    },
+    {
+      "path": "results/cnn/cnn_v1_seed42/validation_metrics.json",
+      "bytes": 1564,
+      "modified_utc": "2026-09-23T09:29:53.733180+00:00"
+    },
+    {
+      "path": "results/cnn/cnn_v1_seed42/validation_predictions.csv",
+      "bytes": 14740,
+      "modified_utc": "2026-09-23T09:29:53.733948+00:00"
+    },
+    {
+      "path": "results/cnn/cnn_v1_seed42/config.json",
+      "bytes": 1150,
+      "modified_utc": "2026-09-23T09:29:08.032237+00:00"
+    },
+    {
+      "path": "results/cnn/cnn_v1_seed42/train_per_class.csv",
+      "bytes": 354,
+      "modified_utc": "2026-09-23T09:29:53.595580+00:00"
+    },
+    {
+      "path": "results/cnn/cnn_v1_seed42/test_confusion_matrix.csv",
+      "bytes": 111,
+      "modified_utc": "2026-09-23T09:29:53.870261+00:00"
+    },
+    {
+      "path": "results/cnn/cnn_v1_seed42/test_per_class.csv",
+      "bytes": 322,
+      "modified_utc": "2026-09-23T09:29:53.870130+00:00"
+    },
+    {
+      "path": "results/cnn/cnn_v1_seed42/train_predictions.csv",
+      "bytes": 44210,
+      "modified_utc": "2026-09-23T09:29:53.595074+00:00"
+    },
+    {
+      "path": "results/cnn/cnn_v1_seed42/test_confusion_matrix.png",
+      "bytes": 41800,
+      "modified_utc": "2026-09-23T09:29:53.963116+00:00"
+    },
+    {
+      "path": "results/cnn/cnn_v1_seed42/test_predictions.csv",
+      "bytes": 14794,
+      "modified_utc": "2026-09-23T09:29:53.869964+00:00"
+    },
+    {
+      "path": "results/cnn/cnn_v1_seed42/training_metadata.json",
+      "bytes": 2604,
+      "modified_utc": "2026-09-23T09:29:53.190431+00:00"
+    },
+    {
+      "path": "results/cnn/cnn_v1_seed42/test_metrics.json",
+      "bytes": 1564,
+      "modified_utc": "2026-09-23T09:29:53.869217+00:00"
+    },
+    {
+      "path": "results/cnn/cnn_v1_seed42/run.json",
+      "bytes": 8972,
+      "modified_utc": "2026-09-23T09:29:53.964452+00:00"
+    },
+    {
+      "path": "results/cnn/cnn_v1_seed42/validation_per_class.csv",
+      "bytes": 322,
+      "modified_utc": "2026-09-23T09:29:53.734433+00:00"
+    },
+    {
+      "path": "results/readiness/labels/group_compositions.csv",
+      "bytes": 1274,
+      "modified_utc": "2026-09-24T06:23:12.401420+00:00"
+    },
+    {
+      "path": "results/readiness/labels/summary.json",
+      "bytes": 14478,
+      "modified_utc": "2026-09-24T06:23:12.411711+00:00"
+    },
+    {
+      "path": "results/readiness/labels/group_review.csv",
+      "bytes": 18558,
+      "modified_utc": "2026-09-24T06:23:12.400684+00:00"
+    },
+    {
+      "path": "results/readiness/labels/development_adjudication_queue.csv",
+      "bytes": 135339,
+      "modified_utc": "2026-09-24T06:23:12.410957+00:00"
+    },
+    {
+      "path": "results/readiness/labels/class_group_counts.csv",
+      "bytes": 595,
+      "modified_utc": "2026-09-24T06:23:12.401136+00:00"
+    },
+    {
+      "path": "results/readiness/errors/summary.json",
+      "bytes": 20248,
+      "modified_utc": "2026-09-24T06:24:33.414779+00:00"
+    },
+    {
+      "path": "results/readiness/errors/development_cases.csv",
+      "bytes": 217103,
+      "modified_utc": "2026-09-24T06:24:32.544988+00:00"
+    },
+    {
+      "path": "results/readiness/errors/confusion_counts.csv",
+      "bytes": 5050,
+      "modified_utc": "2026-09-24T06:24:32.545551+00:00"
+    },
+    {
+      "path": "results/readiness/errors/minority_error_destinations.csv",
+      "bytes": 2468,
+      "modified_utc": "2026-09-24T06:24:32.545717+00:00"
+    },
+    {
+      "path": "results/readiness/errors/validation_gallery_index.csv",
+      "bytes": 7711,
+      "modified_utc": "2026-09-24T06:24:32.546479+00:00"
+    },
+    {
+      "path": "results/readiness/errors/development_prediction_counts.png",
+      "bytes": 72187,
+      "modified_utc": "2026-09-24T06:24:32.874692+00:00"
+    },
+    {
+      "path": "results/readiness/errors/development_group_associations.csv",
+      "bytes": 1670,
+      "modified_utc": "2026-09-24T06:24:32.546170+00:00"
+    },
+    {
+      "path": "results/readiness/errors/validation_minority_inputs.png",
+      "bytes": 397909,
+      "modified_utc": "2026-09-24T06:24:33.399780+00:00"
+    },
+    {
+      "path": "results/readiness/errors/development_error_overlap.csv",
+      "bytes": 441,
+      "modified_utc": "2026-09-24T06:24:32.546016+00:00"
+    },
+    {
+      "path": "results/readiness/errors/partition_class_metrics.csv",
+      "bytes": 2816,
+      "modified_utc": "2026-09-24T06:24:32.545254+00:00"
+    },
+    {
+      "path": "results/readiness/errors/development_supplied_label_ranks.csv",
+      "bytes": 1672,
+      "modified_utc": "2026-09-24T06:24:32.545887+00:00"
+    },
+    {
+      "path": "results/readiness/errors/validation_confusion.png",
+      "bytes": 92862,
+      "modified_utc": "2026-09-24T06:24:32.713429+00:00"
+    },
+    {
+      "path": "results/readiness/inputs/056b1c90d8b60e4846b1_cached128x256.png",
+      "bytes": 13500,
+      "modified_utc": "2026-09-24T06:23:02.907598+00:00"
+    },
+    {
+      "path": "results/readiness/inputs/0c2ef965519ba2ce415e_crop_native.png",
+      "bytes": 301874,
+      "modified_utc": "2026-09-24T06:23:03.029274+00:00"
+    },
+    {
+      "path": "results/readiness/inputs/1ddd77a4141874cbc65b_cached128x256.png",
+      "bytes": 13236,
+      "modified_utc": "2026-09-24T06:23:03.418581+00:00"
+    },
+    {
+      "path": "results/readiness/inputs/candidate_preview.json",
+      "bytes": 1487,
+      "modified_utc": "2026-09-24T06:26:44.224654+00:00"
+    },
+    {
+      "path": "results/readiness/inputs/candidate_hb59_comparison.png",
+      "bytes": 398868,
+      "modified_utc": "2026-09-24T06:26:44.223734+00:00"
+    },
+    {
+      "path": "results/readiness/inputs/426e33afdf7c583eadbb_crop_native.png",
+      "bytes": 495650,
+      "modified_utc": "2026-09-24T06:23:03.555442+00:00"
+    },
+    {
+      "path": "results/readiness/inputs/clipping_detail.json",
+      "bytes": 1317,
+      "modified_utc": "2026-09-24T06:25:17.691875+00:00"
+    },
+    {
+      "path": "results/readiness/inputs/review_01_Normal.jpg",
+      "bytes": 429255,
+      "modified_utc": "2026-09-24T06:23:02.946667+00:00"
+    },
+    {
+      "path": "results/readiness/inputs/0c2ef965519ba2ce415e_cached128x256.png",
+      "bytes": 14865,
+      "modified_utc": "2026-09-24T06:23:03.155895+00:00"
+    },
+    {
+      "path": "results/readiness/inputs/00a9243e7385f8eb8f9f_crop_native.png",
+      "bytes": 527456,
+      "modified_utc": "2026-09-24T06:23:03.823448+00:00"
+    },
+    {
+      "path": "results/readiness/inputs/10b7b351a4e3a369a09b_crop_native.png",
+      "bytes": 503099,
+      "modified_utc": "2026-09-24T06:23:04.344274+00:00"
+    },
+    {
+      "path": "results/readiness/inputs/review_08_History_MI.jpg",
+      "bytes": 427686,
+      "modified_utc": "2026-09-24T06:23:04.776612+00:00"
+    },
+    {
+      "path": "results/readiness/inputs/29917828d7bcdabe9459_crop_native.png",
+      "bytes": 472796,
+      "modified_utc": "2026-09-24T06:23:04.610307+00:00"
+    },
+    {
+      "path": "results/readiness/inputs/review_03_MI.jpg",
+      "bytes": 424615,
+      "modified_utc": "2026-09-24T06:23:03.454950+00:00"
+    },
+    {
+      "path": "results/readiness/inputs/review_07_History_MI.jpg",
+      "bytes": 436956,
+      "modified_utc": "2026-09-24T06:23:04.511341+00:00"
+    },
+    {
+      "path": "results/readiness/inputs/review_05_Abnormal.jpg",
+      "bytes": 445556,
+      "modified_utc": "2026-09-24T06:23:03.988967+00:00"
+    },
+    {
+      "path": "results/readiness/inputs/01e055478056e70588b3_cached128x256.png",
+      "bytes": 16851,
+      "modified_utc": "2026-09-24T06:23:04.206342+00:00"
+    },
+    {
+      "path": "results/readiness/inputs/01e055478056e70588b3_crop_native.png",
+      "bytes": 415141,
+      "modified_utc": "2026-09-24T06:23:04.081721+00:00"
+    },
+    {
+      "path": "results/readiness/inputs/review_06_Abnormal.jpg",
+      "bytes": 412547,
+      "modified_utc": "2026-09-24T06:23:04.242937+00:00"
+    },
+    {
+      "path": "results/readiness/inputs/1ddd77a4141874cbc65b_crop_native.png",
+      "bytes": 472249,
+      "modified_utc": "2026-09-24T06:23:03.290555+00:00"
+    },
+    {
+      "path": "results/readiness/inputs/review_04_MI.jpg",
+      "bytes": 431768,
+      "modified_utc": "2026-09-24T06:23:03.720151+00:00"
+    },
+    {
+      "path": "results/readiness/inputs/10b7b351a4e3a369a09b_cached128x256.png",
+      "bytes": 13967,
+      "modified_utc": "2026-09-24T06:23:04.474092+00:00"
+    },
+    {
+      "path": "results/readiness/inputs/source_crop_boundaries.jpg",
+      "bytes": 980006,
+      "modified_utc": "2026-09-24T06:24:06.489658+00:00"
+    },
+    {
+      "path": "results/readiness/inputs/review_02_Normal.jpg",
+      "bytes": 384757,
+      "modified_utc": "2026-09-24T06:23:03.192041+00:00"
+    },
+    {
+      "path": "results/readiness/inputs/upper_boundary_clipping.png",
+      "bytes": 50828,
+      "modified_utc": "2026-09-24T06:24:06.525434+00:00"
+    },
+    {
+      "path": "results/readiness/inputs/426e33afdf7c583eadbb_cached128x256.png",
+      "bytes": 13832,
+      "modified_utc": "2026-09-24T06:23:03.683180+00:00"
+    },
+    {
+      "path": "results/readiness/inputs/candidate_hb59_image.png",
+      "bytes": 73648,
+      "modified_utc": "2026-09-24T06:26:43.997346+00:00"
+    },
+    {
+      "path": "results/readiness/inputs/29917828d7bcdabe9459_cached128x256.png",
+      "bytes": 13295,
+      "modified_utc": "2026-09-24T06:23:04.739995+00:00"
+    },
+    {
+      "path": "results/readiness/inputs/development_input_review.json",
+      "bytes": 12469,
+      "modified_utc": "2026-09-24T06:23:04.782659+00:00"
+    },
+    {
+      "path": "results/readiness/inputs/056b1c90d8b60e4846b1_crop_native.png",
+      "bytes": 491714,
+      "modified_utc": "2026-09-24T06:23:02.778503+00:00"
+    },
+    {
+      "path": "results/readiness/inputs/00a9243e7385f8eb8f9f_cached128x256.png",
+      "bytes": 14802,
+      "modified_utc": "2026-09-24T06:23:03.952056+00:00"
+    },
+    {
+      "path": "results/ptbxl_cnn_lstm/ptbxl_cnn_lstm_image_v1_seed42/prior_experiment_log.csv",
+      "bytes": 2289,
+      "modified_utc": "2026-09-24T11:11:01.765196+00:00"
+    },
+    {
+      "path": "results/ptbxl_cnn_lstm/ptbxl_cnn_lstm_image_v1_seed42/train_per_label.csv",
+      "bytes": 1002,
+      "modified_utc": "2026-09-24T14:11:01.796132+00:00"
+    },
+    {
+      "path": "results/ptbxl_cnn_lstm/ptbxl_cnn_lstm_image_v1_seed42/provenance.json",
+      "bytes": 2379,
+      "modified_utc": "2026-09-24T11:11:01.832288+00:00"
+    },
+    {
+      "path": "results/ptbxl_cnn_lstm/ptbxl_cnn_lstm_image_v1_seed42/figure_review.json",
+      "bytes": 1594,
+      "modified_utc": "2026-09-24T14:16:16.433451+00:00"
+    },
+    {
+      "path": "results/ptbxl_cnn_lstm/ptbxl_cnn_lstm_image_v1_seed42/train_metrics.json",
+      "bytes": 4822,
+      "modified_utc": "2026-09-24T14:11:01.695195+00:00"
+    },
+    {
+      "path": "results/ptbxl_cnn_lstm/ptbxl_cnn_lstm_image_v1_seed42/validation_confusion_matrices.png",
+      "bytes": 83962,
+      "modified_utc": "2026-09-24T14:11:48.874530+00:00"
+    },
+    {
+      "path": "results/ptbxl_cnn_lstm/ptbxl_cnn_lstm_image_v1_seed42/run_summary.csv",
+      "bytes": 279,
+      "modified_utc": "2026-09-24T14:12:50.566888+00:00"
+    },
+    {
+      "path": "results/ptbxl_cnn_lstm/ptbxl_cnn_lstm_image_v1_seed42/test_per_label.csv",
+      "bytes": 960,
+      "modified_utc": "2026-09-24T14:12:43.042001+00:00"
+    },
+    {
+      "path": "results/ptbxl_cnn_lstm/ptbxl_cnn_lstm_image_v1_seed42/validation_metrics.json",
+      "bytes": 4772,
+      "modified_utc": "2026-09-24T14:11:48.671537+00:00"
+    },
+    {
+      "path": "results/ptbxl_cnn_lstm/ptbxl_cnn_lstm_image_v1_seed42/validation_predictions.csv",
+      "bytes": 350706,
+      "modified_utc": "2026-09-24T14:11:48.683565+00:00"
+    },
+    {
+      "path": "results/ptbxl_cnn_lstm/ptbxl_cnn_lstm_image_v1_seed42/config.json",
+      "bytes": 2998,
+      "modified_utc": "2026-09-24T11:11:01.765071+00:00"
+    },
+    {
+      "path": "results/ptbxl_cnn_lstm/ptbxl_cnn_lstm_image_v1_seed42/development_split_used.csv",
+      "bytes": 14498141,
+      "modified_utc": "2026-09-24T11:11:02.048905+00:00"
+    },
+    {
+      "path": "results/ptbxl_cnn_lstm/ptbxl_cnn_lstm_image_v1_seed42/preservation.json",
+      "bytes": 644,
+      "modified_utc": "2026-09-24T14:12:50.565378+00:00"
+    },
+    {
+      "path": "results/ptbxl_cnn_lstm/ptbxl_cnn_lstm_image_v1_seed42/train_predictions.csv",
+      "bytes": 2705772,
+      "modified_utc": "2026-09-24T14:11:01.795423+00:00"
+    },
+    {
+      "path": "results/ptbxl_cnn_lstm/ptbxl_cnn_lstm_image_v1_seed42/selection_frozen.json",
+      "bytes": 9665,
+      "modified_utc": "2026-09-24T14:04:29.618344+00:00"
+    },
+    {
+      "path": "results/ptbxl_cnn_lstm/ptbxl_cnn_lstm_image_v1_seed42/test_predictions.csv",
+      "bytes": 339715,
+      "modified_utc": "2026-09-24T14:12:43.041670+00:00"
+    },
+    {
+      "path": "results/ptbxl_cnn_lstm/ptbxl_cnn_lstm_image_v1_seed42/training_metadata.json",
+      "bytes": 8620,
+      "modified_utc": "2026-09-24T14:04:29.602917+00:00"
+    },
+    {
+      "path": "results/ptbxl_cnn_lstm/ptbxl_cnn_lstm_image_v1_seed42/checkpoint_replay.json",
+      "bytes": 233,
+      "modified_utc": "2026-09-24T14:11:49.559836+00:00"
+    },
+    {
+      "path": "results/ptbxl_cnn_lstm/ptbxl_cnn_lstm_image_v1_seed42/validation_per_label.csv",
+      "bytes": 969,
+      "modified_utc": "2026-09-24T14:11:48.683894+00:00"
+    },
+    {
+      "path": "results/ptbxl_cnn_lstm/ptbxl_cnn_lstm_image_v1_seed42/test_metrics.json",
+      "bytes": 4759,
+      "modified_utc": "2026-09-24T14:12:43.029381+00:00"
+    },
+    {
+      "path": "results/ptbxl_cnn_lstm/ptbxl_cnn_lstm_image_v1_seed42/protected_artifacts.json",
+      "bytes": 11057,
+      "modified_utc": "2026-09-24T11:11:01.765369+00:00"
+    },
+    {
+      "path": "results/ptbxl_cnn_lstm/ptbxl_cnn_lstm_image_v1_seed42/verification.json",
+      "bytes": 6321,
+      "modified_utc": "2026-09-24T14:13:18.462415+00:00"
+    },
+    {
+      "path": "results/ptbxl_cnn_lstm/ptbxl_cnn_lstm_image_v1_seed42/test_confusion_matrices.png",
+      "bytes": 85323,
+      "modified_utc": "2026-09-24T14:12:43.264318+00:00"
+    },
+    {
+      "path": "results/ptbxl_cnn_lstm/ptbxl_cnn_lstm_image_v1_seed42/test_inference_state.json",
+      "bytes": 290,
+      "modified_utc": "2026-09-24T14:12:43.267046+00:00"
+    },
+    {
+      "path": "results/ptbxl_cnn_lstm/ptbxl_cnn_lstm_image_v1_seed42/run.json",
+      "bytes": 27017,
+      "modified_utc": "2026-09-24T14:12:50.566751+00:00"
+    },
+    {
+      "path": "results/ptbxl_cnn_lstm/ptbxl_cnn_lstm_image_v1_seed42/train_confusion_matrices.png",
+      "bytes": 92084,
+      "modified_utc": "2026-09-24T14:11:02.023435+00:00"
+    },
+    {
+      "path": "results/ptbxl_cnn_lstm/ptbxl_cnn_lstm_image_v1_seed42/test_patient_bootstrap.json",
+      "bytes": 3565,
+      "modified_utc": "2026-09-24T14:12:50.250048+00:00"
+    },
+    {
+      "path": "results/ptbxl_cnn_lstm/representation_review/ecg_20002.png",
+      "bytes": 401459,
+      "modified_utc": "2026-09-24T11:01:06.303535+00:00"
+    },
+    {
+      "path": "results/ptbxl_cnn_lstm/representation_review/ecg_10565.png",
+      "bytes": 385313,
+      "modified_utc": "2026-09-24T11:01:06.170976+00:00"
+    },
+    {
+      "path": "results/ptbxl_cnn_lstm/representation_review/ecg_00001.png",
+      "bytes": 397910,
+      "modified_utc": "2026-09-24T11:01:05.838359+00:00"
+    },
+    {
+      "path": "results/ptbxl_cnn_lstm/representation_review/ecg_00032.png",
+      "bytes": 400645,
+      "modified_utc": "2026-09-24T11:01:05.967509+00:00"
+    },
+    {
+      "path": "results/ptbxl_cnn_lstm/representation_review/ecg_00022.png",
+      "bytes": 401344,
+      "modified_utc": "2026-09-24T11:01:05.900810+00:00"
+    },
+    {
+      "path": "results/ptbxl_cnn_lstm/representation_review/manifest.json",
+      "bytes": 5687,
+      "modified_utc": "2026-09-24T11:01:54.858176+00:00"
+    },
+    {
+      "path": "results/ptbxl_cnn_lstm/representation_review/ecg_00045.png",
+      "bytes": 414514,
+      "modified_utc": "2026-09-24T11:01:06.036350+00:00"
+    },
+    {
+      "path": "results/ptbxl_cnn_lstm/representation_review/review.json",
+      "bytes": 1242,
+      "modified_utc": "2026-09-24T11:03:29.803924+00:00"
+    },
+    {
+      "path": "results/ptbxl_cnn_lstm/representation_review/ecg_00050.png",
+      "bytes": 405189,
+      "modified_utc": "2026-09-24T11:01:06.106992+00:00"
+    },
+    {
+      "path": "results/ptbxl_cnn_lstm/representation_review/ecg_12722.png",
+      "bytes": 378371,
+      "modified_utc": "2026-09-24T11:01:06.237585+00:00"
+    },
+    {
+      "path": "results/ptbxl_cnn_lstm/representation_review/ecg_20187.png",
+      "bytes": 395106,
+      "modified_utc": "2026-09-24T11:01:54.856981+00:00"
+    },
+    {
+      "path": "results/ptbxl_cnn_lstm/ptbxl_cnn_lstm_image_v1_seed42/figures/roc_curves.png",
+      "bytes": 120061,
+      "modified_utc": "2026-09-24T14:15:14.587989+00:00"
+    },
+    {
+      "path": "results/ptbxl_cnn_lstm/ptbxl_cnn_lstm_image_v1_seed42/figures/roc_curves.svg",
+      "bytes": 123943,
+      "modified_utc": "2026-09-24T14:15:14.588336+00:00"
+    },
+    {
+      "path": "results/ptbxl_cnn_lstm/ptbxl_cnn_lstm_image_v1_seed42/figures/report_manifest.json",
+      "bytes": 5954,
+      "modified_utc": "2026-09-24T14:15:14.590005+00:00"
+    },
+    {
+      "path": "results/ptbxl_cnn_lstm/ptbxl_cnn_lstm_image_v1_seed42/figures/precision_recall_curves.png",
+      "bytes": 135662,
+      "modified_utc": "2026-09-24T14:15:14.588555+00:00"
+    },
+    {
+      "path": "results/ptbxl_cnn_lstm/ptbxl_cnn_lstm_image_v1_seed42/figures/partition_summary.png",
+      "bytes": 82663,
+      "modified_utc": "2026-09-24T14:15:14.588791+00:00"
+    },
+    {
+      "path": "results/ptbxl_cnn_lstm/ptbxl_cnn_lstm_image_v1_seed42/figures/per_label_metrics.png",
+      "bytes": 50769,
+      "modified_utc": "2026-09-24T14:15:14.588994+00:00"
+    },
+    {
+      "path": "results/ptbxl_cnn_lstm/ptbxl_cnn_lstm_image_v1_seed42/figures/per_label_metrics.svg",
+      "bytes": 37697,
+      "modified_utc": "2026-09-24T14:15:14.589202+00:00"
+    },
+    {
+      "path": "results/ptbxl_cnn_lstm/ptbxl_cnn_lstm_image_v1_seed42/figures/partition_summary.svg",
+      "bytes": 31214,
+      "modified_utc": "2026-09-24T14:15:14.589495+00:00"
+    },
+    {
+      "path": "results/ptbxl_cnn_lstm/ptbxl_cnn_lstm_image_v1_seed42/figures/precision_recall_curves.svg",
+      "bytes": 193391,
+      "modified_utc": "2026-09-24T14:15:14.589770+00:00"
+    },
+    {
+      "path": "results/ptbxl_cnn_lstm/ptbxl_cnn_lstm_image_v1_seed42/source_snapshot/src/ptbxl_learning_data.py",
+      "bytes": 19533,
+      "modified_utc": "2026-09-24T11:11:01.766038+00:00"
+    },
+    {
+      "path": "results/ptbxl_cnn_lstm/ptbxl_cnn_lstm_image_v1_seed42/source_snapshot/src/common.py",
+      "bytes": 1692,
+      "modified_utc": "2026-09-24T11:11:01.766634+00:00"
+    },
+    {
+      "path": "results/ptbxl_cnn_lstm/ptbxl_cnn_lstm_image_v1_seed42/source_snapshot/src/baseline_preservation.py",
+      "bytes": 2761,
+      "modified_utc": "2026-09-24T11:11:01.766808+00:00"
+    },
+    {
+      "path": "results/ptbxl_cnn_lstm/ptbxl_cnn_lstm_image_v1_seed42/source_snapshot/src/run_ptbxl_cnn_lstm.py",
+      "bytes": 14061,
+      "modified_utc": "2026-09-24T11:11:01.765672+00:00"
+    },
+    {
+      "path": "results/ptbxl_cnn_lstm/ptbxl_cnn_lstm_image_v1_seed42/source_snapshot/src/models/ptbxl_cnn_lstm.py",
+      "bytes": 24718,
+      "modified_utc": "2026-09-24T11:11:01.765884+00:00"
+    },
+    {
+      "path": "results/ptbxl_cnn_lstm/ptbxl_cnn_lstm_image_v1_seed42/source_snapshot/src/evaluation/ptbxl_uncertainty.py",
+      "bytes": 6643,
+      "modified_utc": "2026-09-24T11:11:01.766479+00:00"
+    },
+    {
+      "path": "results/ptbxl_cnn_lstm/ptbxl_cnn_lstm_image_v1_seed42/source_snapshot/src/evaluation/multilabel.py",
+      "bytes": 11722,
+      "modified_utc": "2026-09-24T11:11:01.766311+00:00"
+    },
+    {
+      "path": "results/ptbxl_images_v1/preview/ecg_20002.png",
+      "bytes": 150563,
+      "modified_utc": "2026-09-24T10:16:39.638609+00:00"
+    },
+    {
+      "path": "results/ptbxl_images_v1/preview/preview_manifest.json",
+      "bytes": 59282,
+      "modified_utc": "2026-09-24T10:16:39.706847+00:00"
+    },
+    {
+      "path": "results/ptbxl_images_v1/preview/preview_review.json",
+      "bytes": 1140,
+      "modified_utc": "2026-09-24T10:21:21.062220+00:00"
+    },
+    {
+      "path": "results/ptbxl_images_v1/preview/ecg_10565.png",
+      "bytes": 97938,
+      "modified_utc": "2026-09-24T10:16:39.511798+00:00"
+    },
+    {
+      "path": "results/ptbxl_images_v1/preview/ecg_00001.png",
+      "bytes": 149333,
+      "modified_utc": "2026-09-24T10:16:39.147227+00:00"
+    },
+    {
+      "path": "results/ptbxl_images_v1/preview/ecg_00032.png",
+      "bytes": 148019,
+      "modified_utc": "2026-09-24T10:16:39.305963+00:00"
+    },
+    {
+      "path": "results/ptbxl_images_v1/preview/ecg_00022.png",
+      "bytes": 148164,
+      "modified_utc": "2026-09-24T10:16:39.212396+00:00"
+    },
+    {
+      "path": "results/ptbxl_images_v1/preview/ecg_00045.png",
+      "bytes": 193333,
+      "modified_utc": "2026-09-24T10:16:39.378487+00:00"
+    },
+    {
+      "path": "results/ptbxl_images_v1/preview/ecg_00050.png",
+      "bytes": 168418,
+      "modified_utc": "2026-09-24T10:16:39.445117+00:00"
+    },
+    {
+      "path": "results/ptbxl_images_v1/preview/ecg_12722.png",
+      "bytes": 92819,
+      "modified_utc": "2026-09-24T10:16:39.573227+00:00"
+    },
+    {
+      "path": "results/ptbxl_images_v1/preview/ecg_20187.png",
+      "bytes": 134020,
+      "modified_utc": "2026-09-24T10:16:39.701642+00:00"
+    },
+    {
+      "path": "src/audit_ptbxl.py",
+      "bytes": 15586,
+      "modified_utc": "2026-09-23T09:20:09.000241+00:00"
+    },
+    {
+      "path": "src/audit_archive.py",
+      "bytes": 1728,
+      "modified_utc": "2026-09-23T09:22:18.529530+00:00"
+    },
+    {
+      "path": "src/run.py",
+      "bytes": 5546,
+      "modified_utc": "2026-09-23T09:15:48.125574+00:00"
+    },
+    {
+      "path": "src/report_ptbxl_spatiotemporal.py",
+      "bytes": 36092,
+      "modified_utc": "2026-09-25T20:42:58.700251+00:00"
+    },
+    {
+      "path": "src/verify_ptbxl_run.py",
+      "bytes": 36953,
+      "modified_utc": "2026-09-24T11:12:42.618700+00:00"
+    },
+    {
+      "path": "src/ptbxl_learning_data.py",
+      "bytes": 19533,
+      "modified_utc": "2026-09-24T10:57:30.853292+00:00"
+    },
+    {
+      "path": "src/ptbxl_image_manifest.py",
+      "bytes": 12936,
+      "modified_utc": "2026-09-24T10:12:47.792155+00:00"
+    },
+    {
+      "path": "src/verify_ptbxl_spatiotemporal.py",
+      "bytes": 23377,
+      "modified_utc": "2026-09-25T18:59:04.433995+00:00"
+    },
+    {
+      "path": "src/compare_cnn_lstm.py",
+      "bytes": 9097,
+      "modified_utc": "2026-09-24T08:01:53.017747+00:00"
+    },
+    {
+      "path": "src/review_labels.py",
+      "bytes": 23504,
+      "modified_utc": "2026-09-24T06:23:11.610809+00:00"
+    },
+    {
+      "path": "src/run_cnn_lstm.py",
+      "bytes": 8753,
+      "modified_utc": "2026-09-24T08:02:28.031169+00:00"
+    },
+    {
+      "path": "src/compare_ptbxl_models.py",
+      "bytes": 38040,
+      "modified_utc": "2026-09-25T20:37:48.254439+00:00"
+    },
+    {
+      "path": "src/__init__.py",
+      "bytes": 51,
+      "modified_utc": "2026-09-23T09:11:35.910613+00:00"
+    },
+    {
+      "path": "src/audit_near_duplicates.py",
+      "bytes": 3307,
+      "modified_utc": "2026-09-23T09:21:02.700585+00:00"
+    },
+    {
+      "path": "src/generate_ptbxl_images.py",
+      "bytes": 20019,
+      "modified_utc": "2026-09-24T10:23:24.618889+00:00"
+    },
+    {
+      "path": "src/report_ptbxl_run.py",
+      "bytes": 31471,
+      "modified_utc": "2026-09-24T14:15:09.792785+00:00"
+    },
+    {
+      "path": "src/review_errors.py",
+      "bytes": 26407,
+      "modified_utc": "2026-09-24T06:24:31.932119+00:00"
+    },
+    {
+      "path": "src/common.py",
+      "bytes": 1692,
+      "modified_utc": "2026-09-23T09:12:29.979897+00:00"
+    },
+    {
+      "path": "src/baseline_preservation.py",
+      "bytes": 2761,
+      "modified_utc": "2026-09-24T08:03:17.985960+00:00"
+    },
+    {
+      "path": "src/ptbxl_rendering.py",
+      "bytes": 9166,
+      "modified_utc": "2026-09-24T10:14:59.224359+00:00"
+    },
+    {
+      "path": "src/verify.py",
+      "bytes": 3362,
+      "modified_utc": "2026-09-23T09:15:48.062133+00:00"
+    },
+    {
+      "path": "src/preview_input_candidate.py",
+      "bytes": 2567,
+      "modified_utc": "2026-09-24T06:26:42.904716+00:00"
+    },
+    {
+      "path": "src/run_ptbxl_spatiotemporal.py",
+      "bytes": 15106,
+      "modified_utc": "2026-09-25T18:57:23.957695+00:00"
+    },
+    {
+      "path": "src/check_readiness.py",
+      "bytes": 6611,
+      "modified_utc": "2026-09-24T08:03:34.072411+00:00"
+    },
+    {
+      "path": "src/compare.py",
+      "bytes": 7735,
+      "modified_utc": "2026-09-23T09:17:06.408189+00:00"
+    },
+    {
+      "path": "src/prepare.py",
+      "bytes": 11518,
+      "modified_utc": "2026-09-23T09:25:10.240986+00:00"
+    },
+    {
+      "path": "src/run_ptbxl_cnn_lstm.py",
+      "bytes": 14061,
+      "modified_utc": "2026-09-24T11:01:52.826115+00:00"
+    },
+    {
+      "path": "src/models/ptbxl_cnn_lstm.py",
+      "bytes": 24718,
+      "modified_utc": "2026-09-24T10:59:53.590704+00:00"
+    },
+    {
+      "path": "src/models/lda.py",
+      "bytes": 2065,
+      "modified_utc": "2026-09-23T09:15:48.188364+00:00"
+    },
+    {
+      "path": "src/models/cnn_lstm.py",
+      "bytes": 16067,
+      "modified_utc": "2026-09-24T08:03:29.517511+00:00"
+    },
+    {
+      "path": "src/models/__init__.py",
+      "bytes": 74,
+      "modified_utc": "2026-09-23T09:11:36.049396+00:00"
+    },
+    {
+      "path": "src/models/cnn.py",
+      "bytes": 20152,
+      "modified_utc": "2026-09-23T09:13:37.670010+00:00"
+    },
+    {
+      "path": "src/models/ptbxl_spatiotemporal.py",
+      "bytes": 31305,
+      "modified_utc": "2026-09-25T18:58:11.780570+00:00"
+    },
+    {
+      "path": "src/evaluation/metrics.py",
+      "bytes": 4429,
+      "modified_utc": "2026-09-23T09:15:56.650191+00:00"
+    },
+    {
+      "path": "src/evaluation/ptbxl_uncertainty.py",
+      "bytes": 6643,
+      "modified_utc": "2026-09-24T11:00:50.701611+00:00"
+    },
+    {
+      "path": "src/evaluation/multilabel.py",
+      "bytes": 11722,
+      "modified_utc": "2026-09-24T10:55:20.815497+00:00"
+    },
+    {
+      "path": "src/evaluation/__init__.py",
+      "bytes": 63,
+      "modified_utc": "2026-09-23T09:11:36.114625+00:00"
+    },
+    {
+      "path": "src/preprocessing/__init__.py",
+      "bytes": 64,
+      "modified_utc": "2026-09-23T09:11:35.976377+00:00"
+    },
+    {
+      "path": "src/preprocessing/ocr_header_ids.py",
+      "bytes": 4450,
+      "modified_utc": "2026-09-23T09:12:32.766935+00:00"
+    },
+    {
+      "path": "src/preprocessing/images.py",
+      "bytes": 547,
+      "modified_utc": "2026-09-23T09:12:30.045377+00:00"
+    },
+    {
+      "path": "src/preprocessing/template_header_ids.py",
+      "bytes": 8128,
+      "modified_utc": "2026-09-23T09:26:13.677601+00:00"
+    },
+    {
+      "path": "tests/test_ptbxl_runner.py",
+      "bytes": 13613,
+      "modified_utc": "2026-09-24T11:02:32.587095+00:00"
+    },
+    {
+      "path": "tests/test_cnn_lstm.py",
+      "bytes": 5331,
+      "modified_utc": "2026-09-24T08:03:29.584131+00:00"
+    },
+    {
+      "path": "tests/test_ptbxl_spatiotemporal_verification.py",
+      "bytes": 25374,
+      "modified_utc": "2026-09-25T19:01:26.821043+00:00"
+    },
+    {
+      "path": "tests/test_ptbxl_spatiotemporal_runner.py",
+      "bytes": 13927,
+      "modified_utc": "2026-09-25T18:58:59.723723+00:00"
+    },
+    {
+      "path": "tests/test_cnn.py",
+      "bytes": 2948,
+      "modified_utc": "2026-09-23T09:13:37.739568+00:00"
+    },
+    {
+      "path": "tests/test_cnn_lstm_runner.py",
+      "bytes": 11859,
+      "modified_utc": "2026-09-24T08:03:22.696833+00:00"
+    },
+    {
+      "path": "tests/test_report_ptbxl_spatiotemporal.py",
+      "bytes": 11522,
+      "modified_utc": "2026-09-25T20:42:58.783045+00:00"
+    },
+    {
+      "path": "tests/test_ptbxl_rendering.py",
+      "bytes": 13111,
+      "modified_utc": "2026-09-24T10:17:01.160980+00:00"
+    },
+    {
+      "path": "tests/test_ptbxl_learning_data.py",
+      "bytes": 12801,
+      "modified_utc": "2026-09-24T10:59:01.759412+00:00"
+    },
+    {
+      "path": "tests/test_ptbxl_generation.py",
+      "bytes": 13380,
+      "modified_utc": "2026-09-24T10:23:50.506285+00:00"
+    },
+    {
+      "path": "tests/test_multilabel.py",
+      "bytes": 9932,
+      "modified_utc": "2026-09-24T10:56:00.657501+00:00"
+    },
+    {
+      "path": "tests/test_ptbxl_uncertainty.py",
+      "bytes": 6349,
+      "modified_utc": "2026-09-24T11:00:50.767642+00:00"
+    },
+    {
+      "path": "tests/test_ptbxl_cnn_lstm.py",
+      "bytes": 9410,
+      "modified_utc": "2026-09-24T11:01:01.072522+00:00"
+    },
+    {
+      "path": "tests/test_ptbxl_comparison.py",
+      "bytes": 16559,
+      "modified_utc": "2026-09-25T20:37:48.371327+00:00"
+    },
+    {
+      "path": "tests/test_ptbxl_spatiotemporal.py",
+      "bytes": 9971,
+      "modified_utc": "2026-09-25T18:59:04.375838+00:00"
+    },
+    {
+      "path": "tests/test_ptbxl_image_manifest.py",
+      "bytes": 6872,
+      "modified_utc": "2026-09-24T10:12:47.861158+00:00"
+    },
+    {
+      "path": "tests/test_pipeline.py",
+      "bytes": 10425,
+      "modified_utc": "2026-09-23T09:17:02.245447+00:00"
+    },
+    {
+      "path": "tests/test_ptbxl_run_verification.py",
+      "bytes": 12677,
+      "modified_utc": "2026-09-24T11:12:05.203873+00:00"
+    }
+  ],
+  "source_catalogue": [
+    {
+      "path": "src/audit_ptbxl.py",
+      "lines": 224,
+      "docstring": "Read-only inventory of the separate, unused local PTB-XL waveform dataset.",
+      "top_level_symbols": [
+        "audit_ptbxl"
+      ]
+    },
+    {
+      "path": "src/audit_archive.py",
+      "lines": 41,
+      "docstring": "Check that source JPEGs exactly match the retained original image archive.",
+      "top_level_symbols": [
+        "main"
+      ]
+    },
+    {
+      "path": "src/run.py",
+      "lines": 102,
+      "docstring": "Run one prespecified baseline. Test data are scored only after fitting/model selection.",
+      "top_level_symbols": [
+        "append_log",
+        "run"
+      ]
+    },
+    {
+      "path": "src/report_ptbxl_spatiotemporal.py",
+      "lines": 470,
+      "docstring": "Report one completed, verified PTB-XL image run from saved predictions only.\n\nNo model/checkpoint loading, image access, inference, fitting, threshold search,\nor bootstrap resampling occurs here. Existing reporting outputs are protected\nunless --overwrite explicitly authorizes replacing this command's own files.",
+      "top_level_symbols": [
+        "_require",
+        "_finite",
+        "_runtime_summary",
+        "_runtime_text",
+        "_sha",
+        "_Inputs",
+        "_close",
+        "_prediction_arrays",
+        "_load_inputs",
+        "_save_figure",
+        "_figures",
+        "_link",
+        "_format",
+        "_interval",
+        "_report",
+        "generate_report"
+      ]
+    },
+    {
+      "path": "src/verify_ptbxl_run.py",
+      "lines": 575,
+      "docstring": "Independently verify a completed PTB-XL run using saved artifacts only.\n\n``verify(run_id)`` is read-only and raises on missing or inconsistent artifacts.\nThe explicit command-line entry point writes verification.json after success.\nCheckpoint tensors are inspected, never instantiated as a model or evaluated.\nBootstrap point estimates and structural validity are checked; its 500\nresamples are not repeated. Saved inference bookkeeping cannot prove the\nabsence of unrecorded work outside this experiment.",
+      "top_level_symbols": [
+        "_require",
+        "_sha",
+        "_hash",
+        "_safe_path",
+        "_object",
+        "_json",
+        "_csv",
+        "_compare",
+        "_integer",
+        "_number",
+        "_verify_predictions",
+        "_verify_per_label",
+        "_verify_history",
+        "_verify_bootstrap",
+        "_verify_log",
+        "_verify_cache",
+        "_verify_protection",
+        "_timestamp",
+        "verify",
+        "main"
+      ]
+    },
+    {
+      "path": "src/ptbxl_learning_data.py",
+      "lines": 370,
+      "docstring": "Immutable, lazy image inputs for the five-label PTB-XL experiment.\n\nOnly generated PNG pixels are model inputs. Twelve complete lead rows are\ninverted to ink and reduced by 2x2 maximum pooling; this retains every source\npixel's opportunity to contribute, including calibration, but thickens strokes\nand loses detail. This is image preprocessing, not waveform reconstruction.",
+      "top_level_symbols": [
+        "_sha_bytes",
+        "_sha",
+        "_read_json",
+        "_write_new_json",
+        "_read_csv",
+        "_strict_bool",
+        "_positive_int",
+        "_check_hash",
+        "_parse_rows",
+        "load_source_rows",
+        "preprocess_page",
+        "_source_binding",
+        "_cache_job",
+        "_training_normalization",
+        "_validate_cache",
+        "prepare_cache",
+        "CachedECGDataset"
+      ]
+    },
+    {
+      "path": "src/ptbxl_image_manifest.py",
+      "lines": 236,
+      "docstring": "Prepare deterministic PTB-XL rendering and classification metadata.\n\nAll source records are returned for rendering. Five diagnostic superclass\ntargets use all present diagnostic SCP keys, including confidence zero, as in\nthe distributed example. No-Mapped-class rows remain present but are ineligible\nfor classification. No labels or source metadata should be printed on images.\n\nInterface: result = prepare_manifest(dataset_dir, audit_path). The result has\nrows, summary, and expected_checksums attributes. This function is read-only.",
+      "top_level_symbols": [
+        "ManifestResult",
+        "_sha256",
+        "_read_csv",
+        "_positive_integer",
+        "_relative_path",
+        "_verify_metadata",
+        "prepare_manifest"
+      ]
+    },
+    {
+      "path": "src/verify_ptbxl_spatiotemporal.py",
+      "lines": 331,
+      "docstring": "Offline verification of the separate PTB-XL CNN + causal-TCN image run.\n\nThe read-only verify() function checks saved evidence; only the CLI writes a\nnew verification.json. It never trains, constructs a model, evaluates a\ncheckpoint, decodes image pixels, or repeats bootstrap resampling. Shared\nstateless readers/metric checks are reused without changing the earlier\nverifier or running its model-specific verification entry point.",
+      "top_level_symbols": [
+        "_verify_protocol",
+        "_verify_log",
+        "_verify_protection",
+        "verify",
+        "main"
+      ]
+    },
+    {
+      "path": "src/compare_cnn_lstm.py",
+      "lines": 126,
+      "docstring": "Compare three saved image-model runs without fitting or new inference.",
+      "top_level_symbols": [
+        "compare"
+      ]
+    },
+    {
+      "path": "src/review_labels.py",
+      "lines": 313,
+      "docstring": "Read-only label readiness review of the frozen image cohort.\n\nWrites aggregate group evidence and an unfilled development-only adjudication\nqueue. It never imports model outputs, changes labels, or rebuilds the split.\nUses only Python's standard library: python3 -m src.review_labels.",
+      "top_level_symbols": [
+        "sha256",
+        "read_csv",
+        "read_json",
+        "write_csv",
+        "require",
+        "composition",
+        "review",
+        "write_report"
+      ]
+    },
+    {
+      "path": "src/run_cnn_lstm.py",
+      "lines": 138,
+      "docstring": "Execute one frozen image CNN-LSTM experiment; test inference follows selection.",
+      "top_level_symbols": [
+        "run"
+      ]
+    },
+    {
+      "path": "src/compare_ptbxl_models.py",
+      "lines": 576,
+      "docstring": "Compare two completed, verified PTB-XL models using saved probabilities.\n\nNo image decoding, checkpoint loading, inference, fitting or threshold search\noccurs. Paired patient-cluster resampling estimates test differences conditional\non the two fitted models. The previously inspected test cohort makes this an\nexploratory comparison, not a fresh confirmatory model-selection experiment.",
+      "top_level_symbols": [
+        "_require",
+        "_sha",
+        "_safe_path",
+        "_same",
+        "_Inputs",
+        "_prediction_arrays",
+        "_run_timing",
+        "_load_run",
+        "_align",
+        "_difference",
+        "_interval_interpretation",
+        "paired_patient_bootstrap",
+        "_selection_key",
+        "_summary",
+        "_tables",
+        "_format",
+        "_markdown",
+        "_plot",
+        "_write_csv",
+        "compare_runs",
+        "main"
+      ]
+    },
+    {
+      "path": "src/__init__.py",
+      "lines": 1,
+      "docstring": "Reproducible ECG image baseline experiments.",
+      "top_level_symbols": []
+    },
+    {
+      "path": "src/audit_near_duplicates.py",
+      "lines": 64,
+      "docstring": "Conservative image-similarity screening before model fitting; never deletes images.\n\nPerceptual hashes screen candidate pairs. Extremely similar crop tensors are\ngrouped to avoid crossing split boundaries. This does not establish that every\nremaining pair comes from a different patient or acquisition.",
+      "top_level_symbols": [
+        "main"
+      ]
+    },
+    {
+      "path": "src/generate_ptbxl_images.py",
+      "lines": 324,
+      "docstring": "Generate and verify the full, separately versioned PTB-XL image cohort.",
+      "top_level_symbols": [
+        "_atomic_bytes",
+        "_atomic_json",
+        "_render_job",
+        "_verify_job",
+        "_runtime",
+        "_binding",
+        "_manifest_row",
+        "_csv_bytes",
+        "generate",
+        "verify"
+      ]
+    },
+    {
+      "path": "src/report_ptbxl_run.py",
+      "lines": 427,
+      "docstring": "Report one completed, verified PTB-XL image run from saved predictions only.\n\nNo model/checkpoint loading, image access, inference, fitting, threshold search,\nor bootstrap resampling occurs here. Existing reporting outputs are protected\nunless --overwrite explicitly authorizes replacing this command's own files.",
+      "top_level_symbols": [
+        "_require",
+        "_finite",
+        "_sha",
+        "_Inputs",
+        "_close",
+        "_prediction_arrays",
+        "_load_inputs",
+        "_save_figure",
+        "_figures",
+        "_link",
+        "_format",
+        "_interval",
+        "_report",
+        "generate_report"
+      ]
+    },
+    {
+      "path": "src/review_errors.py",
+      "lines": 344,
+      "docstring": "Review frozen baseline errors without training or model inference.\n\nCase-level analysis is restricted to development partitions. Previously recorded\ntest confusion matrices are reproduced only as explicitly post-hoc aggregates.",
+      "top_level_symbols": [
+        "csv_rows",
+        "verify_lock",
+        "metrics_from_confusion",
+        "make_figures",
+        "main",
+        "write_report"
+      ]
+    },
+    {
+      "path": "src/common.py",
+      "lines": 62,
+      "docstring": null,
+      "top_level_symbols": [
+        "read_json",
+        "write_json",
+        "sha256_file",
+        "digest",
+        "write_csv",
+        "utc_now",
+        "environment",
+        "source_hashes"
+      ]
+    },
+    {
+      "path": "src/baseline_preservation.py",
+      "lines": 56,
+      "docstring": "Protect the original baselines while allowing new experiment-log rows.",
+      "top_level_symbols": [
+        "verify_baseline_preservation",
+        "append_experiment_log"
+      ]
+    },
+    {
+      "path": "src/ptbxl_rendering.py",
+      "lines": 163,
+      "docstring": "Deterministic, calibrated clean pages from real PTB-XL waveforms.\n\nNo diagnoses, demographics or identifiers are accepted by the pixel renderer.\nEvery lead is plotted over the full source duration, with shared horizontal time.",
+      "top_level_symbols": [
+        "load_waveform",
+        "geometry",
+        "_background",
+        "render_page",
+        "encode_png",
+        "save_page"
+      ]
+    },
+    {
+      "path": "src/verify.py",
+      "lines": 58,
+      "docstring": "Validate the frozen split and cache without fitting or scoring any model.",
+      "top_level_symbols": [
+        "require",
+        "load_verified_data"
+      ]
+    },
+    {
+      "path": "src/preview_input_candidate.py",
+      "lines": 50,
+      "docstring": "Illustrate one training-only crop candidate; never replaces an experiment input.",
+      "top_level_symbols": [
+        "main"
+      ]
+    },
+    {
+      "path": "src/run_ptbxl_spatiotemporal.py",
+      "lines": 234,
+      "docstring": "Run the prespecified five-label image experiment without changing prior runs.",
+      "top_level_symbols": [
+        "_source_hashes",
+        "_labels",
+        "_check_frozen",
+        "_prior_artifacts",
+        "_check_prior",
+        "run"
+      ]
+    },
+    {
+      "path": "src/check_readiness.py",
+      "lines": 114,
+      "docstring": "Verify baseline preservation and completed technical reviews, without fitting models.",
+      "top_level_symbols": [
+        "check"
+      ]
+    },
+    {
+      "path": "src/compare.py",
+      "lines": 108,
+      "docstring": "Compare already saved evidence; never rerun models or tune against test labels.",
+      "top_level_symbols": [
+        "compare"
+      ]
+    },
+    {
+      "path": "src/prepare.py",
+      "lines": 195,
+      "docstring": "Audit originals, exclude exact copies, freeze one group-aware split, cache tiny inputs.",
+      "top_level_symbols": [
+        "UnionFind",
+        "prepare"
+      ]
+    },
+    {
+      "path": "src/run_ptbxl_cnn_lstm.py",
+      "lines": 218,
+      "docstring": "Run the prespecified five-label image experiment without changing prior runs.",
+      "top_level_symbols": [
+        "_source_hashes",
+        "_labels",
+        "_check_frozen",
+        "_prior_artifacts",
+        "_check_prior",
+        "run"
+      ]
+    },
+    {
+      "path": "src/models/ptbxl_cnn_lstm.py",
+      "lines": 421,
+      "docstring": "CPU CNN+LSTM for twelve aligned rendered ECG lead images.\n\nDatasets supply images already standardized with training-only statistics.\nFive sigmoid targets overlap: probabilities must never be row-normalized.\nTraining accepts training and validation datasets only, with no test argument.",
+      "top_level_symbols": [
+        "spatial_feature_sequence",
+        "LeadImageCNNLSTM",
+        "selection_key",
+        "_get_config",
+        "_seed_everything",
+        "_normalization",
+        "_check_dataset",
+        "_check_batch",
+        "_class_counts",
+        "_atomic_json",
+        "LeadImagePredictor",
+        "load_checkpoint",
+        "_evaluate_validation",
+        "_plot_history",
+        "train_model"
+      ]
+    },
+    {
+      "path": "src/models/lda.py",
+      "lines": 46,
+      "docstring": null,
+      "top_level_symbols": [
+        "LDAPredictor",
+        "train_lda"
+      ]
+    },
+    {
+      "path": "src/models/cnn_lstm.py",
+      "lines": 290,
+      "docstring": "Small CNN+LSTM classifier of spatial columns in frozen ECG images.\n\nThe sequence axis follows image width. It is NOT calibrated time: the input\ncontains multiple ECG leads in a page layout and no waveform digitization.",
+      "top_level_symbols": [
+        "spatial_feature_sequence",
+        "SmallCNNLSTM",
+        "selection_key",
+        "_get_config",
+        "_make_model",
+        "CNNLSTMPredictor",
+        "load_checkpoint",
+        "_plot_history",
+        "train_cnn_lstm"
+      ]
+    },
+    {
+      "path": "src/models/__init__.py",
+      "lines": 1,
+      "docstring": "LDA and CNN baselines; unconfirmed model names are not implemented.",
+      "top_level_symbols": []
+    },
+    {
+      "path": "src/models/cnn.py",
+      "lines": 482,
+      "docstring": "Small, deterministic four-class ECG image CNN baseline.\n\nThe caller owns the audited, frozen split and image preprocessing. This module\naccepts training and validation arrays only; test data cannot influence fitting\nor checkpoint selection. Inputs are grayscale ink arrays (N, 1, 128, 256).",
+      "top_level_symbols": [
+        "SmallECGCNN",
+        "_seed_everything",
+        "_validate_x",
+        "_validate_y",
+        "_get_config",
+        "_select_device",
+        "_classification_metrics",
+        "_evaluate",
+        "TorchPredictor",
+        "load_checkpoint",
+        "_plot_history",
+        "train_cnn"
+      ]
+    },
+    {
+      "path": "src/models/ptbxl_spatiotemporal.py",
+      "lines": 520,
+      "docstring": "Controlled CNN plus causal feature-convolution head for ECG lead images.\n\nDatasets supply images already standardized with training-only statistics.\nFive sigmoid targets overlap: probabilities must never be row-normalized.\nTraining accepts training and validation datasets only, with no test argument.\nThe head is causal in its supplied horizontal feature sequence. The shared CNN\nuses symmetric filters and spatial GroupNorm, and final mean pooling uses the\nwhole image; this is not an end-to-end causal waveform or streaming model.",
+      "top_level_symbols": [
+        "spatial_feature_sequence",
+        "CausalResidualBlock",
+        "LeadImageSpatiotemporal",
+        "selection_key",
+        "_get_config",
+        "_seed_everything",
+        "_normalization",
+        "_check_dataset",
+        "_check_batch",
+        "_class_counts",
+        "_atomic_json",
+        "_utc_now",
+        "_save_progress",
+        "_evaluation_progress",
+        "SpatiotemporalPredictor",
+        "load_checkpoint",
+        "_evaluate_validation",
+        "_plot_history",
+        "train_model"
+      ]
+    },
+    {
+      "path": "src/evaluation/metrics.py",
+      "lines": 81,
+      "docstring": null,
+      "top_level_symbols": [
+        "evaluate",
+        "save_evaluation"
+      ]
+    },
+    {
+      "path": "src/evaluation/ptbxl_uncertainty.py",
+      "lines": 112,
+      "docstring": "Patient-cluster bootstrap uncertainty conditional on a frozen ECG model.\n\nEvery patient draw includes all of that patient's observed ECG records, with\nfull multiplicity when a patient is drawn repeatedly. No thresholds, calibration\nparameters or models are fitted. The bootstrap seed does not change training RNGs.",
+      "top_level_symbols": [
+        "_patient_groups",
+        "_sample_record_indices",
+        "patient_cluster_bootstrap"
+      ]
+    },
+    {
+      "path": "src/evaluation/multilabel.py",
+      "lines": 203,
+      "docstring": "Five-label ECG evaluation with one prespecified 0.5 decision threshold.\n\nSigmoid probabilities are independent across labels and need not sum to one.\nUndefined ranking metrics remain null. No threshold fitting is performed.",
+      "top_level_symbols": [
+        "_validated",
+        "_zero_division_ratio",
+        "_mean_defined",
+        "evaluate_multilabel",
+        "_manifest_binary",
+        "save_multilabel_evaluation",
+        "_plot_confusion_matrices"
+      ]
+    },
+    {
+      "path": "src/evaluation/__init__.py",
+      "lines": 1,
+      "docstring": "Shared four-class metrics and saved prediction evidence.",
+      "top_level_symbols": []
+    },
+    {
+      "path": "src/preprocessing/__init__.py",
+      "lines": 1,
+      "docstring": "Dataset validation and deterministic image preprocessing.",
+      "top_level_symbols": []
+    },
+    {
+      "path": "src/preprocessing/ocr_header_ids.py",
+      "lines": 92,
+      "docstring": "Audit printed ECG header IDs with macOS Vision; never infer patient identity.\n\nRun with a Python environment containing PyObjC and Pillow. This helper hashes\nsource files, recognizes the fixed header region of one image per exact-byte\ngroup, and records its OCR evidence. Printed IDs are unverified report/patient\nidentifiers: use them conservatively as grouping keys, not as proven patients.\nNo source files are changed. No manual corrections are performed.",
+      "top_level_symbols": [
+        "vision_classes",
+        "main"
+      ]
+    },
+    {
+      "path": "src/preprocessing/images.py",
+      "lines": 13,
+      "docstring": null,
+      "top_level_symbols": [
+        "preprocess_image"
+      ]
+    },
+    {
+      "path": "src/preprocessing/template_header_ids.py",
+      "lines": 163,
+      "docstring": "Offline, exact-glyph header transcription for this fixed rendered image cohort.\n\nThis is a narrowly scoped typography lookup, not a general OCR system. Manually\nread reference headers cover digits 0..9. Unknown/non-exact glyphs are rejected.\nPrinted IDs remain unverified report identifiers, not established patient IDs.",
+      "top_level_symbols": [
+        "extract_glyphs",
+        "main"
+      ]
+    },
+    {
+      "path": "tests/test_ptbxl_runner.py",
+      "lines": 256,
+      "docstring": "Isolated PTB-XL orchestration tests: no real images, training, or logs.",
+      "top_level_symbols": [
+        "PTBXLRunnerTest",
+        "FakeDataset"
+      ]
+    },
+    {
+      "path": "tests/test_cnn_lstm.py",
+      "lines": 94,
+      "docstring": "Small synthetic tests only; no research train/validation/test records.",
+      "top_level_symbols": [
+        "SpatialSequenceTest",
+        "TrainingContractTest"
+      ]
+    },
+    {
+      "path": "tests/test_ptbxl_spatiotemporal_verification.py",
+      "lines": 381,
+      "docstring": "Synthetic saved-artifact tests; no real cohort or model inference.",
+      "top_level_symbols": [
+        "write_json",
+        "write_csv",
+        "SpatiotemporalVerificationTest"
+      ]
+    },
+    {
+      "path": "tests/test_ptbxl_spatiotemporal_runner.py",
+      "lines": 260,
+      "docstring": "Isolated PTB-XL orchestration tests: no real images, training, or logs.",
+      "top_level_symbols": [
+        "PTBXLSpatiotemporalRunnerTest",
+        "FakeDataset"
+      ]
+    },
+    {
+      "path": "tests/test_cnn.py",
+      "lines": 55,
+      "docstring": "Synthetic smoke checks; no research test data are used here.",
+      "top_level_symbols": [
+        "CNNContractTest"
+      ]
+    },
+    {
+      "path": "tests/test_cnn_lstm_runner.py",
+      "lines": 219,
+      "docstring": "Synthetic runner and append-only preservation checks; never touch project evidence.",
+      "top_level_symbols": [
+        "record",
+        "IsolatedEvidenceFixture",
+        "PreservationTest",
+        "RunnerTest"
+      ]
+    },
+    {
+      "path": "tests/test_report_ptbxl_spatiotemporal.py",
+      "lines": 180,
+      "docstring": "Isolated saved-artifact report tests; no ECG files or model inference.",
+      "top_level_symbols": [
+        "write_json",
+        "sha",
+        "SpatiotemporalReportTest",
+        "RuntimeReportingTest"
+      ]
+    },
+    {
+      "path": "tests/test_ptbxl_rendering.py",
+      "lines": 229,
+      "docstring": "Synthetic physical-geometry and image-integrity tests; no dataset rendering.",
+      "top_level_symbols": [
+        "RenderingTest"
+      ]
+    },
+    {
+      "path": "tests/test_ptbxl_learning_data.py",
+      "lines": 246,
+      "docstring": "Synthetic-only integrity and geometry checks; never prepare the real cache.",
+      "top_level_symbols": [
+        "digest",
+        "write_json",
+        "LearningDataTest"
+      ]
+    },
+    {
+      "path": "tests/test_ptbxl_generation.py",
+      "lines": 267,
+      "docstring": "Temporary-only generator checks: provenance, safe resume and row preservation.",
+      "top_level_symbols": [
+        "GenerationWorkerTests"
+      ]
+    },
+    {
+      "path": "tests/test_multilabel.py",
+      "lines": 189,
+      "docstring": "Hand-calculated multilabel metrics and undefined-class/output integrity checks.",
+      "top_level_symbols": [
+        "source_rows",
+        "MultilabelMetricTests",
+        "MultilabelOutputTests"
+      ]
+    },
+    {
+      "path": "tests/test_ptbxl_uncertainty.py",
+      "lines": 121,
+      "docstring": "Synthetic patient multiplicity, percentile and deterministic bootstrap checks.",
+      "top_level_symbols": [
+        "FixedPatientDraws",
+        "PatientBootstrapTests"
+      ]
+    },
+    {
+      "path": "tests/test_ptbxl_cnn_lstm.py",
+      "lines": 171,
+      "docstring": "Focused synthetic checks; no PTB-XL images, source signals or splits read.",
+      "top_level_symbols": [
+        "SyntheticDataset",
+        "toy_datasets",
+        "ModelShapeTest",
+        "TrainingContractTest"
+      ]
+    },
+    {
+      "path": "tests/test_ptbxl_comparison.py",
+      "lines": 296,
+      "docstring": "Synthetic paired comparisons; no real ECG images or predictions are read.",
+      "top_level_symbols": [
+        "sha",
+        "write_json",
+        "fixture",
+        "refresh_verification",
+        "PairedBootstrapTests",
+        "SavedComparisonTests"
+      ]
+    },
+    {
+      "path": "tests/test_ptbxl_spatiotemporal.py",
+      "lines": 189,
+      "docstring": "Synthetic-only controls for the image CNN/causal feature-convolution model.",
+      "top_level_symbols": [
+        "SyntheticDataset",
+        "datasets",
+        "ArchitectureTests",
+        "TrainingTests"
+      ]
+    },
+    {
+      "path": "tests/test_ptbxl_image_manifest.py",
+      "lines": 136,
+      "docstring": "Small synthetic checks of PTB labels, patient isolation and source binding.",
+      "top_level_symbols": [
+        "sha",
+        "PTBXLManifestTests"
+      ]
+    },
+    {
+      "path": "tests/test_pipeline.py",
+      "lines": 185,
+      "docstring": "Synthetic checks for split isolation, frozen evidence, PCA fitting, and metrics.",
+      "top_level_symbols": [
+        "EvaluationTest",
+        "LDATrainOnlyTest",
+        "FrozenSplitTest"
+      ]
+    },
+    {
+      "path": "tests/test_ptbxl_run_verification.py",
+      "lines": 255,
+      "docstring": "Synthetic saved-artifact checks; never load or infer on the real cohort.",
+      "top_level_symbols": [
+        "write_csv",
+        "VerificationTests"
+      ]
+    },
+    {
+      "path": ".ipynb_checkpoints/weirdwithseed-checkpoint.py",
+      "lines": 245,
+      "docstring": null,
+      "top_level_symbols": [
+        "set_seed",
+        "ResNetBlock1D",
+        "ECGNet",
+        "PublicationDataset",
+        "final_publication_report"
+      ]
+    }
+  ]
+}

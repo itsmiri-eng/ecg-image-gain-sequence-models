@@ -1,0 +1,9 @@
+[
+  {
+    "utc": "2026-11-06T16:25:28+00:00",
+    "file": "docs/external_test_plan.md",
+    "previous_sha256": "6d36b1271ab9381242b37a22b97f780b17733891f89cb2c7409158a7c8424d90",
+    "new_sha256": "48b2b8df7ab245efcf7881e629ab8e5b03b6f281a6b3bc74689e42695adfca12",
+    "reason": "Exclude 2 Ningbo records whose signal files never match PhysioNet published SHA-256 (3 download attempts). Recorded after the Georgia inventory and before any Chapman-Shaoxing/Ningbo header was parsed."
+  }
+]

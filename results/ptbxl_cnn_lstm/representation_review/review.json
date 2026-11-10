@@ -1,0 +1,41 @@
+{
+  "reviewed_utc": "2026-09-24T11:03:29.802987+00:00",
+  "passed": true,
+  "scope": "Technical image preprocessing review; not clinical fidelity or label adjudication",
+  "preprocessing_module_sha256": "0b8ce73d5d8e99accbd3c5132a3bc2ddc7ce2697fb25ffb864da1fe700ace082",
+  "manifest_sha256": "8e9a20cb0739c574323190491b56c8cf7abc4f9caf198ad6fb980d348351f2a5",
+  "visually_reviewed_training_fold_ecg_ids": [
+    1,
+    22,
+    32,
+    45,
+    50,
+    10565,
+    12722,
+    20002,
+    20187
+  ],
+  "primary_reviewer_ids": [
+    1,
+    50,
+    10565
+  ],
+  "independent_reviewer_ids": [
+    22,
+    32,
+    45,
+    12722,
+    20002,
+    20187
+  ],
+  "test_images_visually_inspected": false,
+  "all_12_rows_full_horizontal_intervals_and_calibration_preserved": true,
+  "findings": [
+    "No new row/time cropping visible in nine inspected examples",
+    "2x2maximum-inkpooling thickens fine strokes and grid; not lossless waveform storage",
+    "Low-gain source pages retain severely compressed detail",
+    "Flat leads and source artifacts retained; no clinical relabeling",
+    "ECG20187 used only for technical geometry review; excluded fromclassification because no mapped target"
+  ],
+  "representation_frozen_before_model_training": true
+}

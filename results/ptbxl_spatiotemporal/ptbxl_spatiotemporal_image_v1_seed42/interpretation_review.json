@@ -1,0 +1,28 @@
+{
+  "reviewed_utc": "2026-09-25T23:56:48.764875+00:00",
+  "status": "passed",
+  "review_method": "Independent read-only comparison of saved run and comparison artifacts; no model inference or repeat bootstrap.",
+  "comparison_sha256": "577eb17c10bb63508f2b7c6b8fe95eaa9397fc8004b82dbb29f7044952249631",
+  "partition_metrics_agree": true,
+  "primary_difference": {
+    "old_point_estimate": 0.8698012215798719,
+    "new_point_estimate": 0.8802576278599373,
+    "difference": 0.010456406280065389,
+    "ci_lower": 0.004467748267039243,
+    "ci_upper": 0.016738992613625617,
+    "defined_resamples": 500,
+    "undefined_resamples": 0,
+    "interval_status": "defined",
+    "interpretation": "above_zero_new_higher_conditional"
+  },
+  "all_six_aggregate_comparison_scores_increased": true,
+  "required_caveats": [
+    "HYP recall 85/262 to73/262, with12additionalmisses; F1 andAUROC alsofall, AP rises slightly.",
+    "NORM loses one true positive. STTC/CD precision andspecificity fall; MI specificity falls while MI recall improves.",
+    "Previously observed test cohort; one seed/configuration; conditional sampling uncertainty does not establish universal or clinical superiority.",
+    "Clean generated images with raster/downsampling loss; external/real-scan performance untested.",
+    "Head causality given features is not physiological causality or streaming behavior.",
+    "No controlled runtime superiority claim."
+  ],
+  "discrepancies": []
+}

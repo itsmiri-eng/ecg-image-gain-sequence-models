@@ -1,0 +1,15 @@
+{
+  "protected_artifacts_checked": 247,
+  "changed_artifacts": [],
+  "prior_model_rows_preserved_as_exact_byte_prefix": true,
+  "prior_log_sha256": "9ca9838d9968a884e49ef5be6efaee6f9c73bcfe679b42cb0acbdace6a179cae",
+  "baseline_preservation": {
+    "immutable_baseline_artifacts_checked": 66,
+    "changed_baseline_artifacts": [],
+    "original_log_sha256": "283360ec5f812d0b577c41805cbbb9563e494e7508f3e5867fb679ca85df4999",
+    "original_log_byte_prefix_preserved": true,
+    "original_log_rows_preserved": 2,
+    "appended_log_rows": 4,
+    "current_log_sha256": "78704bb0c9c011e441b9cc4ff918a24eb74fd9136599d97bc78c74316009e9df"
+  }
+}

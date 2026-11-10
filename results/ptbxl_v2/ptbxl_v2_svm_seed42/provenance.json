@@ -1,0 +1,32 @@
+{
+  "started_utc": "2026-11-02T15:00:15.495333+00:00",
+  "environment": {
+    "python": "3.12.10 (tags/v3.12.10:0cc8128, Apr  8 2025, 12:21:36) [MSC v.1943 64 bit (AMD64)]",
+    "executable": "C:\\Users\\miria\\ecg swiss\\.venv\\Scripts\\python.exe",
+    "platform": "Windows-11-10.0.26300-SP0",
+    "machine": "AMD64",
+    "packages": {
+      "numpy": "2.2.6",
+      "scipy": "1.17.1",
+      "scikit-learn": "1.9.0",
+      "torch": "2.9.1+cu128",
+      "Pillow": "10.3.0",
+      "matplotlib": "3.10.0",
+      "joblib": "1.5.3"
+    }
+  },
+  "configuration_sha256": "5a6f638bb78c1c3f6e8df9b375e1cb63847019986b5fe0767864bf20c229b746",
+  "cache_sha256": {
+    "protocol.json": "0d07cb5e13cf27bae393c6c216f1acee9a2068d03be1acfc5fada73bd2dbdb90",
+    "metadata.json": "d84a192f2782d0ad062c3e5b6ce2cbe7210b204330222078d8837d950d47f913",
+    "cache_manifest.csv": "4e534b3b5afeda1b0347d36d18ad327aeb74776f5defbb377e0acc3eb1422ef9"
+  },
+  "source_sha256": {
+    "src/run_ptbxl_svm.py": "ec36c9ce8f8725ecb537fa68a587690cf87a2ab29a5f54a9f6ae79a0f4f6b657",
+    "src/run_ptbxl_lda.py": "c22c85258b334667e92ba74bed922423a34e7b79df4cc53f106c7c355adb546e",
+    "src/run_ptbxl_experiment.py": "3b9ba808387d3cd0c44d0cdd43920f3037525339c7c5364060723b4871fd2d1a",
+    "src/evaluation/multilabel.py": "68e68fc5b4b00322b118d244d1efa15f164d16cd8a616fac02bb4b20207a3319",
+    "src/evaluation/ptbxl_uncertainty.py": "ce4ea41e99e2498a1dfc8cc40a3de6ba838d6b27db544802b064ecde5091dd5c",
+    "src/common.py": "0214c2ec6d8d49ac9536a6602397d83f111e5bd64ec63f5d99633dee8c9bd672"
+  }
+}

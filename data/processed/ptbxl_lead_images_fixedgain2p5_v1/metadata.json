@@ -1,0 +1,32 @@
+{
+  "status": "complete",
+  "completed_utc": "2026-11-01T15:41:11.921901+00:00",
+  "dataset_id": "ptbxl_images_fixedgain2p5_v1",
+  "input_shape": [
+    12,
+    120,
+    1120
+  ],
+  "images": 21388,
+  "counts": {
+    "train": 17084,
+    "validation": 2146,
+    "test": 2158
+  },
+  "normalization": {
+    "method": "global training-only ink mean/std after division by 255",
+    "fit_partition": "train",
+    "mean": 0.030250565026144274,
+    "std": 0.08822601670720594,
+    "training_images": 17084,
+    "training_pixels": 27553075200
+  },
+  "pages_with_clipping": {
+    "train": 121,
+    "validation": 17,
+    "test": 16
+  },
+  "cache_manifest_sha256": "ba30091d74324840fd8414e9fc3e91220f7d918345330ded29035d1b942c9564",
+  "build_seconds": 650.0779276669491,
+  "workers": 3
+}

@@ -1,0 +1,19 @@
+{
+  "fit_seconds": 0.2327555419979035,
+  "device": "cpu",
+  "seed": 42,
+  "input_features": 32768,
+  "pca_components": 32,
+  "pca_explained_variance_ratio_sum": 0.3254390358924866,
+  "preprocessing": "Fixed cropped grayscale ink [0,1]; flatten; train-only centered PCA; shrinkage LDA",
+  "feature_scaling": "No per-pixel variance scaling: all pixel intensities share the same units",
+  "class_imbalance": "Uniform class priors, prespecified to emphasize all four classes equally",
+  "checkpoint": "/Users/miriamistanboli/Downloads/ecg swiss/models/lda/lda_v1_seed42/pipeline.joblib",
+  "config": {
+    "pca_components": 32,
+    "pca_solver": "randomized",
+    "shrinkage": "auto",
+    "solver": "lsqr",
+    "priors": "uniform"
+  }
+}

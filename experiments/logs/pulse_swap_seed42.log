@@ -1,0 +1,8 @@
+﻿adaptive CNN-only: original vs saved max diff 8.3e-07
+adaptive CNN-LSTM: original vs saved max diff 4.0e-06
+adaptive Temporal conv: original vs saved max diff 6.0e-07
+adaptive Hybrid ViT: original vs saved max diff 4.3e-04
+fixed CNN-only: original vs saved max diff 4.5e-07
+fixed CNN-LSTM: original vs saved max diff 6.0e-07
+fixed Temporal conv: original vs saved max diff 6.0e-07
+fixed Hybrid ViT: original vs saved max diff 1.3e-06

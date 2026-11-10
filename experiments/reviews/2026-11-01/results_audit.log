@@ -1,0 +1,19 @@
+START baseline_preservation
+PASS baseline_preservation
+START lda_v1_seed42
+PASS lda_v1_seed42
+START cnn_v1_seed42
+/opt/anaconda3/lib/python3.12/site-packages/sklearn/metrics/_classification.py:304: UserWarning: The y_prob values do not sum to one. Make sure to pass probabilities.
+  warnings.warn(
+/opt/anaconda3/lib/python3.12/site-packages/sklearn/metrics/_classification.py:304: UserWarning: The y_prob values do not sum to one. Make sure to pass probabilities.
+  warnings.warn(
+/opt/anaconda3/lib/python3.12/site-packages/sklearn/metrics/_classification.py:304: UserWarning: The y_prob values do not sum to one. Make sure to pass probabilities.
+  warnings.warn(
+PASS cnn_v1_seed42
+START cnn_lstm_image_v1_seed42
+PASS cnn_lstm_image_v1_seed42
+START ptbxl_cnn_lstm_image_v1_seed42
+PASS ptbxl_cnn_lstm_image_v1_seed42
+START ptbxl_spatiotemporal_image_v1_seed42
+PASS ptbxl_spatiotemporal_image_v1_seed42
+DONE /Users/miriamistanboli/Downloads/ecg swiss/experiments/reviews/2026-11-01/results_audit.json failures 0

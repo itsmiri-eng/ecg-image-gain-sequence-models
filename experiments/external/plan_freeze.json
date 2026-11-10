@@ -1,0 +1,12 @@
+{
+  "frozen_utc": "2026-11-05T10:34:09+00:00",
+  "sha256": {
+    "docs/external_test_plan.md": "6d36b1271ab9381242b37a22b97f780b17733891f89cb2c7409158a7c8424d90",
+    "experiments/external/label_mapping.csv": "91664d3bf910eb3d022ebb2cf75f91b24010972dcdd4946929d7b781aa92d9f1",
+    "experiments/external/label_mapping.json": "d499c60f232c656c95126063bab5c844da90e6201c94f8d097aec7af688f2dda",
+    "src/external_label_mapping.py": "47abad66cae03d96f5db82dec64f614a0c19418863fff23f9d51f0e4fa65bc4c",
+    "data/external/challenge-2021/SHA256SUMS.txt": "f29c2609343c38734f3a3d62be4a9052ca56a9e560e7ad2efc2118563fca2473"
+  },
+  "statement": "At freeze time no Georgia, Chapman-Shaoxing or Ningbo header or signal had been parsed, rendered or given to any model. The downloader only computed SHA-256 of file bytes. Only the label headers of the Challenge PTB-XL copy (training/ptb-xl/*.hea) had been read, to build the label mapping.",
+  "main_download_status_at_freeze": "in progress (about 38,000 of 111,049 files verified)"
+}

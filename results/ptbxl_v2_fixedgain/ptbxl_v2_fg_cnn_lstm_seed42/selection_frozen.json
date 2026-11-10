@@ -1,0 +1,7 @@
+{
+  "frozen_utc": "2026-11-02T05:08:29.173009+00:00",
+  "checkpoint_sha256": "45ff4eea9f0787da55f2ccbaeefa222e532b42e09fe5574a1cc20f5438c2992a",
+  "best_epoch": 16,
+  "threshold": 0.5,
+  "test_inference_started": false
+}

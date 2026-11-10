@@ -1,0 +1,33 @@
+{
+  "created_utc": "2026-11-06T15:25:37.136958+00:00",
+  "dataset": "georgia",
+  "sources": [
+    "georgia"
+  ],
+  "counts": {
+    "records": 10344,
+    "not_12_standard_leads": 0,
+    "not_500_hz": 0,
+    "not_millivolt": 0,
+    "shorter_than_10_s": 52,
+    "no_mapped_superclass": 4245,
+    "included": 6047
+  },
+  "positives": {
+    "NORM": 0,
+    "MI": 7,
+    "STTC": 4059,
+    "CD": 1823,
+    "HYP": 2088
+  },
+  "eligible_labels": [
+    "STTC",
+    "CD",
+    "HYP"
+  ],
+  "excluded_labels": [
+    "NORM",
+    "MI"
+  ],
+  "plan_freeze_checked": true
+}

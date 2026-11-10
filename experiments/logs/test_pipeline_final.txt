@@ -1,0 +1,9 @@
+test_invalid_probabilities_fail_and_absent_class_auc_is_not_invented (test_pipeline.EvaluationTest.test_invalid_probabilities_fail_and_absent_class_auc_is_not_invented) ... ok
+test_metrics_match_hand_calculated_imbalanced_confusion_matrix (test_pipeline.EvaluationTest.test_metrics_match_hand_calculated_imbalanced_confusion_matrix) ... ok
+test_duplicates_report_ids_and_audited_links_cannot_cross_splits (test_pipeline.FrozenSplitTest.test_duplicates_report_ids_and_audited_links_cannot_cross_splits) ... ok
+test_pca_centers_on_training_only_and_checkpoint_round_trip (test_pipeline.LDATrainOnlyTest.test_pca_centers_on_training_only_and_checkpoint_round_trip) ... ok
+
+----------------------------------------------------------------------
+Ran 4 tests in 0.846s
+
+OK

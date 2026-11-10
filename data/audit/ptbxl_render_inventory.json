@@ -1,0 +1,492 @@
+{
+  "created_utc": "2026-09-24T08:01:10.061709+00:00",
+  "scope": "local workspace only; recursive hidden/no-ignore file inventory, archive entry inspection, executable text inspection, fresh metadata checks, four waveform decodes",
+  "workspace": "/Users/miriamistanboli/Downloads/ecg swiss",
+  "raw_files_changed": false,
+  "existing_audit_files_changed": false,
+  "images_generated": 0,
+  "models_trained": 0,
+  "physical_image_file_count_at_inventory": 968,
+  "physical_images_by_top_directory": {
+    "[root]": 2,
+    "results": 35,
+    "data": 1,
+    "models": 1,
+    "ecg files": 929
+  },
+  "non_mendeley_physical_image_paths": [
+    "architecture_overview.png",
+    "architecture.png",
+    "results/comparisons/dataset_counts.png",
+    "results/comparisons/comparison.png",
+    "results/readiness/inputs/00a9243e7385f8eb8f9f_cached128x256.png",
+    "results/readiness/inputs/056b1c90d8b60e4846b1_crop_native.png",
+    "results/readiness/inputs/29917828d7bcdabe9459_cached128x256.png",
+    "results/readiness/inputs/candidate_hb59_image.png",
+    "results/readiness/inputs/426e33afdf7c583eadbb_cached128x256.png",
+    "results/readiness/inputs/upper_boundary_clipping.png",
+    "results/readiness/inputs/review_02_Normal.jpg",
+    "results/readiness/inputs/source_crop_boundaries.jpg",
+    "results/readiness/inputs/10b7b351a4e3a369a09b_cached128x256.png",
+    "results/readiness/inputs/review_04_MI.jpg",
+    "results/readiness/inputs/1ddd77a4141874cbc65b_crop_native.png",
+    "results/readiness/inputs/review_06_Abnormal.jpg",
+    "results/readiness/inputs/01e055478056e70588b3_crop_native.png",
+    "results/readiness/inputs/01e055478056e70588b3_cached128x256.png",
+    "results/readiness/inputs/review_05_Abnormal.jpg",
+    "results/readiness/inputs/review_07_History_MI.jpg",
+    "results/readiness/inputs/review_03_MI.jpg",
+    "results/readiness/inputs/29917828d7bcdabe9459_crop_native.png",
+    "results/readiness/inputs/review_08_History_MI.jpg",
+    "results/readiness/inputs/10b7b351a4e3a369a09b_crop_native.png",
+    "results/readiness/inputs/00a9243e7385f8eb8f9f_crop_native.png",
+    "results/readiness/inputs/0c2ef965519ba2ce415e_cached128x256.png",
+    "results/readiness/inputs/review_01_Normal.jpg",
+    "results/readiness/inputs/426e33afdf7c583eadbb_crop_native.png",
+    "results/readiness/inputs/candidate_hb59_comparison.png",
+    "results/readiness/inputs/1ddd77a4141874cbc65b_cached128x256.png",
+    "results/readiness/inputs/0c2ef965519ba2ce415e_crop_native.png",
+    "results/readiness/inputs/056b1c90d8b60e4846b1_cached128x256.png",
+    "results/lda/lda_v1_seed42/test_confusion_matrix.png",
+    "data/audit/preprocessing_preview.png",
+    "results/readiness/errors/validation_confusion.png",
+    "results/readiness/errors/validation_minority_inputs.png",
+    "results/readiness/errors/development_prediction_counts.png",
+    "models/cnn/cnn_v1_seed42/training_curve.png",
+    "results/cnn/cnn_v1_seed42/test_confusion_matrix.png"
+  ],
+  "ptbxl_physical_image_count": 0,
+  "verified_ptbxl_rendered_dataset_pages_found": 0,
+  "ptbxl_image_generation_scripts_found": [],
+  "claimed_ptbxl_generate_py_found": false,
+  "ipynb_files_found": [],
+  "meaningful_hidden_source_files": [
+    ".ipynb_checkpoints/weirdwithseed-checkpoint.py"
+  ],
+  "hidden_source_role": "Mendeley image loading, heuristic digitization and ResNet1D training; not PTB-XL rendering",
+  "ptbxl_distribution_example": {
+    "path": "ptb-xl-a-large-publicly-available-electrocardiography-dataset-1.0.3/example_physionet.py",
+    "role": "WFDB loading and diagnostic superclass aggregation only; no image renderer"
+  },
+  "archive_inventory": [
+    {
+      "path": "ecg_manuscript_corrected_v2.zip",
+      "file_entries": 17,
+      "extensions": {
+        ".bib": 1,
+        ".tex": 1,
+        ".png": 14,
+        ".pdf": 1
+      },
+      "entry_names": [
+        "ecg_manuscript/references.bib",
+        "ecg_manuscript/main.tex",
+        "ecg_manuscript/figures/confusion_argmin.png",
+        "ecg_manuscript/figures/figure1_pipeline.png",
+        "ecg_manuscript/figures/figure3_confusion_matrix.png",
+        "ecg_manuscript/figures/figure2_snr_gate.pdf",
+        "ecg_manuscript/figures/robustness_degradation.png",
+        "ecg_manuscript/figures/figure2_snr_gate.png",
+        "ecg_manuscript/figures/pipeline_extraction.png",
+        "ecg_manuscript/figures/confusion_canny.png",
+        "ecg_manuscript/figures/cm_ptbxl_best.png",
+        "ecg_manuscript/figures/ablation_comparison.png",
+        "ecg_manuscript/figures/confusion_matrix_snr25.png",
+        "ecg_manuscript/figures/final_confusion_matrix.png",
+        "ecg_manuscript/figures/domain_shift_summary.png",
+        "ecg_manuscript/figures/confusion_matrix_all.png",
+        "ecg_manuscript/figures/confusion_final.png"
+      ],
+      "generator_scripts_present": [],
+      "content_kind": "LaTeX manuscript, bibliography, performance/pipeline figures; no rendered ECG cohort"
+    },
+    {
+      "path": "ecg_manuscript_corrected_v3.zip",
+      "file_entries": 17,
+      "extensions": {
+        ".bib": 1,
+        ".tex": 1,
+        ".png": 14,
+        ".pdf": 1
+      },
+      "entry_names": [
+        "manuscript_v2/ecg_manuscript/references.bib",
+        "manuscript_v2/ecg_manuscript/main.tex",
+        "manuscript_v2/ecg_manuscript/figures/confusion_argmin.png",
+        "manuscript_v2/ecg_manuscript/figures/figure1_pipeline.png",
+        "manuscript_v2/ecg_manuscript/figures/figure3_confusion_matrix.png",
+        "manuscript_v2/ecg_manuscript/figures/figure2_snr_gate.pdf",
+        "manuscript_v2/ecg_manuscript/figures/robustness_degradation.png",
+        "manuscript_v2/ecg_manuscript/figures/figure2_snr_gate.png",
+        "manuscript_v2/ecg_manuscript/figures/pipeline_extraction.png",
+        "manuscript_v2/ecg_manuscript/figures/confusion_canny.png",
+        "manuscript_v2/ecg_manuscript/figures/cm_ptbxl_best.png",
+        "manuscript_v2/ecg_manuscript/figures/ablation_comparison.png",
+        "manuscript_v2/ecg_manuscript/figures/confusion_matrix_snr25.png",
+        "manuscript_v2/ecg_manuscript/figures/final_confusion_matrix.png",
+        "manuscript_v2/ecg_manuscript/figures/domain_shift_summary.png",
+        "manuscript_v2/ecg_manuscript/figures/confusion_matrix_all.png",
+        "manuscript_v2/ecg_manuscript/figures/confusion_final.png"
+      ],
+      "generator_scripts_present": [],
+      "content_kind": "LaTeX manuscript, bibliography, performance/pipeline figures; no rendered ECG cohort",
+      "manuscript_claim": {
+        "source": "manuscript_v2/ecg_manuscript/main.tex",
+        "lines": "402-424",
+        "rendered_pages": 600,
+        "claimed_generator": "ptbxl_generate.py",
+        "claimed_per_class": 150,
+        "evidence_status": "historical prose claim; corresponding generator/cohort/manifest not found in inspected workspace"
+      }
+    },
+    {
+      "path": "mendely images.zip",
+      "file_entries": 928,
+      "extensions": {
+        ".jpg": 928
+      },
+      "content_kind": "928 source Mendeley JPEG pages; already audited byte-identical to local source collection"
+    }
+  ],
+  "npz_inventory": [
+    {
+      "path": "data/audit/header_digit_templates.npz",
+      "arrays": {
+        "templates": {
+          "shape": [
+            30,
+            36,
+            28
+          ],
+          "dtype": "float32"
+        },
+        "digits": {
+          "shape": [
+            30
+          ],
+          "dtype": "<U1"
+        }
+      }
+    },
+    {
+      "path": "data/processed/inputs_v1.npz",
+      "arrays": {
+        "images": {
+          "shape": [
+            491,
+            1,
+            128,
+            256
+          ],
+          "dtype": "float32"
+        },
+        "labels": {
+          "shape": [
+            491
+          ],
+          "dtype": "int64"
+        }
+      }
+    }
+  ],
+  "metadata": {
+    "records": 21799,
+    "distinct_patients": 18869,
+    "patients_spanning_official_folds": 0,
+    "official_fold_counts": {
+      "1": 2175,
+      "2": 2181,
+      "3": 2192,
+      "4": 2174,
+      "5": 2174,
+      "6": 2173,
+      "7": 2176,
+      "8": 2173,
+      "9": 2183,
+      "10": 2198
+    },
+    "partitions": {
+      "train_folds_1_to_8": {
+        "records": 17418,
+        "patients": 15023
+      },
+      "validation_fold_9": {
+        "records": 2183,
+        "patients": 1942
+      },
+      "test_fold_10": {
+        "records": 2198,
+        "patients": 1904
+      }
+    },
+    "diagnostic_superclass_counts": {
+      "CD": 4898,
+      "HYP": 2649,
+      "MI": 5469,
+      "NORM": 9514,
+      "STTC": 5235
+    },
+    "superclasses_per_record": {
+      "0": 411,
+      "1": 16244,
+      "2": 4068,
+      "3": 919,
+      "4": 157
+    },
+    "multiple_superclass_records": 5144,
+    "no_diagnostic_superclass_records": 411,
+    "label_rule": "all present SCP keys mapped through diagnostic==1; no confidence threshold; class counts overlap",
+    "infarction_stage_field_counts": {
+      "infarction_stadium1": {
+        "": 16187,
+        "unknown": 3430,
+        "Stadium II-III": 943,
+        "Stadium III": 980,
+        "Stadium I": 166,
+        "Stadium II": 88,
+        "Stadium I-II": 5
+      },
+      "infarction_stadium2": {
+        "": 21696,
+        "Stadium I": 19,
+        "Stadium II": 19,
+        "Stadium III": 65
+      }
+    },
+    "fresh_hashes_equal_previous_verified_metadata": true,
+    "metadata_sha256": {
+      "SHA256SUMS.txt": "b7224b92b341511ec3ceb13dc6652079b2c36a06504bcb49506f157f51dc695d",
+      "ptbxl_database.csv": "7600de9c1b27d181d850b3c6038a35d7c3ddb6bb33b702e3a20252a6859d216b",
+      "scp_statements.csv": "ad05b0b1fcae83bb1230755ad9cfc7c96f303feddc08a4a9ad5bdc9ca63bac8f",
+      "RECORDS": "56d37274b0b02339e9c30bff8c9a9f2a6fb3cb2bb7bcd5d7c55355451d53896a",
+      "ptbxl_v103_changelog.txt": "1874df343c4ceb706151fbb55bd60bd2954fba4372a445341343939524b2c34c"
+    }
+  },
+  "previous_integrity_audit": {
+    "path": "data/audit/ptbxl_inventory.json",
+    "sha256": "6364d4b21a17d842b44cdd680c39a69e64e37fde4cbc9f1d5cd0f10b6e1767f9",
+    "matched_files": 87203,
+    "manifest_entries": 87203,
+    "scope": "existing full audit retained; metadata hashes and four selected data/header checks freshly repeated here"
+  },
+  "runtime": {
+    "python_executable": "/opt/anaconda3/bin/python",
+    "wfdb_version": "4.3.1",
+    "numpy_version": "2.2.6",
+    "torch_installed": true,
+    "matplotlib_installed": true
+  },
+  "wfdb_read_feasibility": [
+    {
+      "ecg_id": "1",
+      "filename_lr": "records100/00000/00001_lr",
+      "shape": [
+        1000,
+        12
+      ],
+      "fs": 100,
+      "units": [
+        "mV",
+        "mV",
+        "mV",
+        "mV",
+        "mV",
+        "mV",
+        "mV",
+        "mV",
+        "mV",
+        "mV",
+        "mV",
+        "mV"
+      ],
+      "lead_order": [
+        "I",
+        "II",
+        "III",
+        "AVR",
+        "AVL",
+        "AVF",
+        "V1",
+        "V2",
+        "V3",
+        "V4",
+        "V5",
+        "V6"
+      ],
+      "dtype": "float64",
+      "all_finite": true,
+      "constant_leads": [],
+      "read_decode_seconds": 0.004652082992834039,
+      "header_and_data_match_shipped_checksums": true
+    },
+    {
+      "ecg_id": "101",
+      "filename_lr": "records100/00000/00101_lr",
+      "shape": [
+        1000,
+        12
+      ],
+      "fs": 100,
+      "units": [
+        "mV",
+        "mV",
+        "mV",
+        "mV",
+        "mV",
+        "mV",
+        "mV",
+        "mV",
+        "mV",
+        "mV",
+        "mV",
+        "mV"
+      ],
+      "lead_order": [
+        "I",
+        "II",
+        "III",
+        "AVR",
+        "AVL",
+        "AVF",
+        "V1",
+        "V2",
+        "V3",
+        "V4",
+        "V5",
+        "V6"
+      ],
+      "dtype": "float64",
+      "all_finite": true,
+      "constant_leads": [],
+      "read_decode_seconds": 0.001594500005012378,
+      "header_and_data_match_shipped_checksums": true
+    },
+    {
+      "ecg_id": "12722",
+      "filename_lr": "records100/12000/12722_lr",
+      "shape": [
+        1000,
+        12
+      ],
+      "fs": 100,
+      "units": [
+        "mV",
+        "mV",
+        "mV",
+        "mV",
+        "mV",
+        "mV",
+        "mV",
+        "mV",
+        "mV",
+        "mV",
+        "mV",
+        "mV"
+      ],
+      "lead_order": [
+        "I",
+        "II",
+        "III",
+        "AVR",
+        "AVL",
+        "AVF",
+        "V1",
+        "V2",
+        "V3",
+        "V4",
+        "V5",
+        "V6"
+      ],
+      "dtype": "float64",
+      "all_finite": true,
+      "constant_leads": [
+        "V5"
+      ],
+      "read_decode_seconds": 0.0015949579974403605,
+      "header_and_data_match_shipped_checksums": true
+    },
+    {
+      "ecg_id": "21837",
+      "filename_lr": "records100/21000/21837_lr",
+      "shape": [
+        1000,
+        12
+      ],
+      "fs": 100,
+      "units": [
+        "mV",
+        "mV",
+        "mV",
+        "mV",
+        "mV",
+        "mV",
+        "mV",
+        "mV",
+        "mV",
+        "mV",
+        "mV",
+        "mV"
+      ],
+      "lead_order": [
+        "I",
+        "II",
+        "III",
+        "AVR",
+        "AVL",
+        "AVF",
+        "V1",
+        "V2",
+        "V3",
+        "V4",
+        "V5",
+        "V6"
+      ],
+      "dtype": "float64",
+      "all_finite": true,
+      "constant_leads": [],
+      "read_decode_seconds": 0.0019621669925982133,
+      "header_and_data_match_shipped_checksums": true
+    }
+  ],
+  "float32_signal_array_memory_estimates": {
+    "100Hz": {
+      "all": {
+        "float32_bytes": 1046352000,
+        "float32_GiB": 0.9744912385940552
+      },
+      "train_folds_1_to_8": {
+        "float32_bytes": 836064000,
+        "float32_GiB": 0.7786452770233154
+      },
+      "validation_fold_9": {
+        "float32_bytes": 104784000,
+        "float32_GiB": 0.0975877046585083
+      },
+      "test_fold_10": {
+        "float32_bytes": 105504000,
+        "float32_GiB": 0.09825825691223145
+      }
+    },
+    "500Hz": {
+      "all": {
+        "float32_bytes": 5231760000,
+        "float32_GiB": 4.872456192970276
+      },
+      "train_folds_1_to_8": {
+        "float32_bytes": 4180320000,
+        "float32_GiB": 3.893226385116577
+      },
+      "validation_fold_9": {
+        "float32_bytes": 523920000,
+        "float32_GiB": 0.4879385232925415
+      },
+      "test_fold_10": {
+        "float32_bytes": 527520000,
+        "float32_GiB": 0.4912912845611572
+      }
+    }
+  },
+  "label_mapping_caveat": "Five overlapping diagnostic superclasses are not the four mutually exclusive Mendeley folder labels. MI subclass by infarction stage is an additional derived task requiring explicit validation; manuscript mapping is not verified ground truth.",
+  "deployment_caveat": "Rendered waveform pages are synthetic image-domain data. Clean rendering performance does not establish performance on real paper scans or phone photographs. All image variants of one ECG/patient must inherit its official fold.",
+  "recommendation": "PTB-XL is the better documented, larger foundation for a separately specified benchmark. Use 100Hz native waveforms for a low-cost true temporal CNN-LSTM, or explicit rendering if paper-image input is essential. Preserve current Mendeley frozen comparison; do not silently swap input modality or labels."
+}

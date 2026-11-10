@@ -1,0 +1,15 @@
+{
+  "status": "completed",
+  "output_directory": "/Users/miriamistanboli/Downloads/ecg swiss/results/comparisons/ptbxl_spatiotemporal_image_v1_seed42",
+  "primary_test_difference": {
+    "old_point_estimate": 0.8698012215798719,
+    "new_point_estimate": 0.8802576278599373,
+    "difference": 0.010456406280065389,
+    "ci_lower": 0.004467748267039243,
+    "ci_upper": 0.016738992613625617,
+    "defined_resamples": 500,
+    "undefined_resamples": 0,
+    "interval_status": "defined",
+    "interpretation": "above_zero_new_higher_conditional"
+  }
+}

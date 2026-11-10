@@ -1,0 +1,9 @@
+split,scope,samples,both_correct,lda_only_wrong,cnn_only_wrong,both_wrong_same_prediction,both_wrong_different_prediction,model_agreement
+train,all_classes,295,151,62,62,13,7,164
+train,MI,18,1,0,12,5,0,6
+train,History_MI,52,0,0,45,5,2,5
+train,minority_combined,70,1,0,57,10,2,11
+validation,all_classes,98,49,21,12,10,6,59
+validation,MI,6,0,1,2,2,1,2
+validation,History_MI,17,0,0,9,6,2,6
+validation,minority_combined,23,0,1,11,8,3,8

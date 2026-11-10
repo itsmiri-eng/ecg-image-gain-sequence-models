@@ -1,0 +1,2 @@
+dataset_id,source_release,status,completed_utc,images,classification_eligible,classification_excluded,train,validation,test,png_bytes,generation_seconds,verification_seconds,generation_summary_sha256,verification_sha256,model_training_performed
+ptbxl_images_v1,PTB-XL 1.0.3,complete_verified,2026-09-24T10:34:26.653016+00:00,21799,21388,411,17084,2146,2158,3370806113,488.0156639170018,135.06390483299037,eb47cd2a72334158fe6538959cec4a0edbfd03395c5c51a2642ea5f46fee351b,fea2bda51a29e735184d8d2a630b2f157953e78c7bfc3cbf9585c8e166c60ca0,False

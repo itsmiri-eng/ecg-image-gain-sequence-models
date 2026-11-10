@@ -1,0 +1,14 @@
+{
+  "status": "complete",
+  "epoch": 18,
+  "max_epochs": 20,
+  "test_data_accessed": false,
+  "phase": "complete",
+  "batch": 1068,
+  "batches": 1068,
+  "train_online_bce": 0.28236882704687577,
+  "best_epoch": 14,
+  "elapsed_seconds": 5654.168133900035,
+  "updated_utc": "2026-11-06T22:40:28+00:00",
+  "epochs_run": 18
+}

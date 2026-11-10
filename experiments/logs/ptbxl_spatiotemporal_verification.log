@@ -1,0 +1,10 @@
+{
+  "status": "passed",
+  "run_id": "ptbxl_spatiotemporal_image_v1_seed42",
+  "verification": "/Users/miriamistanboli/Downloads/ecg swiss/results/ptbxl_spatiotemporal/ptbxl_spatiotemporal_image_v1_seed42/verification.json",
+  "prediction_records_verified": {
+    "train": 17084,
+    "validation": 2146,
+    "test": 2158
+  }
+}

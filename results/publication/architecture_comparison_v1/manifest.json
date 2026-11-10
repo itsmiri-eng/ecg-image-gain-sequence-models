@@ -1,0 +1,16 @@
+{
+  "created_utc": "2026-11-01T11:33:02.741452+00:00",
+  "purpose": "Architecture schematic; no fitted performance shown",
+  "inputs_sha256": {
+    "experiments/configs/ptbxl_cnn_lstm_image_v1.json": "02a9979bfdc33a82d440ebbb9aa98fb7d98cb44c710513123b562078c399c72b",
+    "experiments/configs/ptbxl_spatiotemporal_image_v1.json": "ee601962031a9f54665d7b9284380979f29cbf68f038d9f2bb891b607c376762",
+    "experiments/configs/ptbxl_hybrid_vit_image_v1.json": "ffad856c5fe9fba2877c75b135bdf26e58f8fdc0b7c83369ec866ba5acd9860e",
+    "models/ptbxl_cnn_lstm/ptbxl_cnn_lstm_image_v1_seed42/metadata.json": "fcfd82e582e9823e5730cf9f131cc8842a4bc40626d860bc7918293118dd96ec",
+    "models/ptbxl_spatiotemporal/ptbxl_spatiotemporal_image_v1_seed42/metadata.json": "7a6cbbbed7d71263942194e677a4b4bfbeddd2e56a15580fd2ffe21fb782dc4c",
+    "src/plot_ptbxl_architectures.py": "e8ec867abd04601f210ca9c7722b8782049276f78f9f0f19748f038fd03f0546"
+  },
+  "outputs_sha256": {
+    "ptbxl_architectures.png": "e556e5d4cbc847f754c9ba19931afeddfd8fdf11b9a97d15107897ed855b71cb",
+    "ptbxl_architectures.svg": "7cbef0d921edf6547503ea1a622de106f58b77580553fd770874db56f0d072b6"
+  }
+}

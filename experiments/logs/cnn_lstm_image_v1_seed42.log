@@ -1,0 +1,40 @@
+Spatial CNN+LSTM epoch 01/30 train_loss=1.3907 val_loss=1.3929 val_macro_f1=0.1597 val_bal_acc=0.2500 selected=True seconds=1.67
+Spatial CNN+LSTM epoch 02/30 train_loss=1.3844 val_loss=1.3853 val_macro_f1=0.3213 val_bal_acc=0.3585 selected=True seconds=1.49
+Spatial CNN+LSTM epoch 03/30 train_loss=1.3743 val_loss=1.3781 val_macro_f1=0.2334 val_bal_acc=0.3123 selected=False seconds=1.56
+Spatial CNN+LSTM epoch 04/30 train_loss=1.3572 val_loss=1.3668 val_macro_f1=0.3583 val_bal_acc=0.4134 selected=True seconds=1.47
+Spatial CNN+LSTM epoch 05/30 train_loss=1.3154 val_loss=1.3419 val_macro_f1=0.3538 val_bal_acc=0.3688 selected=False seconds=1.46
+Spatial CNN+LSTM epoch 06/30 train_loss=1.2110 val_loss=1.2850 val_macro_f1=0.4047 val_bal_acc=0.4186 selected=True seconds=1.48
+Spatial CNN+LSTM epoch 07/30 train_loss=1.2157 val_loss=1.3138 val_macro_f1=0.3674 val_bal_acc=0.3829 selected=False seconds=1.66
+Spatial CNN+LSTM epoch 08/30 train_loss=1.0947 val_loss=1.1810 val_macro_f1=0.5213 val_bal_acc=0.5128 selected=True seconds=1.68
+Spatial CNN+LSTM epoch 09/30 train_loss=1.0608 val_loss=1.1897 val_macro_f1=0.4641 val_bal_acc=0.4743 selected=False seconds=1.52
+Spatial CNN+LSTM epoch 10/30 train_loss=1.1490 val_loss=1.2997 val_macro_f1=0.4181 val_bal_acc=0.4234 selected=False seconds=1.50
+Spatial CNN+LSTM epoch 11/30 train_loss=1.0077 val_loss=1.1464 val_macro_f1=0.5605 val_bal_acc=0.5558 selected=True seconds=1.47
+Spatial CNN+LSTM epoch 12/30 train_loss=0.9988 val_loss=1.1476 val_macro_f1=0.5431 val_bal_acc=0.5431 selected=False seconds=1.48
+Spatial CNN+LSTM epoch 13/30 train_loss=1.2885 val_loss=1.5215 val_macro_f1=0.3397 val_bal_acc=0.3570 selected=False seconds=1.47
+Spatial CNN+LSTM epoch 14/30 train_loss=1.0695 val_loss=1.1541 val_macro_f1=0.4769 val_bal_acc=0.4808 selected=False seconds=1.49
+Spatial CNN+LSTM epoch 15/30 train_loss=1.0430 val_loss=1.1365 val_macro_f1=0.4846 val_bal_acc=0.4888 selected=False seconds=1.48
+Spatial CNN+LSTM epoch 16/30 train_loss=1.0186 val_loss=1.1167 val_macro_f1=0.4817 val_bal_acc=0.4732 selected=False seconds=1.47
+Spatial CNN+LSTM epoch 17/30 train_loss=0.9621 val_loss=1.0602 val_macro_f1=0.5262 val_bal_acc=0.5258 selected=False seconds=1.60
+Spatial CNN+LSTM epoch 18/30 train_loss=0.9664 val_loss=1.0853 val_macro_f1=0.5659 val_bal_acc=0.5777 selected=True seconds=1.49
+Spatial CNN+LSTM epoch 19/30 train_loss=0.9572 val_loss=1.0977 val_macro_f1=0.5207 val_bal_acc=0.5314 selected=False seconds=1.64
+Spatial CNN+LSTM epoch 20/30 train_loss=1.0201 val_loss=1.1253 val_macro_f1=0.5171 val_bal_acc=0.5310 selected=False seconds=1.49
+Spatial CNN+LSTM epoch 21/30 train_loss=0.9866 val_loss=1.1157 val_macro_f1=0.5235 val_bal_acc=0.5314 selected=False seconds=1.49
+Spatial CNN+LSTM epoch 22/30 train_loss=0.8629 val_loss=1.0375 val_macro_f1=0.5464 val_bal_acc=0.5430 selected=False seconds=1.50
+Spatial CNN+LSTM epoch 23/30 train_loss=0.8795 val_loss=1.0766 val_macro_f1=0.5662 val_bal_acc=0.5645 selected=True seconds=1.46
+Spatial CNN+LSTM epoch 24/30 train_loss=1.0060 val_loss=1.2679 val_macro_f1=0.4619 val_bal_acc=0.4611 selected=False seconds=1.48
+Spatial CNN+LSTM epoch 25/30 train_loss=0.8868 val_loss=1.0982 val_macro_f1=0.5341 val_bal_acc=0.5377 selected=False seconds=1.62
+Spatial CNN+LSTM epoch 26/30 train_loss=0.8208 val_loss=0.9907 val_macro_f1=0.5401 val_bal_acc=0.5272 selected=False seconds=2.01
+Spatial CNN+LSTM epoch 27/30 train_loss=0.8891 val_loss=0.9930 val_macro_f1=0.6001 val_bal_acc=0.6115 selected=True seconds=1.76
+Spatial CNN+LSTM epoch 28/30 train_loss=0.8330 val_loss=1.0077 val_macro_f1=0.5686 val_bal_acc=0.5625 selected=False seconds=1.99
+Spatial CNN+LSTM epoch 29/30 train_loss=0.8216 val_loss=1.0551 val_macro_f1=0.5449 val_bal_acc=0.5385 selected=False seconds=1.83
+Spatial CNN+LSTM epoch 30/30 train_loss=0.8169 val_loss=0.9982 val_macro_f1=0.5310 val_bal_acc=0.5352 selected=False seconds=1.89
+{
+  "run_id": "cnn_lstm_image_v1_seed42",
+  "runtime_seconds": 51.05123441699834,
+  "test": {
+    "accuracy": 0.7142857142857143,
+    "balanced_accuracy": 0.6315483640264616,
+    "macro_f1": 0.6020198440822112,
+    "weighted_f1": 0.7168399890076513
+  }
+}

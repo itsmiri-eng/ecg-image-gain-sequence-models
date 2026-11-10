@@ -1,0 +1,41 @@
+{
+  "protocol": "ecg_image_baseline_v1",
+  "seed": 42,
+  "class_names": ["Normal", "MI", "Abnormal", "History_MI"],
+  "raw_directory": "ecg files",
+  "class_folders": ["Normal", "MI", "Abnormal", "HIstory of MI"],
+  "preprocessing": {
+    "crop_fraction_xyxy": [0.03, 0.19, 0.98, 0.96],
+    "height": 128,
+    "width": 256,
+    "mode": "grayscale_inverted_unit_interval",
+    "resize": "bilinear"
+  },
+  "split": {
+    "method": "stratified_group_5_fold_then_4_fold",
+    "test_fold": 0,
+    "validation_fold": 0,
+    "group": "connected_components_of_printed_id_input_hash_and_audited_near_copy_links",
+    "target_proportions": [0.6, 0.2, 0.2]
+  },
+  "lda": {
+    "pca_components": 32,
+    "pca_solver": "randomized",
+    "shrinkage": "auto",
+    "solver": "lsqr",
+    "priors": "uniform"
+  },
+  "cnn": {
+    "seed": 42,
+    "max_epochs": 30,
+    "patience": 7,
+    "batch_size": 16,
+    "learning_rate": 0.001,
+    "weight_decay": 0.0001,
+    "dropout": 0.25,
+    "device": "auto",
+    "num_threads": 4,
+    "min_delta": 0.0,
+    "num_classes": 4
+  }
+}

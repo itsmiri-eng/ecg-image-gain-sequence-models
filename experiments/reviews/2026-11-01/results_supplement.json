@@ -1,0 +1,64 @@
+{
+  "created_utc": "2026-11-01T11:14:27.507168+00:00",
+  "model_inference_performed": false,
+  "bootstrap_resampling_performed": false,
+  "baseline_checkpoints": {
+    "lda_v1_seed42": {
+      "checkpoint_hash_matches": true,
+      "pca_shape": [
+        32,
+        32768
+      ],
+      "pca_fit_training_samples": 295,
+      "uniform_lda_priors": true,
+      "saved_config_matches_frozen_protocol": true,
+      "parameter_count": "Not recorded as a neural parameter count; PCA plus LDA pipeline"
+    },
+    "cnn_v1_seed42": {
+      "checkpoint_hash_matches": true,
+      "checkpoint_metadata_matches": true,
+      "finite_tensors": true,
+      "num_parameters": 40212,
+      "epochs_run": 30,
+      "selected_epoch": 25,
+      "history_selection_matches": true
+    },
+    "cnn_lstm_image_v1_seed42": {
+      "checkpoint_hash_matches": true,
+      "checkpoint_metadata_matches": true,
+      "finite_tensors": true,
+      "num_parameters": 44532,
+      "epochs_run": 30,
+      "selected_epoch": 27,
+      "history_selection_matches": true
+    }
+  },
+  "failures": [],
+  "ptbxl_comparison": {
+    "status": "passed",
+    "summary_recomputed_from_saved_predictions": true,
+    "all_partition_ids_truths_patients_and_inputs_align": true,
+    "source_artifacts_hashed": 75,
+    "bootstrap_point_estimates_checked": true,
+    "bootstrap_resampling_performed": false,
+    "macro_roc_auc_difference": {
+      "old_point_estimate": 0.8698012215798719,
+      "new_point_estimate": 0.8802576278599373,
+      "difference": 0.010456406280065389,
+      "ci_lower": 0.004467748267039243,
+      "ci_upper": 0.016738992613625617,
+      "defined_resamples": 500,
+      "undefined_resamples": 0,
+      "interval_status": "defined",
+      "interpretation": "above_zero_new_higher_conditional"
+    }
+  },
+  "tests": {
+    "command": "/opt/anaconda3/bin/python -m unittest discover -s tests -v",
+    "log": "experiments/reviews/2026-11-01/full_unittest_2026-11-01.log",
+    "log_sha256": "ff0142db9bacfb0bdf1598171d90519ecde6472b27b0df8ad2f76e2f5d17e6c0",
+    "tests_run": 152,
+    "status": "passed",
+    "elapsed_seconds": 19.338
+  }
+}

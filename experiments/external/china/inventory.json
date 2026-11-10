@@ -1,0 +1,35 @@
+{
+  "created_utc": "2026-11-06T16:25:45.256431+00:00",
+  "dataset": "china",
+  "sources": [
+    "chapman_shaoxing",
+    "ningbo"
+  ],
+  "counts": {
+    "records": 45152,
+    "signal_file_failed_checksum": 2,
+    "not_12_standard_leads": 0,
+    "not_500_hz": 0,
+    "not_millivolt": 0,
+    "shorter_than_10_s": 0,
+    "no_mapped_superclass": 36146,
+    "included": 9004
+  },
+  "positives": {
+    "NORM": 0,
+    "MI": 169,
+    "STTC": 5670,
+    "CD": 3857,
+    "HYP": 770
+  },
+  "eligible_labels": [
+    "MI",
+    "STTC",
+    "CD",
+    "HYP"
+  ],
+  "excluded_labels": [
+    "NORM"
+  ],
+  "plan_freeze_checked": true
+}

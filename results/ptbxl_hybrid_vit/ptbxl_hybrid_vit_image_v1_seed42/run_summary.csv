@@ -1,0 +1,2 @@
+run_id,dataset,task,macro_roc_auc,macro_average_precision,macro_f1,micro_f1,subset_accuracy,label_accuracy
+ptbxl_hybrid_vit_image_v1_seed42,ptbxl_images_v1,five-label,0.8901640657674964,0.7518996122909684,0.6716655632554613,0.7140458869613878,0.571825764596849,0.8579240037071363

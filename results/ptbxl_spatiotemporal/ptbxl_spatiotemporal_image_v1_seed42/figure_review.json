@@ -1,0 +1,15 @@
+{
+  "reviewed_utc": "2026-09-25T23:55:44.289824+00:00",
+  "status": "passed",
+  "method": "Direct visual inspection of all seven PNG figures at returned display resolution; labels, axes, legends, saved scores, selected epoch and conditional interval caveats checked.",
+  "figures": {
+    "models/ptbxl_spatiotemporal/ptbxl_spatiotemporal_image_v1_seed42/training_curve.png": "e5342c5f113d1103c1425a66fd5ef51dd266e99fca5f6e3d7953a9243b1eda9c",
+    "results/comparisons/ptbxl_spatiotemporal_image_v1_seed42/comparison.png": "11f6d34117cb7c79fd117359bf8bb213d4222914c4046e2268c86b1f86aa48f8",
+    "results/ptbxl_spatiotemporal/ptbxl_spatiotemporal_image_v1_seed42/figures/partition_summary.png": "1abf423545ef666ae70080d36ccfcb1a7c73fe5fc388789b18f04fa663009347",
+    "results/ptbxl_spatiotemporal/ptbxl_spatiotemporal_image_v1_seed42/figures/per_label_metrics.png": "2d052875ef8b600cd18ff09cdcb484aa780be66ccd013ae0f04b530e0e40d598",
+    "results/ptbxl_spatiotemporal/ptbxl_spatiotemporal_image_v1_seed42/figures/precision_recall_curves.png": "499f77402b66a0110ba3716a6f1e1be223cf9f2bbcc981f9d4f4895b5dcf66b2",
+    "results/ptbxl_spatiotemporal/ptbxl_spatiotemporal_image_v1_seed42/figures/roc_curves.png": "3e0aa8a6bccd02aad17d002e37eafbb6af1337f91627dbbde305f9d91f776924",
+    "results/ptbxl_spatiotemporal/ptbxl_spatiotemporal_image_v1_seed42/test_confusion_matrices.png": "a542250cddb2e05b3979808c89eb34f46264d93b69621b4f6a20c19a94644493"
+  },
+  "findings": "Readable labels/legends and adequate margins; plotted metrics agree with saved report tables; no layout revisions required. SVG companions are also saved for the report and comparison figures."
+}

@@ -1,0 +1,2 @@
+PASS: 491 originals/cache entries verified; no shared identity/duplicate groups across splits.
+{'train': 295, 'validation': 98, 'test': 98}

@@ -1,0 +1,43 @@
+{
+  "created_utc": "2026-09-24T14:15:14.586361+00:00",
+  "run_id": "ptbxl_cnn_lstm_image_v1_seed42",
+  "source": "completed verified run; saved predictions only",
+  "new_model_inference_performed": false,
+  "model_training_performed": false,
+  "threshold_tuning_performed": false,
+  "bootstrap_resampling_performed": false,
+  "input_sha256": {
+    "/Users/miriamistanboli/Downloads/ecg swiss/results/ptbxl_cnn_lstm/ptbxl_cnn_lstm_image_v1_seed42/run.json": "c68695b9c7a732762795dfd42b40b4612cd6082a4ae9387c3c89acf798c2a5ac",
+    "/Users/miriamistanboli/Downloads/ecg swiss/results/ptbxl_cnn_lstm/ptbxl_cnn_lstm_image_v1_seed42/verification.json": "a3541a3d9ac9577b772ae58a842d6770151ee315a835564396f15610b3831426",
+    "/Users/miriamistanboli/Downloads/ecg swiss/results/ptbxl_cnn_lstm/ptbxl_cnn_lstm_image_v1_seed42/config.json": "02a9979bfdc33a82d440ebbb9aa98fb7d98cb44c710513123b562078c399c72b",
+    "/Users/miriamistanboli/Downloads/ecg swiss/results/ptbxl_cnn_lstm/ptbxl_cnn_lstm_image_v1_seed42/training_metadata.json": "fcfd82e582e9823e5730cf9f131cc8842a4bc40626d860bc7918293118dd96ec",
+    "/Users/miriamistanboli/Downloads/ecg swiss/results/ptbxl_cnn_lstm/ptbxl_cnn_lstm_image_v1_seed42/provenance.json": "1b57e4e49347bf1113ab8e65f712bdc0e8256bf6c1a213b002ea23324ea0c62d",
+    "/Users/miriamistanboli/Downloads/ecg swiss/results/ptbxl_cnn_lstm/ptbxl_cnn_lstm_image_v1_seed42/test_patient_bootstrap.json": "baab0743284b82866a63156ffd88d5d6d583b7d1d402439e1bbcf5ca171cc65a",
+    "/Users/miriamistanboli/Downloads/ecg swiss/results/ptbxl_cnn_lstm/ptbxl_cnn_lstm_image_v1_seed42/selection_frozen.json": "bfb686edc826aac7f50df4f5020806d76155588f741bc8f1377b48873b016e49",
+    "/Users/miriamistanboli/Downloads/ecg swiss/results/ptbxl_cnn_lstm/ptbxl_cnn_lstm_image_v1_seed42/checkpoint_replay.json": "7ae582eeabf3265b69a84feb5fee28a5d190699880b5d620876b31cbcffa1643",
+    "/Users/miriamistanboli/Downloads/ecg swiss/results/ptbxl_cnn_lstm/ptbxl_cnn_lstm_image_v1_seed42/test_inference_state.json": "2f83b33cd196deb913e1b502220aff13c1ef77192ff657ab04a5a2d789286449",
+    "/Users/miriamistanboli/Downloads/ecg swiss/results/ptbxl_cnn_lstm/ptbxl_cnn_lstm_image_v1_seed42/preservation.json": "4c4acbcc86917dabed2e5d825955fbb258f024037f30baf548c498ad44f035e1",
+    "/Users/miriamistanboli/Downloads/ecg swiss/models/ptbxl_cnn_lstm/ptbxl_cnn_lstm_image_v1_seed42/history.csv": "8532475ecb3fc73a19e126c5bf8c95533fd65681879200196982c26e27f67d75",
+    "/Users/miriamistanboli/Downloads/ecg swiss/models/ptbxl_cnn_lstm/ptbxl_cnn_lstm_image_v1_seed42/architecture.txt": "c4df9b91d109d5f72e66b32f67b7e5140397563c54e26ec81707fe82208b79bf",
+    "/Users/miriamistanboli/Downloads/ecg swiss/models/ptbxl_cnn_lstm/ptbxl_cnn_lstm_image_v1_seed42/config.json": "f571667e487159a50289e318341f1ed8b92b544e697acfafc9fa299702983d05",
+    "/Users/miriamistanboli/Downloads/ecg swiss/results/ptbxl_cnn_lstm/ptbxl_cnn_lstm_image_v1_seed42/train_predictions.csv": "c23f35c4e8256d5b6c0faf32d130cdc204890cf4d075d8aebfd2d7d5c977eea5",
+    "/Users/miriamistanboli/Downloads/ecg swiss/results/ptbxl_cnn_lstm/ptbxl_cnn_lstm_image_v1_seed42/train_metrics.json": "e5d67879f14b3b8ec950d766dd47f730c198da625a8b1c1c8908b1f3a35b066a",
+    "/Users/miriamistanboli/Downloads/ecg swiss/results/ptbxl_cnn_lstm/ptbxl_cnn_lstm_image_v1_seed42/validation_predictions.csv": "384cbe3dbd333cd25b8f435e6f88368ab62aaa55e300785e0850b07771a68630",
+    "/Users/miriamistanboli/Downloads/ecg swiss/results/ptbxl_cnn_lstm/ptbxl_cnn_lstm_image_v1_seed42/validation_metrics.json": "df5ac4b3e3d3aef97ce2cf3629119ceb2be6eb12723bbfb57e998a090d84528d",
+    "/Users/miriamistanboli/Downloads/ecg swiss/results/ptbxl_cnn_lstm/ptbxl_cnn_lstm_image_v1_seed42/test_predictions.csv": "9ecdff6c37a1cdef7fd3633f91f110443b9a9673a8c2e918a8241ab5e32a20a5",
+    "/Users/miriamistanboli/Downloads/ecg swiss/results/ptbxl_cnn_lstm/ptbxl_cnn_lstm_image_v1_seed42/test_metrics.json": "6e8d69b92750eb683dc963f7e492081ede95878cf2a93f221060aac17a649e18",
+    "/Users/miriamistanboli/Downloads/ecg swiss/docs/ptbxl_image_dataset.md": "e2e0ec9783838fd2077730b01410a2ddf53e333e759c962561aa302ad018298e"
+  },
+  "output_sha256": {
+    "/Users/miriamistanboli/Downloads/ecg swiss/docs/ptbxl_cnn_lstm_report.md": "ebaa716876875fa71df5a759bed6c649df82ecd0a71c8d2d5f787826fd0a70ad",
+    "/Users/miriamistanboli/Downloads/ecg swiss/results/ptbxl_cnn_lstm/ptbxl_cnn_lstm_image_v1_seed42/figures/roc_curves.png": "ec4dcdb30bf68102c19e291948737b5c97440be1a666efb7f7e4b3c9c465249a",
+    "/Users/miriamistanboli/Downloads/ecg swiss/results/ptbxl_cnn_lstm/ptbxl_cnn_lstm_image_v1_seed42/figures/roc_curves.svg": "f2d86a18bcac26a57cedb70c4029273dfd5b321b6491cccad680039cf4975242",
+    "/Users/miriamistanboli/Downloads/ecg swiss/results/ptbxl_cnn_lstm/ptbxl_cnn_lstm_image_v1_seed42/figures/precision_recall_curves.png": "65fb9a20982b0b605ae6904f5d9133869472485d6849f29de87c23fd3e950f67",
+    "/Users/miriamistanboli/Downloads/ecg swiss/results/ptbxl_cnn_lstm/ptbxl_cnn_lstm_image_v1_seed42/figures/partition_summary.png": "18f0f7936430afac7ba338ae6e05b9aa8024e8f7d42327f36ad8d5ae2fb8754f",
+    "/Users/miriamistanboli/Downloads/ecg swiss/results/ptbxl_cnn_lstm/ptbxl_cnn_lstm_image_v1_seed42/figures/per_label_metrics.png": "2f6c77a1352e3b2cf4486a44d096eeee038fb42cb4eacca0ac8bde5eb072f5b0",
+    "/Users/miriamistanboli/Downloads/ecg swiss/results/ptbxl_cnn_lstm/ptbxl_cnn_lstm_image_v1_seed42/figures/per_label_metrics.svg": "2b2c88eb4894f37af962dd4ffba8d6e477b23372d4f2bd3be6a0f7ef59525a29",
+    "/Users/miriamistanboli/Downloads/ecg swiss/results/ptbxl_cnn_lstm/ptbxl_cnn_lstm_image_v1_seed42/figures/partition_summary.svg": "cfb90161dd7a79b457bd61c2325432a4654d8c2005bf61c49e2ae31b95f96169",
+    "/Users/miriamistanboli/Downloads/ecg swiss/results/ptbxl_cnn_lstm/ptbxl_cnn_lstm_image_v1_seed42/figures/precision_recall_curves.svg": "96938e2e65f811f275d9252c91223fc3ea86bb257917ed0f47303ab09adf3a20"
+  },
+  "test_case_gallery_generated": false
+}

@@ -1,0 +1,9 @@
+{
+  "src/generate_ptbxl_images.py": "72898b846ef6adc2af59e4934628935eaaf618c1cf4dae48f80082caebcfbd1f",
+  "src/ptbxl_rendering.py": "3d3301ffc71f333702c031b7214fd3c971806da152ab59027cb732b72fd71b94",
+  "src/ptbxl_image_manifest.py": "61bb49257048cc8929e545e10a4a97cd3af6a36d2e5adb670a114d7e76adc62d",
+  "src/common.py": "0214c2ec6d8d49ac9536a6602397d83f111e5bd64ec63f5d99633dee8c9bd672",
+  "experiments/configs/ptbxl_images_v1.json": "4c04eda83685a2e77f3d1e033f4b291161a4e94a5c99d1614be8b06d2d51a337",
+  "requirements.txt": "b3fd8484f759eae4be720b8eccb48a53344363759e03b4254d6eb74c66aa4a24",
+  "requirements-ptbxl-images.txt": "d3b4577d0461d89fef7846038ecc4074475cdbebde22fa60e59ecefe91fb1651"
+}

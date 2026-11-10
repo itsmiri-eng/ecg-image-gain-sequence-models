@@ -1,0 +1,562 @@
+{"status": "running", "phase": "loading_development_data", "updated_utc": "2026-11-01T11:28:50.399703+00:00", "elapsed_seconds": 8.383393287658691e-05}
+{"status": "running", "phase": "training", "updated_utc": "2026-11-01T11:28:52.944090+00:00", "elapsed_seconds": 2.544568666955456}
+2026-11-01T11:28:55+00:00 PTB-XL HybridViT epoch 01/20 batch 1/1068 train_online_bce=0.71462 seconds=0.8
+2026-11-01T11:29:47+00:00 PTB-XL HybridViT epoch 01/20 batch 100/1068 train_online_bce=0.55251 seconds=53.0
+2026-11-01T11:30:41+00:00 PTB-XL HybridViT epoch 01/20 batch 200/1068 train_online_bce=0.53806 seconds=106.5
+2026-11-01T11:31:46+00:00 PTB-XL HybridViT epoch 01/20 batch 300/1068 train_online_bce=0.52195 seconds=171.9
+2026-11-01T11:32:59+00:00 PTB-XL HybridViT epoch 01/20 batch 400/1068 train_online_bce=0.51118 seconds=244.5
+2026-11-01T11:34:00+00:00 PTB-XL HybridViT epoch 01/20 batch 500/1068 train_online_bce=0.50030 seconds=305.3
+2026-11-01T11:35:05+00:00 PTB-XL HybridViT epoch 01/20 batch 600/1068 train_online_bce=0.49490 seconds=371.3
+2026-11-01T11:36:26+00:00 PTB-XL HybridViT epoch 01/20 batch 700/1068 train_online_bce=0.48805 seconds=451.4
+2026-11-01T11:37:46+00:00 PTB-XL HybridViT epoch 01/20 batch 800/1068 train_online_bce=0.48501 seconds=531.6
+2026-11-01T11:38:39+00:00 PTB-XL HybridViT epoch 01/20 batch 900/1068 train_online_bce=0.48052 seconds=585.2
+2026-11-01T11:39:40+00:00 PTB-XL HybridViT epoch 01/20 batch 1000/1068 train_online_bce=0.47599 seconds=645.9
+2026-11-01T11:40:26+00:00 PTB-XL HybridViT epoch 01/20 batch 1068/1068 train_online_bce=0.47245 seconds=692.2
+2026-11-01T11:40:26+00:00 PTB-XL HybridViT validation batch 0/135 records=0/2146 seconds=0.0
+2026-11-01T11:40:27+00:00 PTB-XL HybridViT validation batch 1/135 records=16/2146 seconds=0.6
+2026-11-01T11:41:15+00:00 PTB-XL HybridViT validation batch 100/135 records=1600/2146 seconds=48.4
+2026-11-01T11:41:31+00:00 PTB-XL HybridViT validation batch 135/135 records=2146/2146 seconds=64.4
+2026-11-01T11:41:31+00:00 PTB-XL HybridViT epoch 01/20 train_online_bce=0.47245 val_bce=0.41780 val_macro_auc=0.80994 val_macro_ap=0.58616 selected=True seconds=756.9
+2026-11-01T11:41:32+00:00 PTB-XL HybridViT epoch 02/20 batch 1/1068 train_online_bce=0.38131 seconds=0.5
+2026-11-01T11:42:38+00:00 PTB-XL HybridViT epoch 02/20 batch 100/1068 train_online_bce=0.42582 seconds=67.2
+2026-11-01T11:43:44+00:00 PTB-XL HybridViT epoch 02/20 batch 200/1068 train_online_bce=0.42524 seconds=132.4
+2026-11-01T11:44:39+00:00 PTB-XL HybridViT epoch 02/20 batch 300/1068 train_online_bce=0.42426 seconds=187.4
+2026-11-01T11:45:38+00:00 PTB-XL HybridViT epoch 02/20 batch 400/1068 train_online_bce=0.42207 seconds=247.0
+2026-11-01T11:46:36+00:00 PTB-XL HybridViT epoch 02/20 batch 500/1068 train_online_bce=0.42022 seconds=305.0
+2026-11-01T11:47:34+00:00 PTB-XL HybridViT epoch 02/20 batch 600/1068 train_online_bce=0.41834 seconds=362.5
+2026-11-01T11:48:33+00:00 PTB-XL HybridViT epoch 02/20 batch 700/1068 train_online_bce=0.41681 seconds=421.4
+2026-11-01T11:49:34+00:00 PTB-XL HybridViT epoch 02/20 batch 800/1068 train_online_bce=0.41621 seconds=482.6
+2026-11-01T11:50:34+00:00 PTB-XL HybridViT epoch 02/20 batch 900/1068 train_online_bce=0.41478 seconds=542.4
+2026-11-01T11:51:32+00:00 PTB-XL HybridViT epoch 02/20 batch 1000/1068 train_online_bce=0.41419 seconds=600.8
+2026-11-01T11:52:11+00:00 PTB-XL HybridViT epoch 02/20 batch 1068/1068 train_online_bce=0.41328 seconds=640.1
+2026-11-01T11:52:11+00:00 PTB-XL HybridViT validation batch 0/135 records=0/2146 seconds=0.0
+2026-11-01T11:52:12+00:00 PTB-XL HybridViT validation batch 1/135 records=16/2146 seconds=0.4
+2026-11-01T11:52:53+00:00 PTB-XL HybridViT validation batch 100/135 records=1600/2146 seconds=42.2
+2026-11-01T11:53:09+00:00 PTB-XL HybridViT validation batch 135/135 records=2146/2146 seconds=57.6
+2026-11-01T11:53:09+00:00 PTB-XL HybridViT epoch 02/20 train_online_bce=0.41328 val_bce=0.38773 val_macro_auc=0.83994 val_macro_ap=0.64076 selected=True seconds=697.8
+2026-11-01T11:53:09+00:00 PTB-XL HybridViT epoch 03/20 batch 1/1068 train_online_bce=0.43573 seconds=0.6
+2026-11-01T11:54:01+00:00 PTB-XL HybridViT epoch 03/20 batch 100/1068 train_online_bce=0.39950 seconds=52.0
+2026-11-01T11:54:45+00:00 PTB-XL HybridViT epoch 03/20 batch 200/1068 train_online_bce=0.38624 seconds=95.7
+2026-11-01T11:55:29+00:00 PTB-XL HybridViT epoch 03/20 batch 300/1068 train_online_bce=0.38522 seconds=139.9
+2026-11-01T11:56:27+00:00 PTB-XL HybridViT epoch 03/20 batch 400/1068 train_online_bce=0.38578 seconds=198.3
+2026-11-01T11:57:25+00:00 PTB-XL HybridViT epoch 03/20 batch 500/1068 train_online_bce=0.38589 seconds=255.7
+2026-11-01T11:58:18+00:00 PTB-XL HybridViT epoch 03/20 batch 600/1068 train_online_bce=0.38444 seconds=308.9
+2026-11-01T11:59:09+00:00 PTB-XL HybridViT epoch 03/20 batch 700/1068 train_online_bce=0.38233 seconds=360.5
+2026-11-01T12:00:00+00:00 PTB-XL HybridViT epoch 03/20 batch 800/1068 train_online_bce=0.38170 seconds=411.0
+2026-11-01T12:01:06+00:00 PTB-XL HybridViT epoch 03/20 batch 900/1068 train_online_bce=0.38120 seconds=476.9
+2026-11-01T12:02:03+00:00 PTB-XL HybridViT epoch 03/20 batch 1000/1068 train_online_bce=0.38149 seconds=533.6
+2026-11-01T12:02:51+00:00 PTB-XL HybridViT epoch 03/20 batch 1068/1068 train_online_bce=0.38063 seconds=582.2
+2026-11-01T12:02:51+00:00 PTB-XL HybridViT validation batch 0/135 records=0/2146 seconds=0.0
+2026-11-01T12:02:52+00:00 PTB-XL HybridViT validation batch 1/135 records=16/2146 seconds=0.5
+2026-11-01T12:03:35+00:00 PTB-XL HybridViT validation batch 100/135 records=1600/2146 seconds=44.0
+2026-11-01T12:03:50+00:00 PTB-XL HybridViT validation batch 135/135 records=2146/2146 seconds=58.5
+2026-11-01T12:03:50+00:00 PTB-XL HybridViT epoch 03/20 train_online_bce=0.38063 val_bce=0.38050 val_macro_auc=0.86607 val_macro_ap=0.68233 selected=True seconds=640.8
+2026-11-01T12:03:50+00:00 PTB-XL HybridViT epoch 04/20 batch 1/1068 train_online_bce=0.35424 seconds=0.5
+2026-11-01T12:04:55+00:00 PTB-XL HybridViT epoch 04/20 batch 100/1068 train_online_bce=0.36563 seconds=65.2
+2026-11-01T12:05:49+00:00 PTB-XL HybridViT epoch 04/20 batch 200/1068 train_online_bce=0.37263 seconds=119.4
+2026-11-01T12:06:39+00:00 PTB-XL HybridViT epoch 04/20 batch 300/1068 train_online_bce=0.36745 seconds=169.1
+2026-11-01T12:07:28+00:00 PTB-XL HybridViT epoch 04/20 batch 400/1068 train_online_bce=0.36665 seconds=217.9
+2026-11-01T12:08:17+00:00 PTB-XL HybridViT epoch 04/20 batch 500/1068 train_online_bce=0.36702 seconds=267.2
+2026-11-01T12:09:07+00:00 PTB-XL HybridViT epoch 04/20 batch 600/1068 train_online_bce=0.36619 seconds=317.5
+2026-11-01T12:10:05+00:00 PTB-XL HybridViT epoch 04/20 batch 700/1068 train_online_bce=0.36522 seconds=375.4
+2026-11-01T12:10:53+00:00 PTB-XL HybridViT epoch 04/20 batch 800/1068 train_online_bce=0.36265 seconds=423.4
+2026-11-01T12:11:51+00:00 PTB-XL HybridViT epoch 04/20 batch 900/1068 train_online_bce=0.36218 seconds=481.4
+2026-11-01T12:12:43+00:00 PTB-XL HybridViT epoch 04/20 batch 1000/1068 train_online_bce=0.36203 seconds=533.0
+2026-11-01T12:13:16+00:00 PTB-XL HybridViT epoch 04/20 batch 1068/1068 train_online_bce=0.36112 seconds=566.0
+2026-11-01T12:13:16+00:00 PTB-XL HybridViT validation batch 0/135 records=0/2146 seconds=0.0
+2026-11-01T12:13:16+00:00 PTB-XL HybridViT validation batch 1/135 records=16/2146 seconds=0.4
+2026-11-01T12:13:52+00:00 PTB-XL HybridViT validation batch 100/135 records=1600/2146 seconds=35.8
+2026-11-01T12:14:03+00:00 PTB-XL HybridViT validation batch 135/135 records=2146/2146 seconds=47.5
+2026-11-01T12:14:03+00:00 PTB-XL HybridViT epoch 04/20 train_online_bce=0.36112 val_bce=0.35931 val_macro_auc=0.87924 val_macro_ap=0.71010 selected=True seconds=613.6
+2026-11-01T12:14:04+00:00 PTB-XL HybridViT epoch 05/20 batch 1/1068 train_online_bce=0.34317 seconds=0.5
+2026-11-01T12:14:51+00:00 PTB-XL HybridViT epoch 05/20 batch 100/1068 train_online_bce=0.35098 seconds=47.3
+2026-11-01T12:15:53+00:00 PTB-XL HybridViT epoch 05/20 batch 200/1068 train_online_bce=0.36063 seconds=110.1
+2026-11-01T12:16:52+00:00 PTB-XL HybridViT epoch 05/20 batch 300/1068 train_online_bce=0.35826 seconds=168.3
+2026-11-01T12:17:46+00:00 PTB-XL HybridViT epoch 05/20 batch 400/1068 train_online_bce=0.35792 seconds=222.5
+2026-11-01T12:18:35+00:00 PTB-XL HybridViT epoch 05/20 batch 500/1068 train_online_bce=0.35887 seconds=272.1
+2026-11-01T12:19:22+00:00 PTB-XL HybridViT epoch 05/20 batch 600/1068 train_online_bce=0.35531 seconds=318.3
+2026-11-01T12:20:06+00:00 PTB-XL HybridViT epoch 05/20 batch 700/1068 train_online_bce=0.35373 seconds=362.8
+2026-11-01T12:21:12+00:00 PTB-XL HybridViT epoch 05/20 batch 800/1068 train_online_bce=0.35225 seconds=428.4
+2026-11-01T12:22:03+00:00 PTB-XL HybridViT epoch 05/20 batch 900/1068 train_online_bce=0.35147 seconds=479.5
+2026-11-01T12:23:07+00:00 PTB-XL HybridViT epoch 05/20 batch 1000/1068 train_online_bce=0.34970 seconds=543.9
+2026-11-01T12:23:43+00:00 PTB-XL HybridViT epoch 05/20 batch 1068/1068 train_online_bce=0.35000 seconds=579.2
+2026-11-01T12:23:43+00:00 PTB-XL HybridViT validation batch 0/135 records=0/2146 seconds=0.0
+2026-11-01T12:23:43+00:00 PTB-XL HybridViT validation batch 1/135 records=16/2146 seconds=0.5
+2026-11-01T12:24:33+00:00 PTB-XL HybridViT validation batch 100/135 records=1600/2146 seconds=50.7
+2026-11-01T12:24:49+00:00 PTB-XL HybridViT validation batch 135/135 records=2146/2146 seconds=66.0
+2026-11-01T12:24:49+00:00 PTB-XL HybridViT epoch 05/20 train_online_bce=0.35000 val_bce=0.35011 val_macro_auc=0.88170 val_macro_ap=0.71900 selected=True seconds=645.3
+2026-11-01T12:24:49+00:00 PTB-XL HybridViT epoch 06/20 batch 1/1068 train_online_bce=0.30879 seconds=0.5
+2026-11-01T12:25:39+00:00 PTB-XL HybridViT epoch 06/20 batch 100/1068 train_online_bce=0.34049 seconds=50.6
+2026-11-01T12:26:27+00:00 PTB-XL HybridViT epoch 06/20 batch 200/1068 train_online_bce=0.34332 seconds=97.9
+2026-11-01T12:27:10+00:00 PTB-XL HybridViT epoch 06/20 batch 300/1068 train_online_bce=0.34581 seconds=141.6
+2026-11-01T12:27:54+00:00 PTB-XL HybridViT epoch 06/20 batch 400/1068 train_online_bce=0.34001 seconds=185.2
+2026-11-01T12:28:38+00:00 PTB-XL HybridViT epoch 06/20 batch 500/1068 train_online_bce=0.33907 seconds=229.6
+2026-11-01T12:29:21+00:00 PTB-XL HybridViT epoch 06/20 batch 600/1068 train_online_bce=0.34042 seconds=272.6
+2026-11-01T12:30:06+00:00 PTB-XL HybridViT epoch 06/20 batch 700/1068 train_online_bce=0.33996 seconds=317.2
+2026-11-01T12:30:50+00:00 PTB-XL HybridViT epoch 06/20 batch 800/1068 train_online_bce=0.34021 seconds=361.4
+2026-11-01T12:31:33+00:00 PTB-XL HybridViT epoch 06/20 batch 900/1068 train_online_bce=0.34010 seconds=404.3
+2026-11-01T12:32:16+00:00 PTB-XL HybridViT epoch 06/20 batch 1000/1068 train_online_bce=0.34055 seconds=447.7
+2026-11-01T12:32:46+00:00 PTB-XL HybridViT epoch 06/20 batch 1068/1068 train_online_bce=0.34088 seconds=476.9
+2026-11-01T12:32:46+00:00 PTB-XL HybridViT validation batch 0/135 records=0/2146 seconds=0.0
+2026-11-01T12:32:46+00:00 PTB-XL HybridViT validation batch 1/135 records=16/2146 seconds=0.3
+2026-11-01T12:33:16+00:00 PTB-XL HybridViT validation batch 100/135 records=1600/2146 seconds=30.2
+2026-11-01T12:33:26+00:00 PTB-XL HybridViT validation batch 135/135 records=2146/2146 seconds=40.5
+2026-11-01T12:33:26+00:00 PTB-XL HybridViT epoch 06/20 train_online_bce=0.34088 val_bce=0.33747 val_macro_auc=0.88730 val_macro_ap=0.72890 selected=True seconds=517.4
+2026-11-01T12:33:26+00:00 PTB-XL HybridViT epoch 07/20 batch 1/1068 train_online_bce=0.32982 seconds=0.4
+2026-11-01T12:34:08+00:00 PTB-XL HybridViT epoch 07/20 batch 100/1068 train_online_bce=0.32578 seconds=42.4
+2026-11-01T12:34:53+00:00 PTB-XL HybridViT epoch 07/20 batch 200/1068 train_online_bce=0.32653 seconds=86.5
+2026-11-01T12:35:41+00:00 PTB-XL HybridViT epoch 07/20 batch 300/1068 train_online_bce=0.32894 seconds=134.5
+2026-11-01T12:36:27+00:00 PTB-XL HybridViT epoch 07/20 batch 400/1068 train_online_bce=0.33241 seconds=181.1
+2026-11-01T12:37:18+00:00 PTB-XL HybridViT epoch 07/20 batch 500/1068 train_online_bce=0.33004 seconds=231.4
+2026-11-01T12:38:05+00:00 PTB-XL HybridViT epoch 07/20 batch 600/1068 train_online_bce=0.33088 seconds=279.2
+2026-11-01T12:38:53+00:00 PTB-XL HybridViT epoch 07/20 batch 700/1068 train_online_bce=0.33266 seconds=327.1
+2026-11-01T12:39:52+00:00 PTB-XL HybridViT epoch 07/20 batch 800/1068 train_online_bce=0.33205 seconds=385.6
+2026-11-01T12:40:54+00:00 PTB-XL HybridViT epoch 07/20 batch 900/1068 train_online_bce=0.33187 seconds=448.1
+2026-11-01T12:41:46+00:00 PTB-XL HybridViT epoch 07/20 batch 1000/1068 train_online_bce=0.33142 seconds=499.7
+2026-11-01T12:42:21+00:00 PTB-XL HybridViT epoch 07/20 batch 1068/1068 train_online_bce=0.33161 seconds=534.4
+2026-11-01T12:42:21+00:00 PTB-XL HybridViT validation batch 0/135 records=0/2146 seconds=0.0
+2026-11-01T12:42:21+00:00 PTB-XL HybridViT validation batch 1/135 records=16/2146 seconds=0.4
+2026-11-01T12:42:59+00:00 PTB-XL HybridViT validation batch 100/135 records=1600/2146 seconds=38.2
+2026-11-01T12:43:11+00:00 PTB-XL HybridViT validation batch 135/135 records=2146/2146 seconds=50.7
+2026-11-01T12:43:11+00:00 PTB-XL HybridViT epoch 07/20 train_online_bce=0.33161 val_bce=0.34500 val_macro_auc=0.89046 val_macro_ap=0.73718 selected=True seconds=585.2
+2026-11-01T12:43:13+00:00 PTB-XL HybridViT epoch 08/20 batch 1/1068 train_online_bce=0.41285 seconds=1.3
+2026-11-01T12:44:06+00:00 PTB-XL HybridViT epoch 08/20 batch 100/1068 train_online_bce=0.32539 seconds=54.4
+2026-11-01T12:44:55+00:00 PTB-XL HybridViT epoch 08/20 batch 200/1068 train_online_bce=0.31917 seconds=104.1
+2026-11-01T12:45:51+00:00 PTB-XL HybridViT epoch 08/20 batch 300/1068 train_online_bce=0.32063 seconds=159.8
+2026-11-01T12:46:45+00:00 PTB-XL HybridViT epoch 08/20 batch 400/1068 train_online_bce=0.31972 seconds=213.2
+2026-11-01T12:47:35+00:00 PTB-XL HybridViT epoch 08/20 batch 500/1068 train_online_bce=0.32200 seconds=263.6
+2026-11-01T12:48:27+00:00 PTB-XL HybridViT epoch 08/20 batch 600/1068 train_online_bce=0.32227 seconds=315.6
+2026-11-01T12:49:19+00:00 PTB-XL HybridViT epoch 08/20 batch 700/1068 train_online_bce=0.32513 seconds=368.1
+2026-11-01T12:50:14+00:00 PTB-XL HybridViT epoch 08/20 batch 800/1068 train_online_bce=0.32528 seconds=422.3
+2026-11-01T12:51:07+00:00 PTB-XL HybridViT epoch 08/20 batch 900/1068 train_online_bce=0.32487 seconds=476.0
+2026-11-01T12:51:59+00:00 PTB-XL HybridViT epoch 08/20 batch 1000/1068 train_online_bce=0.32443 seconds=527.9
+2026-11-01T12:52:36+00:00 PTB-XL HybridViT epoch 08/20 batch 1068/1068 train_online_bce=0.32421 seconds=565.0
+2026-11-01T12:52:36+00:00 PTB-XL HybridViT validation batch 0/135 records=0/2146 seconds=0.0
+2026-11-01T12:52:37+00:00 PTB-XL HybridViT validation batch 1/135 records=16/2146 seconds=0.5
+2026-11-01T12:53:20+00:00 PTB-XL HybridViT validation batch 100/135 records=1600/2146 seconds=43.5
+2026-11-01T12:53:33+00:00 PTB-XL HybridViT validation batch 135/135 records=2146/2146 seconds=56.4
+2026-11-01T12:53:33+00:00 PTB-XL HybridViT epoch 08/20 train_online_bce=0.32421 val_bce=0.32872 val_macro_auc=0.89206 val_macro_ap=0.74093 selected=True seconds=621.5
+2026-11-01T12:53:33+00:00 PTB-XL HybridViT epoch 09/20 batch 1/1068 train_online_bce=0.32619 seconds=0.5
+2026-11-01T12:54:23+00:00 PTB-XL HybridViT epoch 09/20 batch 100/1068 train_online_bce=0.31158 seconds=50.7
+2026-11-01T12:55:14+00:00 PTB-XL HybridViT epoch 09/20 batch 200/1068 train_online_bce=0.31387 seconds=101.6
+2026-11-01T12:56:01+00:00 PTB-XL HybridViT epoch 09/20 batch 300/1068 train_online_bce=0.31535 seconds=148.1
+2026-11-01T12:56:45+00:00 PTB-XL HybridViT epoch 09/20 batch 400/1068 train_online_bce=0.32042 seconds=192.5
+2026-11-01T12:57:29+00:00 PTB-XL HybridViT epoch 09/20 batch 500/1068 train_online_bce=0.31836 seconds=236.4
+2026-11-01T12:58:17+00:00 PTB-XL HybridViT epoch 09/20 batch 600/1068 train_online_bce=0.31853 seconds=284.3
+2026-11-01T12:59:06+00:00 PTB-XL HybridViT epoch 09/20 batch 700/1068 train_online_bce=0.31946 seconds=332.8
+2026-11-01T12:59:54+00:00 PTB-XL HybridViT epoch 09/20 batch 800/1068 train_online_bce=0.31733 seconds=381.6
+2026-11-01T13:00:51+00:00 PTB-XL HybridViT epoch 09/20 batch 900/1068 train_online_bce=0.31839 seconds=437.8
+2026-11-01T13:01:42+00:00 PTB-XL HybridViT epoch 09/20 batch 1000/1068 train_online_bce=0.31815 seconds=489.2
+2026-11-01T13:02:15+00:00 PTB-XL HybridViT epoch 09/20 batch 1068/1068 train_online_bce=0.31831 seconds=521.9
+2026-11-01T13:02:15+00:00 PTB-XL HybridViT validation batch 0/135 records=0/2146 seconds=0.0
+2026-11-01T13:02:15+00:00 PTB-XL HybridViT validation batch 1/135 records=16/2146 seconds=0.8
+2026-11-01T13:02:59+00:00 PTB-XL HybridViT validation batch 100/135 records=1600/2146 seconds=44.1
+2026-11-01T13:03:12+00:00 PTB-XL HybridViT validation batch 135/135 records=2146/2146 seconds=57.0
+2026-11-01T13:03:12+00:00 PTB-XL HybridViT epoch 09/20 train_online_bce=0.31831 val_bce=0.33214 val_macro_auc=0.88876 val_macro_ap=0.73901 selected=False seconds=579.0
+2026-11-01T13:03:12+00:00 PTB-XL HybridViT epoch 10/20 batch 1/1068 train_online_bce=0.26489 seconds=0.5
+2026-11-01T13:04:00+00:00 PTB-XL HybridViT epoch 10/20 batch 100/1068 train_online_bce=0.31230 seconds=48.6
+2026-11-01T13:04:53+00:00 PTB-XL HybridViT epoch 10/20 batch 200/1068 train_online_bce=0.31452 seconds=100.9
+2026-11-01T13:05:38+00:00 PTB-XL HybridViT epoch 10/20 batch 300/1068 train_online_bce=0.31338 seconds=146.4
+2026-11-01T13:06:24+00:00 PTB-XL HybridViT epoch 10/20 batch 400/1068 train_online_bce=0.31374 seconds=191.8
+2026-11-01T13:07:08+00:00 PTB-XL HybridViT epoch 10/20 batch 500/1068 train_online_bce=0.31448 seconds=236.4
+2026-11-01T13:08:11+00:00 PTB-XL HybridViT epoch 10/20 batch 600/1068 train_online_bce=0.31478 seconds=299.4
+2026-11-01T13:09:04+00:00 PTB-XL HybridViT epoch 10/20 batch 700/1068 train_online_bce=0.31214 seconds=351.9
+2026-11-01T13:09:56+00:00 PTB-XL HybridViT epoch 10/20 batch 800/1068 train_online_bce=0.31296 seconds=404.0
+2026-11-01T13:10:44+00:00 PTB-XL HybridViT epoch 10/20 batch 900/1068 train_online_bce=0.31286 seconds=452.4
+2026-11-01T13:11:29+00:00 PTB-XL HybridViT epoch 10/20 batch 1000/1068 train_online_bce=0.31371 seconds=497.5
+2026-11-01T13:12:13+00:00 PTB-XL HybridViT epoch 10/20 batch 1068/1068 train_online_bce=0.31406 seconds=540.8
+2026-11-01T13:12:13+00:00 PTB-XL HybridViT validation batch 0/135 records=0/2146 seconds=0.0
+2026-11-01T13:12:13+00:00 PTB-XL HybridViT validation batch 1/135 records=16/2146 seconds=0.3
+2026-11-01T13:12:56+00:00 PTB-XL HybridViT validation batch 100/135 records=1600/2146 seconds=43.6
+2026-11-01T13:13:08+00:00 PTB-XL HybridViT validation batch 135/135 records=2146/2146 seconds=55.3
+2026-11-01T13:13:08+00:00 PTB-XL HybridViT epoch 10/20 train_online_bce=0.31406 val_bce=0.33428 val_macro_auc=0.89525 val_macro_ap=0.74895 selected=True seconds=596.2
+2026-11-01T13:13:08+00:00 PTB-XL HybridViT epoch 11/20 batch 1/1068 train_online_bce=0.44667 seconds=0.5
+2026-11-01T13:13:54+00:00 PTB-XL HybridViT epoch 11/20 batch 100/1068 train_online_bce=0.31097 seconds=45.8
+2026-11-01T13:14:43+00:00 PTB-XL HybridViT epoch 11/20 batch 200/1068 train_online_bce=0.30834 seconds=95.3
+2026-11-01T13:15:35+00:00 PTB-XL HybridViT epoch 11/20 batch 300/1068 train_online_bce=0.30948 seconds=147.0
+2026-11-01T13:16:19+00:00 PTB-XL HybridViT epoch 11/20 batch 400/1068 train_online_bce=0.31007 seconds=190.7
+2026-11-01T13:17:05+00:00 PTB-XL HybridViT epoch 11/20 batch 500/1068 train_online_bce=0.30932 seconds=236.7
+2026-11-01T13:17:52+00:00 PTB-XL HybridViT epoch 11/20 batch 600/1068 train_online_bce=0.30593 seconds=283.6
+2026-11-01T13:18:40+00:00 PTB-XL HybridViT epoch 11/20 batch 700/1068 train_online_bce=0.30572 seconds=331.6
+2026-11-01T13:19:32+00:00 PTB-XL HybridViT epoch 11/20 batch 800/1068 train_online_bce=0.30578 seconds=383.7
+2026-11-01T13:20:23+00:00 PTB-XL HybridViT epoch 11/20 batch 900/1068 train_online_bce=0.30834 seconds=434.7
+2026-11-01T13:21:12+00:00 PTB-XL HybridViT epoch 11/20 batch 1000/1068 train_online_bce=0.30886 seconds=484.0
+2026-11-01T13:21:46+00:00 PTB-XL HybridViT epoch 11/20 batch 1068/1068 train_online_bce=0.30823 seconds=517.6
+2026-11-01T13:21:46+00:00 PTB-XL HybridViT validation batch 0/135 records=0/2146 seconds=0.0
+2026-11-01T13:21:46+00:00 PTB-XL HybridViT validation batch 1/135 records=16/2146 seconds=0.3
+2026-11-01T13:22:20+00:00 PTB-XL HybridViT validation batch 100/135 records=1600/2146 seconds=34.3
+2026-11-01T13:22:33+00:00 PTB-XL HybridViT validation batch 135/135 records=2146/2146 seconds=47.4
+2026-11-01T13:22:33+00:00 PTB-XL HybridViT epoch 11/20 train_online_bce=0.30823 val_bce=0.33134 val_macro_auc=0.89644 val_macro_ap=0.74707 selected=True seconds=565.1
+2026-11-01T13:22:34+00:00 PTB-XL HybridViT epoch 12/20 batch 1/1068 train_online_bce=0.37701 seconds=0.5
+2026-11-01T13:23:22+00:00 PTB-XL HybridViT epoch 12/20 batch 100/1068 train_online_bce=0.28981 seconds=49.1
+2026-11-01T13:24:12+00:00 PTB-XL HybridViT epoch 12/20 batch 200/1068 train_online_bce=0.30011 seconds=99.2
+2026-11-01T13:25:10+00:00 PTB-XL HybridViT epoch 12/20 batch 300/1068 train_online_bce=0.30319 seconds=156.9
+2026-11-01T13:25:56+00:00 PTB-XL HybridViT epoch 12/20 batch 400/1068 train_online_bce=0.30791 seconds=203.3
+2026-11-01T13:26:43+00:00 PTB-XL HybridViT epoch 12/20 batch 500/1068 train_online_bce=0.30424 seconds=249.7
+2026-11-01T13:27:30+00:00 PTB-XL HybridViT epoch 12/20 batch 600/1068 train_online_bce=0.30552 seconds=296.8
+2026-11-01T13:28:17+00:00 PTB-XL HybridViT epoch 12/20 batch 700/1068 train_online_bce=0.30553 seconds=344.1
+2026-11-01T13:29:07+00:00 PTB-XL HybridViT epoch 12/20 batch 800/1068 train_online_bce=0.30491 seconds=393.6
+2026-11-01T13:29:55+00:00 PTB-XL HybridViT epoch 12/20 batch 900/1068 train_online_bce=0.30393 seconds=441.6
+2026-11-01T13:30:50+00:00 PTB-XL HybridViT epoch 12/20 batch 1000/1068 train_online_bce=0.30353 seconds=497.2
+2026-11-01T13:31:23+00:00 PTB-XL HybridViT epoch 12/20 batch 1068/1068 train_online_bce=0.30297 seconds=530.3
+2026-11-01T13:31:23+00:00 PTB-XL HybridViT validation batch 0/135 records=0/2146 seconds=0.0
+2026-11-01T13:31:24+00:00 PTB-XL HybridViT validation batch 1/135 records=16/2146 seconds=0.4
+2026-11-01T13:32:04+00:00 PTB-XL HybridViT validation batch 100/135 records=1600/2146 seconds=40.9
+2026-11-01T13:32:16+00:00 PTB-XL HybridViT validation batch 135/135 records=2146/2146 seconds=52.5
+2026-11-01T13:32:16+00:00 PTB-XL HybridViT epoch 12/20 train_online_bce=0.30297 val_bce=0.34254 val_macro_auc=0.89740 val_macro_ap=0.75168 selected=True seconds=582.9
+2026-11-01T13:32:17+00:00 PTB-XL HybridViT epoch 13/20 batch 1/1068 train_online_bce=0.30009 seconds=0.5
+2026-11-01T13:33:04+00:00 PTB-XL HybridViT epoch 13/20 batch 100/1068 train_online_bce=0.30392 seconds=47.5
+2026-11-01T13:33:54+00:00 PTB-XL HybridViT epoch 13/20 batch 200/1068 train_online_bce=0.30106 seconds=98.1
+2026-11-01T13:34:52+00:00 PTB-XL HybridViT epoch 13/20 batch 300/1068 train_online_bce=0.30407 seconds=155.5
+2026-11-01T13:35:37+00:00 PTB-XL HybridViT epoch 13/20 batch 400/1068 train_online_bce=0.30276 seconds=200.7
+2026-11-01T13:36:19+00:00 PTB-XL HybridViT epoch 13/20 batch 500/1068 train_online_bce=0.30134 seconds=243.1
+2026-11-01T13:37:02+00:00 PTB-XL HybridViT epoch 13/20 batch 600/1068 train_online_bce=0.29739 seconds=285.8
+2026-11-01T13:37:45+00:00 PTB-XL HybridViT epoch 13/20 batch 700/1068 train_online_bce=0.29786 seconds=329.2
+2026-11-01T13:38:28+00:00 PTB-XL HybridViT epoch 13/20 batch 800/1068 train_online_bce=0.29813 seconds=371.8
+2026-11-01T13:39:10+00:00 PTB-XL HybridViT epoch 13/20 batch 900/1068 train_online_bce=0.29884 seconds=414.0
+2026-11-01T13:39:54+00:00 PTB-XL HybridViT epoch 13/20 batch 1000/1068 train_online_bce=0.29979 seconds=457.8
+2026-11-01T13:40:27+00:00 PTB-XL HybridViT epoch 13/20 batch 1068/1068 train_online_bce=0.29929 seconds=491.1
+2026-11-01T13:40:27+00:00 PTB-XL HybridViT validation batch 0/135 records=0/2146 seconds=0.0
+2026-11-01T13:40:28+00:00 PTB-XL HybridViT validation batch 1/135 records=16/2146 seconds=0.4
+2026-11-01T13:40:59+00:00 PTB-XL HybridViT validation batch 100/135 records=1600/2146 seconds=32.3
+2026-11-01T13:41:10+00:00 PTB-XL HybridViT validation batch 135/135 records=2146/2146 seconds=42.6
+2026-11-01T13:41:10+00:00 PTB-XL HybridViT epoch 13/20 train_online_bce=0.29929 val_bce=0.33810 val_macro_auc=0.89763 val_macro_ap=0.75323 selected=True seconds=533.8
+2026-11-01T13:41:10+00:00 PTB-XL HybridViT epoch 14/20 batch 1/1068 train_online_bce=0.40729 seconds=0.5
+2026-11-01T13:41:56+00:00 PTB-XL HybridViT epoch 14/20 batch 100/1068 train_online_bce=0.31098 seconds=45.9
+2026-11-01T13:42:44+00:00 PTB-XL HybridViT epoch 14/20 batch 200/1068 train_online_bce=0.30486 seconds=93.8
+2026-11-01T13:43:27+00:00 PTB-XL HybridViT epoch 14/20 batch 300/1068 train_online_bce=0.29566 seconds=136.7
+2026-11-01T13:44:09+00:00 PTB-XL HybridViT epoch 14/20 batch 400/1068 train_online_bce=0.29612 seconds=178.8
+2026-11-01T13:44:51+00:00 PTB-XL HybridViT epoch 14/20 batch 500/1068 train_online_bce=0.29512 seconds=221.2
+2026-11-01T13:45:33+00:00 PTB-XL HybridViT epoch 14/20 batch 600/1068 train_online_bce=0.29550 seconds=263.3
+2026-11-01T13:46:19+00:00 PTB-XL HybridViT epoch 14/20 batch 700/1068 train_online_bce=0.29563 seconds=309.4
+2026-11-01T13:47:02+00:00 PTB-XL HybridViT epoch 14/20 batch 800/1068 train_online_bce=0.29404 seconds=352.0
+2026-11-01T13:47:46+00:00 PTB-XL HybridViT epoch 14/20 batch 900/1068 train_online_bce=0.29371 seconds=395.6
+2026-11-01T13:48:27+00:00 PTB-XL HybridViT epoch 14/20 batch 1000/1068 train_online_bce=0.29529 seconds=437.5
+2026-11-01T13:48:56+00:00 PTB-XL HybridViT epoch 14/20 batch 1068/1068 train_online_bce=0.29629 seconds=465.8
+2026-11-01T13:48:56+00:00 PTB-XL HybridViT validation batch 0/135 records=0/2146 seconds=0.0
+2026-11-01T13:48:56+00:00 PTB-XL HybridViT validation batch 1/135 records=16/2146 seconds=0.3
+2026-11-01T13:49:26+00:00 PTB-XL HybridViT validation batch 100/135 records=1600/2146 seconds=30.3
+2026-11-01T13:49:36+00:00 PTB-XL HybridViT validation batch 135/135 records=2146/2146 seconds=40.6
+2026-11-01T13:49:36+00:00 PTB-XL HybridViT epoch 14/20 train_online_bce=0.29629 val_bce=0.32928 val_macro_auc=0.89987 val_macro_ap=0.75618 selected=True seconds=506.4
+2026-11-01T13:49:37+00:00 PTB-XL HybridViT epoch 15/20 batch 1/1068 train_online_bce=0.33091 seconds=0.4
+2026-11-01T13:50:22+00:00 PTB-XL HybridViT epoch 15/20 batch 100/1068 train_online_bce=0.29701 seconds=45.4
+2026-11-01T13:51:12+00:00 PTB-XL HybridViT epoch 15/20 batch 200/1068 train_online_bce=0.29300 seconds=95.2
+2026-11-01T13:52:07+00:00 PTB-XL HybridViT epoch 15/20 batch 300/1068 train_online_bce=0.29054 seconds=151.1
+2026-11-01T13:53:01+00:00 PTB-XL HybridViT epoch 15/20 batch 400/1068 train_online_bce=0.29181 seconds=205.0
+2026-11-01T13:53:53+00:00 PTB-XL HybridViT epoch 15/20 batch 500/1068 train_online_bce=0.29205 seconds=256.2
+2026-11-01T13:54:39+00:00 PTB-XL HybridViT epoch 15/20 batch 600/1068 train_online_bce=0.29358 seconds=302.5
+2026-11-01T13:55:29+00:00 PTB-XL HybridViT epoch 15/20 batch 700/1068 train_online_bce=0.29386 seconds=352.2
+2026-11-01T13:56:17+00:00 PTB-XL HybridViT epoch 15/20 batch 800/1068 train_online_bce=0.29248 seconds=400.2
+2026-11-01T13:57:05+00:00 PTB-XL HybridViT epoch 15/20 batch 900/1068 train_online_bce=0.29160 seconds=448.3
+2026-11-01T13:57:50+00:00 PTB-XL HybridViT epoch 15/20 batch 1000/1068 train_online_bce=0.29254 seconds=493.2
+2026-11-01T13:58:18+00:00 PTB-XL HybridViT epoch 15/20 batch 1068/1068 train_online_bce=0.29244 seconds=521.7
+2026-11-01T13:58:18+00:00 PTB-XL HybridViT validation batch 0/135 records=0/2146 seconds=0.0
+2026-11-01T13:58:18+00:00 PTB-XL HybridViT validation batch 1/135 records=16/2146 seconds=0.3
+2026-11-01T13:58:48+00:00 PTB-XL HybridViT validation batch 100/135 records=1600/2146 seconds=30.2
+2026-11-01T13:58:59+00:00 PTB-XL HybridViT validation batch 135/135 records=2146/2146 seconds=40.7
+2026-11-01T13:58:59+00:00 PTB-XL HybridViT epoch 15/20 train_online_bce=0.29244 val_bce=0.32835 val_macro_auc=0.90036 val_macro_ap=0.75642 selected=True seconds=562.5
+2026-11-01T13:58:59+00:00 PTB-XL HybridViT epoch 16/20 batch 1/1068 train_online_bce=0.24134 seconds=0.5
+2026-11-01T13:59:41+00:00 PTB-XL HybridViT epoch 16/20 batch 100/1068 train_online_bce=0.27316 seconds=42.4
+2026-11-01T14:00:23+00:00 PTB-XL HybridViT epoch 16/20 batch 200/1068 train_online_bce=0.28559 seconds=84.4
+2026-11-01T14:01:06+00:00 PTB-XL HybridViT epoch 16/20 batch 300/1068 train_online_bce=0.28677 seconds=127.4
+2026-11-01T14:01:54+00:00 PTB-XL HybridViT epoch 16/20 batch 400/1068 train_online_bce=0.28764 seconds=174.6
+2026-11-01T14:02:43+00:00 PTB-XL HybridViT epoch 16/20 batch 500/1068 train_online_bce=0.29017 seconds=224.2
+2026-11-01T14:03:31+00:00 PTB-XL HybridViT epoch 16/20 batch 600/1068 train_online_bce=0.28874 seconds=272.4
+2026-11-01T14:04:20+00:00 PTB-XL HybridViT epoch 16/20 batch 700/1068 train_online_bce=0.28943 seconds=321.5
+2026-11-01T14:05:06+00:00 PTB-XL HybridViT epoch 16/20 batch 800/1068 train_online_bce=0.28905 seconds=367.0
+2026-11-01T14:05:51+00:00 PTB-XL HybridViT epoch 16/20 batch 900/1068 train_online_bce=0.28863 seconds=412.2
+2026-11-01T14:06:42+00:00 PTB-XL HybridViT epoch 16/20 batch 1000/1068 train_online_bce=0.28945 seconds=463.0
+2026-11-01T14:07:12+00:00 PTB-XL HybridViT epoch 16/20 batch 1068/1068 train_online_bce=0.28988 seconds=492.7
+2026-11-01T14:07:12+00:00 PTB-XL HybridViT validation batch 0/135 records=0/2146 seconds=0.0
+2026-11-01T14:07:12+00:00 PTB-XL HybridViT validation batch 1/135 records=16/2146 seconds=0.3
+2026-11-01T14:07:44+00:00 PTB-XL HybridViT validation batch 100/135 records=1600/2146 seconds=32.4
+2026-11-01T14:07:55+00:00 PTB-XL HybridViT validation batch 135/135 records=2146/2146 seconds=43.1
+2026-11-01T14:07:55+00:00 PTB-XL HybridViT epoch 16/20 train_online_bce=0.28988 val_bce=0.32433 val_macro_auc=0.90080 val_macro_ap=0.75833 selected=True seconds=535.9
+2026-11-01T14:07:55+00:00 PTB-XL HybridViT epoch 17/20 batch 1/1068 train_online_bce=0.26769 seconds=0.4
+2026-11-01T14:08:43+00:00 PTB-XL HybridViT epoch 17/20 batch 100/1068 train_online_bce=0.29064 seconds=48.2
+2026-11-01T14:09:35+00:00 PTB-XL HybridViT epoch 17/20 batch 200/1068 train_online_bce=0.28612 seconds=99.7
+2026-11-01T14:10:24+00:00 PTB-XL HybridViT epoch 17/20 batch 300/1068 train_online_bce=0.28927 seconds=149.3
+2026-11-01T14:11:19+00:00 PTB-XL HybridViT epoch 17/20 batch 400/1068 train_online_bce=0.29091 seconds=203.9
+2026-11-01T14:12:08+00:00 PTB-XL HybridViT epoch 17/20 batch 500/1068 train_online_bce=0.29098 seconds=253.3
+2026-11-01T14:13:06+00:00 PTB-XL HybridViT epoch 17/20 batch 600/1068 train_online_bce=0.28929 seconds=310.9
+2026-11-01T14:14:04+00:00 PTB-XL HybridViT epoch 17/20 batch 700/1068 train_online_bce=0.28892 seconds=369.4
+2026-11-01T14:14:50+00:00 PTB-XL HybridViT epoch 17/20 batch 800/1068 train_online_bce=0.28751 seconds=415.6
+2026-11-01T14:15:38+00:00 PTB-XL HybridViT epoch 17/20 batch 900/1068 train_online_bce=0.28737 seconds=463.6
+2026-11-01T14:16:29+00:00 PTB-XL HybridViT epoch 17/20 batch 1000/1068 train_online_bce=0.28781 seconds=514.7
+2026-11-01T14:17:06+00:00 PTB-XL HybridViT epoch 17/20 batch 1068/1068 train_online_bce=0.28782 seconds=551.1
+2026-11-01T14:17:06+00:00 PTB-XL HybridViT validation batch 0/135 records=0/2146 seconds=0.0
+2026-11-01T14:17:06+00:00 PTB-XL HybridViT validation batch 1/135 records=16/2146 seconds=0.4
+2026-11-01T14:17:38+00:00 PTB-XL HybridViT validation batch 100/135 records=1600/2146 seconds=32.5
+2026-11-01T14:17:50+00:00 PTB-XL HybridViT validation batch 135/135 records=2146/2146 seconds=44.0
+2026-11-01T14:17:50+00:00 PTB-XL HybridViT epoch 17/20 train_online_bce=0.28782 val_bce=0.33125 val_macro_auc=0.90082 val_macro_ap=0.75846 selected=True seconds=595.2
+2026-11-01T14:17:50+00:00 PTB-XL HybridViT epoch 18/20 batch 1/1068 train_online_bce=0.37050 seconds=0.5
+2026-11-01T14:18:34+00:00 PTB-XL HybridViT epoch 18/20 batch 100/1068 train_online_bce=0.27921 seconds=44.0
+2026-11-01T14:19:18+00:00 PTB-XL HybridViT epoch 18/20 batch 200/1068 train_online_bce=0.29010 seconds=88.2
+2026-11-01T14:20:06+00:00 PTB-XL HybridViT epoch 18/20 batch 300/1068 train_online_bce=0.28752 seconds=136.4
+2026-11-01T14:20:59+00:00 PTB-XL HybridViT epoch 18/20 batch 400/1068 train_online_bce=0.28816 seconds=188.7
+2026-11-01T14:21:57+00:00 PTB-XL HybridViT epoch 18/20 batch 500/1068 train_online_bce=0.28573 seconds=247.3
+2026-11-01T14:22:50+00:00 PTB-XL HybridViT epoch 18/20 batch 600/1068 train_online_bce=0.28696 seconds=299.6
+2026-11-01T14:23:33+00:00 PTB-XL HybridViT epoch 18/20 batch 700/1068 train_online_bce=0.28486 seconds=343.4
+2026-11-01T14:24:17+00:00 PTB-XL HybridViT epoch 18/20 batch 800/1068 train_online_bce=0.28576 seconds=387.5
+2026-11-01T14:25:02+00:00 PTB-XL HybridViT epoch 18/20 batch 900/1068 train_online_bce=0.28748 seconds=431.6
+2026-11-01T14:25:45+00:00 PTB-XL HybridViT epoch 18/20 batch 1000/1068 train_online_bce=0.28644 seconds=475.1
+2026-11-01T14:26:15+00:00 PTB-XL HybridViT epoch 18/20 batch 1068/1068 train_online_bce=0.28659 seconds=504.7
+2026-11-01T14:26:15+00:00 PTB-XL HybridViT validation batch 0/135 records=0/2146 seconds=0.0
+2026-11-01T14:26:15+00:00 PTB-XL HybridViT validation batch 1/135 records=16/2146 seconds=0.3
+2026-11-01T14:26:46+00:00 PTB-XL HybridViT validation batch 100/135 records=1600/2146 seconds=31.4
+2026-11-01T14:26:57+00:00 PTB-XL HybridViT validation batch 135/135 records=2146/2146 seconds=42.3
+2026-11-01T14:26:57+00:00 PTB-XL HybridViT epoch 18/20 train_online_bce=0.28659 val_bce=0.33030 val_macro_auc=0.90090 val_macro_ap=0.75739 selected=True seconds=547.1
+2026-11-01T14:26:57+00:00 PTB-XL HybridViT epoch 19/20 batch 1/1068 train_online_bce=0.46812 seconds=0.4
+2026-11-01T14:27:42+00:00 PTB-XL HybridViT epoch 19/20 batch 100/1068 train_online_bce=0.28975 seconds=44.5
+2026-11-01T14:28:35+00:00 PTB-XL HybridViT epoch 19/20 batch 200/1068 train_online_bce=0.28247 seconds=98.2
+2026-11-01T14:29:19+00:00 PTB-XL HybridViT epoch 19/20 batch 300/1068 train_online_bce=0.27943 seconds=141.9
+2026-11-01T14:30:05+00:00 PTB-XL HybridViT epoch 19/20 batch 400/1068 train_online_bce=0.28522 seconds=188.2
+2026-11-01T14:30:51+00:00 PTB-XL HybridViT epoch 19/20 batch 500/1068 train_online_bce=0.28124 seconds=233.5
+2026-11-01T14:31:42+00:00 PTB-XL HybridViT epoch 19/20 batch 600/1068 train_online_bce=0.28222 seconds=285.4
+2026-11-01T14:32:30+00:00 PTB-XL HybridViT epoch 19/20 batch 700/1068 train_online_bce=0.28296 seconds=333.0
+2026-11-01T14:33:18+00:00 PTB-XL HybridViT epoch 19/20 batch 800/1068 train_online_bce=0.28296 seconds=380.7
+2026-11-01T14:34:15+00:00 PTB-XL HybridViT epoch 19/20 batch 900/1068 train_online_bce=0.28436 seconds=438.0
+2026-11-01T14:35:07+00:00 PTB-XL HybridViT epoch 19/20 batch 1000/1068 train_online_bce=0.28469 seconds=490.3
+2026-11-01T14:35:39+00:00 PTB-XL HybridViT epoch 19/20 batch 1068/1068 train_online_bce=0.28457 seconds=522.1
+2026-11-01T14:35:39+00:00 PTB-XL HybridViT validation batch 0/135 records=0/2146 seconds=0.0
+2026-11-01T14:35:40+00:00 PTB-XL HybridViT validation batch 1/135 records=16/2146 seconds=0.4
+2026-11-01T14:36:14+00:00 PTB-XL HybridViT validation batch 100/135 records=1600/2146 seconds=34.9
+2026-11-01T14:36:25+00:00 PTB-XL HybridViT validation batch 135/135 records=2146/2146 seconds=46.0
+2026-11-01T14:36:25+00:00 PTB-XL HybridViT epoch 19/20 train_online_bce=0.28457 val_bce=0.32933 val_macro_auc=0.90157 val_macro_ap=0.75925 selected=True seconds=568.1
+2026-11-01T14:36:26+00:00 PTB-XL HybridViT epoch 20/20 batch 1/1068 train_online_bce=0.19329 seconds=0.4
+2026-11-01T14:37:12+00:00 PTB-XL HybridViT epoch 20/20 batch 100/1068 train_online_bce=0.29155 seconds=46.5
+2026-11-01T14:38:01+00:00 PTB-XL HybridViT epoch 20/20 batch 200/1068 train_online_bce=0.28527 seconds=95.6
+2026-11-01T14:38:59+00:00 PTB-XL HybridViT epoch 20/20 batch 300/1068 train_online_bce=0.28635 seconds=154.1
+2026-11-01T14:39:48+00:00 PTB-XL HybridViT epoch 20/20 batch 400/1068 train_online_bce=0.28600 seconds=203.3
+2026-11-01T14:40:39+00:00 PTB-XL HybridViT epoch 20/20 batch 500/1068 train_online_bce=0.28295 seconds=253.9
+2026-11-01T14:41:31+00:00 PTB-XL HybridViT epoch 20/20 batch 600/1068 train_online_bce=0.28301 seconds=306.0
+2026-11-01T14:42:25+00:00 PTB-XL HybridViT epoch 20/20 batch 700/1068 train_online_bce=0.28358 seconds=359.9
+2026-11-01T14:43:20+00:00 PTB-XL HybridViT epoch 20/20 batch 800/1068 train_online_bce=0.28215 seconds=415.2
+2026-11-01T14:44:13+00:00 PTB-XL HybridViT epoch 20/20 batch 900/1068 train_online_bce=0.28361 seconds=467.6
+2026-11-01T14:45:04+00:00 PTB-XL HybridViT epoch 20/20 batch 1000/1068 train_online_bce=0.28370 seconds=518.5
+2026-11-01T14:45:35+00:00 PTB-XL HybridViT epoch 20/20 batch 1068/1068 train_online_bce=0.28347 seconds=549.6
+2026-11-01T14:45:35+00:00 PTB-XL HybridViT validation batch 0/135 records=0/2146 seconds=0.0
+2026-11-01T14:45:35+00:00 PTB-XL HybridViT validation batch 1/135 records=16/2146 seconds=0.4
+2026-11-01T14:46:08+00:00 PTB-XL HybridViT validation batch 100/135 records=1600/2146 seconds=33.5
+2026-11-01T14:46:31+00:00 PTB-XL HybridViT validation batch 135/135 records=2146/2146 seconds=56.3
+2026-11-01T14:46:31+00:00 PTB-XL HybridViT epoch 20/20 train_online_bce=0.28347 val_bce=0.33157 val_macro_auc=0.90137 val_macro_ap=0.75867 selected=False seconds=606.0
+{"status": "running", "phase": "selected_checkpoint_prediction", "updated_utc": "2026-11-01T14:46:34.752707+00:00", "elapsed_seconds": 11863.903105375008, "split": "train", "records": 17084}
+2026-11-01T14:46:34+00:00 PTB-XL HybridViT prediction:train batch 0/1068 records=0/17084 seconds=0.0
+2026-11-01T14:46:35+00:00 PTB-XL HybridViT prediction:train batch 1/1068 records=16/17084 seconds=0.4
+2026-11-01T14:47:10+00:00 PTB-XL HybridViT prediction:train batch 100/1068 records=1600/17084 seconds=35.8
+2026-11-01T14:47:48+00:00 PTB-XL HybridViT prediction:train batch 200/1068 records=3200/17084 seconds=73.9
+2026-11-01T14:48:37+00:00 PTB-XL HybridViT prediction:train batch 300/1068 records=4800/17084 seconds=122.5
+2026-11-01T14:49:24+00:00 PTB-XL HybridViT prediction:train batch 400/1068 records=6400/17084 seconds=169.4
+2026-11-01T14:50:02+00:00 PTB-XL HybridViT prediction:train batch 500/1068 records=8000/17084 seconds=208.2
+2026-11-01T14:50:37+00:00 PTB-XL HybridViT prediction:train batch 600/1068 records=9600/17084 seconds=243.2
+2026-11-01T14:51:13+00:00 PTB-XL HybridViT prediction:train batch 700/1068 records=11200/17084 seconds=278.8
+2026-11-01T14:51:48+00:00 PTB-XL HybridViT prediction:train batch 800/1068 records=12800/17084 seconds=313.5
+2026-11-01T14:52:23+00:00 PTB-XL HybridViT prediction:train batch 900/1068 records=14400/17084 seconds=348.7
+2026-11-01T14:52:58+00:00 PTB-XL HybridViT prediction:train batch 1000/1068 records=16000/17084 seconds=384.0
+2026-11-01T14:53:21+00:00 PTB-XL HybridViT prediction:train batch 1068/1068 records=17084/17084 seconds=406.7
+{"status": "running", "phase": "selected_checkpoint_prediction", "updated_utc": "2026-11-01T14:53:22.396033+00:00", "elapsed_seconds": 12271.534214667045, "split": "validation", "records": 2146}
+2026-11-01T14:53:22+00:00 PTB-XL HybridViT prediction:validation batch 0/135 records=0/2146 seconds=0.0
+2026-11-01T14:53:22+00:00 PTB-XL HybridViT prediction:validation batch 1/135 records=16/2146 seconds=0.3
+2026-11-01T14:53:58+00:00 PTB-XL HybridViT prediction:validation batch 100/135 records=1600/2146 seconds=36.2
+2026-11-01T14:54:12+00:00 PTB-XL HybridViT prediction:validation batch 135/135 records=2146/2146 seconds=49.6
+{"status": "running", "phase": "checkpoint_replay", "updated_utc": "2026-11-01T14:54:12.356364+00:00", "elapsed_seconds": 12321.49304112501, "records": 32}
+2026-11-01T14:54:12+00:00 PTB-XL HybridViT prediction:dataset batch 0/2 records=0/32 seconds=0.0
+2026-11-01T14:54:12+00:00 PTB-XL HybridViT prediction:dataset batch 1/2 records=16/32 seconds=0.3
+2026-11-01T14:54:13+00:00 PTB-XL HybridViT prediction:dataset batch 2/2 records=32/32 seconds=0.6
+{"status": "running", "phase": "final_test_prediction", "updated_utc": "2026-11-01T14:54:14.027827+00:00", "elapsed_seconds": 12323.164448249969, "records": 2158}
+2026-11-01T14:54:14+00:00 PTB-XL HybridViT prediction:test batch 0/135 records=0/2158 seconds=0.0
+2026-11-01T14:54:14+00:00 PTB-XL HybridViT prediction:test batch 1/135 records=16/2158 seconds=0.4
+2026-11-01T14:54:48+00:00 PTB-XL HybridViT prediction:test batch 100/135 records=1600/2158 seconds=34.3
+2026-11-01T14:55:00+00:00 PTB-XL HybridViT prediction:test batch 135/135 records=2158/2158 seconds=46.1
+{"status": "running", "phase": "patient_bootstrap", "updated_utc": "2026-11-01T14:55:00.382784+00:00", "elapsed_seconds": 12369.518014624948, "resamples": 500}
+{
+  "run_id": "ptbxl_hybrid_vit_image_v1_seed42",
+  "status": "completed",
+  "test": {
+    "n_samples": 2158,
+    "n_labels": 5,
+    "class_names": [
+      "NORM",
+      "MI",
+      "STTC",
+      "CD",
+      "HYP"
+    ],
+    "threshold": 0.5,
+    "decision_rule": "Independent probability >= 0.5 for each label; no row-sum normalization",
+    "subset_accuracy": 0.571825764596849,
+    "label_accuracy": 0.8579240037071363,
+    "hamming_loss": 0.14207599629286377,
+    "macro_f1": 0.6716655632554613,
+    "micro_f1": 0.7140458869613878,
+    "weighted_f1": 0.7055990777841673,
+    "macro_precision": 0.7250046925524215,
+    "macro_recall": 0.6373215665438645,
+    "macro_roc_auc": 0.8901640657674964,
+    "micro_roc_auc": 0.9065931418384682,
+    "macro_average_precision": 0.7518996122909684,
+    "micro_average_precision": 0.8004133712179967,
+    "macro_roc_auc_defined_labels": 0.8901640657674964,
+    "macro_average_precision_defined_labels": 0.7518996122909684,
+    "roc_auc_defined_labels": [
+      "NORM",
+      "MI",
+      "STTC",
+      "CD",
+      "HYP"
+    ],
+    "average_precision_defined_labels": [
+      "NORM",
+      "MI",
+      "STTC",
+      "CD",
+      "HYP"
+    ],
+    "binary_cross_entropy": 0.344450263696581,
+    "bce_probability_clip_epsilon": 2.220446049250313e-16,
+    "per_label": {
+      "NORM": {
+        "precision": 0.7710407239819005,
+        "recall": 0.8847352024922118,
+        "f1": 0.8239845261121856,
+        "specificity": 0.7882845188284519,
+        "balanced_accuracy": 0.8365098606603318,
+        "tp": 852,
+        "fp": 253,
+        "tn": 942,
+        "fn": 111,
+        "support": 963,
+        "negative_support": 1195,
+        "predicted_positive": 1105,
+        "roc_auc": 0.9233088717701394,
+        "average_precision": 0.8967972003605412
+      },
+      "MI": {
+        "precision": 0.7306666666666667,
+        "recall": 0.49818181818181817,
+        "f1": 0.5924324324324325,
+        "specificity": 0.9371890547263682,
+        "balanced_accuracy": 0.7176854364540932,
+        "tp": 274,
+        "fp": 101,
+        "tn": 1507,
+        "fn": 276,
+        "support": 550,
+        "negative_support": 1608,
+        "predicted_positive": 375,
+        "roc_auc": 0.8685345997286296,
+        "average_precision": 0.7231952869765945
+      },
+      "STTC": {
+        "precision": 0.73,
+        "recall": 0.7005758157389635,
+        "f1": 0.7149853085210578,
+        "specificity": 0.9175320708613317,
+        "balanced_accuracy": 0.8090539433001476,
+        "tp": 365,
+        "fp": 135,
+        "tn": 1502,
+        "fn": 156,
+        "support": 521,
+        "negative_support": 1637,
+        "predicted_positive": 500,
+        "roc_auc": 0.916264596184444,
+        "average_precision": 0.7718397231401605
+      },
+      "CD": {
+        "precision": 0.8068181818181818,
+        "recall": 0.5725806451612904,
+        "f1": 0.6698113207547169,
+        "specificity": 0.9590854392298436,
+        "balanced_accuracy": 0.765833042195567,
+        "tp": 284,
+        "fp": 68,
+        "tn": 1594,
+        "fn": 212,
+        "support": 496,
+        "negative_support": 1662,
+        "predicted_positive": 352,
+        "roc_auc": 0.8719175788983345,
+        "average_precision": 0.7655171393087866
+      },
+      "HYP": {
+        "precision": 0.5864978902953587,
+        "recall": 0.5305343511450382,
+        "f1": 0.5571142284569138,
+        "specificity": 0.9483122362869199,
+        "balanced_accuracy": 0.739423293715979,
+        "tp": 139,
+        "fp": 98,
+        "tn": 1798,
+        "fn": 123,
+        "support": 262,
+        "negative_support": 1896,
+        "predicted_positive": 237,
+        "roc_auc": 0.8707946822559346,
+        "average_precision": 0.6021487116687585
+      }
+    },
+    "confusion_matrices": {
+      "NORM": [
+        [
+          942,
+          253
+        ],
+        [
+          111,
+          852
+        ]
+      ],
+      "MI": [
+        [
+          1507,
+          101
+        ],
+        [
+          276,
+          274
+        ]
+      ],
+      "STTC": [
+        [
+          1502,
+          135
+        ],
+        [
+          156,
+          365
+        ]
+      ],
+      "CD": [
+        [
+          1594,
+          68
+        ],
+        [
+          212,
+          284
+        ]
+      ],
+      "HYP": [
+        [
+          1798,
+          98
+        ],
+        [
+          123,
+          139
+        ]
+      ]
+    },
+    "confusion_matrix_axes": "rows=true [negative, positive]; columns=predicted [negative, positive]",
+    "accuracy_definitions": {
+      "subset_accuracy": "Fraction of records with all five label decisions exactly correct",
+      "label_accuracy": "Fraction of individual record-label decisions correct",
+      "hamming_loss": "Fraction of individual record-label decisions incorrect"
+    },
+    "zero_division_policy": "Precision, recall and F1 use zero_division=0; weighted F1 is zero when total positive support is zero",
+    "undefined_metric_policy": "ROC-AUC needs positive and negative truth; AP needs positive truth. Full-five-label macro ranking scores are null if any label is undefined. Defined-label-only means are named separately. Specificity is null without negatives; balanced accuracy is null without both outcomes."
+  },
+  "total_runtime_seconds": 12376.431553791976
+}
+{"status": "completed", "phase": "completed", "updated_utc": "2026-11-01T14:55:07.564905+00:00", "elapsed_seconds": 12376.699926584028}

@@ -1,0 +1,13 @@
+{
+  "status": "completed",
+  "completed_utc": "2026-11-07T00:02:35.373150+00:00",
+  "dataset": "china",
+  "inference_calls": 1,
+  "records": 9004,
+  "family": "ptbxl_v2",
+  "kind": "lda",
+  "page": "adaptive",
+  "head": "pca_lda",
+  "seed": 42,
+  "predictions_sha256": "8129d692f1ac93401d0bfca361ff3f123f2c9a14f6f3b7fb7fd1d021e834c23e"
+}

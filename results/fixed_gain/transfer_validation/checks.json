@@ -1,0 +1,30 @@
+{
+  "max_abs_probability_change_on_unchanged_gain_pages": {
+    "PCA + LDA": 1.671910285949707e-05,
+    "CNN-LSTM": 0.0,
+    "CNN + temporal conv": 0.0,
+    "CNN + small ViT": 0.0
+  },
+  "paired_bootstrap_macro_auroc_fixed_minus_original": {
+    "PCA + LDA macro AUROC change [95% CI]": [
+      -0.04944092836553382,
+      -0.059566348461183125,
+      -0.039066927237255335
+    ],
+    "CNN-LSTM macro AUROC change [95% CI]": [
+      -0.00990297938225193,
+      -0.014660659834304732,
+      -0.005266864316297898
+    ],
+    "CNN + temporal conv macro AUROC change [95% CI]": [
+      -0.0037231723960576835,
+      -0.008194760786898955,
+      0.0007764567374030467
+    ],
+    "CNN + small ViT macro AUROC change [95% CI]": [
+      -0.004795434746555194,
+      -0.008769189679535373,
+      -0.0006285975145561966
+    ]
+  }
+}

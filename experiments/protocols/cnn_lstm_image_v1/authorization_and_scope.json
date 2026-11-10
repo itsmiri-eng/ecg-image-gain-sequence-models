@@ -1,0 +1,12 @@
+{
+  "recorded_utc": "2026-09-24T07:59:57.099345+00:00",
+  "user_request": "okay do the cnn lstm, as for data cant we uae the ptxbl generated ones? wouldnt they be better than the mendely ones",
+  "clarification": "User replied okay to recommended current ECG images first, then separate PTB-XL experiment.",
+  "model": "Small 2D CNN plus single-layer LSTM over an explicitly spatial left-to-right feature sequence",
+  "preprocessing": "Unchanged frozen image cache; no waveform digitization or calibrated temporal claim",
+  "baseline_preservation": "66 artifacts remain byte-identical; central log permits append-only additions with original two rows and bytes preserved",
+  "baseline_lock": "experiments/reviews/2026-09-24/baseline_lock.json",
+  "original_log_snapshot": "experiments/protocols/cnn_lstm_image_v1/baseline_log_before.csv",
+  "new_test_evaluation": "Once after model selection using training/validation only; previously observed test set, exploratory comparison",
+  "ptbxl_scope": "Inspect local generated-image availability and provide documented transition assessment; do not mix datasets or labels"
+}

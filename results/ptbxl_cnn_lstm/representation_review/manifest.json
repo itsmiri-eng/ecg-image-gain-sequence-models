@@ -1,0 +1,182 @@
+{
+  "created_utc": "2026-09-24T11:01:54.857631+00:00",
+  "data_module_sha256": "0b8ce73d5d8e99accbd3c5132a3bc2ddc7ce2697fb25ffb864da1fe700ace082",
+  "preprocessing": {
+    "version": "ptbxl_full_lead_ink_maxpool2_v1",
+    "source_page_shape": [
+      3024,
+      2240
+    ],
+    "row_crop_y": [
+      80,
+      2960
+    ],
+    "row_crop_x": [
+      0,
+      2240
+    ],
+    "source_lead_shape": [
+      12,
+      240,
+      2240
+    ],
+    "input_shape": [
+      12,
+      120,
+      1120
+    ],
+    "ink_transform": "255 - uint8 grayscale",
+    "reduction": "Nonoverlapping 2x2 maximum ink pooling; no threshold or filter",
+    "cache_storage_shape": [
+      1440,
+      1120
+    ],
+    "png_compression": 6,
+    "lead_order": [
+      "I",
+      "II",
+      "III",
+      "AVR",
+      "AVL",
+      "AVF",
+      "V1",
+      "V2",
+      "V3",
+      "V4",
+      "V5",
+      "V6"
+    ],
+    "calibration": "Every complete lead row, including its 1-mV calibration pulse, is retained; page header/footer omitted",
+    "limitations": "Raster image representation; not native waveforms. Pooling thickens strokes and loses subpixel morphology. Original page-wide gain varies and low-gain detail may disappear. No numeric source metadata is fed to the model."
+  },
+  "test_images_inspected": false,
+  "preview_scope": "Technical development examples; ECG20187 lacks a mapped target and remains excluded from actual classification inputs",
+  "records": [
+    {
+      "ecg_id": 1,
+      "split": "train",
+      "classification_eligible": true,
+      "source_image_sha256": "e2d7edbb97e215f99ead04a2df80c7f407ad23d811ec814d1dde0a226c3683a5",
+      "preview_path": "results/ptbxl_cnn_lstm/representation_review/ecg_00001.png",
+      "preview_sha256": "544a5d71db98389533550039ca65e0ccf4a999e522922c84d8a228e62293ac64",
+      "input_shape": [
+        12,
+        120,
+        1120
+      ],
+      "gain_mm_per_mv": "5.0"
+    },
+    {
+      "ecg_id": 22,
+      "split": "train",
+      "classification_eligible": true,
+      "source_image_sha256": "93457940a6bf1cc5eb47cad08b708517c377bfa128a46059e58da82e3555c8d5",
+      "preview_path": "results/ptbxl_cnn_lstm/representation_review/ecg_00022.png",
+      "preview_sha256": "45365c78c534e272297050878a9d7b9a1fff1719117d37c0195b8a7607d39c39",
+      "input_shape": [
+        12,
+        120,
+        1120
+      ],
+      "gain_mm_per_mv": "5.0"
+    },
+    {
+      "ecg_id": 32,
+      "split": "train",
+      "classification_eligible": true,
+      "source_image_sha256": "662c9e84ee19bc754b8fbed06f42bbf52c19c14e760ecee035bd6f1a8402a123",
+      "preview_path": "results/ptbxl_cnn_lstm/representation_review/ecg_00032.png",
+      "preview_sha256": "f86d0679c0633fabd02b5a77c6b0bff756726aae03037d99060c4e44d255b50d",
+      "input_shape": [
+        12,
+        120,
+        1120
+      ],
+      "gain_mm_per_mv": "2.5"
+    },
+    {
+      "ecg_id": 45,
+      "split": "train",
+      "classification_eligible": true,
+      "source_image_sha256": "c1ae2eb1a5bb1f6655696917ad812be117ee5bffba1857ec3aa3d2abbd769653",
+      "preview_path": "results/ptbxl_cnn_lstm/representation_review/ecg_00045.png",
+      "preview_sha256": "fdf81fae98b9623e71eb0caa7d7a38218eceb0183b9e4b72e0be3f9a0d87b128",
+      "input_shape": [
+        12,
+        120,
+        1120
+      ],
+      "gain_mm_per_mv": "5.0"
+    },
+    {
+      "ecg_id": 50,
+      "split": "train",
+      "classification_eligible": true,
+      "source_image_sha256": "7815fd78ac0da74d703ae9b646705ff1801a4aca2ed2250b780587a07ea09426",
+      "preview_path": "results/ptbxl_cnn_lstm/representation_review/ecg_00050.png",
+      "preview_sha256": "7d5369771a39a8c8f714300383c6638135856d1b72cae9b47154648507153e63",
+      "input_shape": [
+        12,
+        120,
+        1120
+      ],
+      "gain_mm_per_mv": "5.0"
+    },
+    {
+      "ecg_id": 10565,
+      "split": "train",
+      "classification_eligible": true,
+      "source_image_sha256": "6e022c603ea35602a0a3b0be340a3b55ee235e511bf7566cff234d7eb44e6c4c",
+      "preview_path": "results/ptbxl_cnn_lstm/representation_review/ecg_10565.png",
+      "preview_sha256": "2f77c859a5fd774eeb518897a0e9a3fc07a9fba5dcb9834cda440216fbeca3f0",
+      "input_shape": [
+        12,
+        120,
+        1120
+      ],
+      "gain_mm_per_mv": "0.3125"
+    },
+    {
+      "ecg_id": 12722,
+      "split": "train",
+      "classification_eligible": true,
+      "source_image_sha256": "a592dbaa97dc2c164ae5e8faa607aa68acf5211f92bf550b21f956f960a9c3ac",
+      "preview_path": "results/ptbxl_cnn_lstm/representation_review/ecg_12722.png",
+      "preview_sha256": "095238d6e5933106cf9307ebe7440737a41d6701a65027d890f2e80c6f442286",
+      "input_shape": [
+        12,
+        120,
+        1120
+      ],
+      "gain_mm_per_mv": "2.5"
+    },
+    {
+      "ecg_id": 20002,
+      "split": "train",
+      "classification_eligible": true,
+      "source_image_sha256": "252ee09fb1d73e80a31539baf93cd8ae9a12511107991c7a1ae6e1ef2213b554",
+      "preview_path": "results/ptbxl_cnn_lstm/representation_review/ecg_20002.png",
+      "preview_sha256": "fde644042fed3d0865a04d5673df76f2d009c392198fcfe1b09792ff32494c7c",
+      "input_shape": [
+        12,
+        120,
+        1120
+      ],
+      "gain_mm_per_mv": "10.0"
+    },
+    {
+      "ecg_id": 20187,
+      "split": "train",
+      "classification_eligible": false,
+      "source_image_sha256": "591bbd99761399b96aac39be5847c3edba4bd45990a95982c865839f7899da7c",
+      "preview_path": "results/ptbxl_cnn_lstm/representation_review/ecg_20187.png",
+      "preview_sha256": "fe05e75b62c92d709d27da5e381a8103413097d4b6adc5e9536496f0a77656ac",
+      "input_shape": [
+        12,
+        120,
+        1120
+      ],
+      "gain_mm_per_mv": "1.25"
+    }
+  ]
+}

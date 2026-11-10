@@ -1,0 +1,166 @@
+{
+  "created_utc": "2026-09-24T10:55:40Z",
+  "scope": "Synthetic-only bounded CPU forward/backward feasibility benchmark; no ECG files accessed.",
+  "real_training_data_accessed": false,
+  "validation_data_accessed": false,
+  "test_data_accessed": false,
+  "device": "cpu",
+  "seed": 42,
+  "hardware": {
+    "platform": "macOS-26.6.1-arm64-arm-64bit",
+    "machine": "arm64",
+    "os_cpu_count": 8,
+    "physical_cpu_count": 8,
+    "memory_total_bytes": 8589934592,
+    "memory_available_bytes_before_probe": 1332051968,
+    "torch_version": "2.9.1",
+    "numpy_version": "2.2.6",
+    "python_version": "3.12.4",
+    "mps_built": true,
+    "mps_available": false,
+    "torch_threads": 4,
+    "torch_interop_threads": 1,
+    "deterministic_algorithms": true
+  },
+  "variants": [
+    {
+      "name": "shared_per_lead_cnn_lstm_48x1000",
+      "batch_size": 16,
+      "input_shape": [
+        16,
+        12,
+        48,
+        1000
+      ],
+      "lstm_sequence_shape": [
+        16,
+        125,
+        384
+      ],
+      "parameters": 54353,
+      "trainable_parameters": 54353,
+      "warmup_steps": 2,
+      "measured_steps": 10,
+      "step_seconds": [
+        0.1855463329993654,
+        0.18229783400602173,
+        0.17961637499684002,
+        0.18479733300046064,
+        0.1804760829982115,
+        0.1856196659937268,
+        0.18779716698918492,
+        0.20638220899854787,
+        0.1899222079955507,
+        0.19972537500143517
+      ],
+      "mean_step_seconds": 0.18821805829793448,
+      "median_step_seconds": 0.1855829994965461,
+      "minimum_step_seconds": 0.17961637499684002,
+      "maximum_step_seconds": 0.20638220899854787,
+      "throughput_examples_per_second": 85.00778376256146,
+      "synthetic_losses_finite": true,
+      "synthetic_losses": [
+        0.6783921122550964,
+        0.6815429925918579,
+        0.6672622561454773,
+        0.6666713953018188,
+        0.6788289546966553,
+        0.6798696517944336,
+        0.669849693775177,
+        0.6723607182502747,
+        0.6681150197982788,
+        0.6787127256393433
+      ],
+      "estimated_train_epoch_seconds_for_17084_eligible": 201.01688626219402,
+      "estimated_train_epoch_seconds_for_17418_source": 204.96946548645064,
+      "estimated_30_train_epochs_hours_for_17084_eligible": 1.6751407188516168,
+      "process_rss_bytes_before_steps": 302563328,
+      "process_rss_bytes_max_sampled": 453328896,
+      "memory_available_bytes_after_steps": 1298939904,
+      "architecture": "SharedLeadCNNLSTM(\n  (cnn): Sequential(\n    (0): Conv2d(1, 4, kernel_size=(5, 9), stride=(2, 4), padding=(2, 4), bias=False)\n    (1): GroupNorm(2, 4, eps=1e-05, affine=True)\n    (2): ReLU()\n    (3): Conv2d(4, 8, kernel_size=(3, 5), stride=(2, 2), padding=(1, 2), bias=False)\n    (4): GroupNorm(2, 8, eps=1e-05, affine=True)\n    (5): ReLU()\n    (6): AdaptiveAvgPool2d(output_size=(4, 125))\n  )\n  (lstm): LSTM(384, 32, batch_first=True)\n  (head): Sequential(\n    (0): Dropout(p=0.25, inplace=False)\n    (1): Linear(in_features=32, out_features=5, bias=True)\n  )\n)",
+      "estimated_20_train_epochs_hours_for_17084_eligible": 1.1167604792344112
+    },
+    {
+      "name": "lead_channel_separable_cnn_lstm_120x1120",
+      "batch_size": 16,
+      "input_shape": [
+        16,
+        12,
+        120,
+        1120
+      ],
+      "lstm_sequence_shape": [
+        16,
+        70,
+        96
+      ],
+      "parameters": 18025,
+      "trainable_parameters": 18025,
+      "warmup_steps": 2,
+      "measured_steps": 10,
+      "step_seconds": [
+        0.25042029199539684,
+        0.25312454099184833,
+        0.2549273339973297,
+        0.25016258300456684,
+        0.253523250008584,
+        0.25752020900836214,
+        0.25187049999658484,
+        0.249539750002441,
+        0.24802933300088625,
+        0.24972887500189245
+      ],
+      "mean_step_seconds": 0.25188466670078924,
+      "median_step_seconds": 0.25114539599599084,
+      "minimum_step_seconds": 0.24802933300088625,
+      "maximum_step_seconds": 0.25752020900836214,
+      "throughput_examples_per_second": 63.521135325820396,
+      "synthetic_losses_finite": true,
+      "synthetic_losses": [
+        0.6869381666183472,
+        0.6815713047981262,
+        0.6787036657333374,
+        0.6824191808700562,
+        0.6793646216392517,
+        0.6777850389480591,
+        0.6748039126396179,
+        0.683217465877533,
+        0.676419198513031,
+        0.6806627511978149
+      ],
+      "estimated_train_epoch_seconds_for_17084_eligible": 269.0128240364429,
+      "estimated_train_epoch_seconds_for_17418_source": 274.3024020371595,
+      "estimated_30_train_epochs_hours_for_17084_eligible": 2.241773533637024,
+      "process_rss_bytes_before_steps": 467386368,
+      "process_rss_bytes_max_sampled": 502218752,
+      "memory_available_bytes_after_steps": 1278820352,
+      "architecture": "LeadChannelSeparableCNNLSTM(\n  (cnn): Sequential(\n    (0): Conv2d(12, 12, kernel_size=(5, 5), stride=(2, 4), padding=(2, 2), groups=12, bias=False)\n    (1): Conv2d(12, 8, kernel_size=(1, 1), stride=(1, 1), bias=False)\n    (2): GroupNorm(4, 8, eps=1e-05, affine=True)\n    (3): ReLU()\n    (4): Conv2d(8, 8, kernel_size=(3, 3), stride=(2, 2), padding=(1, 1), groups=8, bias=False)\n    (5): Conv2d(8, 16, kernel_size=(1, 1), stride=(1, 1), bias=False)\n    (6): GroupNorm(4, 16, eps=1e-05, affine=True)\n    (7): ReLU()\n    (8): Conv2d(16, 16, kernel_size=(3, 3), stride=(2, 2), padding=(1, 1), groups=16, bias=False)\n    (9): Conv2d(16, 24, kernel_size=(1, 1), stride=(1, 1), bias=False)\n    (10): GroupNorm(4, 24, eps=1e-05, affine=True)\n    (11): ReLU()\n    (12): AdaptiveAvgPool2d(output_size=(4, 70))\n  )\n  (lstm): LSTM(96, 32, batch_first=True)\n  (head): Sequential(\n    (0): Dropout(p=0.2, inplace=False)\n    (1): Linear(in_features=32, out_features=5, bias=True)\n  )\n)",
+      "estimated_20_train_epochs_hours_for_17084_eligible": 1.4945156890913496
+    }
+  ],
+  "timing_includes": [
+    "zero_grad",
+    "forward",
+    "BCEWithLogitsLoss",
+    "backward",
+    "gradient clipping norm 1.0",
+    "AdamW optimizer step"
+  ],
+  "timing_excludes": [
+    "real image decoding",
+    "crop/pooling preprocessing",
+    "data loading",
+    "validation",
+    "checkpoint writing",
+    "logging/plotting"
+  ],
+  "limitations": [
+    "Synthetic random tensors and fixed targets are reused; losses do not measure ECG performance.",
+    "Only 10 measured steps after 2 warmups; long-run thermal throttling and competing load can change estimates.",
+    "Epoch and multi-epoch numbers extrapolate training-step mean only and are not total wall-time guarantees.",
+    "RSS is sampled after steps and excludes instantaneous peaks and child processes; successive variants share a process/allocator.",
+    "Batch 32 was not probed because this 8 GiB machine has limited available memory.",
+    "Shared-lead variant concatenates per-lead vertical CNN features; separable variant mixes lead channels after its first depthwise convolution.",
+    "Rendered-image sequence positions are spatial positions with documented image geometry; they are not recovered calibrated waveform samples."
+  ]
+}

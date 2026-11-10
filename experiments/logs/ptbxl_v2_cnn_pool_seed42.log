@@ -1,0 +1,220 @@
+2026-11-01T14:59:57+00:00 cnn_pool epoch 1/20 batch 1/1068 train_bce=0.70739 seconds=0.9
+2026-11-01T15:03:00+00:00 cnn_pool epoch 1/20 batch 200/1068 train_bce=0.54672 seconds=183.7
+2026-11-01T15:05:37+00:00 cnn_pool epoch 1/20 batch 400/1068 train_bce=0.52084 seconds=341.0
+2026-11-01T15:08:09+00:00 cnn_pool epoch 1/20 batch 600/1068 train_bce=0.50828 seconds=492.8
+2026-11-01T15:11:06+00:00 cnn_pool epoch 1/20 batch 800/1068 train_bce=0.50169 seconds=669.4
+2026-11-01T15:13:53+00:00 cnn_pool epoch 1/20 batch 1000/1068 train_bce=0.49485 seconds=837.3
+2026-11-01T15:14:45+00:00 cnn_pool epoch 1/20 batch 1068/1068 train_bce=0.49256 seconds=888.7
+2026-11-01T15:14:45+00:00 predict:validation batch 1/135 seconds=0.6
+2026-11-01T15:16:05+00:00 predict:validation batch 135/135 seconds=79.9
+2026-11-01T15:16:05+00:00 cnn_pool epoch 1/20 train_bce=0.49256 val_bce=0.46177 val_macro_auc=0.75114 val_macro_ap=0.47255 selected=True seconds=968.8
+2026-11-01T15:16:06+00:00 cnn_pool epoch 2/20 batch 1/1068 train_bce=0.43635 seconds=0.8
+2026-11-01T15:18:51+00:00 cnn_pool epoch 2/20 batch 200/1068 train_bce=0.47140 seconds=166.6
+2026-11-01T15:21:11+00:00 cnn_pool epoch 2/20 batch 400/1068 train_bce=0.46660 seconds=305.7
+2026-11-01T15:23:30+00:00 cnn_pool epoch 2/20 batch 600/1068 train_bce=0.46254 seconds=445.6
+2026-11-01T15:25:50+00:00 cnn_pool epoch 2/20 batch 800/1068 train_bce=0.46038 seconds=585.5
+2026-11-01T15:28:19+00:00 cnn_pool epoch 2/20 batch 1000/1068 train_bce=0.45750 seconds=734.2
+2026-11-01T15:29:12+00:00 cnn_pool epoch 2/20 batch 1068/1068 train_bce=0.45729 seconds=787.1
+2026-11-01T15:29:13+00:00 predict:validation batch 1/135 seconds=0.6
+2026-11-01T15:30:33+00:00 predict:validation batch 135/135 seconds=81.1
+2026-11-01T15:30:33+00:00 cnn_pool epoch 2/20 train_bce=0.45729 val_bce=0.44047 val_macro_auc=0.78050 val_macro_ap=0.51180 selected=True seconds=868.3
+2026-11-01T15:30:34+00:00 cnn_pool epoch 3/20 batch 1/1068 train_bce=0.51670 seconds=1.1
+2026-11-01T15:34:14+00:00 cnn_pool epoch 3/20 batch 200/1068 train_bce=0.44439 seconds=220.7
+2026-11-01T15:37:48+00:00 cnn_pool epoch 3/20 batch 400/1068 train_bce=0.44252 seconds=434.9
+2026-11-01T15:41:17+00:00 cnn_pool epoch 3/20 batch 600/1068 train_bce=0.44098 seconds=644.0
+2026-11-01T15:44:01+00:00 cnn_pool epoch 3/20 batch 800/1068 train_bce=0.43987 seconds=808.2
+2026-11-01T15:46:57+00:00 cnn_pool epoch 3/20 batch 1000/1068 train_bce=0.43917 seconds=983.5
+2026-11-01T15:48:01+00:00 cnn_pool epoch 3/20 batch 1068/1068 train_bce=0.43850 seconds=1047.2
+2026-11-01T15:48:01+00:00 predict:validation batch 1/135 seconds=0.7
+2026-11-01T15:49:32+00:00 predict:validation batch 135/135 seconds=91.8
+2026-11-01T15:49:32+00:00 cnn_pool epoch 3/20 train_bce=0.43850 val_bce=0.42207 val_macro_auc=0.79666 val_macro_ap=0.53794 selected=True seconds=1139.1
+2026-11-01T15:49:34+00:00 cnn_pool epoch 4/20 batch 1/1068 train_bce=0.44385 seconds=1.4
+2026-11-01T15:52:49+00:00 cnn_pool epoch 4/20 batch 200/1068 train_bce=0.43463 seconds=196.9
+2026-11-01T15:55:26+00:00 cnn_pool epoch 4/20 batch 400/1068 train_bce=0.42972 seconds=353.2
+2026-11-01T15:57:45+00:00 cnn_pool epoch 4/20 batch 600/1068 train_bce=0.42908 seconds=492.7
+2026-11-01T16:00:03+00:00 cnn_pool epoch 4/20 batch 800/1068 train_bce=0.42663 seconds=630.9
+2026-11-01T16:02:18+00:00 cnn_pool epoch 4/20 batch 1000/1068 train_bce=0.42640 seconds=765.3
+2026-11-01T16:03:04+00:00 cnn_pool epoch 4/20 batch 1068/1068 train_bce=0.42584 seconds=811.7
+2026-11-01T16:03:05+00:00 predict:validation batch 1/135 seconds=0.5
+2026-11-01T16:04:17+00:00 predict:validation batch 135/135 seconds=73.1
+2026-11-01T16:04:17+00:00 cnn_pool epoch 4/20 train_bce=0.42584 val_bce=0.42026 val_macro_auc=0.80793 val_macro_ap=0.56164 selected=True seconds=884.9
+2026-11-01T16:04:18+00:00 cnn_pool epoch 5/20 batch 1/1068 train_bce=0.41571 seconds=0.8
+2026-11-01T16:06:44+00:00 cnn_pool epoch 5/20 batch 200/1068 train_bce=0.42481 seconds=146.6
+2026-11-01T16:09:10+00:00 cnn_pool epoch 5/20 batch 400/1068 train_bce=0.42376 seconds=292.3
+2026-11-01T16:11:33+00:00 cnn_pool epoch 5/20 batch 600/1068 train_bce=0.42052 seconds=435.8
+2026-11-01T16:14:02+00:00 cnn_pool epoch 5/20 batch 800/1068 train_bce=0.41719 seconds=584.2
+2026-11-01T16:16:34+00:00 cnn_pool epoch 5/20 batch 1000/1068 train_bce=0.41653 seconds=736.8
+2026-11-01T16:17:22+00:00 cnn_pool epoch 5/20 batch 1068/1068 train_bce=0.41685 seconds=784.7
+2026-11-01T16:17:23+00:00 predict:validation batch 1/135 seconds=0.5
+2026-11-01T16:18:36+00:00 predict:validation batch 135/135 seconds=73.5
+2026-11-01T16:18:36+00:00 cnn_pool epoch 5/20 train_bce=0.41685 val_bce=0.42713 val_macro_auc=0.81110 val_macro_ap=0.56853 selected=True seconds=858.3
+2026-11-01T16:18:36+00:00 cnn_pool epoch 6/20 batch 1/1068 train_bce=0.44076 seconds=0.8
+2026-11-01T16:21:00+00:00 cnn_pool epoch 6/20 batch 200/1068 train_bce=0.41113 seconds=143.8
+2026-11-01T16:23:39+00:00 cnn_pool epoch 6/20 batch 400/1068 train_bce=0.41108 seconds=303.3
+2026-11-01T16:26:21+00:00 cnn_pool epoch 6/20 batch 600/1068 train_bce=0.40995 seconds=465.7
+2026-11-01T16:29:21+00:00 cnn_pool epoch 6/20 batch 800/1068 train_bce=0.40783 seconds=645.0
+2026-11-01T16:32:18+00:00 cnn_pool epoch 6/20 batch 1000/1068 train_bce=0.40856 seconds=822.1
+2026-11-01T16:33:16+00:00 cnn_pool epoch 6/20 batch 1068/1068 train_bce=0.40908 seconds=879.7
+2026-11-01T16:33:16+00:00 predict:validation batch 1/135 seconds=0.7
+2026-11-01T16:34:42+00:00 predict:validation batch 135/135 seconds=86.5
+2026-11-01T16:34:42+00:00 cnn_pool epoch 6/20 train_bce=0.40908 val_bce=0.41481 val_macro_auc=0.82097 val_macro_ap=0.58840 selected=True seconds=966.3
+2026-11-01T16:34:43+00:00 cnn_pool epoch 7/20 batch 1/1068 train_bce=0.41812 seconds=0.8
+2026-11-01T16:36:49+00:00 cnn_pool epoch 7/20 batch 200/1068 train_bce=0.39941 seconds=126.5
+2026-11-01T16:38:13+00:00 cnn_pool epoch 7/20 batch 400/1068 train_bce=0.40278 seconds=210.7
+2026-11-01T16:39:36+00:00 cnn_pool epoch 7/20 batch 600/1068 train_bce=0.39946 seconds=294.2
+2026-11-01T16:40:59+00:00 cnn_pool epoch 7/20 batch 800/1068 train_bce=0.40027 seconds=376.6
+2026-11-01T16:42:21+00:00 cnn_pool epoch 7/20 batch 1000/1068 train_bce=0.40120 seconds=459.0
+2026-11-01T16:42:49+00:00 cnn_pool epoch 7/20 batch 1068/1068 train_bce=0.40224 seconds=486.7
+2026-11-01T16:42:49+00:00 predict:validation batch 1/135 seconds=0.3
+2026-11-01T16:43:30+00:00 predict:validation batch 135/135 seconds=41.1
+2026-11-01T16:43:30+00:00 cnn_pool epoch 7/20 train_bce=0.40224 val_bce=0.40590 val_macro_auc=0.82667 val_macro_ap=0.60077 selected=True seconds=527.8
+2026-11-01T16:43:30+00:00 cnn_pool epoch 8/20 batch 1/1068 train_bce=0.47809 seconds=0.4
+2026-11-01T16:44:53+00:00 cnn_pool epoch 8/20 batch 200/1068 train_bce=0.39781 seconds=82.9
+2026-11-01T16:46:21+00:00 cnn_pool epoch 8/20 batch 400/1068 train_bce=0.39812 seconds=171.2
+2026-11-01T16:47:53+00:00 cnn_pool epoch 8/20 batch 600/1068 train_bce=0.39819 seconds=262.8
+2026-11-01T16:49:24+00:00 cnn_pool epoch 8/20 batch 800/1068 train_bce=0.39925 seconds=354.2
+2026-11-01T16:50:56+00:00 cnn_pool epoch 8/20 batch 1000/1068 train_bce=0.39803 seconds=446.1
+2026-11-01T16:51:28+00:00 cnn_pool epoch 8/20 batch 1068/1068 train_bce=0.39745 seconds=477.6
+2026-11-01T16:51:28+00:00 predict:validation batch 1/135 seconds=0.4
+2026-11-01T16:52:14+00:00 predict:validation batch 135/135 seconds=46.1
+2026-11-01T16:52:14+00:00 cnn_pool epoch 8/20 train_bce=0.39745 val_bce=0.39879 val_macro_auc=0.82941 val_macro_ap=0.61011 selected=True seconds=523.7
+2026-11-01T16:52:14+00:00 cnn_pool epoch 9/20 batch 1/1068 train_bce=0.43023 seconds=0.6
+2026-11-01T16:53:47+00:00 cnn_pool epoch 9/20 batch 200/1068 train_bce=0.39107 seconds=93.4
+2026-11-01T16:55:22+00:00 cnn_pool epoch 9/20 batch 400/1068 train_bce=0.39343 seconds=188.1
+2026-11-01T16:56:58+00:00 cnn_pool epoch 9/20 batch 600/1068 train_bce=0.39338 seconds=284.8
+2026-11-01T16:58:43+00:00 cnn_pool epoch 9/20 batch 800/1068 train_bce=0.39209 seconds=388.9
+2026-11-01T17:00:08+00:00 cnn_pool epoch 9/20 batch 1000/1068 train_bce=0.39319 seconds=473.9
+2026-11-01T17:00:36+00:00 cnn_pool epoch 9/20 batch 1068/1068 train_bce=0.39316 seconds=502.0
+2026-11-01T17:00:36+00:00 predict:validation batch 1/135 seconds=0.3
+2026-11-01T17:01:16+00:00 predict:validation batch 135/135 seconds=40.5
+2026-11-01T17:01:16+00:00 cnn_pool epoch 9/20 train_bce=0.39316 val_bce=0.39233 val_macro_auc=0.83312 val_macro_ap=0.61806 selected=True seconds=542.5
+2026-11-01T17:01:17+00:00 cnn_pool epoch 10/20 batch 1/1068 train_bce=0.30519 seconds=0.4
+2026-11-01T17:02:41+00:00 cnn_pool epoch 10/20 batch 200/1068 train_bce=0.38908 seconds=84.7
+2026-11-01T17:04:06+00:00 cnn_pool epoch 10/20 batch 400/1068 train_bce=0.38878 seconds=169.9
+2026-11-01T17:05:29+00:00 cnn_pool epoch 10/20 batch 600/1068 train_bce=0.39085 seconds=252.5
+2026-11-01T17:06:51+00:00 cnn_pool epoch 10/20 batch 800/1068 train_bce=0.38857 seconds=334.5
+2026-11-01T17:08:14+00:00 cnn_pool epoch 10/20 batch 1000/1068 train_bce=0.38901 seconds=417.3
+2026-11-01T17:08:43+00:00 cnn_pool epoch 10/20 batch 1068/1068 train_bce=0.39016 seconds=446.5
+2026-11-01T17:08:43+00:00 predict:validation batch 1/135 seconds=0.3
+2026-11-01T17:09:24+00:00 predict:validation batch 135/135 seconds=40.9
+2026-11-01T17:09:24+00:00 cnn_pool epoch 10/20 train_bce=0.39016 val_bce=0.38905 val_macro_auc=0.83520 val_macro_ap=0.62407 selected=True seconds=487.4
+2026-11-01T17:09:24+00:00 cnn_pool epoch 11/20 batch 1/1068 train_bce=0.43268 seconds=0.4
+2026-11-01T17:10:46+00:00 cnn_pool epoch 11/20 batch 200/1068 train_bce=0.38836 seconds=82.4
+2026-11-01T17:12:09+00:00 cnn_pool epoch 11/20 batch 400/1068 train_bce=0.39039 seconds=165.1
+2026-11-01T17:13:32+00:00 cnn_pool epoch 11/20 batch 600/1068 train_bce=0.38696 seconds=248.7
+2026-11-01T17:14:55+00:00 cnn_pool epoch 11/20 batch 800/1068 train_bce=0.38475 seconds=331.4
+2026-11-01T17:16:18+00:00 cnn_pool epoch 11/20 batch 1000/1068 train_bce=0.38683 seconds=414.6
+2026-11-01T17:16:46+00:00 cnn_pool epoch 11/20 batch 1068/1068 train_bce=0.38607 seconds=442.8
+2026-11-01T17:16:47+00:00 predict:validation batch 1/135 seconds=0.4
+2026-11-01T17:17:28+00:00 predict:validation batch 135/135 seconds=41.2
+2026-11-01T17:17:28+00:00 cnn_pool epoch 11/20 train_bce=0.38607 val_bce=0.38584 val_macro_auc=0.83985 val_macro_ap=0.63061 selected=True seconds=484.0
+2026-11-01T17:17:28+00:00 cnn_pool epoch 12/20 batch 1/1068 train_bce=0.33670 seconds=0.5
+2026-11-01T17:18:51+00:00 cnn_pool epoch 12/20 batch 200/1068 train_bce=0.39009 seconds=83.0
+2026-11-01T17:20:12+00:00 cnn_pool epoch 12/20 batch 400/1068 train_bce=0.39154 seconds=164.7
+2026-11-01T17:21:34+00:00 cnn_pool epoch 12/20 batch 600/1068 train_bce=0.38732 seconds=246.3
+2026-11-01T17:22:57+00:00 cnn_pool epoch 12/20 batch 800/1068 train_bce=0.38649 seconds=329.5
+2026-11-01T17:24:26+00:00 cnn_pool epoch 12/20 batch 1000/1068 train_bce=0.38596 seconds=418.2
+2026-11-01T17:24:56+00:00 cnn_pool epoch 12/20 batch 1068/1068 train_bce=0.38518 seconds=448.7
+2026-11-01T17:24:57+00:00 predict:validation batch 1/135 seconds=0.4
+2026-11-01T17:25:42+00:00 predict:validation batch 135/135 seconds=45.5
+2026-11-01T17:25:42+00:00 cnn_pool epoch 12/20 train_bce=0.38518 val_bce=0.38798 val_macro_auc=0.83830 val_macro_ap=0.63178 selected=False seconds=494.2
+2026-11-01T17:25:42+00:00 cnn_pool epoch 13/20 batch 1/1068 train_bce=0.41353 seconds=0.5
+2026-11-01T17:27:13+00:00 cnn_pool epoch 13/20 batch 200/1068 train_bce=0.39043 seconds=91.1
+2026-11-01T17:28:49+00:00 cnn_pool epoch 13/20 batch 400/1068 train_bce=0.39028 seconds=187.2
+2026-11-01T17:30:24+00:00 cnn_pool epoch 13/20 batch 600/1068 train_bce=0.38281 seconds=282.4
+2026-11-01T17:32:07+00:00 cnn_pool epoch 13/20 batch 800/1068 train_bce=0.38236 seconds=384.8
+2026-11-01T17:33:49+00:00 cnn_pool epoch 13/20 batch 1000/1068 train_bce=0.38354 seconds=487.3
+2026-11-01T17:34:22+00:00 cnn_pool epoch 13/20 batch 1068/1068 train_bce=0.38257 seconds=520.6
+2026-11-01T17:34:23+00:00 predict:validation batch 1/135 seconds=0.4
+2026-11-01T17:35:12+00:00 predict:validation batch 135/135 seconds=49.3
+2026-11-01T17:35:12+00:00 cnn_pool epoch 13/20 train_bce=0.38257 val_bce=0.39308 val_macro_auc=0.84094 val_macro_ap=0.63333 selected=True seconds=570.0
+2026-11-01T17:35:12+00:00 cnn_pool epoch 14/20 batch 1/1068 train_bce=0.44051 seconds=0.5
+2026-11-01T17:36:50+00:00 cnn_pool epoch 14/20 batch 200/1068 train_bce=0.38782 seconds=97.9
+2026-11-01T17:38:33+00:00 cnn_pool epoch 14/20 batch 400/1068 train_bce=0.38103 seconds=200.8
+2026-11-01T17:40:13+00:00 cnn_pool epoch 14/20 batch 600/1068 train_bce=0.37979 seconds=301.2
+2026-11-01T17:41:53+00:00 cnn_pool epoch 14/20 batch 800/1068 train_bce=0.37767 seconds=400.9
+2026-11-01T17:43:24+00:00 cnn_pool epoch 14/20 batch 1000/1068 train_bce=0.37918 seconds=492.2
+2026-11-01T17:43:53+00:00 cnn_pool epoch 14/20 batch 1068/1068 train_bce=0.37981 seconds=521.5
+2026-11-01T17:43:54+00:00 predict:validation batch 1/135 seconds=0.3
+2026-11-01T17:44:36+00:00 predict:validation batch 135/135 seconds=42.4
+2026-11-01T17:44:36+00:00 cnn_pool epoch 14/20 train_bce=0.37981 val_bce=0.38372 val_macro_auc=0.84202 val_macro_ap=0.63964 selected=True seconds=563.9
+2026-11-01T17:44:36+00:00 cnn_pool epoch 15/20 batch 1/1068 train_bce=0.34729 seconds=0.4
+2026-11-01T17:46:01+00:00 cnn_pool epoch 15/20 batch 200/1068 train_bce=0.38143 seconds=85.4
+2026-11-01T17:47:33+00:00 cnn_pool epoch 15/20 batch 400/1068 train_bce=0.37998 seconds=177.0
+2026-11-01T17:49:06+00:00 cnn_pool epoch 15/20 batch 600/1068 train_bce=0.38058 seconds=269.9
+2026-11-01T17:50:34+00:00 cnn_pool epoch 15/20 batch 800/1068 train_bce=0.37786 seconds=358.2
+2026-11-01T17:51:56+00:00 cnn_pool epoch 15/20 batch 1000/1068 train_bce=0.37838 seconds=440.1
+2026-11-01T17:52:23+00:00 cnn_pool epoch 15/20 batch 1068/1068 train_bce=0.37754 seconds=467.7
+2026-11-01T17:52:24+00:00 predict:validation batch 1/135 seconds=0.5
+2026-11-01T17:53:06+00:00 predict:validation batch 135/135 seconds=42.8
+2026-11-01T17:53:06+00:00 cnn_pool epoch 15/20 train_bce=0.37754 val_bce=0.38384 val_macro_auc=0.84239 val_macro_ap=0.63875 selected=True seconds=510.6
+2026-11-01T17:53:07+00:00 cnn_pool epoch 16/20 batch 1/1068 train_bce=0.35617 seconds=0.4
+2026-11-01T17:54:28+00:00 cnn_pool epoch 16/20 batch 200/1068 train_bce=0.37581 seconds=82.0
+2026-11-01T17:55:54+00:00 cnn_pool epoch 16/20 batch 400/1068 train_bce=0.37679 seconds=167.9
+2026-11-01T17:57:23+00:00 cnn_pool epoch 16/20 batch 600/1068 train_bce=0.37680 seconds=256.8
+2026-11-01T17:58:52+00:00 cnn_pool epoch 16/20 batch 800/1068 train_bce=0.37733 seconds=346.1
+2026-11-01T18:00:24+00:00 cnn_pool epoch 16/20 batch 1000/1068 train_bce=0.37705 seconds=437.6
+2026-11-01T18:00:56+00:00 cnn_pool epoch 16/20 batch 1068/1068 train_bce=0.37681 seconds=469.3
+2026-11-01T18:00:56+00:00 predict:validation batch 1/135 seconds=0.3
+2026-11-01T18:01:50+00:00 predict:validation batch 135/135 seconds=54.4
+2026-11-01T18:01:50+00:00 cnn_pool epoch 16/20 train_bce=0.37681 val_bce=0.38029 val_macro_auc=0.84400 val_macro_ap=0.64179 selected=True seconds=523.8
+2026-11-01T18:01:51+00:00 cnn_pool epoch 17/20 batch 1/1068 train_bce=0.31464 seconds=0.8
+2026-11-01T18:03:52+00:00 cnn_pool epoch 17/20 batch 200/1068 train_bce=0.38083 seconds=122.0
+2026-11-01T18:05:25+00:00 cnn_pool epoch 17/20 batch 400/1068 train_bce=0.37992 seconds=215.2
+2026-11-01T18:07:06+00:00 cnn_pool epoch 17/20 batch 600/1068 train_bce=0.37676 seconds=316.2
+2026-11-01T18:08:35+00:00 cnn_pool epoch 17/20 batch 800/1068 train_bce=0.37477 seconds=404.8
+2026-11-01T18:10:04+00:00 cnn_pool epoch 17/20 batch 1000/1068 train_bce=0.37550 seconds=494.3
+2026-11-01T18:10:33+00:00 cnn_pool epoch 17/20 batch 1068/1068 train_bce=0.37470 seconds=522.4
+2026-11-01T18:10:33+00:00 predict:validation batch 1/135 seconds=0.3
+2026-11-01T18:11:14+00:00 predict:validation batch 135/135 seconds=41.5
+2026-11-01T18:11:14+00:00 cnn_pool epoch 17/20 train_bce=0.37470 val_bce=0.38916 val_macro_auc=0.84329 val_macro_ap=0.64093 selected=False seconds=564.0
+2026-11-01T18:11:15+00:00 cnn_pool epoch 18/20 batch 1/1068 train_bce=0.36833 seconds=0.5
+2026-11-01T18:12:40+00:00 cnn_pool epoch 18/20 batch 200/1068 train_bce=0.37876 seconds=85.4
+2026-11-01T18:14:06+00:00 cnn_pool epoch 18/20 batch 400/1068 train_bce=0.37302 seconds=171.4
+2026-11-01T18:15:31+00:00 cnn_pool epoch 18/20 batch 600/1068 train_bce=0.37297 seconds=257.0
+2026-11-01T18:16:53+00:00 cnn_pool epoch 18/20 batch 800/1068 train_bce=0.37201 seconds=339.2
+2026-11-01T18:18:15+00:00 cnn_pool epoch 18/20 batch 1000/1068 train_bce=0.37331 seconds=421.2
+2026-11-01T18:18:43+00:00 cnn_pool epoch 18/20 batch 1068/1068 train_bce=0.37356 seconds=448.6
+2026-11-01T18:18:43+00:00 predict:validation batch 1/135 seconds=0.3
+2026-11-01T18:19:24+00:00 predict:validation batch 135/135 seconds=41.4
+2026-11-01T18:19:24+00:00 cnn_pool epoch 18/20 train_bce=0.37356 val_bce=0.38000 val_macro_auc=0.84439 val_macro_ap=0.64263 selected=True seconds=490.1
+2026-11-01T18:19:25+00:00 cnn_pool epoch 19/20 batch 1/1068 train_bce=0.53825 seconds=0.4
+2026-11-01T18:20:47+00:00 cnn_pool epoch 19/20 batch 200/1068 train_bce=0.36984 seconds=83.0
+2026-11-01T18:22:09+00:00 cnn_pool epoch 19/20 batch 400/1068 train_bce=0.37580 seconds=164.9
+2026-11-01T18:23:31+00:00 cnn_pool epoch 19/20 batch 600/1068 train_bce=0.37316 seconds=246.4
+2026-11-01T18:24:52+00:00 cnn_pool epoch 19/20 batch 800/1068 train_bce=0.37443 seconds=328.1
+2026-11-01T18:26:13+00:00 cnn_pool epoch 19/20 batch 1000/1068 train_bce=0.37344 seconds=408.9
+2026-11-01T18:26:40+00:00 cnn_pool epoch 19/20 batch 1068/1068 train_bce=0.37325 seconds=436.0
+2026-11-01T18:26:41+00:00 predict:validation batch 1/135 seconds=0.3
+2026-11-01T18:27:21+00:00 predict:validation batch 135/135 seconds=40.5
+2026-11-01T18:27:21+00:00 cnn_pool epoch 19/20 train_bce=0.37325 val_bce=0.37983 val_macro_auc=0.84465 val_macro_ap=0.64309 selected=True seconds=476.6
+2026-11-01T18:27:21+00:00 cnn_pool epoch 20/20 batch 1/1068 train_bce=0.39417 seconds=0.4
+2026-11-01T18:28:45+00:00 cnn_pool epoch 20/20 batch 200/1068 train_bce=0.37692 seconds=84.2
+2026-11-01T18:30:11+00:00 cnn_pool epoch 20/20 batch 400/1068 train_bce=0.37878 seconds=170.5
+2026-11-01T18:31:32+00:00 cnn_pool epoch 20/20 batch 600/1068 train_bce=0.37488 seconds=251.5
+2026-11-01T18:33:01+00:00 cnn_pool epoch 20/20 batch 800/1068 train_bce=0.37361 seconds=340.5
+2026-11-01T18:34:27+00:00 cnn_pool epoch 20/20 batch 1000/1068 train_bce=0.37338 seconds=426.4
+2026-11-01T18:34:56+00:00 cnn_pool epoch 20/20 batch 1068/1068 train_bce=0.37275 seconds=455.5
+2026-11-01T18:34:57+00:00 predict:validation batch 1/135 seconds=0.3
+2026-11-01T18:35:42+00:00 predict:validation batch 135/135 seconds=45.2
+2026-11-01T18:35:42+00:00 cnn_pool epoch 20/20 train_bce=0.37275 val_bce=0.38080 val_macro_auc=0.84449 val_macro_ap=0.64288 selected=False seconds=500.7
+2026-11-01T18:35:43+00:00 predict:train batch 1/1068 seconds=0.4
+2026-11-01T18:36:49+00:00 predict:train batch 200/1068 seconds=66.0
+2026-11-01T18:37:50+00:00 predict:train batch 400/1068 seconds=126.9
+2026-11-01T18:38:51+00:00 predict:train batch 600/1068 seconds=188.4
+2026-11-01T18:39:52+00:00 predict:train batch 800/1068 seconds=248.8
+2026-11-01T18:40:54+00:00 predict:train batch 1000/1068 seconds=311.3
+2026-11-01T18:41:15+00:00 predict:train batch 1068/1068 seconds=332.1
+2026-11-01T18:41:17+00:00 predict:validation batch 1/135 seconds=0.3
+2026-11-01T18:41:59+00:00 predict:validation batch 135/135 seconds=42.7
+2026-11-01T18:42:00+00:00 predict:replay batch 1/135 seconds=0.3
+2026-11-01T18:42:41+00:00 predict:replay batch 135/135 seconds=41.0
+2026-11-01T18:42:42+00:00 predict:test batch 1/135 seconds=0.3
+2026-11-01T18:43:26+00:00 predict:test batch 135/135 seconds=44.5
+{
+  "run_id": "ptbxl_v2_cnn_pool_seed42",
+  "status": "completed",
+  "test_macro_auc": 0.8344067628630517,
+  "test_macro_f1": 0.4957552947637125,
+  "runtime_seconds": 13418.393769167014
+}

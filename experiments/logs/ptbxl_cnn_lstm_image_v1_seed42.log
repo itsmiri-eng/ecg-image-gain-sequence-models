@@ -1,0 +1,437 @@
+PTB-XL CNN+LSTM epoch 01/20 batch 1/1068 train_online_bce=0.70034 seconds=0.7
+PTB-XL CNN+LSTM epoch 01/20 batch 100/1068 train_online_bce=0.56153 seconds=44.4
+PTB-XL CNN+LSTM epoch 01/20 batch 200/1068 train_online_bce=0.54668 seconds=88.0
+PTB-XL CNN+LSTM epoch 01/20 batch 300/1068 train_online_bce=0.52821 seconds=132.2
+PTB-XL CNN+LSTM epoch 01/20 batch 400/1068 train_online_bce=0.51697 seconds=175.1
+PTB-XL CNN+LSTM epoch 01/20 batch 500/1068 train_online_bce=0.50869 seconds=218.2
+PTB-XL CNN+LSTM epoch 01/20 batch 600/1068 train_online_bce=0.50388 seconds=261.0
+PTB-XL CNN+LSTM epoch 01/20 batch 700/1068 train_online_bce=0.49920 seconds=304.0
+PTB-XL CNN+LSTM epoch 01/20 batch 800/1068 train_online_bce=0.49638 seconds=346.9
+PTB-XL CNN+LSTM epoch 01/20 batch 900/1068 train_online_bce=0.49251 seconds=390.3
+PTB-XL CNN+LSTM epoch 01/20 batch 1000/1068 train_online_bce=0.48888 seconds=434.4
+PTB-XL CNN+LSTM epoch 01/20 batch 1068/1068 train_online_bce=0.48630 seconds=464.2
+PTB-XL CNN+LSTM epoch 01/20 train_online_bce=0.48630 val_bce=0.45400 val_macro_auc=0.77098 val_macro_ap=0.50980 selected=True seconds=506.8
+PTB-XL CNN+LSTM epoch 02/20 batch 1/1068 train_online_bce=0.45754 seconds=0.4
+PTB-XL CNN+LSTM epoch 02/20 batch 100/1068 train_online_bce=0.46154 seconds=42.1
+PTB-XL CNN+LSTM epoch 02/20 batch 200/1068 train_online_bce=0.45731 seconds=84.9
+PTB-XL CNN+LSTM epoch 02/20 batch 300/1068 train_online_bce=0.45513 seconds=127.4
+PTB-XL CNN+LSTM epoch 02/20 batch 400/1068 train_online_bce=0.45393 seconds=171.0
+PTB-XL CNN+LSTM epoch 02/20 batch 500/1068 train_online_bce=0.45128 seconds=221.4
+PTB-XL CNN+LSTM epoch 02/20 batch 600/1068 train_online_bce=0.44835 seconds=270.5
+PTB-XL CNN+LSTM epoch 02/20 batch 700/1068 train_online_bce=0.44748 seconds=313.7
+PTB-XL CNN+LSTM epoch 02/20 batch 800/1068 train_online_bce=0.44671 seconds=356.8
+PTB-XL CNN+LSTM epoch 02/20 batch 900/1068 train_online_bce=0.44571 seconds=399.6
+PTB-XL CNN+LSTM epoch 02/20 batch 1000/1068 train_online_bce=0.44475 seconds=443.1
+PTB-XL CNN+LSTM epoch 02/20 batch 1068/1068 train_online_bce=0.44415 seconds=472.1
+PTB-XL CNN+LSTM epoch 02/20 train_online_bce=0.44415 val_bce=0.43501 val_macro_auc=0.79016 val_macro_ap=0.54699 selected=True seconds=514.6
+PTB-XL CNN+LSTM epoch 03/20 batch 1/1068 train_online_bce=0.53305 seconds=0.4
+PTB-XL CNN+LSTM epoch 03/20 batch 100/1068 train_online_bce=0.43809 seconds=43.9
+PTB-XL CNN+LSTM epoch 03/20 batch 200/1068 train_online_bce=0.42707 seconds=87.1
+PTB-XL CNN+LSTM epoch 03/20 batch 300/1068 train_online_bce=0.42521 seconds=130.1
+PTB-XL CNN+LSTM epoch 03/20 batch 400/1068 train_online_bce=0.42410 seconds=182.5
+PTB-XL CNN+LSTM epoch 03/20 batch 500/1068 train_online_bce=0.42487 seconds=227.7
+PTB-XL CNN+LSTM epoch 03/20 batch 600/1068 train_online_bce=0.42282 seconds=274.8
+PTB-XL CNN+LSTM epoch 03/20 batch 700/1068 train_online_bce=0.42229 seconds=325.1
+PTB-XL CNN+LSTM epoch 03/20 batch 800/1068 train_online_bce=0.42180 seconds=370.7
+PTB-XL CNN+LSTM epoch 03/20 batch 900/1068 train_online_bce=0.42172 seconds=417.0
+PTB-XL CNN+LSTM epoch 03/20 batch 1000/1068 train_online_bce=0.42151 seconds=460.6
+PTB-XL CNN+LSTM epoch 03/20 batch 1068/1068 train_online_bce=0.42144 seconds=490.4
+PTB-XL CNN+LSTM epoch 03/20 train_online_bce=0.42144 val_bce=0.41652 val_macro_auc=0.81026 val_macro_ap=0.58741 selected=True seconds=534.8
+PTB-XL CNN+LSTM epoch 04/20 batch 1/1068 train_online_bce=0.37966 seconds=0.5
+PTB-XL CNN+LSTM epoch 04/20 batch 100/1068 train_online_bce=0.41392 seconds=44.6
+PTB-XL CNN+LSTM epoch 04/20 batch 200/1068 train_online_bce=0.42055 seconds=87.7
+PTB-XL CNN+LSTM epoch 04/20 batch 300/1068 train_online_bce=0.41434 seconds=135.4
+PTB-XL CNN+LSTM epoch 04/20 batch 400/1068 train_online_bce=0.41320 seconds=178.6
+PTB-XL CNN+LSTM epoch 04/20 batch 500/1068 train_online_bce=0.41282 seconds=224.8
+PTB-XL CNN+LSTM epoch 04/20 batch 600/1068 train_online_bce=0.41100 seconds=274.5
+PTB-XL CNN+LSTM epoch 04/20 batch 700/1068 train_online_bce=0.41022 seconds=317.9
+PTB-XL CNN+LSTM epoch 04/20 batch 800/1068 train_online_bce=0.40814 seconds=366.5
+PTB-XL CNN+LSTM epoch 04/20 batch 900/1068 train_online_bce=0.40654 seconds=414.5
+PTB-XL CNN+LSTM epoch 04/20 batch 1000/1068 train_online_bce=0.40686 seconds=457.4
+PTB-XL CNN+LSTM epoch 04/20 batch 1068/1068 train_online_bce=0.40598 seconds=486.1
+PTB-XL CNN+LSTM epoch 04/20 train_online_bce=0.40598 val_bce=0.39964 val_macro_auc=0.82803 val_macro_ap=0.61414 selected=True seconds=527.8
+PTB-XL CNN+LSTM epoch 05/20 batch 1/1068 train_online_bce=0.39842 seconds=0.4
+PTB-XL CNN+LSTM epoch 05/20 batch 100/1068 train_online_bce=0.40502 seconds=43.0
+PTB-XL CNN+LSTM epoch 05/20 batch 200/1068 train_online_bce=0.40211 seconds=86.1
+PTB-XL CNN+LSTM epoch 05/20 batch 300/1068 train_online_bce=0.40110 seconds=128.4
+PTB-XL CNN+LSTM epoch 05/20 batch 400/1068 train_online_bce=0.40029 seconds=172.3
+PTB-XL CNN+LSTM epoch 05/20 batch 500/1068 train_online_bce=0.40059 seconds=217.5
+PTB-XL CNN+LSTM epoch 05/20 batch 600/1068 train_online_bce=0.39683 seconds=260.4
+PTB-XL CNN+LSTM epoch 05/20 batch 700/1068 train_online_bce=0.39433 seconds=304.2
+PTB-XL CNN+LSTM epoch 05/20 batch 800/1068 train_online_bce=0.39311 seconds=347.7
+PTB-XL CNN+LSTM epoch 05/20 batch 900/1068 train_online_bce=0.39252 seconds=390.2
+PTB-XL CNN+LSTM epoch 05/20 batch 1000/1068 train_online_bce=0.39134 seconds=434.4
+PTB-XL CNN+LSTM epoch 05/20 batch 1068/1068 train_online_bce=0.39148 seconds=462.9
+PTB-XL CNN+LSTM epoch 05/20 train_online_bce=0.39148 val_bce=0.40707 val_macro_auc=0.84104 val_macro_ap=0.63863 selected=True seconds=506.8
+PTB-XL CNN+LSTM epoch 06/20 batch 1/1068 train_online_bce=0.46604 seconds=0.5
+PTB-XL CNN+LSTM epoch 06/20 batch 100/1068 train_online_bce=0.39074 seconds=44.0
+PTB-XL CNN+LSTM epoch 06/20 batch 200/1068 train_online_bce=0.38617 seconds=90.0
+PTB-XL CNN+LSTM epoch 06/20 batch 300/1068 train_online_bce=0.38562 seconds=163.5
+PTB-XL CNN+LSTM epoch 06/20 batch 400/1068 train_online_bce=0.38193 seconds=207.9
+PTB-XL CNN+LSTM epoch 06/20 batch 500/1068 train_online_bce=0.38051 seconds=252.0
+PTB-XL CNN+LSTM epoch 06/20 batch 600/1068 train_online_bce=0.38087 seconds=298.0
+PTB-XL CNN+LSTM epoch 06/20 batch 700/1068 train_online_bce=0.37980 seconds=340.8
+PTB-XL CNN+LSTM epoch 06/20 batch 800/1068 train_online_bce=0.37869 seconds=383.3
+PTB-XL CNN+LSTM epoch 06/20 batch 900/1068 train_online_bce=0.37914 seconds=426.7
+PTB-XL CNN+LSTM epoch 06/20 batch 1000/1068 train_online_bce=0.37836 seconds=475.1
+PTB-XL CNN+LSTM epoch 06/20 batch 1068/1068 train_online_bce=0.37839 seconds=508.0
+PTB-XL CNN+LSTM epoch 06/20 train_online_bce=0.37839 val_bce=0.37922 val_macro_auc=0.85740 val_macro_ap=0.66242 selected=True seconds=560.8
+PTB-XL CNN+LSTM epoch 07/20 batch 1/1068 train_online_bce=0.33695 seconds=0.6
+PTB-XL CNN+LSTM epoch 07/20 batch 100/1068 train_online_bce=0.36401 seconds=60.0
+PTB-XL CNN+LSTM epoch 07/20 batch 200/1068 train_online_bce=0.36616 seconds=105.5
+PTB-XL CNN+LSTM epoch 07/20 batch 300/1068 train_online_bce=0.36669 seconds=163.7
+PTB-XL CNN+LSTM epoch 07/20 batch 400/1068 train_online_bce=0.36882 seconds=222.3
+PTB-XL CNN+LSTM epoch 07/20 batch 500/1068 train_online_bce=0.36587 seconds=268.8
+PTB-XL CNN+LSTM epoch 07/20 batch 600/1068 train_online_bce=0.36470 seconds=319.3
+PTB-XL CNN+LSTM epoch 07/20 batch 700/1068 train_online_bce=0.36514 seconds=367.5
+PTB-XL CNN+LSTM epoch 07/20 batch 800/1068 train_online_bce=0.36623 seconds=414.5
+PTB-XL CNN+LSTM epoch 07/20 batch 900/1068 train_online_bce=0.36696 seconds=461.1
+PTB-XL CNN+LSTM epoch 07/20 batch 1000/1068 train_online_bce=0.36673 seconds=507.5
+PTB-XL CNN+LSTM epoch 07/20 batch 1068/1068 train_online_bce=0.36683 seconds=537.7
+PTB-XL CNN+LSTM epoch 07/20 train_online_bce=0.36683 val_bce=0.37416 val_macro_auc=0.86218 val_macro_ap=0.67327 selected=True seconds=583.6
+PTB-XL CNN+LSTM epoch 08/20 batch 1/1068 train_online_bce=0.42605 seconds=0.4
+PTB-XL CNN+LSTM epoch 08/20 batch 100/1068 train_online_bce=0.35695 seconds=49.3
+PTB-XL CNN+LSTM epoch 08/20 batch 200/1068 train_online_bce=0.35675 seconds=99.2
+PTB-XL CNN+LSTM epoch 08/20 batch 300/1068 train_online_bce=0.35671 seconds=146.8
+PTB-XL CNN+LSTM epoch 08/20 batch 400/1068 train_online_bce=0.35667 seconds=194.0
+PTB-XL CNN+LSTM epoch 08/20 batch 500/1068 train_online_bce=0.35992 seconds=243.8
+PTB-XL CNN+LSTM epoch 08/20 batch 600/1068 train_online_bce=0.35787 seconds=291.2
+PTB-XL CNN+LSTM epoch 08/20 batch 700/1068 train_online_bce=0.35965 seconds=338.0
+PTB-XL CNN+LSTM epoch 08/20 batch 800/1068 train_online_bce=0.35877 seconds=382.7
+PTB-XL CNN+LSTM epoch 08/20 batch 900/1068 train_online_bce=0.35865 seconds=429.2
+PTB-XL CNN+LSTM epoch 08/20 batch 1000/1068 train_online_bce=0.35787 seconds=477.7
+PTB-XL CNN+LSTM epoch 08/20 batch 1068/1068 train_online_bce=0.35728 seconds=510.0
+PTB-XL CNN+LSTM epoch 08/20 train_online_bce=0.35728 val_bce=0.35359 val_macro_auc=0.87029 val_macro_ap=0.68748 selected=True seconds=557.8
+PTB-XL CNN+LSTM epoch 09/20 batch 1/1068 train_online_bce=0.43974 seconds=0.5
+PTB-XL CNN+LSTM epoch 09/20 batch 100/1068 train_online_bce=0.33989 seconds=46.7
+PTB-XL CNN+LSTM epoch 09/20 batch 200/1068 train_online_bce=0.34493 seconds=90.7
+PTB-XL CNN+LSTM epoch 09/20 batch 300/1068 train_online_bce=0.34630 seconds=134.5
+PTB-XL CNN+LSTM epoch 09/20 batch 400/1068 train_online_bce=0.34988 seconds=179.2
+PTB-XL CNN+LSTM epoch 09/20 batch 500/1068 train_online_bce=0.34918 seconds=222.8
+PTB-XL CNN+LSTM epoch 09/20 batch 600/1068 train_online_bce=0.35054 seconds=266.6
+PTB-XL CNN+LSTM epoch 09/20 batch 700/1068 train_online_bce=0.35218 seconds=311.1
+PTB-XL CNN+LSTM epoch 09/20 batch 800/1068 train_online_bce=0.35041 seconds=356.9
+PTB-XL CNN+LSTM epoch 09/20 batch 900/1068 train_online_bce=0.35154 seconds=400.1
+PTB-XL CNN+LSTM epoch 09/20 batch 1000/1068 train_online_bce=0.35187 seconds=443.3
+PTB-XL CNN+LSTM epoch 09/20 batch 1068/1068 train_online_bce=0.35171 seconds=472.2
+PTB-XL CNN+LSTM epoch 09/20 train_online_bce=0.35171 val_bce=0.35867 val_macro_auc=0.87257 val_macro_ap=0.69121 selected=True seconds=515.0
+PTB-XL CNN+LSTM epoch 10/20 batch 1/1068 train_online_bce=0.25388 seconds=0.5
+PTB-XL CNN+LSTM epoch 10/20 batch 100/1068 train_online_bce=0.34704 seconds=43.4
+PTB-XL CNN+LSTM epoch 10/20 batch 200/1068 train_online_bce=0.34269 seconds=87.1
+PTB-XL CNN+LSTM epoch 10/20 batch 300/1068 train_online_bce=0.34341 seconds=131.4
+PTB-XL CNN+LSTM epoch 10/20 batch 400/1068 train_online_bce=0.34465 seconds=175.0
+PTB-XL CNN+LSTM epoch 10/20 batch 500/1068 train_online_bce=0.34582 seconds=217.8
+PTB-XL CNN+LSTM epoch 10/20 batch 600/1068 train_online_bce=0.34638 seconds=264.3
+PTB-XL CNN+LSTM epoch 10/20 batch 700/1068 train_online_bce=0.34214 seconds=308.0
+PTB-XL CNN+LSTM epoch 10/20 batch 800/1068 train_online_bce=0.34358 seconds=350.9
+PTB-XL CNN+LSTM epoch 10/20 batch 900/1068 train_online_bce=0.34468 seconds=394.1
+PTB-XL CNN+LSTM epoch 10/20 batch 1000/1068 train_online_bce=0.34506 seconds=440.9
+PTB-XL CNN+LSTM epoch 10/20 batch 1068/1068 train_online_bce=0.34563 seconds=472.3
+PTB-XL CNN+LSTM epoch 10/20 train_online_bce=0.34563 val_bce=0.35063 val_macro_auc=0.87802 val_macro_ap=0.70345 selected=True seconds=515.3
+PTB-XL CNN+LSTM epoch 11/20 batch 1/1068 train_online_bce=0.39061 seconds=0.4
+PTB-XL CNN+LSTM epoch 11/20 batch 100/1068 train_online_bce=0.34760 seconds=49.9
+PTB-XL CNN+LSTM epoch 11/20 batch 200/1068 train_online_bce=0.34256 seconds=99.0
+PTB-XL CNN+LSTM epoch 11/20 batch 300/1068 train_online_bce=0.34212 seconds=145.2
+PTB-XL CNN+LSTM epoch 11/20 batch 400/1068 train_online_bce=0.34368 seconds=195.9
+PTB-XL CNN+LSTM epoch 11/20 batch 500/1068 train_online_bce=0.34136 seconds=252.3
+PTB-XL CNN+LSTM epoch 11/20 batch 600/1068 train_online_bce=0.33864 seconds=312.1
+PTB-XL CNN+LSTM epoch 11/20 batch 700/1068 train_online_bce=0.33804 seconds=364.8
+PTB-XL CNN+LSTM epoch 11/20 batch 800/1068 train_online_bce=0.33784 seconds=418.6
+PTB-XL CNN+LSTM epoch 11/20 batch 900/1068 train_online_bce=0.33898 seconds=488.6
+PTB-XL CNN+LSTM epoch 11/20 batch 1000/1068 train_online_bce=0.33944 seconds=535.2
+PTB-XL CNN+LSTM epoch 11/20 batch 1068/1068 train_online_bce=0.33872 seconds=565.6
+PTB-XL CNN+LSTM epoch 11/20 train_online_bce=0.33872 val_bce=0.34188 val_macro_auc=0.87897 val_macro_ap=0.70691 selected=True seconds=612.0
+PTB-XL CNN+LSTM epoch 12/20 batch 1/1068 train_online_bce=0.34440 seconds=0.5
+PTB-XL CNN+LSTM epoch 12/20 batch 100/1068 train_online_bce=0.32485 seconds=53.1
+PTB-XL CNN+LSTM epoch 12/20 batch 200/1068 train_online_bce=0.33669 seconds=99.6
+PTB-XL CNN+LSTM epoch 12/20 batch 300/1068 train_online_bce=0.33816 seconds=151.9
+PTB-XL CNN+LSTM epoch 12/20 batch 400/1068 train_online_bce=0.34138 seconds=199.0
+PTB-XL CNN+LSTM epoch 12/20 batch 500/1068 train_online_bce=0.33778 seconds=242.3
+PTB-XL CNN+LSTM epoch 12/20 batch 600/1068 train_online_bce=0.33807 seconds=286.1
+PTB-XL CNN+LSTM epoch 12/20 batch 700/1068 train_online_bce=0.33872 seconds=329.3
+PTB-XL CNN+LSTM epoch 12/20 batch 800/1068 train_online_bce=0.33709 seconds=372.1
+PTB-XL CNN+LSTM epoch 12/20 batch 900/1068 train_online_bce=0.33544 seconds=420.4
+PTB-XL CNN+LSTM epoch 12/20 batch 1000/1068 train_online_bce=0.33522 seconds=463.0
+PTB-XL CNN+LSTM epoch 12/20 batch 1068/1068 train_online_bce=0.33483 seconds=493.2
+PTB-XL CNN+LSTM epoch 12/20 train_online_bce=0.33483 val_bce=0.34687 val_macro_auc=0.87805 val_macro_ap=0.70625 selected=False seconds=536.4
+PTB-XL CNN+LSTM epoch 13/20 batch 1/1068 train_online_bce=0.37243 seconds=0.4
+PTB-XL CNN+LSTM epoch 13/20 batch 100/1068 train_online_bce=0.33704 seconds=53.5
+PTB-XL CNN+LSTM epoch 13/20 batch 200/1068 train_online_bce=0.33528 seconds=111.6
+PTB-XL CNN+LSTM epoch 13/20 batch 300/1068 train_online_bce=0.33865 seconds=154.8
+PTB-XL CNN+LSTM epoch 13/20 batch 400/1068 train_online_bce=0.33615 seconds=199.3
+PTB-XL CNN+LSTM epoch 13/20 batch 500/1068 train_online_bce=0.33100 seconds=246.9
+PTB-XL CNN+LSTM epoch 13/20 batch 600/1068 train_online_bce=0.32754 seconds=291.9
+PTB-XL CNN+LSTM epoch 13/20 batch 700/1068 train_online_bce=0.32819 seconds=334.4
+PTB-XL CNN+LSTM epoch 13/20 batch 800/1068 train_online_bce=0.32861 seconds=377.6
+PTB-XL CNN+LSTM epoch 13/20 batch 900/1068 train_online_bce=0.32868 seconds=420.0
+PTB-XL CNN+LSTM epoch 13/20 batch 1000/1068 train_online_bce=0.33006 seconds=462.5
+PTB-XL CNN+LSTM epoch 13/20 batch 1068/1068 train_online_bce=0.32928 seconds=491.1
+PTB-XL CNN+LSTM epoch 13/20 train_online_bce=0.32928 val_bce=0.34843 val_macro_auc=0.87665 val_macro_ap=0.70426 selected=False seconds=536.0
+PTB-XL CNN+LSTM epoch 14/20 batch 1/1068 train_online_bce=0.39494 seconds=0.5
+PTB-XL CNN+LSTM epoch 14/20 batch 100/1068 train_online_bce=0.33257 seconds=47.2
+PTB-XL CNN+LSTM epoch 14/20 batch 200/1068 train_online_bce=0.33352 seconds=97.3
+PTB-XL CNN+LSTM epoch 14/20 batch 300/1068 train_online_bce=0.32737 seconds=145.4
+PTB-XL CNN+LSTM epoch 14/20 batch 400/1068 train_online_bce=0.32877 seconds=188.4
+PTB-XL CNN+LSTM epoch 14/20 batch 500/1068 train_online_bce=0.32750 seconds=235.4
+PTB-XL CNN+LSTM epoch 14/20 batch 600/1068 train_online_bce=0.32761 seconds=284.1
+PTB-XL CNN+LSTM epoch 14/20 batch 700/1068 train_online_bce=0.32751 seconds=333.0
+PTB-XL CNN+LSTM epoch 14/20 batch 800/1068 train_online_bce=0.32545 seconds=388.0
+PTB-XL CNN+LSTM epoch 14/20 batch 900/1068 train_online_bce=0.32469 seconds=433.4
+PTB-XL CNN+LSTM epoch 14/20 batch 1000/1068 train_online_bce=0.32622 seconds=476.7
+PTB-XL CNN+LSTM epoch 14/20 batch 1068/1068 train_online_bce=0.32705 seconds=505.5
+PTB-XL CNN+LSTM epoch 14/20 train_online_bce=0.32705 val_bce=0.34028 val_macro_auc=0.88000 val_macro_ap=0.71031 selected=True seconds=548.1
+PTB-XL CNN+LSTM epoch 15/20 batch 1/1068 train_online_bce=0.31303 seconds=0.4
+PTB-XL CNN+LSTM epoch 15/20 batch 100/1068 train_online_bce=0.32819 seconds=44.1
+PTB-XL CNN+LSTM epoch 15/20 batch 200/1068 train_online_bce=0.32702 seconds=87.2
+PTB-XL CNN+LSTM epoch 15/20 batch 300/1068 train_online_bce=0.32697 seconds=130.8
+PTB-XL CNN+LSTM epoch 15/20 batch 400/1068 train_online_bce=0.32461 seconds=173.6
+PTB-XL CNN+LSTM epoch 15/20 batch 500/1068 train_online_bce=0.32419 seconds=216.3
+PTB-XL CNN+LSTM epoch 15/20 batch 600/1068 train_online_bce=0.32531 seconds=259.3
+PTB-XL CNN+LSTM epoch 15/20 batch 700/1068 train_online_bce=0.32429 seconds=302.4
+PTB-XL CNN+LSTM epoch 15/20 batch 800/1068 train_online_bce=0.32344 seconds=345.2
+PTB-XL CNN+LSTM epoch 15/20 batch 900/1068 train_online_bce=0.32307 seconds=391.0
+PTB-XL CNN+LSTM epoch 15/20 batch 1000/1068 train_online_bce=0.32421 seconds=435.1
+PTB-XL CNN+LSTM epoch 15/20 batch 1068/1068 train_online_bce=0.32427 seconds=464.0
+PTB-XL CNN+LSTM epoch 15/20 train_online_bce=0.32427 val_bce=0.34041 val_macro_auc=0.88165 val_macro_ap=0.71337 selected=True seconds=506.6
+PTB-XL CNN+LSTM epoch 16/20 batch 1/1068 train_online_bce=0.29117 seconds=0.4
+PTB-XL CNN+LSTM epoch 16/20 batch 100/1068 train_online_bce=0.31318 seconds=43.0
+PTB-XL CNN+LSTM epoch 16/20 batch 200/1068 train_online_bce=0.31886 seconds=86.1
+PTB-XL CNN+LSTM epoch 16/20 batch 300/1068 train_online_bce=0.32084 seconds=129.4
+PTB-XL CNN+LSTM epoch 16/20 batch 400/1068 train_online_bce=0.32038 seconds=178.5
+PTB-XL CNN+LSTM epoch 16/20 batch 500/1068 train_online_bce=0.32227 seconds=229.4
+PTB-XL CNN+LSTM epoch 16/20 batch 600/1068 train_online_bce=0.32020 seconds=282.6
+PTB-XL CNN+LSTM epoch 16/20 batch 700/1068 train_online_bce=0.32067 seconds=333.1
+PTB-XL CNN+LSTM epoch 16/20 batch 800/1068 train_online_bce=0.32029 seconds=380.6
+PTB-XL CNN+LSTM epoch 16/20 batch 900/1068 train_online_bce=0.31963 seconds=431.5
+PTB-XL CNN+LSTM epoch 16/20 batch 1000/1068 train_online_bce=0.32062 seconds=478.8
+PTB-XL CNN+LSTM epoch 16/20 batch 1068/1068 train_online_bce=0.32036 seconds=515.3
+PTB-XL CNN+LSTM epoch 16/20 train_online_bce=0.32036 val_bce=0.34005 val_macro_auc=0.88149 val_macro_ap=0.71523 selected=False seconds=567.8
+PTB-XL CNN+LSTM epoch 17/20 batch 1/1068 train_online_bce=0.28726 seconds=0.5
+PTB-XL CNN+LSTM epoch 17/20 batch 100/1068 train_online_bce=0.32066 seconds=45.8
+PTB-XL CNN+LSTM epoch 17/20 batch 200/1068 train_online_bce=0.31798 seconds=90.9
+PTB-XL CNN+LSTM epoch 17/20 batch 300/1068 train_online_bce=0.32229 seconds=145.0
+PTB-XL CNN+LSTM epoch 17/20 batch 400/1068 train_online_bce=0.32342 seconds=216.0
+PTB-XL CNN+LSTM epoch 17/20 batch 500/1068 train_online_bce=0.32293 seconds=265.1
+PTB-XL CNN+LSTM epoch 17/20 batch 600/1068 train_online_bce=0.32028 seconds=310.3
+PTB-XL CNN+LSTM epoch 17/20 batch 700/1068 train_online_bce=0.31956 seconds=355.4
+PTB-XL CNN+LSTM epoch 17/20 batch 800/1068 train_online_bce=0.31786 seconds=417.1
+PTB-XL CNN+LSTM epoch 17/20 batch 900/1068 train_online_bce=0.31804 seconds=468.3
+PTB-XL CNN+LSTM epoch 17/20 batch 1000/1068 train_online_bce=0.31844 seconds=527.7
+PTB-XL CNN+LSTM epoch 17/20 batch 1068/1068 train_online_bce=0.31855 seconds=566.4
+PTB-XL CNN+LSTM epoch 17/20 train_online_bce=0.31855 val_bce=0.34374 val_macro_auc=0.88103 val_macro_ap=0.71416 selected=False seconds=613.0
+PTB-XL CNN+LSTM epoch 18/20 batch 1/1068 train_online_bce=0.33263 seconds=0.5
+PTB-XL CNN+LSTM epoch 18/20 batch 100/1068 train_online_bce=0.32164 seconds=52.0
+PTB-XL CNN+LSTM epoch 18/20 batch 200/1068 train_online_bce=0.32604 seconds=104.4
+PTB-XL CNN+LSTM epoch 18/20 batch 300/1068 train_online_bce=0.31874 seconds=150.5
+PTB-XL CNN+LSTM epoch 18/20 batch 400/1068 train_online_bce=0.31941 seconds=215.4
+PTB-XL CNN+LSTM epoch 18/20 batch 500/1068 train_online_bce=0.31636 seconds=275.5
+PTB-XL CNN+LSTM epoch 18/20 batch 600/1068 train_online_bce=0.31775 seconds=326.5
+PTB-XL CNN+LSTM epoch 18/20 batch 700/1068 train_online_bce=0.31583 seconds=385.9
+PTB-XL CNN+LSTM epoch 18/20 batch 800/1068 train_online_bce=0.31634 seconds=444.3
+PTB-XL CNN+LSTM epoch 18/20 batch 900/1068 train_online_bce=0.31740 seconds=501.7
+PTB-XL CNN+LSTM epoch 18/20 batch 1000/1068 train_online_bce=0.31619 seconds=556.1
+PTB-XL CNN+LSTM epoch 18/20 batch 1068/1068 train_online_bce=0.31642 seconds=587.4
+PTB-XL CNN+LSTM epoch 18/20 train_online_bce=0.31642 val_bce=0.33969 val_macro_auc=0.88158 val_macro_ap=0.71477 selected=False seconds=629.8
+PTB-XL CNN+LSTM epoch 19/20 batch 1/1068 train_online_bce=0.48481 seconds=0.5
+PTB-XL CNN+LSTM epoch 19/20 batch 100/1068 train_online_bce=0.32426 seconds=56.1
+PTB-XL CNN+LSTM epoch 19/20 batch 200/1068 train_online_bce=0.31780 seconds=105.4
+PTB-XL CNN+LSTM epoch 19/20 batch 300/1068 train_online_bce=0.31515 seconds=150.4
+PTB-XL CNN+LSTM epoch 19/20 batch 400/1068 train_online_bce=0.31895 seconds=195.0
+PTB-XL CNN+LSTM epoch 19/20 batch 500/1068 train_online_bce=0.31578 seconds=238.6
+PTB-XL CNN+LSTM epoch 19/20 batch 600/1068 train_online_bce=0.31539 seconds=282.1
+PTB-XL CNN+LSTM epoch 19/20 batch 700/1068 train_online_bce=0.31573 seconds=326.4
+PTB-XL CNN+LSTM epoch 19/20 batch 800/1068 train_online_bce=0.31590 seconds=370.0
+PTB-XL CNN+LSTM epoch 19/20 batch 900/1068 train_online_bce=0.31629 seconds=415.0
+PTB-XL CNN+LSTM epoch 19/20 batch 1000/1068 train_online_bce=0.31572 seconds=458.7
+PTB-XL CNN+LSTM epoch 19/20 batch 1068/1068 train_online_bce=0.31544 seconds=487.6
+PTB-XL CNN+LSTM epoch 19/20 train_online_bce=0.31544 val_bce=0.34215 val_macro_auc=0.88078 val_macro_ap=0.71386 selected=False seconds=532.1
+{
+  "run_id": "ptbxl_cnn_lstm_image_v1_seed42",
+  "status": "completed",
+  "test": {
+    "n_samples": 2158,
+    "n_labels": 5,
+    "class_names": [
+      "NORM",
+      "MI",
+      "STTC",
+      "CD",
+      "HYP"
+    ],
+    "threshold": 0.5,
+    "decision_rule": "Independent probability >= 0.5 for each label; no row-sum normalization",
+    "subset_accuracy": 0.525949953660797,
+    "label_accuracy": 0.8494902687673772,
+    "hamming_loss": 0.1505097312326228,
+    "macro_f1": 0.613099638947784,
+    "micro_f1": 0.6779055930186434,
+    "weighted_f1": 0.6603144754630053,
+    "macro_precision": 0.7500648489584038,
+    "macro_recall": 0.5394796582695714,
+    "macro_roc_auc": 0.8698012215798719,
+    "micro_roc_auc": 0.8903161051724249,
+    "macro_average_precision": 0.7035031685056687,
+    "micro_average_precision": 0.7630963089464835,
+    "macro_roc_auc_defined_labels": 0.8698012215798719,
+    "macro_average_precision_defined_labels": 0.7035031685056687,
+    "roc_auc_defined_labels": [
+      "NORM",
+      "MI",
+      "STTC",
+      "CD",
+      "HYP"
+    ],
+    "average_precision_defined_labels": [
+      "NORM",
+      "MI",
+      "STTC",
+      "CD",
+      "HYP"
+    ],
+    "binary_cross_entropy": 0.35277482570051827,
+    "bce_probability_clip_epsilon": 2.220446049250313e-16,
+    "per_label": {
+      "NORM": {
+        "precision": 0.7651858567543064,
+        "recall": 0.8764278296988577,
+        "f1": 0.8170377541142304,
+        "specificity": 0.7832635983263598,
+        "balanced_accuracy": 0.8298457140126088,
+        "tp": 844,
+        "fp": 259,
+        "tn": 936,
+        "fn": 119,
+        "support": 963,
+        "negative_support": 1195,
+        "predicted_positive": 1103,
+        "roc_auc": 0.9127404337039497,
+        "average_precision": 0.8769194001911962
+      },
+      "MI": {
+        "precision": 0.7,
+        "recall": 0.43272727272727274,
+        "f1": 0.5348314606741573,
+        "specificity": 0.9365671641791045,
+        "balanced_accuracy": 0.6846472184531887,
+        "tp": 238,
+        "fp": 102,
+        "tn": 1506,
+        "fn": 312,
+        "support": 550,
+        "negative_support": 1608,
+        "predicted_positive": 340,
+        "roc_auc": 0.8289258254183628,
+        "average_precision": 0.6409844880486946
+      },
+      "STTC": {
+        "precision": 0.7806788511749347,
+        "recall": 0.5738963531669866,
+        "f1": 0.661504424778761,
+        "specificity": 0.9486866218692731,
+        "balanced_accuracy": 0.7612914875181298,
+        "tp": 299,
+        "fp": 84,
+        "tn": 1553,
+        "fn": 222,
+        "support": 521,
+        "negative_support": 1637,
+        "predicted_positive": 383,
+        "roc_auc": 0.9034456316678724,
+        "average_precision": 0.7487441860399414
+      },
+      "CD": {
+        "precision": 0.801980198019802,
+        "recall": 0.4899193548387097,
+        "f1": 0.6082603254067585,
+        "specificity": 0.9638989169675091,
+        "balanced_accuracy": 0.7269091359031093,
+        "tp": 243,
+        "fp": 60,
+        "tn": 1602,
+        "fn": 253,
+        "support": 496,
+        "negative_support": 1662,
+        "predicted_positive": 303,
+        "roc_auc": 0.8461603780909125,
+        "average_precision": 0.7176990904419095
+      },
+      "HYP": {
+        "precision": 0.7024793388429752,
+        "recall": 0.3244274809160305,
+        "f1": 0.44386422976501305,
+        "specificity": 0.9810126582278481,
+        "balanced_accuracy": 0.6527200695719393,
+        "tp": 85,
+        "fp": 36,
+        "tn": 1860,
+        "fn": 177,
+        "support": 262,
+        "negative_support": 1896,
+        "predicted_positive": 121,
+        "roc_auc": 0.8577338390182625,
+        "average_precision": 0.5331686778066018
+      }
+    },
+    "confusion_matrices": {
+      "NORM": [
+        [
+          936,
+          259
+        ],
+        [
+          119,
+          844
+        ]
+      ],
+      "MI": [
+        [
+          1506,
+          102
+        ],
+        [
+          312,
+          238
+        ]
+      ],
+      "STTC": [
+        [
+          1553,
+          84
+        ],
+        [
+          222,
+          299
+        ]
+      ],
+      "CD": [
+        [
+          1602,
+          60
+        ],
+        [
+          253,
+          243
+        ]
+      ],
+      "HYP": [
+        [
+          1860,
+          36
+        ],
+        [
+          177,
+          85
+        ]
+      ]
+    },
+    "confusion_matrix_axes": "rows=true [negative, positive]; columns=predicted [negative, positive]",
+    "accuracy_definitions": {
+      "subset_accuracy": "Fraction of records with all five label decisions exactly correct",
+      "label_accuracy": "Fraction of individual record-label decisions correct",
+      "hamming_loss": "Fraction of individual record-label decisions incorrect"
+    },
+    "zero_division_policy": "Precision, recall and F1 use zero_division=0; weighted F1 is zero when total positive support is zero",
+    "undefined_metric_policy": "ROC-AUC needs positive and negative truth; AP needs positive truth. Full-five-label macro ranking scores are null if any label is undefined. Defined-label-only means are named separately. Specificity is null without negatives; balanced accuracy is null without both outcomes."
+  },
+  "total_runtime_seconds": 10909.669199958997
+}

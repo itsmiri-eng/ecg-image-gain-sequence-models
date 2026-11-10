@@ -1,0 +1,215 @@
+{
+  "status": "complete",
+  "phase": "complete",
+  "epoch": 20,
+  "max_epochs": 20,
+  "training_records": 17084,
+  "validation_records": 2146,
+  "test_data_accessed": false,
+  "updated_utc": "2026-11-01T14:46:34+00:00",
+  "batch": 1068,
+  "batches_in_epoch": 1068,
+  "records_seen_this_epoch": 17084,
+  "train_online_bce": 0.2834749775108982,
+  "learning_rate": 1.6094271405406862e-05,
+  "elapsed_seconds": 11861.312654083944,
+  "epoch_seconds": 549.577064833953,
+  "best_epoch": 19,
+  "best_selection_key": [
+    0.9015662289937213,
+    0.7592463750698754,
+    -0.32933416069072097
+  ],
+  "validation_epoch": 20,
+  "validation_batch": 135,
+  "validation_batches": 135,
+  "validation_records_seen": 2146,
+  "validation_seconds": 56.33458770799916,
+  "epochs_without_selection_improvement": 1,
+  "validation_metrics": {
+    "n_samples": 2146,
+    "n_labels": 5,
+    "class_names": [
+      "NORM",
+      "MI",
+      "STTC",
+      "CD",
+      "HYP"
+    ],
+    "threshold": 0.5,
+    "decision_rule": "Independent probability >= 0.5 for each label; no row-sum normalization",
+    "subset_accuracy": 0.5787511649580616,
+    "label_accuracy": 0.8635601118359739,
+    "hamming_loss": 0.1364398881640261,
+    "macro_f1": 0.6807405193941374,
+    "micro_f1": 0.7267637178051511,
+    "weighted_f1": 0.7189133624962176,
+    "macro_precision": 0.7324725333885088,
+    "macro_recall": 0.645367128212131,
+    "macro_roc_auc": 0.9013651825893326,
+    "micro_roc_auc": 0.9145263027480951,
+    "macro_average_precision": 0.7586705967936898,
+    "micro_average_precision": 0.812638719290546,
+    "macro_roc_auc_defined_labels": 0.9013651825893326,
+    "macro_average_precision_defined_labels": 0.7586705967936898,
+    "roc_auc_defined_labels": [
+      "NORM",
+      "MI",
+      "STTC",
+      "CD",
+      "HYP"
+    ],
+    "average_precision_defined_labels": [
+      "NORM",
+      "MI",
+      "STTC",
+      "CD",
+      "HYP"
+    ],
+    "binary_cross_entropy": 0.33156585208432116,
+    "bce_probability_clip_epsilon": 2.220446049250313e-16,
+    "per_label": {
+      "NORM": {
+        "precision": 0.7904849039341263,
+        "recall": 0.9047120418848168,
+        "f1": 0.84375,
+        "specificity": 0.8077246011754828,
+        "balanced_accuracy": 0.8562183215301498,
+        "tp": 864,
+        "fp": 229,
+        "tn": 962,
+        "fn": 91,
+        "support": 955,
+        "negative_support": 1191,
+        "predicted_positive": 1093,
+        "roc_auc": 0.9341795578531833,
+        "average_precision": 0.9125893007860244
+      },
+      "MI": {
+        "precision": 0.7395577395577395,
+        "recall": 0.5574074074074075,
+        "f1": 0.6356916578669483,
+        "specificity": 0.933997509339975,
+        "balanced_accuracy": 0.7457024583736913,
+        "tp": 301,
+        "fp": 106,
+        "tn": 1500,
+        "fn": 239,
+        "support": 540,
+        "negative_support": 1606,
+        "predicted_positive": 407,
+        "roc_auc": 0.8850168350168348,
+        "average_precision": 0.746571344607551
+      },
+      "STTC": {
+        "precision": 0.7448979591836735,
+        "recall": 0.6912878787878788,
+        "f1": 0.7170923379174853,
+        "specificity": 0.9227441285537701,
+        "balanced_accuracy": 0.8070160036708245,
+        "tp": 365,
+        "fp": 125,
+        "tn": 1493,
+        "fn": 163,
+        "support": 528,
+        "negative_support": 1618,
+        "predicted_positive": 490,
+        "roc_auc": 0.9147165411844027,
+        "average_precision": 0.7411398604269611
+      },
+      "CD": {
+        "precision": 0.8080229226361032,
+        "recall": 0.5696969696969697,
+        "f1": 0.6682464454976303,
+        "specificity": 0.9594185342216839,
+        "balanced_accuracy": 0.7645577519593267,
+        "tp": 282,
+        "fp": 67,
+        "tn": 1584,
+        "fn": 213,
+        "support": 495,
+        "negative_support": 1651,
+        "predicted_positive": 349,
+        "roc_auc": 0.8901284192622775,
+        "average_precision": 0.7858837116163533
+      },
+      "HYP": {
+        "precision": 0.5793991416309013,
+        "recall": 0.503731343283582,
+        "f1": 0.5389221556886228,
+        "specificity": 0.9478168264110756,
+        "balanced_accuracy": 0.7257740848473289,
+        "tp": 135,
+        "fp": 98,
+        "tn": 1780,
+        "fn": 133,
+        "support": 268,
+        "negative_support": 1878,
+        "predicted_positive": 233,
+        "roc_auc": 0.8827845596299653,
+        "average_precision": 0.6071687665315589
+      }
+    },
+    "confusion_matrices": {
+      "NORM": [
+        [
+          962,
+          229
+        ],
+        [
+          91,
+          864
+        ]
+      ],
+      "MI": [
+        [
+          1500,
+          106
+        ],
+        [
+          239,
+          301
+        ]
+      ],
+      "STTC": [
+        [
+          1493,
+          125
+        ],
+        [
+          163,
+          365
+        ]
+      ],
+      "CD": [
+        [
+          1584,
+          67
+        ],
+        [
+          213,
+          282
+        ]
+      ],
+      "HYP": [
+        [
+          1780,
+          98
+        ],
+        [
+          133,
+          135
+        ]
+      ]
+    },
+    "confusion_matrix_axes": "rows=true [negative, positive]; columns=predicted [negative, positive]",
+    "accuracy_definitions": {
+      "subset_accuracy": "Fraction of records with all five label decisions exactly correct",
+      "label_accuracy": "Fraction of individual record-label decisions correct",
+      "hamming_loss": "Fraction of individual record-label decisions incorrect"
+    },
+    "zero_division_policy": "Precision, recall and F1 use zero_division=0; weighted F1 is zero when total positive support is zero",
+    "undefined_metric_policy": "ROC-AUC needs positive and negative truth; AP needs positive truth. Full-five-label macro ranking scores are null if any label is undefined. Defined-label-only means are named separately. Specificity is null without negatives; balanced accuracy is null without both outcomes."
+  },
+  "epochs_run": 20
+}

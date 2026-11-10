@@ -1,0 +1,44 @@
+{
+  "protocol": "cnn_lstm_image_spatial_sequence_v1",
+  "model": "cnn_lstm",
+  "dataset_version": "image_dedup_8e04bd56af2f",
+  "split_version": "grouped_cf5a867a99c3",
+  "split_sha256": "d000c06a280c59bf60b883abbc0711a575b46e69843bb01c8593befde37d9616",
+  "cache_sha256": "ae7a5b80d1d8da2d371568a21f1547dd64f26e5d95b7657ec3b738a85f19f60e",
+  "seed": 42,
+  "class_names": [
+    "Normal",
+    "MI",
+    "Abnormal",
+    "History_MI"
+  ],
+  "input_shape": [
+    1,
+    128,
+    256
+  ],
+  "representation": "Frozen cropped grayscale ECG page image. CNN output pooled to 64x2x16; each of 16 left-to-right spatial positions supplies 128 features to one LSTM. This is not calibrated physiological time or waveform digitization.",
+  "cnn_lstm": {
+    "seed": 42,
+    "max_epochs": 30,
+    "patience": 7,
+    "batch_size": 16,
+    "learning_rate": 0.001,
+    "weight_decay": 0.0001,
+    "dropout": 0.25,
+    "device": "cpu",
+    "num_threads": 4,
+    "num_classes": 4,
+    "hidden_size": 32,
+    "pool_rows": 2,
+    "sequence_length": 16,
+    "gradient_clip_norm": 1.0
+  },
+  "selection_rule": "Strict lexicographic maximum of validation (macro_f1, balanced_accuracy, -weighted_loss). Earliest epoch for exact ties. Patience counts epochs without tuple improvement.",
+  "search_budget": "One prespecified configuration and seed; at most 30 epochs; no hyperparameter search",
+  "comparison_limit": "Both architecture and checkpoint-selection criterion differ from original CNN (minimum validation loss). This is a pipeline comparison, not an isolated LSTM architecture ablation.",
+  "preprocessing_limit": "Unchanged low-resolution baseline crop; confirmed clipping in one inspected training page and aspect distortion remain. The separate crop preview is not adopted.",
+  "test_policy": "Previously observed test set. One final inference after weights, configuration and selection are frozen. Exploratory comparison; no test tuning or new confirmatory claim.",
+  "baseline_lock": "experiments/reviews/2026-09-24/baseline_lock.json",
+  "baseline_log_snapshot": "experiments/protocols/cnn_lstm_image_v1/baseline_log_before.csv"
+}

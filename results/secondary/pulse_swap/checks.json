@@ -1,0 +1,16 @@
+{
+  "max_abs_difference_original_vs_saved_validation_probabilities": {
+    "CNN-only | adaptive": 8.344650268554688e-07,
+    "CNN-LSTM | adaptive": 3.993511199951172e-06,
+    "Temporal conv | adaptive": 5.960464477539062e-07,
+    "Hybrid ViT | adaptive": 0.0004329085350036621,
+    "CNN-only | fixed": 4.470348358154297e-07,
+    "CNN-LSTM | fixed": 5.960464477539062e-07,
+    "Temporal conv | fixed": 5.960464477539062e-07,
+    "Hybrid ViT | fixed": 1.3113021850585938e-06
+  },
+  "pulse_columns": [
+    48,
+    87
+  ]
+}
