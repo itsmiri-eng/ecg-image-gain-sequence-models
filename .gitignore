@@ -52,3 +52,5 @@ data/external/
 data/processed/ptbxl_signals100_v1/*.npy
 experiments/logs/_*.ps1
 docs/teams_update_*.txt
+# Added 11 November 2026: copy of the supervisor's Overleaf project (owner e-mail, project id) stays local
+paper/overleaf_backup_*/
