@@ -5,6 +5,7 @@
 \usepackage{cite}
 \usepackage{amsmath,amssymb}
 \usepackage{graphicx}
+\graphicspath{{figures/}{./}} % figures/ locally; project root on Overleaf
 \usepackage{booktabs}
 \usepackage{array}
 \usepackage{url}
@@ -60,7 +61,7 @@ PTB-XL v1.0.3 \cite{wagner2020ptbxl,wagner2022ptbxl103,goldberger2000physionet} 
 \subsection{Page Rendering}
 \begin{figure*}[!t]
 \centering
-\includegraphics[width=\textwidth]{figures/fig1_rendered_pages.pdf}
+\includegraphics[width=\textwidth]{fig1_rendered_pages.pdf}
 \caption{The same PTB-XL ECG (ecg\_id 1; leads I--III, first $\approx$3~s) rendered with (a) the adaptive gain policy, which drew this ECG at 5~mm/mV, and (b) fixed gain (2.5~mm/mV for every ECG). Each row starts with a 1-mV calibration pulse drawn at the page gain.}
 \label{fig:pages}
 \end{figure*}
@@ -74,7 +75,7 @@ Each ECG was rendered deterministically as a clean grayscale page at 8~pixels/mm
 \subsection{Models}
 \begin{figure*}[!t]
 \centering
-\includegraphics[width=\textwidth]{figures/fig2_architectures.pdf}
+\includegraphics[width=\textwidth]{fig2_architectures.pdf}
 \caption{Controlled model design. All networks share the same encoder architecture and column feature sequence and differ only in the head. The capacity-matched head has the parameter budget of the sequence heads but applies the same perceptron to every column separately. References outside the controlled comparison: PCA + LDA and PCA + linear SVM on pooled ink, and a one-dimensional ResNet on the raw signals.}
 \label{fig:arch}
 \end{figure*}
@@ -150,7 +151,7 @@ Hierarchical bootstrap (2{,}000 resamples; seeds then patients for PTB-XL, seeds
 
 \begin{figure*}[!t]
 \centering
-\includegraphics[width=\textwidth]{figures/fig3_head_comparison.pdf}
+\includegraphics[width=\textwidth]{fig3_head_comparison.pdf}
 \caption{Macro AUROC per training seed (light points) and mean over seeds (diamonds) for each model with adaptive-gain pages, on the PTB-XL test fold and the two external cohorts. Macro AUROC is computed over the labels eligible in each cohort.}
 \label{fig:heads}
 \end{figure*}
@@ -164,7 +165,7 @@ A pulse-only swap alters the voltage implied by the page, so these responses mix
 
 \begin{figure*}[!t]
 \centering
-\includegraphics[width=\textwidth]{figures/fig5_calibration_pulse.pdf}
+\includegraphics[width=\textwidth]{fig5_calibration_pulse.pdf}
 \caption{Use of the calibration pulse (validation, seed 42). (a) Share of integrated-gradients attribution for the HYP logit that falls on the calibration-pulse columns, for HYP-positive ECGs (bars, mean; lines, 95\% patient-bootstrap CI); dashed line, pulse share of the input width. (b) Post-hoc decomposition of the HYP probability change after swapping in a 2.5-mm/mV pulse on pages originally drawn at 5--10~mm/mV: change under consistent re-rendering (gain prior) and the remaining difference (calibration reading).}
 \label{fig:pulse}
 \end{figure*}
@@ -193,7 +194,7 @@ Macro AUROC over the eligible labels of each cohort; HYP, hypertrophy AUROC. Hol
 
 \begin{figure*}[!t]
 \centering
-\includegraphics[width=\textwidth]{figures/fig4_fixed_vs_adaptive_gain.pdf}
+\includegraphics[width=\textwidth]{fig4_fixed_vs_adaptive_gain.pdf}
 \caption{Effect of fixed-gain rendering: fixed-gain minus adaptive-gain AUROC (mean over seeds 42--46, 95\% hierarchical bootstrap CI) on the PTB-XL test fold and the two external cohorts, for macro AUROC (left) and hypertrophy AUROC (right).}
 \label{fig:fixed}
 \end{figure*}
@@ -244,7 +245,7 @@ In a controlled comparison on rendered 12-lead ECG images, heads that relate inf
 PTB-XL and the PhysioNet/CinC Challenge 2021 data are publicly available on PhysioNet under the Creative Commons Attribution 4.0 license. The code, frozen configurations and protocols, run records (configuration, code hashes and snapshots, saved predictions and metrics) and analysis scripts will be released in a public repository upon publication [link to be added].
 
 \section*{Acknowledgment}
-[To be completed by the authors.] Software assistance: parts of the analysis code and the first draft of this manuscript were prepared with the help of an AI assistant (Claude, Anthropic); all analyses, numbers and text were checked by the authors, who take full responsibility for the content.
+[To be completed by the authors.]
 
 \bibliographystyle{IEEEtran}
 \bibliography{references}

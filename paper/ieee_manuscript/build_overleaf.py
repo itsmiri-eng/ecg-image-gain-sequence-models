@@ -1,11 +1,13 @@
 """Assemble the Overleaf upload: inline the generated tables into main.tex, check the LaTeX statically, zip.
 
 Usage (from the project folder):
-    python -X utf8 paper/ieee_manuscript/build_overleaf.py
+    python -X utf8 paper/ieee_manuscript/build_overleaf.py            # IEEE version
+    python -X utf8 paper/ieee_manuscript/build_overleaf.py scirep     # Scientific Reports version
 
-main_source.tex is the editable source (tables included with \\input). The script writes overleaf/main.tex with
-the table rows pasted in (safer than \\input inside tabular), copies figures and references.bib, runs static
-checks (environments, braces, labels/refs, citation keys, figure files) and writes overleaf.zip.
+main_source.tex (IEEE) and main_source_scirep.tex (Scientific Reports, wlscirep.cls) are the editable sources
+(tables included with \\input). The script writes overleaf[_scirep]/main.tex with the table rows pasted in (safer
+than \\input inside tabular), copies figures and references.bib, runs static checks (environments, braces,
+labels/refs, citation keys, figure files) and writes overleaf[_scirep].zip.
 """
 import re
 import shutil
@@ -14,7 +16,9 @@ import zipfile
 from pathlib import Path
 
 HERE = Path(__file__).resolve().parent
-OUT = HERE / "overleaf"
+VARIANT = sys.argv[1] if len(sys.argv) > 1 else "ieee"
+SOURCE = {"ieee": "main_source.tex", "scirep": "main_source_scirep.tex"}[VARIANT]
+OUT = HERE / ("overleaf" if VARIANT == "ieee" else f"overleaf_{VARIANT}")
 
 
 def inline_tables(text):
@@ -55,7 +59,7 @@ def check(text, bib):
             if key.strip() not in keys:
                 problems.append(f"missing citation key {key.strip()}")
     for fig in re.findall(r"\\includegraphics(?:\[[^]]*\])?\{([^}]+)\}", body):
-        if not (HERE / fig).exists():
+        if not (HERE / fig).exists() and not (HERE / "figures" / fig).exists():
             problems.append(f"missing figure {fig}")
     dollars = len(re.findall(r"(?<!\\)\$", body))
     if dollars % 2:
@@ -73,7 +77,7 @@ def check(text, bib):
 
 
 def main():
-    source = (HERE / "main_source.tex").read_text(encoding="utf-8")
+    source = (HERE / SOURCE).read_text(encoding="utf-8")
     bib = (HERE / "references.bib").read_text(encoding="utf-8")
     text = inline_tables(source)
     problems, b, e = check(text, bib)
@@ -89,11 +93,11 @@ def main():
     shutil.copy(HERE / "references.bib", OUT / "references.bib")
     for fig in sorted((HERE / "figures").glob("*.pdf")):
         shutil.copy(fig, OUT / "figures" / fig.name)
-    with zipfile.ZipFile(HERE / "overleaf.zip", "w", zipfile.ZIP_DEFLATED) as z:
+    with zipfile.ZipFile(HERE / f"{OUT.name}.zip", "w", zipfile.ZIP_DEFLATED) as z:
         for path in sorted(OUT.rglob("*")):
             if path.is_file():
                 z.write(path, path.relative_to(OUT).as_posix())
-    print(f"wrote {HERE / 'overleaf.zip'}")
+    print(f"wrote {HERE / f'{OUT.name}.zip'}")
 
 
 if __name__ == "__main__":

@@ -1,5 +1,30 @@
 # Project status — 1 November 2026 (evening update)
 
+## Update 11 November 2026: manuscript on Overleaf, Scientific Reports layout
+
+- **Overleaf is connected** (claudeleaf). The manuscript lives in the Overleaf project "ECG Paper - Miriam"
+  (owner: Dr. Elgendi). It held an older Mendeley/Scientific Reports paper; its text is backed up in
+  `paper/overleaf_backup_2026-11-10_before_replace/`, and its other files were left in the project unused.
+- **Layout changed at the supervisor's request:** single column, no "(submitted)" running head. The new source is
+  `paper/ieee_manuscript/main_source_scirep.tex` (`wlscirep.cls`, the Scientific Reports template already in the
+  project): same text and numbers, sections in Scientific Reports order (Introduction, Results, Discussion,
+  Methods), related work folded into the Introduction, Author contributions and Competing interests added as
+  placeholders. Build it with `python -X utf8 paper/ieee_manuscript/build_overleaf.py scirep`
+  (→ `overleaf_scirep/`, `overleaf_scirep.zip`). The IEEE version (`main_source.tex`) is kept and builds as before.
+- **Compiled on Overleaf:** 10 pages, no errors, no undefined references or citations, no overfull boxes.
+- Figures are at the project root on Overleaf (the connection cannot create folders); `\graphicspath` finds them
+  there and in `figures/` locally.
+- The AI-assistance sentence was removed from the acknowledgment at the user's request (both versions).
+- Still open: affiliations, funding, corresponding e-mail, author contributions, competing interests.
+- The Scientific Reports abstract was shortened from 230 to 199 words (limit 200), with the same numbers and
+  claims; the IEEE abstract (230 words, within IEEE's 250) is unchanged.
+- **GitHub.** The local repository now tracks https://github.com/itsmiri-eng/ecg-image-domain-shift (branch
+  `main`). Its earlier content (the September Mendeley project) is kept in the history and under the tag
+  `v1-mendeley-2026-09`. The new README describes the current study. Commits use the GitHub noreply e-mail.
+  The Overleaf backup folder (supervisor's e-mail and project id) is kept out of Git. Miriam pushes with
+  GitHub Desktop from her clone in `OneDrive/Documents/GitHub/ecg-image-domain-shift`. The repository is
+  public, while the manuscript says code is released on publication; the authors decide whether it stays public.
+
 ## Update 10 November 2026: manuscript, figures and reproducibility package
 
 - **IEEE manuscript draft** (target IEEE JBHI), in `paper/ieee_manuscript/`:
