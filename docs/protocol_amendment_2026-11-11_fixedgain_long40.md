@@ -1,6 +1,6 @@
 # Protocol amendment, 11 November 2026 (evening): fixed-gain training with a 40-epoch budget
 
-Written and frozen **before** any run listed here started (11 Nov 2026, about 22:30 local time = 18:30 UTC).
+Written and frozen **before** any run listed here started (11 Nov 2026, committed 23:10 local time = 19:10 UTC, commit 652b435).
 Nothing below changes a completed run, or a config or hyperparameter used by an existing run. This is a
 **sensitivity analysis**. It does not replace the primary results.
 
