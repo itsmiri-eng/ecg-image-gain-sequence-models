@@ -51,6 +51,17 @@ def test_long40_configs_differ_only_in_budget_and_names(head):
     assert long["result_family"] == "ptbxl_v2_long40" and long["protocol"] == f"ptbxl_v2_long40_{head}"
 
 
+@pytest.mark.parametrize("head", ["cnn_pool", "cnn_lstm", "temporal_conv", "hybrid_vit"])
+def test_fixed_gain_long40_configs_differ_only_in_budget_and_names(head):
+    base = json.loads((ROOT / f"experiments/configs/ptbxl_v2_fg_{head}.json").read_text(encoding="utf-8"))
+    long = json.loads((ROOT / f"experiments/configs/ptbxl_v2_long40_fg_{head}.json").read_text(encoding="utf-8"))
+    assert long["training"] == {**base["training"], "max_epochs": 40}
+    for key in ("cache_root", "cache_sha256", "preprocessing", "selection_rule", "threshold", "uncertainty",
+                "dataset_loader"):
+        assert long[key] == base[key]
+    assert long["result_family"] == "ptbxl_v2_long40" and long["protocol"] == f"ptbxl_v2_long40_fg_{head}"
+
+
 def test_resnet_configs_share_training_settings_and_caches():
     for prefix, base_name in (("", "ptbxl_v2_cnn_pool"), ("fg_", "ptbxl_v2_fg_cnn_pool")):
         base = json.loads((ROOT / f"experiments/configs/{base_name}.json").read_text(encoding="utf-8"))
