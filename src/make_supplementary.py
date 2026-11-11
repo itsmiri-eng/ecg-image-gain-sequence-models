@@ -475,23 +475,23 @@ def table_resnet():
                                     *[f3(float(r[f"auroc_{l}"])) for l in LABELS],
                                     f"{float(delta):+.3f}".replace("-", "$-$") if delta else "--",
                                     r.get("selected_epoch") or "--"]))
-        body.append("\midrule")
+        body.append("\\midrule")
     first = longtable("ImageNet-pretrained ResNet-18 (sensitivity analysis, amendment of 11 November 2026): every run.",
                       "tab:s_resnet_runs", "lllrrrrrrrr",
-                      "Cohort & Pages & Seed & Macro & NORM & MI & STTC & CD & HYP & $\Delta$ & Epoch", body[:-1],
+                      "Cohort & Pages & Seed & Macro & NORM & MI & STTC & CD & HYP & $\\Delta$ & Epoch", body[:-1],
                       "Macro AUROC over all five labels on PTB-XL and over the eligible labels externally (Georgia: STTC, "
                       "CD, HYP; China: MI, STTC, CD, HYP). Per-label columns are AUROC (labels not eligible externally are "
-                      "shown for completeness). $\Delta$: external minus PTB-XL test macro AUROC on the same labels. "
+                      "shown for completeness). $\\Delta$: external minus PTB-XL test macro AUROC on the same labels. "
                       "Epoch: selected epoch (of at most 20). Every reloaded model reproduced its saved PTB-XL validation "
-                      "probabilities exactly before its single external inference.", size="\scriptsize")
+                      "probabilities exactly before its single external inference.", size="\\scriptsize")
     fixed = read_csv(AMENDMENT / "resnet18/fixed_minus_adaptive.csv")
     body = [" & ".join([COHORTS[r["cohort"]], r["metric"].replace(" (eligible labels)", ""),
                         fmt_diff(float(r["difference"]), float(r["ci_lower"]), float(r["ci_upper"])),
                         fmt_p(float(r["p_holm"]))]) for r in fixed]
-    second = longtable("ImageNet-pretrained ResNet-18: fixed-gain minus adaptive-gain AUROC [95\% CI] and Holm-adjusted "
+    second = longtable("ImageNet-pretrained ResNet-18: fixed-gain minus adaptive-gain AUROC [95\\% CI] and Holm-adjusted "
                        "$p$ (seeds 42--44).", "tab:s_resnet_fixed", "llcr", "Cohort & Metric & Difference & $p$", body,
-                       "PTB-XL: hierarchical seed $\times$ patient bootstrap, Holm over 2 comparisons. External cohorts: "
-                       "seed $\times$ record bootstrap, Holm over the 4 cohort $\times$ metric comparisons. 2{,}000 "
+                       "PTB-XL: hierarchical seed $\\times$ patient bootstrap, Holm over 2 comparisons. External cohorts: "
+                       "seed $\\times$ record bootstrap, Holm over the 4 cohort $\\times$ metric comparisons. 2{,}000 "
                        "resamples, seed 2024. Prespecified in the amendment of 11 November 2026, after the frozen external "
                        "plan; not part of the confirmatory hypotheses H1 and H2.")
     return first + "\n\n" + second
@@ -502,19 +502,19 @@ def table_long40():
         return ("The 40-epoch sensitivity runs had not all completed when this document was generated; "
                 "results will be added when they finish.")
     summary = read_csv(AMENDMENT / "long40/summary.csv")
-    body = [" & ".join([HEAD_NAMES[r["head"]], r["budget"], f"{float(r['test_mean']):.3f} $\pm$ {float(r['test_sd']):.3f}",
+    body = [" & ".join([HEAD_NAMES[r["head"]], r["budget"], f"{float(r['test_mean']):.3f} $\\pm$ {float(r['test_sd']):.3f}",
                         f3(float(r["validation_mean"])), r["selected_epochs"], r["epochs_run"]]) for r in summary]
     first = longtable("Training-budget sensitivity (amendment of 11 November 2026): 20 versus at most 40 epochs, "
                       "adaptive-gain pages, seeds 42--44.", "tab:s_long40", "lrcrll",
                       "Model & Max. epochs & Test macro AUROC & Validation & Selected epochs & Epochs run", body,
                       "Identical settings except the epoch budget (the cosine schedule spans the budget; early-stopping "
                       "patience 4 in both). Seed 42 of the 20-epoch CNN-only, CNN-LSTM, temporal-convolution and ViT runs "
-                      "was trained on a CPU; all 40-epoch runs on the GPU.", size="\scriptsize")
+                      "was trained on a CPU; all 40-epoch runs on the GPU.", size="\\scriptsize")
     rows = read_csv(AMENDMENT / "long40/hierarchical_test.csv")
     body, family = [], None
     for r in rows:
         if family is not None and r["family"] != family:
-            body.append("\midrule")
+            body.append("\\midrule")
         family = r["family"]
         names = [HEAD_NAMES[h] for h in r["comparison"].split(" - ")]
         body.append(" & ".join([esc(r["family"]), " $-$ ".join(names),
@@ -522,9 +522,9 @@ def table_long40():
                                 fmt_p(float(r["p_holm"]))]))
     second = longtable("Training-budget sensitivity: 40 minus 20 epochs per model, and the ten head pairs with each budget "
                        "(PTB-XL test, seeds 42--44).", "tab:s_long40_pairs", "llcr",
-                       "Family & Comparison & Difference [95\% CI] & $p$", body,
-                       "Difference in mean-over-seeds test macro AUROC; hierarchical seed $\times$ patient bootstrap "
-                       "(2{,}000 resamples), Holm within each family (5 or 10 comparisons).", size="\scriptsize")
+                       "Family & Comparison & Difference [95\\% CI] & $p$", body,
+                       "Difference in mean-over-seeds test macro AUROC; hierarchical seed $\\times$ patient bootstrap "
+                       "(2{,}000 resamples), Holm within each family (5 or 10 comparisons).", size="\\scriptsize")
     return first + "\n\n" + second
 
 # ---------------------------------------------------------------- text sections
@@ -611,7 +611,7 @@ def main():
 \renewcommand{\thesection}{S\arabic{section}}
 \setcounter{secnumdepth}{2}
 \title{Supplementary Information\\[4pt] \large """ + TITLE + r"""}
-\author{Miriam Istanboli and Mohamed Yousry Elgendi}
+\author{Miriam Istanboli and Mohamed Elgendi}
 \date{}
 \begin{document}
 \maketitle
