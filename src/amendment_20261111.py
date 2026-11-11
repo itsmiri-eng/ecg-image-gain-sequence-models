@@ -34,7 +34,9 @@ SEEDS = (42, 43, 44)
 RESNET = {"adaptive": "ptbxl_v2_resnet18_seed{}", "fixed": "ptbxl_v2_fg_resnet18_seed{}"}
 
 
-FAMILIES = ("ptbxl_v2", "ptbxl_v2_long40", "ptbxl_v2_resnet18", "ptbxl_cnn_lstm", "ptbxl_spatiotemporal", "ptbxl_hybrid_vit")
+FAMILIES = ("ptbxl_v2", "ptbxl_v2_fixedgain", "ptbxl_v2_long40", "ptbxl_v2_resnet18", "ptbxl_cnn_lstm",
+            "ptbxl_spatiotemporal", "ptbxl_hybrid_vit")
+FG_HEADS = ("cnn_pool", "cnn_lstm", "temporal_conv", "hybrid_vit")
 # The 20-epoch seed-42 runs of three heads are the original v1 runs, as in the paper (src/compare_heads_hierarchical.py)
 V1_SEED42 = {"cnn_lstm": "ptbxl_cnn_lstm_image_v1_seed42", "temporal_conv": "ptbxl_spatiotemporal_image_v1_seed42",
              "hybrid_vit": "ptbxl_hybrid_vit_image_v1_seed42"}
@@ -158,6 +160,48 @@ def analyze_long40(lines):
     lines += ["", "Hierarchical seed x patient bootstrap on the PTB-XL test fold (2,000 resamples), Holm within family.", "",
               "| Family | Comparison | Difference [95% CI] | Holm p |", "|---|---|---|---:|"]
     lines += [f"| {r['family']} | {r['comparison']} | {fmt(r)} |" for r in budget_rows + pair_rows + pair20]
+    lines.append("")
+
+
+# ---------------------------------------------------------------- fixed gain at 40 epochs (evening amendment)
+
+def analyze_fixedgain_long40(lines):
+    """docs/protocol_amendment_2026-11-11_fixedgain_long40.md: fixed - adaptive at 40 epochs, and 40 - 20 for fixed gain."""
+    out = OUT / "fixedgain_long40"
+    keys = {}
+    for head in FG_HEADS:
+        for seed in SEEDS:
+            keys[("fixed", 40, head, seed)] = f"ptbxl_v2_long40_fg_{head}_seed{seed}"
+            keys[("adaptive", 40, head, seed)] = f"ptbxl_v2_long40_{head}_seed{seed}"
+            keys[("fixed", 20, head, seed)] = f"ptbxl_v2_fg_{head}_seed{seed}"
+            keys[("adaptive", 20, head, seed)] = twenty_epoch_run(head, seed)
+    lines += ["## C. Fixed-gain training with 40 epochs (seeds 42-44)", ""]
+    missing = [run for run in keys.values() if not any((ROOT / "results" / f / run / "run.json").exists() for f in FAMILIES)]
+    if missing:
+        lines += [f"Incomplete: {len(missing)} runs missing ({', '.join(missing[:6])}...). Analysis postponed.", ""]
+        return
+    runs = [{"pages": pages, "budget": budget, "head": head, "seed": seed, **run_summary(run)}
+            for (pages, budget, head, seed), run in keys.items() if pages == "fixed" and budget == 40]
+    write_csv(out / "per_run.csv", runs)
+    y, probs, clusters = collect(keys)
+    table = lambda pages, budget, head: {s: probs[(pages, budget, head, s)] for s in SEEDS}
+    primary = with_holm([{"family": "fixed - adaptive, 40 epochs", "comparison": head, "metric": name,
+                          **ext.hierarchical_difference(y, table("adaptive", 40, head), table("fixed", 40, head), metric,
+                                                        list(SEEDS), clusters=clusters)}
+                         for head in FG_HEADS for name, metric in (("macro AUROC", macro), ("HYP AUROC", hyp))])
+    secondary = with_holm([{"family": "fixed gain, 40 - 20 epochs", "comparison": head, "metric": "macro AUROC",
+                            **ext.hierarchical_difference(y, table("fixed", 20, head), table("fixed", 40, head), macro,
+                                                          list(SEEDS), clusters=clusters)} for head in FG_HEADS])
+    descriptive = with_holm([{"family": "fixed - adaptive, 20 epochs (same seeds)", "comparison": head, "metric": name,
+                              **ext.hierarchical_difference(y, table("adaptive", 20, head), table("fixed", 20, head), metric,
+                                                            list(SEEDS), clusters=clusters)}
+                             for head in FG_HEADS for name, metric in (("macro AUROC", macro), ("HYP AUROC", hyp))])
+    write_csv(out / "hierarchical_test.csv", primary + secondary + descriptive)
+    lines += ["| Head | Seed | Selected epoch | Epochs run | Test macro AUROC |", "|---|---:|---:|---:|---:|"]
+    lines += [f"| {r['head']} | {r['seed']} | {r['selected_epoch']} | {r['epochs_run']} | {r['test_macro_auroc']:.4f} |" for r in runs]
+    lines += ["", "Hierarchical seed x patient bootstrap on the PTB-XL test fold (2,000 resamples), Holm within family.", "",
+              "| Family | Head | Metric | Difference [95% CI] | Holm p |", "|---|---|---|---|---:|"]
+    lines += [f"| {r['family']} | {r['comparison']} | {r['metric']} | {fmt(r)} |" for r in primary + secondary + descriptive]
     lines.append("")
 
 
@@ -305,6 +349,7 @@ def analyze():
              f"Protocol: {AMENDMENT}. PTB-XL fold 10 was observed before: exploratory sensitivity analyses.", ""]
     analyze_resnet(lines)
     analyze_long40(lines)
+    analyze_fixedgain_long40(lines)
     OUT.mkdir(parents=True, exist_ok=True)
     (OUT / "summary.md").write_text("\n".join(lines) + "\n", encoding="utf-8")
     print("\n".join(lines))
