@@ -15,6 +15,9 @@ Datasets: georgia (primary; training/georgia) and china (secondary; training/cha
 - infer: first checks that every model, as reloaded here, reproduces its saved PTB-XL validation probabilities;
   then decodes each external page once and runs every completed model on it. One inference per run and
   dataset, guarded by inference_state.json; never repeated.
+- infer-added: the same, only for completed runs that were added later under a dated amendment
+  (docs/protocol_amendment_2026-11-11_signal_seeds.md) and have no external result folder yet; refuses to
+  touch any run that already has one.
 - analyze: the frozen statistics (H1 head pairs, H2 fixed vs adaptive gain, H3 external minus PTB-XL test).
 Writes data/external/cache/<dataset>/, experiments/external/<dataset>/ and results/external/<dataset>/.
 """
@@ -414,6 +417,56 @@ def infer(dataset, device="cuda", tolerance=1e-3):
     print(f"{utc_now()} external inference complete: {len(runs)} runs x {len(rows)} records")
 
 
+def infer_added(dataset, device="cuda", tolerance=1e-3,
+                amendment="docs/protocol_amendment_2026-11-11_signal_seeds.md"):
+    """One inference for completed runs added after the first inference (dated amendment); never touches other runs."""
+    import torch
+    torch.backends.cuda.matmul.allow_tf32 = torch.backends.cudnn.allow_tf32 = False
+    check_freeze()
+    if not (ROOT / amendment).exists():
+        raise FileNotFoundError(f"Added runs need a dated amendment: {amendment}")
+    cache = cache_dir(dataset)
+    metadata = read_json(cache / "metadata.json")
+    if sha256_file(cache / "manifest.csv") != metadata["manifest_sha256"] or \
+            sha256_file(cache / "signals100.npy") != metadata["signals100_sha256"]:
+        raise ValueError("External cache changed since it was built")
+    out = result_dir(dataset)
+    runs = [r for r in completed_runs() if not (out / r[0]).exists()]
+    if not runs:
+        raise FileExistsError("No completed run without external inference")
+    models = load_models(runs, torch.device(device))
+    check = reproduction_check(runs, models, torch.device(device))
+    write_json(experiment_dir(dataset) / f"reproduction_check_added_{utc_now()[:10]}.json",
+               {"checked_utc": utc_now(), "tolerance": tolerance, "amendment": amendment, "max_abs_difference": check})
+    failed = {k: v for k, v in check.items() if v > tolerance}
+    if failed:
+        raise ValueError(f"Reloaded models do not reproduce PTB-XL validation probabilities: {failed}")
+    with (cache / "manifest.csv").open(newline="") as handle:
+        rows = list(csv.DictReader(handle))
+    signals = np.load(cache / "signals100.npy")
+    for run_id, *_ in runs:
+        (out / run_id).mkdir(parents=True)
+        write_json(out / run_id / "inference_state.json", {"status": "started", "started_utc": utc_now(),
+                                                          "dataset": dataset, "inference_calls": 1, "amendment": amendment})
+    parts = {run_id: [] for run_id, *_ in runs}
+    for start in range(0, len(rows), 64):
+        batch = rows[start:start + 64]
+        name = [r["record"].replace("/", "__") for r in batch]
+        stacks = {page: np.stack([_decode(cache / page / f"{n}.png", r[f"{page}_pixel_sha256"]) for n, r in zip(name, batch)])
+                  for page in {r[3] for r in runs} & {"adaptive", "fixed"}}
+        for run_id, p in predict(models, runs, stacks, signals[start:start + 64], torch.device(device)).items():
+            parts[run_id].append(p)
+    for run_id, family, kind, page, head, seed in runs:
+        p = np.concatenate(parts[run_id])
+        write_csv(out / run_id / "predictions.csv", [{"record": r["record"], **{f"truth_{c}": r[f"label_{c}"] for c in CLASS_NAMES},
+                  **{f"probability_{c}": float(p[i, j]) for j, c in enumerate(CLASS_NAMES)}} for i, r in enumerate(rows)])
+        write_json(out / run_id / "inference_state.json", {"status": "completed", "completed_utc": utc_now(), "dataset": dataset,
+                   "inference_calls": 1, "records": len(rows), "family": family, "kind": kind, "page": page,
+                   "head": head, "seed": seed, "amendment": amendment,
+                   "predictions_sha256": sha256_file(out / run_id / "predictions.csv")})
+    print(f"{utc_now()} added external inference complete: {[r[0] for r in runs]} x {len(rows)} records")
+
+
 # ---------------------------------------------------------------- statistics
 
 def auroc(y, p):
@@ -545,7 +598,7 @@ def analyze(dataset):
 
 if __name__ == "__main__":
     parser = argparse.ArgumentParser(description=__doc__, formatter_class=argparse.RawDescriptionHelpFormatter)
-    parser.add_argument("step", choices=["inventory", "render", "infer", "analyze"])
+    parser.add_argument("step", choices=["inventory", "render", "infer", "infer-added", "analyze"])
     parser.add_argument("--dataset", choices=list(DATASETS), required=True)
     parser.add_argument("--workers", type=int, default=3)
     parser.add_argument("--device", default="cuda")
@@ -556,5 +609,7 @@ if __name__ == "__main__":
         render(arguments.dataset, arguments.workers)
     elif arguments.step == "infer":
         infer(arguments.dataset, arguments.device)
+    elif arguments.step == "infer-added":
+        infer_added(arguments.dataset, arguments.device)
     else:
         analyze(arguments.dataset)

@@ -1,0 +1,14 @@
+{
+  "status": "completed",
+  "completed_utc": "2026-11-10T21:05:34.883383+00:00",
+  "dataset": "georgia",
+  "inference_calls": 1,
+  "records": 6047,
+  "family": "ptbxl_signal",
+  "kind": "signal",
+  "page": "signal",
+  "head": "resnet1d_wang",
+  "seed": 46,
+  "amendment": "docs/protocol_amendment_2026-11-11_signal_seeds.md",
+  "predictions_sha256": "b33749c55bcc550eac3e3a517212198840bfb70c40cfd848cf0fdfadb14b93c0"
+}

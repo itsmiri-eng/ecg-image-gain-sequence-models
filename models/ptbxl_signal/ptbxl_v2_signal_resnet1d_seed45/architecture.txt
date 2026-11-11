@@ -1,0 +1,62 @@
+ResNet1dWang(
+  (blocks): Sequential(
+    (0): _Block(
+      (body): Sequential(
+        (0): Conv1d(12, 64, kernel_size=(8,), stride=(1,), padding=same, bias=False)
+        (1): BatchNorm1d(64, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+        (2): ReLU()
+        (3): Conv1d(64, 64, kernel_size=(5,), stride=(1,), padding=same, bias=False)
+        (4): BatchNorm1d(64, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+        (5): ReLU()
+        (6): Conv1d(64, 64, kernel_size=(3,), stride=(1,), padding=same, bias=False)
+        (7): BatchNorm1d(64, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      )
+      (shortcut): Sequential(
+        (0): Conv1d(12, 64, kernel_size=(1,), stride=(1,), bias=False)
+        (1): BatchNorm1d(64, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      )
+      (relu): ReLU()
+    )
+    (1): _Block(
+      (body): Sequential(
+        (0): Conv1d(64, 128, kernel_size=(8,), stride=(1,), padding=same, bias=False)
+        (1): BatchNorm1d(128, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+        (2): ReLU()
+        (3): Conv1d(128, 128, kernel_size=(5,), stride=(1,), padding=same, bias=False)
+        (4): BatchNorm1d(128, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+        (5): ReLU()
+        (6): Conv1d(128, 128, kernel_size=(3,), stride=(1,), padding=same, bias=False)
+        (7): BatchNorm1d(128, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      )
+      (shortcut): Sequential(
+        (0): Conv1d(64, 128, kernel_size=(1,), stride=(1,), bias=False)
+        (1): BatchNorm1d(128, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      )
+      (relu): ReLU()
+    )
+    (2): _Block(
+      (body): Sequential(
+        (0): Conv1d(128, 128, kernel_size=(8,), stride=(1,), padding=same, bias=False)
+        (1): BatchNorm1d(128, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+        (2): ReLU()
+        (3): Conv1d(128, 128, kernel_size=(5,), stride=(1,), padding=same, bias=False)
+        (4): BatchNorm1d(128, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+        (5): ReLU()
+        (6): Conv1d(128, 128, kernel_size=(3,), stride=(1,), padding=same, bias=False)
+        (7): BatchNorm1d(128, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      )
+      (shortcut): Identity()
+      (relu): ReLU()
+    )
+  )
+  (head): Sequential(
+    (0): AdaptiveAvgPool1d(output_size=1)
+    (1): Flatten(start_dim=1, end_dim=-1)
+    (2): Dropout(p=0.2, inplace=False)
+    (3): Linear(in_features=128, out_features=5, bias=True)
+  )
+)
+
+Parameters: 509,573
+Maximize validation macro ROC-AUC, then macro average precision, then minimize probability BCE; earliest exact tie
+Unweighted BCE; no class weighting, augmentation or pretrained weights.

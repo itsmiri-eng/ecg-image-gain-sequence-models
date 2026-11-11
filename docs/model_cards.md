@@ -69,6 +69,8 @@ All models: PTB-XL v1.0.3, official patient folds (1-8 train, 9 validation, 10 t
 | ptbxl_signal | ptbxl_v2_signal_resnet1d_seed42 | 42 | 509,573 | cuda | 19 (15) | 0.9321 | 0.9291 |
 | ptbxl_signal | ptbxl_v2_signal_resnet1d_seed43 | 43 | 509,573 | cuda | 16 (12) | 0.9307 | 0.9280 |
 | ptbxl_signal | ptbxl_v2_signal_resnet1d_seed44 | 44 | 509,573 | cuda | 16 (12) | 0.9313 | 0.9277 |
+| ptbxl_signal | ptbxl_v2_signal_resnet1d_seed45 | 45 | 509,573 | cuda | 16 (12) | 0.9307 | 0.9251 |
+| ptbxl_signal | ptbxl_v2_signal_resnet1d_seed46 | 46 | 509,573 | cuda | 14 (10) | 0.9318 | 0.9274 |
 | ptbxl_cnn_lstm | ptbxl_cnn_lstm_image_v1_seed42 |  | 18,025 | cpu | 19 (15) | 0.8816 | 0.8698 |
 | ptbxl_spatiotemporal | ptbxl_spatiotemporal_image_v1_seed42 |  | 17,161 | cpu | 20 (16) | 0.8889 | 0.8803 |
 | ptbxl_hybrid_vit | ptbxl_hybrid_vit_image_v1_seed42 |  | 23,881 | cpu | 20 (19) | 0.9016 | 0.8902 |

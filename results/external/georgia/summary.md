@@ -76,6 +76,8 @@ Eligible labels: STTC, CD, HYP. Frozen plan: docs/external_test_plan.md.
 | ptbxl_v2_signal_resnet1d_seed42 | signal | 42 | 0.7873 | 0.9216 | -0.1343 |
 | ptbxl_v2_signal_resnet1d_seed43 | signal | 43 | 0.7876 | 0.9206 | -0.1330 |
 | ptbxl_v2_signal_resnet1d_seed44 | signal | 44 | 0.7896 | 0.9196 | -0.1300 |
+| ptbxl_v2_signal_resnet1d_seed45 | signal | 45 | 0.7831 | 0.9163 | -0.1331 |
+| ptbxl_v2_signal_resnet1d_seed46 | signal | 46 | 0.7866 | 0.9191 | -0.1325 |
 | ptbxl_v2_svm_seed42 | adaptive | 42 | 0.6671 | 0.7909 | -0.1239 |
 | ptbxl_v2_temporal_conv_seed43 | adaptive | 43 | 0.7062 | 0.8699 | -0.1637 |
 | ptbxl_v2_temporal_conv_seed44 | adaptive | 44 | 0.7105 | 0.8760 | -0.1655 |

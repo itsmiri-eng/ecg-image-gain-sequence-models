@@ -1,0 +1,9 @@
+{
+  "checked_utc": "2026-11-10T21:05:33.691242+00:00",
+  "tolerance": 0.001,
+  "amendment": "docs/protocol_amendment_2026-11-11_signal_seeds.md",
+  "max_abs_difference": {
+    "ptbxl_v2_signal_resnet1d_seed45": 1.6093254089355469e-06,
+    "ptbxl_v2_signal_resnet1d_seed46": 1.8775463104248047e-06
+  }
+}

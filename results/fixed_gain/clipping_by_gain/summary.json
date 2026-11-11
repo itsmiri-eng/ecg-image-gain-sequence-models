@@ -1,0 +1,38 @@
+{
+  "created_utc": "2026-11-11T08:08:17.705797+00:00",
+  "ecgs": 21388,
+  "rule": "a sample clips when it falls outside its lead's 30-mm row (src.ptbxl_fixed_gain.fixed_gain_geometry)",
+  "check": "2.5 mm/mV counts reproduce clipped_point_count of the fixed-gain cache for every ECG",
+  "by_gain": {
+    "2.5": {
+      "pages_with_any_clipping": 154,
+      "percent_of_pages": 0.7200299233214887,
+      "by_split": {
+        "train": 121,
+        "validation": 17,
+        "test": 16
+      },
+      "hyp_positive_pages_with_clipping": 47
+    },
+    "5": {
+      "pages_with_any_clipping": 2541,
+      "percent_of_pages": 11.880493734804563,
+      "by_split": {
+        "train": 2031,
+        "validation": 251,
+        "test": 259
+      },
+      "hyp_positive_pages_with_clipping": 1033
+    },
+    "10": {
+      "pages_with_any_clipping": 16494,
+      "percent_of_pages": 77.11801009912101,
+      "by_split": {
+        "train": 13168,
+        "validation": 1657,
+        "test": 1669
+      },
+      "hyp_positive_pages_with_clipping": 2516
+    }
+  }
+}

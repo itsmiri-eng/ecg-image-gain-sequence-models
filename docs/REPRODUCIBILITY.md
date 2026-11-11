@@ -63,6 +63,7 @@ python -X utf8 -m src.external_test inventory --dataset georgia            # the
 python -X utf8 -m src.external_test render --dataset georgia --workers 2
 python -X utf8 -m src.external_test infer --dataset georgia --device cuda
 python -X utf8 -m src.external_test analyze --dataset georgia             # repeat the four steps with --dataset china
+python -X utf8 -m src.external_test infer-added --dataset georgia --device cuda  # runs added later by amendment only (signal seeds 45/46)
 
 # analyses from saved predictions (no retraining)
 python -X utf8 -m src.compare_heads_hierarchical                           # five-seed head comparison, Holm-corrected
@@ -75,6 +76,11 @@ python -X utf8 -m src.analyze_saliency --device cuda
 python -X utf8 -m src.analyze_pulse_swap --device cuda
 python -X utf8 -m src.decompose_pulse_effect
 python -X utf8 -m src.make_model_cards
+python -X utf8 -m src.count_gain_clipping --workers 2                      # pages needing clipping at 2.5/5/10 mm/mV
+python -X utf8 -m src.make_paper_tables                                    # manuscript tables (after make_paper_figures)
+python -X utf8 -m src.make_supplementary                                   # Supplementary Information (Scientific Reports)
+python -X utf8 -m src.make_tripod_checklist                                # TRIPOD+AI checklist (.md and .docx)
+python -X utf8 paper/ieee_manuscript/build_overleaf.py scirep              # static checks + overleaf_scirep.zip
 
 # tests (synthetic data only)
 python -X utf8 -m pytest -q tests
@@ -89,6 +95,7 @@ python -X utf8 -m pytest -q tests
 | `docs/secondary_analyses_protocol.md` | Calibration, thresholds, saliency, pulse swap |
 | `docs/protocol_amendment_2026-11-03.md` | Seeds 45/46, capacity-matched head, multiple-comparison correction |
 | `docs/external_test_plan.md` | External confirmatory test (frozen 5 Nov 2026; amendment 6 Nov in `experiments/external/amendments.json`) |
+| `docs/protocol_amendment_2026-11-11_signal_seeds.md` | Signal-reference seeds 45/46 and their descriptive external inference |
 
 Post-hoc analyses say so in their file headers, for example `src/decompose_pulse_effect.py`.
 

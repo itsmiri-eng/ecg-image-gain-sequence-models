@@ -277,6 +277,54 @@ Mean external macro AUROC, adaptive / fixed gain:
 - `src/external_test.py` gained the checksum-exclusion status and patient-cluster resampling after the Georgia cache was built. The rendering functions were unchanged.
 - Tests: 239 passed, 3 skipped.
 
+## Addendum, 11 November 2026: pre-submission fixes (ethics, Supplementary, gain survey, signal seeds)
+
+Answers four points from a reviewer-style read of the manuscript. Two further points (the 40-epoch sensitivity and a
+pretrained ResNet-18) belong to the separate amendment `docs/protocol_amendment_2026-11-11.md` and are not covered here.
+
+**Signal reference, seeds 45 and 46** (amendment `docs/protocol_amendment_2026-11-11_signal_seeds.md`, written before
+the runs). Same frozen config, runner, trainer (source snapshots hash-identical to seed 44) and GPU as seeds 42–44.
+
+| Seed | Selected epoch (of run) | Validation macro AUROC | Test macro AUROC |
+|---|---|---:|---:|
+| 45 | 12 (16) | 0.9307 | 0.9251 |
+| 46 | 10 (14) | 0.9318 | 0.9274 |
+
+- Five-seed test macro AUROC 0.927 ± 0.001 (three seeds: 0.928 ± 0.001). The signal model always stopped early
+  (selected epoch 10–15), unlike the image networks.
+- External inference ran once per cohort through the new guarded step `src.external_test infer-added`, after the
+  reloaded models reproduced their PTB-XL validation probabilities (max difference 1.9e-6). Georgia 0.787 ± 0.002 and
+  China 0.855 ± 0.005 (three seeds: 0.788 and 0.856). Re-running `analyze` reproduced `hypotheses.csv` byte for byte
+  in both cohorts: H1 and H2 are unchanged.
+- Calibration tables re-run from saved predictions: only the two new rows were added; all other rows identical.
+
+**Selected epoch (reported, not changed).** Image networks chose epoch 18–20 of 20 in 17 of 25 adaptive-gain runs and
+13 of 20 fixed-gain runs, and in every CNN-only and capacity-matched run (Supplementary Table S6). Now stated in the
+Limitations with numbers.
+
+**Fixed gain 2.5 mm/mV: why** (`src/count_gain_clipping.py`, imports the unchanged renderer; its 2.5 mm/mV counts
+reproduce the fixed-gain cache for every ECG). Pages needing any clipping: 154 (0.7%) at 2.5, 2,541 (11.9%) at 5 and
+16,494 (77.1%) at 10 mm/mV, including 47, 1,033 and 2,516 of the 2,649 HYP-positive ECGs. The protocol had chosen 2.5 as
+the largest power-of-two gain at which ≥98% of training pages fit the row band.
+
+**How public ECG-image resources set the gain** (`docs/gain_policy_survey_2026-11-11.md`, primary sources with
+URL and line/section). ECG-Image-Kit draws at a fixed 10 mm/mV (code), so the Challenge 2024 images inherit it; the
+`ecg-plot` 0.2.8 library used by Sangha et al. draws at one fixed scale (~10.16 mm/mV); the other resources do not state
+it. No resource uses an amplitude-dependent gain. Manuals describing automatic gain on electrocardiographs could not be
+opened (bot checks) and are not cited.
+- Found while checking: Kligfield et al. 2007, cited for "10 mm/mV with a 1-mV pulse", does not state that. Replaced
+  by Hancock et al. 2009 (AHA part V: "10 mm equals 1 mV") and the ECG-Image-Kit paper (§3.1). The unsupported claim
+  that printers "commonly" reduce the gain was removed.
+
+**Ethics.** Verified from the sources: PTB-XL publication approved by the Institutional Ethics Committee
+(PTB-2020-1) with pseudonymized metadata; Chapman-Shaoxing and Ningbo IRBs approved, waived consent and allowed public
+sharing after de-identification; all data CC BY 4.0. No ethics statement was found for the Georgia database; that and
+the authors' institutional determination are left as placeholders.
+
+**Supplementary Information and TRIPOD+AI.** `src/make_supplementary.py` writes `supplementary_scirep.tex` (13 tables,
+model cards, amendments; compiled on Overleaf: 10 pages, no errors). `src/make_tripod_checklist.py` writes the
+checklist (.md and .docx; 52 items: 23 addressed, 16 partly, 6 not addressed, 7 not applicable).
+
 ## Manuscript boundaries and unresolved work
 
 The current evidence supports a reproducible, exploratory benchmark of compact classifiers on two separately defined image tasks. It does not establish a novel architecture, a universal best ECG model, external transfer, causal physiological timing, calibrated digitization or clinical readiness. Additional renderings of an existing patient's signals are not independent patients. The historical manuscript's claims and conflicting archived figures cannot be copied into these result tables.

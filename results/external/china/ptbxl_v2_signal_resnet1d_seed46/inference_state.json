@@ -1,0 +1,14 @@
+{
+  "status": "completed",
+  "completed_utc": "2026-11-10T21:06:09.081152+00:00",
+  "dataset": "china",
+  "inference_calls": 1,
+  "records": 9004,
+  "family": "ptbxl_signal",
+  "kind": "signal",
+  "page": "signal",
+  "head": "resnet1d_wang",
+  "seed": 46,
+  "amendment": "docs/protocol_amendment_2026-11-11_signal_seeds.md",
+  "predictions_sha256": "fd3b53f4cc31327893ed45dcd0e1034472f923edb526ac86b80d5bb0bb2fee56"
+}
