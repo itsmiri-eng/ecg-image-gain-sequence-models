@@ -32,7 +32,8 @@ Protocol: `docs/protocol_amendment_2026-11-11.md`, frozen and committed before a
     Limitations and Conclusion now say so. The gain findings are unaffected but were not re-tested at 40 epochs.
   - Supplementary Tables S16–S17.
 - **Overleaf** is updated: main.tex compiles without errors; the supplement has the new section, card and amendment.
-  Tests: see the end of this update.
+  Tests: 251 passed, 3 skipped. Both builds (`build_overleaf.py`, with and without `scirep`): 0 problems.
+  Abstracts: Scientific Reports 198 words, IEEE 249.
 - The PC restarted on 11 Nov 07:46 local and ended the paused 40-epoch runs in epoch 1. They were moved to
   `experiments/abandoned_runs/2026-11-11_pc_restart_long40/` and restarted from scratch under the same IDs.
 - The author name on Overleaf was changed to "Mohamed Elgendi" (an edit made on Overleaf). Kept in every source.
