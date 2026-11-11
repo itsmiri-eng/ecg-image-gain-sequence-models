@@ -1,5 +1,42 @@
 # Project status — 1 November 2026 (evening update)
 
+## Update 11 November 2026 (evening): ResNet-18 and 40-epoch sensitivity (amendment of 11 Nov)
+
+Protocol: `docs/protocol_amendment_2026-11-11.md`, frozen and committed before any run. Analysis:
+`python -X utf8 -m src.amendment_20261111 analyze` → `results/amendment_20261111/summary.md`.
+
+- **ImageNet-pretrained ResNet-18** (`src/models/ptbxl_resnet18.py`, 11.2M parameters, seeds 42–44, bfloat16 forward
+  pass; weights `models/pretrained/resnet18-f37072fd.pth`, downloaded with permission, not versioned).
+  - PTB-XL test macro AUROC: 0.921 ± 0.001 adaptive, 0.929 ± 0.002 fixed gain, level with the signal model (0.927).
+  - Fixed − adaptive on PTB-XL: +0.008 [0.004, 0.013] macro, +0.022 [0.009, 0.035] HYP (Holm p ≤ 0.001).
+  - External (one inference per run and cohort, after exact reproduction of validation probabilities):
+    - Georgia: 0.773 adaptive, 0.779 fixed.
+    - China: 0.848 adaptive, 0.853 fixed.
+    - Fixed − adaptive is positive for every metric, but not significant after Holm (p = 0.08–0.30).
+  - In the paper as a new Results subsection, extra rows in Tables 1, 3 and 4, a row in Fig. 4, Supplementary
+    Tables S14–S15, Methods, Limitations and the abstract.
+- **40-epoch sensitivity** (15 runs: five adaptive-gain heads × seeds 42–44, at most 40 epochs, otherwise identical;
+  all finished 11 Nov 21:50 local):
+  - Test macro AUROC at 40 vs 20 epochs (same seeds):
+    - CNN-only 0.845 vs 0.829;
+    - capacity-matched 0.884 vs 0.865;
+    - LSTM 0.891 vs 0.879;
+    - temporal conv 0.891 vs 0.879;
+    - ViT 0.891 vs 0.888.
+  - Longer training helped every head except the ViT (+0.012 to +0.019, Holm p < 0.001; ViT +0.003, p = 0.32).
+  - **The sequence-modelling advantage halved.** At 40 epochs, LSTM / temporal conv / ViT minus capacity-matched
+    were +0.007 / +0.008 / +0.008. All 95% CIs exclude 0, but after Holm only temporal conv is significant
+    (p = 0.024; LSTM and ViT p = 0.105). At 20 epochs, the same seeds gave +0.014 to +0.023.
+  - The three sequence heads are indistinguishable at 40 epochs (all 0.891).
+  - By the prespecified interpretation rule, the claim is weakened. The abstract, Results, Discussion,
+    Limitations and Conclusion now say so. The gain findings are unaffected but were not re-tested at 40 epochs.
+  - Supplementary Tables S16–S17.
+- **Overleaf** is updated: main.tex compiles without errors; the supplement has the new section, card and amendment.
+  Tests: see the end of this update.
+- The PC restarted on 11 Nov 07:46 local and ended the paused 40-epoch runs in epoch 1. They were moved to
+  `experiments/abandoned_runs/2026-11-11_pc_restart_long40/` and restarted from scratch under the same IDs.
+- The author name on Overleaf was changed to "Mohamed Elgendi" (an edit made on Overleaf). Kept in every source.
+
 ## Update 11 November 2026 (later): pre-submission fixes
 
 From the reviewer-style read (prompt `docs/prompt_quick_fixes_2026-11-11.md`), points 2, 3, 5 and 6 are done.

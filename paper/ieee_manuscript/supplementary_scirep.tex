@@ -699,7 +699,80 @@ China & HYP AUROC & +0.012 [$-$0.007, +0.030] & 0.302 \\
 {\footnotesize PTB-XL: hierarchical seed $\times$ patient bootstrap, Holm over 2 comparisons. External cohorts: seed $\times$ record bootstrap, Holm over the 4 cohort $\times$ metric comparisons. 2{,}000 resamples, seed 2024. Prespecified in the amendment of 11 November 2026, after the frozen external plan; not part of the confirmatory hypotheses H1 and H2.\par}
 \medskip
 
-The 40-epoch sensitivity runs had not all completed when this document was generated; results will be added when they finish.
+\begingroup\scriptsize
+\setlength{\tabcolsep}{3pt}
+\begin{longtable}{lrcrll}
+\caption{Training-budget sensitivity (amendment of 11 November 2026): 20 versus at most 40 epochs, adaptive-gain pages, seeds 42--44.}\label{tab:s_long40}\\
+\toprule
+Model & Max. epochs & Test macro AUROC & Validation & Selected epochs & Epochs run \\
+\midrule
+\endfirsthead
+\toprule
+Model & Max. epochs & Test macro AUROC & Validation & Selected epochs & Epochs run \\
+\midrule
+\endhead
+\bottomrule
+\endfoot
+CNN-only & 20 & 0.829 $\pm$ 0.005 & 0.841 & 19 20 19 & 20 20 20 \\
+CNN-only & 40 & 0.845 $\pm$ 0.003 & 0.858 & 33 37 36 & 37 40 40 \\
+CNN-only, capacity-m. & 20 & 0.865 $\pm$ 0.003 & 0.876 & 20 20 18 & 20 20 20 \\
+CNN-only, capacity-m. & 40 & 0.884 $\pm$ 0.001 & 0.892 & 37 31 35 & 40 35 39 \\
+CNN-LSTM & 20 & 0.879 $\pm$ 0.008 & 0.893 & 15 16 18 & 19 20 20 \\
+CNN-LSTM & 40 & 0.891 $\pm$ 0.003 & 0.903 & 27 26 28 & 31 30 32 \\
+CNN + temporal conv. & 20 & 0.879 $\pm$ 0.001 & 0.887 & 16 19 20 & 20 20 20 \\
+CNN + temporal conv. & 40 & 0.891 $\pm$ 0.002 & 0.899 & 29 35 30 & 33 39 34 \\
+CNN + small ViT & 20 & 0.888 $\pm$ 0.002 & 0.898 & 19 18 13 & 20 20 17 \\
+CNN + small ViT & 40 & 0.891 $\pm$ 0.006 & 0.900 & 15 30 21 & 19 34 25 \\
+\end{longtable}
+\endgroup
+{\footnotesize Identical settings except the epoch budget (the cosine schedule spans the budget; early-stopping patience 4 in both). Seed 42 of the 20-epoch CNN-only, CNN-LSTM, temporal-convolution and ViT runs was trained on a CPU; all 40-epoch runs on the GPU.\par}
+\medskip
+
+\begingroup\scriptsize
+\setlength{\tabcolsep}{3pt}
+\begin{longtable}{llcr}
+\caption{Training-budget sensitivity: 40 minus 20 epochs per model, and the ten head pairs with each budget (PTB-XL test, seeds 42--44).}\label{tab:s_long40_pairs}\\
+\toprule
+Family & Comparison & Difference [95\% CI] & $p$ \\
+\midrule
+\endfirsthead
+\toprule
+Family & Comparison & Difference [95\% CI] & $p$ \\
+\midrule
+\endhead
+\bottomrule
+\endfoot
+40 - 20 epochs & CNN-only & +0.016 [+0.011, +0.020] & $<$0.001 \\
+40 - 20 epochs & CNN-only, capacity-m. & +0.019 [+0.015, +0.022] & $<$0.001 \\
+40 - 20 epochs & CNN-LSTM & +0.012 [+0.005, +0.021] & $<$0.001 \\
+40 - 20 epochs & CNN + temporal conv. & +0.012 [+0.008, +0.016] & $<$0.001 \\
+40 - 20 epochs & CNN + small ViT & +0.003 [$-$0.003, +0.009] & 0.321 \\
+\midrule
+head pairs, 40 epochs & CNN-only, capacity-m. $-$ CNN-only & +0.039 [+0.032, +0.046] & $<$0.001 \\
+head pairs, 40 epochs & CNN-LSTM $-$ CNN-only & +0.046 [+0.038, +0.055] & $<$0.001 \\
+head pairs, 40 epochs & CNN + temporal conv. $-$ CNN-only & +0.047 [+0.039, +0.053] & $<$0.001 \\
+head pairs, 40 epochs & CNN + small ViT $-$ CNN-only & +0.046 [+0.038, +0.055] & $<$0.001 \\
+head pairs, 40 epochs & CNN-LSTM $-$ CNN-only, capacity-m. & +0.007 [+0.001, +0.013] & 0.105 \\
+head pairs, 40 epochs & CNN + temporal conv. $-$ CNN-only, capacity-m. & +0.008 [+0.003, +0.013] & 0.024 \\
+head pairs, 40 epochs & CNN + small ViT $-$ CNN-only, capacity-m. & +0.008 [+0.001, +0.015] & 0.105 \\
+head pairs, 40 epochs & CNN + temporal conv. $-$ CNN-LSTM & +0.000 [$-$0.006, +0.008] & 1.000 \\
+head pairs, 40 epochs & CNN + small ViT $-$ CNN-LSTM & +0.000 [$-$0.008, +0.010] & 1.000 \\
+head pairs, 40 epochs & CNN + small ViT $-$ CNN + temporal conv. & $-$0.000 [$-$0.006, +0.005] & 1.000 \\
+\midrule
+head pairs, 20 epochs (same seeds) & CNN-only, capacity-m. $-$ CNN-only & +0.036 [+0.028, +0.043] & $<$0.001 \\
+head pairs, 20 epochs (same seeds) & CNN-LSTM $-$ CNN-only & +0.050 [+0.035, +0.063] & $<$0.001 \\
+head pairs, 20 epochs (same seeds) & CNN + temporal conv. $-$ CNN-only & +0.050 [+0.043, +0.057] & $<$0.001 \\
+head pairs, 20 epochs (same seeds) & CNN + small ViT $-$ CNN-only & +0.059 [+0.051, +0.067] & $<$0.001 \\
+head pairs, 20 epochs (same seeds) & CNN-LSTM $-$ CNN-only, capacity-m. & +0.014 [+0.003, +0.024] & 0.042 \\
+head pairs, 20 epochs (same seeds) & CNN + temporal conv. $-$ CNN-only, capacity-m. & +0.014 [+0.009, +0.020] & $<$0.001 \\
+head pairs, 20 epochs (same seeds) & CNN + small ViT $-$ CNN-only, capacity-m. & +0.023 [+0.017, +0.029] & $<$0.001 \\
+head pairs, 20 epochs (same seeds) & CNN + temporal conv. $-$ CNN-LSTM & +0.000 [$-$0.009, +0.011] & 0.949 \\
+head pairs, 20 epochs (same seeds) & CNN + small ViT $-$ CNN-LSTM & +0.009 [$-$0.001, +0.021] & 0.150 \\
+head pairs, 20 epochs (same seeds) & CNN + small ViT $-$ CNN + temporal conv. & +0.009 [+0.004, +0.014] & 0.004 \\
+\end{longtable}
+\endgroup
+{\footnotesize Difference in mean-over-seeds test macro AUROC; hierarchical seed $\times$ patient bootstrap (2{,}000 resamples), Holm within each family (5 or 10 comparisons).\par}
+\medskip
 
 \section{Model cards}
 
@@ -884,7 +957,7 @@ the main analysis (2,000 resamples, seed 2024, seeds then patients, Holm over 10
 \item \textbf{Interpretation rule.}
 \begin{itemize}
 \item If every sequence head still exceeds the capacity-matched head (Holm-adjusted p < 0.05), the claim
-"relating columns helps beyond capacity" is robust to the training budget.
+``relating columns helps beyond capacity'' is robust to the training budget.
 \item If a gap shrinks below significance or reverses, the manuscript reports this and weakens the claim
 accordingly.
 \item Either outcome is reported.
@@ -959,7 +1032,7 @@ analysis, not as part of the confirmatory H1/H2.
 \item Any run interrupted by the time limit, a sign-out or a restart is moved to \nolinkurl{experiments/abandoned_runs/}
 with a README and reported. It is never resumed.
 \item A run interrupted after its test inference started is never repeated.
-\item *Clarification, 11 Nov 08:10 UTC, after the PC restart.* A run interrupted before checkpoint selection and
+\item \textbf{Clarification, 11 Nov 08:10 UTC, after the PC restart.} A run interrupted before checkpoint selection and
 test inference is restarted from scratch under the same ID, as on 1--6 Nov.
 \begin{itemize}
 \item This applied to three 40-epoch seed-42 runs stopped in epoch 1:
@@ -969,6 +1042,12 @@ test inference is restarted from scratch under the same ID, as on 1--6 Nov.
 \end{itemize}
 \item \textbf{Hardware:} processes run hidden at Idle priority, limited to 8 logical CPUs overnight and 2 from 15:00.
 Runtimes are therefore not speed measurements.
+\begin{itemize}
+\item \textbf{What happened (recorded 11 Nov, evening).} The six ResNet-18 runs finished overnight on 8 logical CPUs, by
+11 Nov 03:00 UTC. The PC was then free until 22:00 local time, so the 40-epoch runs used 10 logical CPUs from
+08:05 UTC and 11 from 08:50 UTC (about 70\% of the processor, as the user allowed). Hardware limits do not change
+any result.
+\end{itemize}
 \item \textbf{Known limitations:}
 \begin{itemize}
 \item three seeds only;

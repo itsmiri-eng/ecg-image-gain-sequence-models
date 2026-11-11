@@ -1,0 +1,250 @@
+C:\Users\miria\ecg swiss\.venv\Lib\site-packages\torch\autograd\graph.py:841: UserWarning: Memory Efficient attention defaults to a non-deterministic algorithm. To explicitly enable determinism call torch.use_deterministic_algorithms(True, warn_only=False). (Triggered internally at C:\actions-runner\_work\pytorch\pytorch\pytorch\aten\src\ATen\native\transformers\cuda\attention_backward.cu:899.)
+  return Variable._execution_engine.run_backward(  # Calls into the C++ engine to run the backward pass
+C:\Users\miria\ecg swiss\.venv\Lib\site-packages\torch\autograd\graph.py:841: UserWarning: adaptive_avg_pool2d_backward_cuda does not have a deterministic implementation, but you set 'torch.use_deterministic_algorithms(True, warn_only=True)'. You can file an issue at https://github.com/pytorch/pytorch/issues to help us prioritize adding deterministic support for this operation. (Triggered internally at C:\actions-runner\_work\pytorch\pytorch\pytorch\aten\src\ATen\Context.cpp:152.)
+  return Variable._execution_engine.run_backward(  # Calls into the C++ engine to run the backward pass
+2026-11-11T08:04:53+00:00 hybrid_vit epoch 1/40 batch 1/1068 train_bce=0.71763 seconds=2.1
+2026-11-11T08:05:50+00:00 hybrid_vit epoch 1/40 batch 200/1068 train_bce=0.53679 seconds=59.2
+2026-11-11T08:06:49+00:00 hybrid_vit epoch 1/40 batch 400/1068 train_bce=0.50890 seconds=118.1
+2026-11-11T08:07:56+00:00 hybrid_vit epoch 1/40 batch 600/1068 train_bce=0.49368 seconds=185.5
+2026-11-11T08:09:02+00:00 hybrid_vit epoch 1/40 batch 800/1068 train_bce=0.48386 seconds=251.3
+2026-11-11T08:10:07+00:00 hybrid_vit epoch 1/40 batch 1000/1068 train_bce=0.47514 seconds=317.0
+2026-11-11T08:10:30+00:00 hybrid_vit epoch 1/40 batch 1068/1068 train_bce=0.47179 seconds=339.6
+2026-11-11T08:10:30+00:00 predict:validation batch 1/135 seconds=0.3
+2026-11-11T08:11:08+00:00 predict:validation batch 135/135 seconds=37.5
+2026-11-11T08:11:08+00:00 hybrid_vit epoch 1/40 train_bce=0.47179 val_bce=0.43361 val_macro_auc=0.79959 val_macro_ap=0.57024 selected=True seconds=377.1
+C:\Users\miria\ecg swiss\.venv\Lib\site-packages\torch\autograd\graph.py:841: UserWarning: adaptive_avg_pool2d_backward_cuda does not have a deterministic implementation, but you set 'torch.use_deterministic_algorithms(True, warn_only=True)'. You can file an issue at https://github.com/pytorch/pytorch/issues to help us prioritize adding deterministic support for this operation. (Triggered internally at C:\actions-runner\_work\pytorch\pytorch\pytorch\aten\src\ATen\Context.cpp:152.)
+  return Variable._execution_engine.run_backward(  # Calls into the C++ engine to run the backward pass
+2026-11-11T08:11:08+00:00 hybrid_vit epoch 2/40 batch 1/1068 train_bce=0.43239 seconds=0.4
+2026-11-11T08:12:12+00:00 hybrid_vit epoch 2/40 batch 200/1068 train_bce=0.42669 seconds=64.8
+2026-11-11T08:13:17+00:00 hybrid_vit epoch 2/40 batch 400/1068 train_bce=0.42303 seconds=129.3
+2026-11-11T08:14:21+00:00 hybrid_vit epoch 2/40 batch 600/1068 train_bce=0.41991 seconds=193.9
+2026-11-11T08:15:26+00:00 hybrid_vit epoch 2/40 batch 800/1068 train_bce=0.41783 seconds=258.9
+2026-11-11T08:16:30+00:00 hybrid_vit epoch 2/40 batch 1000/1068 train_bce=0.41576 seconds=322.2
+2026-11-11T08:16:51+00:00 hybrid_vit epoch 2/40 batch 1068/1068 train_bce=0.41510 seconds=343.0
+2026-11-11T08:16:51+00:00 predict:validation batch 1/135 seconds=0.3
+2026-11-11T08:17:29+00:00 predict:validation batch 135/135 seconds=38.5
+2026-11-11T08:17:29+00:00 hybrid_vit epoch 2/40 train_bce=0.41510 val_bce=0.38649 val_macro_auc=0.83367 val_macro_ap=0.62063 selected=True seconds=381.5
+C:\Users\miria\ecg swiss\.venv\Lib\site-packages\torch\autograd\graph.py:841: UserWarning: adaptive_avg_pool2d_backward_cuda does not have a deterministic implementation, but you set 'torch.use_deterministic_algorithms(True, warn_only=True)'. You can file an issue at https://github.com/pytorch/pytorch/issues to help us prioritize adding deterministic support for this operation. (Triggered internally at C:\actions-runner\_work\pytorch\pytorch\pytorch\aten\src\ATen\Context.cpp:152.)
+  return Variable._execution_engine.run_backward(  # Calls into the C++ engine to run the backward pass
+2026-11-11T08:17:29+00:00 hybrid_vit epoch 3/40 batch 1/1068 train_bce=0.45283 seconds=0.4
+2026-11-11T08:18:33+00:00 hybrid_vit epoch 3/40 batch 200/1068 train_bce=0.39211 seconds=63.5
+2026-11-11T08:19:37+00:00 hybrid_vit epoch 3/40 batch 400/1068 train_bce=0.39028 seconds=127.7
+2026-11-11T08:20:41+00:00 hybrid_vit epoch 3/40 batch 600/1068 train_bce=0.38881 seconds=191.9
+2026-11-11T08:21:45+00:00 hybrid_vit epoch 3/40 batch 800/1068 train_bce=0.38716 seconds=255.7
+2026-11-11T08:22:47+00:00 hybrid_vit epoch 3/40 batch 1000/1068 train_bce=0.38645 seconds=317.8
+2026-11-11T08:23:07+00:00 hybrid_vit epoch 3/40 batch 1068/1068 train_bce=0.38530 seconds=338.1
+2026-11-11T08:23:07+00:00 predict:validation batch 1/135 seconds=0.3
+2026-11-11T08:23:44+00:00 predict:validation batch 135/135 seconds=37.3
+2026-11-11T08:23:44+00:00 hybrid_vit epoch 3/40 train_bce=0.38530 val_bce=0.37773 val_macro_auc=0.86251 val_macro_ap=0.67389 selected=True seconds=375.4
+C:\Users\miria\ecg swiss\.venv\Lib\site-packages\torch\autograd\graph.py:841: UserWarning: adaptive_avg_pool2d_backward_cuda does not have a deterministic implementation, but you set 'torch.use_deterministic_algorithms(True, warn_only=True)'. You can file an issue at https://github.com/pytorch/pytorch/issues to help us prioritize adding deterministic support for this operation. (Triggered internally at C:\actions-runner\_work\pytorch\pytorch\pytorch\aten\src\ATen\Context.cpp:152.)
+  return Variable._execution_engine.run_backward(  # Calls into the C++ engine to run the backward pass
+2026-11-11T08:23:45+00:00 hybrid_vit epoch 4/40 batch 1/1068 train_bce=0.29012 seconds=0.3
+2026-11-11T08:24:48+00:00 hybrid_vit epoch 4/40 batch 200/1068 train_bce=0.37791 seconds=64.0
+2026-11-11T08:25:52+00:00 hybrid_vit epoch 4/40 batch 400/1068 train_bce=0.37198 seconds=127.7
+2026-11-11T08:26:57+00:00 hybrid_vit epoch 4/40 batch 600/1068 train_bce=0.36858 seconds=192.3
+2026-11-11T08:28:02+00:00 hybrid_vit epoch 4/40 batch 800/1068 train_bce=0.36565 seconds=257.7
+2026-11-11T08:29:05+00:00 hybrid_vit epoch 4/40 batch 1000/1068 train_bce=0.36498 seconds=320.3
+2026-11-11T08:29:26+00:00 hybrid_vit epoch 4/40 batch 1068/1068 train_bce=0.36358 seconds=341.4
+2026-11-11T08:29:26+00:00 predict:validation batch 1/135 seconds=0.2
+2026-11-11T08:30:02+00:00 predict:validation batch 135/135 seconds=35.9
+2026-11-11T08:30:02+00:00 hybrid_vit epoch 4/40 train_bce=0.36358 val_bce=0.36616 val_macro_auc=0.87225 val_macro_ap=0.69962 selected=True seconds=377.3
+C:\Users\miria\ecg swiss\.venv\Lib\site-packages\torch\autograd\graph.py:841: UserWarning: adaptive_avg_pool2d_backward_cuda does not have a deterministic implementation, but you set 'torch.use_deterministic_algorithms(True, warn_only=True)'. You can file an issue at https://github.com/pytorch/pytorch/issues to help us prioritize adding deterministic support for this operation. (Triggered internally at C:\actions-runner\_work\pytorch\pytorch\pytorch\aten\src\ATen\Context.cpp:152.)
+  return Variable._execution_engine.run_backward(  # Calls into the C++ engine to run the backward pass
+2026-11-11T08:30:02+00:00 hybrid_vit epoch 5/40 batch 1/1068 train_bce=0.36701 seconds=0.3
+2026-11-11T08:31:07+00:00 hybrid_vit epoch 5/40 batch 200/1068 train_bce=0.35913 seconds=65.3
+2026-11-11T08:32:05+00:00 hybrid_vit epoch 5/40 batch 400/1068 train_bce=0.36046 seconds=123.2
+2026-11-11T08:33:01+00:00 hybrid_vit epoch 5/40 batch 600/1068 train_bce=0.35807 seconds=178.9
+2026-11-11T08:33:57+00:00 hybrid_vit epoch 5/40 batch 800/1068 train_bce=0.35343 seconds=235.5
+2026-11-11T08:34:52+00:00 hybrid_vit epoch 5/40 batch 1000/1068 train_bce=0.35015 seconds=290.5
+2026-11-11T08:35:11+00:00 hybrid_vit epoch 5/40 batch 1068/1068 train_bce=0.35040 seconds=309.2
+2026-11-11T08:35:11+00:00 predict:validation batch 1/135 seconds=0.3
+2026-11-11T08:35:47+00:00 predict:validation batch 135/135 seconds=35.8
+2026-11-11T08:35:47+00:00 hybrid_vit epoch 5/40 train_bce=0.35040 val_bce=0.35305 val_macro_auc=0.87357 val_macro_ap=0.70667 selected=True seconds=345.1
+C:\Users\miria\ecg swiss\.venv\Lib\site-packages\torch\autograd\graph.py:841: UserWarning: adaptive_avg_pool2d_backward_cuda does not have a deterministic implementation, but you set 'torch.use_deterministic_algorithms(True, warn_only=True)'. You can file an issue at https://github.com/pytorch/pytorch/issues to help us prioritize adding deterministic support for this operation. (Triggered internally at C:\actions-runner\_work\pytorch\pytorch\pytorch\aten\src\ATen\Context.cpp:152.)
+  return Variable._execution_engine.run_backward(  # Calls into the C++ engine to run the backward pass
+2026-11-11T08:35:47+00:00 hybrid_vit epoch 6/40 batch 1/1068 train_bce=0.35293 seconds=0.3
+2026-11-11T08:36:43+00:00 hybrid_vit epoch 6/40 batch 200/1068 train_bce=0.34505 seconds=56.2
+2026-11-11T08:37:40+00:00 hybrid_vit epoch 6/40 batch 400/1068 train_bce=0.34241 seconds=113.1
+2026-11-11T08:38:36+00:00 hybrid_vit epoch 6/40 batch 600/1068 train_bce=0.34101 seconds=169.4
+2026-11-11T08:39:33+00:00 hybrid_vit epoch 6/40 batch 800/1068 train_bce=0.33980 seconds=226.3
+2026-11-11T08:40:27+00:00 hybrid_vit epoch 6/40 batch 1000/1068 train_bce=0.33999 seconds=280.2
+2026-11-11T08:40:46+00:00 hybrid_vit epoch 6/40 batch 1068/1068 train_bce=0.33965 seconds=299.6
+2026-11-11T08:40:47+00:00 predict:validation batch 1/135 seconds=0.3
+2026-11-11T08:41:23+00:00 predict:validation batch 135/135 seconds=36.8
+2026-11-11T08:41:23+00:00 hybrid_vit epoch 6/40 train_bce=0.33965 val_bce=0.34298 val_macro_auc=0.88384 val_macro_ap=0.72498 selected=True seconds=336.4
+C:\Users\miria\ecg swiss\.venv\Lib\site-packages\torch\autograd\graph.py:841: UserWarning: adaptive_avg_pool2d_backward_cuda does not have a deterministic implementation, but you set 'torch.use_deterministic_algorithms(True, warn_only=True)'. You can file an issue at https://github.com/pytorch/pytorch/issues to help us prioritize adding deterministic support for this operation. (Triggered internally at C:\actions-runner\_work\pytorch\pytorch\pytorch\aten\src\ATen\Context.cpp:152.)
+  return Variable._execution_engine.run_backward(  # Calls into the C++ engine to run the backward pass
+2026-11-11T08:41:23+00:00 hybrid_vit epoch 7/40 batch 1/1068 train_bce=0.28275 seconds=0.3
+2026-11-11T08:42:20+00:00 hybrid_vit epoch 7/40 batch 200/1068 train_bce=0.32629 seconds=56.8
+2026-11-11T08:43:16+00:00 hybrid_vit epoch 7/40 batch 400/1068 train_bce=0.33430 seconds=112.4
+2026-11-11T08:44:12+00:00 hybrid_vit epoch 7/40 batch 600/1068 train_bce=0.33163 seconds=168.8
+2026-11-11T08:45:07+00:00 hybrid_vit epoch 7/40 batch 800/1068 train_bce=0.33347 seconds=223.5
+2026-11-11T08:46:03+00:00 hybrid_vit epoch 7/40 batch 1000/1068 train_bce=0.33180 seconds=280.0
+2026-11-11T08:46:22+00:00 hybrid_vit epoch 7/40 batch 1068/1068 train_bce=0.33222 seconds=299.0
+2026-11-11T08:46:23+00:00 predict:validation batch 1/135 seconds=0.3
+2026-11-11T08:46:55+00:00 predict:validation batch 135/135 seconds=33.2
+2026-11-11T08:46:55+00:00 hybrid_vit epoch 7/40 train_bce=0.33222 val_bce=0.37441 val_macro_auc=0.88287 val_macro_ap=0.72714 selected=False seconds=332.2
+C:\Users\miria\ecg swiss\.venv\Lib\site-packages\torch\autograd\graph.py:841: UserWarning: adaptive_avg_pool2d_backward_cuda does not have a deterministic implementation, but you set 'torch.use_deterministic_algorithms(True, warn_only=True)'. You can file an issue at https://github.com/pytorch/pytorch/issues to help us prioritize adding deterministic support for this operation. (Triggered internally at C:\actions-runner\_work\pytorch\pytorch\pytorch\aten\src\ATen\Context.cpp:152.)
+  return Variable._execution_engine.run_backward(  # Calls into the C++ engine to run the backward pass
+2026-11-11T08:46:56+00:00 hybrid_vit epoch 8/40 batch 1/1068 train_bce=0.30088 seconds=0.2
+2026-11-11T08:47:52+00:00 hybrid_vit epoch 8/40 batch 200/1068 train_bce=0.32264 seconds=56.1
+2026-11-11T08:48:47+00:00 hybrid_vit epoch 8/40 batch 400/1068 train_bce=0.32227 seconds=111.9
+2026-11-11T08:49:43+00:00 hybrid_vit epoch 8/40 batch 600/1068 train_bce=0.32509 seconds=167.4
+2026-11-11T08:50:38+00:00 hybrid_vit epoch 8/40 batch 800/1068 train_bce=0.32703 seconds=222.4
+2026-11-11T08:51:33+00:00 hybrid_vit epoch 8/40 batch 1000/1068 train_bce=0.32561 seconds=277.5
+2026-11-11T08:51:52+00:00 hybrid_vit epoch 8/40 batch 1068/1068 train_bce=0.32520 seconds=296.5
+2026-11-11T08:51:52+00:00 predict:validation batch 1/135 seconds=0.3
+2026-11-11T08:52:25+00:00 predict:validation batch 135/135 seconds=33.5
+2026-11-11T08:52:25+00:00 hybrid_vit epoch 8/40 train_bce=0.32520 val_bce=0.34159 val_macro_auc=0.88857 val_macro_ap=0.73533 selected=True seconds=330.0
+C:\Users\miria\ecg swiss\.venv\Lib\site-packages\torch\autograd\graph.py:841: UserWarning: adaptive_avg_pool2d_backward_cuda does not have a deterministic implementation, but you set 'torch.use_deterministic_algorithms(True, warn_only=True)'. You can file an issue at https://github.com/pytorch/pytorch/issues to help us prioritize adding deterministic support for this operation. (Triggered internally at C:\actions-runner\_work\pytorch\pytorch\pytorch\aten\src\ATen\Context.cpp:152.)
+  return Variable._execution_engine.run_backward(  # Calls into the C++ engine to run the backward pass
+2026-11-11T08:52:26+00:00 hybrid_vit epoch 9/40 batch 1/1068 train_bce=0.35704 seconds=0.3
+2026-11-11T08:53:22+00:00 hybrid_vit epoch 9/40 batch 200/1068 train_bce=0.31638 seconds=57.1
+2026-11-11T08:54:18+00:00 hybrid_vit epoch 9/40 batch 400/1068 train_bce=0.32197 seconds=113.1
+2026-11-11T08:55:14+00:00 hybrid_vit epoch 9/40 batch 600/1068 train_bce=0.32074 seconds=168.7
+2026-11-11T08:56:09+00:00 hybrid_vit epoch 9/40 batch 800/1068 train_bce=0.31988 seconds=223.7
+2026-11-11T08:57:06+00:00 hybrid_vit epoch 9/40 batch 1000/1068 train_bce=0.32127 seconds=280.7
+2026-11-11T08:57:24+00:00 hybrid_vit epoch 9/40 batch 1068/1068 train_bce=0.32182 seconds=299.1
+2026-11-11T08:57:25+00:00 predict:validation batch 1/135 seconds=0.3
+2026-11-11T08:58:01+00:00 predict:validation batch 135/135 seconds=36.2
+2026-11-11T08:58:01+00:00 hybrid_vit epoch 9/40 train_bce=0.32182 val_bce=0.34426 val_macro_auc=0.87918 val_macro_ap=0.72320 selected=False seconds=335.3
+C:\Users\miria\ecg swiss\.venv\Lib\site-packages\torch\autograd\graph.py:841: UserWarning: adaptive_avg_pool2d_backward_cuda does not have a deterministic implementation, but you set 'torch.use_deterministic_algorithms(True, warn_only=True)'. You can file an issue at https://github.com/pytorch/pytorch/issues to help us prioritize adding deterministic support for this operation. (Triggered internally at C:\actions-runner\_work\pytorch\pytorch\pytorch\aten\src\ATen\Context.cpp:152.)
+  return Variable._execution_engine.run_backward(  # Calls into the C++ engine to run the backward pass
+2026-11-11T08:58:01+00:00 hybrid_vit epoch 10/40 batch 1/1068 train_bce=0.29174 seconds=0.2
+2026-11-11T08:58:57+00:00 hybrid_vit epoch 10/40 batch 200/1068 train_bce=0.31261 seconds=56.1
+2026-11-11T08:59:54+00:00 hybrid_vit epoch 10/40 batch 400/1068 train_bce=0.31415 seconds=113.1
+2026-11-11T09:00:50+00:00 hybrid_vit epoch 10/40 batch 600/1068 train_bce=0.31663 seconds=169.6
+2026-11-11T09:01:47+00:00 hybrid_vit epoch 10/40 batch 800/1068 train_bce=0.31516 seconds=225.9
+2026-11-11T09:02:43+00:00 hybrid_vit epoch 10/40 batch 1000/1068 train_bce=0.31648 seconds=282.7
+2026-11-11T09:03:02+00:00 hybrid_vit epoch 10/40 batch 1068/1068 train_bce=0.31698 seconds=301.4
+2026-11-11T09:03:02+00:00 predict:validation batch 1/135 seconds=0.3
+2026-11-11T09:03:38+00:00 predict:validation batch 135/135 seconds=35.9
+2026-11-11T09:03:38+00:00 hybrid_vit epoch 10/40 train_bce=0.31698 val_bce=0.33524 val_macro_auc=0.89301 val_macro_ap=0.74011 selected=True seconds=337.3
+C:\Users\miria\ecg swiss\.venv\Lib\site-packages\torch\autograd\graph.py:841: UserWarning: adaptive_avg_pool2d_backward_cuda does not have a deterministic implementation, but you set 'torch.use_deterministic_algorithms(True, warn_only=True)'. You can file an issue at https://github.com/pytorch/pytorch/issues to help us prioritize adding deterministic support for this operation. (Triggered internally at C:\actions-runner\_work\pytorch\pytorch\pytorch\aten\src\ATen\Context.cpp:152.)
+  return Variable._execution_engine.run_backward(  # Calls into the C++ engine to run the backward pass
+2026-11-11T09:03:38+00:00 hybrid_vit epoch 11/40 batch 1/1068 train_bce=0.34425 seconds=0.2
+2026-11-11T09:04:35+00:00 hybrid_vit epoch 11/40 batch 200/1068 train_bce=0.31657 seconds=56.7
+2026-11-11T09:05:31+00:00 hybrid_vit epoch 11/40 batch 400/1068 train_bce=0.31827 seconds=113.2
+2026-11-11T09:06:27+00:00 hybrid_vit epoch 11/40 batch 600/1068 train_bce=0.31255 seconds=169.0
+2026-11-11T09:07:20+00:00 hybrid_vit epoch 11/40 batch 800/1068 train_bce=0.31124 seconds=221.8
+2026-11-11T09:08:15+00:00 hybrid_vit epoch 11/40 batch 1000/1068 train_bce=0.31292 seconds=277.1
+2026-11-11T09:08:34+00:00 hybrid_vit epoch 11/40 batch 1068/1068 train_bce=0.31198 seconds=296.4
+2026-11-11T09:08:35+00:00 predict:validation batch 1/135 seconds=0.3
+2026-11-11T09:09:11+00:00 predict:validation batch 135/135 seconds=36.5
+2026-11-11T09:09:11+00:00 hybrid_vit epoch 11/40 train_bce=0.31198 val_bce=0.33502 val_macro_auc=0.89515 val_macro_ap=0.74707 selected=True seconds=333.0
+C:\Users\miria\ecg swiss\.venv\Lib\site-packages\torch\autograd\graph.py:841: UserWarning: adaptive_avg_pool2d_backward_cuda does not have a deterministic implementation, but you set 'torch.use_deterministic_algorithms(True, warn_only=True)'. You can file an issue at https://github.com/pytorch/pytorch/issues to help us prioritize adding deterministic support for this operation. (Triggered internally at C:\actions-runner\_work\pytorch\pytorch\pytorch\aten\src\ATen\Context.cpp:152.)
+  return Variable._execution_engine.run_backward(  # Calls into the C++ engine to run the backward pass
+2026-11-11T09:09:11+00:00 hybrid_vit epoch 12/40 batch 1/1068 train_bce=0.39349 seconds=0.2
+2026-11-11T09:10:07+00:00 hybrid_vit epoch 12/40 batch 200/1068 train_bce=0.30498 seconds=56.2
+2026-11-11T09:11:04+00:00 hybrid_vit epoch 12/40 batch 400/1068 train_bce=0.31416 seconds=112.5
+2026-11-11T09:12:00+00:00 hybrid_vit epoch 12/40 batch 600/1068 train_bce=0.31152 seconds=169.0
+2026-11-11T09:12:54+00:00 hybrid_vit epoch 12/40 batch 800/1068 train_bce=0.31149 seconds=223.4
+2026-11-11T09:13:52+00:00 hybrid_vit epoch 12/40 batch 1000/1068 train_bce=0.31052 seconds=281.0
+2026-11-11T09:14:11+00:00 hybrid_vit epoch 12/40 batch 1068/1068 train_bce=0.30992 seconds=300.3
+2026-11-11T09:14:12+00:00 predict:validation batch 1/135 seconds=0.3
+2026-11-11T09:14:49+00:00 predict:validation batch 135/135 seconds=37.3
+2026-11-11T09:14:49+00:00 hybrid_vit epoch 12/40 train_bce=0.30992 val_bce=0.33893 val_macro_auc=0.89665 val_macro_ap=0.74639 selected=True seconds=337.5
+C:\Users\miria\ecg swiss\.venv\Lib\site-packages\torch\autograd\graph.py:841: UserWarning: adaptive_avg_pool2d_backward_cuda does not have a deterministic implementation, but you set 'torch.use_deterministic_algorithms(True, warn_only=True)'. You can file an issue at https://github.com/pytorch/pytorch/issues to help us prioritize adding deterministic support for this operation. (Triggered internally at C:\actions-runner\_work\pytorch\pytorch\pytorch\aten\src\ATen\Context.cpp:152.)
+  return Variable._execution_engine.run_backward(  # Calls into the C++ engine to run the backward pass
+2026-11-11T09:14:49+00:00 hybrid_vit epoch 13/40 batch 1/1068 train_bce=0.32225 seconds=0.4
+2026-11-11T09:15:46+00:00 hybrid_vit epoch 13/40 batch 200/1068 train_bce=0.31336 seconds=57.2
+2026-11-11T09:16:43+00:00 hybrid_vit epoch 13/40 batch 400/1068 train_bce=0.31191 seconds=114.3
+2026-11-11T09:17:38+00:00 hybrid_vit epoch 13/40 batch 600/1068 train_bce=0.30542 seconds=169.3
+2026-11-11T09:18:35+00:00 hybrid_vit epoch 13/40 batch 800/1068 train_bce=0.30457 seconds=226.0
+2026-11-11T09:19:31+00:00 hybrid_vit epoch 13/40 batch 1000/1068 train_bce=0.30641 seconds=282.4
+2026-11-11T09:19:50+00:00 hybrid_vit epoch 13/40 batch 1068/1068 train_bce=0.30608 seconds=301.4
+2026-11-11T09:19:50+00:00 predict:validation batch 1/135 seconds=0.3
+2026-11-11T09:20:26+00:00 predict:validation batch 135/135 seconds=36.6
+2026-11-11T09:20:26+00:00 hybrid_vit epoch 13/40 train_bce=0.30608 val_bce=0.35011 val_macro_auc=0.89293 val_macro_ap=0.74442 selected=False seconds=337.9
+C:\Users\miria\ecg swiss\.venv\Lib\site-packages\torch\autograd\graph.py:841: UserWarning: adaptive_avg_pool2d_backward_cuda does not have a deterministic implementation, but you set 'torch.use_deterministic_algorithms(True, warn_only=True)'. You can file an issue at https://github.com/pytorch/pytorch/issues to help us prioritize adding deterministic support for this operation. (Triggered internally at C:\actions-runner\_work\pytorch\pytorch\pytorch\aten\src\ATen\Context.cpp:152.)
+  return Variable._execution_engine.run_backward(  # Calls into the C++ engine to run the backward pass
+2026-11-11T09:20:27+00:00 hybrid_vit epoch 14/40 batch 1/1068 train_bce=0.37497 seconds=0.3
+2026-11-11T09:21:23+00:00 hybrid_vit epoch 14/40 batch 200/1068 train_bce=0.31068 seconds=56.1
+2026-11-11T09:22:19+00:00 hybrid_vit epoch 14/40 batch 400/1068 train_bce=0.30253 seconds=112.3
+2026-11-11T09:23:15+00:00 hybrid_vit epoch 14/40 batch 600/1068 train_bce=0.30280 seconds=169.0
+2026-11-11T09:24:13+00:00 hybrid_vit epoch 14/40 batch 800/1068 train_bce=0.30197 seconds=226.6
+2026-11-11T09:25:10+00:00 hybrid_vit epoch 14/40 batch 1000/1068 train_bce=0.30282 seconds=283.6
+2026-11-11T09:25:29+00:00 hybrid_vit epoch 14/40 batch 1068/1068 train_bce=0.30330 seconds=302.8
+2026-11-11T09:25:30+00:00 predict:validation batch 1/135 seconds=0.3
+2026-11-11T09:26:03+00:00 predict:validation batch 135/135 seconds=33.5
+2026-11-11T09:26:03+00:00 hybrid_vit epoch 14/40 train_bce=0.30330 val_bce=0.35849 val_macro_auc=0.89243 val_macro_ap=0.74073 selected=False seconds=336.4
+C:\Users\miria\ecg swiss\.venv\Lib\site-packages\torch\autograd\graph.py:841: UserWarning: adaptive_avg_pool2d_backward_cuda does not have a deterministic implementation, but you set 'torch.use_deterministic_algorithms(True, warn_only=True)'. You can file an issue at https://github.com/pytorch/pytorch/issues to help us prioritize adding deterministic support for this operation. (Triggered internally at C:\actions-runner\_work\pytorch\pytorch\pytorch\aten\src\ATen\Context.cpp:152.)
+  return Variable._execution_engine.run_backward(  # Calls into the C++ engine to run the backward pass
+2026-11-11T09:26:03+00:00 hybrid_vit epoch 15/40 batch 1/1068 train_bce=0.26179 seconds=0.2
+2026-11-11T09:26:57+00:00 hybrid_vit epoch 15/40 batch 200/1068 train_bce=0.29834 seconds=54.2
+2026-11-11T09:27:53+00:00 hybrid_vit epoch 15/40 batch 400/1068 train_bce=0.29839 seconds=110.2
+2026-11-11T09:28:49+00:00 hybrid_vit epoch 15/40 batch 600/1068 train_bce=0.30101 seconds=166.3
+2026-11-11T09:29:45+00:00 hybrid_vit epoch 15/40 batch 800/1068 train_bce=0.30011 seconds=222.4
+2026-11-11T09:30:41+00:00 hybrid_vit epoch 15/40 batch 1000/1068 train_bce=0.30067 seconds=278.3
+2026-11-11T09:31:00+00:00 hybrid_vit epoch 15/40 batch 1068/1068 train_bce=0.30049 seconds=297.5
+2026-11-11T09:31:01+00:00 predict:validation batch 1/135 seconds=0.2
+2026-11-11T09:31:36+00:00 predict:validation batch 135/135 seconds=36.1
+2026-11-11T09:31:36+00:00 hybrid_vit epoch 15/40 train_bce=0.30049 val_bce=0.33682 val_macro_auc=0.89778 val_macro_ap=0.75561 selected=True seconds=333.6
+C:\Users\miria\ecg swiss\.venv\Lib\site-packages\torch\autograd\graph.py:841: UserWarning: adaptive_avg_pool2d_backward_cuda does not have a deterministic implementation, but you set 'torch.use_deterministic_algorithms(True, warn_only=True)'. You can file an issue at https://github.com/pytorch/pytorch/issues to help us prioritize adding deterministic support for this operation. (Triggered internally at C:\actions-runner\_work\pytorch\pytorch\pytorch\aten\src\ATen\Context.cpp:152.)
+  return Variable._execution_engine.run_backward(  # Calls into the C++ engine to run the backward pass
+2026-11-11T09:31:37+00:00 hybrid_vit epoch 16/40 batch 1/1068 train_bce=0.21872 seconds=0.3
+2026-11-11T09:32:32+00:00 hybrid_vit epoch 16/40 batch 200/1068 train_bce=0.29776 seconds=55.1
+2026-11-11T09:33:28+00:00 hybrid_vit epoch 16/40 batch 400/1068 train_bce=0.29783 seconds=111.1
+2026-11-11T09:34:23+00:00 hybrid_vit epoch 16/40 batch 600/1068 train_bce=0.29685 seconds=166.2
+2026-11-11T09:35:19+00:00 hybrid_vit epoch 16/40 batch 800/1068 train_bce=0.29700 seconds=222.3
+2026-11-11T09:36:16+00:00 hybrid_vit epoch 16/40 batch 1000/1068 train_bce=0.29786 seconds=279.1
+2026-11-11T09:36:34+00:00 hybrid_vit epoch 16/40 batch 1068/1068 train_bce=0.29844 seconds=297.8
+2026-11-11T09:36:34+00:00 predict:validation batch 1/135 seconds=0.2
+2026-11-11T09:37:03+00:00 predict:validation batch 135/135 seconds=28.5
+2026-11-11T09:37:03+00:00 hybrid_vit epoch 16/40 train_bce=0.29844 val_bce=0.34631 val_macro_auc=0.89520 val_macro_ap=0.75103 selected=False seconds=326.3
+C:\Users\miria\ecg swiss\.venv\Lib\site-packages\torch\autograd\graph.py:841: UserWarning: adaptive_avg_pool2d_backward_cuda does not have a deterministic implementation, but you set 'torch.use_deterministic_algorithms(True, warn_only=True)'. You can file an issue at https://github.com/pytorch/pytorch/issues to help us prioritize adding deterministic support for this operation. (Triggered internally at C:\actions-runner\_work\pytorch\pytorch\pytorch\aten\src\ATen\Context.cpp:152.)
+  return Variable._execution_engine.run_backward(  # Calls into the C++ engine to run the backward pass
+2026-11-11T09:37:03+00:00 hybrid_vit epoch 17/40 batch 1/1068 train_bce=0.27740 seconds=0.2
+2026-11-11T09:37:59+00:00 hybrid_vit epoch 17/40 batch 200/1068 train_bce=0.29473 seconds=55.9
+2026-11-11T09:38:56+00:00 hybrid_vit epoch 17/40 batch 400/1068 train_bce=0.30005 seconds=113.6
+2026-11-11T09:39:52+00:00 hybrid_vit epoch 17/40 batch 600/1068 train_bce=0.29858 seconds=168.8
+2026-11-11T09:40:45+00:00 hybrid_vit epoch 17/40 batch 800/1068 train_bce=0.29665 seconds=222.0
+2026-11-11T09:41:42+00:00 hybrid_vit epoch 17/40 batch 1000/1068 train_bce=0.29765 seconds=278.8
+2026-11-11T09:42:00+00:00 hybrid_vit epoch 17/40 batch 1068/1068 train_bce=0.29725 seconds=297.7
+2026-11-11T09:42:01+00:00 predict:validation batch 1/135 seconds=0.3
+2026-11-11T09:42:38+00:00 predict:validation batch 135/135 seconds=37.3
+2026-11-11T09:42:38+00:00 hybrid_vit epoch 17/40 train_bce=0.29725 val_bce=0.33524 val_macro_auc=0.89752 val_macro_ap=0.75460 selected=False seconds=335.0
+C:\Users\miria\ecg swiss\.venv\Lib\site-packages\torch\autograd\graph.py:841: UserWarning: adaptive_avg_pool2d_backward_cuda does not have a deterministic implementation, but you set 'torch.use_deterministic_algorithms(True, warn_only=True)'. You can file an issue at https://github.com/pytorch/pytorch/issues to help us prioritize adding deterministic support for this operation. (Triggered internally at C:\actions-runner\_work\pytorch\pytorch\pytorch\aten\src\ATen\Context.cpp:152.)
+  return Variable._execution_engine.run_backward(  # Calls into the C++ engine to run the backward pass
+2026-11-11T09:42:38+00:00 hybrid_vit epoch 18/40 batch 1/1068 train_bce=0.38969 seconds=0.3
+2026-11-11T09:43:34+00:00 hybrid_vit epoch 18/40 batch 200/1068 train_bce=0.29453 seconds=56.7
+2026-11-11T09:44:32+00:00 hybrid_vit epoch 18/40 batch 400/1068 train_bce=0.29243 seconds=113.8
+2026-11-11T09:45:26+00:00 hybrid_vit epoch 18/40 batch 600/1068 train_bce=0.29233 seconds=168.0
+2026-11-11T09:46:20+00:00 hybrid_vit epoch 18/40 batch 800/1068 train_bce=0.29160 seconds=222.7
+2026-11-11T09:47:17+00:00 hybrid_vit epoch 18/40 batch 1000/1068 train_bce=0.29340 seconds=279.5
+2026-11-11T09:47:36+00:00 hybrid_vit epoch 18/40 batch 1068/1068 train_bce=0.29420 seconds=298.5
+2026-11-11T09:47:37+00:00 predict:validation batch 1/135 seconds=0.3
+2026-11-11T09:48:13+00:00 predict:validation batch 135/135 seconds=37.1
+2026-11-11T09:48:13+00:00 hybrid_vit epoch 18/40 train_bce=0.29420 val_bce=0.34472 val_macro_auc=0.89681 val_macro_ap=0.75135 selected=False seconds=335.7
+C:\Users\miria\ecg swiss\.venv\Lib\site-packages\torch\autograd\graph.py:841: UserWarning: adaptive_avg_pool2d_backward_cuda does not have a deterministic implementation, but you set 'torch.use_deterministic_algorithms(True, warn_only=True)'. You can file an issue at https://github.com/pytorch/pytorch/issues to help us prioritize adding deterministic support for this operation. (Triggered internally at C:\actions-runner\_work\pytorch\pytorch\pytorch\aten\src\ATen\Context.cpp:152.)
+  return Variable._execution_engine.run_backward(  # Calls into the C++ engine to run the backward pass
+2026-11-11T09:48:14+00:00 hybrid_vit epoch 19/40 batch 1/1068 train_bce=0.48366 seconds=0.3
+2026-11-11T09:49:09+00:00 hybrid_vit epoch 19/40 batch 200/1068 train_bce=0.29092 seconds=55.9
+2026-11-11T09:50:05+00:00 hybrid_vit epoch 19/40 batch 400/1068 train_bce=0.29370 seconds=111.8
+2026-11-11T09:51:01+00:00 hybrid_vit epoch 19/40 batch 600/1068 train_bce=0.29019 seconds=168.0
+2026-11-11T09:51:58+00:00 hybrid_vit epoch 19/40 batch 800/1068 train_bce=0.29138 seconds=224.2
+2026-11-11T09:52:54+00:00 hybrid_vit epoch 19/40 batch 1000/1068 train_bce=0.29207 seconds=280.9
+2026-11-11T09:53:13+00:00 hybrid_vit epoch 19/40 batch 1068/1068 train_bce=0.29185 seconds=299.9
+2026-11-11T09:53:14+00:00 predict:validation batch 1/135 seconds=0.2
+2026-11-11T09:53:48+00:00 predict:validation batch 135/135 seconds=35.1
+2026-11-11T09:53:48+00:00 hybrid_vit epoch 19/40 train_bce=0.29185 val_bce=0.33447 val_macro_auc=0.89687 val_macro_ap=0.74990 selected=False seconds=335.0
+2026-11-11T09:53:50+00:00 predict:train batch 1/1068 seconds=0.2
+2026-11-11T09:54:44+00:00 predict:train batch 200/1068 seconds=54.9
+2026-11-11T09:55:39+00:00 predict:train batch 400/1068 seconds=109.1
+2026-11-11T09:56:33+00:00 predict:train batch 600/1068 seconds=163.7
+2026-11-11T09:57:28+00:00 predict:train batch 800/1068 seconds=218.5
+2026-11-11T09:58:23+00:00 predict:train batch 1000/1068 seconds=273.1
+2026-11-11T09:58:41+00:00 predict:train batch 1068/1068 seconds=291.3
+2026-11-11T09:58:42+00:00 predict:validation batch 1/135 seconds=0.3
+2026-11-11T09:59:18+00:00 predict:validation batch 135/135 seconds=36.4
+2026-11-11T09:59:19+00:00 predict:replay batch 1/135 seconds=0.3
+2026-11-11T09:59:52+00:00 predict:replay batch 135/135 seconds=33.6
+2026-11-11T09:59:56+00:00 predict:test batch 1/135 seconds=0.3
+2026-11-11T10:00:37+00:00 predict:test batch 135/135 seconds=41.4
+{
+  "run_id": "ptbxl_v2_long40_hybrid_vit_seed42",
+  "status": "completed",
+  "test_macro_auc": 0.8882547103115845,
+  "test_macro_f1": 0.6626292076718784,
+  "runtime_seconds": 6962.085497099999
+}

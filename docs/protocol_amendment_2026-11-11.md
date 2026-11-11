@@ -38,7 +38,7 @@ analyses are **sensitivity analyses**. They do not replace the primary results r
      the main analysis (2,000 resamples, seed 2024, seeds then patients, Holm over 10 pairs), with seeds 42–44.
   4. **Interpretation rule.**
      - If every sequence head still exceeds the capacity-matched head (Holm-adjusted p < 0.05), the claim
-       "relating columns helps beyond capacity" is robust to the training budget.
+       “relating columns helps beyond capacity” is robust to the training budget.
      - If a gap shrinks below significance or reverses, the manuscript reports this and weakens the claim
        accordingly.
      - Either outcome is reported.
@@ -96,13 +96,17 @@ analyses are **sensitivity analyses**. They do not replace the primary results r
   - Any run interrupted by the time limit, a sign-out or a restart is moved to `experiments/abandoned_runs/`
     with a README and reported. It is never resumed.
   - A run interrupted after its test inference started is never repeated.
-  - *Clarification, 11 Nov 08:10 UTC, after the PC restart.* A run interrupted before checkpoint selection and
+  - **Clarification, 11 Nov 08:10 UTC, after the PC restart.** A run interrupted before checkpoint selection and
     test inference is restarted from scratch under the same ID, as on 1–6 Nov.
     - This applied to three 40-epoch seed-42 runs stopped in epoch 1:
       `experiments/abandoned_runs/2026-11-11_pc_restart_long40/`.
     - It is not a change of analysis.
 - **Hardware:** processes run hidden at Idle priority, limited to 8 logical CPUs overnight and 2 from 15:00.
   Runtimes are therefore not speed measurements.
+  - **What happened (recorded 11 Nov, evening).** The six ResNet-18 runs finished overnight on 8 logical CPUs, by
+    11 Nov 03:00 UTC. The PC was then free until 22:00 local time, so the 40-epoch runs used 10 logical CPUs from
+    08:05 UTC and 11 from 08:50 UTC (about 70% of the processor, as the user allowed). Hardware limits do not change
+    any result.
 - **Known limitations:**
   - three seeds only;
   - the external-test extension is outside the frozen plan;

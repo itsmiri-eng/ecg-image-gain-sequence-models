@@ -325,6 +325,53 @@ the authors' institutional determination are left as placeholders.
 model cards, amendments; compiled on Overleaf: 10 pages, no errors). `src/make_tripod_checklist.py` writes the
 checklist (.md and .docx; 52 items: 23 addressed, 16 partly, 6 not addressed, 7 not applicable).
 
+## Addendum, 11 November 2026 (evening): pretrained ResNet-18 and 40-epoch sensitivity
+
+Protocol `docs/protocol_amendment_2026-11-11.md`, frozen and committed (7232728) before any run. Runner
+`src/run_ptbxl_extra.py`; analysis `src/amendment_20261111.py` → `results/amendment_20261111/`. Both are
+sensitivity analyses, and the PTB-XL test fold is exploratory as always.
+
+**ImageNet-pretrained ResNet-18** (11.2M parameters; 12 rows stacked to 1440×1120, conv1 RGB filters summed;
+shared settings, bf16 forward pass; seeds 42–44).
+
+| Cohort | Adaptive | Fixed | Fixed − adaptive, macro [95% CI], Holm p | HYP difference, Holm p |
+|---|---:|---:|---|---|
+| PTB-XL test | 0.921 ± 0.001 | 0.929 ± 0.002 | +0.008 [0.004, 0.013], <0.001 | +0.022, 0.001 |
+| Georgia | 0.773 | 0.779 | +0.005 [0.000, 0.010], 0.147 | +0.011, 0.084 |
+| China | 0.848 | 0.853 | +0.004 [−0.001, 0.011], 0.302 | +0.012, 0.302 |
+
+- Selected epochs 7–10 of at most 20 (stopped early in every run), unlike the compact networks.
+- The reloaded models reproduced their validation probabilities exactly before their single external inference.
+- **Interpretation.** The gain effect holds for a standard pretrained backbone on PTB-XL. Externally it has the
+  same sign but is smaller and not significant. The pretrained ResNet-18 matches the signal model on PTB-XL (0.927)
+  and comes within 0.008 / 0.002 of it externally. The image–signal gap of the compact models therefore reflects
+  capacity and pretraining.
+
+**40-epoch sensitivity** (five adaptive-gain heads, seeds 42–44, max 40 epochs, patience 4, cosine over 40).
+
+| Head | 20 epochs | 40 epochs | Selected epochs (40) | 40 − 20 [95% CI], Holm p |
+|---|---:|---:|---|---|
+| CNN-only | 0.829 | 0.845 | 33, 37, 36 | +0.016 [0.011, 0.020], <0.001 |
+| Capacity-matched | 0.865 | 0.884 | 37, 31, 35 | +0.019 [0.015, 0.022], <0.001 |
+| CNN-LSTM | 0.879 | 0.891 | 27, 26, 28 | +0.012 [0.005, 0.021], <0.001 |
+| Temporal conv | 0.879 | 0.891 | 29, 35, 30 | +0.012 [0.008, 0.016], <0.001 |
+| Small ViT | 0.888 | 0.891 | 15, 30, 21 | +0.003 [−0.003, 0.009], 0.321 |
+
+- **Sequence head minus capacity-matched at 40 epochs:**
+  - LSTM +0.007 [0.001, 0.013], p = 0.105;
+  - temporal conv +0.008 [0.003, 0.013], p = 0.024;
+  - ViT +0.008 [0.001, 0.015], p = 0.105.
+  - The same seeds at 20 epochs gave +0.014 to +0.023, all significant.
+- The sequence heads are tied at 40 epochs (pairwise differences ≤ 0.0004).
+- **Interpretation (prespecified rule).** Not every sequence head stays significant, so the claim is weakened.
+  - Part of the 20-epoch advantage was slower convergence of the simpler heads.
+  - A small residual advantage (+0.007–0.008) remains, with CIs above zero.
+  - The external replication (H1) used 20-epoch models and was not repeated.
+  - The 20-epoch seed 42 of four heads was CPU-trained, while all 40-epoch runs were GPU-trained, so the
+    within-head 40 − 20 comparison mixes hardware for that seed.
+- **Execution.** The PC restarted on 11 Nov 07:46 local and ended three paused seed-42 runs in epoch 1 (moved to
+  `experiments/abandoned_runs/2026-11-11_pc_restart_long40/`, restarted from scratch under the same IDs, as on 1–6 Nov).
+
 ## Manuscript boundaries and unresolved work
 
 The current evidence supports a reproducible, exploratory benchmark of compact classifiers on two separately defined image tasks. It does not establish a novel architecture, a universal best ECG model, external transfer, causal physiological timing, calibrated digitization or clinical readiness. Additional renderings of an existing patient's signals are not independent patients. The historical manuscript's claims and conflicting archived figures cannot be copied into these result tables.

@@ -34,8 +34,18 @@ SEEDS = (42, 43, 44)
 RESNET = {"adaptive": "ptbxl_v2_resnet18_seed{}", "fixed": "ptbxl_v2_fg_resnet18_seed{}"}
 
 
+FAMILIES = ("ptbxl_v2", "ptbxl_v2_long40", "ptbxl_v2_resnet18", "ptbxl_cnn_lstm", "ptbxl_spatiotemporal", "ptbxl_hybrid_vit")
+# The 20-epoch seed-42 runs of three heads are the original v1 runs, as in the paper (src/compare_heads_hierarchical.py)
+V1_SEED42 = {"cnn_lstm": "ptbxl_cnn_lstm_image_v1_seed42", "temporal_conv": "ptbxl_spatiotemporal_image_v1_seed42",
+             "hybrid_vit": "ptbxl_hybrid_vit_image_v1_seed42"}
+
+
+def twenty_epoch_run(head, seed):
+    return V1_SEED42[head] if seed == 42 and head in V1_SEED42 else f"ptbxl_v2_{head}_seed{seed}"
+
+
 def run_dir(run_id):
-    matches = [p.parent for p in (ROOT / "results").glob(f"*/{run_id}/run.json")]
+    matches = [ROOT / "results" / f / run_id for f in FAMILIES if (ROOT / "results" / f / run_id / "run.json").exists()]
     if len(matches) != 1:
         raise FileNotFoundError(f"{run_id}: {len(matches)} completed runs found")
     return matches[0]
@@ -101,8 +111,8 @@ def analyze_long40(lines):
     runs = []
     for head in HEADS:
         for seed in SEEDS:
-            for budget, run_id in ((40, f"ptbxl_v2_long40_{head}_seed{seed}"), (20, f"ptbxl_v2_{head}_seed{seed}")):
-                if any((ROOT / "results").glob(f"*/{run_id}/run.json")):
+            for budget, run_id in ((40, f"ptbxl_v2_long40_{head}_seed{seed}"), (20, twenty_epoch_run(head, seed))):
+                if any((ROOT / "results" / f / run_id / "run.json").exists() for f in FAMILIES):
                     runs.append({"head": head, "seed": seed, "budget": budget, **run_summary(run_id)})
     write_csv(out / "per_run.csv", runs)
     missing = [f"{h}:{s}" for h in HEADS for s in SEEDS
@@ -130,7 +140,7 @@ def analyze_long40(lines):
               "|---|---:|---:|---:|---:|---|---|"]
     lines += [f"| {s['head']} | {s['budget']} | {s['test_mean']:.4f} ± {s['test_sd']:.4f} | {s['validation_mean']:.4f} | "
               f"{s['test_mean_gpu_only']:.4f} ({s['gpu_seeds']}) | {s['selected_epochs']} | {s['epochs_run']} |" for s in summary]
-    keys = {(h, b, s): (f"ptbxl_v2_long40_{h}_seed{s}" if b == 40 else f"ptbxl_v2_{h}_seed{s}")
+    keys = {(h, b, s): (f"ptbxl_v2_long40_{h}_seed{s}" if b == 40 else twenty_epoch_run(h, s))
             for h in HEADS for b in (20, 40) for s in SEEDS}
     y, probs, clusters = collect(keys)
     table = lambda head, budget: {s: probs[(head, budget, s)] for s in SEEDS}
