@@ -1,0 +1,140 @@
+2026-11-10T21:05:55+00:00 resnet18 epoch 1/20 batch 1/1068 train_bce=0.79563 seconds=3.2
+2026-11-10T21:09:48+00:00 resnet18 epoch 1/20 batch 200/1068 train_bce=0.41794 seconds=236.8
+2026-11-10T21:12:15+00:00 resnet18 epoch 1/20 batch 400/1068 train_bce=0.39562 seconds=383.2
+2026-11-10T21:14:32+00:00 resnet18 epoch 1/20 batch 600/1068 train_bce=0.37737 seconds=521.1
+2026-11-10T21:16:15+00:00 resnet18 epoch 1/20 batch 800/1068 train_bce=0.36745 seconds=623.6
+2026-11-10T21:17:57+00:00 resnet18 epoch 1/20 batch 1000/1068 train_bce=0.35920 seconds=725.5
+2026-11-10T21:18:32+00:00 resnet18 epoch 1/20 batch 1068/1068 train_bce=0.35630 seconds=760.6
+2026-11-10T21:18:32+00:00 predict:validation batch 1/135 seconds=0.3
+2026-11-10T21:19:08+00:00 predict:validation batch 135/135 seconds=36.5
+2026-11-10T21:19:09+00:00 resnet18 epoch 1/20 train_bce=0.35630 val_bce=0.33565 val_macro_auc=0.89137 val_macro_ap=0.74248 selected=True seconds=797.2
+2026-11-10T21:19:09+00:00 resnet18 epoch 2/20 batch 1/1068 train_bce=0.27912 seconds=0.5
+2026-11-10T21:20:49+00:00 resnet18 epoch 2/20 batch 200/1068 train_bce=0.30710 seconds=100.8
+2026-11-10T21:22:30+00:00 resnet18 epoch 2/20 batch 400/1068 train_bce=0.30833 seconds=201.5
+2026-11-10T21:24:22+00:00 resnet18 epoch 2/20 batch 600/1068 train_bce=0.30906 seconds=313.1
+2026-11-10T21:26:04+00:00 resnet18 epoch 2/20 batch 800/1068 train_bce=0.30796 seconds=415.3
+2026-11-10T21:27:45+00:00 resnet18 epoch 2/20 batch 1000/1068 train_bce=0.30712 seconds=516.2
+2026-11-10T21:28:20+00:00 resnet18 epoch 2/20 batch 1068/1068 train_bce=0.30730 seconds=551.4
+2026-11-10T21:28:20+00:00 predict:validation batch 1/135 seconds=0.2
+2026-11-10T21:28:57+00:00 predict:validation batch 135/135 seconds=37.2
+2026-11-10T21:28:57+00:00 resnet18 epoch 2/20 train_bce=0.30730 val_bce=0.33236 val_macro_auc=0.90797 val_macro_ap=0.75971 selected=True seconds=588.7
+2026-11-10T21:28:58+00:00 resnet18 epoch 3/20 batch 1/1068 train_bce=0.30713 seconds=0.5
+2026-11-10T21:30:39+00:00 resnet18 epoch 3/20 batch 200/1068 train_bce=0.29377 seconds=101.6
+2026-11-10T21:32:20+00:00 resnet18 epoch 3/20 batch 400/1068 train_bce=0.29162 seconds=202.9
+2026-11-10T21:34:02+00:00 resnet18 epoch 3/20 batch 600/1068 train_bce=0.29261 seconds=305.1
+2026-11-10T21:35:55+00:00 resnet18 epoch 3/20 batch 800/1068 train_bce=0.29092 seconds=417.8
+2026-11-10T21:37:37+00:00 resnet18 epoch 3/20 batch 1000/1068 train_bce=0.29193 seconds=519.7
+2026-11-10T21:38:12+00:00 resnet18 epoch 3/20 batch 1068/1068 train_bce=0.29097 seconds=554.5
+2026-11-10T21:38:12+00:00 predict:validation batch 1/135 seconds=0.2
+2026-11-10T21:38:48+00:00 predict:validation batch 135/135 seconds=36.6
+2026-11-10T21:38:48+00:00 resnet18 epoch 3/20 train_bce=0.29097 val_bce=0.32173 val_macro_auc=0.91364 val_macro_ap=0.77882 selected=True seconds=591.2
+2026-11-10T21:38:49+00:00 resnet18 epoch 4/20 batch 1/1068 train_bce=0.29218 seconds=0.8
+2026-11-10T21:40:30+00:00 resnet18 epoch 4/20 batch 200/1068 train_bce=0.29230 seconds=102.0
+2026-11-10T21:42:12+00:00 resnet18 epoch 4/20 batch 400/1068 train_bce=0.28387 seconds=203.3
+2026-11-10T21:43:53+00:00 resnet18 epoch 4/20 batch 600/1068 train_bce=0.28326 seconds=304.2
+2026-11-10T21:45:36+00:00 resnet18 epoch 4/20 batch 800/1068 train_bce=0.28028 seconds=408.0
+2026-11-10T21:47:25+00:00 resnet18 epoch 4/20 batch 1000/1068 train_bce=0.27997 seconds=517.1
+2026-11-10T21:48:00+00:00 resnet18 epoch 4/20 batch 1068/1068 train_bce=0.27943 seconds=551.6
+2026-11-10T21:48:00+00:00 predict:validation batch 1/135 seconds=0.3
+2026-11-10T21:48:37+00:00 predict:validation batch 135/135 seconds=37.2
+2026-11-10T21:48:37+00:00 resnet18 epoch 4/20 train_bce=0.27943 val_bce=0.30189 val_macro_auc=0.91966 val_macro_ap=0.79446 selected=True seconds=588.8
+2026-11-10T21:48:38+00:00 resnet18 epoch 5/20 batch 1/1068 train_bce=0.32048 seconds=0.5
+2026-11-10T21:50:19+00:00 resnet18 epoch 5/20 batch 200/1068 train_bce=0.26946 seconds=101.4
+2026-11-10T21:52:01+00:00 resnet18 epoch 5/20 batch 400/1068 train_bce=0.27346 seconds=203.7
+2026-11-10T21:53:43+00:00 resnet18 epoch 5/20 batch 600/1068 train_bce=0.27310 seconds=305.5
+2026-11-10T21:55:25+00:00 resnet18 epoch 5/20 batch 800/1068 train_bce=0.27057 seconds=407.8
+2026-11-10T21:57:11+00:00 resnet18 epoch 5/20 batch 1000/1068 train_bce=0.26775 seconds=514.0
+2026-11-10T21:57:50+00:00 resnet18 epoch 5/20 batch 1068/1068 train_bce=0.26855 seconds=552.9
+2026-11-10T21:57:50+00:00 predict:validation batch 1/135 seconds=0.3
+2026-11-10T21:58:27+00:00 predict:validation batch 135/135 seconds=37.2
+2026-11-10T21:58:27+00:00 resnet18 epoch 5/20 train_bce=0.26855 val_bce=0.30791 val_macro_auc=0.91845 val_macro_ap=0.79243 selected=False seconds=590.1
+2026-11-10T21:58:28+00:00 resnet18 epoch 6/20 batch 1/1068 train_bce=0.22660 seconds=0.7
+2026-11-10T22:00:09+00:00 resnet18 epoch 6/20 batch 200/1068 train_bce=0.25909 seconds=102.2
+2026-11-10T22:01:52+00:00 resnet18 epoch 6/20 batch 400/1068 train_bce=0.25898 seconds=204.8
+2026-11-10T22:03:33+00:00 resnet18 epoch 6/20 batch 600/1068 train_bce=0.25857 seconds=306.1
+2026-11-10T22:05:16+00:00 resnet18 epoch 6/20 batch 800/1068 train_bce=0.25850 seconds=408.9
+2026-11-10T22:06:58+00:00 resnet18 epoch 6/20 batch 1000/1068 train_bce=0.25927 seconds=510.4
+2026-11-10T22:07:32+00:00 resnet18 epoch 6/20 batch 1068/1068 train_bce=0.25916 seconds=545.0
+2026-11-10T22:07:32+00:00 predict:validation batch 1/135 seconds=0.2
+2026-11-10T22:08:09+00:00 predict:validation batch 135/135 seconds=37.1
+2026-11-10T22:08:09+00:00 resnet18 epoch 6/20 train_bce=0.25916 val_bce=0.30678 val_macro_auc=0.91739 val_macro_ap=0.79368 selected=False seconds=582.0
+2026-11-10T22:08:10+00:00 resnet18 epoch 7/20 batch 1/1068 train_bce=0.19092 seconds=0.6
+2026-11-10T22:09:56+00:00 resnet18 epoch 7/20 batch 200/1068 train_bce=0.24565 seconds=106.9
+2026-11-10T22:11:38+00:00 resnet18 epoch 7/20 batch 400/1068 train_bce=0.25036 seconds=208.6
+2026-11-10T22:13:21+00:00 resnet18 epoch 7/20 batch 600/1068 train_bce=0.24799 seconds=311.7
+2026-11-10T22:15:03+00:00 resnet18 epoch 7/20 batch 800/1068 train_bce=0.24890 seconds=414.0
+2026-11-10T22:16:46+00:00 resnet18 epoch 7/20 batch 1000/1068 train_bce=0.24949 seconds=516.6
+2026-11-10T22:17:21+00:00 resnet18 epoch 7/20 batch 1068/1068 train_bce=0.24909 seconds=551.6
+2026-11-10T22:17:21+00:00 predict:validation batch 1/135 seconds=0.2
+2026-11-10T22:17:58+00:00 predict:validation batch 135/135 seconds=36.8
+2026-11-10T22:17:58+00:00 resnet18 epoch 7/20 train_bce=0.24909 val_bce=0.28539 val_macro_auc=0.92414 val_macro_ap=0.80086 selected=True seconds=588.5
+2026-11-10T22:17:58+00:00 resnet18 epoch 8/20 batch 1/1068 train_bce=0.28526 seconds=0.5
+2026-11-10T22:19:49+00:00 resnet18 epoch 8/20 batch 200/1068 train_bce=0.23645 seconds=111.1
+2026-11-10T22:21:32+00:00 resnet18 epoch 8/20 batch 400/1068 train_bce=0.23882 seconds=213.8
+2026-11-10T22:23:13+00:00 resnet18 epoch 8/20 batch 600/1068 train_bce=0.23975 seconds=315.2
+2026-11-10T22:24:54+00:00 resnet18 epoch 8/20 batch 800/1068 train_bce=0.23966 seconds=416.3
+2026-11-10T22:26:34+00:00 resnet18 epoch 8/20 batch 1000/1068 train_bce=0.23853 seconds=516.7
+2026-11-10T22:27:08+00:00 resnet18 epoch 8/20 batch 1068/1068 train_bce=0.23794 seconds=550.2
+2026-11-10T22:27:08+00:00 predict:validation batch 1/135 seconds=0.2
+2026-11-10T22:27:45+00:00 predict:validation batch 135/135 seconds=36.9
+2026-11-10T22:27:45+00:00 resnet18 epoch 8/20 train_bce=0.23794 val_bce=0.28312 val_macro_auc=0.92559 val_macro_ap=0.80595 selected=True seconds=587.2
+2026-11-10T22:27:46+00:00 resnet18 epoch 9/20 batch 1/1068 train_bce=0.27773 seconds=0.6
+2026-11-10T22:29:23+00:00 resnet18 epoch 9/20 batch 200/1068 train_bce=0.21633 seconds=97.9
+2026-11-10T22:31:16+00:00 resnet18 epoch 9/20 batch 400/1068 train_bce=0.22218 seconds=211.0
+2026-11-10T22:32:56+00:00 resnet18 epoch 9/20 batch 600/1068 train_bce=0.22378 seconds=311.4
+2026-11-10T22:34:36+00:00 resnet18 epoch 9/20 batch 800/1068 train_bce=0.22397 seconds=411.0
+2026-11-10T22:36:17+00:00 resnet18 epoch 9/20 batch 1000/1068 train_bce=0.22536 seconds=511.9
+2026-11-10T22:36:51+00:00 resnet18 epoch 9/20 batch 1068/1068 train_bce=0.22616 seconds=546.3
+2026-11-10T22:36:52+00:00 predict:validation batch 1/135 seconds=0.4
+2026-11-10T22:37:29+00:00 predict:validation batch 135/135 seconds=37.4
+2026-11-10T22:37:29+00:00 resnet18 epoch 9/20 train_bce=0.22616 val_bce=0.27958 val_macro_auc=0.92453 val_macro_ap=0.80107 selected=False seconds=583.7
+2026-11-10T22:37:29+00:00 resnet18 epoch 10/20 batch 1/1068 train_bce=0.09725 seconds=0.5
+2026-11-10T22:39:10+00:00 resnet18 epoch 10/20 batch 200/1068 train_bce=0.20390 seconds=101.7
+2026-11-10T22:40:50+00:00 resnet18 epoch 10/20 batch 400/1068 train_bce=0.20514 seconds=201.3
+2026-11-10T22:42:42+00:00 resnet18 epoch 10/20 batch 600/1068 train_bce=0.20859 seconds=313.3
+2026-11-10T22:44:23+00:00 resnet18 epoch 10/20 batch 800/1068 train_bce=0.20870 seconds=413.9
+2026-11-10T22:46:02+00:00 resnet18 epoch 10/20 batch 1000/1068 train_bce=0.20976 seconds=513.3
+2026-11-10T22:46:36+00:00 resnet18 epoch 10/20 batch 1068/1068 train_bce=0.21045 seconds=547.4
+2026-11-10T22:46:36+00:00 predict:validation batch 1/135 seconds=0.3
+2026-11-10T22:47:14+00:00 predict:validation batch 135/135 seconds=37.7
+2026-11-10T22:47:14+00:00 resnet18 epoch 10/20 train_bce=0.21045 val_bce=0.28807 val_macro_auc=0.92442 val_macro_ap=0.80427 selected=False seconds=585.1
+2026-11-10T22:47:14+00:00 resnet18 epoch 11/20 batch 1/1068 train_bce=0.18850 seconds=0.5
+2026-11-10T22:48:52+00:00 resnet18 epoch 11/20 batch 200/1068 train_bce=0.18998 seconds=98.0
+2026-11-10T22:50:31+00:00 resnet18 epoch 11/20 batch 400/1068 train_bce=0.18795 seconds=196.9
+2026-11-10T22:52:15+00:00 resnet18 epoch 11/20 batch 600/1068 train_bce=0.18628 seconds=301.4
+2026-11-10T22:54:04+00:00 resnet18 epoch 11/20 batch 800/1068 train_bce=0.18599 seconds=410.4
+2026-11-10T22:55:45+00:00 resnet18 epoch 11/20 batch 1000/1068 train_bce=0.18857 seconds=511.1
+2026-11-10T22:56:19+00:00 resnet18 epoch 11/20 batch 1068/1068 train_bce=0.18803 seconds=545.5
+2026-11-10T22:56:20+00:00 predict:validation batch 1/135 seconds=0.3
+2026-11-10T22:56:56+00:00 predict:validation batch 135/135 seconds=36.9
+2026-11-10T22:56:56+00:00 resnet18 epoch 11/20 train_bce=0.18803 val_bce=0.30300 val_macro_auc=0.92380 val_macro_ap=0.80508 selected=False seconds=582.5
+2026-11-10T22:56:57+00:00 resnet18 epoch 12/20 batch 1/1068 train_bce=0.22096 seconds=0.4
+2026-11-10T22:58:38+00:00 resnet18 epoch 12/20 batch 200/1068 train_bce=0.15616 seconds=101.3
+2026-11-10T23:00:19+00:00 resnet18 epoch 12/20 batch 400/1068 train_bce=0.16093 seconds=203.0
+2026-11-10T23:01:59+00:00 resnet18 epoch 12/20 batch 600/1068 train_bce=0.15945 seconds=303.0
+2026-11-10T23:03:48+00:00 resnet18 epoch 12/20 batch 800/1068 train_bce=0.16012 seconds=412.0
+2026-11-10T23:05:30+00:00 resnet18 epoch 12/20 batch 1000/1068 train_bce=0.15851 seconds=513.9
+2026-11-10T23:06:04+00:00 resnet18 epoch 12/20 batch 1068/1068 train_bce=0.15820 seconds=548.0
+2026-11-10T23:06:05+00:00 predict:validation batch 1/135 seconds=0.4
+2026-11-10T23:06:42+00:00 predict:validation batch 135/135 seconds=38.0
+2026-11-10T23:06:42+00:00 resnet18 epoch 12/20 train_bce=0.15820 val_bce=0.36067 val_macro_auc=0.91981 val_macro_ap=0.79252 selected=False seconds=585.9
+2026-11-10T23:06:43+00:00 predict:train batch 1/1068 seconds=0.2
+2026-11-10T23:07:38+00:00 predict:train batch 200/1068 seconds=54.9
+2026-11-10T23:08:33+00:00 predict:train batch 400/1068 seconds=109.7
+2026-11-10T23:09:27+00:00 predict:train batch 600/1068 seconds=164.6
+2026-11-10T23:10:22+00:00 predict:train batch 800/1068 seconds=219.0
+2026-11-10T23:11:17+00:00 predict:train batch 1000/1068 seconds=273.9
+2026-11-10T23:11:35+00:00 predict:train batch 1068/1068 seconds=292.4
+2026-11-10T23:11:36+00:00 predict:validation batch 1/135 seconds=0.3
+2026-11-10T23:12:13+00:00 predict:validation batch 135/135 seconds=37.5
+2026-11-10T23:12:14+00:00 predict:replay batch 1/135 seconds=0.4
+2026-11-10T23:12:51+00:00 predict:replay batch 135/135 seconds=37.1
+2026-11-10T23:12:53+00:00 predict:test batch 1/135 seconds=0.2
+2026-11-10T23:13:30+00:00 predict:test batch 135/135 seconds=36.7
+{
+  "run_id": "ptbxl_v2_resnet18_seed42",
+  "status": "completed",
+  "test_macro_auc": 0.9204474499470401,
+  "test_macro_f1": 0.7128526029909455,
+  "runtime_seconds": 7669.307745500002
+}

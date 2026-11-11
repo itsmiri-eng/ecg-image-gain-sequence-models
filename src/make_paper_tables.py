@@ -25,6 +25,14 @@ V1 = {"cnn_lstm": "ptbxl_cnn_lstm/ptbxl_cnn_lstm_image_v1_seed42",
       "temporal_conv": "ptbxl_spatiotemporal/ptbxl_spatiotemporal_image_v1_seed42",
       "hybrid_vit": "ptbxl_hybrid_vit/ptbxl_hybrid_vit_image_v1_seed42"}
 SEEDS = (42, 43, 44, 45, 46)
+# ImageNet-pretrained ResNet-18: sensitivity analysis of the 11 Nov 2026 amendment (seeds 42-44, own Holm families)
+RESNET_SEEDS = (42, 43, 44)
+RESNET_NAME = "ResNet-18, ImageNet$^\\S$"
+AMENDMENT = ROOT / "results/amendment_20261111/resnet18"
+
+
+def resnet_path(seed, fixed=False):
+    return ROOT / "results/ptbxl_v2_resnet18" / f"ptbxl_v2_{'fg_' if fixed else ''}resnet18_seed{seed}"
 
 
 def run_path(head, seed, fixed=False):
@@ -58,6 +66,10 @@ def table_ptbxl():
             mean, sd = a.mean(0), a.std(0, ddof=1)
             rows.append((("Fixed" if fixed else "Adaptive"), NAMES[head], f"{mean[0]:.3f} $\\pm$ {sd[0]:.3f}",
                          f"{mean[1]:.3f}", f"{mean[2]:.3f}", *[f"{v:.3f}" for v in mean[3:]]))
+        a = np.asarray([test_metrics(resnet_path(s, fixed)) for s in RESNET_SEEDS])
+        mean, sd = a.mean(0), a.std(0, ddof=1)
+        rows.append((("Fixed" if fixed else "Adaptive"), RESNET_NAME, f"{mean[0]:.3f} $\\pm$ {sd[0]:.3f}",
+                     f"{mean[1]:.3f}", f"{mean[2]:.3f}", *[f"{v:.3f}" for v in mean[3:]]))
     for relative, name in (("ptbxl_v2/ptbxl_v2_lda_wide_seed42", "PCA + LDA"), ("ptbxl_v2/ptbxl_v2_svm_seed42", "PCA + linear SVM"),
                            ("ptbxl_v2_fixedgain/ptbxl_v2_fg_lda_seed42", "PCA + LDA")):
         v = test_metrics(ROOT / "results" / relative)
@@ -119,8 +131,15 @@ def table_fixed_gain():
             for row in rows:
                 cells += [fmt_diff(float(row["difference"]), float(row["ci_lower"]), float(row["ci_upper"])), fmt_p(float(row["p_holm"]))]
             body.append(" & ".join(cells) + r" \\")
-        if head != "hybrid_vit":
-            body.append(r"\addlinespace[2pt]")
+        body.append(r"\addlinespace[2pt]")
+    with (AMENDMENT / "fixed_minus_adaptive.csv").open(newline="") as handle:
+        resnet = list(csv.DictReader(handle))
+    for metric in ("macro", "HYP"):
+        cells = [RESNET_NAME if metric == "macro" else "", metric]
+        for cohort in ("PTB-XL test", "georgia", "china"):
+            row = next(r for r in resnet if r["cohort"] == cohort and r["metric"].startswith(metric))
+            cells += [fmt_diff(float(row["difference"]), float(row["ci_lower"]), float(row["ci_upper"])), fmt_p(float(row["p_holm"]))]
+        body.append(" & ".join(cells) + r" \\")
     (OUT / "tab_fixed_gain.tex").write_text("\n".join(body) + "\n", encoding="utf-8")
 
 
@@ -133,9 +152,16 @@ def table_external():
                     continue  # the narrow-grid LDA; the table reports the wide-grid fit, as in the PTB-XL table
                 data.setdefault((r["head"], r["page"]), {}).setdefault(d, []).append(
                     (float(r["external_macro_auroc"]), float(r["external_minus_ptbxl"])))
-    order = [(h, "adaptive") for h in HEADS] + [(h, "fixed") for h in ("cnn_pool", "cnn_lstm", "temporal_conv", "hybrid_vit")]
+    with (AMENDMENT / "per_run.csv").open(newline="") as handle:
+        for r in csv.DictReader(handle):
+            if r["cohort"] in ("georgia", "china"):
+                data.setdefault(("resnet18", r["page"]), {}).setdefault(r["cohort"], []).append(
+                    (float(r["macro_auroc"]), float(r["external_minus_ptbxl"])))
+    order = [(h, "adaptive") for h in (*HEADS, "resnet18")]
+    order += [(h, "fixed") for h in ("cnn_pool", "cnn_lstm", "temporal_conv", "hybrid_vit", "resnet18")]
     order += [("pca_lda", "adaptive"), ("pca_svm", "adaptive"), ("pca_lda", "fixed"), ("resnet1d_wang", "signal")]
-    names = {**NAMES, "pca_lda": "PCA + LDA", "pca_svm": "PCA + linear SVM", "resnet1d_wang": "1D ResNet (signal)"}
+    names = {**NAMES, "pca_lda": "PCA + LDA", "pca_svm": "PCA + linear SVM", "resnet1d_wang": "1D ResNet (signal)",
+             "resnet18": RESNET_NAME}
     body, previous = [], None
     for head, page in order:
         if previous is not None and page != previous:

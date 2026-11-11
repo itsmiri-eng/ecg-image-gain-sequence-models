@@ -1,0 +1,13 @@
+head,seed,budget,run,selected_epoch,epochs_run,max_epochs,stopped_early,validation_macro_auroc,test_macro_auroc,device
+cnn_pool,42,20,ptbxl_v2_cnn_pool_seed42,19,20,20,False,0.8446513526658815,0.8344067628630517,cpu
+cnn_pool,43,20,ptbxl_v2_cnn_pool_seed43,20,20,20,False,0.8428167259659043,0.8272220352031185,cuda
+cnn_pool,44,20,ptbxl_v2_cnn_pool_seed44,19,20,20,False,0.8354982302781521,0.8255238626055622,cuda
+cnn_pool_wide,42,20,ptbxl_v2_cnn_pool_wide_seed42,20,20,20,False,0.8735036602434085,0.8650670377609586,cuda
+cnn_pool_wide,43,20,ptbxl_v2_cnn_pool_wide_seed43,20,20,20,False,0.8797631226512801,0.8677403600294283,cuda
+cnn_pool_wide,44,20,ptbxl_v2_cnn_pool_wide_seed44,18,20,20,False,0.8741352413463795,0.8622438328551055,cuda
+cnn_lstm,43,20,ptbxl_v2_cnn_lstm_seed43,16,20,20,False,0.8943396632802131,0.8807120015094043,cuda
+cnn_lstm,44,20,ptbxl_v2_cnn_lstm_seed44,18,20,20,False,0.9016129025868423,0.8862281602432412,cuda
+temporal_conv,43,20,ptbxl_v2_temporal_conv_seed43,19,20,20,False,0.8854306292679969,0.8791115856716865,cuda
+temporal_conv,44,20,ptbxl_v2_temporal_conv_seed44,20,20,20,False,0.8880711637925096,0.8787613496296173,cuda
+hybrid_vit,43,20,ptbxl_v2_hybrid_vit_seed43,18,20,20,False,0.8950541769796538,0.8882861058058191,cuda
+hybrid_vit,44,20,ptbxl_v2_hybrid_vit_seed44,13,17,20,True,0.8975177745513877,0.8856100206505385,cuda

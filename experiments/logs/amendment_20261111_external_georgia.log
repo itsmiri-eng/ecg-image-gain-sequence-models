@@ -1,0 +1,6 @@
+2026-11-11T08:09:39.526359+00:00 georgia inference 0/6047
+2026-11-11T08:11:18.260533+00:00 georgia inference 1280/6047
+2026-11-11T08:12:54.538117+00:00 georgia inference 2560/6047
+2026-11-11T08:14:30.732508+00:00 georgia inference 3840/6047
+2026-11-11T08:16:08.673316+00:00 georgia inference 5120/6047
+2026-11-11T08:17:14.265102+00:00 georgia: ResNet-18 external inference complete (6 runs x 6047 records)

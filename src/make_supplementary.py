@@ -458,6 +458,75 @@ def table_clipping():
                      "dataset for every ECG. Computed by src/count\\_gain\\_clipping.py with the unchanged renderer.")
 
 
+# ---------------------------------------------------------------- amendment of 11 Nov 2026 (results/amendment_20261111)
+
+AMENDMENT = ROOT / "results/amendment_20261111"
+COHORTS = {"PTB-XL test": "PTB-XL test", "georgia": "Georgia, USA", "china": "China"}
+HEAD_NAMES = {**NAMES, "cnn_pool_wide": "CNN-only, capacity-m."}
+
+
+def table_resnet():
+    rows = read_csv(AMENDMENT / "resnet18/per_run.csv")
+    body = []
+    for cohort, name in COHORTS.items():
+        for r in (r for r in rows if r["cohort"] == cohort):
+            delta = r.get("external_minus_ptbxl") or ""
+            body.append(" & ".join([name, r["page"].capitalize(), r["seed"], f3(float(r["macro_auroc"])),
+                                    *[f3(float(r[f"auroc_{l}"])) for l in LABELS],
+                                    f"{float(delta):+.3f}".replace("-", "$-$") if delta else "--",
+                                    r.get("selected_epoch") or "--"]))
+        body.append("\midrule")
+    first = longtable("ImageNet-pretrained ResNet-18 (sensitivity analysis, amendment of 11 November 2026): every run.",
+                      "tab:s_resnet_runs", "lllrrrrrrrr",
+                      "Cohort & Pages & Seed & Macro & NORM & MI & STTC & CD & HYP & $\Delta$ & Epoch", body[:-1],
+                      "Macro AUROC over all five labels on PTB-XL and over the eligible labels externally (Georgia: STTC, "
+                      "CD, HYP; China: MI, STTC, CD, HYP). Per-label columns are AUROC (labels not eligible externally are "
+                      "shown for completeness). $\Delta$: external minus PTB-XL test macro AUROC on the same labels. "
+                      "Epoch: selected epoch (of at most 20). Every reloaded model reproduced its saved PTB-XL validation "
+                      "probabilities exactly before its single external inference.", size="\scriptsize")
+    fixed = read_csv(AMENDMENT / "resnet18/fixed_minus_adaptive.csv")
+    body = [" & ".join([COHORTS[r["cohort"]], r["metric"].replace(" (eligible labels)", ""),
+                        fmt_diff(float(r["difference"]), float(r["ci_lower"]), float(r["ci_upper"])),
+                        fmt_p(float(r["p_holm"]))]) for r in fixed]
+    second = longtable("ImageNet-pretrained ResNet-18: fixed-gain minus adaptive-gain AUROC [95\% CI] and Holm-adjusted "
+                       "$p$ (seeds 42--44).", "tab:s_resnet_fixed", "llcr", "Cohort & Metric & Difference & $p$", body,
+                       "PTB-XL: hierarchical seed $\times$ patient bootstrap, Holm over 2 comparisons. External cohorts: "
+                       "seed $\times$ record bootstrap, Holm over the 4 cohort $\times$ metric comparisons. 2{,}000 "
+                       "resamples, seed 2024. Prespecified in the amendment of 11 November 2026, after the frozen external "
+                       "plan; not part of the confirmatory hypotheses H1 and H2.")
+    return first + "\n\n" + second
+
+
+def table_long40():
+    if not (AMENDMENT / "long40/summary.csv").exists():
+        return ("The 40-epoch sensitivity runs had not all completed when this document was generated; "
+                "results will be added when they finish.")
+    summary = read_csv(AMENDMENT / "long40/summary.csv")
+    body = [" & ".join([HEAD_NAMES[r["head"]], r["budget"], f"{float(r['test_mean']):.3f} $\pm$ {float(r['test_sd']):.3f}",
+                        f3(float(r["validation_mean"])), r["selected_epochs"], r["epochs_run"]]) for r in summary]
+    first = longtable("Training-budget sensitivity (amendment of 11 November 2026): 20 versus at most 40 epochs, "
+                      "adaptive-gain pages, seeds 42--44.", "tab:s_long40", "lrcrll",
+                      "Model & Max. epochs & Test macro AUROC & Validation & Selected epochs & Epochs run", body,
+                      "Identical settings except the epoch budget (the cosine schedule spans the budget; early-stopping "
+                      "patience 4 in both). Seed 42 of the 20-epoch CNN-only, CNN-LSTM, temporal-convolution and ViT runs "
+                      "was trained on a CPU; all 40-epoch runs on the GPU.", size="\scriptsize")
+    rows = read_csv(AMENDMENT / "long40/hierarchical_test.csv")
+    body, family = [], None
+    for r in rows:
+        if family is not None and r["family"] != family:
+            body.append("\midrule")
+        family = r["family"]
+        names = [HEAD_NAMES[h] for h in r["comparison"].split(" - ")]
+        body.append(" & ".join([esc(r["family"]), " $-$ ".join(names),
+                                fmt_diff(float(r["difference"]), float(r["ci_lower"]), float(r["ci_upper"])),
+                                fmt_p(float(r["p_holm"]))]))
+    second = longtable("Training-budget sensitivity: 40 minus 20 epochs per model, and the ten head pairs with each budget "
+                       "(PTB-XL test, seeds 42--44).", "tab:s_long40_pairs", "llcr",
+                       "Family & Comparison & Difference [95\% CI] & $p$", body,
+                       "Difference in mean-over-seeds test macro AUROC; hierarchical seed $\times$ patient bootstrap "
+                       "(2{,}000 resamples), Holm within each family (5 or 10 comparisons).", size="\scriptsize")
+    return first + "\n\n" + second
+
 # ---------------------------------------------------------------- text sections
 
 def model_cards():
@@ -479,6 +548,8 @@ def amendments():
                      f"{esc(a['reason'])}\\end{{itemize}}")
     doc = (ROOT / "docs/protocol_amendment_2026-11-11_signal_seeds.md").read_text(encoding="utf-8")
     parts += ["\\subsection{Amendment of 11 November 2026: signal-reference seeds 45 and 46}", markdown(doc)]
+    doc = (ROOT / "docs/protocol_amendment_2026-11-11.md").read_text(encoding="utf-8")
+    parts += ["\\subsection{Amendment of 11 November 2026: 40-epoch sensitivity and a pretrained ResNet-18}", markdown(doc)]
     return "\n\n".join(parts)
 
 
@@ -514,6 +585,8 @@ def main():
         ("Calibration and validation-chosen thresholds", [table_calibration(runs), table_thresholds(runs)]),
         ("External per-label results", [table_external_labels()]),
         ("Gain policy: public resources and clipping at fixed gain", [table_survey(), table_clipping()]),
+        ("Sensitivity analyses of 11 November 2026: a pretrained ResNet-18 and a longer training budget",
+         [table_resnet(), table_long40()]),
         ("Model cards", [model_cards()]),
         ("Protocol amendments", [amendments()]),
     ]

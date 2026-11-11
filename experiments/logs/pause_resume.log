@@ -1,1 +1,3 @@
 2026-11-03T15:42:21.0796690+04:00 Pause 22 processes
+2026-11-11T01:09:33.6472749+04:00 Pause long40 lanes only (give the GPU to the ResNet-18 runs)
+2026-11-11T12:04:36.4196290+04:00 Started 5 lanes of 40-epoch runs (affinity FFC0 = 10 logical CPUs, ~62%)

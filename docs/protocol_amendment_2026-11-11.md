@@ -1,6 +1,6 @@
 # Protocol amendment, 11 November 2026: 40-epoch sensitivity and a pretrained ResNet-18
 
-Written and frozen **before** any run listed here started (11 Nov 2026, about 01:10 AST / 05:10 UTC).
+Written and frozen **before** any run listed here started (11 Nov 2026, about 01:00 local time, UTC+4 = 10 Nov 21:00 UTC; runs started 21:05 UTC).
 Nothing below changes a completed run, or a config or hyperparameter used by an existing run. Both
 analyses are **sensitivity analyses**. They do not replace the primary results reported so far.
 
@@ -92,8 +92,15 @@ analyses are **sensitivity analyses**. They do not replace the primary results r
 
 - **Order:** ResNet-18 runs first. They use the GPU heavily, and the PC is shared: the GPU must be free by
   11 Nov 15:00 AST. The 40-epoch runs are light and may continue at low CPU afterwards.
-- **Interruptions:** any run interrupted by the time limit or a sign-out is moved to `experiments/abandoned_runs/`
-  with a README, reported, and never resumed or repeated under the same ID.
+- **Interruptions:**
+  - Any run interrupted by the time limit, a sign-out or a restart is moved to `experiments/abandoned_runs/`
+    with a README and reported. It is never resumed.
+  - A run interrupted after its test inference started is never repeated.
+  - *Clarification, 11 Nov 08:10 UTC, after the PC restart.* A run interrupted before checkpoint selection and
+    test inference is restarted from scratch under the same ID, as on 1–6 Nov.
+    - This applied to three 40-epoch seed-42 runs stopped in epoch 1:
+      `experiments/abandoned_runs/2026-11-11_pc_restart_long40/`.
+    - It is not a change of analysis.
 - **Hardware:** processes run hidden at Idle priority, limited to 8 logical CPUs overnight and 2 from 15:00.
   Runtimes are therefore not speed measurements.
 - **Known limitations:**

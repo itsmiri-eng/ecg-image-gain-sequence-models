@@ -1,0 +1,14 @@
+{
+  "status": "completed",
+  "completed_utc": "2026-11-11T08:31:20.315141+00:00",
+  "dataset": "china",
+  "inference_calls": 1,
+  "records": 9004,
+  "family": "ptbxl_v2_resnet18",
+  "kind": "network",
+  "page": "fixed",
+  "head": "resnet18",
+  "seed": 43,
+  "amendment": "docs/protocol_amendment_2026-11-11.md",
+  "predictions_sha256": "37a85148959525503e15a5f9c874b2b91dc4c25d128ceb3074a92d4007a486bc"
+}

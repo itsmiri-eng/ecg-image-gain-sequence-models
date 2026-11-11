@@ -213,13 +213,19 @@ def figure_fixed_gain(ptbxl_rows):
             for r in csv.DictReader(handle):
                 if r["family"] == "H2":
                     external[(name, r["comparison"].split(":")[0], r["metric"])] = r
-    archs = ["cnn_pool", "temporal_conv", "cnn_lstm", "hybrid_vit"]
-    fig, axes = plt.subplots(1, 2, figsize=(7.16, 2.6), sharey=True, constrained_layout=True)
+    # ImageNet-pretrained ResNet-18 (amendment of 11 Nov 2026; seeds 42-44, its own Holm families)
+    cohorts = {"PTB-XL test": "PTB-XL test", "georgia": "Georgia (USA)", "china": "Chapman-Shaoxing + Ningbo (China)"}
+    with (ROOT / "results/amendment_20261111/resnet18/fixed_minus_adaptive.csv").open(newline="") as handle:
+        for r in csv.DictReader(handle):
+            metric = "HYP AUROC" if r["metric"].startswith("HYP") else "macro AUROC"
+            external[(cohorts[r["cohort"]], "resnet18", metric)] = r
+    archs = ["cnn_pool", "temporal_conv", "cnn_lstm", "hybrid_vit", "resnet18"]
+    fig, axes = plt.subplots(1, 2, figsize=(7.16, 3.0), sharey=True, constrained_layout=True)
     for axis, metric in zip(axes, ("macro AUROC", "HYP AUROC")):
         axis.axvline(0, color=MUTED, linewidth=0.7, zorder=1)
         for y, head in enumerate(archs):
             for k, (dataset, color) in enumerate(DATASET_COLORS.items()):
-                if dataset == "PTB-XL test":
+                if dataset == "PTB-XL test" and head != "resnet18":
                     r = next(r for r in ptbxl_rows if r["architecture"] == head and r["metric"] == metric and r["seed_set"] == "42-46")
                 else:
                     r = external[(dataset, head, metric)]
@@ -231,7 +237,9 @@ def figure_fixed_gain(ptbxl_rows):
         axis.set_xlabel(f"Difference in {metric} (mean over seeds, 95% CI)")
         axis.set_ylim(len(archs) - 0.5, -0.5)
         style(axis)
-    axes[0].set_yticks(range(len(archs)), [NAMES[h] for h in archs])
+    axes[0].set_yticks(range(len(archs)), [NAMES.get(h, "ResNet-18 (ImageNet)*") for h in archs])
+    for axis in axes:
+        axis.axhline(len(archs) - 1.5, color=MUTED, linewidth=0.5, linestyle=":", zorder=1)
     fig.legend(handles=[plt.Line2D([], [], color=c, marker=MARKERS[k], linewidth=1.4, markersize=4, label=n)
                         for k, (n, c) in enumerate(DATASET_COLORS.items())],
                loc="outside lower center", ncol=3, frameon=False)

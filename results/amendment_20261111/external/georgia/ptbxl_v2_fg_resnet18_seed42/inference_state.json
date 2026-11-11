@@ -1,0 +1,14 @@
+{
+  "status": "completed",
+  "completed_utc": "2026-11-11T08:17:14.167017+00:00",
+  "dataset": "georgia",
+  "inference_calls": 1,
+  "records": 6047,
+  "family": "ptbxl_v2_resnet18",
+  "kind": "network",
+  "page": "fixed",
+  "head": "resnet18",
+  "seed": 42,
+  "amendment": "docs/protocol_amendment_2026-11-11.md",
+  "predictions_sha256": "5b18cb14711d89f2bcacd824b52d3f89d08db3b5b72e14bc08234f1a35661235"
+}

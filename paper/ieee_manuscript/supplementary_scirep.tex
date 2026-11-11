@@ -633,9 +633,77 @@ Gain (mm/mV) & Pages & \% of 21{,}388 & Training & Validation & Test & HYP-posit
 {\footnotesize A page needs clipping when any sample of any lead falls outside its 30-mm row, the rule of the fixed-gain renderer. The 2.5 mm/mV counts reproduce the clipping recorded in the fixed-gain dataset for every ECG. Computed by src/count\_gain\_clipping.py with the unchanged renderer.\par}
 \medskip
 
+\section{Sensitivity analyses of 11 November 2026: a pretrained ResNet-18 and a longer training budget}
+
+\begingroup\scriptsize
+\setlength{\tabcolsep}{3pt}
+\begin{longtable}{lllrrrrrrrr}
+\caption{ImageNet-pretrained ResNet-18 (sensitivity analysis, amendment of 11 November 2026): every run.}\label{tab:s_resnet_runs}\\
+\toprule
+Cohort & Pages & Seed & Macro & NORM & MI & STTC & CD & HYP & $\Delta$ & Epoch \\
+\midrule
+\endfirsthead
+\toprule
+Cohort & Pages & Seed & Macro & NORM & MI & STTC & CD & HYP & $\Delta$ & Epoch \\
+\midrule
+\endhead
+\bottomrule
+\endfoot
+PTB-XL test & Adaptive & 42 & 0.920 & 0.941 & 0.930 & 0.929 & 0.917 & 0.884 & -- & 8 \\
+PTB-XL test & Adaptive & 43 & 0.920 & 0.940 & 0.927 & 0.932 & 0.919 & 0.883 & -- & 7 \\
+PTB-XL test & Adaptive & 44 & 0.922 & 0.943 & 0.924 & 0.932 & 0.921 & 0.889 & -- & 8 \\
+PTB-XL test & Fixed & 42 & 0.929 & 0.950 & 0.931 & 0.935 & 0.922 & 0.908 & -- & 7 \\
+PTB-XL test & Fixed & 43 & 0.931 & 0.949 & 0.934 & 0.936 & 0.925 & 0.911 & -- & 10 \\
+PTB-XL test & Fixed & 44 & 0.927 & 0.946 & 0.925 & 0.935 & 0.924 & 0.904 & -- & 9 \\
+\midrule
+Georgia, USA & Adaptive & 42 & 0.772 & -- & 0.775 & 0.749 & 0.850 & 0.718 & $-$0.138 & -- \\
+Georgia, USA & Adaptive & 43 & 0.774 & -- & 0.725 & 0.752 & 0.839 & 0.731 & $-$0.137 & -- \\
+Georgia, USA & Adaptive & 44 & 0.774 & -- & 0.738 & 0.755 & 0.850 & 0.718 & $-$0.140 & -- \\
+Georgia, USA & Fixed & 42 & 0.780 & -- & 0.759 & 0.752 & 0.858 & 0.729 & $-$0.142 & -- \\
+Georgia, USA & Fixed & 43 & 0.782 & -- & 0.784 & 0.754 & 0.845 & 0.746 & $-$0.142 & -- \\
+Georgia, USA & Fixed & 44 & 0.774 & -- & 0.754 & 0.745 & 0.855 & 0.724 & $-$0.147 & -- \\
+\midrule
+China & Adaptive & 42 & 0.850 & -- & 0.898 & 0.812 & 0.844 & 0.847 & $-$0.065 & -- \\
+China & Adaptive & 43 & 0.845 & -- & 0.875 & 0.835 & 0.853 & 0.816 & $-$0.070 & -- \\
+China & Adaptive & 44 & 0.849 & -- & 0.887 & 0.834 & 0.842 & 0.835 & $-$0.067 & -- \\
+China & Fixed & 42 & 0.851 & -- & 0.898 & 0.825 & 0.837 & 0.842 & $-$0.073 & -- \\
+China & Fixed & 43 & 0.855 & -- & 0.902 & 0.829 & 0.843 & 0.845 & $-$0.072 & -- \\
+China & Fixed & 44 & 0.853 & -- & 0.913 & 0.815 & 0.837 & 0.847 & $-$0.069 & -- \\
+\end{longtable}
+\endgroup
+{\footnotesize Macro AUROC over all five labels on PTB-XL and over the eligible labels externally (Georgia: STTC, CD, HYP; China: MI, STTC, CD, HYP). Per-label columns are AUROC (labels not eligible externally are shown for completeness). $\Delta$: external minus PTB-XL test macro AUROC on the same labels. Epoch: selected epoch (of at most 20). Every reloaded model reproduced its saved PTB-XL validation probabilities exactly before its single external inference.\par}
+\medskip
+
+\begingroup\footnotesize
+\setlength{\tabcolsep}{3pt}
+\begin{longtable}{llcr}
+\caption{ImageNet-pretrained ResNet-18: fixed-gain minus adaptive-gain AUROC [95\% CI] and Holm-adjusted $p$ (seeds 42--44).}\label{tab:s_resnet_fixed}\\
+\toprule
+Cohort & Metric & Difference & $p$ \\
+\midrule
+\endfirsthead
+\toprule
+Cohort & Metric & Difference & $p$ \\
+\midrule
+\endhead
+\bottomrule
+\endfoot
+PTB-XL test & macro AUROC & +0.008 [+0.004, +0.013] & $<$0.001 \\
+PTB-XL test & HYP AUROC & +0.022 [+0.009, +0.035] & 0.001 \\
+Georgia, USA & macro AUROC & +0.005 [+0.000, +0.010] & 0.147 \\
+Georgia, USA & HYP AUROC & +0.011 [+0.002, +0.019] & 0.084 \\
+China & macro AUROC & +0.004 [$-$0.001, +0.011] & 0.302 \\
+China & HYP AUROC & +0.012 [$-$0.007, +0.030] & 0.302 \\
+\end{longtable}
+\endgroup
+{\footnotesize PTB-XL: hierarchical seed $	imes$ patient bootstrap, Holm over 2 comparisons. External cohorts: seed $	imes$ record bootstrap, Holm over the 4 cohort $	imes$ metric comparisons. 2{,}000 resamples, seed 2024. Prespecified in the amendment of 11 November 2026, after the frozen external plan; not part of the confirmatory hypotheses H1 and H2.\par}
+\medskip
+
+The 40-epoch sensitivity runs had not all completed when this document was generated; results will be added when they finish.
+
 \section{Model cards}
 
-All models: PTB-XL v1.0.3, official patient folds (1-8 train, 9 validation, 10 test), five overlapping superclasses (NORM, MI, STTC, CD, HYP), training-only normalization, AdamW lr 1e-3, batch 16, max 20 epochs, patience 4, cosine schedule, unweighted BCE, no augmentation, no pretrained weights, checkpoint selected on validation, threshold 0.5, one test inference. Fold 10 was observed before the models were specified, so test results are exploratory. Intended use: research on ECG-image modelling only, not clinical use. Known limitations: clean synthetic renderings (no scans/photos), one population (Germany), label noise, and adaptive page gain on v1 pages leaks amplitude (and therefore hypertrophy) information.
+All models: PTB-XL v1.0.3, official patient folds (1-8 train, 9 validation, 10 test), five overlapping superclasses (NORM, MI, STTC, CD, HYP), training-only normalization, AdamW lr 1e-3, batch 16, max 20 epochs, patience 4, cosine schedule, unweighted BCE, no augmentation, no pretrained weights (except the ResNet-18 sensitivity model), checkpoint selected on validation, threshold 0.5, one test inference. Fold 10 was observed before the models were specified, so test results are exploratory. Intended use: research on ECG-image modelling only, not clinical use. Known limitations: clean synthetic renderings (no scans/photos), one population (Germany), label noise, and adaptive page gain on v1 pages leaks amplitude (and therefore hypertrophy) information.
 
 \begin{itemize}
 \item \textbf{PCA + LDA / PCA + linear SVM.} Classical baselines on PCA of the downsampled page; one fit each (no seeds). Hyperparameters chosen on validation by a frozen grid.
@@ -645,6 +713,7 @@ All models: PTB-XL v1.0.3, official patient folds (1-8 train, 9 validation, 10 t
 \item \textbf{CNN + temporal convolution (temporal\_conv).} Same CNN, two causal dilated residual Conv1d blocks (receptive field 13 columns). 17,161 parameters.
 \item \textbf{CNN + small ViT (hybrid\_vit).} Same CNN, small transformer encoder over the columns with positional embeddings. 23,881 parameters. Sees the whole row at once.
 \item \textbf{Signal ResNet1D (resnet1d\_wang).} Reference model on the raw 100 Hz waveforms instead of images. About 510k parameters. Shows what the image representation costs.
+\item \textbf{ImageNet-pretrained ResNet-18 (resnet18).} Sensitivity model outside the controlled comparison (amendment 11 Nov 2026): torchvision's ImageNet ResNet-18 weights, the 12 lead rows stacked into one 1440x1120 image, first-layer RGB filters summed, global average pooling, linear readout. 11.2 million parameters, fine-tuned with the shared settings in bfloat16 mixed precision; seeds 42-44 on adaptive and fixed gain.
 \end{itemize}
 Every completed run, with hardware, selected epoch and results, is listed in Supplementary Table~\ref{tab:s_runs}. Generated from src/make\_model\_cards.py.
 
@@ -766,6 +835,147 @@ existing prediction file is rewritten.
 \item These two runs are a \textbf{descriptive} addition. The confirmatory hypotheses H1 and H2 involve only the image
 heads and are unchanged; re-running \nolinkurl{analyze} must reproduce \nolinkurl{hypotheses.csv} exactly, which is checked.
 The signal reference stays a secondary, descriptive comparison, as in the frozen plan.
+\end{itemize}
+
+\subsection{Amendment of 11 November 2026: 40-epoch sensitivity and a pretrained ResNet-18}
+
+
+Written and frozen \textbf{before} any run listed here started (11 Nov 2026, about 01:00 local time, UTC+4 = 10 Nov 21:00 UTC; runs started 21:05 UTC).
+Nothing below changes a completed run, or a config or hyperparameter used by an existing run. Both
+analyses are \textbf{sensitivity analyses}. They do not replace the primary results reported so far.
+
+\textbf{Motivation.} On 11 Nov, a reviewer-style read of the manuscript raised two points:
+\begin{enumerate}
+\item \textbf{Possible under-training.} 17 of the 25 adaptive-gain network runs (seeds 42--46) selected their checkpoint
+at epoch 18--20 of the 20-epoch budget. CNN-only and the capacity-matched head did so in every run. A reviewer
+could argue that the simpler heads were still improving, which would bias the head comparison. This was
+observed from the selected epochs (validation-based) of existing runs. No new test result has been seen.
+\item \textbf{Very small models.} All networks have at most 24k parameters. It is open whether the adaptive-gain cue,
+and the benefit of fixed gain, also apply to a standard, ImageNet-pretrained image backbone.
+\end{enumerate}
+\paragraph{A. 40-epoch sensitivity (\nolinkurl{ptbxl_v2_long40_*})}
+\begin{itemize}
+\item \textbf{Heads:}
+\begin{itemize}
+\item CNN-only (\nolinkurl{cnn_pool});
+\item capacity-matched CNN-only (\nolinkurl{cnn_pool_wide});
+\item CNN-LSTM (\nolinkurl{cnn_lstm});
+\item CNN + temporal convolution (\nolinkurl{temporal_conv});
+\item CNN + small ViT (\nolinkurl{hybrid_vit}).
+\end{itemize}
+\item \textbf{Pages and seeds:} adaptive-gain pages only (v1 cache); seeds \textbf{42, 43, 44}; all on the PC GPU.
+\item \textbf{Configs:} \nolinkurl{experiments/configs/ptbxl_v2_long40_<head>.json}. Each is a copy of the head's existing v2 config
+with only these changes:
+\begin{itemize}
+\item \nolinkurl{max_epochs} 40 instead of 20;
+\item the cosine schedule therefore spans 40 epochs (\texttt{T\_max = max\_epochs}, as in every run);
+\item new protocol, result family (\nolinkurl{ptbxl_v2_long40}) and run IDs.
+\end{itemize}
+\item \textbf{Unchanged:} everything else, including patience 4, lr 1e-3, batch 16, the selection rule, threshold 0.5,
+one test inference per run, and the shared trainer and runner.
+\item \textbf{Analysis (fixed now):}
+\begin{enumerate}
+\item Selected epoch and epochs run per run; how many runs stop early.
+\item For each head, test and validation macro AUROC (mean $\pm$ SD over seeds 42--44) at 40 epochs, next to the
+20-epoch runs of the same seeds. Seed 42 of the four original 20-epoch heads was CPU-trained; a GPU-only
+view (seeds 43--44) is also shown.
+\item The 10 pairwise head comparisons repeated on the 40-epoch runs. Method: the same hierarchical bootstrap as
+the main analysis (2,000 resamples, seed 2024, seeds then patients, Holm over 10 pairs), with seeds 42--44.
+\item \textbf{Interpretation rule.}
+\begin{itemize}
+\item If every sequence head still exceeds the capacity-matched head (Holm-adjusted p < 0.05), the claim
+"relating columns helps beyond capacity" is robust to the training budget.
+\item If a gap shrinks below significance or reverses, the manuscript reports this and weakens the claim
+accordingly.
+\item Either outcome is reported.
+\end{itemize}
+\end{enumerate}
+\end{itemize}
+\paragraph{B. Pretrained ResNet-18 on adaptive and fixed gain (\nolinkurl{ptbxl_v2_resnet18}, \nolinkurl{ptbxl_v2_fg_resnet18})}
+\begin{itemize}
+\item \textbf{Weights:} torchvision's official ImageNet ResNet-18, \nolinkurl{resnet18-f37072fd.pth}, downloaded on 11 Nov 2026 from
+\nolinkurl{https://download.pytorch.org/models/} with the user's permission.
+\begin{itemize}
+\item SHA-256 \nolinkurl{f37072fd47e89c5e827621c5baffa7500819f7896bbacec160b1a16c560e07ec}, stored in \nolinkurl{models/pretrained/}
+and not versioned.
+\item The network is re-implemented in \nolinkurl{src/models/ptbxl_resnet18.py}, with the same layer names as torchvision
+(torchvision is not installed), and the weights are loaded with strict key matching.
+\end{itemize}
+\item \textbf{Input:}
+\begin{itemize}
+\item The same 12 $\times$ 120 $\times$ 1120 standardized ink tensor as every other network (same caches, same training-only
+normalization).
+\item The 12 lead rows are stacked vertically into one 1440 $\times$ 1120 single-channel page image. No resizing.
+\item The first convolution's ImageNet RGB filters are summed into one input channel, which is equivalent to giving
+the same image to all three channels.
+\end{itemize}
+\item \textbf{Head:} global average pooling, dropout 0.2, linear 512 $\rightarrow$ 5. \textbf{11.2 million parameters.}
+\item \textbf{Training:}
+\begin{itemize}
+\item Identical to every other network: AdamW lr 1e-3, weight decay 1e-4, batch 16, max 20 epochs, patience 4,
+cosine to 1e-5, gradient clipping 1.0, unweighted BCE, no augmentation, TF32 off, deterministic algorithms
+requested.
+\item \textbf{One deviation: bfloat16 mixed precision.} It applies to the forward pass on the GPU (autocast inside the
+model) and uses a channels-last memory layout.
+\begin{itemize}
+\item Weights, optimizer state and loss stay float32, and logits are returned as float32.
+\item Reason: in full float32, one epoch on 1440 $\times$ 1120 images took about 19 minutes (measured before any
+training: 1.05 s per batch). With bf16 it takes about 3 minutes (0.17 s per batch). Only with bf16 do the
+six runs fit in the time the shared PC is available.
+\item This was decided before any ResNet run. The small networks keep full float32.
+\end{itemize}
+\item All weights are fine-tuned, and BatchNorm statistics update in training mode.
+\item No hyperparameter is tuned.
+\end{itemize}
+\item \textbf{Seeds:} 42, 43, 44, on adaptive-gain and fixed-gain (2.5 mm/mV) pages, all on the PC GPU.
+\item \textbf{Analysis (fixed now):}
+\begin{enumerate}
+\item PTB-XL test macro and per-label AUROC (mean $\pm$ SD over seeds), next to the small networks.
+\item \textbf{Fixed $-$ adaptive} macro AUROC and HYP AUROC on the PTB-XL test fold. Method: the same hierarchical seed $\times$
+patient bootstrap as the main fixed-gain analysis (seeds 42--44), Holm over these 2 comparisons.
+\item \textbf{External cohorts (descriptive extension of the frozen external plan).}
+\begin{itemize}
+\item Each ResNet run is reloaded and must reproduce its saved validation probabilities.
+\item It then performs exactly one inference per cohort (Georgia; Chapman-Shaoxing + Ningbo), with the frozen
+inclusion rules, label mapping and eligibility.
+\item Fixed $-$ adaptive macro and HYP AUROC: hierarchical seed $\times$ record bootstrap, Holm over the 4 comparisons
+(2 cohorts $\times$ 2 metrics).
+\item These are added after the plan was frozen, so they are reported as a prespecified-today sensitivity
+analysis, not as part of the confirmatory H1/H2.
+\end{itemize}
+\item \textbf{Interpretation.}
+\begin{itemize}
+\item If fixed gain also improves HYP AUROC for ResNet-18, the gain cue is not specific to tiny models.
+\item If not, the manuscript says so and restricts the claim.
+\end{itemize}
+\end{enumerate}
+\end{itemize}
+\paragraph{C. Execution and limits}
+\begin{itemize}
+\item \textbf{Order:} ResNet-18 runs first. They use the GPU heavily, and the PC is shared: the GPU must be free by
+11 Nov 15:00 AST. The 40-epoch runs are light and may continue at low CPU afterwards.
+\item \textbf{Interruptions:}
+\begin{itemize}
+\item Any run interrupted by the time limit, a sign-out or a restart is moved to \nolinkurl{experiments/abandoned_runs/}
+with a README and reported. It is never resumed.
+\item A run interrupted after its test inference started is never repeated.
+\item *Clarification, 11 Nov 08:10 UTC, after the PC restart.* A run interrupted before checkpoint selection and
+test inference is restarted from scratch under the same ID, as on 1--6 Nov.
+\begin{itemize}
+\item This applied to three 40-epoch seed-42 runs stopped in epoch 1:
+\nolinkurl{experiments/abandoned_runs/2026-11-11_pc_restart_long40/}.
+\item It is not a change of analysis.
+\end{itemize}
+\end{itemize}
+\item \textbf{Hardware:} processes run hidden at Idle priority, limited to 8 logical CPUs overnight and 2 from 15:00.
+Runtimes are therefore not speed measurements.
+\item \textbf{Known limitations:}
+\begin{itemize}
+\item three seeds only;
+\item the external-test extension is outside the frozen plan;
+\item ResNet-18 sees the 2$\times$ max-pooled page (4 px/mm), not the full 8 px/mm render;
+\item GPU training is not bit-reproducible, and some cuDNN backward kernels (pooling) are non-deterministic.
+\end{itemize}
 \end{itemize}
 
 \begin{thebibliography}{99}
