@@ -1,4 +1,4 @@
-# Amendment of 11 Nov 2026: results (2026-11-11T17:50 UTC)
+# Amendment of 11 Nov 2026: results (2026-11-12T01:52 UTC)
 
 Protocol: docs/protocol_amendment_2026-11-11.md. PTB-XL fold 10 was observed before: exploratory sensitivity analyses.
 
@@ -68,4 +68,46 @@ Hierarchical seed x patient bootstrap on the PTB-XL test fold (2,000 resamples),
 | head pairs, 20 epochs (same seeds) | temporal_conv - cnn_lstm | +0.0005 [-0.0087, +0.0109] | 0.9490 |
 | head pairs, 20 epochs (same seeds) | hybrid_vit - cnn_lstm | +0.0091 [-0.0008, +0.0209] | 0.1500 |
 | head pairs, 20 epochs (same seeds) | hybrid_vit - temporal_conv | +0.0086 [+0.0035, +0.0138] | 0.0040 |
+
+## C. Fixed-gain training with 40 epochs (seeds 42-44)
+
+| Head | Seed | Selected epoch | Epochs run | Test macro AUROC |
+|---|---:|---:|---:|---:|
+| cnn_pool | 42 | 40 | 40 | 0.8715 |
+| cnn_pool | 43 | 39 | 40 | 0.8826 |
+| cnn_pool | 44 | 40 | 40 | 0.8768 |
+| cnn_lstm | 42 | 24 | 28 | 0.8895 |
+| cnn_lstm | 43 | 27 | 31 | 0.8983 |
+| cnn_lstm | 44 | 26 | 30 | 0.8921 |
+| temporal_conv | 42 | 11 | 15 | 0.8918 |
+| temporal_conv | 43 | 27 | 31 | 0.8986 |
+| temporal_conv | 44 | 20 | 24 | 0.8997 |
+| hybrid_vit | 42 | 19 | 23 | 0.8998 |
+| hybrid_vit | 43 | 27 | 31 | 0.8905 |
+| hybrid_vit | 44 | 14 | 18 | 0.8940 |
+
+Hierarchical seed x patient bootstrap on the PTB-XL test fold (2,000 resamples), Holm within family.
+
+| Family | Head | Metric | Difference [95% CI] | Holm p |
+|---|---|---|---|---:|
+| fixed - adaptive, 40 epochs | cnn_pool | macro AUROC | +0.0322 [+0.0228, +0.0407] | 0.0000 |
+| fixed - adaptive, 40 epochs | cnn_pool | HYP AUROC | +0.0604 [+0.0359, +0.0872] | 0.0000 |
+| fixed - adaptive, 40 epochs | cnn_lstm | macro AUROC | +0.0023 [-0.0050, +0.0108] | 1.0000 |
+| fixed - adaptive, 40 epochs | cnn_lstm | HYP AUROC | +0.0002 [-0.0135, +0.0151] | 1.0000 |
+| fixed - adaptive, 40 epochs | temporal_conv | macro AUROC | +0.0053 [-0.0010, +0.0119] | 0.4800 |
+| fixed - adaptive, 40 epochs | temporal_conv | HYP AUROC | +0.0229 [+0.0105, +0.0354] | 0.0000 |
+| fixed - adaptive, 40 epochs | hybrid_vit | macro AUROC | +0.0035 [-0.0070, +0.0134] | 1.0000 |
+| fixed - adaptive, 40 epochs | hybrid_vit | HYP AUROC | +0.0054 [-0.0131, +0.0252] | 1.0000 |
+| fixed gain, 40 - 20 epochs | cnn_pool | macro AUROC | +0.0164 [+0.0133, +0.0198] | 0.0000 |
+| fixed gain, 40 - 20 epochs | cnn_lstm | macro AUROC | +0.0076 [+0.0030, +0.0128] | 0.0000 |
+| fixed gain, 40 - 20 epochs | temporal_conv | macro AUROC | +0.0021 [-0.0035, +0.0068] | 0.4770 |
+| fixed gain, 40 - 20 epochs | hybrid_vit | macro AUROC | +0.0035 [-0.0010, +0.0091] | 0.3300 |
+| fixed - adaptive, 20 epochs (same seeds) | cnn_pool | macro AUROC | +0.0315 [+0.0185, +0.0431] | 0.0000 |
+| fixed - adaptive, 20 epochs (same seeds) | cnn_pool | HYP AUROC | +0.0733 [+0.0450, +0.1031] | 0.0000 |
+| fixed - adaptive, 20 epochs (same seeds) | cnn_lstm | macro AUROC | +0.0067 [-0.0007, +0.0158] | 0.3320 |
+| fixed - adaptive, 20 epochs (same seeds) | cnn_lstm | HYP AUROC | +0.0107 [-0.0052, +0.0295] | 0.5880 |
+| fixed - adaptive, 20 epochs (same seeds) | temporal_conv | macro AUROC | +0.0152 [+0.0104, +0.0202] | 0.0000 |
+| fixed - adaptive, 20 epochs (same seeds) | temporal_conv | HYP AUROC | +0.0403 [+0.0263, +0.0560] | 0.0000 |
+| fixed - adaptive, 20 epochs (same seeds) | hybrid_vit | macro AUROC | +0.0032 [-0.0066, +0.0118] | 0.5880 |
+| fixed - adaptive, 20 epochs (same seeds) | hybrid_vit | HYP AUROC | +0.0083 [-0.0068, +0.0234] | 0.5880 |
 

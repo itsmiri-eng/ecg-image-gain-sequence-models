@@ -527,6 +527,33 @@ def table_long40():
                        "(2{,}000 resamples), Holm within each family (5 or 10 comparisons).", size="\\scriptsize")
     return first + "\n\n" + second
 
+
+def table_fixedgain_long40():
+    if not (AMENDMENT / "fixedgain_long40/hierarchical_test.csv").exists():
+        return ("The fixed-gain 40-epoch runs had not all completed when this document was generated; "
+                "results will be added when they finish.")
+    runs = read_csv(AMENDMENT / "fixedgain_long40/per_run.csv")
+    epochs = {h: (" ".join(r["selected_epoch"] for r in runs if r["head"] == h),
+                  " ".join(r["epochs_run"] for r in runs if r["head"] == h)) for h in dict.fromkeys(r["head"] for r in runs)}
+    body, family = [], None
+    for r in read_csv(AMENDMENT / "fixedgain_long40/hierarchical_test.csv"):
+        if family is not None and r["family"] != family:
+            body.append("\\midrule")
+        family = r["family"]
+        body.append(" & ".join([esc(r["family"]), HEAD_NAMES[r["comparison"]], r["metric"].replace(" AUROC", ""),
+                                fmt_diff(float(r["difference"]), float(r["ci_lower"]), float(r["ci_upper"])),
+                                fmt_p(float(r["p_holm"]))]))
+    note = ("Fixed-gain amendment of 11 November 2026 (evening): the four fixed-gain networks retrained with at most "
+            "40 epochs, otherwise identical, seeds 42--44, all on the GPU. Selected epochs (epochs run): " +
+            "; ".join(f"{HEAD_NAMES[h]} {e[0]} ({e[1]})" for h, e in epochs.items()) + ". Hierarchical seed "
+            "$\\times$ patient bootstrap on the PTB-XL test fold (2{,}000 resamples), Holm within each family "
+            "(8, 4 and 8 comparisons). No external inference was run for these models.")
+    return longtable("Fixed-gain minus adaptive-gain training with a 40-epoch budget, fixed-gain 40 minus 20 epochs, "
+                     "and the 20-epoch fixed-minus-adaptive differences for the same seeds (PTB-XL test, seeds 42--44).",
+                     "tab:s_fg_long40", "lllcr", "Family & Model & AUROC & Difference [95\\% CI] & $p$", body, note,
+                     size="\\scriptsize")
+
+
 # ---------------------------------------------------------------- text sections
 
 def model_cards():
@@ -550,6 +577,9 @@ def amendments():
     parts += ["\\subsection{Amendment of 11 November 2026: signal-reference seeds 45 and 46}", markdown(doc)]
     doc = (ROOT / "docs/protocol_amendment_2026-11-11.md").read_text(encoding="utf-8")
     parts += ["\\subsection{Amendment of 11 November 2026: 40-epoch sensitivity and a pretrained ResNet-18}", markdown(doc)]
+    doc = (ROOT / "docs/protocol_amendment_2026-11-11_fixedgain_long40.md").read_text(encoding="utf-8")
+    parts += ["\\subsection{Amendment of 11 November 2026 (evening): fixed-gain training with a 40-epoch budget}",
+              markdown(doc)]
     return "\n\n".join(parts)
 
 
@@ -586,7 +616,7 @@ def main():
         ("External per-label results", [table_external_labels()]),
         ("Gain policy: public resources and clipping at fixed gain", [table_survey(), table_clipping()]),
         ("Sensitivity analyses of 11 November 2026: a pretrained ResNet-18 and a longer training budget",
-         [table_resnet(), table_long40()]),
+         [table_resnet(), table_long40(), table_fixedgain_long40()]),
         ("Model cards", [model_cards()]),
         ("Protocol amendments", [amendments()]),
     ]

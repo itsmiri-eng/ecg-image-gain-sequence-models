@@ -1,5 +1,28 @@
 # Project status — 1 November 2026 (evening update)
 
+## Update 12 November 2026 (morning): fixed-gain training with 40 epochs
+
+Protocol `docs/protocol_amendment_2026-11-11_fixedgain_long40.md`, frozen and committed (652b435) before any run. The
+12 runs (four fixed-gain heads × seeds 42–44) ran overnight and all finished by 05:50.
+
+- **Fixed − adaptive at 40 epochs** (PTB-XL test, Holm over 8):
+  - CNN-only: +0.032 [0.023, 0.041] macro and +0.060 HYP, p < 0.001.
+  - Temporal conv: +0.023 HYP (p < 0.001), but only +0.005 macro (p = 0.48).
+  - LSTM: +0.002 macro, +0.000 HYP. ViT: +0.004 macro, +0.005 HYP. All p = 1.0.
+  - No difference is negative.
+- **What it means.** At 20 epochs (same seeds), temporal conv macro was +0.015 (p < 0.001).
+  - By the prespecified rule, the gain finding is qualified: with longer training, fixed gain helps clearly where a
+    model cannot relate the pulse to the waveform (CNN-only, and hypertrophy for temporal conv).
+  - Whole-row heads (LSTM, ViT) reach the same PTB-XL accuracy either way. This is consistent with the pulse-reading
+    mechanism.
+  - The external results (20-epoch models) are unchanged.
+- **Fixed-gain CNN-only** still selected epoch 39–40 of 40, so it is still limited by the budget.
+- **Where it is reported:**
+  - Results (gain-controlled retraining), Discussion, Limitations, Conclusion and Methods;
+  - Supplementary Table S18 and the amendment text.
+  - The abstract is unchanged: "never reduced performance and helped local models most" still holds.
+- Overleaf updated; the paper and the supplement both compile without errors.
+
 ## Update 11 November 2026 (evening): ResNet-18 and 40-epoch sensitivity (amendment of 11 Nov)
 
 Protocol: `docs/protocol_amendment_2026-11-11.md`, frozen and committed before any run. Analysis:

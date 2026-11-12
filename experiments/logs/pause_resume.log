@@ -2,3 +2,4 @@
 2026-11-11T01:09:33.6472749+04:00 Pause long40 lanes only (give the GPU to the ResNet-18 runs)
 2026-11-11T12:04:36.4196290+04:00 Started 5 lanes of 40-epoch runs (affinity FFC0 = 10 logical CPUs, ~62%)
 2026-11-11T12:50:39.6113862+04:00 40-epoch lanes widened to affinity FFE0 (11 logical CPUs, target ~70% total)
+2026-11-11T23:10:24.9840077+04:00 Started 4 lanes of fixed-gain 40-epoch runs (affinity FFE0 = 11 logical CPUs, ~70%)

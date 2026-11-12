@@ -372,6 +372,31 @@ shared settings, bf16 forward pass; seeds 42–44).
 - **Execution.** The PC restarted on 11 Nov 07:46 local and ended three paused seed-42 runs in epoch 1 (moved to
   `experiments/abandoned_runs/2026-11-11_pc_restart_long40/`, restarted from scratch under the same IDs, as on 1–6 Nov).
 
+## Addendum, 12 November 2026: fixed-gain training with 40 epochs
+
+Protocol `docs/protocol_amendment_2026-11-11_fixedgain_long40.md` (frozen 11 Nov 23:10 local, commit 652b435;
+analysis code committed in eb2179c before any result). Four fixed-gain heads × seeds 42–44, at most 40 epochs,
+otherwise identical; analysis in `results/amendment_20261111/fixedgain_long40/`.
+
+| Head | Fixed 40-epoch test macro (seeds 42/43/44) | Selected epochs | Fixed − adaptive at 40, macro [95% CI], Holm p | HYP, Holm p | Same seeds at 20 epochs: macro / HYP |
+|---|---|---|---|---|---|
+| CNN-only | 0.872 / 0.883 / 0.877 | 40, 39, 40 | +0.032 [0.023, 0.041], <0.001 | +0.060, <0.001 | +0.032 / +0.073 |
+| CNN-LSTM | 0.890 / 0.898 / 0.892 | 24, 27, 26 | +0.002 [−0.005, 0.011], 1.0 | +0.000, 1.0 | +0.007 / +0.011 |
+| Temporal conv | 0.892 / 0.899 / 0.900 | 11, 27, 20 | +0.005 [−0.001, 0.012], 0.48 | +0.023, <0.001 | +0.015 / +0.040 |
+| Small ViT | 0.900 / 0.891 / 0.894 | 19, 27, 14 | +0.004 [−0.007, 0.013], 1.0 | +0.005, 1.0 | +0.003 / +0.008 |
+
+- **Fixed gain, 40 − 20 epochs:** CNN-only +0.016, LSTM +0.008 (both p < 0.001); temporal conv +0.002 and ViT
+  +0.003 (n.s.).
+- **Interpretation (prespecified rule).** The temporal-conv macro difference, significant at 20 epochs, is no longer
+  significant, so the gain finding is qualified.
+  - With longer training, fixed gain still clearly helps the CNN-only head, which cannot relate the pulse to the
+    waveform, and the hypertrophy AUROC of the temporal-convolution head.
+  - The LSTM and ViT reach the same PTB-XL accuracy with either gain policy.
+  - No difference is negative. This matches the calibration-pulse mechanism: whole-row models can read the
+    voltage scale from the pulse, so the gain policy matters less to them once they are trained long enough.
+- **Not repeated:** the external tests (20-epoch models). Fixed-gain CNN-only is still budget-limited (epoch 39–40
+  of 40).
+
 ## Manuscript boundaries and unresolved work
 
 The current evidence supports a reproducible, exploratory benchmark of compact classifiers on two separately defined image tasks. It does not establish a novel architecture, a universal best ECG model, external transfer, causal physiological timing, calibrated digitization or clinical readiness. Additional renderings of an existing patient's signals are not independent patients. The historical manuscript's claims and conflicting archived figures cannot be copied into these result tables.
