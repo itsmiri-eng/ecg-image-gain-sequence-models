@@ -25,7 +25,7 @@ from src.common import ROOT, write_csv
 from src.compare_heads_hierarchical import load as load_predictions
 from src.external_test import CLASS_NAMES, auroc, hierarchical_difference, macro_auroc
 
-OUT = ROOT / "results/publication/figures_20261110"
+OUT = ROOT / "results/publication/figures_20261115"  # the 10-12 Nov figures stay in figures_20261110
 INK, MUTED, GRID, SURFACE = "#0b0b0b", "#52514e", "#e4e3dc", "#ffffff"
 SERIES = ["#2a78d6", "#eb6834", "#1baf7a", "#eda100", "#e87ba4", "#008300"]  # reference palette slots 1-6
 MARKERS = ["o", "s", "^", "D", "v", "P"]
@@ -219,13 +219,19 @@ def figure_fixed_gain(ptbxl_rows):
         for r in csv.DictReader(handle):
             metric = "HYP AUROC" if r["metric"].startswith("HYP") else "macro AUROC"
             external[(cohorts[r["cohort"]], "resnet18", metric)] = r
-    archs = ["cnn_pool", "temporal_conv", "cnn_lstm", "hybrid_vit", "resnet18"]
-    fig, axes = plt.subplots(1, 2, figsize=(7.16, 3.0), sharey=True, constrained_layout=True)
+    # Capacity-matched head on fixed gain (Additional analysis, amendment of 15 Nov 2026; its own Holm family of 2)
+    with (ROOT / "results/review_20261115/fixedgain_wide/hierarchical.csv").open(newline="") as handle:
+        for r in csv.DictReader(handle):
+            if r["family"] == "capacity-matched: fixed - adaptive":
+                external[(cohorts[r["cohort"]], "cnn_pool_wide", r["metric"])] = r
+    archs = ["cnn_pool", "cnn_pool_wide", "temporal_conv", "cnn_lstm", "hybrid_vit", "resnet18"]
+    labels = {**NAMES, "cnn_pool_wide": NAMES["cnn_pool_wide"] + "†", "resnet18": "ResNet-18 (ImageNet)*"}
+    fig, axes = plt.subplots(1, 2, figsize=(7.16, 3.4), sharey=True, constrained_layout=True)
     for axis, metric in zip(axes, ("macro AUROC", "HYP AUROC")):
         axis.axvline(0, color=MUTED, linewidth=0.7, zorder=1)
         for y, head in enumerate(archs):
             for k, (dataset, color) in enumerate(DATASET_COLORS.items()):
-                if dataset == "PTB-XL test" and head != "resnet18":
+                if dataset == "PTB-XL test" and head not in ("resnet18", "cnn_pool_wide"):
                     r = next(r for r in ptbxl_rows if r["architecture"] == head and r["metric"] == metric and r["seed_set"] == "42-46")
                 else:
                     r = external[(dataset, head, metric)]
@@ -237,7 +243,7 @@ def figure_fixed_gain(ptbxl_rows):
         axis.set_xlabel(f"Difference in {metric} (mean over seeds, 95% CI)")
         axis.set_ylim(len(archs) - 0.5, -0.5)
         style(axis)
-    axes[0].set_yticks(range(len(archs)), [NAMES.get(h, "ResNet-18 (ImageNet)*") for h in archs])
+    axes[0].set_yticks(range(len(archs)), [labels[h] for h in archs])
     for axis in axes:
         axis.axhline(len(archs) - 1.5, color=MUTED, linewidth=0.5, linestyle=":", zorder=1)
     fig.legend(handles=[plt.Line2D([], [], color=c, marker=MARKERS[k], linewidth=1.4, markersize=4, label=n)
@@ -271,8 +277,10 @@ def figure_pulse():
     axis.legend(frameon=False, loc="upper center", bbox_to_anchor=(0.5, -0.2), ncol=2)
     style(axis)
     axis = axes[1]
-    parts = (("consistent_rerender_hyp_change", "Gain prior (waveform and pulse redrawn together)", SERIES[2]),
-             ("approx_calibration_reading", "Calibration reading (pulse-only swap minus redraw)", SERIES[4]))
+    # Neutral labels (review of 15 Nov 2026): the decomposition is consistent with a gain prior plus calibration
+    # reading, but it does not identify the two mechanisms uniquely.
+    parts = (("consistent_rerender_hyp_change", "Consistent re-rendering (waveform and pulse redrawn together)", SERIES[2]),
+             ("approx_calibration_reading", "Pulse-only swap minus consistent re-rendering", SERIES[4]))
     for k, (column, label, color) in enumerate(parts):
         values = [float(decomposition[m][column]) for m in models]
         axis.barh(np.arange(len(models)) + (k - 0.5) * 0.3, values, height=0.28, color=color, edgecolor=SURFACE,
@@ -280,7 +288,7 @@ def figure_pulse():
     axis.axvline(0, color=MUTED, linewidth=0.7)
     axis.set_yticks(range(len(models)), models), axis.invert_yaxis()
     axis.set_xlabel("Mean change in HYP probability (pages at 5-10 mm/mV)")
-    axis.set_title("(b) Post-hoc decomposition of the pulse-swap effect", color=INK, loc="left")
+    axis.set_title("(b) Post-hoc comparison of two pulse interventions", color=INK, loc="left")
     axis.legend(frameon=False, loc="upper center", bbox_to_anchor=(0.5, -0.2), ncol=1, fontsize=5.8)
     style(axis)
     save(fig, "fig5_calibration_pulse")

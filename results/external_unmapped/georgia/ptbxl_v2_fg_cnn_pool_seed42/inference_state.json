@@ -1,0 +1,14 @@
+{
+  "status": "completed",
+  "completed_utc": "2026-11-15T18:53:47.644330+00:00",
+  "dataset": "georgia",
+  "inference_calls": 1,
+  "records": 4245,
+  "family": "ptbxl_v2_fixedgain",
+  "kind": "network",
+  "page": "fixed",
+  "head": "cnn_pool",
+  "seed": 42,
+  "amendment": "docs/protocol_amendment_2026-11-15_label_mapping_sensitivity.md",
+  "predictions_sha256": "9e37f6df4d44bfb3b4cd9c1f02a5fc316da912a9498118bf44bcb01e9e1bbc16"
+}

@@ -1,4 +1,4 @@
-# Reproducing the PTB-XL image-model study (updated 10 November 2026)
+# Reproducing the PTB-XL image-model study (updated 15 November 2026)
 
 **Repository contents.** The Git repository holds code, configs, protocols, run records, saved predictions and summaries.
 It does **not** hold PTB-XL itself, the rendered pages and image caches, the external Challenge 2021 data, or model
@@ -65,7 +65,27 @@ python -X utf8 -m src.external_test infer --dataset georgia --device cuda
 python -X utf8 -m src.external_test analyze --dataset georgia             # repeat the four steps with --dataset china
 python -X utf8 -m src.external_test infer-added --dataset georgia --device cuda  # runs added later by amendment only (signal seeds 45/46)
 
-# analyses from saved predictions (no retraining)
+# sensitivity analyses of 11 Nov 2026 (docs/protocol_amendment_2026-11-11*.md): 40-epoch budget, pretrained ResNet-18
+python -X utf8 -m src.run_ptbxl_extra --config experiments/configs/ptbxl_v2_long40_cnn_pool.json --seeds 42 43 44 --device cuda   # likewise the other ptbxl_v2_long40_*.json configs
+python -X utf8 -m src.run_ptbxl_extra --config experiments/configs/ptbxl_v2_resnet18.json --seeds 42 43 44 --device cuda          # and ptbxl_v2_fg_resnet18.json (needs torchvision ResNet-18 weights in models/pretrained/)
+python -X utf8 -m src.amendment_20261111 external-infer --dataset georgia  # ResNet-18, ONCE per cohort; then --dataset china
+python -X utf8 -m src.amendment_20261111 analyze
+
+# Additional analyses of 15 Nov 2026 (review; docs/protocol_amendment_2026-11-15_*.md)
+python -X utf8 -m src.run_ptbxl_extra --config experiments/configs/ptbxl_v2_fg_cnn_pool_wide.json --seeds 42 43 44 45 46 --device cuda   # capacity-matched head on fixed gain
+python -X utf8 -c "from src import external_test as e; [e.infer_added(d, amendment='docs/protocol_amendment_2026-11-15_fixedgain_wide.md') for d in ('georgia', 'china')]"   # its external inference, ONCE
+python -X utf8 -m src.external_allrecords render --dataset georgia --workers 3   # records without a mapped superclass (mapping sensitivity); then --dataset china
+python -X utf8 -m src.external_allrecords infer --dataset georgia --device cuda  # ONCE per run and cohort; then --dataset china
+python -X utf8 -m src.review_20261115 clipping       # two clipping boundaries, PTB-XL and external cohorts
+python -X utf8 -m src.review_20261115 wide           # capacity-matched head: fixed vs adaptive, head pairs on fixed gain
+python -X utf8 -m src.review_20261115 descriptive    # PCA + LDA fixed vs adaptive; image models vs signal reference
+python -X utf8 -m src.review_20261115 composition    # SNOMED CT codes of included and excluded records
+python -X utf8 -m src.review_20261115 mapping        # label-mapping sensitivity variants V0-V5
+python -X utf8 -m src.review_20261115 stats          # old (2,000 resamples) versus revised (10,000, add-one) bootstrap p-values
+
+# analyses from saved predictions (no retraining). Since 15 Nov 2026 every bootstrap uses 10,000 resamples and the
+# finite-resample p-value (docs/protocol_amendment_2026-11-15_bootstrap_inference.md); the outputs of the earlier
+# procedure are archived in results/stats_legacy_2000resamples_20261115/.
 python -X utf8 -m src.compare_heads_hierarchical                           # five-seed head comparison, Holm-corrected
 python -X utf8 -m src.compare_ptbxl_all
 python -X utf8 -m src.compare_fixed_gain
@@ -96,6 +116,15 @@ python -X utf8 -m pytest -q tests
 | `docs/protocol_amendment_2026-11-03.md` | Seeds 45/46, capacity-matched head, multiple-comparison correction |
 | `docs/external_test_plan.md` | External confirmatory test (frozen 5 Nov 2026; amendment 6 Nov in `experiments/external/amendments.json`) |
 | `docs/protocol_amendment_2026-11-11_signal_seeds.md` | Signal-reference seeds 45/46 and their descriptive external inference |
+| `docs/protocol_amendment_2026-11-11.md` | 40-epoch sensitivity (adaptive gain) and ImageNet-pretrained ResNet-18 |
+| `docs/protocol_amendment_2026-11-11_fixedgain_long40.md` | 40-epoch sensitivity on fixed-gain pages |
+| `docs/protocol_amendment_2026-11-15_fixedgain_wide.md` | Additional analysis: capacity-matched head on fixed-gain pages (seeds 42–46) |
+| `docs/protocol_amendment_2026-11-15_bootstrap_inference.md` | Statistical revision: 10,000 resamples, finite-resample p-values, wording rule |
+| `docs/protocol_amendment_2026-11-15_label_mapping_sensitivity.md` | SNOMED CT names, validation of the mapping, sensitivity variants V0–V5 |
+| `docs/protocol_amendment_2026-11-15_descriptive_additions.md` | PCA + LDA fixed vs adaptive; image models vs signal reference |
+
+The amendments of 15 Nov 2026 were requested in a review by the senior author after all earlier results were known.
+Their results are labelled "Additional analysis" in the paper.
 
 Post-hoc analyses say so in their file headers, for example `src/decompose_pulse_effect.py`.
 

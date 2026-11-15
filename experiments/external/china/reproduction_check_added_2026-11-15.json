@@ -1,0 +1,12 @@
+{
+  "checked_utc": "2026-11-15T19:42:37.655526+00:00",
+  "tolerance": 0.001,
+  "amendment": "docs/protocol_amendment_2026-11-15_fixedgain_wide.md",
+  "max_abs_difference": {
+    "ptbxl_v2_fg_cnn_pool_wide_seed42": 1.7881393432617188e-07,
+    "ptbxl_v2_fg_cnn_pool_wide_seed43": 1.1920928955078125e-07,
+    "ptbxl_v2_fg_cnn_pool_wide_seed44": 1.1920928955078125e-07,
+    "ptbxl_v2_fg_cnn_pool_wide_seed45": 1.7881393432617188e-07,
+    "ptbxl_v2_fg_cnn_pool_wide_seed46": 1.7881393432617188e-07
+  }
+}

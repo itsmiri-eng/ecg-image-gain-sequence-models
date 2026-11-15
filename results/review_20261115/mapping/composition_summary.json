@@ -1,0 +1,99 @@
+{
+  "created_utc": "2026-11-15T17:42:04.656109+00:00",
+  "georgia": {
+    "records": 10344,
+    "included": 6047,
+    "excluded_no_mapped_superclass": 4245,
+    "excluded_percent_of_all": 41.038283062645014,
+    "distinct_codes": 67,
+    "distinct_codes_in_ptbxl_table": 42,
+    "excluded_only_sinus_rhythm_code": 1735,
+    "excluded_only_sinus_rate_or_rhythm_codes": 2586,
+    "excluded_with_no_code_in_ptbxl_table": 174,
+    "excluded_with_a_near_miss_code_share_0p80_to_0p90": 447,
+    "codes_per_record_mean": {
+      "included": 2.9472465685463867,
+      "no_mapped_superclass": 1.3053003533568905
+    },
+    "positives_by_assigned_code": {
+      "MI": {
+        "164865005": 7
+      },
+      "STTC": {
+        "55930002": 6,
+        "428750005": 1874,
+        "425419005": 449,
+        "425623009": 901,
+        "111975006": 1383,
+        "426434006": 280
+      },
+      "CD": {
+        "445118002": 180,
+        "713426002": 402,
+        "270492004": 766,
+        "698252002": 203,
+        "713427006": 28,
+        "164909002": 231,
+        "445211001": 25,
+        "89792004": 80,
+        "74390002": 2,
+        "251120003": 86,
+        "27885002": 8,
+        "195042002": 23
+      },
+      "HYP": {
+        "164873001": 1225,
+        "67741000119109": 862,
+        "89792004": 80,
+        "266249003": 69
+      }
+    }
+  },
+  "china": {
+    "records": 45152,
+    "included": 9004,
+    "excluded_no_mapped_superclass": 36146,
+    "excluded_percent_of_all": 80.05403968816442,
+    "distinct_codes": 94,
+    "distinct_codes_in_ptbxl_table": 41,
+    "excluded_only_sinus_rhythm_code": 5908,
+    "excluded_only_sinus_rate_or_rhythm_codes": 19851,
+    "excluded_with_no_code_in_ptbxl_table": 433,
+    "excluded_with_a_near_miss_code_share_0p80_to_0p90": 5933,
+    "codes_per_record_mean": {
+      "included": 3.3996001776988005,
+      "no_mapped_superclass": 1.5867869197144913
+    },
+    "positives_by_assigned_code": {
+      "MI": {
+        "164865005": 123,
+        "54329005": 57
+      },
+      "STTC": {
+        "55930002": 4231,
+        "428750005": 1158,
+        "111975006": 394
+      },
+      "CD": {
+        "445118002": 380,
+        "713426002": 246,
+        "270492004": 1140,
+        "698252002": 771,
+        "713427006": 1095,
+        "164909002": 240,
+        "445211001": 5,
+        "89792004": 110,
+        "74390002": 72,
+        "251120003": 6,
+        "27885002": 76,
+        "195042002": 66
+      },
+      "HYP": {
+        "164873001": 647,
+        "67741000119109": 1,
+        "89792004": 110,
+        "446358003": 36
+      }
+    }
+  }
+}

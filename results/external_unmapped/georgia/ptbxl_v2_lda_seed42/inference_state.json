@@ -1,0 +1,14 @@
+{
+  "status": "completed",
+  "completed_utc": "2026-11-15T18:53:47.180522+00:00",
+  "dataset": "georgia",
+  "inference_calls": 1,
+  "records": 4245,
+  "family": "ptbxl_v2",
+  "kind": "lda",
+  "page": "adaptive",
+  "head": "pca_lda",
+  "seed": 42,
+  "amendment": "docs/protocol_amendment_2026-11-15_label_mapping_sensitivity.md",
+  "predictions_sha256": "36beaa08504a262aa7ff8ee52c31d2cfa93028ff5b251203bd677f331453b373"
+}

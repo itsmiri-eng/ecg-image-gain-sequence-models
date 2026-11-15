@@ -1,0 +1,51 @@
+partition,model,seed,macro_auroc
+test,CNN-only,42,0.8344067628630517
+test,CNN-only,43,0.8272220352031185
+test,CNN-only,44,0.8255238626055622
+test,CNN-only,45,0.8320685219633027
+test,CNN-only,46,0.8317957917208189
+test,"CNN-only, capacity-matched",42,0.8650670377609586
+test,"CNN-only, capacity-matched",43,0.8677403600294283
+test,"CNN-only, capacity-matched",44,0.8622438328551055
+test,"CNN-only, capacity-matched",45,0.8589881457263784
+test,"CNN-only, capacity-matched",46,0.8715444357211386
+test,CNN-LSTM,42,0.8698012215798719
+test,CNN-LSTM,43,0.8807120015094043
+test,CNN-LSTM,44,0.8862281602432415
+test,CNN-LSTM,45,0.87246122034377
+test,CNN-LSTM,46,0.8732530090491745
+test,CNN + temporal conv,42,0.8802576278599373
+test,CNN + temporal conv,43,0.8791115856716865
+test,CNN + temporal conv,44,0.8787613496296173
+test,CNN + temporal conv,45,0.8827901392863986
+test,CNN + temporal conv,46,0.8754384584581295
+test,CNN + small ViT,42,0.8901640657674964
+test,CNN + small ViT,43,0.8882861058058191
+test,CNN + small ViT,44,0.8856100206505385
+test,CNN + small ViT,45,0.8764945963936916
+test,CNN + small ViT,46,0.8871067505455926
+validation,CNN-only,42,0.8446513526658814
+validation,CNN-only,43,0.8428167259659043
+validation,CNN-only,44,0.8354982302781521
+validation,CNN-only,45,0.8410807696059752
+validation,CNN-only,46,0.8400543339664651
+validation,"CNN-only, capacity-matched",42,0.8735036602434084
+validation,"CNN-only, capacity-matched",43,0.8797631226512801
+validation,"CNN-only, capacity-matched",44,0.8741352413463795
+validation,"CNN-only, capacity-matched",45,0.862761237314292
+validation,"CNN-only, capacity-matched",46,0.8819079202143962
+validation,CNN-LSTM,42,0.8816467413965399
+validation,CNN-LSTM,43,0.8943396632802131
+validation,CNN-LSTM,44,0.9016129025868423
+validation,CNN-LSTM,45,0.8880346895188882
+validation,CNN-LSTM,46,0.8903308492424878
+validation,CNN + temporal conv,42,0.8888883368928575
+validation,CNN + temporal conv,43,0.8854306292679969
+validation,CNN + temporal conv,44,0.8880711637925096
+validation,CNN + temporal conv,45,0.8927058634570327
+validation,CNN + temporal conv,46,0.8850750977131181
+validation,CNN + small ViT,42,0.9015662289937213
+validation,CNN + small ViT,43,0.8950541769796538
+validation,CNN + small ViT,44,0.8975177745513877
+validation,CNN + small ViT,45,0.8919784491220597
+validation,CNN + small ViT,46,0.8927578466986468

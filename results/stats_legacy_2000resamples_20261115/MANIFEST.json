@@ -1,0 +1,33 @@
+{
+  "archived_local": "2026-11-15T21:28:58",
+  "git_commit_of_originals": "24c8851",
+  "reason": "docs/protocol_amendment_2026-11-15_bootstrap_inference.md",
+  "sha256": {
+    "results/comparisons/ptbxl_heads_hierarchical/pairwise.csv": "b3e138c315849d0d3b970dff7f24e81b4ec62c1e97ee2c54d371edff5de20a4e",
+    "results/comparisons/ptbxl_heads_hierarchical/per_seed.csv": "d8a44dadaf0f1413c28c6d23eb210540da44ef0522be739e5197e574026aa24d",
+    "results/comparisons/ptbxl_heads_hierarchical/summary.md": "20c36de159a405fcb267e04ea0ee538b8de14c2ac3d0c325f2fe43eb2a2f597d",
+    "results/fixed_gain/retrained_comparison/hierarchical_test.csv": "88d8ca4433af70339057934a801b990b3c8b353f8ebf169ce3c51170654935e9",
+    "results/external/georgia/hypotheses.csv": "7b7a4bea760d42954f9d116f8f7b285537e0c682faaab4d4d2d596469f112c3f",
+    "results/external/georgia/summary.md": "270be02f4fca8a5387d646db9b3d3c608ab0d526a547cac8793e4626a7046c49",
+    "results/external/georgia/per_run.csv": "24970735898dce9bcd4947d3eee4b4a31f4526ce769e6e0e852945451b6ffcd4",
+    "results/external/china/hypotheses.csv": "2d316ae7c7833d6cc948ade5b64fe4d6fa0f6ba181e2502fa13a1df12d68dd2e",
+    "results/external/china/summary.md": "701d5c2871819d3fcf585a1420453a505091d73ab836d0519c3b5ab328c02083",
+    "results/external/china/per_run.csv": "9e330cdffd0f26a484b16141608027aaee3f941cb7b38cac48d1a1d43111bceb",
+    "results/amendment_20261111/fixedgain_long40/hierarchical_test.csv": "a2913c11c5aacc4b63f6d1ca0d7046c7c3181451cc529523336bd1568a54718f",
+    "results/amendment_20261111/fixedgain_long40/per_run.csv": "0a9c95d2fa23ee33fb69f5b63be21b387c0bc8d68061a412c5b5d12dbc14c907",
+    "results/amendment_20261111/long40/hierarchical_test.csv": "834673f0d5421a162a65a39cbe6c14087ed7f5a3d7fd9ccf3570920c5ac4146b",
+    "results/amendment_20261111/long40/per_run.csv": "f9e759e5148817f0545bb2cfd1deb42c14161487d474b9b656273b78c0825a93",
+    "results/amendment_20261111/long40/summary.csv": "cc2d0cb75c45c78c231f9334a78129640a8e76968772ef65ecdb0a216978c044",
+    "results/amendment_20261111/resnet18/fixed_minus_adaptive.csv": "2fd5bbc2623d70071fcd018d4c2d3fbb26e92ffddf6fcb5c75841f50c5e2b0be",
+    "results/amendment_20261111/resnet18/per_run.csv": "8776dec444e40ef7c7539afb59d35ffe2cb603488beeeba2c0315453c87c7d92",
+    "results/amendment_20261111/summary.md": "5a12a10182ac6c6845b2c37d93979a301b1129521a28b906cada41bf77843ec7",
+    "paper/ieee_manuscript/tables/tab_external.tex": "737f161ae2cbd0a359716b78fc8718bc7e3521c8f0ad551a157609396e8bd0c4",
+    "paper/ieee_manuscript/tables/tab_fixed_gain.tex": "8b2a7ca8f9c0b56a8fec0b6c1755c10201c078be50e89e4301f4d303e1771b1a",
+    "paper/ieee_manuscript/tables/tab_pairs.tex": "32c8d539af00b1c13cdb6513a721e12d6a4672c133475f105c9f6218eb4ec32c",
+    "paper/ieee_manuscript/tables/tab_ptbxl.tex": "1c24889d3fb4655bf371ceaea565be4b745a426afd1a0c95da47055b30bb1a6d",
+    "paper/ieee_manuscript/figures/fig4_fixed_vs_adaptive_gain.pdf": "259ce91f76136a531f37b4e771209cd2c4f3ae129bb0b83c47bf4cb8996d7754",
+    "paper/ieee_manuscript/supplementary_scirep.tex": "749e24b3ab919484a00ec71f96f8d73af0970be948b5cf63b1007afccc033cfe",
+    "paper/ieee_manuscript/main_source_scirep.tex": "50d98faf829e2dd62a2a3160f3033642a843bb36c5d5f8a633f8cf7fadf3aa31",
+    "paper/ieee_manuscript/main_source.tex": "defa6b382d42ca73f53e17ffce4805864da838a2340606ef3104bc3d2e40fcea"
+  }
+}

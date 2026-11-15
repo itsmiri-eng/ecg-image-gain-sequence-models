@@ -18,7 +18,9 @@ CARDS = {
     "CNN-only (cnn_pool)": "Shared 1,220-parameter lead-image CNN, mean over 70 feature columns, linear readout. "
         "1,705 parameters. Sees only local image regions; cannot relate the calibration pulse to the waveform.",
     "Wide CNN-only (cnn_pool_wide)": "Same CNN, per-column MLP 96-96-64 then column mean. 17,065 parameters: "
-        "capacity of the sequence heads without column mixing (protocol amendment 3 Nov 2026).",
+        "capacity of the sequence heads without column mixing (protocol amendment 3 Nov 2026). Trained on "
+        "adaptive-gain pages and, as an additional analysis (amendment of 15 Nov 2026), on fixed-gain pages, "
+        "seeds 42-46 each.",
     "CNN-LSTM (cnn_lstm)": "Same CNN, one unidirectional LSTM layer (hidden width 32) over the 70 columns, mean of outputs. 18,025 parameters.",
     "CNN + temporal convolution (temporal_conv)": "Same CNN, two causal dilated residual Conv1d blocks "
         "(receptive field 13 columns). 17,161 parameters.",

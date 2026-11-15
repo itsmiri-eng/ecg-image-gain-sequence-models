@@ -1,0 +1,7 @@
+{
+  "status": "started",
+  "started_utc": "2026-11-15T19:14:26.107385+00:00",
+  "dataset": "china",
+  "inference_calls": 1,
+  "amendment": "docs/protocol_amendment_2026-11-15_label_mapping_sensitivity.md"
+}

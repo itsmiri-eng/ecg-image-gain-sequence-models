@@ -1,0 +1,13 @@
+pages,budget,head,seed,run,selected_epoch,epochs_run,max_epochs,stopped_early,validation_macro_auroc,test_macro_auroc,device
+fixed,40,cnn_pool,42,ptbxl_v2_long40_fg_cnn_pool_seed42,40,40,40,False,0.8832165949905745,0.8715379936776303,cuda
+fixed,40,cnn_pool,43,ptbxl_v2_long40_fg_cnn_pool_seed43,39,40,40,False,0.8888121350857654,0.8825915326883639,cuda
+fixed,40,cnn_pool,44,ptbxl_v2_long40_fg_cnn_pool_seed44,40,40,40,False,0.8818625843511745,0.8768430070218267,cuda
+fixed,40,cnn_lstm,42,ptbxl_v2_long40_fg_cnn_lstm_seed42,24,28,40,True,0.9046238991015219,0.8894692998748045,cuda
+fixed,40,cnn_lstm,43,ptbxl_v2_long40_fg_cnn_lstm_seed43,27,31,40,True,0.9069425194677692,0.8983101717730053,cuda
+fixed,40,cnn_lstm,44,ptbxl_v2_long40_fg_cnn_lstm_seed44,26,30,40,True,0.9033877907831084,0.8920598305880704,cuda
+fixed,40,temporal_conv,42,ptbxl_v2_long40_fg_temporal_conv_seed42,11,15,40,True,0.9089729204327941,0.8917778674764753,cuda
+fixed,40,temporal_conv,43,ptbxl_v2_long40_fg_temporal_conv_seed43,27,31,40,True,0.9067207658894475,0.8986474402154319,cuda
+fixed,40,temporal_conv,44,ptbxl_v2_long40_fg_temporal_conv_seed44,20,24,40,True,0.9091546735743241,0.8996582313342923,cuda
+fixed,40,hybrid_vit,42,ptbxl_v2_long40_fg_hybrid_vit_seed42,19,23,40,True,0.9060720109394624,0.8997881201944331,cuda
+fixed,40,hybrid_vit,43,ptbxl_v2_long40_fg_hybrid_vit_seed43,27,31,40,True,0.9033976571765494,0.8905154053947161,cuda
+fixed,40,hybrid_vit,44,ptbxl_v2_long40_fg_hybrid_vit_seed44,14,18,40,True,0.9057849957206191,0.8939873324563434,cuda

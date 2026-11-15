@@ -1,0 +1,14 @@
+{
+  "status": "completed",
+  "completed_utc": "2026-11-15T18:53:48.459321+00:00",
+  "dataset": "georgia",
+  "inference_calls": 1,
+  "records": 4245,
+  "family": "ptbxl_cnn_lstm",
+  "kind": "network",
+  "page": "adaptive",
+  "head": "cnn_lstm",
+  "seed": 42,
+  "amendment": "docs/protocol_amendment_2026-11-15_label_mapping_sensitivity.md",
+  "predictions_sha256": "9b8e169ddd52f527b826aae61b7bcdd33d5d335b5e8eafe09bb3f7fccdcd00e5"
+}

@@ -7,7 +7,7 @@ Item numbers, sections and applicability follow the official TRIPOD+AI checklist
 2024;385:e078378, Table 2, and the TRIPOD+AI for Abstracts checklist), read on 11 Nov 2026 from the open-access
 copy https://pmc.ncbi.nlm.nih.gov/articles/PMC11019967/. Item topics are abbreviated here; the official form has the
 full wording. Locations refer to main_source_scirep.tex (sections) and supplementary_scirep.tex (Tables S1-S13,
-Sections S1-S8). Writes paper/ieee_manuscript/tripod_ai_checklist.md and .docx (the .docx is plain Office Open XML
+Sections S1-S10; revised 15 Nov 2026). Writes paper/ieee_manuscript/tripod_ai_checklist.md and .docx (the .docx is plain Office Open XML
 written with the standard library, so no extra package is needed).
 """
 from __future__ import annotations
@@ -29,7 +29,7 @@ MAIN = [
     ("Background", "3a", "Healthcare context, rationale, references to existing models",
      "Introduction (paragraphs 1-4)", DONE, ""),
     ("Background", "3b", "Target population, intended purpose and intended users",
-     "Discussion (Limitations: methodological study without clinical evaluation); Supplementary S7 (model cards: "
+     "Discussion (Limitations: methodological study without clinical evaluation); Supplementary S9 (model cards: "
      "research use only)", PART, "The models are research tools for comparing image heads and rendering policies; "
      "no clinical use or user group is intended."),
     ("Background", "3c", "Known health inequalities between sociodemographic groups", "--", NO,
@@ -49,15 +49,20 @@ MAIN = [
     ("Participants", "6c", "Treatments received and their handling", "--", NA,
      "Diagnostic classification of single ECGs; no treatment information is used."),
     ("Data preparation", "7", "Pre-processing and quality checks; similarity across groups",
-     "Methods (Page rendering; Training; External confirmatory test, Procedure); Supplementary Tables S2, S13", PART,
-     "Pre-processing and checks (checksums, reproduction check, clipping) are reported; similarity across "
-     "sociodemographic groups was not examined."),
+     "Methods (Page rendering, including both clipping definitions; Training; External confirmatory test, Procedure); "
+     "Supplementary Tables S2, S13, S24", PART,
+     "Pre-processing and checks (checksums, reproduction check, clipping rates in every cohort) are reported; "
+     "similarity across sociodemographic groups was not examined."),
     ("Outcome", "8a", "Outcome definition, time horizon, assessment, rationale, consistency across groups",
-     "Methods (Data and labels; External confirmatory test, Label mapping); Supplementary Table S3", PART,
-     "Diagnostic (same-ECG) outcome; consistency across sociodemographic groups not examined."),
+     "Methods (Data and labels; External confirmatory test, Label mapping; Clinical names and validation of the "
+     "mapping); Results (External validation, sensitivity to the label mapping); Supplementary Tables S3, S25-S31",
+     PART, "Diagnostic (same-ECG) outcome. External labels come from a data-driven mapping of SNOMED CT codes with "
+     "clinical names; its sensitivity is reported. Consistency across sociodemographic groups not examined."),
     ("Outcome", "8b", "Qualifications and demographics of outcome assessors",
-     "Methods (Data and labels: PTB-XL annotated by cardiologists)", PART,
-     "Assessor details for the external cohorts are not stated in their source publications checked."),
+     "Methods (Data and labels: PTB-XL annotated by cardiologists; Clinical names and validation of the mapping); "
+     "Discussion (Limitations)", PART,
+     "Assessor details for the external cohorts are not stated in their source publications checked. The manuscript "
+     "states that no cardiologist reviewed the code-to-superclass mapping."),
     ("Outcome", "8c", "Blinding of outcome assessment", "--", NA,
      "Labels pre-existed in the public datasets and were assigned without knowledge of the models."),
     ("Predictors", "9a", "Choice of initial predictors and any pre-selection",
@@ -81,14 +86,16 @@ MAIN = [
      "Introduction; Methods (Models; Training)", DONE,
      "Hyperparameters prespecified, not tuned; PCA components chosen on validation."),
     ("Analytical methods", "12d", "Heterogeneity across clusters (e.g. countries)",
-     "Methods (External confirmatory test); Results (External validation); Supplementary Table S11", PART,
+     "Methods (External confirmatory test); Results (External validation); Supplementary Tables S11, S28-S31", PART,
      "Each external cohort is analysed separately; no formal heterogeneity model."),
     ("Analytical methods", "12e", "Performance measures and plots; methods to compare models",
-     "Methods (Evaluation and statistics)", DONE, ""),
+     "Methods (Evaluation and statistics, including the revised bootstrap p-values); Supplementary Tables S32-S33",
+     DONE, "Hierarchical bootstrap with 10,000 resamples, finite-resample p-values, Holm correction; resolution "
+     "limit stated."),
     ("Analytical methods", "12f", "Model updating (e.g. recalibration) after evaluation", "Methods (External "
      "confirmatory test, Procedure: no recalibration)", NA, "No model was updated."),
     ("Analytical methods", "12g", "How predictions were calculated for evaluation",
-     "Methods (External confirmatory test, Procedure); Data availability", DONE, ""),
+     "Methods (External confirmatory test, Procedure); Code availability", DONE, ""),
     ("Class imbalance", "13", "Class-imbalance methods and any recalibration", "Methods (Training: unweighted "
      "binary cross-entropy)", DONE, "No class-imbalance method was used."),
     ("Fairness", "14", "Approaches to address model fairness", "--", NO,
@@ -106,29 +113,37 @@ MAIN = [
     ("Conflicts of interest", "18b", "Conflicts of interest", "Competing interests", NO,
      "Placeholder, to be completed by the authors."),
     ("Protocol", "18c", "Where the protocol can be accessed", "Methods (Training; External confirmatory test, Plan); "
-     "Data availability; Supplementary S8 (amendments)", DONE, "Protocols are released with the code."),
+     "Code availability; Supplementary Section S10 (amendments)", DONE,
+     "Protocols, the frozen plan and all dated amendments are in the linked repository and reproduced in the "
+     "Supplementary Information."),
     ("Registration", "18d", "Registration information or statement of no registration",
      "Methods (External confirmatory test, Plan)", DONE, "Not registered; the frozen plan's hashes were recorded."),
     ("Data sharing", "18e", "Availability of study data", "Data availability", DONE, ""),
-    ("Code sharing", "18f", "Availability of analytical code", "Data availability", PART,
-     "Released upon publication; repository link to be added by the authors."),
+    ("Code sharing", "18f", "Availability of analytical code", "Code availability", PART,
+     "A publicly readable repository is linked and its contents are listed. Still open for the authors: code "
+     "licence, a versioned archive with a DOI, and availability of the model checkpoints."),
     ("Patient and public involvement", "19", "Patient and public involvement", "--", NO,
      "No patient or public involvement (secondary analysis of public data); not stated in the manuscript."),
     ("Participants", "20a", "Flow of participants, numbers with and without the outcome",
-     "Results (External validation); Methods (Data and labels); Supplementary Tables S1-S2", DONE, ""),
+     "Results (External validation); Methods (Data and labels); Supplementary Tables S1-S2, S25-S27", DONE,
+     "Includes the diagnoses of the records excluded for having no mapped superclass."),
     ("Participants", "20b", "Characteristics overall and per data source (demographics, events, missing data)",
-     "Supplementary Tables S1-S2", PART, "Label prevalence per fold and cohort is given; age and sex are not reported."),
+     "Supplementary Tables S1-S2, S25-S27", PART,
+     "Label prevalence per fold, cohort and mapping variant is given; age and sex are not reported."),
     ("Participants", "20c", "Comparison of development and evaluation data distributions",
-     "Supplementary Tables S1-S2", PART, "Outcome prevalence compared; demographics not compared."),
+     "Supplementary Tables S1-S2, S24, S27", PART,
+     "Outcome prevalence and clipping rates compared; demographics not compared."),
     ("Model development", "21", "Number of participants and events in each analysis",
      "Methods (Data and labels); Supplementary Tables S1-S2", DONE, ""),
-    ("Model specification", "22", "Full model specification and access", "Methods (Models; Training); Data "
-     "availability", PART, "Architectures fully described; code and checkpoints to be released (link pending)."),
+    ("Model specification", "22", "Full model specification and access", "Methods (Models; Training); Code "
+     "availability; Supplementary Section S9 (model cards)", PART,
+     "Architectures fully described and code linked; trained checkpoints are not in the repository (hashes "
+     "recorded; availability to be stated by the authors)."),
     ("Model performance", "23a", "Performance with confidence intervals, including key subgroups",
-     "Results (Tables 1-4, Figs. 3-4); Supplementary Tables S4-S11", PART,
-     "Intervals for all comparisons and gain strata; no sociodemographic subgroups."),
+     "Results (Tables 1-4, Figs. 3-4); Supplementary Tables S4-S11, S14-S23", PART,
+     "Intervals for all comparisons; no sociodemographic subgroups."),
     ("Model performance", "23b", "Heterogeneity in performance across clusters",
-     "Results (External validation, Table 4); Supplementary Table S11", DONE, ""),
+     "Results (External validation, Table 4); Supplementary Tables S11, S28-S31", DONE, ""),
     ("Model updating", "24", "Results of any model updating", "--", NA, "No model was updated."),
     ("Interpretation", "25", "Overall interpretation, including fairness", "Discussion", PART,
      "Fairness is not discussed (not examined)."),
@@ -151,14 +166,16 @@ ABSTRACT = [
     ("A10", "Predictors in the final model", DONE, "Rendered page images (and a signal reference)."),
     ("A11", "Performance estimates with confidence intervals", PART, "Differences and p-values; no intervals "
      "(200-word limit)."),
-    ("A12", "Overall interpretation", DONE, "Final sentence."),
+    ("A12", "Overall interpretation", DONE, "Final sentence; supported and unsupported differences are distinguished."),
     ("A13", "Registration", NO, "Not stated in the abstract; the study was not registered."),
 ]
 INTRO = ("Item numbers, sections and applicability follow the official TRIPOD+AI checklist (Collins et al., BMJ "
          "2024;385:e078378, Table 2) and the TRIPOD+AI for Abstracts checklist. Topics are abbreviated; use the "
          "official form for the full item wording. Locations refer to the Scientific Reports manuscript (section "
-         "names) and its Supplementary Information (Tables S1-S13, Sections S1-S8). Prepared 11 November 2026; the "
-         "authors should check it before submission.")
+         "names) and its Supplementary Information (Tables S1-S33, Sections S1-S10). Prepared 11 November 2026 and revised 15 "
+         "November 2026 for the revised manuscript; statuses are deliberately conservative (an item is 'Addressed' only "
+         "if the manuscript reports it). The authors should check it before submission; items 17, 18a, 18b and 18f "
+         "depend on text that the authors still have to complete.")
 
 
 def markdown():

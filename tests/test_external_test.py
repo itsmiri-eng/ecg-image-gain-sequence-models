@@ -93,3 +93,37 @@ def test_hierarchical_difference_with_patient_clusters_detects_a_better_model():
     result = ext.hierarchical_difference(y, noise, better, lambda yy, pp: ext.macro_auroc(yy, pp, ext.CLASS_NAMES),
                                          [42, 43], resamples=50, clusters=clusters)
     assert result["difference"] > 0.3 and result["ci_lower"] > 0 and result["p_bootstrap"] < 0.05
+
+
+def test_bootstrap_p_is_never_zero_and_sits_at_the_resolution_floor():
+    """Statistical revision of 15 Nov 2026: with no replicate across zero, p is 2 / (B + 1), not 0."""
+    rng = np.random.default_rng(5)
+    y = rng.integers(0, 2, (300, 5))
+    noise = {s: rng.random((300, 5)) for s in (42, 43)}
+    better = {s: 0.5 * y + 0.5 * noise[s] for s in (42, 43)}
+    metric = lambda yy, pp: ext.macro_auroc(yy, pp, ext.CLASS_NAMES)
+    result = ext.hierarchical_difference(y, noise, better, metric, [42, 43], resamples=99)
+    assert result["replicates_le_0"] == 0
+    assert result["p_bootstrap"] == pytest.approx(2 / 100) == pytest.approx(result["p_floor"])
+    assert ext.holm([result["p_bootstrap"]] * 10)[0] == pytest.approx(10 * 2 / 100)
+
+
+def test_weighted_bootstrap_equals_the_resampled_records_computation(monkeypatch):
+    """The fast weighted AUROC path and the generic path (records physically resampled) give the same replicates,
+    with ties in the scores and with patient clusters; the first 2,000 draws carry the legacy p-value."""
+    rng = np.random.default_rng(6)
+    y = rng.integers(0, 2, (240, 5))
+    a = {s: np.round(rng.random((240, 5)), 2) for s in (42, 43, 44)}  # rounding creates tied scores
+    b = {s: np.round(0.15 * y + 0.85 * rng.random((240, 5)), 2) for s in (42, 43, 44)}
+    clusters = [np.arange(i, i + 2) for i in range(0, 240, 2)]
+    hyp = lambda yy, pp: ext.auroc(yy[:, 4], pp[:, 4])
+    for metric in (lambda yy, pp: ext.macro_auroc(yy, pp, ("MI", "STTC", "CD", "HYP")), hyp):
+        for groups in (None, clusters):
+            fast = ext.hierarchical_difference(y, a, b, metric, [42, 43, 44], resamples=2000, clusters=groups)
+            with monkeypatch.context() as patch:
+                patch.setattr(ext, "_auroc_labels", lambda *args: None)
+                slow = ext.hierarchical_difference(y, a, b, metric, [42, 43, 44], resamples=2000, clusters=groups)
+            for key in ("difference", "ci_lower", "ci_upper", "p_bootstrap", "p_legacy_2000", "p_centred"):
+                assert fast[key] == pytest.approx(slow[key], abs=1e-12)
+            assert fast["replicates_le_0"] == slow["replicates_le_0"]
+    assert ext._auroc_labels(y, b[42], hyp) == [4]

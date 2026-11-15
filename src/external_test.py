@@ -44,7 +44,11 @@ CHALLENGE = ROOT / "data/external/challenge-2021/training"
 DATASETS = {"georgia": ("georgia",), "china": ("chapman_shaoxing", "ningbo")}
 SAMPLES, FS = 5000, 500
 MIN_POSITIVES = MIN_NEGATIVES = 50
-RESAMPLES, BOOT_SEED = 2000, 2024
+# Statistical revision of 15 Nov 2026 (docs/protocol_amendment_2026-11-15_bootstrap_inference.md): 10,000 resamples
+# (were 2,000; the first 2,000 draws are unchanged) and a finite-resample p-value that can never be zero.
+RESAMPLES, BOOT_SEED = 10000, 2024
+LEGACY_RESAMPLES = 2000
+P_FLOOR = 2 / (RESAMPLES + 1)  # smallest attainable two-sided bootstrap p; times the family size after Holm
 HEADS = ("cnn_pool", "cnn_pool_wide", "cnn_lstm", "temporal_conv", "hybrid_vit")
 V1_FAMILIES = {"ptbxl_cnn_lstm": "cnn_lstm", "ptbxl_spatiotemporal": "temporal_conv", "ptbxl_hybrid_vit": "hybrid_vit"}
 RUN_FAMILIES = ("ptbxl_v2", "ptbxl_v2_fixedgain", "ptbxl_signal", *V1_FAMILIES)
@@ -494,27 +498,105 @@ def holm(p_values):
     return adjusted.tolist()
 
 
+def _auroc_labels(y, p, metric):
+    """Label columns whose AUROCs the metric averages, or None when it is not such a mean (generic path)."""
+    if p.ndim != 2 or y.shape != p.shape:
+        return None
+    base, rng, used = metric(y, p), np.random.default_rng(0), []
+    for j in range(p.shape[1]):
+        q = p.copy()
+        q[:, j] = rng.permutation(q[:, j])
+        if metric(y, q) != base:
+            used.append(j)
+    if used and abs(float(np.mean([auroc(y[:, j], p[:, j]) for j in used])) - base) < 1e-12:
+        return used
+    return None
+
+
+class _WeightedAuroc:
+    """AUROC of many score columns under integer record weights (a bootstrap resample), ties averaged.
+
+    Equal to the rank-based auroc() of the resampled records, but the sort is done once."""
+
+    def __init__(self, y, tables, labels):
+        scores = np.stack([np.stack([t[:, j] for j in labels]) for t in tables])  # (models x seeds, labels, records)
+        self.order = np.argsort(scores, axis=-1, kind="stable")
+        ordered = np.take_along_axis(scores, self.order, -1)
+        self.truth = np.stack([y[:, j] for j in labels]).astype(np.float64)
+        self.positive = np.take_along_axis(np.broadcast_to(self.truth, scores.shape), self.order, -1)
+        index = np.arange(scores.shape[-1])
+        first = np.ones(scores.shape, dtype=bool)
+        first[..., 1:] = ordered[..., 1:] != ordered[..., :-1]
+        last = np.ones(scores.shape, dtype=bool)
+        last[..., :-1] = first[..., 1:]
+        self.start = np.maximum.accumulate(np.where(first, index, 0), axis=-1)
+        self.end = np.minimum.accumulate(np.where(last, index, index[-1])[..., ::-1], axis=-1)[..., ::-1]
+
+    def __call__(self, weights):
+        w = weights.astype(np.float64)
+        ordered = w[self.order]
+        positive = ordered * self.positive
+        negative = ordered - positive
+        cumulative = np.cumsum(negative, axis=-1)
+        below = np.take_along_axis(cumulative, self.start, -1) - np.take_along_axis(negative, self.start, -1)
+        tied = np.take_along_axis(cumulative, self.end, -1) - below
+        positives = self.truth @ w
+        with np.errstate(invalid="ignore", divide="ignore"):
+            return (positive * (below + 0.5 * tied)).sum(-1) / (positives * (w.sum() - positives))
+
+
 def hierarchical_difference(y, a, b, metric, seeds, resamples=RESAMPLES, seed=BOOT_SEED, clusters=None):
     """Mean-over-seeds metric(b) - metric(a); seeds resampled, then records, both shared by the two models.
 
     a, b: {seed: (N, 5) probabilities}. clusters: optional list of record-index arrays (one per patient); then
-    patients are resampled and all their records kept. Returns point, CI and two-sided bootstrap p."""
+    patients are resampled and all their records kept. Returns the point estimate, the percentile 95% CI and the
+    two-sided finite-resample bootstrap p, 2 min{(1 + #[d <= 0]) / (B + 1), (1 + #[d >= 0]) / (B + 1)}, which is
+    never zero (statistical revision of 15 Nov 2026). The random draws are those of the original routine, so the
+    first 2,000 replicates reproduce its output; that output is returned as *_legacy_2000."""
     rng = np.random.default_rng(seed)
+    seeds = list(seeds)
     point = float(np.mean([metric(y, b[s]) for s in seeds]) - np.mean([metric(y, a[s]) for s in seeds]))
-    draws = []
-    for _ in range(resamples):
+    labels = _auroc_labels(y, b[seeds[0]], metric)
+    if labels is not None:
+        fast = _WeightedAuroc(y, [a[s] for s in seeds] + [b[s] for s in seeds], labels)
+        position = {s: i for i, s in enumerate(seeds)}
+        if clusters is not None:
+            owner = np.empty(len(y), dtype=np.int64)
+            for i, members in enumerate(clusters):
+                owner[members] = i
+    draws = np.empty(resamples)
+    for r in range(resamples):
         chosen = rng.choice(seeds, size=len(seeds), replace=True)
         if clusters is None:
             index = rng.integers(0, len(y), len(y))
         else:
-            index = np.concatenate([clusters[i] for i in rng.integers(0, len(clusters), len(clusters))])
-        yy = y[index]
-        draws.append(np.mean([metric(yy, b[s][index]) for s in chosen]) - np.mean([metric(yy, a[s][index]) for s in chosen]))
-    draws = np.asarray(draws)
+            picked = rng.integers(0, len(clusters), len(clusters))
+        if labels is None:
+            if clusters is not None:
+                index = np.concatenate([clusters[i] for i in picked])
+            yy = y[index]
+            draws[r] = np.mean([metric(yy, b[s][index]) for s in chosen]) - np.mean([metric(yy, a[s][index]) for s in chosen])
+        else:
+            if clusters is None:
+                weights = np.bincount(index, minlength=len(y))
+            else:
+                weights = np.bincount(picked, minlength=len(clusters))[owner]
+            values = fast(weights).mean(-1)
+            rows = [position[s] for s in chosen]
+            draws[r] = values[[len(seeds) + i for i in rows]].mean() - values[rows].mean()
     lower, upper = np.quantile(draws, [0.025, 0.975])
-    p = min(1.0, 2 * min(np.mean(draws <= 0), np.mean(draws >= 0)))
-    return {"difference": point, "ci_lower": float(lower), "ci_upper": float(upper), "p_bootstrap": float(p),
-            "seeds": [int(s) for s in seeds]}
+    below, above = int(np.sum(draws <= 0)), int(np.sum(draws >= 0))
+    p = min(1.0, 2 * min((1 + below) / (resamples + 1), (1 + above) / (resamples + 1)))
+    centred = (1 + int(np.sum(np.abs(draws - point) >= abs(point)))) / (resamples + 1)
+    result = {"difference": point, "ci_lower": float(lower), "ci_upper": float(upper), "p_bootstrap": float(p),
+              "seeds": [int(s) for s in seeds], "resamples": int(resamples), "replicates_le_0": below,
+              "replicates_ge_0": above, "p_floor": 2 / (resamples + 1), "p_centred": float(centred)}
+    if resamples >= LEGACY_RESAMPLES:
+        legacy = draws[:LEGACY_RESAMPLES]
+        low, high = np.quantile(legacy, [0.025, 0.975])
+        result.update({"p_legacy_2000": float(min(1.0, 2 * min(np.mean(legacy <= 0), np.mean(legacy >= 0)))),
+                       "ci_lower_legacy_2000": float(low), "ci_upper_legacy_2000": float(high)})
+    return result
 
 
 def load_predictions(dataset):

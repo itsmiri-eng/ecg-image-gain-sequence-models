@@ -1,0 +1,14 @@
+{
+  "status": "completed",
+  "completed_utc": "2026-11-15T18:53:48.028455+00:00",
+  "dataset": "georgia",
+  "inference_calls": 1,
+  "records": 4245,
+  "family": "ptbxl_v2_fixedgain",
+  "kind": "lda",
+  "page": "fixed",
+  "head": "pca_lda",
+  "seed": 42,
+  "amendment": "docs/protocol_amendment_2026-11-15_label_mapping_sensitivity.md",
+  "predictions_sha256": "c7bda428a70e71afdf92c82d2bfc2e8ea17b93076f0a9ba4686ea9ccf896b0e1"
+}

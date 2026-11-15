@@ -1,0 +1,14 @@
+{
+  "status": "completed",
+  "completed_utc": "2026-11-15T18:53:48.499329+00:00",
+  "dataset": "georgia",
+  "inference_calls": 1,
+  "records": 4245,
+  "family": "ptbxl_spatiotemporal",
+  "kind": "network",
+  "page": "adaptive",
+  "head": "temporal_conv",
+  "seed": 42,
+  "amendment": "docs/protocol_amendment_2026-11-15_label_mapping_sensitivity.md",
+  "predictions_sha256": "e6d920e4ef9a50f76abececd7b2e77c6777101360880560b416b373efafd2f8e"
+}

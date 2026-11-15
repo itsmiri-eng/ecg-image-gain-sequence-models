@@ -14,7 +14,7 @@ import json
 import numpy as np
 
 from src.common import ROOT
-from src.external_test import holm
+from src.external_test import P_FLOOR, holm
 
 OUT = ROOT / "paper/ieee_manuscript/tables"
 LABELS = ("NORM", "MI", "STTC", "CD", "HYP")
@@ -29,6 +29,9 @@ SEEDS = (42, 43, 44, 45, 46)
 RESNET_SEEDS = (42, 43, 44)
 RESNET_NAME = "ResNet-18, ImageNet$^\\S$"
 AMENDMENT = ROOT / "results/amendment_20261111/resnet18"
+# Capacity-matched head on fixed-gain pages: Additional analysis of the 15 Nov 2026 amendment (own Holm family of 2)
+REVIEW = ROOT / "results/review_20261115"
+WIDE_FIXED_NAME = "CNN-only, capacity-matched$^\\P$"
 
 
 def resnet_path(seed, fixed=False):
@@ -48,8 +51,12 @@ def test_metrics(path):
     return [m["macro_roc_auc"], m["macro_average_precision"], m["macro_f1"]] + [m["per_label"][l]["roc_auc"] for l in LABELS]
 
 
-def fmt_p(p):
-    return r"$<$0.001" if p < 0.001 else f"{p:.3f}"
+def fmt_p(p, raw=None):
+    """Holm-adjusted p. raw: the unadjusted bootstrap p of the same row. At the resolution floor of the bootstrap
+    (no replicate crossed zero) the adjusted value is only an upper bound, printed as "<=" and rounded up."""
+    if raw is not None and float(raw) <= P_FLOOR * (1 + 1e-9):
+        return r"$\le$" + f"{np.ceil(p * 1000 - 1e-9) / 1000:.3f}"
+    return f"{p:.3f}"
 
 
 def fmt_diff(d, lo, hi):
@@ -60,11 +67,10 @@ def table_ptbxl():
     rows = []
     for fixed in (False, True):
         for head in HEADS:
-            if fixed and head == "cnn_pool_wide":
-                continue
             a = np.asarray([test_metrics(run_path(head, s, fixed)) for s in SEEDS])
             mean, sd = a.mean(0), a.std(0, ddof=1)
-            rows.append((("Fixed" if fixed else "Adaptive"), NAMES[head], f"{mean[0]:.3f} $\\pm$ {sd[0]:.3f}",
+            name = WIDE_FIXED_NAME if fixed and head == "cnn_pool_wide" else NAMES[head]
+            rows.append((("Fixed" if fixed else "Adaptive"), name, f"{mean[0]:.3f} $\\pm$ {sd[0]:.3f}",
                          f"{mean[1]:.3f}", f"{mean[2]:.3f}", *[f"{v:.3f}" for v in mean[3:]]))
         a = np.asarray([test_metrics(resnet_path(s, fixed)) for s in RESNET_SEEDS])
         mean, sd = a.mean(0), a.std(0, ddof=1)
@@ -110,7 +116,8 @@ def table_pairs():
         key = f"{long[b]} - {long[a]}"
         cells = [f"{NAMES[long[b]]} $-$ {NAMES[long[a]]}"]
         for row in (r, next(x for x in georgia if x["comparison"] == key), next(x for x in china if x["comparison"] == key)):
-            cells += [fmt_diff(float(row["difference"]), float(row["ci_lower"]), float(row["ci_upper"])), fmt_p(float(row["p_holm"]))]
+            cells += [fmt_diff(float(row["difference"]), float(row["ci_lower"]), float(row["ci_upper"])),
+                      fmt_p(float(row["p_holm"]), row["p_bootstrap"])]
         body.append(" & ".join(cells) + r" \\")
     (OUT / "tab_pairs.tex").write_text("\n".join(body) + "\n", encoding="utf-8")
 
@@ -129,16 +136,28 @@ def table_fixed_gain():
             rows += [next(r for r in external[d] if r["comparison"].startswith(head + ":") and r["metric"] == metric)
                      for d in ("georgia", "china")]
             for row in rows:
-                cells += [fmt_diff(float(row["difference"]), float(row["ci_lower"]), float(row["ci_upper"])), fmt_p(float(row["p_holm"]))]
+                cells += [fmt_diff(float(row["difference"]), float(row["ci_lower"]), float(row["ci_upper"])),
+                          fmt_p(float(row["p_holm"]), row["p_bootstrap"])]
             body.append(" & ".join(cells) + r" \\")
         body.append(r"\addlinespace[2pt]")
+    with (REVIEW / "fixedgain_wide/hierarchical.csv").open(newline="") as handle:
+        wide = [r for r in csv.DictReader(handle) if r["family"] == "capacity-matched: fixed - adaptive"]
+    for metric in ("macro AUROC", "HYP AUROC"):
+        cells = [WIDE_FIXED_NAME if metric == "macro AUROC" else "", metric.replace(" AUROC", "")]
+        for cohort in ("PTB-XL test", "georgia", "china"):
+            row = next(r for r in wide if r["cohort"] == cohort and r["metric"] == metric)
+            cells += [fmt_diff(float(row["difference"]), float(row["ci_lower"]), float(row["ci_upper"])),
+                      fmt_p(float(row["p_holm"]), row["p_bootstrap"])]
+        body.append(" & ".join(cells) + r" \\")
+    body.append(r"\addlinespace[2pt]")
     with (AMENDMENT / "fixed_minus_adaptive.csv").open(newline="") as handle:
         resnet = list(csv.DictReader(handle))
     for metric in ("macro", "HYP"):
         cells = [RESNET_NAME if metric == "macro" else "", metric]
         for cohort in ("PTB-XL test", "georgia", "china"):
             row = next(r for r in resnet if r["cohort"] == cohort and r["metric"].startswith(metric))
-            cells += [fmt_diff(float(row["difference"]), float(row["ci_lower"]), float(row["ci_upper"])), fmt_p(float(row["p_holm"]))]
+            cells += [fmt_diff(float(row["difference"]), float(row["ci_lower"]), float(row["ci_upper"])),
+                      fmt_p(float(row["p_holm"]), row["p_bootstrap"])]
         body.append(" & ".join(cells) + r" \\")
     (OUT / "tab_fixed_gain.tex").write_text("\n".join(body) + "\n", encoding="utf-8")
 
@@ -158,7 +177,7 @@ def table_external():
                 data.setdefault(("resnet18", r["page"]), {}).setdefault(r["cohort"], []).append(
                     (float(r["macro_auroc"]), float(r["external_minus_ptbxl"])))
     order = [(h, "adaptive") for h in (*HEADS, "resnet18")]
-    order += [(h, "fixed") for h in ("cnn_pool", "cnn_lstm", "temporal_conv", "hybrid_vit", "resnet18")]
+    order += [(h, "fixed") for h in (*HEADS, "resnet18")]
     order += [("pca_lda", "adaptive"), ("pca_svm", "adaptive"), ("pca_lda", "fixed"), ("resnet1d_wang", "signal")]
     names = {**NAMES, "pca_lda": "PCA + LDA", "pca_svm": "PCA + linear SVM", "resnet1d_wang": "1D ResNet (signal)",
              "resnet18": RESNET_NAME}
@@ -166,7 +185,7 @@ def table_external():
     for head, page in order:
         if previous is not None and page != previous:
             body.append(r"\midrule")
-        cells = [page.capitalize(), names[head]]
+        cells = [page.capitalize(), WIDE_FIXED_NAME if (head, page) == ("cnn_pool_wide", "fixed") else names[head]]
         for d in ("georgia", "china"):
             v = np.asarray(data[(head, page)][d])
             sd = f" $\\pm$ {v[:, 0].std(ddof=1):.3f}" if len(v) > 1 else ""

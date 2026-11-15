@@ -1,0 +1,26 @@
+family,comparison,metric,difference,ci_lower,ci_upper,p_bootstrap,seeds,p_holm,significant_at_0.05
+40 - 20 epochs,cnn_pool,test macro AUROC,0.015754752545075967,0.01068278290431906,0.019743933339592377,0.0,"[42, 43, 44]",0.0,True
+40 - 20 epochs,cnn_pool_wide,test macro AUROC,0.01861610140760228,0.014764782972849855,0.02242415648814234,0.0,"[42, 43, 44]",0.0,True
+40 - 20 epochs,cnn_lstm,test macro AUROC,0.012068118034673447,0.005054718569578712,0.021374572128740138,0.0,"[42, 43, 44]",0.0,True
+40 - 20 epochs,temporal_conv,test macro AUROC,0.012013326116248169,0.007634480647630479,0.016164396336303784,0.0,"[42, 43, 44]",0.0,True
+40 - 20 epochs,hybrid_vit,test macro AUROC,0.0032231463191498833,-0.0029781628048313217,0.009499319374090653,0.321,"[42, 43, 44]",0.321,False
+"head pairs, 40 epochs",cnn_pool_wide - cnn_pool,test macro AUROC,0.038827538853779764,0.03224173689915616,0.04556881738772656,0.0,"[42, 43, 44]",0.0,True
+"head pairs, 40 epochs",cnn_lstm - cnn_pool,test macro AUROC,0.046176273043192495,0.038247857120054615,0.05547871777313921,0.0,"[42, 43, 44]",0.0,True
+"head pairs, 40 epochs",temporal_conv - cnn_pool,test macro AUROC,0.04658454106767507,0.039146205638479245,0.05339240357883447,0.0,"[42, 43, 44]",0.0,True
+"head pairs, 40 epochs",hybrid_vit - cnn_pool,test macro AUROC,0.046437570958114405,0.038490188196078134,0.05507569725741623,0.0,"[42, 43, 44]",0.0,True
+"head pairs, 40 epochs",cnn_lstm - cnn_pool_wide,test macro AUROC,0.007348734189412731,0.001266827617401961,0.01337976801582512,0.021,"[42, 43, 44]",0.10500000000000001,False
+"head pairs, 40 epochs",temporal_conv - cnn_pool_wide,test macro AUROC,0.007757002213895303,0.002876222897707148,0.012836917597546594,0.004,"[42, 43, 44]",0.024,True
+"head pairs, 40 epochs",hybrid_vit - cnn_pool_wide,test macro AUROC,0.007610032104334641,0.001142007926716998,0.014596278811092196,0.024,"[42, 43, 44]",0.10500000000000001,False
+"head pairs, 40 epochs",temporal_conv - cnn_lstm,test macro AUROC,0.00040826802448257205,-0.006424627000102009,0.0077380872158681144,0.952,"[42, 43, 44]",1.0,False
+"head pairs, 40 epochs",hybrid_vit - cnn_lstm,test macro AUROC,0.0002612979149219097,-0.00800237312759256,0.00998274256475212,0.992,"[42, 43, 44]",1.0,False
+"head pairs, 40 epochs",hybrid_vit - temporal_conv,test macro AUROC,-0.00014697010956066237,-0.005527031869851626,0.005477914489116156,0.946,"[42, 43, 44]",1.0,False
+"head pairs, 20 epochs (same seeds)",cnn_pool_wide - cnn_pool,test macro AUROC,0.03596618999125345,0.028376606276392827,0.04310698442089275,0.0,"[42, 43, 44]",0.0,True
+"head pairs, 20 epochs (same seeds)",cnn_lstm - cnn_pool,test macro AUROC,0.049862907553595015,0.035209407577067704,0.06329771961765006,0.0,"[42, 43, 44]",0.0,True
+"head pairs, 20 epochs (same seeds)",temporal_conv - cnn_pool,test macro AUROC,0.050325967496502866,0.04283159869425893,0.05749451333911907,0.0,"[42, 43, 44]",0.0,True
+"head pairs, 20 epochs (same seeds)",hybrid_vit - cnn_pool,test macro AUROC,0.05896917718404049,0.050905306442777146,0.06727183235598046,0.0,"[42, 43, 44]",0.0,True
+"head pairs, 20 epochs (same seeds)",cnn_lstm - cnn_pool_wide,test macro AUROC,0.013896717562341565,0.0031276896821549106,0.024258262422418984,0.014,"[42, 43, 44]",0.042,True
+"head pairs, 20 epochs (same seeds)",temporal_conv - cnn_pool_wide,test macro AUROC,0.014359777505249416,0.008725786380428355,0.020122733717170174,0.0,"[42, 43, 44]",0.0,True
+"head pairs, 20 epochs (same seeds)",hybrid_vit - cnn_pool_wide,test macro AUROC,0.02300298719278704,0.017214266847602258,0.029254871755231074,0.0,"[42, 43, 44]",0.0,True
+"head pairs, 20 epochs (same seeds)",temporal_conv - cnn_lstm,test macro AUROC,0.0004630599429078508,-0.008677450915150533,0.010873919142177432,0.949,"[42, 43, 44]",0.949,False
+"head pairs, 20 epochs (same seeds)",hybrid_vit - cnn_lstm,test macro AUROC,0.009106269630445474,-0.0007708690776046689,0.02086302830558728,0.075,"[42, 43, 44]",0.15,False
+"head pairs, 20 epochs (same seeds)",hybrid_vit - temporal_conv,test macro AUROC,0.008643209687537623,0.0035387952233341346,0.013796949561849264,0.001,"[42, 43, 44]",0.004,True

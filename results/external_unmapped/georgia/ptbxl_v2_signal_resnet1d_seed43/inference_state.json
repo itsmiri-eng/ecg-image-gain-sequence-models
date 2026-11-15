@@ -1,0 +1,14 @@
+{
+  "status": "completed",
+  "completed_utc": "2026-11-15T18:53:48.305427+00:00",
+  "dataset": "georgia",
+  "inference_calls": 1,
+  "records": 4245,
+  "family": "ptbxl_signal",
+  "kind": "signal",
+  "page": "signal",
+  "head": "resnet1d_wang",
+  "seed": 43,
+  "amendment": "docs/protocol_amendment_2026-11-15_label_mapping_sensitivity.md",
+  "predictions_sha256": "9d448c9ae1675bc44614064f3ddd41c27634f96100fa5066cd005512ebbe1863"
+}

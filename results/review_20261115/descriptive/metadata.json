@@ -1,0 +1,7 @@
+{
+  "created_utc": "2026-11-15T20:18:23.902308+00:00",
+  "label": "Additional analysis",
+  "protocol": "docs/protocol_amendment_2026-11-15_descriptive_additions.md",
+  "bootstrap_resamples": 10000,
+  "bootstrap_seed": 2024
+}

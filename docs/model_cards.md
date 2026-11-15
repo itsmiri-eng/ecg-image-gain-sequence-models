@@ -10,7 +10,7 @@ All models: PTB-XL v1.0.3, official patient folds (1-8 train, 9 validation, 10 t
 
 - **PCA + LDA / PCA + linear SVM.** Classical baselines on PCA of the downsampled page; one fit each (no seeds). Hyperparameters chosen on validation by a frozen grid.
 - **CNN-only (cnn_pool).** Shared 1,220-parameter lead-image CNN, mean over 70 feature columns, linear readout. 1,705 parameters. Sees only local image regions; cannot relate the calibration pulse to the waveform.
-- **Wide CNN-only (cnn_pool_wide).** Same CNN, per-column MLP 96-96-64 then column mean. 17,065 parameters: capacity of the sequence heads without column mixing (protocol amendment 3 Nov 2026).
+- **Wide CNN-only (cnn_pool_wide).** Same CNN, per-column MLP 96-96-64 then column mean. 17,065 parameters: capacity of the sequence heads without column mixing (protocol amendment 3 Nov 2026). Trained on adaptive-gain pages and, as an additional analysis (amendment of 15 Nov 2026), on fixed-gain pages, seeds 42-46 each.
 - **CNN-LSTM (cnn_lstm).** Same CNN, one unidirectional LSTM layer (hidden width 32) over the 70 columns, mean of outputs. 18,025 parameters.
 - **CNN + temporal convolution (temporal_conv).** Same CNN, two causal dilated residual Conv1d blocks (receptive field 13 columns). 17,161 parameters.
 - **CNN + small ViT (hybrid_vit).** Same CNN, small transformer encoder over the columns with positional embeddings. 23,881 parameters. Sees the whole row at once.
@@ -56,6 +56,11 @@ All models: PTB-XL v1.0.3, official patient folds (1-8 train, 9 validation, 10 t
 | ptbxl_v2_fixedgain | ptbxl_v2_fg_cnn_pool_seed44 | 44 | 1,705 | cuda | 20 (20) | 0.8660 | 0.8606 |
 | ptbxl_v2_fixedgain | ptbxl_v2_fg_cnn_pool_seed45 | 45 | 1,705 | cuda | 20 (18) | 0.8698 | 0.8562 |
 | ptbxl_v2_fixedgain | ptbxl_v2_fg_cnn_pool_seed46 | 46 | 1,705 | cuda | 20 (18) | 0.8749 | 0.8633 |
+| ptbxl_v2_fixedgain | ptbxl_v2_fg_cnn_pool_wide_seed42 | 42 | 17,065 | cuda | 20 (18) | 0.8922 | 0.8824 |
+| ptbxl_v2_fixedgain | ptbxl_v2_fg_cnn_pool_wide_seed43 | 43 | 17,065 | cuda | 20 (18) | 0.8876 | 0.8747 |
+| ptbxl_v2_fixedgain | ptbxl_v2_fg_cnn_pool_wide_seed44 | 44 | 17,065 | cuda | 20 (17) | 0.8889 | 0.8802 |
+| ptbxl_v2_fixedgain | ptbxl_v2_fg_cnn_pool_wide_seed45 | 45 | 17,065 | cuda | 20 (20) | 0.8975 | 0.8861 |
+| ptbxl_v2_fixedgain | ptbxl_v2_fg_cnn_pool_wide_seed46 | 46 | 17,065 | cuda | 20 (20) | 0.8986 | 0.8897 |
 | ptbxl_v2_fixedgain | ptbxl_v2_fg_hybrid_vit_seed42 | 42 | 23,881 | cuda | 19 (15) | 0.9034 | 0.8986 |
 | ptbxl_v2_fixedgain | ptbxl_v2_fg_hybrid_vit_seed43 | 43 | 23,881 | cuda | 20 (18) | 0.8990 | 0.8815 |
 | ptbxl_v2_fixedgain | ptbxl_v2_fg_hybrid_vit_seed44 | 44 | 23,881 | cuda | 17 (13) | 0.9058 | 0.8936 |

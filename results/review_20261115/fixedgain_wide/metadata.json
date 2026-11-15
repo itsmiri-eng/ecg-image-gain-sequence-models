@@ -1,0 +1,28 @@
+{
+  "created_utc": "2026-11-15T20:07:32.975441+00:00",
+  "label": "Additional analysis",
+  "amendment": "docs/protocol_amendment_2026-11-15_fixedgain_wide.md",
+  "config": "experiments/configs/ptbxl_v2_fg_cnn_pool_wide.json",
+  "dataset": "ptbxl_images_fixedgain2p5_v1",
+  "seeds": [
+    42,
+    43,
+    44,
+    45,
+    46
+  ],
+  "runs": [
+    "ptbxl_v2_fg_cnn_pool_wide_seed42",
+    "ptbxl_v2_fg_cnn_pool_wide_seed43",
+    "ptbxl_v2_fg_cnn_pool_wide_seed44",
+    "ptbxl_v2_fg_cnn_pool_wide_seed45",
+    "ptbxl_v2_fg_cnn_pool_wide_seed46"
+  ],
+  "bootstrap_resamples": 10000,
+  "bootstrap_seed": 2024,
+  "cohorts": [
+    "PTB-XL test",
+    "georgia",
+    "china"
+  ]
+}

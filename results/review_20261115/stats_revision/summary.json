@@ -1,0 +1,22 @@
+{
+  "created_utc": "2026-11-15T20:19:39.610357+00:00",
+  "comparisons": 143,
+  "resamples_old": 2000,
+  "resamples_revised": 10000,
+  "raw_p_floor_revised": 0.00019998000199980003,
+  "old_adjusted_p_exactly_zero": 81,
+  "old_printed_as_below_0p001": 81,
+  "revised_at_resolution_floor": 75,
+  "support_at_0p05_changed": 1,
+  "changed": [
+    {
+      "file": "comparisons/ptbxl_heads_hierarchical/pairwise.csv",
+      "family": "test | 42-46 (primary)",
+      "comparison": "CNN + small ViT minus CNN-LSTM",
+      "p_holm_old": 0.05399999999999999,
+      "p_holm_revised": 0.043795620437956206
+    }
+  ],
+  "max_abs_ci_bound_shift": 0.00124861476565815,
+  "first_2000_draws_reproduce_archived_results": true
+}

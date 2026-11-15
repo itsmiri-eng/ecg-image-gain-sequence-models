@@ -1,0 +1,54 @@
+{
+  "created_utc": "2026-11-15T20:27:38.465798+00:00",
+  "label": "Additional analysis",
+  "amendment": "docs/protocol_amendment_2026-11-15_label_mapping_sensitivity.md",
+  "variants": [
+    {
+      "key": "V0",
+      "description": "published: frozen cohort, 90% rule",
+      "share_threshold": 0.9,
+      "includes_unmapped_records": false,
+      "organiser_equivalent_codes": false
+    },
+    {
+      "key": "V1",
+      "description": "strict: frozen cohort, share >= 0.99",
+      "share_threshold": 0.99,
+      "includes_unmapped_records": false,
+      "organiser_equivalent_codes": false
+    },
+    {
+      "key": "V2",
+      "description": "relaxed: frozen cohort, share >= 0.80",
+      "share_threshold": 0.8,
+      "includes_unmapped_records": false,
+      "organiser_equivalent_codes": false
+    },
+    {
+      "key": "V3",
+      "description": "all records: unmapped as negatives, 90% rule",
+      "share_threshold": 0.9,
+      "includes_unmapped_records": true,
+      "organiser_equivalent_codes": false
+    },
+    {
+      "key": "V4",
+      "description": "all records, share >= 0.80",
+      "share_threshold": 0.8,
+      "includes_unmapped_records": true,
+      "organiser_equivalent_codes": false
+    },
+    {
+      "key": "V5",
+      "description": "all records, 90% rule plus organiser-declared equivalent codes",
+      "share_threshold": 0.9,
+      "includes_unmapped_records": true,
+      "organiser_equivalent_codes": true
+    }
+  ],
+  "equivalent_codes": {
+    "59118001": "713427006",
+    "733534002": "164909002"
+  },
+  "bootstrap_resamples": 10000
+}

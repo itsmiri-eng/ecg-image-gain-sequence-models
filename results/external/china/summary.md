@@ -6,24 +6,24 @@ Eligible labels: MI, STTC, CD, HYP. Frozen plan: docs/external_test_plan.md.
 
 | Family | Comparison | Metric | Difference [95% CI] | Holm p |
 |---|---|---|---|---:|
-| H1 | cnn_pool_wide - cnn_pool | macro AUROC | +0.0599 [+0.0452, +0.0773] | 0.0000 |
-| H1 | cnn_lstm - cnn_pool | macro AUROC | +0.0827 [+0.0677, +0.0993] | 0.0000 |
-| H1 | temporal_conv - cnn_pool | macro AUROC | +0.0940 [+0.0813, +0.1069] | 0.0000 |
-| H1 | hybrid_vit - cnn_pool | macro AUROC | +0.0986 [+0.0854, +0.1146] | 0.0000 |
-| H1 | cnn_lstm - cnn_pool_wide | macro AUROC | +0.0228 [+0.0110, +0.0355] | 0.0000 |
-| H1 | temporal_conv - cnn_pool_wide | macro AUROC | +0.0341 [+0.0247, +0.0433] | 0.0000 |
-| H1 | hybrid_vit - cnn_pool_wide | macro AUROC | +0.0386 [+0.0289, +0.0491] | 0.0000 |
-| H1 | temporal_conv - cnn_lstm | macro AUROC | +0.0113 [+0.0002, +0.0239] | 0.0960 |
-| H1 | hybrid_vit - cnn_lstm | macro AUROC | +0.0159 [+0.0094, +0.0226] | 0.0000 |
-| H1 | hybrid_vit - temporal_conv | macro AUROC | +0.0045 [-0.0065, +0.0140] | 0.3690 |
-| H2 | cnn_pool: fixed - adaptive | macro AUROC | +0.0511 [+0.0352, +0.0706] | 0.0000 |
-| H2 | cnn_pool: fixed - adaptive | HYP AUROC | +0.1124 [+0.0876, +0.1397] | 0.0000 |
-| H2 | cnn_lstm: fixed - adaptive | macro AUROC | +0.0176 [+0.0055, +0.0310] | 0.0120 |
-| H2 | cnn_lstm: fixed - adaptive | HYP AUROC | +0.0348 [+0.0240, +0.0463] | 0.0000 |
-| H2 | temporal_conv: fixed - adaptive | macro AUROC | +0.0137 [+0.0038, +0.0229] | 0.0180 |
-| H2 | temporal_conv: fixed - adaptive | HYP AUROC | +0.0333 [+0.0232, +0.0446] | 0.0000 |
-| H2 | hybrid_vit: fixed - adaptive | macro AUROC | +0.0036 [-0.0040, +0.0119] | 0.3630 |
-| H2 | hybrid_vit: fixed - adaptive | HYP AUROC | +0.0138 [+0.0034, +0.0257] | 0.0180 |
+| H1 | cnn_pool_wide - cnn_pool | macro AUROC | +0.0599 [+0.0453, +0.0774] | 0.0020 |
+| H1 | cnn_lstm - cnn_pool | macro AUROC | +0.0827 [+0.0674, +0.1002] | 0.0020 |
+| H1 | temporal_conv - cnn_pool | macro AUROC | +0.0940 [+0.0817, +0.1069] | 0.0020 |
+| H1 | hybrid_vit - cnn_pool | macro AUROC | +0.0986 [+0.0849, +0.1149] | 0.0020 |
+| H1 | cnn_lstm - cnn_pool_wide | macro AUROC | +0.0228 [+0.0110, +0.0355] | 0.0020 |
+| H1 | temporal_conv - cnn_pool_wide | macro AUROC | +0.0341 [+0.0248, +0.0431] | 0.0020 |
+| H1 | hybrid_vit - cnn_pool_wide | macro AUROC | +0.0386 [+0.0290, +0.0487] | 0.0020 |
+| H1 | temporal_conv - cnn_lstm | macro AUROC | +0.0113 [+0.0002, +0.0236] | 0.0932 |
+| H1 | hybrid_vit - cnn_lstm | macro AUROC | +0.0159 [+0.0094, +0.0227] | 0.0020 |
+| H1 | hybrid_vit - temporal_conv | macro AUROC | +0.0045 [-0.0061, +0.0137] | 0.3818 |
+| H2 | cnn_pool: fixed - adaptive | macro AUROC | +0.0511 [+0.0353, +0.0718] | 0.0016 |
+| H2 | cnn_pool: fixed - adaptive | HYP AUROC | +0.1124 [+0.0876, +0.1399] | 0.0016 |
+| H2 | cnn_lstm: fixed - adaptive | macro AUROC | +0.0176 [+0.0052, +0.0310] | 0.0160 |
+| H2 | cnn_lstm: fixed - adaptive | HYP AUROC | +0.0348 [+0.0237, +0.0464] | 0.0016 |
+| H2 | temporal_conv: fixed - adaptive | macro AUROC | +0.0137 [+0.0044, +0.0227] | 0.0162 |
+| H2 | temporal_conv: fixed - adaptive | HYP AUROC | +0.0333 [+0.0232, +0.0448] | 0.0016 |
+| H2 | hybrid_vit: fixed - adaptive | macro AUROC | +0.0036 [-0.0044, +0.0121] | 0.3806 |
+| H2 | hybrid_vit: fixed - adaptive | HYP AUROC | +0.0138 [+0.0036, +0.0253] | 0.0162 |
 
 ## Per run (H3: external minus PTB-XL test, same labels)
 
@@ -56,6 +56,11 @@ Eligible labels: MI, STTC, CD, HYP. Frozen plan: docs/external_test_plan.md.
 | ptbxl_v2_fg_cnn_pool_seed44 | fixed | 44 | 0.7556 | 0.8502 | -0.0946 |
 | ptbxl_v2_fg_cnn_pool_seed45 | fixed | 45 | 0.7672 | 0.8440 | -0.0768 |
 | ptbxl_v2_fg_cnn_pool_seed46 | fixed | 46 | 0.7737 | 0.8512 | -0.0775 |
+| ptbxl_v2_fg_cnn_pool_wide_seed42 | fixed | 42 | 0.8128 | 0.8739 | -0.0611 |
+| ptbxl_v2_fg_cnn_pool_wide_seed43 | fixed | 43 | 0.7999 | 0.8655 | -0.0656 |
+| ptbxl_v2_fg_cnn_pool_wide_seed44 | fixed | 44 | 0.8091 | 0.8711 | -0.0620 |
+| ptbxl_v2_fg_cnn_pool_wide_seed45 | fixed | 45 | 0.8166 | 0.8784 | -0.0618 |
+| ptbxl_v2_fg_cnn_pool_wide_seed46 | fixed | 46 | 0.8089 | 0.8809 | -0.0721 |
 | ptbxl_v2_fg_hybrid_vit_seed42 | fixed | 42 | 0.8146 | 0.8907 | -0.0761 |
 | ptbxl_v2_fg_hybrid_vit_seed43 | fixed | 43 | 0.8155 | 0.8727 | -0.0572 |
 | ptbxl_v2_fg_hybrid_vit_seed44 | fixed | 44 | 0.8245 | 0.8856 | -0.0611 |
