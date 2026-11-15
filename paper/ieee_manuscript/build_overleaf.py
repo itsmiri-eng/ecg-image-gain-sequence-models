@@ -66,8 +66,9 @@ def check(text, bib):
     dollars = len(re.findall(r"(?<!\\)\$", body))
     if dollars % 2:
         problems.append("odd number of $ signs")
-    for row in re.findall(r"\\begin\{tabular\}\{([^}]+)\}(.*?)\\end\{tabular\}", body, re.S):
-        columns = len(re.findall(r"[lcrp]", row[0]))
+    # the column specification may contain one level of braces, e.g. p{0.31\textwidth}
+    for row in re.findall(r"\\begin\{tabular\}\{((?:[^{}]|\{[^{}]*\})+)\}(.*?)\\end\{tabular\}", body, re.S):
+        columns = len(re.findall(r"[lcrp]", re.sub(r"\{[^{}]*\}", "", row[0])))
         for line in row[1].split("\\\\"):
             line = re.sub(r"\\(toprule|midrule|bottomrule|addlinespace\[[^]]*\]|cmidrule\([^)]*\)\{[^}]*\})", "", line).strip()
             if not line or line.startswith("\\multicolumn") and line.count("&") == 0:

@@ -397,6 +397,63 @@ otherwise identical; analysis in `results/amendment_20261111/fixedgain_long40/`.
 - **Not repeated:** the external tests (20-epoch models). Fixed-gain CNN-only is still budget-limited (epoch 39–40
   of 40).
 
+## Addendum, 15–16 November 2026: supervisor's review (Additional analyses)
+
+Protocols, all committed before their results: `docs/protocol_amendment_2026-11-15_fixedgain_wide.md`,
+`..._bootstrap_inference.md`, `..._label_mapping_sensitivity.md` (with an addendum for variant V5),
+`..._descriptive_additions.md`. Code: `src/review_20261115.py`, `src/external_allrecords.py`,
+`src/external_test.py::hierarchical_difference` (revised), `src/audit_manuscript_numbers.py`.
+Outputs: `results/review_20261115/`, `results/external_unmapped/`, `results/stats_legacy_2000resamples_20261115/`.
+Point-by-point reply to the supervisor: `docs/DOCTOR_RESPONSE.md`.
+
+**1. Capacity-matched head on fixed gain** (runs `ptbxl_v2_fg_cnn_pool_wide_seed42…46`, GPU, 15 Nov 21:21–23:37 local;
+selected epochs 18, 18, 17, 20, 20; one test inference each; external inference once per cohort, reproduction check
+≤ 1.8e-7).
+
+| Cohort | Adaptive | Fixed | Fixed − adaptive macro | Fixed − adaptive HYP |
+|---|---:|---:|---|---|
+| PTB-XL test | 0.865 | 0.883 ± 0.006 | +0.017 [0.010, 0.024] | +0.043 [0.019, 0.069] |
+| Georgia | 0.700 | 0.733 | +0.034 [0.020, 0.048] | +0.095 [0.047, 0.141] |
+| China | 0.777 | 0.809 | +0.033 [0.021, 0.043] | +0.103 [0.075, 0.131] |
+
+All supported (Holm p ≤ 0.001 in a family of 2; ≤ 0.002 in a family of 10). Sequence head − capacity-matched on
+fixed-gain pages: PTB-XL LSTM +0.006 (p 0.081), temporal conv +0.012 (≤ 0.002), ViT +0.008 (0.081); Georgia +0.005,
++0.004, +0.004 (p 0.63, 0.33, 0.74); China +0.008 (0.11), +0.015 (0.004), +0.009 (0.029).
+**Interpretation:** the sequence-over-capacity difference seen with adaptive gain (0.011–0.020 PTB-XL; 0.023–0.039
+externally for LSTM/ViT) mostly disappears on fixed gain. Part of it is probably use of the calibration pulse / page
+gain, not sequence modelling of the waveform. Post hoc.
+
+**2. Bootstrap p-values.** Old: 2,000 resamples, p = 2·min(P(Δ* ≤ 0), P(Δ* ≥ 0)), exactly 0 when no replicate
+crosses zero, printed as "< 0.001". New: 10,000 resamples, p = 2·min((1 + #≤0)/(B + 1), (1 + #≥0)/(B + 1)); Holm
+unchanged; values at the resolution floor printed as "≤" (0.002 for a family of 10, 0.0016 for 8, 0.001 for 5,
+0.0004 for 2). 143 comparisons recomputed; 81 old adjusted p were exactly 0; one comparison crossed 0.05 (ViT − LSTM,
+PTB-XL test: 0.054 → 0.044, borderline; GPU-only 0.20, validation 0.50); CI bounds moved ≤ 0.0013. The first 2,000
+draws reproduce every archived value exactly (checked in `review_20261115 stats`). Two unit tests added.
+
+**3. Clipping.** 274 training pages lie outside the ±12-mm band that selected 2.5 mm/mV (350 of all pages); 121 of
+them (154 of all) have samples beyond the ±15-mm row edge and are clipped. External: Georgia 28/6,047 clipped (0.46%),
+78 outside the band; China 383/9,004 clipped (4.25%), 795 outside the band.
+
+**4. SNOMED CT mapping.** Clinical names for all 50 PTB-XL codes (and all 112 codes in the cohorts) from the Challenge
+organisers' tables, cross-checked with EMBL-EBI OLS: 49/50 agree; anterior MI (54329005) is "acute" in SNOMED CT. No
+cardiologist review. Mismatch with PTB-XL's own superclasses: RVH → CD (co-occurrence only). Unmapped by construction:
+RBBB 59118001 and CLBBB 733534002 (organiser-declared equivalents of assigned codes), LV high voltage 55827005 (China).
+Excluded records: Georgia 4,245 (2,586 rhythm-only), China 36,146 (19,851 rhythm-only; 14,478 sinus bradycardia).
+Sensitivity variants (macro AUROC, mean over seeds; V0 published, V1 strict ≥ 0.99, V2 liberal ≥ 0.80, V3 all records,
+V4 = V3 liberal, V5 = V3 + equivalent codes): e.g. signal reference Georgia 0.787 / 0.753 / 0.797 / 0.818 / 0.833 /
+0.831; China 0.855 / 0.791 / 0.873 / 0.891 / 0.907 / 0.899. Core ordering stable; order among sequence heads not
+stable (China ViT − temporal conv +0.005 → −0.006, p 0.031 in V3). H2 stable in Georgia; in China the HYP benefit
+depends on the LVH code (V1: +0.014, +0.035, −0.005, +0.001).
+
+**5. Descriptive additions.** PCA + LDA fixed − adaptive macro AUROC: PTB-XL −0.013 [−0.023, −0.003] (p 0.017),
+Georgia −0.007 [−0.013, −0.002] (0.016), China +0.019 [0.012, 0.027]. ResNet-18 (fixed) − signal reference: PTB-XL
++0.001 [−0.004, 0.005], Georgia −0.010 [−0.016, −0.004] (p 0.002), China −0.003 [−0.010, 0.004]. Compact models are
+0.03–0.09 (fixed) and 0.04–0.14 (adaptive) below the signal reference, all supported.
+
+**Process notes.** A first attempt to start the China scoring of unmapped records while the Georgia scoring still
+held the GPU was stopped after a few seconds, before any result folder existed (GPU memory was nearly full and the
+training runs could have been affected); it was started again when Georgia had finished. No inference was repeated.
+
 ## Manuscript boundaries and unresolved work
 
 The current evidence supports a reproducible, exploratory benchmark of compact classifiers on two separately defined image tasks. It does not establish a novel architecture, a universal best ECG model, external transfer, causal physiological timing, calibrated digitization or clinical readiness. Additional renderings of an existing patient's signals are not independent patients. The historical manuscript's claims and conflicting archived figures cannot be copied into these result tables.

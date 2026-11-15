@@ -42,7 +42,8 @@ REFERENCE_RUNS = (("Adaptive", "PCA + LDA (grid $\\le$256)", "ptbxl_v2/ptbxl_v2_
 SIGNAL = "1D ResNet (raw signals)"
 UNICODE = {"→": "$\\rightarrow$", "≥": "$\\geq$", "≤": "$\\leq$", "±": "$\\pm$", "×": "$\\times$", "Δ": "$\\Delta$",
            "α": "$\\alpha$", "·": "$\\cdot$", "≈": "$\\approx$", "§": "\\S{}", "–": "--", "—": "---", "’": "'",
-           "‘": "`", "“": "``", "”": "''", "µ": "$\\mu$", "°": "$^\\circ$", "−": "$-$"}
+           "‘": "`", "“": "``", "”": "''", "µ": "$\\mu$", "°": "$^\\circ$", "−": "$-$",
+           "∆": "$\\hat{\\Delta}$", "≡": "$\\equiv$"}  # "∆" (U+2206) stands for a Delta with a hat, see markdown()
 SPECIAL = {"\\": "\\textbackslash{}", "&": "\\&", "%": "\\%", "$": "\\$", "#": "\\#", "_": "\\_", "{": "\\{",
            "}": "\\}", "~": "\\textasciitilde{}", "^": "\\textasciicircum{}"}
 
@@ -92,7 +93,30 @@ def markdown(text, skip_title=True):
             out.append(f"\\end{{{stack.pop()[1]}}}")
 
     in_paragraph = False
-    for line in text.splitlines():
+    table = []
+
+    def flush_table():
+        """A Markdown pipe table (header, separator, rows) as a small tabular with wrapped columns."""
+        if not table:
+            return
+        rows = [[c.strip() for c in r.strip().strip("|").split("|")] for r in table if not re.fullmatch(r"[\s|:-]+", r)]
+        width = max(len(r) for r in rows)
+        out.append("\\begin{center}\\footnotesize\\begin{tabular}{" + f"p{{{0.92 / width:.2f}\\textwidth}}" * width + "}")
+        out.append("\\toprule")
+        for k, row in enumerate(rows):
+            out.append(" & ".join(inline(c) for c in row + [""] * (width - len(row))) + " \\\\")
+            if k == 0:
+                out.append("\\midrule")
+        out.append("\\bottomrule\\end{tabular}\\end{center}")
+        table.clear()
+
+    for line in text.replace("Δ̂", "∆").splitlines():  # Delta + combining circumflex -> one placeholder character
+        if line.lstrip().startswith("|"):
+            close()
+            table.append(line)
+            in_paragraph = False
+            continue
+        flush_table()
         if not line.strip():
             in_paragraph = False
             continue
@@ -122,6 +146,7 @@ def markdown(text, skip_title=True):
             in_paragraph = True
             continue
         in_paragraph = False
+    flush_table()
     close()
     return "\n".join(out)
 

@@ -1,7 +1,14 @@
 {
-  "status": "started",
-  "started_utc": "2026-11-15T19:14:26.131393+00:00",
+  "status": "completed",
+  "completed_utc": "2026-11-15T22:02:38.568710+00:00",
   "dataset": "china",
   "inference_calls": 1,
-  "amendment": "docs/protocol_amendment_2026-11-15_label_mapping_sensitivity.md"
+  "records": 36146,
+  "family": "ptbxl_v2_resnet18",
+  "kind": "network",
+  "page": "adaptive",
+  "head": "resnet18",
+  "seed": 44,
+  "amendment": "docs/protocol_amendment_2026-11-15_label_mapping_sensitivity.md",
+  "predictions_sha256": "dd93ea37c8650465c27e8719282dd46b2a348d0e5590581a36fea946e7ebba17"
 }

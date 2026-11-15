@@ -1,7 +1,14 @@
 {
-  "status": "started",
-  "started_utc": "2026-11-15T19:14:26.123393+00:00",
+  "status": "completed",
+  "completed_utc": "2026-11-15T22:02:36.182421+00:00",
   "dataset": "china",
   "inference_calls": 1,
-  "amendment": "docs/protocol_amendment_2026-11-15_label_mapping_sensitivity.md"
+  "records": 36146,
+  "family": "ptbxl_v2_fixedgain",
+  "kind": "lda",
+  "page": "fixed",
+  "head": "pca_lda",
+  "seed": 42,
+  "amendment": "docs/protocol_amendment_2026-11-15_label_mapping_sensitivity.md",
+  "predictions_sha256": "fd3e51cf616a7eca7aa59de0a38153541bc920a03e90f1d6bf69848be0d52c2b"
 }

@@ -1,0 +1,14 @@
+{
+  "status": "completed",
+  "completed_utc": "2026-11-15T22:17:32.319987+00:00",
+  "dataset": "china",
+  "inference_calls": 1,
+  "records": 36146,
+  "family": "ptbxl_v2_fixedgain",
+  "kind": "network",
+  "page": "fixed",
+  "head": "cnn_pool_wide",
+  "seed": 46,
+  "amendment": "docs/protocol_amendment_2026-11-15_label_mapping_sensitivity.md",
+  "predictions_sha256": "9b0e37c09ec7dcb1785e5a544b14e53f5601475e12587549c0180723f65f6a4a"
+}

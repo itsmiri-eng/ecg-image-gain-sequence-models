@@ -1,5 +1,5 @@
 {
-  "created_utc": "2026-11-15T17:35:02.894621+00:00",
+  "created_utc": "2026-11-15T22:17:33.186859+00:00",
   "definitions": "Two different boundaries were quoted in the paper; count both, for every cohort.\n\n    band  : a page has a sample beyond the +-12-mm band of the original layout at 2.5 mm/mV. This is the criterion\n            that selected 2.5 mm/mV (protocol: >= 98% of training pages must fit). Equivalent to the adaptive\n            renderer choosing a gain below 2.5 mm/mV for that ECG.\n    row   : a page has a sample beyond its 30-mm row (+-15 mm) at 2.5 mm/mV. Only these samples are actually clipped\n            by the fixed-gain renderer (clipped_point_count > 0).",
   "rows": [
     {
@@ -113,6 +113,34 @@
       "hyp_positive_clipped": 75,
       "clipped_samples_median_among_clipped": 41.0,
       "clipped_samples_max": 3811
+    },
+    {
+      "cohort": "china",
+      "partition": "no mapped superclass (sensitivity only)",
+      "pages": 36146,
+      "outside_12mm_band_at_2p5": 1659,
+      "outside_12mm_band_percent": 4.589719471034139,
+      "clipped_at_30mm_row": 1173,
+      "clipped_at_30mm_row_percent": 3.2451723565539754,
+      "hyp_positive_pages": 0,
+      "hyp_positive_outside_band": 0,
+      "hyp_positive_clipped": 0,
+      "clipped_samples_median_among_clipped": 50.0,
+      "clipped_samples_max": 4020
+    },
+    {
+      "cohort": "china",
+      "partition": "all rendered records",
+      "pages": 45150,
+      "outside_12mm_band_at_2p5": 2454,
+      "outside_12mm_band_percent": 5.4352159468438535,
+      "clipped_at_30mm_row": 1556,
+      "clipped_at_30mm_row_percent": 3.446290143964563,
+      "hyp_positive_pages": 770,
+      "hyp_positive_outside_band": 225,
+      "hyp_positive_clipped": 75,
+      "clipped_samples_median_among_clipped": 48.0,
+      "clipped_samples_max": 4020
     }
   ]
 }

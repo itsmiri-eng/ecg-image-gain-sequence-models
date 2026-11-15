@@ -1,7 +1,14 @@
 {
-  "status": "started",
-  "started_utc": "2026-11-15T19:14:26.114393+00:00",
+  "status": "completed",
+  "completed_utc": "2026-11-15T22:02:33.199942+00:00",
   "dataset": "china",
   "inference_calls": 1,
-  "amendment": "docs/protocol_amendment_2026-11-15_label_mapping_sensitivity.md"
+  "records": 36146,
+  "family": "ptbxl_v2",
+  "kind": "svm",
+  "page": "adaptive",
+  "head": "pca_svm",
+  "seed": 42,
+  "amendment": "docs/protocol_amendment_2026-11-15_label_mapping_sensitivity.md",
+  "predictions_sha256": "9814a0a22c63f21775d0670a94b0ff2e5c8cfbb836c4d34acdd69c5b81b93024"
 }

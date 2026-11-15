@@ -1008,6 +1008,8 @@ Georgia, USA & no mapped superclass (sensitivity only) & 4{,}245 & 21 & 0.49 & 1
 Georgia, USA & all rendered records & 10{,}292 & 99 & 0.96 & 42 & 0.41 & 2{,}088 & 47 & 14 \\
 \midrule
 China & included (confirmatory cohort) & 9{,}004 & 795 & 8.83 & 383 & 4.25 & 770 & 225 & 75 \\
+China & no mapped superclass (sensitivity only) & 36{,}146 & 1{,}659 & 4.59 & 1{,}173 & 3.25 & 0 & 0 & 0 \\
+China & all rendered records & 45{,}150 & 2{,}454 & 5.44 & 1{,}556 & 3.45 & 770 & 225 & 75 \\
 \end{longtable}
 \endgroup
 {\footnotesize \emph{Outside band}: at 2.5 mm/mV at least one sample lies beyond the $\pm$12-mm band that the original layout allows around a row centre. This is the criterion by which 2.5 mm/mV was chosen (at least 98\% of training pages must fit: 16{,}810 of 17{,}084 fit, 274 do not) and it is identical to the set of ECGs that the adaptive renderer drew below 2.5 mm/mV. Nothing is clipped at this boundary. \emph{Clipped}: at least one sample lies beyond the edge of the 30-mm row ($\pm$15 mm) and was clipped to the row edge by the fixed-gain renderer. Every clipped page is also outside the band (checked), so the 121 clipped training pages are a subset of the 274. Numerators: pages meeting the definition; denominators: the pages of the row (column Pages). Stage: page rendering; no page was excluded for clipping in any cohort. HYP+: pages with the hypertrophy label (external cohorts: the mapped label). ``No mapped superclass'' rows are the external records used only in the label-mapping sensitivity analysis. Source: the fixed-gain cache manifests.\par}
@@ -1125,6 +1127,9 @@ Georgia, USA & V5 & 10{,}292 & 7 (0.1)$^*$ & 4{,}059 (39.4) & 2{,}203 (21.4) & 2
 China & V0 & 9{,}004 & 169 (1.9) & 5{,}670 (63.0) & 3{,}857 (42.8) & 770 (8.6) \\
 China & V1 & 8{,}875 & 169 (1.9) & 5{,}670 (63.9) & 3{,}790 (42.7) & 131 (1.5) \\
 China & V2 & 9{,}004 & 542 (6.0) & 6{,}574 (73.0) & 3{,}857 (42.8) & 770 (8.6) \\
+China & V3 & 45{,}150 & 169 (0.4) & 5{,}670 (12.6) & 3{,}857 (8.5) & 770 (1.7) \\
+China & V4 & 45{,}150 & 1{,}170 (2.6) & 12{,}190 (27.0) & 3{,}857 (8.5) & 770 (1.7) \\
+China & V5 & 45{,}150 & 169 (0.4) & 5{,}670 (12.6) & 4{,}607 (10.2) & 770 (1.7) \\
 \end{longtable}
 \endgroup
 {\footnotesize V0: published cohort and 90\% rule. V1: share $\geq$0.99 (records left without a label dropped). V2: share $\geq$0.80 on the published cohort. V3: published cohort plus every record excluded only for having no mapped superclass, counted as negative for all labels. V4: as V3 with share $\geq$0.80. V5: as V3, and the codes that the organizers score as equivalent to an assigned code (right bundle branch block 59118001 = complete right bundle branch block; complete left bundle branch block 733534002 = left bundle branch block) inherit its assignment. $^*$Not eligible in that variant (fewer than 50 positives or 50 negatives). NORM has no code in any variant.\par}
@@ -1170,40 +1175,40 @@ Signal & 1D ResNet (raw signals) & 0.787 & 0.753 & 0.797 & 0.818 & 0.833 & 0.831
 
 \begingroup\scriptsize
 \setlength{\tabcolsep}{3pt}
-\begin{longtable}{llrrr}
+\begin{longtable}{llrrrrrr}
 \caption{Additional analysis: external macro AUROC (mean over seeds) under each label-mapping variant, China.}\label{tab:s_mapping_perf_china}\\
 \toprule
-Pages & Model & V0 & V1 & V2 \\
+Pages & Model & V0 & V1 & V2 & V3 & V4 & V5 \\
 \midrule
 \endfirsthead
 \toprule
-Pages & Model & V0 & V1 & V2 \\
+Pages & Model & V0 & V1 & V2 & V3 & V4 & V5 \\
 \midrule
 \endhead
 \bottomrule
 \endfoot
-Adaptive & CNN-only & 0.717 & 0.642 & 0.742 \\
-Adaptive & CNN-only, capacity-matched & 0.777 & 0.687 & 0.794 \\
-Adaptive & CNN-LSTM & 0.799 & 0.708 & 0.812 \\
-Adaptive & CNN + temporal conv. & 0.811 & 0.720 & 0.823 \\
-Adaptive & CNN + small ViT & 0.815 & 0.716 & 0.824 \\
-Adaptive & ResNet-18, ImageNet & 0.848 & 0.781 & 0.865 \\
+Adaptive & CNN-only & 0.717 & 0.642 & 0.742 & 0.806 & 0.814 & 0.813 \\
+Adaptive & CNN-only, capacity-matched & 0.777 & 0.687 & 0.794 & 0.837 & 0.846 & 0.846 \\
+Adaptive & CNN-LSTM & 0.799 & 0.708 & 0.812 & 0.856 & 0.860 & 0.865 \\
+Adaptive & CNN + temporal conv. & 0.811 & 0.720 & 0.823 & 0.870 & 0.874 & 0.878 \\
+Adaptive & CNN + small ViT & 0.815 & 0.716 & 0.824 & 0.864 & 0.867 & 0.873 \\
+Adaptive & ResNet-18, ImageNet & 0.848 & 0.781 & 0.865 & 0.891 & 0.901 & 0.898 \\
 \midrule
-Fixed & CNN-only & 0.768 & 0.669 & 0.787 \\
-Fixed & CNN-only, capacity-matched & 0.809 & 0.711 & 0.821 \\
-Fixed & CNN-LSTM & 0.817 & 0.725 & 0.830 \\
-Fixed & CNN + temporal conv. & 0.824 & 0.723 & 0.835 \\
-Fixed & CNN + small ViT & 0.819 & 0.716 & 0.831 \\
-Fixed & ResNet-18, ImageNet & 0.853 & 0.775 & 0.867 \\
+Fixed & CNN-only & 0.768 & 0.669 & 0.787 & 0.834 & 0.844 & 0.842 \\
+Fixed & CNN-only, capacity-matched & 0.809 & 0.711 & 0.821 & 0.859 & 0.865 & 0.867 \\
+Fixed & CNN-LSTM & 0.817 & 0.725 & 0.830 & 0.867 & 0.873 & 0.876 \\
+Fixed & CNN + temporal conv. & 0.824 & 0.723 & 0.835 & 0.874 & 0.880 & 0.882 \\
+Fixed & CNN + small ViT & 0.819 & 0.716 & 0.831 & 0.869 & 0.876 & 0.878 \\
+Fixed & ResNet-18, ImageNet & 0.853 & 0.775 & 0.867 & 0.898 & 0.907 & 0.905 \\
 \midrule
-Adaptive & PCA + LDA & 0.732 & 0.652 & 0.740 \\
+Adaptive & PCA + LDA & 0.732 & 0.652 & 0.740 & 0.775 & 0.770 & 0.782 \\
 \midrule
-Fixed & PCA + LDA & 0.752 & 0.644 & 0.743 \\
+Fixed & PCA + LDA & 0.752 & 0.644 & 0.743 & 0.791 & 0.772 & 0.799 \\
 \midrule
-Signal & 1D ResNet (raw signals) & 0.855 & 0.791 & 0.873 \\
+Signal & 1D ResNet (raw signals) & 0.855 & 0.791 & 0.873 & 0.891 & 0.907 & 0.899 \\
 \end{longtable}
 \endgroup
-{\footnotesize V0: published cohort and 90\% rule. V1: share $\geq$0.99 (records left without a label dropped). V2: share $\geq$0.80 on the published cohort. V3: published cohort plus every record excluded only for having no mapped superclass, counted as negative for all labels. V4: as V3 with share $\geq$0.80. V5: as V3, and the codes that the organizers score as equivalent to an assigned code (right bundle branch block 59118001 = complete right bundle branch block; complete left bundle branch block 733534002 = left bundle branch block) inherit its assignment. Macro AUROC over the labels of the published analysis that remain eligible in the variant (V0: MI, STTC, CD, HYP; V1: MI, STTC, CD, HYP; V2: MI, STTC, CD, HYP). V0 reproduces Table~4 of the main text. Predictions of the published cohort are the saved ones; the added records received one inference per run.\par}
+{\footnotesize V0: published cohort and 90\% rule. V1: share $\geq$0.99 (records left without a label dropped). V2: share $\geq$0.80 on the published cohort. V3: published cohort plus every record excluded only for having no mapped superclass, counted as negative for all labels. V4: as V3 with share $\geq$0.80. V5: as V3, and the codes that the organizers score as equivalent to an assigned code (right bundle branch block 59118001 = complete right bundle branch block; complete left bundle branch block 733534002 = left bundle branch block) inherit its assignment. Macro AUROC over the labels of the published analysis that remain eligible in the variant (V0: MI, STTC, CD, HYP; V1: MI, STTC, CD, HYP; V2: MI, STTC, CD, HYP; V3: MI, STTC, CD, HYP; V4: MI, STTC, CD, HYP; V5: MI, STTC, CD, HYP). V0 reproduces Table~4 of the main text. Predictions of the published cohort are the saved ones; the added records received one inference per run.\par}
 \medskip
 
 \begingroup\scriptsize
@@ -1246,37 +1251,37 @@ H2 & ViT, HYP & +0.018 & +0.011 & +0.018 & +0.016 [+0.004, +0.029] & 0.007 & +0.
 
 \begingroup\scriptsize
 \setlength{\tabcolsep}{3pt}
-\begin{longtable}{llrrr}
+\begin{longtable}{llrrrccrr}
 \caption{Additional analysis: the external hypotheses H1 and H2 under each label-mapping variant, China: difference in mean-over-seeds AUROC.}\label{tab:s_mapping_hyp_china}\\
 \toprule
-Family & Comparison & V0 & V1 & V2 \\
+Family & Comparison & V0 & V1 & V2 & V3 [95\% CI] & V3 $p$ & V4 & V5 \\
 \midrule
 \endfirsthead
 \toprule
-Family & Comparison & V0 & V1 & V2 \\
+Family & Comparison & V0 & V1 & V2 & V3 [95\% CI] & V3 $p$ & V4 & V5 \\
 \midrule
 \endhead
 \bottomrule
 \endfoot
-H1 & Capacity-m. $-$ CNN-only & +0.060 & +0.046 & +0.053 \\
-H1 & CNN-LSTM $-$ CNN-only & +0.083 & +0.066 & +0.071 \\
-H1 & Temporal conv. $-$ CNN-only & +0.094 & +0.078 & +0.082 \\
-H1 & ViT $-$ CNN-only & +0.099 & +0.074 & +0.083 \\
-H1 & CNN-LSTM $-$ Capacity-m. & +0.023 & +0.020 & +0.018 \\
-H1 & Temporal conv. $-$ Capacity-m. & +0.034 & +0.032 & +0.029 \\
-H1 & ViT $-$ Capacity-m. & +0.039 & +0.029 & +0.030 \\
-H1 & Temporal conv. $-$ CNN-LSTM & +0.011 & +0.012 & +0.011 \\
-H1 & ViT $-$ CNN-LSTM & +0.016 & +0.008 & +0.012 \\
-H1 & ViT $-$ Temporal conv. & +0.005 & $-$0.004 & +0.001 \\
+H1 & Capacity-m. $-$ CNN-only & +0.060 & +0.046 & +0.053 & +0.032 [+0.020, +0.043] & $\le$0.002 & +0.031 & +0.033 \\
+H1 & CNN-LSTM $-$ CNN-only & +0.083 & +0.066 & +0.071 & +0.051 [+0.040, +0.063] & $\le$0.002 & +0.046 & +0.052 \\
+H1 & Temporal conv. $-$ CNN-only & +0.094 & +0.078 & +0.082 & +0.064 [+0.056, +0.074] & $\le$0.002 & +0.060 & +0.065 \\
+H1 & ViT $-$ CNN-only & +0.099 & +0.074 & +0.083 & +0.058 [+0.050, +0.068] & $\le$0.002 & +0.053 & +0.060 \\
+H1 & CNN-LSTM $-$ Capacity-m. & +0.023 & +0.020 & +0.018 & +0.019 [+0.011, +0.028] & $\le$0.002 & +0.015 & +0.019 \\
+H1 & Temporal conv. $-$ Capacity-m. & +0.034 & +0.032 & +0.029 & +0.033 [+0.026, +0.040] & $\le$0.002 & +0.028 & +0.032 \\
+H1 & ViT $-$ Capacity-m. & +0.039 & +0.029 & +0.030 & +0.027 [+0.020, +0.036] & $\le$0.002 & +0.021 & +0.027 \\
+H1 & Temporal conv. $-$ CNN-LSTM & +0.011 & +0.012 & +0.011 & +0.014 [+0.008, +0.020] & $\le$0.002 & +0.014 & +0.013 \\
+H1 & ViT $-$ CNN-LSTM & +0.016 & +0.008 & +0.012 & +0.008 [+0.002, +0.014] & 0.014 & +0.007 & +0.008 \\
+H1 & ViT $-$ Temporal conv. & +0.005 & $-$0.004 & +0.001 & $-$0.006 [$-$0.012, $-$0.001] & 0.031 & $-$0.007 & $-$0.005 \\
 \midrule
-H2 & CNN-only, macro & +0.051 & +0.027 & +0.045 \\
-H2 & CNN-only, HYP & +0.112 & +0.014 & +0.112 \\
-H2 & CNN-LSTM, macro & +0.018 & +0.017 & +0.017 \\
-H2 & CNN-LSTM, HYP & +0.035 & +0.035 & +0.035 \\
-H2 & Temporal conv., macro & +0.014 & +0.004 & +0.012 \\
-H2 & Temporal conv., HYP & +0.033 & $-$0.005 & +0.033 \\
-H2 & ViT, macro & +0.004 & $-$0.000 & +0.007 \\
-H2 & ViT, HYP & +0.014 & +0.001 & +0.014 \\
+H2 & CNN-only, macro & +0.051 & +0.027 & +0.045 & +0.028 [+0.019, +0.039] & $\le$0.002 & +0.030 & +0.029 \\
+H2 & CNN-only, HYP & +0.112 & +0.014 & +0.112 & +0.068 [+0.051, +0.087] & $\le$0.002 & +0.068 & +0.068 \\
+H2 & CNN-LSTM, macro & +0.018 & +0.017 & +0.017 & +0.011 [+0.004, +0.019] & 0.011 & +0.012 & +0.011 \\
+H2 & CNN-LSTM, HYP & +0.035 & +0.035 & +0.035 & +0.018 [+0.011, +0.026] & $\le$0.002 & +0.018 & +0.018 \\
+H2 & Temporal conv., macro & +0.014 & +0.004 & +0.012 & +0.004 [$-$0.003, +0.011] & 0.351 & +0.006 & +0.004 \\
+H2 & Temporal conv., HYP & +0.033 & $-$0.005 & +0.033 & +0.010 [+0.004, +0.017] & 0.011 & +0.010 & +0.010 \\
+H2 & ViT, macro & +0.004 & $-$0.000 & +0.007 & +0.005 [+0.000, +0.010] & 0.087 & +0.009 & +0.005 \\
+H2 & ViT, HYP & +0.014 & +0.001 & +0.014 & +0.010 [+0.005, +0.016] & $\le$0.002 & +0.010 & +0.010 \\
 \end{longtable}
 \endgroup
 {\footnotesize V0: published cohort and 90\% rule. V1: share $\geq$0.99 (records left without a label dropped). V2: share $\geq$0.80 on the published cohort. V3: published cohort plus every record excluded only for having no mapped superclass, counted as negative for all labels. V4: as V3 with share $\geq$0.80. V5: as V3, and the codes that the organizers score as equivalent to an assigned code (right bundle branch block 59118001 = complete right bundle branch block; complete left bundle branch block 733534002 = left bundle branch block) inherit its assignment. H1: head pairs on adaptive-gain pages (macro AUROC). H2: fixed-gain minus adaptive-gain training (macro and HYP AUROC). V0 repeats the published point estimates. V3: hierarchical seed $\times$ record bootstrap (10{,}000 resamples), Holm within H1 (10) and H2 (8); the other variants are point estimates. $p$ printed as ``$\le$'' is at the resolution limit of the bootstrap: no replicate crossed zero, and no smaller value is claimed (Section~\ref{sec:s_review}). \par}
@@ -1356,7 +1361,7 @@ All models: PTB-XL v1.0.3, official patient folds (1-8 train, 9 validation, 10 t
 \begin{itemize}
 \item \textbf{PCA + LDA / PCA + linear SVM.} Classical baselines on PCA of the downsampled page; one fit each (no seeds). Hyperparameters chosen on validation by a frozen grid.
 \item \textbf{CNN-only (cnn\_pool).} Shared 1,220-parameter lead-image CNN, mean over 70 feature columns, linear readout. 1,705 parameters. Sees only local image regions; cannot relate the calibration pulse to the waveform.
-\item \textbf{Wide CNN-only (cnn\_pool\_wide).} Same CNN, per-column MLP 96-96-64 then column mean. 17,065 parameters: capacity of the sequence heads without column mixing (protocol amendment 3 Nov 2026).
+\item \textbf{Wide CNN-only (cnn\_pool\_wide).} Same CNN, per-column MLP 96-96-64 then column mean. 17,065 parameters: capacity of the sequence heads without column mixing (protocol amendment 3 Nov 2026). Trained on adaptive-gain pages and, as an additional analysis (amendment of 15 Nov 2026), on fixed-gain pages, seeds 42-46 each.
 \item \textbf{CNN-LSTM (cnn\_lstm).} Same CNN, one unidirectional LSTM layer (hidden width 32) over the 70 columns, mean of outputs. 18,025 parameters.
 \item \textbf{CNN + temporal convolution (temporal\_conv).} Same CNN, two causal dilated residual Conv1d blocks (receptive field 13 columns). 17,161 parameters.
 \item \textbf{CNN + small ViT (hybrid\_vit).} Same CNN, small transformer encoder over the columns with positional embeddings. 23,881 parameters. Sees the whole row at once.
@@ -1829,7 +1834,7 @@ that none of the 10,000 replicates crossed zero; no smaller p is claimed.
 \item \textbf{Confidence intervals:} percentile 95\% intervals from the 10,000 replicates (they may differ from the old
 ones in the third decimal by Monte Carlo error).
 \item \textbf{Sensitivity check (reported in the supplement, not used for claims):} a null-centred bootstrap p,
-p\_c = (1 + \#\{ |$\Delta$* $-$ $\Delta$̂| $\geq$ |$\Delta$̂| \}) / (B + 1), which tests H0: $\Delta$ = 0 by shifting the bootstrap distribution to
+p\_c = (1 + \#\{ |$\Delta$* $-$ $\hat{\Delta}$| $\geq$ |$\hat{\Delta}$| \}) / (B + 1), which tests H0: $\Delta$ = 0 by shifting the bootstrap distribution to
 the null (Hall \& Wilson, Biometrics 1991;47:757).
 \end{itemize}
 \paragraph{Wording rule for the manuscript (fixed now)}
@@ -1896,14 +1901,16 @@ and the positives contributed by each assigned code.
 \paragraph{C. Sensitivity of the results to the mapping}
 
 Variants (per cohort; labels eligible if $\geq$ 50 positives and $\geq$ 50 negatives, as in the frozen plan):
-
-| Variant | Records | Mapping |
-|---|---|---|
-| V0 (published) | frozen cohort | 90\% rule |
-| V1 strict | frozen cohort; records left without a label are dropped | share $\geq$ 0.99 |
-| V2 relaxed, same records | frozen cohort | share $\geq$ 0.80 (labels added) |
-| V3 all records | frozen cohort + every record excluded only for "no mapped superclass", as negatives for all labels | 90\% rule |
-| V4 all records, relaxed | as V3 | share $\geq$ 0.80 |
+\begin{center}\footnotesize\begin{tabular}{p{0.31\textwidth}p{0.31\textwidth}p{0.31\textwidth}}
+\toprule
+Variant & Records & Mapping \\
+\midrule
+V0 (published) & frozen cohort & 90\% rule \\
+V1 strict & frozen cohort; records left without a label are dropped & share $\geq$ 0.99 \\
+V2 relaxed, same records & frozen cohort & share $\geq$ 0.80 (labels added) \\
+V3 all records & frozen cohort + every record excluded only for "no mapped superclass", as negatives for all labels & 90\% rule \\
+V4 all records, relaxed & as V3 & share $\geq$ 0.80 \\
+\bottomrule\end{tabular}\end{center}
 \begin{itemize}
 \item V0--V2 use the saved predictions only. V3--V4 need predictions for the unmapped records: these records are
 rendered with the unchanged adaptive and fixed-gain renderers into a \textbf{separate} cache
@@ -1935,10 +1942,12 @@ as the same diagnosis: right bundle branch block 59118001 = complete right bundl
 complete left bundle branch block 733534002 = left bundle branch block 164909002. The first code of each pair
 never occurs in the organisers' PTB-XL encoding, so the data-driven rule could not assign it, although its
 equivalent is assigned to CD. One more variant is therefore added:
-
-| Variant | Records | Mapping |
-|---|---|---|
-| V5 all records, equivalents | as V3 | 90\% rule, and 59118001 and 733534002 inherit the assignment (CD) of their organiser-declared equivalents |
+\begin{center}\footnotesize\begin{tabular}{p{0.31\textwidth}p{0.31\textwidth}p{0.31\textwidth}}
+\toprule
+Variant & Records & Mapping \\
+\midrule
+V5 all records, equivalents & as V3 & 90\% rule, and 59118001 and 733534002 inherit the assignment (CD) of their organiser-declared equivalents \\
+\bottomrule\end{tabular}\end{center}
 
 V5 is reported as point estimates, like V1, V2 and V4. No other code is added by judgement: for example
 "left ventricular high voltage" (55827005, China only, absent from PTB-XL) stays unmapped in every variant and is
