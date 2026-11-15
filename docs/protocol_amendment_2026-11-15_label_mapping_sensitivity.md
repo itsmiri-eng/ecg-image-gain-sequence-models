@@ -62,3 +62,19 @@ Variants (per cohort; labels eligible if ≥ 50 positives and ≥ 50 negatives, 
 
 Rendering on at most 3 CPU workers at low priority; inference on the GPU after the fixed-gain runs of the same
 day have finished. Interrupted steps are restarted; an inference that has started for a run is never repeated.
+
+## Addendum, 15 November 2026 (written before any sensitivity metric or any model output on the unmapped records existed)
+
+While collecting the clinical names (part A), the organisers' code tables showed that they score some code pairs
+as the same diagnosis: right bundle branch block 59118001 = complete right bundle branch block 713427006, and
+complete left bundle branch block 733534002 = left bundle branch block 164909002. The first code of each pair
+never occurs in the organisers' PTB-XL encoding, so the data-driven rule could not assign it, although its
+equivalent is assigned to CD. One more variant is therefore added:
+
+| Variant | Records | Mapping |
+|---|---|---|
+| V5 all records, equivalents | as V3 | 90% rule, and 59118001 and 733534002 inherit the assignment (CD) of their organiser-declared equivalents |
+
+V5 is reported as point estimates, like V1, V2 and V4. No other code is added by judgement: for example
+"left ventricular high voltage" (55827005, China only, absent from PTB-XL) stays unmapped in every variant and is
+named as a limitation, because assigning it to HYP would be our own clinical decision without expert review.
