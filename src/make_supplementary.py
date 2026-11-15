@@ -179,8 +179,8 @@ def p_cell(row, adjusted=None):
     return fmt_p(float(row["p_holm"] if adjusted is None else adjusted), row["p_bootstrap"])
 
 
-def longtable(caption, label, spec, header, rows, note="", size="\\footnotesize"):
-    lines = ["\\begingroup" + size, "\\setlength{\\tabcolsep}{3pt}", f"\\begin{{longtable}}{{{spec}}}",
+def longtable(caption, label, spec, header, rows, note="", size="\\footnotesize", colsep="3pt"):
+    lines = ["\\begingroup" + size, "\\setlength{\\tabcolsep}{" + colsep + "}", f"\\begin{{longtable}}{{{spec}}}",
              f"\\caption{{{caption}}}\\label{{{label}}}\\\\", "\\toprule", header + " \\\\", "\\midrule", "\\endfirsthead",
              "\\toprule", header + " \\\\", "\\midrule", "\\endhead", "\\bottomrule", "\\endfoot"]
     for row in rows:
@@ -691,7 +691,7 @@ def table_wide():
     by = {(r["cohort"], r["comparison"]): r for r in pairs}
     body = []
     for comparison in dict.fromkeys(r["comparison"] for r in pairs):
-        cells = [pair_name(comparison, {**NAMES, "cnn_pool_wide": "CNN-only, capacity-m."})]
+        cells = [pair_name(comparison)]
         for cohort in COHORTS:
             r = by.get((cohort, comparison))
             cells += [diff_cell(r), p_cell(r)] if r else ["--", "--"]
@@ -700,7 +700,9 @@ def table_wide():
                       "[95\\% CI] and Holm-adjusted $p$ (seeds 42--46).", "tab:s_fixed_pairs", "lcccccc",
                       "Comparison & " + " & ".join(f"\\multicolumn{{2}}{{c}}{{{name}}}" for name in COHORTS.values()), body,
                       "The same ten pairs as Table~2 of the main text, with every model trained and tested on fixed-gain "
-                      "pages. Holm over the 10 pairs within each cohort; " + BOOT + ". " + FLOOR_NOTE, size="\\scriptsize")
+                      "pages. Capacity-m.: capacity-matched CNN-only head; Temporal conv.: CNN + temporal convolution; ViT: CNN + "
+                      "small ViT. Holm over the 10 pairs within each cohort; " + BOOT + ". " + FLOOR_NOTE, size="\\scriptsize",
+                      colsep="2pt")
     return first + "\n\n" + second + "\n\n" + third
 
 
@@ -719,7 +721,7 @@ def table_descriptive():
         model, page = comparison[:-1].split(" (")
         if previous is not None and (model == "resnet18") != (previous == "resnet18"):
             body.append("\\midrule")
-        cells = [MODEL_NAMES[model], page.capitalize(), by[("PTB-XL test", comparison)]["seeds"]]
+        cells = [SHORT[model], page.capitalize(), by[("PTB-XL test", comparison)]["seeds"]]
         for cohort in COHORTS:
             r = by[(cohort, comparison)]
             cells += [diff_cell(r), p_cell(r)]
@@ -728,19 +730,23 @@ def table_descriptive():
     second = longtable("Additional analysis: image model minus signal reference: difference in mean-over-seeds macro AUROC "
                        "[95\\% CI] and Holm-adjusted $p$.", "tab:s_signal_gap", "lllcccccc",
                        "Model & Pages & Seeds & " + " & ".join(f"\\multicolumn{{2}}{{c}}{{{name}}}" for name in COHORTS.values()),
-                       body, "Negative values: the image model is below the 1D ResNet on raw signals. Compact heads: seeds "
+                       body, "Negative values: the image model is below the 1D ResNet on raw signals. Capacity-m.: capacity-matched "
+                       "CNN-only head; Temporal conv.: CNN + temporal convolution; ViT: CNN + small ViT; ResNet-18: "
+                       "ImageNet-pretrained. Compact heads: seeds "
                        "42--46; ResNet-18: seeds 42--44 (the signal reference restricted to the same seeds). Hierarchical "
                        "bootstrap, " + BOOT + ", Holm over the 12 comparisons within each cohort. Post hoc; seeds of "
                        "different architectures are paired by number only. An interval that includes zero means the two "
                        "models were not distinguishable in this sample; it does not show that they are equivalent. "
-                       + FLOOR_NOTE, size="\\scriptsize")
+                       + FLOOR_NOTE, size="\\scriptsize", colsep="2pt")
     return first + "\n\n" + second
 
 
 def table_clipping_defs():
     rows = read_csv(REVIEW / "clipping/clipping_definitions.csv")
     names = {"PTB-XL": "PTB-XL", "georgia": "Georgia, USA", "china": "China"}
-    parts = {"train": "training (folds 1--8)", "validation": "validation (fold 9)", "test": "test (fold 10)", "all": "all"}
+    parts = {"train": "training (folds 1--8)", "validation": "validation (fold 9)", "test": "test (fold 10)", "all": "all",
+             "included (confirmatory cohort)": "included (confirmatory)",
+             "no mapped superclass (sensitivity only)": "unmapped (sensitivity only)", "all rendered records": "all rendered"}
     body, previous = [], None
     for r in rows:
         if previous is not None and r["cohort"] != previous:
@@ -752,7 +758,7 @@ def table_clipping_defs():
                                 n(r["hyp_positive_pages"]), n(r["hyp_positive_outside_band"]), n(r["hyp_positive_clipped"])]))
     return longtable("Additional analysis: the two amplitude boundaries at 2.5 mm/mV, for PTB-XL and both external cohorts.",
                      "tab:s_clipping_defs", "llrrrrrrrr",
-                     "Cohort & Records & Pages & Outside band & \\% & Clipped & \\% & HYP+ & HYP+ outside band & HYP+ clipped",
+                     "Cohort & Records & Pages & Outside band & \\% & Clipped & \\% & HYP+ & HYP+ outside & HYP+ clipped",
                      body, "\\emph{Outside band}: at 2.5 mm/mV at least one sample lies beyond the $\\pm$12-mm band that the "
                      "original layout allows around a row centre. This is the criterion by which 2.5 mm/mV was chosen (at "
                      "least 98\\% of training pages must fit: 16{,}810 of 17{,}084 fit, 274 do not) and it is identical to "
@@ -762,8 +768,10 @@ def table_clipping_defs():
                      "(checked), so the 121 clipped training pages are a subset of the 274. Numerators: pages meeting the "
                      "definition; denominators: the pages of the row (column Pages). Stage: page rendering; no page was "
                      "excluded for clipping in any cohort. HYP+: pages with the hypertrophy label (external cohorts: the "
-                     "mapped label). ``No mapped superclass'' rows are the external records used only in the "
-                     "label-mapping sensitivity analysis. Source: the fixed-gain cache manifests.", size="\\scriptsize")
+                     "mapped label); HYP+ outside: HYP+ pages outside the band. ``Unmapped'' rows are the external records without a "
+                     "mapped superclass, used only in the "
+                     "label-mapping sensitivity analysis. Source: the fixed-gain cache manifests.", size="\\scriptsize",
+                     colsep="2pt")
 
 
 def table_codes(top=22):
@@ -917,7 +925,7 @@ def table_stats():
                                 str(sum(true(r, "supported_old") for r in members)),
                                 str(sum(true(r, "supported_revised") for r in members))]))
     first = longtable("Additional analysis: bootstrap $p$-values before and after the statistical revision of 15 November "
-                      "2026, by comparison family.", "tab:s_stats_families", "p{4.2cm}p{4.4cm}rrrlrr",
+                      "2026, by comparison family.", "tab:s_stats_families", "p{3.9cm}p{4.0cm}rrrlrr",
                       "Analysis & Family & $m$ & Old $p_\\mathrm{adj}=0$ & At floor & Printed as & Old $<$0.05 & Revised $<$0.05",
                       body, f"Old: {n(summary['resamples_old'])} resamples, $p=2\\min\\{{P(\\Delta^*\\le0),P(\\Delta^*\\ge0)\\}}$, "
                       "which is 0 when no replicate crosses zero and stays 0 after Holm correction; such values were printed "
@@ -982,7 +990,9 @@ def mapping_validation_text():
 # ---------------------------------------------------------------- text sections
 
 def model_cards():
-    lines = [inline(COMMON), "", "\\begin{itemize}"]
+    # \sloppy from here to the end of the document: the model cards and the reproduced amendments contain long
+    # file paths and hashes that otherwise run into the margin
+    lines = ["\\sloppy", inline(COMMON), "", "\\begin{itemize}"]
     lines += [f"\\item \\textbf{{{esc(name)}.}} {inline(text)}" for name, text in CARDS.items()]
     lines += ["\\end{itemize}", "Every completed run, with hardware, selected epoch and results, is listed in "
               "Supplementary Table~\\ref{tab:s_runs}. Generated from src/make\\_model\\_cards.py."]

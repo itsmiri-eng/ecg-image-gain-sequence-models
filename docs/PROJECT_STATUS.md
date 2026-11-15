@@ -91,7 +91,15 @@ Each has a dated protocol that was committed before its results existed.
 
 - Tests: 257 passed, 3 skipped (two new tests for the bootstrap).
 - `build_overleaf.py scirep`: 0 problems for manuscript and supplement.
-- Overleaf compile: @@STATUS_OVERLEAF@@
+- Overleaf compile: done through the Overleaf connection on 16 Nov 2026, about 03:30 local.
+  - `main.tex`, `supplementary_scirep.tex` and `references.bib` on Overleaf are **byte-identical** to
+    `paper/ieee_manuscript/overleaf_scirep/` (checked with MD5 sums computed by LaTeX on Overleaf through a temporary
+    probe line, which was removed again). Figures 4 and 5 were re-uploaded.
+  - Manuscript: compiles, 16 pages, no errors, no undefined references or citations.
+  - Supplement: compiles, 27 pages, no errors. Its log was read: four new tables that ran past the margin were
+    narrowed and no table overflows any more; a few long file paths in the reproduced protocol texts stuck out into
+    the margin, for which relaxed line breaking was switched on (that last change was not re-read in the log).
+  - Not done: nobody has looked at either PDF, and the manuscript's log was not read for overfull boxes.
 
 ### Still open (see also the "Publication readiness" part of the final report)
 

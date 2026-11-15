@@ -895,7 +895,7 @@ China & HYP & +0.103 [+0.075, +0.131] & $\le$0.001 & $\le$0.002 \\
 \medskip
 
 \begingroup\scriptsize
-\setlength{\tabcolsep}{3pt}
+\setlength{\tabcolsep}{2pt}
 \begin{longtable}{lcccccc}
 \caption{Additional analysis: head pairs on fixed-gain pages: difference in mean-over-seeds macro AUROC [95\% CI] and Holm-adjusted $p$ (seeds 42--46).}\label{tab:s_fixed_pairs}\\
 \toprule
@@ -908,19 +908,19 @@ Comparison & \multicolumn{2}{c}{PTB-XL test} & \multicolumn{2}{c}{Georgia, USA} 
 \endhead
 \bottomrule
 \endfoot
-CNN-only, capacity-m. $-$ CNN-only & +0.022 [+0.014, +0.030] & $\le$0.002 & +0.026 [+0.020, +0.033] & $\le$0.002 & +0.042 [+0.027, +0.054] & $\le$0.002 \\
+Capacity-m. $-$ CNN-only & +0.022 [+0.014, +0.030] & $\le$0.002 & +0.026 [+0.020, +0.033] & $\le$0.002 & +0.042 [+0.027, +0.054] & $\le$0.002 \\
 CNN-LSTM $-$ CNN-only & +0.029 [+0.021, +0.036] & $\le$0.002 & +0.031 [+0.023, +0.039] & $\le$0.002 & +0.049 [+0.038, +0.060] & $\le$0.002 \\
-CNN + temporal conv. $-$ CNN-only & +0.035 [+0.028, +0.042] & $\le$0.002 & +0.031 [+0.022, +0.040] & $\le$0.002 & +0.057 [+0.040, +0.072] & $\le$0.002 \\
-CNN + small ViT $-$ CNN-only & +0.031 [+0.020, +0.042] & $\le$0.002 & +0.030 [+0.021, +0.040] & $\le$0.002 & +0.051 [+0.039, +0.064] & $\le$0.002 \\
-CNN-LSTM $-$ CNN-only, capacity-m. & +0.006 [+0.001, +0.011] & 0.081 & +0.005 [$-$0.002, +0.010] & 0.632 & +0.008 [+0.001, +0.014] & 0.110 \\
-CNN + temporal conv. $-$ CNN-only, capacity-m. & +0.012 [+0.007, +0.018] & $\le$0.002 & +0.004 [$-$0.000, +0.009] & 0.334 & +0.015 [+0.007, +0.022] & 0.004 \\
-CNN + small ViT $-$ CNN-only, capacity-m. & +0.008 [+0.001, +0.015] & 0.081 & +0.004 [$-$0.002, +0.010] & 0.737 & +0.009 [+0.003, +0.016] & 0.029 \\
-CNN + temporal conv. $-$ CNN-LSTM & +0.006 [+0.001, +0.011] & 0.081 & $-$0.000 [$-$0.007, +0.005] & 1.000 & +0.007 [$-$0.004, +0.018] & 0.595 \\
-CNN + small ViT $-$ CNN-LSTM & +0.002 [$-$0.005, +0.010] & 0.571 & $-$0.001 [$-$0.006, +0.004] & 1.000 & +0.002 [$-$0.005, +0.009] & 0.626 \\
-CNN + small ViT $-$ CNN + temporal conv. & $-$0.004 [$-$0.010, +0.002] & 0.439 & $-$0.001 [$-$0.005, +0.003] & 1.000 & $-$0.006 [$-$0.014, +0.003] & 0.595 \\
+Temporal conv. $-$ CNN-only & +0.035 [+0.028, +0.042] & $\le$0.002 & +0.031 [+0.022, +0.040] & $\le$0.002 & +0.057 [+0.040, +0.072] & $\le$0.002 \\
+ViT $-$ CNN-only & +0.031 [+0.020, +0.042] & $\le$0.002 & +0.030 [+0.021, +0.040] & $\le$0.002 & +0.051 [+0.039, +0.064] & $\le$0.002 \\
+CNN-LSTM $-$ Capacity-m. & +0.006 [+0.001, +0.011] & 0.081 & +0.005 [$-$0.002, +0.010] & 0.632 & +0.008 [+0.001, +0.014] & 0.110 \\
+Temporal conv. $-$ Capacity-m. & +0.012 [+0.007, +0.018] & $\le$0.002 & +0.004 [$-$0.000, +0.009] & 0.334 & +0.015 [+0.007, +0.022] & 0.004 \\
+ViT $-$ Capacity-m. & +0.008 [+0.001, +0.015] & 0.081 & +0.004 [$-$0.002, +0.010] & 0.737 & +0.009 [+0.003, +0.016] & 0.029 \\
+Temporal conv. $-$ CNN-LSTM & +0.006 [+0.001, +0.011] & 0.081 & $-$0.000 [$-$0.007, +0.005] & 1.000 & +0.007 [$-$0.004, +0.018] & 0.595 \\
+ViT $-$ CNN-LSTM & +0.002 [$-$0.005, +0.010] & 0.571 & $-$0.001 [$-$0.006, +0.004] & 1.000 & +0.002 [$-$0.005, +0.009] & 0.626 \\
+ViT $-$ Temporal conv. & $-$0.004 [$-$0.010, +0.002] & 0.439 & $-$0.001 [$-$0.005, +0.003] & 1.000 & $-$0.006 [$-$0.014, +0.003] & 0.595 \\
 \end{longtable}
 \endgroup
-{\footnotesize The same ten pairs as Table~2 of the main text, with every model trained and tested on fixed-gain pages. Holm over the 10 pairs within each cohort; 10{,}000 resamples. $p$ printed as ``$\le$'' is at the resolution limit of the bootstrap: no replicate crossed zero, and no smaller value is claimed (Section~\ref{sec:s_review}). \par}
+{\footnotesize The same ten pairs as Table~2 of the main text, with every model trained and tested on fixed-gain pages. Capacity-m.: capacity-matched CNN-only head; Temporal conv.: CNN + temporal convolution; ViT: CNN + small ViT. Holm over the 10 pairs within each cohort; 10{,}000 resamples. $p$ printed as ``$\le$'' is at the resolution limit of the bootstrap: no replicate crossed zero, and no smaller value is claimed (Section~\ref{sec:s_review}). \par}
 \medskip
 
 \subsection{PCA + LDA under fixed gain, and the gap to the signal reference}
@@ -951,7 +951,7 @@ China & HYP & +0.062 [+0.049, +0.075] & $\le$0.001 \\
 \medskip
 
 \begingroup\scriptsize
-\setlength{\tabcolsep}{3pt}
+\setlength{\tabcolsep}{2pt}
 \begin{longtable}{lllcccccc}
 \caption{Additional analysis: image model minus signal reference: difference in mean-over-seeds macro AUROC [95\% CI] and Holm-adjusted $p$.}\label{tab:s_signal_gap}\\
 \toprule
@@ -966,34 +966,34 @@ Model & Pages & Seeds & \multicolumn{2}{c}{PTB-XL test} & \multicolumn{2}{c}{Geo
 \endfoot
 CNN-only & Adaptive & 5 & $-$0.097 [$-$0.107, $-$0.088] & $\le$0.003 & $-$0.135 [$-$0.143, $-$0.127] & $\le$0.003 & $-$0.139 [$-$0.153, $-$0.126] & $\le$0.003 \\
 CNN-only & Fixed & 5 & $-$0.067 [$-$0.076, $-$0.059] & $\le$0.003 & $-$0.080 [$-$0.087, $-$0.073] & $\le$0.003 & $-$0.088 [$-$0.100, $-$0.075] & $\le$0.003 \\
-CNN-only, capacity-matched & Adaptive & 5 & $-$0.062 [$-$0.070, $-$0.055] & $\le$0.003 & $-$0.087 [$-$0.102, $-$0.071] & $\le$0.003 & $-$0.079 [$-$0.092, $-$0.067] & $\le$0.003 \\
-CNN-only, capacity-matched & Fixed & 5 & $-$0.045 [$-$0.053, $-$0.038] & $\le$0.003 & $-$0.053 [$-$0.058, $-$0.048] & $\le$0.003 & $-$0.046 [$-$0.055, $-$0.036] & $\le$0.003 \\
+Capacity-m. & Adaptive & 5 & $-$0.062 [$-$0.070, $-$0.055] & $\le$0.003 & $-$0.087 [$-$0.102, $-$0.071] & $\le$0.003 & $-$0.079 [$-$0.092, $-$0.067] & $\le$0.003 \\
+Capacity-m. & Fixed & 5 & $-$0.045 [$-$0.053, $-$0.038] & $\le$0.003 & $-$0.053 [$-$0.058, $-$0.048] & $\le$0.003 & $-$0.046 [$-$0.055, $-$0.036] & $\le$0.003 \\
 CNN-LSTM & Adaptive & 5 & $-$0.051 [$-$0.059, $-$0.043] & $\le$0.003 & $-$0.064 [$-$0.072, $-$0.056] & $\le$0.003 & $-$0.056 [$-$0.064, $-$0.049] & $\le$0.003 \\
 CNN-LSTM & Fixed & 5 & $-$0.039 [$-$0.046, $-$0.032] & $\le$0.003 & $-$0.048 [$-$0.055, $-$0.043] & $\le$0.003 & $-$0.038 [$-$0.048, $-$0.028] & $\le$0.003 \\
-CNN + temporal conv. & Adaptive & 5 & $-$0.048 [$-$0.055, $-$0.042] & $\le$0.003 & $-$0.080 [$-$0.086, $-$0.073] & $\le$0.003 & $-$0.045 [$-$0.054, $-$0.035] & $\le$0.003 \\
-CNN + temporal conv. & Fixed & 5 & $-$0.033 [$-$0.038, $-$0.028] & $\le$0.003 & $-$0.049 [$-$0.054, $-$0.043] & $\le$0.003 & $-$0.031 [$-$0.039, $-$0.022] & $\le$0.003 \\
-CNN + small ViT & Adaptive & 5 & $-$0.042 [$-$0.049, $-$0.036] & $\le$0.003 & $-$0.057 [$-$0.064, $-$0.049] & $\le$0.003 & $-$0.040 [$-$0.047, $-$0.033] & $\le$0.003 \\
-CNN + small ViT & Fixed & 5 & $-$0.036 [$-$0.044, $-$0.029] & $\le$0.003 & $-$0.049 [$-$0.056, $-$0.043] & $\le$0.003 & $-$0.037 [$-$0.044, $-$0.029] & $\le$0.003 \\
+Temporal conv. & Adaptive & 5 & $-$0.048 [$-$0.055, $-$0.042] & $\le$0.003 & $-$0.080 [$-$0.086, $-$0.073] & $\le$0.003 & $-$0.045 [$-$0.054, $-$0.035] & $\le$0.003 \\
+Temporal conv. & Fixed & 5 & $-$0.033 [$-$0.038, $-$0.028] & $\le$0.003 & $-$0.049 [$-$0.054, $-$0.043] & $\le$0.003 & $-$0.031 [$-$0.039, $-$0.022] & $\le$0.003 \\
+ViT & Adaptive & 5 & $-$0.042 [$-$0.049, $-$0.036] & $\le$0.003 & $-$0.057 [$-$0.064, $-$0.049] & $\le$0.003 & $-$0.040 [$-$0.047, $-$0.033] & $\le$0.003 \\
+ViT & Fixed & 5 & $-$0.036 [$-$0.044, $-$0.029] & $\le$0.003 & $-$0.049 [$-$0.056, $-$0.043] & $\le$0.003 & $-$0.037 [$-$0.044, $-$0.029] & $\le$0.003 \\
 \midrule
-ResNet-18, ImageNet & Adaptive & 3 & $-$0.008 [$-$0.012, $-$0.003] & 0.002 & $-$0.015 [$-$0.019, $-$0.010] & $\le$0.003 & $-$0.007 [$-$0.015, +0.000] & 0.104 \\
-ResNet-18, ImageNet & Fixed & 3 & +0.001 [$-$0.004, +0.005] & 0.801 & $-$0.010 [$-$0.016, $-$0.004] & 0.002 & $-$0.003 [$-$0.010, +0.004] & 0.376 \\
+ResNet-18 & Adaptive & 3 & $-$0.008 [$-$0.012, $-$0.003] & 0.002 & $-$0.015 [$-$0.019, $-$0.010] & $\le$0.003 & $-$0.007 [$-$0.015, +0.000] & 0.104 \\
+ResNet-18 & Fixed & 3 & +0.001 [$-$0.004, +0.005] & 0.801 & $-$0.010 [$-$0.016, $-$0.004] & 0.002 & $-$0.003 [$-$0.010, +0.004] & 0.376 \\
 \end{longtable}
 \endgroup
-{\footnotesize Negative values: the image model is below the 1D ResNet on raw signals. Compact heads: seeds 42--46; ResNet-18: seeds 42--44 (the signal reference restricted to the same seeds). Hierarchical bootstrap, 10{,}000 resamples, Holm over the 12 comparisons within each cohort. Post hoc; seeds of different architectures are paired by number only. An interval that includes zero means the two models were not distinguishable in this sample; it does not show that they are equivalent. $p$ printed as ``$\le$'' is at the resolution limit of the bootstrap: no replicate crossed zero, and no smaller value is claimed (Section~\ref{sec:s_review}). \par}
+{\footnotesize Negative values: the image model is below the 1D ResNet on raw signals. Capacity-m.: capacity-matched CNN-only head; Temporal conv.: CNN + temporal convolution; ViT: CNN + small ViT; ResNet-18: ImageNet-pretrained. Compact heads: seeds 42--46; ResNet-18: seeds 42--44 (the signal reference restricted to the same seeds). Hierarchical bootstrap, 10{,}000 resamples, Holm over the 12 comparisons within each cohort. Post hoc; seeds of different architectures are paired by number only. An interval that includes zero means the two models were not distinguishable in this sample; it does not show that they are equivalent. $p$ printed as ``$\le$'' is at the resolution limit of the bootstrap: no replicate crossed zero, and no smaller value is claimed (Section~\ref{sec:s_review}). \par}
 \medskip
 
 \subsection{Clipping: two boundaries and the external cohorts}
 
 \begingroup\scriptsize
-\setlength{\tabcolsep}{3pt}
+\setlength{\tabcolsep}{2pt}
 \begin{longtable}{llrrrrrrrr}
 \caption{Additional analysis: the two amplitude boundaries at 2.5 mm/mV, for PTB-XL and both external cohorts.}\label{tab:s_clipping_defs}\\
 \toprule
-Cohort & Records & Pages & Outside band & \% & Clipped & \% & HYP+ & HYP+ outside band & HYP+ clipped \\
+Cohort & Records & Pages & Outside band & \% & Clipped & \% & HYP+ & HYP+ outside & HYP+ clipped \\
 \midrule
 \endfirsthead
 \toprule
-Cohort & Records & Pages & Outside band & \% & Clipped & \% & HYP+ & HYP+ outside band & HYP+ clipped \\
+Cohort & Records & Pages & Outside band & \% & Clipped & \% & HYP+ & HYP+ outside & HYP+ clipped \\
 \midrule
 \endhead
 \bottomrule
@@ -1003,16 +1003,16 @@ PTB-XL & validation (fold 9) & 2{,}146 & 40 & 1.86 & 17 & 0.79 & 268 & 13 & 2 \\
 PTB-XL & test (fold 10) & 2{,}158 & 36 & 1.67 & 16 & 0.74 & 262 & 16 & 8 \\
 PTB-XL & all & 21{,}388 & 350 & 1.64 & 154 & 0.72 & 2{,}649 & 133 & 47 \\
 \midrule
-Georgia, USA & included (confirmatory cohort) & 6{,}047 & 78 & 1.29 & 28 & 0.46 & 2{,}088 & 47 & 14 \\
-Georgia, USA & no mapped superclass (sensitivity only) & 4{,}245 & 21 & 0.49 & 14 & 0.33 & 0 & 0 & 0 \\
-Georgia, USA & all rendered records & 10{,}292 & 99 & 0.96 & 42 & 0.41 & 2{,}088 & 47 & 14 \\
+Georgia, USA & included (confirmatory) & 6{,}047 & 78 & 1.29 & 28 & 0.46 & 2{,}088 & 47 & 14 \\
+Georgia, USA & unmapped (sensitivity only) & 4{,}245 & 21 & 0.49 & 14 & 0.33 & 0 & 0 & 0 \\
+Georgia, USA & all rendered & 10{,}292 & 99 & 0.96 & 42 & 0.41 & 2{,}088 & 47 & 14 \\
 \midrule
-China & included (confirmatory cohort) & 9{,}004 & 795 & 8.83 & 383 & 4.25 & 770 & 225 & 75 \\
-China & no mapped superclass (sensitivity only) & 36{,}146 & 1{,}659 & 4.59 & 1{,}173 & 3.25 & 0 & 0 & 0 \\
-China & all rendered records & 45{,}150 & 2{,}454 & 5.44 & 1{,}556 & 3.45 & 770 & 225 & 75 \\
+China & included (confirmatory) & 9{,}004 & 795 & 8.83 & 383 & 4.25 & 770 & 225 & 75 \\
+China & unmapped (sensitivity only) & 36{,}146 & 1{,}659 & 4.59 & 1{,}173 & 3.25 & 0 & 0 & 0 \\
+China & all rendered & 45{,}150 & 2{,}454 & 5.44 & 1{,}556 & 3.45 & 770 & 225 & 75 \\
 \end{longtable}
 \endgroup
-{\footnotesize \emph{Outside band}: at 2.5 mm/mV at least one sample lies beyond the $\pm$12-mm band that the original layout allows around a row centre. This is the criterion by which 2.5 mm/mV was chosen (at least 98\% of training pages must fit: 16{,}810 of 17{,}084 fit, 274 do not) and it is identical to the set of ECGs that the adaptive renderer drew below 2.5 mm/mV. Nothing is clipped at this boundary. \emph{Clipped}: at least one sample lies beyond the edge of the 30-mm row ($\pm$15 mm) and was clipped to the row edge by the fixed-gain renderer. Every clipped page is also outside the band (checked), so the 121 clipped training pages are a subset of the 274. Numerators: pages meeting the definition; denominators: the pages of the row (column Pages). Stage: page rendering; no page was excluded for clipping in any cohort. HYP+: pages with the hypertrophy label (external cohorts: the mapped label). ``No mapped superclass'' rows are the external records used only in the label-mapping sensitivity analysis. Source: the fixed-gain cache manifests.\par}
+{\footnotesize \emph{Outside band}: at 2.5 mm/mV at least one sample lies beyond the $\pm$12-mm band that the original layout allows around a row centre. This is the criterion by which 2.5 mm/mV was chosen (at least 98\% of training pages must fit: 16{,}810 of 17{,}084 fit, 274 do not) and it is identical to the set of ECGs that the adaptive renderer drew below 2.5 mm/mV. Nothing is clipped at this boundary. \emph{Clipped}: at least one sample lies beyond the edge of the 30-mm row ($\pm$15 mm) and was clipped to the row edge by the fixed-gain renderer. Every clipped page is also outside the band (checked), so the 121 clipped training pages are a subset of the 274. Numerators: pages meeting the definition; denominators: the pages of the row (column Pages). Stage: page rendering; no page was excluded for clipping in any cohort. HYP+: pages with the hypertrophy label (external cohorts: the mapped label); HYP+ outside: HYP+ pages outside the band. ``Unmapped'' rows are the external records without a mapped superclass, used only in the label-mapping sensitivity analysis. Source: the fixed-gain cache manifests.\par}
 \medskip
 
 \subsection{Label mapping: clinical names, excluded records and sensitivity}
@@ -1291,7 +1291,7 @@ H2 & ViT, HYP & +0.014 & +0.001 & +0.014 & +0.010 [+0.005, +0.016] & $\le$0.002 
 
 \begingroup\scriptsize
 \setlength{\tabcolsep}{3pt}
-\begin{longtable}{p{4.2cm}p{4.4cm}rrrlrr}
+\begin{longtable}{p{3.9cm}p{4.0cm}rrrlrr}
 \caption{Additional analysis: bootstrap $p$-values before and after the statistical revision of 15 November 2026, by comparison family.}\label{tab:s_stats_families}\\
 \toprule
 Analysis & Family & $m$ & Old $p_\mathrm{adj}=0$ & At floor & Printed as & Old $<$0.05 & Revised $<$0.05 \\
@@ -1356,6 +1356,7 @@ ResNet-18 fixed $-$ adaptive (S15) & external cohorts & georgia | HYP AUROC & +0
 
 \section{Model cards}
 
+\sloppy
 All models: PTB-XL v1.0.3, official patient folds (1-8 train, 9 validation, 10 test), five overlapping superclasses (NORM, MI, STTC, CD, HYP), training-only normalization, AdamW lr 1e-3, batch 16, max 20 epochs, patience 4, cosine schedule, unweighted BCE, no augmentation, no pretrained weights (except the ResNet-18 sensitivity model), checkpoint selected on validation, threshold 0.5, one test inference. Fold 10 was observed before the models were specified, so test results are exploratory. Intended use: research on ECG-image modelling only, not clinical use. Known limitations: clean synthetic renderings (no scans/photos), one population (Germany), label noise, and adaptive page gain on v1 pages leaks amplitude (and therefore hypertrophy) information.
 
 \begin{itemize}

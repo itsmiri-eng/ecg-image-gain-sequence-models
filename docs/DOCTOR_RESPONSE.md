@@ -48,7 +48,11 @@ Point 9 is not covered here; Miriam is handling it.
 **Files changed.** `src/make_supplementary.py`, `paper/ieee_manuscript/supplementary_scirep.tex`; Overleaf:
 `supplementary_scirep.tex`, renamed old PDF.
 
-**Result / what is still open.** @@RESPONSE_PDF@@
+**Result / what is still open.** The supplement source on Overleaf is now the new paper's, identical to the
+generated file (checksum-verified), and it compiles without errors to 27 pages. **One step is still open:** a PDF of
+it has to be produced and looked at by a person. This session could compile on Overleaf and read the compile log, but
+it could not open the PDF (no LaTeX on the PC, browser not signed in to Overleaf). To get the PDF: open
+`supplementary_scirep.tex` in Overleaf, click Recompile, download the PDF.
 
 ---
 
@@ -339,7 +343,10 @@ again against the official table (27 items, 52 sub-items, plus the 13 abstract i
 or table where it is reported, or says "not addressed" / "not applicable" with the reason; statuses are deliberately
 conservative. It was updated for the revised manuscript (new sections and tables). Four items depend on text the
 authors still have to supply: ethics confirmations (17), funding (18a), competing interests (18b), licence/archive
-(18f). @@RESPONSE_TRIPOD@@
+(18f). It is a separate Word file (not in the Overleaf project, which
+accepts only text and image files through the connection used here); it is in the repository and in the Desktop
+folder `manuscript (Scientific Reports, for Overleaf)`. Totals: 23 items addressed, 16 partly addressed, 6 not
+addressed, 7 not applicable.
 
 **Code availability.** A separate "Code availability" section follows "Data availability". It names the repository,
 lists what is in it (source code, preprocessing, model definitions, configuration of every run, analysis plans and
