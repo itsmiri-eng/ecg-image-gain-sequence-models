@@ -96,10 +96,27 @@ Each has a dated protocol that was committed before its results existed.
     `paper/ieee_manuscript/overleaf_scirep/` (checked with MD5 sums computed by LaTeX on Overleaf through a temporary
     probe line, which was removed again). Figures 4 and 5 were re-uploaded.
   - Manuscript: compiles, 16 pages, no errors, no undefined references or citations.
-  - Supplement: compiles, 27 pages, no errors. Its log was read: four new tables that ran past the margin were
+  - Supplement: compiles, no errors. Its log was read: four new tables that ran past the margin were
     narrowed and no table overflows any more; a few long file paths in the reproduced protocol texts stuck out into
-    the margin, for which relaxed line breaking was switched on (that last change was not re-read in the log).
-  - Not done: nobody has looked at either PDF, and the manuscript's log was not read for overfull boxes.
+    the margin, for which relaxed line breaking was switched on.
+- Second pass on 16 Nov 2026, about 09:05 local: both full compile logs were read line by line.
+  - Manuscript (16 pages): one real defect, the repository URL in "Code availability" ran 122 pt past the right
+    margin. Fixed with `\emergencystretch=3em` in the preamble (only takes effect where a line cannot be broken
+    otherwise). After the fix the log has no overfull box at all; that line is now slightly loosely spaced
+    (underfull, badness 2065), inside the margins.
+  - Supplement (28 pages, not 27 as written before the table fixes): the relaxed line breaking worked (no path
+    sticks out). Two leftovers were fixed in `src/make_supplementary.py`: in the table of contents the number "S10"
+    was 2.9 pt wider than its slot (wider number slots now), and the two small variant tables in the reproduced
+    label-mapping plan were 2.1 pt too wide (outer padding removed). After the fix the log has no overfull box.
+    Remaining messages are harmless: narrow table cells that are set ragged (underfull), and two hyperref notes
+    about math in PDF bookmarks.
+  - Overleaf `main.tex` (75,014 characters, MD5 001cf8508a6ca2e92be51eef698f33b5) and `supplementary_scirep.tex`
+    (143,448 characters, MD5 585dab8e02796f274b2732d977e6a64d) were read back and are byte-identical to the local
+    builds.
+  - Still not done: nobody has looked at either PDF with their eyes. The Overleaf connection returns the compile
+    log and a PDF link, but that link needs an Overleaf login (HTTP 403 without one). A clean log rules out text or
+    tables outside the margins and missing references; it cannot show figure quality, awkward page breaks or how a
+    table reads.
 
 ### Still open (see also the "Publication readiness" part of the final report)
 

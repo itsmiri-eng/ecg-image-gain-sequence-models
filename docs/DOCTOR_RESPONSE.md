@@ -49,9 +49,10 @@ Point 9 is not covered here; Miriam is handling it.
 `supplementary_scirep.tex`, renamed old PDF.
 
 **Result / what is still open.** The supplement source on Overleaf is now the new paper's, identical to the
-generated file (checksum-verified), and it compiles without errors to 27 pages. **One step is still open:** a PDF of
+generated file (checksum-verified), and it compiles without errors to 28 pages; its full compile log was read and
+shows no text or table outside the margins. **One step is still open:** a PDF of
 it has to be produced and looked at by a person. This session could compile on Overleaf and read the compile log, but
-it could not open the PDF (no LaTeX on the PC, browser not signed in to Overleaf). To get the PDF: open
+it could not open the PDF (no LaTeX on the PC, and the PDF link needs an Overleaf login). To get the PDF: open
 `supplementary_scirep.tex` in Overleaf, click Recompile, download the PDF.
 
 ---

@@ -13,6 +13,9 @@
 \renewcommand{\thetable}{S\arabic{table}}
 \renewcommand{\thesection}{S\arabic{section}}
 \setcounter{secnumdepth}{2}
+\makeatletter % room for the two-digit section number S10 in the table of contents
+\patchcmd{\l@section}{1.5em}{2.1em}{}{\PackageWarningNoLine{supplement}{table-of-contents patch failed}}
+\renewcommand*\l@subsection{\@dottedtocline{2}{2.1em}{2.9em}}\makeatother
 \title{Supplementary Information\\[4pt] \large Rendering gain and sequence modeling in 12-lead ECG-image classification: a controlled comparison with external validation}
 \author{Miriam Istanboli and Mohamed Elgendi}
 \date{}
@@ -1902,7 +1905,7 @@ and the positives contributed by each assigned code.
 \paragraph{C. Sensitivity of the results to the mapping}
 
 Variants (per cohort; labels eligible if $\geq$ 50 positives and $\geq$ 50 negatives, as in the frozen plan):
-\begin{center}\footnotesize\begin{tabular}{p{0.31\textwidth}p{0.31\textwidth}p{0.31\textwidth}}
+\begin{center}\footnotesize\begin{tabular}{@{}p{0.31\textwidth}p{0.31\textwidth}p{0.31\textwidth}@{}}
 \toprule
 Variant & Records & Mapping \\
 \midrule
@@ -1943,7 +1946,7 @@ as the same diagnosis: right bundle branch block 59118001 = complete right bundl
 complete left bundle branch block 733534002 = left bundle branch block 164909002. The first code of each pair
 never occurs in the organisers' PTB-XL encoding, so the data-driven rule could not assign it, although its
 equivalent is assigned to CD. One more variant is therefore added:
-\begin{center}\footnotesize\begin{tabular}{p{0.31\textwidth}p{0.31\textwidth}p{0.31\textwidth}}
+\begin{center}\footnotesize\begin{tabular}{@{}p{0.31\textwidth}p{0.31\textwidth}p{0.31\textwidth}@{}}
 \toprule
 Variant & Records & Mapping \\
 \midrule

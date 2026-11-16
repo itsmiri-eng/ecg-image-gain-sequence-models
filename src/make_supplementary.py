@@ -101,7 +101,7 @@ def markdown(text, skip_title=True):
             return
         rows = [[c.strip() for c in r.strip().strip("|").split("|")] for r in table if not re.fullmatch(r"[\s|:-]+", r)]
         width = max(len(r) for r in rows)
-        out.append("\\begin{center}\\footnotesize\\begin{tabular}{" + f"p{{{0.92 / width:.2f}\\textwidth}}" * width + "}")
+        out.append("\\begin{center}\\footnotesize\\begin{tabular}{@{}" + f"p{{{0.92 / width:.2f}\\textwidth}}" * width + "@{}}")
         out.append("\\toprule")
         for k, row in enumerate(rows):
             out.append(" & ".join(inline(c) for c in row + [""] * (width - len(row))) + " \\\\")
@@ -1090,6 +1090,9 @@ def main():
 \renewcommand{\thetable}{S\arabic{table}}
 \renewcommand{\thesection}{S\arabic{section}}
 \setcounter{secnumdepth}{2}
+\makeatletter % room for the two-digit section number S10 in the table of contents
+\patchcmd{\l@section}{1.5em}{2.1em}{}{\PackageWarningNoLine{supplement}{table-of-contents patch failed}}
+\renewcommand*\l@subsection{\@dottedtocline{2}{2.1em}{2.9em}}\makeatother
 \title{Supplementary Information\\[4pt] \large """ + TITLE + r"""}
 \author{Miriam Istanboli and Mohamed Elgendi}
 \date{}
